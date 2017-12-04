@@ -1,0 +1,340 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>NMD File &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="pca.html" title="Principal Component Analysis"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="nma.html" title="Normal Mode Analysis"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Dynamics Analysis &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">NMD File</a><ul>
+<li><a class="reference internal" href="#nmd-format">NMD Format</a><ul>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#data-fields">Data fields</a></li>
+<li><a class="reference internal" href="#autoload-trick">Autoload Trick</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.dynamics.nmdfile">
+<span id="nmd-file"></span><h1>NMD File<a class="headerlink" href="#module-prody.dynamics.nmdfile" title="Permalink to this headline">¶</a></h1>
+<p>This module defines input and output functions for NMD format.</p>
+<div class="section" id="nmd-format">
+<span id="id1"></span><h2>NMD Format<a class="headerlink" href="#nmd-format" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>NMD files (extension <code class="file docutils literal"><span class="pre">.nmd</span></code>) are plain text files that contain at
+least normal mode and system coordinate data.</p>
+<p>NMD files can be visualized using <span class="xref std std-ref">nmwiz</span>.  ProDy functions
+<a class="reference internal" href="#prody.dynamics.nmdfile.writeNMD" title="prody.dynamics.nmdfile.writeNMD"><code class="xref py py-func docutils literal"><span class="pre">writeNMD()</span></code></a> and <a class="reference internal" href="#prody.dynamics.nmdfile.parseNMD" title="prody.dynamics.nmdfile.parseNMD"><code class="xref py py-func docutils literal"><span class="pre">parseNMD()</span></code></a> can be used to read and write NMD
+files.</p>
+</div>
+<div class="section" id="data-fields">
+<h3>Data fields<a class="headerlink" href="#data-fields" title="Permalink to this headline">¶</a></h3>
+<p>Data fields in bold face are required. All data arrays and lists must be in a
+single line and items must be separated by one or more space characters.</p>
+<dl class="docutils">
+<dt><strong>coordinates</strong>: system coordinates as a list of decimal numbers</dt>
+<dd>Coordinate array is the most important line in an NMD file. All mode array
+lengths must match the length of the coordinate array. Also, number of atoms
+in the system is deduced from the length of the coordinate array.</dd>
+</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">coordinates</span> <span class="mf">27.552</span> <span class="mf">4.354</span> <span class="mf">23.629</span> <span class="mf">24.179</span> <span class="mf">4.807</span> <span class="mf">21.907</span> <span class="o">...</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>mode</strong>: normal mode array as a list of decimal numbers</dt>
+<dd><p class="first">Optionally, mode index and a scaling factor may be provided
+in the same line as a mode array. Both of these must precede the mode array.
+Providing a scaling factor enables relative scaling of the mode arrows and
+the amplitude of the fluctuations in animations. For NMA, scaling factors
+may be chosen to be the square-root of the inverse-eigenvalue associated
+with the mode. Analogously, for PCA data, scaling factor would be the
+square-root of the eigenvalue.</p>
+<p>If a mode line contains numbers preceding the mode array, they are evaluated
+based on their type. If an integer is encountered, it is considered the mode
+index. If a decimal number is encountered, it is considered the scaling
+factor. Scaling factor may be the square-root of the inverse eigenvalue
+if data is from an elastic network model, or the square-root of the
+eigenvalue if data is from an essential dynamics (or principal component)
+analysis.</p>
+<p class="last">For example, all of the following lines are valid. The first line contains
+mode index and scaling factor. Second and third lines contain mode index or
+scaling factor. Last line contains only the mode array.</p>
+</dd>
+</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mode</span> <span class="mi">1</span> <span class="mf">2.37</span>    <span class="mf">0.039</span> <span class="mf">0.009</span> <span class="mf">0.058</span> <span class="mf">0.038</span> <span class="o">-</span><span class="mf">0.011</span> <span class="mf">0.052</span>  <span class="o">...</span>
+<span class="n">mode</span> <span class="mi">1</span>    <span class="mf">0.039</span> <span class="mf">0.009</span> <span class="mf">0.058</span> <span class="mf">0.038</span> <span class="o">-</span><span class="mf">0.011</span> <span class="mf">0.052</span>  <span class="o">...</span>
+<span class="n">mode</span> <span class="mf">2.37</span>    <span class="mf">0.039</span> <span class="mf">0.009</span> <span class="mf">0.058</span> <span class="mf">0.038</span> <span class="o">-</span><span class="mf">0.011</span> <span class="mf">0.052</span>  <span class="o">...</span>
+<span class="n">mode</span> <span class="mf">0.039</span> <span class="mf">0.009</span> <span class="mf">0.058</span> <span class="mf">0.038</span> <span class="o">-</span><span class="mf">0.011</span> <span class="mf">0.052</span> <span class="mf">0.043</span>  <span class="o">...</span>
+</pre></div>
+</div>
+<p><em>name</em>: name of the model</p>
+<p>The length of all following data fields must be equal to the number of atoms in
+the system. NMWiz uses such data when writing a temporary PDB files for
+loading coordinate data into VMD.</p>
+<dl class="docutils">
+<dt><em>atomnames</em>: list of atom names</dt>
+<dd>If not provided, all atom names are set to &#8220;CA&#8221;.</dd>
+<dt><em>resnames</em>: list of residue names</dt>
+<dd>If not provided, all residue names are set to &#8220;GLY&#8221;.</dd>
+<dt><em>chainids</em>: list of chain identifiers</dt>
+<dd>If not provided, all chain identifiers are set to &#8220;A&#8221;.</dd>
+<dt><em>resids</em>: list of residue numbers</dt>
+<dd>If not provided, residue numbers are started from 1 and incremented by one
+for each atom.</dd>
+<dt><em>bfactors</em>: list of experimental beta-factors</dt>
+<dd>If not provided, all beta-factors are set to zero.
+Beta-factors can be used to color the protein representation.</dd>
+</dl>
+<p>NMD files may contain additional lines. Only lines that start with one of the
+above field names are evaluated by NMWiz.</p>
+</div>
+<div class="section" id="autoload-trick">
+<h3>Autoload Trick<a class="headerlink" href="#autoload-trick" title="Permalink to this headline">¶</a></h3>
+<p>By adding a special line in an NMD file, file content can be automatically
+loaded into VMD at startup. The first line calls a NMWiz function to load the
+file itself (<code class="file docutils literal"><span class="pre">xyzeros.nmd</span></code>).</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nmwiz_load</span> <span class="n">xyzeros</span><span class="o">.</span><span class="n">nmd</span>
+<span class="n">coordinates</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span>  <span class="o">...</span>
+<span class="n">mode</span> <span class="mf">0.039</span> <span class="mf">0.009</span> <span class="mf">0.058</span> <span class="mf">0.038</span> <span class="o">-</span><span class="mf">0.011</span> <span class="mf">0.052</span> <span class="o">...</span>
+<span class="n">mode</span> <span class="o">-</span><span class="mf">0.045</span> <span class="o">-</span><span class="mf">0.096</span> <span class="o">-</span><span class="mf">0.009</span> <span class="o">-</span><span class="mf">0.040</span> <span class="o">-</span><span class="mf">0.076</span> <span class="o">-</span><span class="mf">0.010</span> <span class="o">...</span>
+<span class="n">mode</span> <span class="mf">0.007</span> <span class="o">-</span><span class="mf">0.044</span> <span class="mf">0.080</span> <span class="mf">0.015</span> <span class="o">-</span><span class="mf">0.037</span> <span class="mf">0.062</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>In this case, VMD must be started from the command line by typing
+<strong class="program">vmd -e xyzeros.nmd</strong>.</p>
+<dl class="function">
+<dt id="prody.dynamics.nmdfile.parseNMD">
+<code class="descname">parseNMD</code><span class="sig-paren">(</span><em>filename</em>, <em>type=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/nmdfile.html#parseNMD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.nmdfile.parseNMD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a> and <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances storing data
+parsed from <em>filename</em> in <code class="file docutils literal"><span class="pre">.nmd</span></code> format.  Type of <a class="reference internal" href="nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a>
+instance, e.g. <a class="reference internal" href="pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a>, <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, or <a class="reference internal" href="gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a> will
+be determined based on mode data.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.nmdfile.writeNMD">
+<code class="descname">writeNMD</code><span class="sig-paren">(</span><em>filename</em>, <em>modes</em>, <em>atoms</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/nmdfile.html#writeNMD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.nmdfile.writeNMD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <em>filename</em> that contains <em>modes</em> and <em>atoms</em> data in NMD format
+described in <a class="reference internal" href="#nmd-format"><span class="std std-ref">NMD Format</span></a>.  <code class="file docutils literal"><span class="pre">.nmd</span></code> extension is appended to
+filename, if it does not have an extension.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>This function skips modes with zero eigenvalues.</li>
+<li>If a <a class="reference internal" href="mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a> instance is given, it will be normalized
+before it is written. It&#8217;s length before normalization will be
+written as the scaling factor of the vector.</li>
+</ol>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.nmdfile.pathVMD">
+<code class="descname">pathVMD</code><span class="sig-paren">(</span><em>*path</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/nmdfile.html#pathVMD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.nmdfile.pathVMD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns VMD path, or set it to be a user specified <em>path</em>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.nmdfile.getVMDpath">
+<code class="descname">getVMDpath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/nmdfile.html#getVMDpath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.nmdfile.getVMDpath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deprecated for removal in v1.5, use <a class="reference internal" href="#prody.dynamics.nmdfile.pathVMD" title="prody.dynamics.nmdfile.pathVMD"><code class="xref py py-func docutils literal"><span class="pre">pathVMD()</span></code></a> instead.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.nmdfile.setVMDpath">
+<code class="descname">setVMDpath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/nmdfile.html#setVMDpath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.nmdfile.setVMDpath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deprecated for removal in v1.5, use <a class="reference internal" href="#prody.dynamics.nmdfile.pathVMD" title="prody.dynamics.nmdfile.pathVMD"><code class="xref py py-func docutils literal"><span class="pre">pathVMD()</span></code></a> instead.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.nmdfile.viewNMDinVMD">
+<code class="descname">viewNMDinVMD</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/nmdfile.html#viewNMDinVMD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.nmdfile.viewNMDinVMD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start VMD in the current Python session and load NMD data.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

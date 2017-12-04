@@ -1,0 +1,280 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Installation &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../index.html">
+        <img src="../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="apps/index.html" title="Applications"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="index.html" title="ProDy Manual"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../index.html">Home  &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">ProDy Manual &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#required-software">Required Software</a></li>
+<li><a class="reference internal" href="#quick-install">Quick Install</a></li>
+<li><a class="reference internal" href="#download-install">Download &amp; Install</a></li>
+<li><a class="reference internal" href="#recommended-software">Recommended Software</a></li>
+<li><a class="reference internal" href="#included-in-prody">Included in ProDy</a></li>
+<li><a class="reference internal" href="#source-code">Source Code</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="installation">
+<span id="getprody"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="required-software">
+<h2>Required Software<a class="headerlink" href="#required-software" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><a class="reference external" href="http://www.python.org">Python</a> 2.6, 2.7, 3.2 or later</p>
+<p><em>Windows</em>: You need to use <strong>32-bit</strong> Python on Windows to be able to
+install NumPy and ProDy.</p>
+</li>
+<li><p class="first"><a class="reference external" href="http://www.numpy.org">NumPy</a> 1.7 or later</p>
+</li>
+</ul>
+<p>When compiling from source, on Linux for example, you will need a C compiler
+(e.g. <strong class="program">gcc</strong>) and Python developer libraries (i.e. <code class="file docutils literal"><span class="pre">python.h</span></code>).
+If you don&#8217;t have Python developer libraries installed on your machine,
+use your package manager to install <code class="file docutils literal"><span class="pre">python-dev</span></code> package.</p>
+<p>In addition, <a class="reference external" href="http://matplotlib.org">matplotlib</a> is required for using plotting functions.
+ProDy, <a class="reference internal" href="apps/prody/index.html#prody-apps"><span class="std std-ref">ProDy Applications</span></a>, and <a class="reference internal" href="apps/evol/index.html#evol-apps"><span class="std std-ref">Evol Applications</span></a> can be operated without
+this package.</p>
+</div>
+<div class="section" id="quick-install">
+<h2>Quick Install<a class="headerlink" href="#quick-install" title="Permalink to this headline">¶</a></h2>
+<p>If you have <a class="reference external" href="https://pypi.python.org/pypi/pip">pip</a> installed, type the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">ProDy</span>
+</pre></div>
+</div>
+<p>If you don&#8217;t have <a class="reference external" href="https://pypi.python.org/pypi/pip">pip</a>, please download an installation file and
+follow the instructions.</p>
+</div>
+<div class="section" id="download-install">
+<h2>Download &amp; Install<a class="headerlink" href="#download-install" title="Permalink to this headline">¶</a></h2>
+<p>After installing the required packages, you will need to download a suitable
+ProDy source or installation file from <a class="reference external" href="http://python.org/pypi/ProDy">http://python.org/pypi/ProDy</a>.
+For changes and list of new features see <a class="reference internal" href="release/index.html#changes"><span class="std std-ref">Release Notes</span></a>.</p>
+<p><strong>Linux</strong></p>
+<p>Download <code class="file docutils literal"><span class="pre">ProDy-x.</span><em><span class="pre">y</span></em><span class="pre">.</span><em><span class="pre">z</span></em><span class="pre">.tar.gz</span></code>.  Extract tarball contents and run
+<code class="file docutils literal"><span class="pre">setup.py</span></code> as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ tar -xzf ProDy-x.y.z.tar.gz
+$ cd ProDy-x.y.z
+$ python setup.py build
+$ python setup.py install
+</pre></div>
+</div>
+<p>If you need root access for installation, try <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code>.
+If you don&#8217;t have root access, please consult alternate and custom installation
+schemes in <a class="reference external" href="http://docs.python.org/install/index.html">Installing Python Modules</a>.</p>
+<p><strong>Mac OS</strong></p>
+<p>For installing ProDy, please follow the Linux installation instructions.</p>
+<p><strong>Windows</strong></p>
+<p>Remove previously installed ProDy release from <strong class="program">Uninstall a program</strong>
+in <span class="guilabel">Control Panel</span>.</p>
+<p>Download <code class="file docutils literal"><span class="pre">ProDy-0.</span><em><span class="pre">x</span></em><span class="pre">.</span><em><span class="pre">y</span></em><span class="pre">.win32-py2.</span><em><span class="pre">z</span></em><span class="pre">.exe</span></code> and run to install ProDy.</p>
+<p>To be able use <a class="reference internal" href="apps/prody/index.html#prody-apps"><span class="std std-ref">ProDy Applications</span></a> and <a class="reference internal" href="apps/evol/index.html#evol-apps"><span class="std std-ref">Evol Applications</span></a> in command prompt
+(<strong class="program">cmd.exe</strong>), append Python and scripts folders (e.g.
+<code class="file docutils literal"><span class="pre">C:\Python27</span></code> and <code class="file docutils literal"><span class="pre">C:\Python27\Scripts</span></code>) to <span class="target" id="index-0"></span><a class="reference external" href="http://matplotlib.sourceforge.net/faq/environment_variables_faq.html#envvar-PATH" title="(in Matplotlib v2.1.0)"><code class="xref std std-envvar docutils literal"><span class="pre">PATH</span></code></a>
+environment variable.</p>
+</div>
+<div class="section" id="recommended-software">
+<h2>Recommended Software<a class="headerlink" href="#recommended-software" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.scipy.org">Scipy</a>, when installed, replaces linear algebra module of Numpy.
+Scipy linear algebra module is more flexible and can be faster.</li>
+<li><a class="reference external" href="http://ipython.org">IPython</a> is a must have for interactive ProDy sessions.</li>
+<li><a class="reference external" href="http://ipython.org/pyreadline.html">PyReadline</a> for colorful IPython sessions on Windows.</li>
+<li><a class="reference external" href="http://code.google.com/p/mdanalysis">MDAnalysis</a> for reading molecular dynamics trajectories.</li>
+</ul>
+</div>
+<div class="section" id="included-in-prody">
+<h2>Included in ProDy<a class="headerlink" href="#included-in-prody" title="Permalink to this headline">¶</a></h2>
+<p>Following software is included in the ProDy installation packages:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://pyparsing.wikispaces.com">pyparsing</a> is used to define the atom selection grammar.</li>
+<li><a class="reference external" href="http://biopython.org">Biopython</a> KDTree package and pairwise2 module are used for distance based
+atom selections and pairwise sequence alignment, respectively.</li>
+<li><a class="reference external" href="http://code.google.com/p/argparse/">argparse</a> is used to implement applications and provided for
+compatibility with Python 2.6.</li>
+</ul>
+</div>
+<div class="section" id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p>Source code is available at <a class="reference external" href="https://github.com/prody/ProDy">https://github.com/prody/ProDy</a>.</p>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

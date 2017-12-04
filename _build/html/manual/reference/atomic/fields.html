@@ -1,0 +1,452 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Atom Data Fields &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="flags.html" title="Atom Flags"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="chain.html" title="Chain"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Atomic Data &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.atomic.fields">
+<span id="atom-data-fields"></span><span id="fields"></span><h1>Atom Data Fields<a class="headerlink" href="#module-prody.atomic.fields" title="Permalink to this headline">¶</a></h1>
+<p>This module defines atomic data fields.  You can read this page in
+interactive sessions using <code class="docutils literal"><span class="pre">help(fields)</span></code>.</p>
+<p>Data parsed from PDB and other supported files for these fields are stored in
+<a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances.  Available data fields are listed in the table
+below.  <code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code> classes, such as <a class="reference internal" href="selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>, offer <code class="docutils literal"><span class="pre">get</span></code> and
+<code class="docutils literal"><span class="pre">set</span></code> for handling parsed data:</p>
+<p>Many of these data fields can be used to make <a class="reference internal" href="select.html#selections"><span class="std std-ref">Atom Selections</span></a>.
+Following table lists definitions of fields and selection examples.  Note that
+fields noted as <em>read only</em> do not have a <code class="docutils literal"><span class="pre">set</span></code> method.</p>
+<dl class="glossary docutils">
+<dt id="term-altloc">altloc</dt>
+<dd><p class="first">alternate location indicator</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'altloc</span> <span class="pre">A</span> <span class="pre">B'</span></code>,
+<code class="docutils literal"><span class="pre">'altloc</span> <span class="pre">_'</span></code></p>
+</dd>
+<dt id="term-anisou">anisou</dt>
+<dd>anisotropic temperature factor</dd>
+<dt id="term-beta">beta</dt>
+<dd><p class="first">β-value (temperature factor)</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'beta</span> <span class="pre">555.55'</span></code>,
+<code class="docutils literal"><span class="pre">'beta</span> <span class="pre">0</span> <span class="pre">to</span> <span class="pre">500'</span></code>,
+<code class="docutils literal"><span class="pre">'beta</span> <span class="pre">0:500'</span></code>,
+<code class="docutils literal"><span class="pre">'beta</span> <span class="pre">&lt;</span> <span class="pre">500'</span></code></p>
+</dd>
+<dt id="term-chain">chain</dt>
+<dt id="term-chid">chid</dt>
+<dd><p class="first">chain identifier</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'chain</span> <span class="pre">A'</span></code>,
+<code class="docutils literal"><span class="pre">'chid</span> <span class="pre">A</span> <span class="pre">B</span> <span class="pre">C'</span></code>,
+<code class="docutils literal"><span class="pre">'chain</span> <span class="pre">_'</span></code></p>
+</dd>
+<dt id="term-charge">charge</dt>
+<dd><p class="first">partial charge</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'charge</span> <span class="pre">1'</span></code>,
+<code class="docutils literal"><span class="pre">'abs(charge)</span> <span class="pre">==</span> <span class="pre">1'</span></code>,
+<code class="docutils literal"><span class="pre">'charge</span> <span class="pre">&lt;</span> <span class="pre">0'</span></code></p>
+</dd>
+<dt id="term-chindex">chindex</dt>
+<dd><p class="first">chain index <em>(read only)</em></p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'chindex</span> <span class="pre">0'</span></code></p>
+</dd>
+<dt id="term-element">element</dt>
+<dd><p class="first">element symbol</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'element</span> <span class="pre">C</span> <span class="pre">O</span> <span class="pre">N'</span></code></p>
+</dd>
+<dt id="term-fragindex">fragindex</dt>
+<dt id="term-fragment">fragment</dt>
+<dd><p class="first">fragment index <em>(read only)</em></p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'fragindex</span> <span class="pre">0'</span></code>,
+<code class="docutils literal"><span class="pre">'fragment</span> <span class="pre">1'</span></code></p>
+</dd>
+<dt id="term-icode">icode</dt>
+<dd><p class="first">insertion code</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'icode</span> <span class="pre">A'</span></code>,
+<code class="docutils literal"><span class="pre">'icode</span> <span class="pre">_'</span></code></p>
+</dd>
+<dt id="term-mass">mass</dt>
+<dd><p class="first">mass</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'12</span> <span class="pre">&lt;=</span> <span class="pre">mass</span> <span class="pre">&lt;=</span> <span class="pre">13.5'</span></code></p>
+</dd>
+<dt id="term-name">name</dt>
+<dd><p class="first">name</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'name</span> <span class="pre">CA</span> <span class="pre">CB'</span></code></p>
+</dd>
+<dt id="term-numbonds">numbonds</dt>
+<dd><p class="first">number of bonds <em>(read only)</em></p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'numbonds</span> <span class="pre">0'</span></code>,
+<code class="docutils literal"><span class="pre">'numbonds</span> <span class="pre">1'</span></code></p>
+</dd>
+<dt id="term-occupancy">occupancy</dt>
+<dd><p class="first">occupancy value</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'occupancy</span> <span class="pre">1'</span></code>,
+<code class="docutils literal"><span class="pre">'occupancy</span> <span class="pre">&gt;</span> <span class="pre">0'</span></code></p>
+</dd>
+<dt id="term-radius">radius</dt>
+<dd><p class="first">radius</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'radii</span> <span class="pre">&lt;</span> <span class="pre">1.5'</span></code>,
+<code class="docutils literal"><span class="pre">'radii</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">&lt;</span> <span class="pre">2.3'</span></code></p>
+</dd>
+<dt id="term-resindex">resindex</dt>
+<dd><p class="first">residue index <em>(read only)</em></p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'resindex</span> <span class="pre">0'</span></code></p>
+</dd>
+<dt id="term-resname">resname</dt>
+<dd><p class="first">residue name</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'resname</span> <span class="pre">ALA</span> <span class="pre">GLY'</span></code></p>
+</dd>
+<dt id="term-resnum">resnum</dt>
+<dt id="term-resid">resid</dt>
+<dd><p class="first">residue number</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3'</span></code>,
+<code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">120A</span> <span class="pre">120B'</span></code>,
+<code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">10</span> <span class="pre">to</span> <span class="pre">20'</span></code>,
+<code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">10:20:2'</span></code>,
+<code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">&lt;</span> <span class="pre">10'</span></code></p>
+</dd>
+<dt id="term-secondary">secondary</dt>
+<dt id="term-secstr">secstr</dt>
+<dd><p class="first">secondary structure assignment</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'secondary</span> <span class="pre">H</span> <span class="pre">E'</span></code>,
+<code class="docutils literal"><span class="pre">'secstr</span> <span class="pre">H</span> <span class="pre">E'</span></code></p>
+</dd>
+<dt id="term-segindex">segindex</dt>
+<dd><p class="first">segment index <em>(read only)</em></p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'segindex</span> <span class="pre">0'</span></code></p>
+</dd>
+<dt id="term-segment">segment</dt>
+<dt id="term-segname">segname</dt>
+<dd><p class="first">segment name</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'segment</span> <span class="pre">PROT'</span></code>,
+<code class="docutils literal"><span class="pre">'segname</span> <span class="pre">PROT'</span></code></p>
+</dd>
+<dt id="term-serial">serial</dt>
+<dd><p class="first">serial number (from file)</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'serial</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3'</span></code>,
+<code class="docutils literal"><span class="pre">'serial</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">10'</span></code>,
+<code class="docutils literal"><span class="pre">'serial</span> <span class="pre">1:10:2'</span></code>,
+<code class="docutils literal"><span class="pre">'serial</span> <span class="pre">&lt;</span> <span class="pre">10'</span></code></p>
+</dd>
+<dt id="term-siguij">siguij</dt>
+<dd>standard deviations for anisotropic temperature factor</dd>
+<dt id="term-type">type</dt>
+<dd><p class="first">type</p>
+<p class="last"><em>E.g.:</em> 
+<code class="docutils literal"><span class="pre">'type</span> <span class="pre">CT1</span> <span class="pre">CT2</span> <span class="pre">CT3'</span></code></p>
+</dd>
+</dl>
+<dl class="class">
+<dt id="prody.atomic.fields.Field">
+<em class="property">class </em><code class="descname">Field</code><span class="sig-paren">(</span><em>name</em>, <em>dtype</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/fields.html#Field"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.fields.Field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atomic data field.</p>
+<dl class="method">
+<dt id="prody.atomic.fields.Field.getDocstr">
+<code class="descname">getDocstr</code><span class="sig-paren">(</span><em>meth</em>, <em>plural=True</em>, <em>selex=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/fields.html#Field.getDocstr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.fields.Field.getDocstr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns documentation string for the field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.call">
+<code class="descname">call</code><a class="headerlink" href="#prody.atomic.fields.Field.call" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> methods to call when <code class="docutils literal"><span class="pre">getMethod</span></code> is
+called</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.depr">
+<code class="descname">depr</code><a class="headerlink" href="#prody.atomic.fields.Field.depr" title="Permalink to this definition">¶</a></dt>
+<dd><p>deprecated method name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.depr_pl">
+<code class="descname">depr_pl</code><a class="headerlink" href="#prody.atomic.fields.Field.depr_pl" title="Permalink to this definition">¶</a></dt>
+<dd><p>deprecated method name in plural form</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.desc">
+<code class="descname">desc</code><a class="headerlink" href="#prody.atomic.fields.Field.desc" title="Permalink to this definition">¶</a></dt>
+<dd><p>description of data field, used in documentation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.doc">
+<code class="descname">doc</code><a class="headerlink" href="#prody.atomic.fields.Field.doc" title="Permalink to this definition">¶</a></dt>
+<dd><p>internal variable name used as key for <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> <code class="docutils literal"><span class="pre">_data</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.doc_pl">
+<code class="descname">doc_pl</code><a class="headerlink" href="#prody.atomic.fields.Field.doc_pl" title="Permalink to this definition">¶</a></dt>
+<dd><p>plural form for documentation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.dtype">
+<code class="descname">dtype</code><a class="headerlink" href="#prody.atomic.fields.Field.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>data type (primitive Python types)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.flags">
+<code class="descname">flags</code><a class="headerlink" href="#prody.atomic.fields.Field.flags" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>True</strong> when there are flags associated with the data field</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.meth">
+<code class="descname">meth</code><a class="headerlink" href="#prody.atomic.fields.Field.meth" title="Permalink to this definition">¶</a></dt>
+<dd><p>atomic get/set method name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.meth_pl">
+<code class="descname">meth_pl</code><a class="headerlink" href="#prody.atomic.fields.Field.meth_pl" title="Permalink to this definition">¶</a></dt>
+<dd><p>get/set method name in plural form</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.name">
+<code class="descname">name</code><a class="headerlink" href="#prody.atomic.fields.Field.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>data field name used in atom selections</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.ndim">
+<code class="descname">ndim</code><a class="headerlink" href="#prody.atomic.fields.Field.ndim" title="Permalink to this definition">¶</a></dt>
+<dd><p>expected dimension of the data array</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.none">
+<code class="descname">none</code><a class="headerlink" href="#prody.atomic.fields.Field.none" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> attributes to be set None, when <code class="docutils literal"><span class="pre">setMethod</span></code>
+is called</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.private">
+<code class="descname">private</code><a class="headerlink" href="#prody.atomic.fields.Field.private" title="Permalink to this definition">¶</a></dt>
+<dd><p>define only _getMethod for <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> to be used by
+<a class="reference internal" href="select.html#prody.atomic.select.Select" title="prody.atomic.select.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a> class</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.readonly">
+<code class="descname">readonly</code><a class="headerlink" href="#prody.atomic.fields.Field.readonly" title="Permalink to this definition">¶</a></dt>
+<dd><p>read-only attribute without a set method</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.selstr">
+<code class="descname">selstr</code><a class="headerlink" href="#prody.atomic.fields.Field.selstr" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of selection string examples</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.atomic.fields.Field.synonym">
+<code class="descname">synonym</code><a class="headerlink" href="#prody.atomic.fields.Field.synonym" title="Permalink to this definition">¶</a></dt>
+<dd><p>synonym used in atom selections</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

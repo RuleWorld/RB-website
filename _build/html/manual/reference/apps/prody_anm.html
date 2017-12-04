@@ -1,0 +1,237 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>ANM Application &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="prody_biomol.html" title="Biomolecule Builder"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="prody_align.html" title="PDB Model/Structure Alignment"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Applications API &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.apps.prody_apps.prody_anm">
+<span id="anm-application"></span><h1>ANM Application<a class="headerlink" href="#module-prody.apps.prody_apps.prody_anm" title="Permalink to this headline">¶</a></h1>
+<p>Perform ANM calculations and output the results in plain text, NMD, and
+graphical formats.</p>
+<dl class="function">
+<dt id="prody.apps.prody_apps.prody_anm.prody_anm">
+<code class="descname">prody_anm</code><span class="sig-paren">(</span><em>pdb</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/apps/prody_apps/prody_anm.html#prody_anm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.apps.prody_apps.prody_anm.prody_anm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform ANM calculations for <em>pdb</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cutoff</strong> &#8211; cutoff distance (A), default is <code class="docutils literal"><span class="pre">15.0</span></code></li>
+<li><strong>extend</strong> &#8211; write NMD file for the model extended to &#8220;backbone&#8221; (&#8220;bb&#8221;) or &#8220;all&#8221; atoms of the residue, model must have one node per residue, default is <code class="docutils literal"><span class="pre">''</span></code></li>
+<li><strong>figall</strong> &#8211; save all figures, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>figbeta</strong> &#8211; save beta-factors figure, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>figcc</strong> &#8211; save cross-correlations figure, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>figcmap</strong> &#8211; save contact map (Kirchhoff matrix) figure, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>figdpi</strong> &#8211; figure resolution (dpi), default is <code class="docutils literal"><span class="pre">300</span></code></li>
+<li><strong>figformat</strong> &#8211; figure file format, default is <code class="docutils literal"><span class="pre">'pdf'</span></code></li>
+<li><strong>figheight</strong> &#8211; figure height (inch), default is <code class="docutils literal"><span class="pre">6.0</span></code></li>
+<li><strong>figmode</strong> &#8211; save mode shape figures for specified modes, e.g. &#8220;1-3 5&#8221; for modes 1, 2, 3 and 5, default is <code class="docutils literal"><span class="pre">''</span></code></li>
+<li><strong>figsf</strong> &#8211; save square-fluctuations figure, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>figwidth</strong> &#8211; figure width (inch), default is <code class="docutils literal"><span class="pre">8.0</span></code></li>
+<li><strong>gamma</strong> &#8211; spring constant, default is <code class="docutils literal"><span class="pre">1.0</span></code></li>
+<li><strong>hessian</strong> &#8211; write Hessian matrix, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>kirchhoff</strong> &#8211; write Kirchhoff matrix, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>model</strong> &#8211; index of model that will be used in the calculations, default is <code class="docutils literal"><span class="pre">1</span></code></li>
+<li><strong>nmodes</strong> &#8211; number of non-zero eigenvectors (modes) to calculate, default is <code class="docutils literal"><span class="pre">10</span></code></li>
+<li><strong>numdelim</strong> &#8211; number delimiter, default is <code class="docutils literal"><span class="pre">'</span> <span class="pre">'</span></code></li>
+<li><strong>numext</strong> &#8211; numeric file extension, default is <code class="docutils literal"><span class="pre">'.txt'</span></code></li>
+<li><strong>numformat</strong> &#8211; number output format, default is <code class="docutils literal"><span class="pre">'%12g'</span></code></li>
+<li><strong>outall</strong> &#8211; write all outputs, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>outbeta</strong> &#8211; write beta-factors calculated from GNM modes, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>outcc</strong> &#8211; write cross-correlations, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>outcov</strong> &#8211; write covariance matrix, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>outdir</strong> &#8211; output directory, default is <code class="docutils literal"><span class="pre">'.'</span></code></li>
+<li><strong>outeig</strong> &#8211; write eigenvalues/vectors, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>outhm</strong> &#8211; write cross-correlations heatmap file, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>outnpz</strong> &#8211; write compressed ProDy data file, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>outsf</strong> &#8211; write square-fluctuations, default is <code class="docutils literal"><span class="pre">False</span></code></li>
+<li><strong>prefix</strong> &#8211; output file prefix, default is <code class="docutils literal"><span class="pre">'_anm'</span></code></li>
+<li><strong>select</strong> &#8211; atom selection, default is <code class="docutils literal"><span class="pre">&quot;protein</span> <span class="pre">and</span> <span class="pre">name</span> <span class="pre">CA</span> <span class="pre">or</span> <span class="pre">nucleic</span> <span class="pre">and</span> <span class="pre">name</span> <span class="pre">P</span> <span class="pre">C4'</span> <span class="pre">C2&quot;</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

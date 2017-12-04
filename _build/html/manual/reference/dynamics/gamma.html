@@ -1,0 +1,491 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Custom Gamma Functions &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="gnm.html" title="Gaussian Network Model"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="functions.html" title="Supporting Functions"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Dynamics Analysis &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.dynamics.gamma">
+<span id="custom-gamma-functions"></span><h1>Custom Gamma Functions<a class="headerlink" href="#module-prody.dynamics.gamma" title="Permalink to this headline">¶</a></h1>
+<p>This module defines customized gamma functions for elastic network model
+analysis.</p>
+<dl class="class">
+<dt id="prody.dynamics.gamma.Gamma">
+<em class="property">class </em><code class="descname">Gamma</code><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#Gamma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.Gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for facilitating use of atom type, residue type, or residue
+property dependent force constants (γ).</p>
+<p>Derived classes:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#prody.dynamics.gamma.GammaStructureBased" title="prody.dynamics.gamma.GammaStructureBased"><code class="xref py py-class docutils literal"><span class="pre">GammaStructureBased</span></code></a></li>
+<li><a class="reference internal" href="#prody.dynamics.gamma.GammaVariableCutoff" title="prody.dynamics.gamma.GammaVariableCutoff"><code class="xref py py-class docutils literal"><span class="pre">GammaVariableCutoff</span></code></a></li>
+</ul>
+<dl class="method">
+<dt id="prody.dynamics.gamma.Gamma.gamma">
+<code class="descname">gamma</code><span class="sig-paren">(</span><em>dist2</em>, <em>i</em>, <em>j</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#Gamma.gamma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.Gamma.gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns force constant.</p>
+<p>For efficiency purposes square of the distance between interacting
+atom/residue (node) pairs is passed to this function. In addition,
+node indices are passed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.dynamics.gamma.GammaStructureBased">
+<em class="property">class </em><code class="descname">GammaStructureBased</code><span class="sig-paren">(</span><em>atoms</em>, <em>gamma=1.0</em>, <em>helix=6.0</em>, <em>sheet=6.0</em>, <em>connected=10.0</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaStructureBased"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaStructureBased" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facilitate setting the spring constant based on the secondary structure
+and connectivity of the residues.</p>
+<p>A recent systematic study <a class="reference internal" href="#lt10" id="id1">[LT10]</a> of a large set of NMR-structures analyzed
+using a method based on entropy maximization showed that taking into
+consideration properties such as sequential separation between
+contacting residues and the secondary structure types of the interacting
+residues provides refinement in the ENM description of proteins.</p>
+<p>This class determines pairs of connected residues or pairs of proximal
+residues in a helix or a sheet, and assigns them a larger user defined
+spring constant value.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>DSSP single letter abbreviations are recognized:</dt>
+<dd><ul class="first last simple">
+<li><strong>H</strong>: α-helix</li>
+<li><strong>G</strong>: 3-10-helix</li>
+<li><strong>I</strong>: π-helix</li>
+<li><strong>E</strong>: extended part of a sheet</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt><em>helix</em>:</dt>
+<dd>Applies to residue (or Cα atom) pairs that are in the same helical
+segment, at most 7 Å apart, and separated by at most
+3 (3-10-helix), 4 (α-helix), or 5 (π-helix) residues.</dd>
+<dt><em>sheet</em>:</dt>
+<dd>Applies to Cα atom pairs that are in different β-strands and at most
+6 Å apart.</dd>
+<dt><em>connected</em>:</dt>
+<dd>Applies to Cα atoms that are at most 4 Å apart.</dd>
+</dl>
+<p>Note that this class does not take into account insertion codes.</p>
+<table class="docutils citation" frame="void" id="lt10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[LT10]</a></td><td>Lezon TR, Bahar I. Using entropy maximization to understand the
+determinants of structural dynamics beyond native contact topology.
+<em>PLoS Comput Biol</em> <strong>2010</strong> 6(6):e1000816.</td></tr>
+</tbody>
+</table>
+<p><strong>Example</strong>:</p>
+<p>Let&#8217;s parse coordinates and header data from a PDB file, and then
+assign secondary structure to the atoms.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="n">ubi</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1aar&#39;</span><span class="p">,</span> <span class="n">chain</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="s1">&#39;calpha&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="gp">In [3]: </span><span class="n">assignSecstr</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">ubi</span><span class="p">)</span>
+<span class="gh">Out[3]: </span><span class="go">&lt;AtomGroup: 1aar_A_ca (76 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>In the above we parsed only the atoms needed for this calculation, i.e.
+Cα atoms from chain A.</p>
+<p>We build the Hessian matrix using structure based force constants as
+follows;</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">gamma</span> <span class="o">=</span> <span class="n">GammaStructureBased</span><span class="p">(</span><span class="n">ubi</span><span class="p">)</span>
+
+<span class="gp">In [5]: </span><span class="n">anm</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="gp">In [6]: </span><span class="n">anm</span><span class="o">.</span><span class="n">buildHessian</span><span class="p">(</span><span class="n">ubi</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="n">gamma</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can obtain the force constants assigned to residue pairs from the
+Kirchhoff matrix as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">k</span> <span class="o">=</span> <span class="n">anm</span><span class="o">.</span><span class="n">getKirchhoff</span><span class="p">()</span>
+
+<span class="gp">In [8]: </span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># a pair of connected residues</span>
+<span class="gh">Out[8]: </span><span class="go">-10.0</span>
+
+<span class="gp">In [9]: </span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span> <span class="c1"># a pair of residues from a sheet</span>
+<span class="gh">Out[9]: </span><span class="go">-6.0</span>
+</pre></div>
+</div>
+<p>Setup the parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>atoms</strong> (<a class="reference internal" href="../atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a>) &#8211; A set of atoms with chain identifiers, residue numbers,
+and secondary structure assignments are set.</li>
+<li><strong>gamma</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Force constant in arbitrary units. Default is 1.0.</li>
+<li><strong>helix</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Force constant factor for residues hydrogen bonded in
+α-helices, 3,10-helices, and π-helices. Default is 6.0, i.e.
+<code class="docutils literal"><span class="pre">6.0`*gamma</span></code>.</li>
+<li><strong>sheet</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Force constant factor for residue pairs forming a hydrogen
+bond in a β-sheet. Default is 6.0, i.e. <code class="docutils literal"><span class="pre">6.0`*gamma</span></code>.</li>
+<li><strong>connected</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Force constant factor for residue pairs that are
+connected. Default is 10.0, i.e. <code class="docutils literal"><span class="pre">10.0`*gamma</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="prody.dynamics.gamma.GammaStructureBased.gamma">
+<code class="descname">gamma</code><span class="sig-paren">(</span><em>dist2</em>, <em>i</em>, <em>j</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaStructureBased.gamma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaStructureBased.gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns force constant.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.gamma.GammaStructureBased.getChids">
+<code class="descname">getChids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaStructureBased.getChids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaStructureBased.getChids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of chain identifiers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.gamma.GammaStructureBased.getResnums">
+<code class="descname">getResnums</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaStructureBased.getResnums"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaStructureBased.getResnums" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of residue numbers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.gamma.GammaStructureBased.getSecstrs">
+<code class="descname">getSecstrs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaStructureBased.getSecstrs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaStructureBased.getSecstrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of secondary structure assignments.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.dynamics.gamma.GammaVariableCutoff">
+<em class="property">class </em><code class="descname">GammaVariableCutoff</code><span class="sig-paren">(</span><em>identifiers</em>, <em>gamma=1.0</em>, <em>default_radius=7.5</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaVariableCutoff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaVariableCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facilitate setting the cutoff distance based on user defined
+atom/residue (node) radii.</p>
+<p>Half of the cutoff distance can be thought of as the radius of a node.
+This class enables setting different radii for different node types.</p>
+<p><strong>Example</strong>:</p>
+<p>Let&#8217;s think of a protein-DNA complex for which we want to use different
+radius for different residue types. Let&#8217;s say, for protein Cα atoms we
+want to set the radius to 7.5 Å, and for nucleic acid phosphate atoms to
+10 Å. We use the HhaI-DNA complex structure <code class="file docutils literal"><span class="pre">1mht</span></code>.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">hhai</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1mht&#39;</span><span class="p">)</span>
+
+<span class="gp">In [2]: </span><span class="n">ca_p</span> <span class="o">=</span> <span class="n">hhai</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;(protein and name CA) or (nucleic and name P)&#39;</span><span class="p">)</span>
+
+<span class="gp">In [3]: </span><span class="n">ca_p</span><span class="o">.</span><span class="n">getNames</span><span class="p">()</span>
+<span class="gh">Out[3]: </span><span class="go"></span>
+<span class="go">array([&#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;,</span>
+<span class="go">       &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;],</span>
+<span class="go">      dtype=&#39;|S6&#39;)</span>
+</pre></div>
+</div>
+<p>We set the radii of atoms:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">varcutoff</span> <span class="o">=</span> <span class="n">GammaVariableCutoff</span><span class="p">(</span><span class="n">ca_p</span><span class="o">.</span><span class="n">getNames</span><span class="p">(),</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="gp">   ...: </span>    <span class="n">default_radius</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">   ...: </span>
+
+<span class="gp">In [5]: </span><span class="n">varcutoff</span><span class="o">.</span><span class="n">getRadii</span><span class="p">()</span>
+<span class="gh">Out[5]: </span><span class="go"></span>
+<span class="go">array([ 10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,</span>
+<span class="go">        10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,</span>
+<span class="go">        10. ,  10. ,  10. ,  10. ,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
+<span class="go">         7.5,   7.5,   7.5,   7.5,   7.5,   7.5,   7.5])</span>
+</pre></div>
+</div>
+<p>The above shows that for phosphate atoms radii is set to 10 Å, because
+we passed the <code class="docutils literal"><span class="pre">P=10</span></code> argument.  As for Cα atoms, the default 7.5 Å
+is set as the radius (<code class="docutils literal"><span class="pre">default_radius=7.5</span></code>).  You can also try this with
+<code class="docutils literal"><span class="pre">debug=True</span></code> argument to print debugging information on the screen.</p>
+<p>We build <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a> Hessian matrix as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [6]: </span><span class="n">anm</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="s1">&#39;HhaI-DNA&#39;</span><span class="p">)</span>
+
+<span class="gp">In [7]: </span><span class="n">anm</span><span class="o">.</span><span class="n">buildHessian</span><span class="p">(</span><span class="n">ca_p</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="n">varcutoff</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that we passed <code class="docutils literal"><span class="pre">cutoff=20.0</span></code> to the <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM.buildHessian" title="prody.dynamics.anm.ANM.buildHessian"><code class="xref py py-meth docutils literal"><span class="pre">ANM.buildHessian()</span></code></a>
+method.  This is equal to the largest possible cutoff distance (between
+two phosphate atoms) for this system, and ensures that all of the
+potential interactions are evaluated.</p>
+<p>For pairs of atoms for which the actual distance is larger than the
+effective cutoff, the <a class="reference internal" href="#prody.dynamics.gamma.GammaVariableCutoff.gamma" title="prody.dynamics.gamma.GammaVariableCutoff.gamma"><code class="xref py py-meth docutils literal"><span class="pre">GammaVariableCutoff.gamma()</span></code></a> method returns
+<code class="docutils literal"><span class="pre">0</span></code>.  This annuls the interaction between those atom pairs.</p>
+<p>Set the radii of atoms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>identifiers</strong> (list or <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a>) &#8211; List of atom names or types, or residue names.</li>
+<li><strong>gamma</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Uniform force constant value. Default is 1.0.</li>
+<li><strong>default_radius</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Default radius for atoms whose radii is not set
+as a keyword argument. Default is 7.5</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Keywords in keyword arguments must match those in <em>atom_identifiers</em>.
+Values of keyword arguments must be <a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a>.</p>
+<dl class="method">
+<dt id="prody.dynamics.gamma.GammaVariableCutoff.gamma">
+<code class="descname">gamma</code><span class="sig-paren">(</span><em>dist2</em>, <em>i</em>, <em>j</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaVariableCutoff.gamma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaVariableCutoff.gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns force constant.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.gamma.GammaVariableCutoff.getGamma">
+<code class="descname">getGamma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaVariableCutoff.getGamma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaVariableCutoff.getGamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the uniform force constant value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.gamma.GammaVariableCutoff.getRadii">
+<code class="descname">getRadii</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/gamma.html#GammaVariableCutoff.getRadii"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.gamma.GammaVariableCutoff.getRadii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of radii array.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>ProDy 0.6 Series &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../index.html">
+        <img src="../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="v0.5_series.html" title="ProDy 0.5 Series"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="v0.7_series.html" title="ProDy 0.7 Series"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../index.html">Home  &raquo;</a></li>
+          <li><a href="../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Release Notes &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">ProDy 0.6 Series</a><ul>
+<li><a class="reference internal" href="#mar-16-2011">0.6.2 (Mar 16, 2011)</a></li>
+<li><a class="reference internal" href="#mar-2-2011">0.6.1 (Mar 2, 2011)</a></li>
+<li><a class="reference internal" href="#feb-22-2011">0.6 (Feb 22, 2011)</a><ul>
+<li><a class="reference internal" href="#normal-mode-wizard">Normal Mode Wizard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="prody-0-6-series">
+<h1>ProDy 0.6 Series<a class="headerlink" href="#prody-0-6-series" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#mar-16-2011" id="id1">0.6.2 (Mar 16, 2011)</a></li>
+<li><a class="reference internal" href="#mar-2-2011" id="id2">0.6.1 (Mar 2, 2011)</a></li>
+<li><a class="reference internal" href="#feb-22-2011" id="id3">0.6 (Feb 22, 2011)</a><ul>
+<li><a class="reference internal" href="#normal-mode-wizard" id="id4">Normal Mode Wizard</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="mar-16-2011">
+<h2><a class="toc-backref" href="#id1">0.6.2 (Mar 16, 2011)</a><a class="headerlink" href="#mar-16-2011" title="Permalink to this headline">¶</a></h2>
+<p><strong>New Features</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../reference/dynamics/pca.html#prody.dynamics.pca.PCA.performSVD" title="prody.dynamics.pca.PCA.performSVD"><code class="xref py py-meth docutils literal"><span class="pre">performSVD()</span></code></a> function is implemented for faster
+and more memory efficient principal compoment analysis.</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">extrapolateModel()</span></code> function is implemented for
+extrapolating a coarse-grained model to an all atom model. See the
+usage example <span class="xref std std-ref">extendmodel</span>.</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">plog()</span></code> is implemented for enabling users to make log entries.</li>
+</ul>
+</div></blockquote>
+<p><strong>Improvements</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-mod docutils literal"><span class="pre">compare</span></code> functions are improved to handle insertion codes.</li>
+<li><a class="reference internal" href="../reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> allows for indexing using chain identifier
+and residue numbers. See usage example <span class="xref std std-ref">hierview</span>.</li>
+<li><a class="reference internal" href="../reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> allows for indexing using residue number and
+insertion code. See usage example <span class="xref std std-ref">hierview</span>.</li>
+<li><a class="reference internal" href="../reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.addCoordset" title="prody.atomic.atomgroup.AtomGroup.addCoordset"><code class="xref py py-meth docutils literal"><span class="pre">addCoordset()</span></code></a> function accepts
+<a class="reference internal" href="../reference/atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a> and <a class="reference internal" href="../reference/ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a> instances
+as <em>coords</em> argument.</li>
+<li>New method <a class="reference internal" href="../reference/atomic/hierview.html#prody.atomic.hierview.HierView.getAtoms" title="prody.atomic.hierview.HierView.getAtoms"><code class="xref py py-meth docutils literal"><span class="pre">HierView.getAtoms()</span></code></a> is implemented.</li>
+<li><a class="reference internal" href="../reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> set functions check the correctness of
+dimension of data arrays to prevent runtime problems.</li>
+<li><strong class="program">prody pca</strong> script is updated to use the faster PCA method
+that uses SVD.</li>
+</ul>
+</div></blockquote>
+<p><strong>Changes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>&#8220;backbone&#8221; definition now includes the backbone hydrogen atom
+(Thanks to Nahren Mascarenhas for pointing to this discrepancy in the
+keyword definition).</li>
+</ul>
+</div></blockquote>
+<p><strong>Bug Fixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>A bug in <a class="reference internal" href="../reference/dynamics/pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a> allowed calculating covariance matrix
+for less than 3 coordinate sets is fixed.</li>
+<li>A bug in <a class="reference internal" href="../reference/proteins/compare.html#prody.proteins.compare.mapOntoChain" title="prody.proteins.compare.mapOntoChain"><code class="xref py py-func docutils literal"><span class="pre">mapOntoChain()</span></code></a> function that caused problems
+when mapping all atoms is fixed.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="mar-2-2011">
+<h2><a class="toc-backref" href="#id2">0.6.1 (Mar 2, 2011)</a><a class="headerlink" href="#mar-2-2011" title="Permalink to this headline">¶</a></h2>
+<p><strong>New Features</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-func docutils literal"><span class="pre">setWWPDBFTPServer()</span></code> and <code class="xref py py-func docutils literal"><span class="pre">getWWPDBFTPServer()</span></code>
+functions allow user to change or learn the WWPDB FTP server that ProDy
+uses to download PDB files. Default server is RCSB PDB in USA.
+User can change the default server to one in Europe or Japan.</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">setPDBMirrorPath()</span></code> and <code class="xref py py-func docutils literal"><span class="pre">getPDBMirrorPath()</span></code>
+functions allow user to specify or learn the path to a local PDB mirror.
+When specified, a local PDB mirror is preferred for accessing PDB files,
+over downloading them from FTP servers.</li>
+<li><a class="reference internal" href="../reference/proteins/compare.html#prody.proteins.compare.mapOntoChain" title="prody.proteins.compare.mapOntoChain"><code class="xref py py-func docutils literal"><span class="pre">mapOntoChain()</span></code></a> function is improved to map backbone or
+all atoms.</li>
+</ul>
+</div></blockquote>
+<p><strong>Improvements</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-class docutils literal"><span class="pre">WWPDB_PDBFetcher</span></code> can download PDB files from different
+WWPDB FTP servers.</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">WWPDB_PDBFetcher</span></code> can also use local PDB mirrors for
+accessing PDB files.</li>
+</ul>
+</div></blockquote>
+<p><strong>Changes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-class docutils literal"><span class="pre">RCSB_PDBFetcher</span></code> is renamed as <code class="xref py py-class docutils literal"><span class="pre">WWPDB_PDBFetcher</span></code>.</li>
+<li><a class="reference internal" href="../reference/proteins/compare.html#prody.proteins.compare.mapOntoChain" title="prody.proteins.compare.mapOntoChain"><code class="xref py py-func docutils literal"><span class="pre">mapOntoChain()</span></code></a> and <a class="reference internal" href="../reference/proteins/compare.html#prody.proteins.compare.matchChains" title="prody.proteins.compare.matchChains"><code class="xref py py-func docutils literal"><span class="pre">matchChains()</span></code></a> functions
+accept <code class="docutils literal"><span class="pre">&quot;ca&quot;</span></code> and <code class="docutils literal"><span class="pre">&quot;bb&quot;</span></code> as <em>subset</em> arguments.</li>
+<li>Definition of selection keyword &#8220;protein&#8221; is updated to include
+some non-standard amino acid abbreviations.</li>
+</ul>
+</div></blockquote>
+<p><strong>Bug Fixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>A bug in <code class="xref py py-class docutils literal"><span class="pre">WWPDB_PDBFetcher</span></code> causing exceptions when
+non-string items passed in a list is fixed.</li>
+<li>An important bug in <a class="reference internal" href="../reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> is fixed. When parsing
+backbone or Cα atoms, residue names were not checked and this caused
+parsing water atoms with name <code class="docutils literal"><span class="pre">&quot;O&quot;</span></code> or calcium ions with name <code class="docutils literal"><span class="pre">&quot;CA&quot;</span></code>.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="feb-22-2011">
+<h2><a class="toc-backref" href="#id3">0.6 (Feb 22, 2011)</a><a class="headerlink" href="#feb-22-2011" title="Permalink to this headline">¶</a></h2>
+<p><strong>New Features</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Biopython module pairwise2 and packages KDTree and Blast are incorporated
+in ProDy package to make installation easier. Only NumPy needs to be
+installed before ProDy can be used. For plotting, Matplotlib is still
+required.</li>
+<li><span class="xref std std-ref">nmwiz</span> is distributed with ProDy source. On Linux, if VMD is
+installed, ProDy installer locates VMD plugins folder and installs NMWiz.
+On Windows, user needs to follow a separate set of instructions (see
+<span class="xref std std-ref">nmwiz</span>).</li>
+<li><a class="reference internal" href="../reference/dynamics/gamma.html#prody.dynamics.gamma.Gamma" title="prody.dynamics.gamma.Gamma"><code class="xref py py-class docutils literal"><span class="pre">Gamma</span></code></a> class is implemented for facilitating use of
+force constants based on atom type, residue type, or property. An
+example derived classes are <a class="reference internal" href="../reference/dynamics/gamma.html#prody.dynamics.gamma.GammaStructureBased" title="prody.dynamics.gamma.GammaStructureBased"><code class="xref py py-class docutils literal"><span class="pre">GammaStructureBased</span></code></a> and
+<a class="reference internal" href="../reference/dynamics/gamma.html#prody.dynamics.gamma.GammaVariableCutoff" title="prody.dynamics.gamma.GammaVariableCutoff"><code class="xref py py-class docutils literal"><span class="pre">GammaVariableCutoff</span></code></a>.</li>
+<li><a class="reference internal" href="../reference/dynamics/analysis.html#prody.dynamics.analysis.calcTempFactors" title="prody.dynamics.analysis.calcTempFactors"><code class="xref py py-func docutils literal"><span class="pre">calcTempFactors()</span></code></a> function is implemented to
+calculate theoretical temperature factors.</li>
+<li>5 new <a class="reference internal" href="../apps/prody/index.html#prody-apps"><span class="std std-ref">ProDy Applications</span></a> are implemented, and existing scripts are improved to
+output figures.</li>
+<li><a class="reference internal" href="../reference/dynamics/nma.html#prody.dynamics.nma.NMA.getModel" title="prody.dynamics.nma.NMA.getModel"><code class="xref py py-meth docutils literal"><span class="pre">getModel()</span></code></a> method is implemented to make function development
+easier.</li>
+<li><a class="reference internal" href="../reference/dynamics/plotting.html#prody.dynamics.plotting.resetTicks" title="prody.dynamics.plotting.resetTicks"><code class="xref py py-func docutils literal"><span class="pre">resetTicks()</span></code></a> function is implemented to change X and/or Y
+axis ticks in plots when there are discontinuities in the plotted data.</li>
+</ul>
+</div></blockquote>
+<p><strong>Improvements</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../reference/dynamics/anm.html#prody.dynamics.anm.ANM.buildHessian" title="prody.dynamics.anm.ANM.buildHessian"><code class="xref py py-meth docutils literal"><span class="pre">ANM.buildHessian()</span></code></a> and <a class="reference internal" href="../reference/dynamics/gnm.html#prody.dynamics.gnm.GNM.buildKirchhoff" title="prody.dynamics.gnm.GNM.buildKirchhoff"><code class="xref py py-meth docutils literal"><span class="pre">GNM.buildKirchhoff()</span></code></a>
+classes are improved to accept <a class="reference internal" href="../reference/dynamics/gamma.html#prody.dynamics.gamma.Gamma" title="prody.dynamics.gamma.Gamma"><code class="xref py py-class docutils literal"><span class="pre">Gamma</span></code></a> instances
+or other custom function as <em>gamma</em> argument. See also <span class="xref std std-ref">gamma</span>.</li>
+<li><a class="reference internal" href="../reference/atomic/select.html#prody.atomic.select.Select" title="prody.atomic.select.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a> class is changed to treat single word keywords
+differently, e.g. &#8220;backbone&#8221; or &#8220;protein&#8221;.
+They are interpreted 10 times faster and in use achieve much higher
+speed-ups when compared to composite selections. For example, using the
+keyword &#8220;calpha&#8221; instead of the <code class="docutils literal"><span class="pre">name</span> <span class="pre">CA</span> <span class="pre">and</span> <span class="pre">protein</span></code>,
+which returns the same selection, works &gt;20 times faster.</li>
+<li>Optimizations in <code class="xref py py-class docutils literal"><span class="pre">Select</span></code> class to increase
+performance (Thanks to Paul McGuire for providing several Pythonic tips
+and Pyparsing specific advice).</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">applyBiomolecularTransformations()</span></code> function is improved
+to handle large biomolecular assemblies.</li>
+<li>Performance optimizations in <a class="reference internal" href="../reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> and other functions.</li>
+<li><a class="reference internal" href="../reference/ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a> class accepts <a class="reference internal" href="../reference/atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a> instances and
+automatically adds coordinate sets to the ensemble.</li>
+</ul>
+</div></blockquote>
+<p><strong>Changes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-class docutils literal"><span class="pre">PDBlastRecord</span></code> is renamed as <a class="reference internal" href="../reference/proteins/blastpdb.html#prody.proteins.blastpdb.PDBBlastRecord" title="prody.proteins.blastpdb.PDBBlastRecord"><code class="xref py py-class docutils literal"><span class="pre">PDBBlastRecord</span></code></a>.</li>
+<li><a class="reference internal" href="../reference/dynamics/nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a> instances can be index using a list or tuple of integers,
+e.g. <code class="docutils literal"><span class="pre">anm[1,3,5]</span></code>.</li>
+<li>&#8220;ca&#8221;, &#8220;bb&#8221;, and &#8220;sc&#8221; keywords are defined as short-hands for &#8220;calpha&#8221;,
+&#8220;backbone&#8221;, and &#8220;sidechain&#8221;, respectively.</li>
+<li>Behavior of <a class="reference internal" href="../reference/dynamics/anm.html#prody.dynamics.anm.calcANM" title="prody.dynamics.anm.calcANM"><code class="xref py py-func docutils literal"><span class="pre">calcANM()</span></code></a> and <a class="reference internal" href="../reference/dynamics/gnm.html#prody.dynamics.gnm.calcGNM" title="prody.dynamics.gnm.calcGNM"><code class="xref py py-func docutils literal"><span class="pre">calcGNM()</span></code></a> functions have changed.
+They return the atoms used for calculation as well.</li>
+</ul>
+</div></blockquote>
+<p><strong>Bug Fixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>A bug in <code class="xref py py-func docutils literal"><span class="pre">assignSecondaryStructure()</span></code> function is fixed.</li>
+<li>Bug fixes in <a class="reference internal" href="../apps/prody/anm.html#prody-anm"><span class="std std-ref">prody anm</span></a> and <a class="reference internal" href="../apps/prody/gnm.html#prody-gnm"><span class="std std-ref">prody gnm</span></a>.</li>
+<li>Bug fixes in <a class="reference internal" href="../reference/dynamics/plotting.html#prody.dynamics.plotting.showSqFlucts" title="prody.dynamics.plotting.showSqFlucts"><code class="xref py py-func docutils literal"><span class="pre">showSqFlucts()</span></code></a> and <a class="reference internal" href="../reference/dynamics/plotting.html#prody.dynamics.plotting.showProjection" title="prody.dynamics.plotting.showProjection"><code class="xref py py-func docutils literal"><span class="pre">showProjection()</span></code></a> functions.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="normal-mode-wizard">
+<h3><a class="toc-backref" href="#id4">Normal Mode Wizard</a><a class="headerlink" href="#normal-mode-wizard" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>NMWiz can be used as a graphical interface to ProDy. ANM or PCA
+calculations can be performed for molecules that are loaded in VMD.</li>
+<li>User can set default color for arrow graphics and paths to ANM and PCA
+scripts.</li>
+<li>Optionally, NMWiz can preserve the current view in VMD display window when
+loading a new dataset. Check the box in the NMWiz GUI main window.</li>
+<li>A bug that prevented selecting residues from plot window is fixed.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>ProDy Utilities &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="checkers.html" title="Type Checkers"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="../trajectory/trajfile.html" title="Trajectory File"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" accesskey="U">Reference Manual &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">ProDy Utilities</a><ul>
+<li><a class="reference internal" href="#package-utilities">Package utilities</a></li>
+<li><a class="reference internal" href="#type-value-checkers">Type/Value checkers</a></li>
+<li><a class="reference internal" href="#path-file-handling">Path/file handling</a></li>
+<li><a class="reference internal" href="#documentation-tools">Documentation tools</a></li>
+<li><a class="reference internal" href="#miscellaneous-tools">Miscellaneous tools</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.utilities">
+<span id="prody-utilities"></span><h1>ProDy Utilities<a class="headerlink" href="#module-prody.utilities" title="Permalink to this headline">¶</a></h1>
+<p>This module provides utility functions and classes for handling files,
+logging, type checking, etc.  Contents of this module are not included in
+ProDy namespace, as it is not safe to import them all due to name conflicts.
+Required or classes should be imported explicitly, e.g.
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">prody.utilities</span> <span class="pre">import</span> <span class="pre">PackageLogger,</span> <span class="pre">openFile</span></code>.</p>
+<div class="section" id="package-utilities">
+<h2>Package utilities<a class="headerlink" href="#package-utilities" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="logger.html#prody.utilities.logger.PackageLogger" title="prody.utilities.logger.PackageLogger"><code class="xref py py-class docutils literal"><span class="pre">PackageLogger</span></code></a></li>
+<li><a class="reference internal" href="settings.html#prody.utilities.settings.PackageSettings" title="prody.utilities.settings.PackageSettings"><code class="xref py py-class docutils literal"><span class="pre">PackageSettings</span></code></a></li>
+<li><a class="reference internal" href="settings.html#prody.utilities.settings.getPackagePath" title="prody.utilities.settings.getPackagePath"><code class="xref py py-func docutils literal"><span class="pre">getPackagePath()</span></code></a></li>
+<li><a class="reference internal" href="settings.html#prody.utilities.settings.setPackagePath" title="prody.utilities.settings.setPackagePath"><code class="xref py py-func docutils literal"><span class="pre">setPackagePath()</span></code></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="type-value-checkers">
+<h2>Type/Value checkers<a class="headerlink" href="#type-value-checkers" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="checkers.html#prody.utilities.checkers.checkCoords" title="prody.utilities.checkers.checkCoords"><code class="xref py py-func docutils literal"><span class="pre">checkCoords()</span></code></a></li>
+<li><a class="reference internal" href="checkers.html#prody.utilities.checkers.checkWeights" title="prody.utilities.checkers.checkWeights"><code class="xref py py-func docutils literal"><span class="pre">checkWeights()</span></code></a></li>
+<li><a class="reference internal" href="checkers.html#prody.utilities.checkers.checkTypes" title="prody.utilities.checkers.checkTypes"><code class="xref py py-func docutils literal"><span class="pre">checkTypes()</span></code></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="path-file-handling">
+<h2>Path/file handling<a class="headerlink" href="#path-file-handling" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.gunzip" title="prody.utilities.pathtools.gunzip"><code class="xref py py-func docutils literal"><span class="pre">gunzip()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.openFile" title="prody.utilities.pathtools.openFile"><code class="xref py py-func docutils literal"><span class="pre">openFile()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.openDB" title="prody.utilities.pathtools.openDB"><code class="xref py py-func docutils literal"><span class="pre">openDB()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.openSQLite" title="prody.utilities.pathtools.openSQLite"><code class="xref py py-func docutils literal"><span class="pre">openSQLite()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.openURL" title="prody.utilities.pathtools.openURL"><code class="xref py py-func docutils literal"><span class="pre">openURL()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.copyFile" title="prody.utilities.pathtools.copyFile"><code class="xref py py-func docutils literal"><span class="pre">copyFile()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.isExecutable" title="prody.utilities.pathtools.isExecutable"><code class="xref py py-func docutils literal"><span class="pre">isExecutable()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.isReadable" title="prody.utilities.pathtools.isReadable"><code class="xref py py-func docutils literal"><span class="pre">isReadable()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.isWritable" title="prody.utilities.pathtools.isWritable"><code class="xref py py-func docutils literal"><span class="pre">isWritable()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.makePath" title="prody.utilities.pathtools.makePath"><code class="xref py py-func docutils literal"><span class="pre">makePath()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.relpath" title="prody.utilities.pathtools.relpath"><code class="xref py py-func docutils literal"><span class="pre">relpath()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.which" title="prody.utilities.pathtools.which"><code class="xref py py-func docutils literal"><span class="pre">which()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.pickle" title="prody.utilities.pathtools.pickle"><code class="xref py py-func docutils literal"><span class="pre">pickle()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.unpickle" title="prody.utilities.pathtools.unpickle"><code class="xref py py-func docutils literal"><span class="pre">unpickle()</span></code></a></li>
+<li><a class="reference internal" href="pathtools.html#prody.utilities.pathtools.glob" title="prody.utilities.pathtools.glob"><code class="xref py py-func docutils literal"><span class="pre">glob()</span></code></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="documentation-tools">
+<h2>Documentation tools<a class="headerlink" href="#documentation-tools" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="doctools.html#prody.utilities.doctools.joinRepr" title="prody.utilities.doctools.joinRepr"><code class="xref py py-func docutils literal"><span class="pre">joinRepr()</span></code></a></li>
+<li><a class="reference internal" href="doctools.html#prody.utilities.doctools.joinRepr" title="prody.utilities.doctools.joinRepr"><code class="xref py py-func docutils literal"><span class="pre">joinRepr()</span></code></a></li>
+<li><a class="reference internal" href="doctools.html#prody.utilities.doctools.joinTerms" title="prody.utilities.doctools.joinTerms"><code class="xref py py-func docutils literal"><span class="pre">joinTerms()</span></code></a></li>
+<li><a class="reference internal" href="doctools.html#prody.utilities.doctools.tabulate" title="prody.utilities.doctools.tabulate"><code class="xref py py-func docutils literal"><span class="pre">tabulate()</span></code></a></li>
+<li><a class="reference internal" href="doctools.html#prody.utilities.doctools.wrapText" title="prody.utilities.doctools.wrapText"><code class="xref py py-func docutils literal"><span class="pre">wrapText()</span></code></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="miscellaneous-tools">
+<h2>Miscellaneous tools<a class="headerlink" href="#miscellaneous-tools" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="misctools.html#prody.utilities.misctools.rangeString" title="prody.utilities.misctools.rangeString"><code class="xref py py-func docutils literal"><span class="pre">rangeString()</span></code></a></li>
+<li><a class="reference internal" href="misctools.html#prody.utilities.misctools.alnum" title="prody.utilities.misctools.alnum"><code class="xref py py-func docutils literal"><span class="pre">alnum()</span></code></a></li>
+<li><a class="reference internal" href="misctools.html#prody.utilities.misctools.importLA" title="prody.utilities.misctools.importLA"><code class="xref py py-func docutils literal"><span class="pre">importLA()</span></code></a></li>
+<li><a class="reference internal" href="misctools.html#prody.utilities.misctools.dictElement" title="prody.utilities.misctools.dictElement"><code class="xref py py-func docutils literal"><span class="pre">dictElement()</span></code></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

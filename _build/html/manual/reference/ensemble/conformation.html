@@ -1,0 +1,345 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Conformation &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="ensemble.html" title="Conformational Ensemble"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="index.html" title="Ensemble Analysis"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Ensemble Analysis &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.ensemble.conformation">
+<span id="conformation"></span><h1>Conformation<a class="headerlink" href="#module-prody.ensemble.conformation" title="Permalink to this headline">¶</a></h1>
+<p>This module defines classes handling individual conformations.</p>
+<dl class="class">
+<dt id="prody.ensemble.conformation.Conformation">
+<em class="property">class </em><code class="descname">Conformation</code><span class="sig-paren">(</span><em>ensemble</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to provide methods on a conformation in an ensemble.
+Instances of this class do not keep coordinate and weights data.</p>
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.getAtoms">
+<code class="descname">getAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.getAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.getAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns associated atom group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.getCoords">
+<code class="descname">getCoords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.getCoords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.getCoords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the coordinates of the conformation. If a subset
+of atoms are selected in the ensemble, coordinates for selected
+atoms will be returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.getDeviations">
+<code class="descname">getDeviations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.getDeviations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.getDeviations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns deviations from the ensemble reference coordinates.
+Deviations are calculated for (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.getEnsemble">
+<code class="descname">getEnsemble</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.getEnsemble"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.getEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ensemble that this conformation belongs to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.getIndex">
+<code class="descname">getIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.getIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.getIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns conformation index.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.getRMSD">
+<code class="descname">getRMSD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.getRMSD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.getRMSD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns RMSD from the ensemble reference coordinates. RMSD is
+calculated for (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.getWeights">
+<code class="descname">getWeights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.getWeights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.getWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns coordinate weights for (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.numAtoms">
+<code class="descname">numAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.numAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.numAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.Conformation.numSelected">
+<code class="descname">numSelected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#Conformation.numSelected"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.Conformation.numSelected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of selected atoms.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.ensemble.conformation.PDBConformation">
+<em class="property">class </em><code class="descname">PDBConformation</code><span class="sig-paren">(</span><em>ensemble</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is the same as <a class="reference internal" href="#prody.ensemble.conformation.Conformation" title="prody.ensemble.conformation.Conformation"><code class="xref py py-class docutils literal"><span class="pre">Conformation</span></code></a>, except that the
+conformation has a name (or identifier), e.g. PDB identifier.</p>
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getAtoms">
+<code class="descname">getAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns associated atom group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getCoords">
+<code class="descname">getCoords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation.getCoords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getCoords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the coordinates of the conformation. If a subset
+of atoms are selected in the ensemble, coordinates for selected
+atoms will be returned.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">When there are atoms with weights equal to zero (0),
+their coordinates will be replaced with the coordinates of the
+ensemble reference coordinate set.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getDeviations">
+<code class="descname">getDeviations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation.getDeviations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getDeviations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns deviations from the ensemble reference coordinates.
+Deviations are calculated for (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getEnsemble">
+<code class="descname">getEnsemble</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ensemble that this conformation belongs to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getIndex">
+<code class="descname">getIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns conformation index.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getLabel">
+<code class="descname">getLabel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation.getLabel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the label of the conformation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getRMSD">
+<code class="descname">getRMSD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation.getRMSD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getRMSD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns RMSD from the ensemble reference coordinates. RMSD is
+calculated for (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getTransformation">
+<code class="descname">getTransformation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation.getTransformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getTransformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <a class="reference internal" href="../measure/transform.html#prody.measure.transform.Transformation" title="prody.measure.transform.Transformation"><code class="xref py py-class docutils literal"><span class="pre">Transformation</span></code></a> used to superpose this
+conformation onto reference coordinates.  The transformation can
+be used to superpose original PDB file onto the reference PDB file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.getWeights">
+<code class="descname">getWeights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation.getWeights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.getWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns coordinate weights for (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.numAtoms">
+<code class="descname">numAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.numAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.numSelected">
+<code class="descname">numSelected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.numSelected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of selected atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.ensemble.conformation.PDBConformation.setLabel">
+<code class="descname">setLabel</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/ensemble/conformation.html#PDBConformation.setLabel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.ensemble.conformation.PDBConformation.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the label of the conformation.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

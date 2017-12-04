@@ -1,0 +1,258 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Measurement Tools &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="contacts.html" title="Contact Identification"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="../kdtree/kdtree.html" title="KD Tree"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" accesskey="U">Reference Manual &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">Measurement Tools</a><ul>
+<li><a class="reference internal" href="#identify-contacts">Identify contacts</a></li>
+<li><a class="reference internal" href="#measure-quantities">Measure quantities</a></li>
+<li><a class="reference internal" href="#anisotropic-factors">Anisotropic factors</a></li>
+<li><a class="reference internal" href="#transformations">Transformations</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.measure">
+<span id="measurement-tools"></span><span id="measure"></span><h1>Measurement Tools<a class="headerlink" href="#module-prody.measure" title="Permalink to this headline">¶</a></h1>
+<p>This module defines classes measuring quantities, transforming coordinates,
+and identifying contacts.</p>
+<div class="section" id="identify-contacts">
+<h2>Identify contacts<a class="headerlink" href="#identify-contacts" title="Permalink to this headline">¶</a></h2>
+<p>Following class and functions are for contact identifications:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="contacts.html#prody.measure.contacts.Contacts" title="prody.measure.contacts.Contacts"><code class="xref py py-class docutils literal"><span class="pre">Contacts</span></code></a> - identify intermolecular contacts</li>
+<li><a class="reference internal" href="contacts.html#prody.measure.contacts.findNeighbors" title="prody.measure.contacts.findNeighbors"><code class="xref py py-func docutils literal"><span class="pre">findNeighbors()</span></code></a> - identify interacting atom pairs</li>
+<li><a class="reference internal" href="contacts.html#prody.measure.contacts.iterNeighbors" title="prody.measure.contacts.iterNeighbors"><code class="xref py py-func docutils literal"><span class="pre">iterNeighbors()</span></code></a> - identify interacting atom pairs</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="measure-quantities">
+<h2>Measure quantities<a class="headerlink" href="#measure-quantities" title="Permalink to this headline">¶</a></h2>
+<p>Following functions are for measuring simple quantities:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcDistance" title="prody.measure.measure.calcDistance"><code class="xref py py-func docutils literal"><span class="pre">calcDistance()</span></code></a> - calculate distance(s)</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcAngle" title="prody.measure.measure.calcAngle"><code class="xref py py-func docutils literal"><span class="pre">calcAngle()</span></code></a> - calculate bond angle</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcDihedral" title="prody.measure.measure.calcDihedral"><code class="xref py py-func docutils literal"><span class="pre">calcDihedral()</span></code></a> - calculate dihedral angle</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcOmega" title="prody.measure.measure.calcOmega"><code class="xref py py-func docutils literal"><span class="pre">calcOmega()</span></code></a> - calculate omega (ω) angle</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcPhi" title="prody.measure.measure.calcPhi"><code class="xref py py-func docutils literal"><span class="pre">calcPhi()</span></code></a> - calculate phi (φ) angle</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcPsi" title="prody.measure.measure.calcPsi"><code class="xref py py-func docutils literal"><span class="pre">calcPsi()</span></code></a> - calculate psi (ψ) angle</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcGyradius" title="prody.measure.measure.calcGyradius"><code class="xref py py-func docutils literal"><span class="pre">calcGyradius()</span></code></a> - calculate radius of gyration</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcCenter" title="prody.measure.measure.calcCenter"><code class="xref py py-func docutils literal"><span class="pre">calcCenter()</span></code></a> - calculate geometric (or mass) center</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcDeformVector" title="prody.measure.measure.calcDeformVector"><code class="xref py py-func docutils literal"><span class="pre">calcDeformVector()</span></code></a> - calculate deformation vector</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="anisotropic-factors">
+<h2>Anisotropic factors<a class="headerlink" href="#anisotropic-factors" title="Permalink to this headline">¶</a></h2>
+<p>Following functions handle anisotropic displacement parameter (ADP) present
+in some X-ray structures.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="measure.html#prody.measure.measure.buildADPMatrix" title="prody.measure.measure.buildADPMatrix"><code class="xref py py-func docutils literal"><span class="pre">buildADPMatrix()</span></code></a> - build ADP matrix</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcADPAxes" title="prody.measure.measure.calcADPAxes"><code class="xref py py-func docutils literal"><span class="pre">calcADPAxes()</span></code></a> - calculate ADP axes</li>
+<li><a class="reference internal" href="measure.html#prody.measure.measure.calcADPs" title="prody.measure.measure.calcADPs"><code class="xref py py-func docutils literal"><span class="pre">calcADPs()</span></code></a> - calculate ADPs</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="transformations">
+<h2>Transformations<a class="headerlink" href="#transformations" title="Permalink to this headline">¶</a></h2>
+<p>Following class and functions are for handling coordinate transformations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="transform.html#prody.measure.transform.Transformation" title="prody.measure.transform.Transformation"><code class="xref py py-class docutils literal"><span class="pre">Transformation</span></code></a> - store transformation matrix</li>
+<li><a class="reference internal" href="transform.html#prody.measure.transform.alignCoordsets" title="prody.measure.transform.alignCoordsets"><code class="xref py py-func docutils literal"><span class="pre">alignCoordsets()</span></code></a> - align multiple coordinate sets</li>
+<li><a class="reference internal" href="transform.html#prody.measure.transform.applyTransformation" title="prody.measure.transform.applyTransformation"><code class="xref py py-func docutils literal"><span class="pre">applyTransformation()</span></code></a> - apply a transformation</li>
+<li><a class="reference internal" href="transform.html#prody.measure.transform.calcTransformation" title="prody.measure.transform.calcTransformation"><code class="xref py py-func docutils literal"><span class="pre">calcTransformation()</span></code></a> - calculate a transformation</li>
+<li><a class="reference internal" href="transform.html#prody.measure.transform.calcRMSD" title="prody.measure.transform.calcRMSD"><code class="xref py py-func docutils literal"><span class="pre">calcRMSD()</span></code></a> - calculate root-mean-square distance</li>
+<li><a class="reference internal" href="transform.html#prody.measure.transform.superpose" title="prody.measure.transform.superpose"><code class="xref py py-func docutils literal"><span class="pre">superpose()</span></code></a> - superpose atoms or coordinate sets</li>
+<li><a class="reference internal" href="transform.html#prody.measure.transform.moveAtoms" title="prody.measure.transform.moveAtoms"><code class="xref py py-func docutils literal"><span class="pre">moveAtoms()</span></code></a> - move atoms by given offset</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

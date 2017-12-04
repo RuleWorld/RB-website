@@ -1,0 +1,394 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Transformations &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="../proteins/index.html" title="Protein Structure"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="measure.html" title="Measurement Tools"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Measurement Tools &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.measure.transform">
+<span id="transformations"></span><h1>Transformations<a class="headerlink" href="#module-prody.measure.transform" title="Permalink to this headline">¶</a></h1>
+<p>This module defines a class for identifying contacts.</p>
+<dl class="class">
+<dt id="prody.measure.transform.Transformation">
+<em class="property">class </em><code class="descname">Transformation</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#Transformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.Transformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for storing a transformation matrix.</p>
+<p>Either 4x4 transformation <em>matrix</em>, or <em>rotation</em> matrix and
+<em>translation</em> vector must be provided at instantiation.</p>
+<dl class="method">
+<dt id="prody.measure.transform.Transformation.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>atoms</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#Transformation.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.Transformation.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply transformation to <em>atoms</em>, see <a class="reference internal" href="#prody.measure.transform.applyTransformation" title="prody.measure.transform.applyTransformation"><code class="xref py py-func docutils literal"><span class="pre">applyTransformation()</span></code></a>
+for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.measure.transform.Transformation.getMatrix">
+<code class="descname">getMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#Transformation.getMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.Transformation.getMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnss a copy of the 4x4 transformation matrix whose top left is
+rotation matrix and last column is translation vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.measure.transform.Transformation.getRotation">
+<code class="descname">getRotation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#Transformation.getRotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.Transformation.getRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns rotation matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.measure.transform.Transformation.getTranslation">
+<code class="descname">getTranslation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#Transformation.getTranslation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.Transformation.getTranslation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns translation vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.measure.transform.Transformation.setRotation">
+<code class="descname">setRotation</code><span class="sig-paren">(</span><em>rotation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#Transformation.setRotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.Transformation.setRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set rotation matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.measure.transform.Transformation.setTranslation">
+<code class="descname">setTranslation</code><span class="sig-paren">(</span><em>translation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#Transformation.setTranslation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.Transformation.setTranslation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set translation vector.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.applyTransformation">
+<code class="descname">applyTransformation</code><span class="sig-paren">(</span><em>transformation</em>, <em>atoms</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#applyTransformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.applyTransformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <em>atoms</em> after applying <em>transformation</em>.  If <em>atoms</em>
+is a <a class="reference internal" href="../atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a> instance, it will be returned after
+<em>transformation</em> is applied to its active coordinate set.  If
+<em>atoms</em> is an <a class="reference internal" href="../atomic/pointer.html#prody.atomic.pointer.AtomPointer" title="prody.atomic.pointer.AtomPointer"><code class="xref py py-class docutils literal"><span class="pre">AtomPointer</span></code></a> instance, <em>transformation</em>
+will be applied to the corresponding coordinate set in the
+associated <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.alignCoordsets">
+<code class="descname">alignCoordsets</code><span class="sig-paren">(</span><em>atoms</em>, <em>weights=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#alignCoordsets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.alignCoordsets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <em>atoms</em> after superposing coordinate sets onto its active
+coordinate set.  Transformations will be calculated for <em>atoms</em> and
+applied to its <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, when applicable.  Optionally,
+atomic <em>weights</em> can be passed for weighted superposition.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.calcRMSD">
+<code class="descname">calcRMSD</code><span class="sig-paren">(</span><em>reference</em>, <em>target=None</em>, <em>weights=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#calcRMSD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.calcRMSD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns root-mean-square deviation(s) (RMSD) between reference and target
+coordinates.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.calcTransformation">
+<code class="descname">calcTransformation</code><span class="sig-paren">(</span><em>mobile</em>, <em>target</em>, <em>weights=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#calcTransformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.calcTransformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnss a <a class="reference internal" href="#prody.measure.transform.Transformation" title="prody.measure.transform.Transformation"><code class="xref py py-class docutils literal"><span class="pre">Transformation</span></code></a> instance which, when applied to the
+atoms in <em>mobile</em>, minimizes the weighted RMSD between <em>mobile</em> and
+<em>target</em>.  <em>mobile</em> and <em>target</em> may be NumPy coordinate arrays, or
+<a class="reference internal" href="../atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a> instances, e.g. <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>,
+or <a class="reference internal" href="../atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.superpose">
+<code class="descname">superpose</code><span class="sig-paren">(</span><em>mobile</em>, <em>target</em>, <em>weights=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#superpose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.superpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <em>mobile</em>, after its RMSD minimizing superposition onto <em>target</em>,
+and the transformation that minimizes the RMSD.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.moveAtoms">
+<code class="descname">moveAtoms</code><span class="sig-paren">(</span><em>atoms</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#moveAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.moveAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move <em>atoms</em> <em>to</em> a new location or <em>by</em> an offset.  This method will
+change the active coordinate set of the <em>atoms</em>.  Note that only one of
+<em>to</em> or <em>by</em> keyword arguments is expected.</p>
+<p>Move protein so that its centroid is at the origin, <code class="docutils literal"><span class="pre">[0.,</span> <span class="pre">0.,</span> <span class="pre">0.]</span></code>:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">ones</span><span class="p">,</span> <span class="n">zeros</span>
+
+<span class="gp">In [3]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1ubi&#39;</span><span class="p">)</span>
+
+<span class="gp">In [4]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[4]: </span><span class="go">array([ 30.173,  28.658,  15.262])</span>
+
+<span class="gp">In [5]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="gp">In [6]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[6]: </span><span class="go">array([ 0.,  0., -0.])</span>
+</pre></div>
+</div>
+<p>Move protein so that its mass center is at the origin:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">protein</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">protein</span><span class="p">)))</span>
+
+<span class="gp">In [8]: </span><span class="n">protein</span><span class="o">.</span><span class="n">carbon</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="gp">In [9]: </span><span class="n">protein</span><span class="o">.</span><span class="n">nitrogen</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="gp">In [10]: </span><span class="n">protein</span><span class="o">.</span><span class="n">oxygen</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="gp">In [11]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">weights</span><span class="o">=</span><span class="n">protein</span><span class="o">.</span><span class="n">getMasses</span><span class="p">())</span>
+
+<span class="gp">In [12]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">protein</span><span class="o">.</span><span class="n">getMasses</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[12]: </span><span class="go">array([-0., -0.,  0.])</span>
+</pre></div>
+</div>
+<p>Move protein so that centroid of Cα atoms is at the origin:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">ag</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="gp">In [14]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[14]: </span><span class="go">array([-0.268, -0.343, -0.259])</span>
+
+<span class="gp">In [15]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[15]: </span><span class="go">array([ 0., -0., -0.])</span>
+</pre></div>
+</div>
+<p>Move protein by 10 A along each direction:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="gp">In [17]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[17]: </span><span class="go">array([ 9.732,  9.657,  9.741])</span>
+
+<span class="gp">In [18]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[18]: </span><span class="go">array([ 10.,  10.,  10.])</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>by</strong> (<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a>) &#8211; an offset array with shape <code class="docutils literal"><span class="pre">([1,]</span> <span class="pre">3)</span></code> or <code class="docutils literal"><span class="pre">(n_atoms,</span> <span class="pre">3)</span></code> or
+a transformation matrix with shape <code class="docutils literal"><span class="pre">(4,</span> <span class="pre">4)</span></code></li>
+<li><strong>to</strong> (<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a>) &#8211; a point array with shape <code class="docutils literal"><span class="pre">([1,]</span> <span class="pre">3)</span></code></li>
+<li><strong>ag</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; when <em>atoms</em> is a <a class="reference internal" href="../atomic/subset.html#prody.atomic.subset.AtomSubset" title="prody.atomic.subset.AtomSubset"><code class="xref py py-class docutils literal"><span class="pre">AtomSubset</span></code></a>, apply translation vector
+(<em>to</em>) or transformation matrix to the <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>,
+default is <strong>False</strong></li>
+<li><strong>weights</strong> (<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a>) &#8211; array of atomic weights with shape <code class="docutils literal"><span class="pre">(n_atoms[,</span> <span class="pre">1])</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>When <em>to</em> argument is passed, <a class="reference internal" href="measure.html#prody.measure.measure.calcCenter" title="prody.measure.measure.calcCenter"><code class="xref py py-func docutils literal"><span class="pre">calcCenter()</span></code></a> function is used to
+calculate centroid or mass center.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.wrapAtoms">
+<code class="descname">wrapAtoms</code><span class="sig-paren">(</span><em>frame</em>, <em>unitcell=None</em>, <em>center=array([ 0.</em>, <em>0.</em>, <em>0.])</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#wrapAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.wrapAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap atoms into an image of the system simulated under periodic boundary
+conditions. When <em>frame</em> is a <a class="reference internal" href="../trajectory/frame.html#prody.trajectory.frame.Frame" title="prody.trajectory.frame.Frame"><code class="xref py py-class docutils literal"><span class="pre">Frame</span></code></a>, unitcell information will be
+retrieved automatically.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function will wrap all atoms into the specified periodic image, so
+covalent bonds will be broken.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frame</strong> (<a class="reference internal" href="../trajectory/frame.html#prody.trajectory.frame.Frame" title="prody.trajectory.frame.Frame"><code class="xref py py-class docutils literal"><span class="pre">Frame</span></code></a>, <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a>) &#8211; a frame instance or a coordinate set</li>
+<li><strong>unitcell</strong> (<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a>) &#8211; orthorhombic unitcell array with shape (3,)</li>
+<li><strong>center</strong> (<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a>) &#8211; coordinates of the center of the wrapping cell, default is
+the origin of the Cartesian coordinate system</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.measure.transform.printRMSD">
+<code class="descname">printRMSD</code><span class="sig-paren">(</span><em>reference</em>, <em>target=None</em>, <em>weights=None</em>, <em>log=True</em>, <em>msg=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/measure/transform.html#printRMSD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.measure.transform.printRMSD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print RMSD to the screen.  If <em>target</em> has multiple coordinate sets,
+minimum, maximum and mean RMSD values are printed.  If <em>log</em> is <strong>True</strong>
+(default), RMSD is written to the standard error using package logger,
+otherwise standard output is used.  When <em>msg</em> string is given, it is
+printed before the RMSD value.  See also <a class="reference internal" href="#prody.measure.transform.calcRMSD" title="prody.measure.transform.calcRMSD"><code class="xref py py-func docutils literal"><span class="pre">calcRMSD()</span></code></a> function.</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

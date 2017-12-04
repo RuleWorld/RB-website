@@ -1,0 +1,549 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Principal Component Analysis &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="plotting.html" title="Plotting Functions"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="nmdfile.html" title="NMD File"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Dynamics Analysis &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.dynamics.pca">
+<span id="principal-component-analysis"></span><h1>Principal Component Analysis<a class="headerlink" href="#module-prody.dynamics.pca" title="Permalink to this headline">¶</a></h1>
+<p>This module defines classes for principal component analysis (PCA) and
+essential dynamics analysis (EDA) calculations.</p>
+<dl class="class">
+<dt id="prody.dynamics.pca.PCA">
+<em class="property">class </em><code class="descname">PCA</code><span class="sig-paren">(</span><em>name='Unknown'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#PCA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.PCA" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for Principal Component Analysis (PCA) of conformational
+ensembles. See examples in <span class="xref std std-ref">pca</span>.</p>
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.addEigenpair">
+<code class="descname">addEigenpair</code><span class="sig-paren">(</span><em>eigenvector</em>, <em>eigenvalue=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#PCA.addEigenpair"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.PCA.addEigenpair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add eigen <em>vector</em> and eigen <em>value</em> pair(s) to the instance.
+If eigen <em>value</em> is omitted, it will be set to 1.  Eigenvalues
+are set as variances.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.buildCovariance">
+<code class="descname">buildCovariance</code><span class="sig-paren">(</span><em>coordsets</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#PCA.buildCovariance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.PCA.buildCovariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a covariance matrix for <em>coordsets</em> using mean coordinates
+as the reference.  <em>coordsets</em> argument may be one of the following:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a></li>
+<li><a class="reference internal" href="../ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a></li>
+<li><a class="reference internal" href="../trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase" title="prody.trajectory.trajbase.TrajBase"><code class="xref py py-class docutils literal"><span class="pre">TrajBase</span></code></a></li>
+<li><a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a> with shape <code class="docutils literal"><span class="pre">(n_csets,</span> <span class="pre">n_atoms,</span> <span class="pre">3)</span></code></li>
+</ul>
+<p>For ensemble and trajectory objects, <code class="docutils literal"><span class="pre">update_coords=True</span></code> argument
+can be used to set the mean coordinates as the coordinates of the
+object.</p>
+<p>When <em>coordsets</em> is a trajectory object, such as <a class="reference internal" href="../trajectory/dcdfile.html#prody.trajectory.dcdfile.DCDFile" title="prody.trajectory.dcdfile.DCDFile"><code class="xref py py-class docutils literal"><span class="pre">DCDFile</span></code></a>,
+covariance will be built by superposing frames onto the reference
+coordinate set (see <a class="reference internal" href="../trajectory/frame.html#prody.trajectory.frame.Frame.superpose" title="prody.trajectory.frame.Frame.superpose"><code class="xref py py-meth docutils literal"><span class="pre">Frame.superpose()</span></code></a>).  If frames are already
+aligned, use <code class="docutils literal"><span class="pre">aligned=True</span></code> argument to skip this step.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <em>coordsets</em> is a <a class="reference internal" href="../ensemble/pdbensemble.html#prody.ensemble.pdbensemble.PDBEnsemble" title="prody.ensemble.pdbensemble.PDBEnsemble"><code class="xref py py-class docutils literal"><span class="pre">PDBEnsemble</span></code></a> instance, coordinates are
+treated specially.  Let&#8217;s say <strong>C</strong>_ij is the element of the
+covariance matrix that corresponds to atoms <em>i</em> and <em>j</em>.  This
+super element is divided by number of coordinate sets (PDB models or
+structures) in which both of these atoms are observed together.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.calcModes">
+<code class="descname">calcModes</code><span class="sig-paren">(</span><em>n_modes=20</em>, <em>turbo=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#PCA.calcModes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.PCA.calcModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate principal (or essential) modes.  This method uses
+<a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html#scipy.linalg.eigh" title="(in SciPy v1.0.0)"><code class="xref py py-func docutils literal"><span class="pre">scipy.linalg.eigh()</span></code></a>, or <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.eigh.html#numpy.linalg.eigh" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.linalg.eigh()</span></code></a>, function
+to diagonalize the covariance matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>n_modes</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; number of non-zero eigenvalues/vectors to calculate,
+default is 20, for <strong>None</strong> all modes will be calculated</li>
+<li><strong>turbo</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; when available, use a memory intensive but faster way to
+calculate modes, default is <strong>True</strong></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.getArray">
+<code class="descname">getArray</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.getArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of eigenvectors array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.getCovariance">
+<code class="descname">getCovariance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.getCovariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns covariance matrix.  If covariance matrix is not set or yet
+calculated, it will be calculated using available modes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.getEigvals">
+<code class="descname">getEigvals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.getEigvals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns eigenvalues.  For <a class="reference internal" href="#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a> and <a class="reference internal" href="#prody.dynamics.pca.EDA" title="prody.dynamics.pca.EDA"><code class="xref py py-class docutils literal"><span class="pre">EDA</span></code></a> models
+built using coordinate data in Å, unit of eigenvalues is Å<sup>2</sup>.  For
+<a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, <a class="reference internal" href="gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, and <a class="reference internal" href="rtb.html#prody.dynamics.rtb.RTB" title="prody.dynamics.rtb.RTB"><code class="xref py py-class docutils literal"><span class="pre">RTB</span></code></a>, on the other hand,
+eigenvalues are in arbitrary or relative units but they correlate with
+stiffness of the motion along associated eigenvector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.getEigvecs">
+<code class="descname">getEigvecs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.getEigvecs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of eigenvectors array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.getModel">
+<code class="descname">getModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.getModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns self.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.getTitle">
+<code class="descname">getTitle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.getTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns title of the model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.getVariances">
+<code class="descname">getVariances</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.getVariances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns variances.  For <a class="reference internal" href="#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a> and <a class="reference internal" href="#prody.dynamics.pca.EDA" title="prody.dynamics.pca.EDA"><code class="xref py py-class docutils literal"><span class="pre">EDA</span></code></a> models
+built using coordinate data in Å, unit of variance is Å<sup>2</sup>.  For
+<a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, <a class="reference internal" href="gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, and <a class="reference internal" href="rtb.html#prody.dynamics.rtb.RTB" title="prody.dynamics.rtb.RTB"><code class="xref py py-class docutils literal"><span class="pre">RTB</span></code></a>, on the other hand,
+variance is the inverse of the eigenvalue, so it has arbitrary or
+relative units.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.is3d">
+<code class="descname">is3d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.is3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if model is 3-dimensional.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.numAtoms">
+<code class="descname">numAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.numAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.numDOF">
+<code class="descname">numDOF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.numDOF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of degrees of freedom.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.numModes">
+<code class="descname">numModes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.numModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of modes in the instance (not necessarily maximum
+number of possible modes).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.performSVD">
+<code class="descname">performSVD</code><span class="sig-paren">(</span><em>coordsets</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#PCA.performSVD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.PCA.performSVD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate principal modes using singular value decomposition (SVD).
+<em>coordsets</em> argument may be a <a class="reference internal" href="../atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a>, <a class="reference internal" href="../ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a>,
+or <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a> instance.  If <em>coordsets</em> is a numpy array,
+its shape must be <code class="docutils literal"><span class="pre">(n_csets,</span> <span class="pre">n_atoms,</span> <span class="pre">3)</span></code>.  Note that coordinate
+sets must be aligned prior to SVD calculations.</p>
+<p>This is a considerably faster way of performing PCA calculations
+compared to eigenvalue decomposition of covariance matrix, but is
+an approximate method when heterogeneous datasets are analyzed.
+Covariance method should be preferred over this one for analysis of
+ensembles with missing atomic data.  See <span class="xref std std-ref">pca-xray-calculations</span>
+example for comparison of results from SVD and covariance methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.setCovariance">
+<code class="descname">setCovariance</code><span class="sig-paren">(</span><em>covariance</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#PCA.setCovariance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.PCA.setCovariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set covariance matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.setEigens">
+<code class="descname">setEigens</code><span class="sig-paren">(</span><em>vectors</em>, <em>values=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#PCA.setEigens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.PCA.setEigens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set eigen <em>vectors</em> and eigen <em>values</em>.  If eigen <em>values</em> are
+omitted, they will be set to 1.  Eigenvalues are set as variances.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.PCA.setTitle">
+<code class="descname">setTitle</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.PCA.setTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set title of the model.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.dynamics.pca.EDA">
+<em class="property">class </em><code class="descname">EDA</code><span class="sig-paren">(</span><em>name='Unknown'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/pca.html#EDA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.pca.EDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for Essential Dynamics Analysis (EDA) <a class="reference internal" href="#aa93" id="id1">[AA93]</a>.
+See examples in <span class="xref std std-ref">eda</span>.</p>
+<table class="docutils citation" frame="void" id="aa93" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[AA93]</a></td><td>Amadei A, Linssen AB, Berendsen HJ. Essential dynamics of
+proteins. <em>Proteins</em> <strong>1993</strong> 17(4):412-25.</td></tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.addEigenpair">
+<code class="descname">addEigenpair</code><span class="sig-paren">(</span><em>eigenvector</em>, <em>eigenvalue=None</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.addEigenpair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add eigen <em>vector</em> and eigen <em>value</em> pair(s) to the instance.
+If eigen <em>value</em> is omitted, it will be set to 1.  Eigenvalues
+are set as variances.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.buildCovariance">
+<code class="descname">buildCovariance</code><span class="sig-paren">(</span><em>coordsets</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.buildCovariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a covariance matrix for <em>coordsets</em> using mean coordinates
+as the reference.  <em>coordsets</em> argument may be one of the following:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a></li>
+<li><a class="reference internal" href="../ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a></li>
+<li><a class="reference internal" href="../trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase" title="prody.trajectory.trajbase.TrajBase"><code class="xref py py-class docutils literal"><span class="pre">TrajBase</span></code></a></li>
+<li><a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a> with shape <code class="docutils literal"><span class="pre">(n_csets,</span> <span class="pre">n_atoms,</span> <span class="pre">3)</span></code></li>
+</ul>
+<p>For ensemble and trajectory objects, <code class="docutils literal"><span class="pre">update_coords=True</span></code> argument
+can be used to set the mean coordinates as the coordinates of the
+object.</p>
+<p>When <em>coordsets</em> is a trajectory object, such as <a class="reference internal" href="../trajectory/dcdfile.html#prody.trajectory.dcdfile.DCDFile" title="prody.trajectory.dcdfile.DCDFile"><code class="xref py py-class docutils literal"><span class="pre">DCDFile</span></code></a>,
+covariance will be built by superposing frames onto the reference
+coordinate set (see <a class="reference internal" href="../trajectory/frame.html#prody.trajectory.frame.Frame.superpose" title="prody.trajectory.frame.Frame.superpose"><code class="xref py py-meth docutils literal"><span class="pre">Frame.superpose()</span></code></a>).  If frames are already
+aligned, use <code class="docutils literal"><span class="pre">aligned=True</span></code> argument to skip this step.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <em>coordsets</em> is a <a class="reference internal" href="../ensemble/pdbensemble.html#prody.ensemble.pdbensemble.PDBEnsemble" title="prody.ensemble.pdbensemble.PDBEnsemble"><code class="xref py py-class docutils literal"><span class="pre">PDBEnsemble</span></code></a> instance, coordinates are
+treated specially.  Let&#8217;s say <strong>C</strong>_ij is the element of the
+covariance matrix that corresponds to atoms <em>i</em> and <em>j</em>.  This
+super element is divided by number of coordinate sets (PDB models or
+structures) in which both of these atoms are observed together.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.calcModes">
+<code class="descname">calcModes</code><span class="sig-paren">(</span><em>n_modes=20</em>, <em>turbo=True</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.calcModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate principal (or essential) modes.  This method uses
+<a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html#scipy.linalg.eigh" title="(in SciPy v1.0.0)"><code class="xref py py-func docutils literal"><span class="pre">scipy.linalg.eigh()</span></code></a>, or <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.eigh.html#numpy.linalg.eigh" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.linalg.eigh()</span></code></a>, function
+to diagonalize the covariance matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>n_modes</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; number of non-zero eigenvalues/vectors to calculate,
+default is 20, for <strong>None</strong> all modes will be calculated</li>
+<li><strong>turbo</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; when available, use a memory intensive but faster way to
+calculate modes, default is <strong>True</strong></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.getArray">
+<code class="descname">getArray</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.getArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of eigenvectors array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.getCovariance">
+<code class="descname">getCovariance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.getCovariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns covariance matrix.  If covariance matrix is not set or yet
+calculated, it will be calculated using available modes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.getEigvals">
+<code class="descname">getEigvals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.getEigvals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns eigenvalues.  For <a class="reference internal" href="#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a> and <a class="reference internal" href="#prody.dynamics.pca.EDA" title="prody.dynamics.pca.EDA"><code class="xref py py-class docutils literal"><span class="pre">EDA</span></code></a> models
+built using coordinate data in Å, unit of eigenvalues is Å<sup>2</sup>.  For
+<a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, <a class="reference internal" href="gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, and <a class="reference internal" href="rtb.html#prody.dynamics.rtb.RTB" title="prody.dynamics.rtb.RTB"><code class="xref py py-class docutils literal"><span class="pre">RTB</span></code></a>, on the other hand,
+eigenvalues are in arbitrary or relative units but they correlate with
+stiffness of the motion along associated eigenvector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.getEigvecs">
+<code class="descname">getEigvecs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.getEigvecs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of eigenvectors array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.getModel">
+<code class="descname">getModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.getModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns self.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.getTitle">
+<code class="descname">getTitle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.getTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns title of the model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.getVariances">
+<code class="descname">getVariances</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.getVariances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns variances.  For <a class="reference internal" href="#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a> and <a class="reference internal" href="#prody.dynamics.pca.EDA" title="prody.dynamics.pca.EDA"><code class="xref py py-class docutils literal"><span class="pre">EDA</span></code></a> models
+built using coordinate data in Å, unit of variance is Å<sup>2</sup>.  For
+<a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, <a class="reference internal" href="gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, and <a class="reference internal" href="rtb.html#prody.dynamics.rtb.RTB" title="prody.dynamics.rtb.RTB"><code class="xref py py-class docutils literal"><span class="pre">RTB</span></code></a>, on the other hand,
+variance is the inverse of the eigenvalue, so it has arbitrary or
+relative units.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.is3d">
+<code class="descname">is3d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.is3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if model is 3-dimensional.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.numAtoms">
+<code class="descname">numAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.numAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.numDOF">
+<code class="descname">numDOF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.numDOF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of degrees of freedom.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.numModes">
+<code class="descname">numModes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.numModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of modes in the instance (not necessarily maximum
+number of possible modes).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.performSVD">
+<code class="descname">performSVD</code><span class="sig-paren">(</span><em>coordsets</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.performSVD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate principal modes using singular value decomposition (SVD).
+<em>coordsets</em> argument may be a <a class="reference internal" href="../atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a>, <a class="reference internal" href="../ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a>,
+or <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a> instance.  If <em>coordsets</em> is a numpy array,
+its shape must be <code class="docutils literal"><span class="pre">(n_csets,</span> <span class="pre">n_atoms,</span> <span class="pre">3)</span></code>.  Note that coordinate
+sets must be aligned prior to SVD calculations.</p>
+<p>This is a considerably faster way of performing PCA calculations
+compared to eigenvalue decomposition of covariance matrix, but is
+an approximate method when heterogeneous datasets are analyzed.
+Covariance method should be preferred over this one for analysis of
+ensembles with missing atomic data.  See <span class="xref std std-ref">pca-xray-calculations</span>
+example for comparison of results from SVD and covariance methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.setCovariance">
+<code class="descname">setCovariance</code><span class="sig-paren">(</span><em>covariance</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.setCovariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set covariance matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.setEigens">
+<code class="descname">setEigens</code><span class="sig-paren">(</span><em>vectors</em>, <em>values=None</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.setEigens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set eigen <em>vectors</em> and eigen <em>values</em>.  If eigen <em>values</em> are
+omitted, they will be set to 1.  Eigenvalues are set as variances.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.pca.EDA.setTitle">
+<code class="descname">setTitle</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.pca.EDA.setTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set title of the model.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

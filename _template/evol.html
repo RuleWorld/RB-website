@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+{% block body %}
+
+
+          <div class="row">
+            <div class="span12">
+              <div class="span5 pull-right" style="padding-top: 20px">
+                <div class="well">
+                  <div id="panel-2-title" class="slide-title"></div>
+                  <i class="icon-circle-arrow-right slide-arrow" onclick="nextSlide(2);" title="Next slide"></i>
+                  <i class="icon-circle-arrow-left slide-arrow" onclick="prevSlide(2);" title="Previous slide"></i>
+                  <div id="panel-2-slide" class="slide-content"></div>
+                  <script>showSlide(2, -1);</script>
+                </div>
+              </div>
+
+              <h2><i>Evol</i> for Coevolution Analysis</h2>
+              <p>
+                <i>Evol</i> is a suite of powerful and efficient API features
+                and applications for analysis of sequence evolution and its
+                comparison to protein functional dynamics.
+              </p>
+
+              <h4>API Features</h4>
+              <p>
+                <ul>
+                  <li>identification of <a href="{{ pathto('manual/reference/sequence/index.html#analysis', 1) }}">conserved and coevolved</a> amino acid residues</li>
+                  <li>searching <a href="{{ pathto('manual/reference/database/index.html#pfam', 1) }}">Pfam</a> and retrieving MSA files</li>
+                  <li>extremely fast <a href="{{ pathto('manual/reference/sequence/index.html#msa-io', 1) }}">MSA IO</a> functions</li>
+                  <li>flexible <a href="{{ pathto('manual/reference/sequence/index.html#classes', 1) }}">MSA class</a> with sequence indexing</li>
+                </ul>
+              </p>
+              <h4>Applications</h4>
+              <p>
+                <a href="{{ pathto('manual/apps/evol/index') }}"><i>Evol</i> applications</a>
+                allow you to analyze large MSA files, save or plot numerical results without
+                writing any code.  You can read the output files and
+                resume analysis in your favorite software.
+              </p>
+
+
+              <p>
+                <small>
+                  <strong>Publications</strong><br>
+                  <a href="http://mbe.oxfordjournals.org/content/29/9/2253">Sequence Evolution Correlates with Structural Dynamics</a>
+                  Liu Y, Bahar I
+                  <strong>2012</strong> <em>Mol Biol Evol</em> 29(9):2253-2263
+                  <br>
+                  <a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000931">Role of Hsp70 ATPase domain intrinsic dynamics and sequence evolution
+                  in enabling its functional interactions with NEFs</a>
+                  Liu Y, Gierasch LM, Bahar
+                  <strong>2010</strong> <em>PLoS Comput Biol</em> 6(9)
+                </small>
+              </p>
+            </div>
+          </div>
+
+{% endblock %}

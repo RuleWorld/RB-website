@@ -1,0 +1,530 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Plotting Functions &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="rtb.html" title="Rotation Translation Blocks"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="pca.html" title="Principal Component Analysis"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Dynamics Analysis &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.dynamics.plotting">
+<span id="plotting-functions"></span><h1>Plotting Functions<a class="headerlink" href="#module-prody.dynamics.plotting" title="Permalink to this headline">¶</a></h1>
+<p>This module defines plotting functions for protein dynamics analysis.</p>
+<p>Plotting functions are called by the name of the plotted data/property
+and are prefixed with <code class="docutils literal"><span class="pre">show</span></code>.  Function documentations refers to the
+<a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot" title="(in Matplotlib v2.1.0)"><code class="xref py py-mod docutils literal"><span class="pre">matplotlib.pyplot</span></code></a> function utilized for actual plotting.  Arguments
+and keyword arguments are passed to the Matplotlib functions.</p>
+<dl class="function">
+<dt id="prody.dynamics.plotting.showContactMap">
+<code class="descname">showContactMap</code><span class="sig-paren">(</span><em>enm</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showContactMap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showContactMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show Kirchhoff matrix using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.spy.html#matplotlib.pyplot.spy" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">spy()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showCrossCorr">
+<code class="descname">showCrossCorr</code><span class="sig-paren">(</span><em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showCrossCorr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showCrossCorr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show cross-correlations using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">imshow()</span></code></a>.  By
+default, <em>origin=lower</em> and <em>interpolation=bilinear</em> keyword  arguments
+are passed to this function, but user can overwrite these parameters.
+See also <a class="reference internal" href="analysis.html#prody.dynamics.analysis.calcCrossCorr" title="prody.dynamics.analysis.calcCrossCorr"><code class="xref py py-func docutils literal"><span class="pre">calcCrossCorr()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showCumulOverlap">
+<code class="descname">showCumulOverlap</code><span class="sig-paren">(</span><em>mode</em>, <em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showCumulOverlap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showCumulOverlap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show cumulative overlap using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>modes</strong> (<a class="reference internal" href="modeset.html#prody.dynamics.modeset.ModeSet" title="prody.dynamics.modeset.ModeSet"><code class="xref py py-class docutils literal"><span class="pre">ModeSet</span></code></a>, <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, <a class="reference internal" href="gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, <a class="reference internal" href="pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a>) &#8211; multiple modes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showFractVars">
+<code class="descname">showFractVars</code><span class="sig-paren">(</span><em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showFractVars"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showFractVars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show fraction of variances using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">bar()</span></code></a>.  Note
+that mode indices are incremented by 1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showCumulFractVars">
+<code class="descname">showCumulFractVars</code><span class="sig-paren">(</span><em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showCumulFractVars"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showCumulFractVars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show fraction of variances of <em>modes</em> using <code class="xref py py-func docutils literal">
+<span class="pre">plot()</span></code>.  Note that mode indices are incremented by 1.  See also
+<a class="reference internal" href="#prody.dynamics.plotting.showFractVars" title="prody.dynamics.plotting.showFractVars"><code class="xref py py-func docutils literal"><span class="pre">showFractVars()</span></code></a> function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showMode">
+<code class="descname">showMode</code><span class="sig-paren">(</span><em>mode</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show mode array using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showOverlap">
+<code class="descname">showOverlap</code><span class="sig-paren">(</span><em>mode</em>, <em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showOverlap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showOverlap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show overlap <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">bar()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<a class="reference internal" href="mode.html#prody.dynamics.mode.Mode" title="prody.dynamics.mode.Mode"><code class="xref py py-class docutils literal"><span class="pre">Mode</span></code></a>, <a class="reference internal" href="mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a>) &#8211; a single mode/vector</li>
+<li><strong>modes</strong> (<a class="reference internal" href="modeset.html#prody.dynamics.modeset.ModeSet" title="prody.dynamics.modeset.ModeSet"><code class="xref py py-class docutils literal"><span class="pre">ModeSet</span></code></a>, <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, <a class="reference internal" href="gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, <a class="reference internal" href="pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a>) &#8211; multiple modes</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showOverlapTable">
+<code class="descname">showOverlapTable</code><span class="sig-paren">(</span><em>modes_x</em>, <em>modes_y</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showOverlapTable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showOverlapTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show overlap table using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.pcolor.html#matplotlib.pyplot.pcolor" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">pcolor()</span></code></a>.  <em>modes_x</em>
+and <em>modes_y</em> are sets of normal modes, and correspond to x and y axes of
+the plot.  Note that mode indices are incremented by 1.  List of modes
+is assumed to contain a set of contiguous modes from the same model.</p>
+<p>Default arguments for <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.pcolor.html#matplotlib.pyplot.pcolor" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">pcolor()</span></code></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">cmap=plt.cm.jet</span></code></li>
+<li><code class="docutils literal"><span class="pre">norm=matplotlib.colors.Normalize(0,</span> <span class="pre">1)</span></code></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showProjection">
+<code class="descname">showProjection</code><span class="sig-paren">(</span><em>ensemble</em>, <em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showProjection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showProjection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a projection of conformational deviations onto up to three normal
+modes from the same model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ensemble</strong> (<a class="reference internal" href="../ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a>, <a class="reference internal" href="../ensemble/conformation.html#prody.ensemble.conformation.Conformation" title="prody.ensemble.conformation.Conformation"><code class="xref py py-class docutils literal"><span class="pre">Conformation</span></code></a>,
+<a class="reference internal" href="mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a>, <a class="reference internal" href="../trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory" title="prody.trajectory.trajectory.Trajectory"><code class="xref py py-class docutils literal"><span class="pre">Trajectory</span></code></a>) &#8211; an ensemble, trajectory or a conformation for which
+deviation(s) will be projected, or a deformation vector</li>
+<li><strong>modes</strong> (<a class="reference internal" href="mode.html#prody.dynamics.mode.Mode" title="prody.dynamics.mode.Mode"><code class="xref py py-class docutils literal"><span class="pre">Mode</span></code></a>, <a class="reference internal" href="modeset.html#prody.dynamics.modeset.ModeSet" title="prody.dynamics.modeset.ModeSet"><code class="xref py py-class docutils literal"><span class="pre">ModeSet</span></code></a>, <a class="reference internal" href="nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a>) &#8211; up to three normal modes</li>
+<li><strong>color</strong> (<em>str, list</em>) &#8211; a color name or a list of color name, default is <code class="docutils literal"><span class="pre">'blue'</span></code></li>
+<li><strong>label</strong> (<em>str, list</em>) &#8211; label or a list of labels</li>
+<li><strong>marker</strong> (<em>str, list</em>) &#8211; a marker or a list of markers, default is <code class="docutils literal"><span class="pre">'o'</span></code></li>
+<li><strong>linestyle</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; line style, default is <code class="docutils literal"><span class="pre">'None'</span></code></li>
+<li><strong>text</strong> (<em>list</em>) &#8211; list of text labels, one for each conformation</li>
+<li><strong>fontsize</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; font size for text labels</li>
+<li><strong>new_fig</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; if <code class="docutils literal"><span class="pre">True</span></code> then a new figure will be created before plotting.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The projected values are by default converted to RMSD.  Pass <code class="docutils literal"><span class="pre">rmsd=False</span></code>
+to use projection itself.</p>
+<p>Matplotlib function used for plotting depends on the number of modes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>1 mode: <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">hist()</span></code></a></li>
+<li>2 modes: <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a></li>
+<li>3 modes: <a class="reference external" href="http://matplotlib.sourceforge.net/tutorials/toolkits/mplot3d.html#mpl_toolkits.mplot3d.Axes3D.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-meth docutils literal"><span class="pre">plot()</span></code></a></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showCrossProjection">
+<code class="descname">showCrossProjection</code><span class="sig-paren">(</span><em>ensemble</em>, <em>mode_x</em>, <em>mode_y</em>, <em>scale=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showCrossProjection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showCrossProjection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a projection of conformational deviations onto modes from
+different models using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>.  This function
+differs from <a class="reference internal" href="#prody.dynamics.plotting.showProjection" title="prody.dynamics.plotting.showProjection"><code class="xref py py-func docutils literal"><span class="pre">showProjection()</span></code></a> by accepting modes from two different
+models.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ensemble</strong> (<a class="reference internal" href="../ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble" title="prody.ensemble.ensemble.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">Ensemble</span></code></a>, <a class="reference internal" href="../ensemble/conformation.html#prody.ensemble.conformation.Conformation" title="prody.ensemble.conformation.Conformation"><code class="xref py py-class docutils literal"><span class="pre">Conformation</span></code></a>,
+<a class="reference internal" href="mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a>, <a class="reference internal" href="../trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory" title="prody.trajectory.trajectory.Trajectory"><code class="xref py py-class docutils literal"><span class="pre">Trajectory</span></code></a>) &#8211; an ensemble or a conformation for which deviation(s) will be
+projected, or a deformation vector</li>
+<li><strong>mode_x</strong> (<a class="reference internal" href="mode.html#prody.dynamics.mode.Mode" title="prody.dynamics.mode.Mode"><code class="xref py py-class docutils literal"><span class="pre">Mode</span></code></a>, <a class="reference internal" href="mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a>) &#8211; projection onto this mode will be shown along x-axis</li>
+<li><strong>mode_y</strong> (<a class="reference internal" href="mode.html#prody.dynamics.mode.Mode" title="prody.dynamics.mode.Mode"><code class="xref py py-class docutils literal"><span class="pre">Mode</span></code></a>, <a class="reference internal" href="mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a>) &#8211; projection onto this mode will be shown along y-axis</li>
+<li><strong>scale</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; scale width of the projection onto mode <code class="docutils literal"><span class="pre">x</span></code> or <code class="docutils literal"><span class="pre">y</span></code>,
+best scaling factor will be calculated and printed on the console,
+absolute value of scalar makes the with of two projection same,
+sign of scalar makes the projections yield a positive correlation</li>
+<li><strong>scalar</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; scalar factor for projection onto selected mode</li>
+<li><strong>color</strong> (<em>str, list</em>) &#8211; a color name or a list of color name, default is <code class="docutils literal"><span class="pre">'blue'</span></code></li>
+<li><strong>label</strong> (<em>str, list</em>) &#8211; label or a list of labels</li>
+<li><strong>marker</strong> (<em>str, list</em>) &#8211; a marker or a list of markers, default is <code class="docutils literal"><span class="pre">'o'</span></code></li>
+<li><strong>linestyle</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; line style, default is <code class="docutils literal"><span class="pre">'None'</span></code></li>
+<li><strong>text</strong> (<em>list</em>) &#8211; list of text labels, one for each conformation</li>
+<li><strong>fontsize</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; font size for text labels</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The projected values are by default converted to RMSD.  Pass <code class="docutils literal"><span class="pre">rmsd=False</span></code>
+to calculate raw projection values.  See <span class="xref std std-ref">pca-xray-plotting</span> for a
+more elaborate example.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showEllipsoid">
+<code class="descname">showEllipsoid</code><span class="sig-paren">(</span><em>modes</em>, <em>onto=None</em>, <em>n_std=2</em>, <em>scale=1.0</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showEllipsoid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show an ellipsoid using  <code class="xref py py-meth docutils literal"><span class="pre">plot_wireframe()</span></code>.</p>
+<p>Ellipsoid volume gives an analytical view of the conformational space that
+given modes describe.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>modes</strong> (<a class="reference internal" href="modeset.html#prody.dynamics.modeset.ModeSet" title="prody.dynamics.modeset.ModeSet"><code class="xref py py-class docutils literal"><span class="pre">ModeSet</span></code></a>, <a class="reference internal" href="pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a>, <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a>, <a class="reference internal" href="nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a>) &#8211; 3 modes for which ellipsoid will be drawn.</li>
+<li><strong>onto</strong> &#8211; 3 modes onto which ellipsoid will be projected.</li>
+<li><strong>n_std</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Number of standard deviations to scale the ellipsoid.</li>
+<li><strong>scale</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Used for scaling the volume of ellipsoid. This can be
+obtained from <a class="reference internal" href="sampling.html#prody.dynamics.sampling.sampleModes" title="prody.dynamics.sampling.sampleModes"><code class="xref py py-func docutils literal"><span class="pre">sampleModes()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showSqFlucts">
+<code class="descname">showSqFlucts</code><span class="sig-paren">(</span><em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showSqFlucts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showSqFlucts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show square fluctuations using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>.  See
+also <a class="reference internal" href="analysis.html#prody.dynamics.analysis.calcSqFlucts" title="prody.dynamics.analysis.calcSqFlucts"><code class="xref py py-func docutils literal"><span class="pre">calcSqFlucts()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showScaledSqFlucts">
+<code class="descname">showScaledSqFlucts</code><span class="sig-paren">(</span><em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showScaledSqFlucts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showScaledSqFlucts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show scaled square fluctuations using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>.
+Modes or mode sets given as additional arguments will be scaled to have
+the same mean squared fluctuations as <em>modes</em>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showNormedSqFlucts">
+<code class="descname">showNormedSqFlucts</code><span class="sig-paren">(</span><em>modes</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showNormedSqFlucts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showNormedSqFlucts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show normalized square fluctuations via <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.resetTicks">
+<code class="descname">resetTicks</code><span class="sig-paren">(</span><em>x</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#resetTicks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.resetTicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset X (and Y) axis ticks using values in given <em>array</em>.  Ticks in the
+current figure should not be fractional values for this function to work as
+expected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showDiffMatrix">
+<code class="descname">showDiffMatrix</code><span class="sig-paren">(</span><em>matrix1</em>, <em>matrix2</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showDiffMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showDiffMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the difference between two cross-correlation matrices from
+different models. For given <em>matrix1</em> and <em>matrix2</em> show the difference
+between them in the form of (matrix2 - matrix1) and plot the difference
+matrix using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">imshow()</span></code></a>. When <a class="reference internal" href="nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a> models
+are passed instead of matrices, the functions could call
+<a class="reference internal" href="analysis.html#prody.dynamics.analysis.calcCrossCorr" title="prody.dynamics.analysis.calcCrossCorr"><code class="xref py py-func docutils literal"><span class="pre">calcCrossCorr()</span></code></a> function to calculate the matrices for given modes.</p>
+<p>To display the absolute values in the difference matrix, user could set
+<em>abs</em> keyword argument <strong>True</strong>.</p>
+<p>By default, <em>origin=lower</em> and <em>interpolation=bilinear</em> keyword arguments
+are passed to this function, but user can overwrite these parameters.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showMechStiff">
+<code class="descname">showMechStiff</code><span class="sig-paren">(</span><em>model</em>, <em>coords</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showMechStiff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showMechStiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show mechanical stiffness matrix using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">imshow()</span></code></a>.
+By default, <em>origin=lower</em> keyword  arguments are passed to this function, 
+but user can overwrite these parameters.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showNormDistFunct">
+<code class="descname">showNormDistFunct</code><span class="sig-paren">(</span><em>model</em>, <em>coords</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showNormDistFunct"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showNormDistFunct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show normalized distance fluctuation matrix using 
+<a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">imshow()</span></code></a>. By default, <em>origin=lower</em> 
+keyword  arguments are passed to this function, 
+but user can overwrite these parameters.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showPairDeformationDist">
+<code class="descname">showPairDeformationDist</code><span class="sig-paren">(</span><em>model</em>, <em>coords</em>, <em>ind1</em>, <em>ind2</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showPairDeformationDist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showPairDeformationDist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show distribution of deformations in distance contributed by each mode
+for selected pair of residues <em>ind1</em> <em>ind2</em>
+using <a class="reference external" href="http://matplotlib.sourceforge.net/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.0)"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showMeanMechStiff">
+<code class="descname">showMeanMechStiff</code><span class="sig-paren">(</span><em>model</em>, <em>coords</em>, <em>header</em>, <em>chain='A'</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showMeanMechStiff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showMeanMechStiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show mean value of effective spring constant with secondary structure
+taken from MechStiff. Header is needed to obatin secondary structure range.
+Using <code class="docutils literal"><span class="pre">'jet_r'</span></code> as argument color map will be reverse (similar to VMD 
+program coding).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showPerturbResponse">
+<code class="descname">showPerturbResponse</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showPerturbResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showPerturbResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the PRS matrix with the profiles along the right and bottom.</p>
+<p>If no PRS matrix or profiles are provided, these will be calculated first
+using the provided options with a provided model (e.g. ANM, GNM or EDA).
+So as to obtain different sensors and effectors, normMatrix=True by default.</p>
+<p>If atoms are provided then residue numbers can be used from there.
+<em>model</em> and <em>atoms</em> must have the same number of atoms. <em>atoms</em> must be an
+<a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>prs_matrix</strong> (<em>ndarray</em>) &#8211; a perturbation response matrix</li>
+<li><strong>effectiveness</strong> (<em>list</em>) &#8211; an effectiveness profile from a PRS matrix</li>
+<li><strong>sensitivity</strong> (<em>list</em>) &#8211; a sensitivity profile from a PRS matrix</li>
+<li><strong>model</strong> (<a class="reference internal" href="nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><em>NMA</em></a>) &#8211; any object with a calcCovariance method
+e.g. <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a> instance</li>
+<li><strong>atoms</strong> (<a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><em>AtomGroup</em></a>) &#8211; a :class: <cite>AtomGroup</cite> instance</li>
+<li><strong>returnData</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; whether to return data for further analysis
+default is False</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.plotting.showPerturbResponseProfiles">
+<code class="descname">showPerturbResponseProfiles</code><span class="sig-paren">(</span><em>prs_matrix</em>, <em>atoms</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/dynamics/plotting.html#showPerturbResponseProfiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.plotting.showPerturbResponseProfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot as a line graph the average response to perturbation of
+a particular residue (a row of a perturbation response matrix)
+or the average effect of perturbation of a particular residue
+(a column of a normalized perturbation response matrix).</p>
+<p>If no PRS matrix or profiles are provided, these will be calculated first
+using the provided options with a provided model (e.g. ANM, GNM or EDA).
+So as to obtain different sensitivity and effectiveness, normMatrix=True by default.</p>
+<p>If no residue number is given then the effectiveness and sensitivity
+profiles will be plotted instead. These two profiles are also returned
+as arrays for further analysis if they aren&#8217;t already provided.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>prs_matrix</strong> (<em>ndarray</em>) &#8211; a perturbation response matrix</li>
+<li><strong>atoms</strong> (<a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><em>AtomGroup</em></a>) &#8211; a :class: <cite>AtomGroup</cite> instance for matching 
+residue numbers and chain IDs.</li>
+<li><strong>effectiveness</strong> (<em>list</em>) &#8211; an effectiveness profile from a PRS matrix</li>
+<li><strong>sensitivity</strong> (<em>list</em>) &#8211; a sensitivity profile from a PRS matrix</li>
+<li><strong>model</strong> (<a class="reference internal" href="nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><em>NMA</em></a>) &#8211; any object with a calcCovariance method
+e.g. <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a> instance
+<em>model</em> and <em>atoms</em> must have the same number of atoms.</li>
+<li><strong>chain</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; chain identifier for the residue of interest
+default is to make a plot for each chain in the protein</li>
+<li><strong>resnum</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; residue number for the residue of interest</li>
+<li><strong>direction</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the direction you want to use to read data out
+of the PRS matrix for plotting: the options are &#8216;row&#8217; or &#8216;column&#8217;.
+Default is &#8216;row&#8217;.
+A row gives the effect on each residue of peturbing the specified 
+residue.
+A column gives the response of the specified residue to perturbing 
+each residue.
+If no residue number is provided then this option will be ignored</li>
+<li><strong>returnData</strong> &#8211; whether to return profiles for further analysis
+default is False</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

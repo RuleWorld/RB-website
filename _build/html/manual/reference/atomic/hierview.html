@@ -1,0 +1,295 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Hierarchical Views &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="pointer.html" title="Atom Pointer"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="functions.html" title="Supporting Functions"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Atomic Data &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.atomic.hierview">
+<span id="hierarchical-views"></span><h1>Hierarchical Views<a class="headerlink" href="#module-prody.atomic.hierview" title="Permalink to this headline">¶</a></h1>
+<p>This module defines <a class="reference internal" href="#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> class that builds a hierarchical
+views of atom groups.</p>
+<dl class="class">
+<dt id="prody.atomic.hierview.HierView">
+<em class="property">class </em><code class="descname">HierView</code><span class="sig-paren">(</span><em>atoms</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hierarchical views can be generated for <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>,
+<a class="reference internal" href="selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>, and <a class="reference internal" href="chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> instances. Indexing a 
+<a class="reference internal" href="#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> instance returns a <a class="reference internal" href="chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> instance.</p>
+<p>Some <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a> methods are customized as follows:</p>
+<ul>
+<li><p class="first"><a class="reference external" href="http://docs.python.org/library/functions.html#len" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">len()</span></code></a> returns the number of atoms, i.e. <a class="reference internal" href="#prody.atomic.hierview.HierView.numChains" title="prody.atomic.hierview.HierView.numChains"><code class="xref py py-meth docutils literal"><span class="pre">numChains()</span></code></a></p>
+</li>
+<li><p class="first"><a class="reference external" href="http://docs.python.org/library/functions.html#iter" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">iter()</span></code></a> yields <a class="reference internal" href="chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> instances</p>
+</li>
+<li><dl class="first docutils">
+<dt>indexing by:</dt>
+<dd><ul class="first last simple">
+<li><em>segment name</em> (<code class="xref py py-func docutils literal"><span class="pre">str()</span></code>), e.g. <code class="docutils literal"><span class="pre">&quot;PROT&quot;</span></code>, returns
+a <a class="reference internal" href="segment.html#prody.atomic.segment.Segment" title="prody.atomic.segment.Segment"><code class="xref py py-class docutils literal"><span class="pre">Segment</span></code></a></li>
+<li><em>chain identifier</em> (<code class="xref py py-func docutils literal"><span class="pre">str()</span></code>), e.g. <code class="docutils literal"><span class="pre">&quot;A&quot;</span></code>, returns
+a <a class="reference internal" href="chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a></li>
+<li><em>[segment name,] chain identifier, residue number[, insertion code]</em>
+(<a class="reference external" href="http://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">tuple()</span></code></a>), e.g. <code class="docutils literal"><span class="pre">&quot;A&quot;,</span> <span class="pre">10</span></code> or  <code class="docutils literal"><span class="pre">&quot;A&quot;,</span> <span class="pre">10,</span> <span class="pre">&quot;B&quot;</span></code> or
+<code class="docutils literal"><span class="pre">&quot;PROT&quot;,</span> <span class="pre">&quot;A&quot;,</span> <span class="pre">10,</span> <span class="pre">&quot;B&quot;</span></code>, returns a <a class="reference internal" href="residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Note that when an <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance have distinct segments,
+they will be considered when building the hierarchical view.
+A <a class="reference internal" href="segment.html#prody.atomic.segment.Segment" title="prody.atomic.segment.Segment"><code class="xref py py-class docutils literal"><span class="pre">Segment</span></code></a> instance will be generated for each distinct segment
+name.  Then, for each segment chains and residues will be evaluated.
+Having segments in the structure will not change most behaviors of this
+class, except indexing.  For example, when indexing a hierarchical view
+for chain P in segment PROT needs to be indexed as <code class="docutils literal"><span class="pre">hv['PROT',</span> <span class="pre">'P']</span></code>.</p>
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.getAtoms">
+<code class="descname">getAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.getAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.getAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns atoms for which the hierarchical view was built.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.getChain">
+<code class="descname">getChain</code><span class="sig-paren">(</span><em>chid</em>, <em>segname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.getChain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.getChain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns chain with identifier <em>chid</em>, if it is present.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.getResidue">
+<code class="descname">getResidue</code><span class="sig-paren">(</span><em>chid</em>, <em>resnum</em>, <em>icode=None</em>, <em>segname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.getResidue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.getResidue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns residue with number <em>resnum</em> and insertion code <em>icode</em> from
+the chain with identifier <em>chid</em> in segment with name <em>segname</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.getSegment">
+<code class="descname">getSegment</code><span class="sig-paren">(</span><em>segname</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.getSegment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.getSegment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns segment with name <em>segname</em>, if it is present.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.iterChains">
+<code class="descname">iterChains</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.iterChains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.iterChains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield chains.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.iterResidues">
+<code class="descname">iterResidues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.iterResidues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.iterResidues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield residues.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.iterSegments">
+<code class="descname">iterSegments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.iterSegments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.iterSegments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield segments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.numChains">
+<code class="descname">numChains</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.numChains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.numChains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of chains.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.numResidues">
+<code class="descname">numResidues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.numResidues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.numResidues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of residues.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.numSegments">
+<code class="descname">numSegments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.numSegments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.numSegments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of chains.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.hierview.HierView.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/hierview.html#HierView.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.hierview.HierView.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update (or build) hierarchical view of atoms.  This method is called
+at instantiation, but can be used to rebuild the hierarchical view when
+attributes of atoms change.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

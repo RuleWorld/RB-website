@@ -1,0 +1,776 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>PDB File Header &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li class="pull-right">
+          <a href="localpdb.html" title="Local PDB Handlers"
+             accesskey="N">next</a>
+          </li>
+        <li class="pull-right">
+          <a href="functions.html" title="Miscellaneous Tools"
+             accesskey="P">previous</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >ProDy Manual &raquo;</a></li>
+          <li><a href="../index.html" >Reference Manual &raquo;</a></li>
+          <li><a href="index.html" accesskey="U">Protein Structure &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.proteins.header">
+<span id="pdb-file-header"></span><h1>PDB File Header<a class="headerlink" href="#module-prody.proteins.header" title="Permalink to this headline">¶</a></h1>
+<p>This module defines functions for parsing header data from PDB files.</p>
+<dl class="class">
+<dt id="prody.proteins.header.Chemical">
+<em class="property">class </em><code class="descname">Chemical</code><span class="sig-paren">(</span><em>resname</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/proteins/header.html#Chemical"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.header.Chemical" title="Permalink to this definition">¶</a></dt>
+<dd><p>A data structure for storing information on chemical components
+(or heterogens) in PDB structures.</p>
+<p>A <a class="reference internal" href="#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a> instance has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="7%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Type</th>
+<th class="head">Description (RECORD TYPE)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>resname</td>
+<td>str</td>
+<td>residue name (or chemical component identifier) (HET)</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>str</td>
+<td>chemical name (HETNAM)</td>
+</tr>
+<tr class="row-even"><td>chain</td>
+<td>str</td>
+<td>chain identifier (HET)</td>
+</tr>
+<tr class="row-odd"><td>resnum</td>
+<td>int</td>
+<td>residue (or sequence) number (HET)</td>
+</tr>
+<tr class="row-even"><td>icode</td>
+<td>str</td>
+<td>insertion code (HET)</td>
+</tr>
+<tr class="row-odd"><td>natoms</td>
+<td>int</td>
+<td>number of atoms present in the structure (HET)</td>
+</tr>
+<tr class="row-even"><td>description</td>
+<td>str</td>
+<td>description of the chemical component (HET)</td>
+</tr>
+<tr class="row-odd"><td>synonyms</td>
+<td>list</td>
+<td>synonyms (HETSYN)</td>
+</tr>
+<tr class="row-even"><td>formula</td>
+<td>str</td>
+<td>chemical formula (FORMUL)</td>
+</tr>
+<tr class="row-odd"><td>pdbentry</td>
+<td>str</td>
+<td>PDB entry that chemical data is extracted from</td>
+</tr>
+</tbody>
+</table>
+<p>Chemical class instances can be obtained as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="n">chemical</span> <span class="o">=</span> <span class="n">parsePDBHeader</span><span class="p">(</span><span class="s1">&#39;1zz2&#39;</span><span class="p">,</span> <span class="s1">&#39;chemicals&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="gp">In [3]: </span><span class="n">chemical</span>
+<span class="gh">Out[3]: </span><span class="go">&lt;Chemical: B11 (1ZZ2_A_362)&gt;</span>
+
+<span class="gp">In [4]: </span><span class="n">chemical</span><span class="o">.</span><span class="n">name</span>
+<span class="gh">Out[4]: </span><span class="go">&#39;N-[3-(4-FLUOROPHENOXY)PHENYL]-4-[(2-HYDROXYBENZYL) AMINO]PIPERIDINE-1-SULFONAMIDE&#39;</span>
+
+<span class="gp">In [5]: </span><span class="n">chemical</span><span class="o">.</span><span class="n">natoms</span>
+<span class="gh">Out[5]: </span><span class="go">33</span>
+
+<span class="gp">In [6]: </span><span class="nb">len</span><span class="p">(</span><span class="n">chemical</span><span class="p">)</span>
+<span class="gh">Out[6]: </span><span class="go">33</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.chain">
+<code class="descname">chain</code><a class="headerlink" href="#prody.proteins.header.Chemical.chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>chain identifier</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.description">
+<code class="descname">description</code><a class="headerlink" href="#prody.proteins.header.Chemical.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>description of the chemical component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.formula">
+<code class="descname">formula</code><a class="headerlink" href="#prody.proteins.header.Chemical.formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>chemical formula</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.icode">
+<code class="descname">icode</code><a class="headerlink" href="#prody.proteins.header.Chemical.icode" title="Permalink to this definition">¶</a></dt>
+<dd><p>insertion code</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.name">
+<code class="descname">name</code><a class="headerlink" href="#prody.proteins.header.Chemical.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>chemical name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.natoms">
+<code class="descname">natoms</code><a class="headerlink" href="#prody.proteins.header.Chemical.natoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of atoms present in the structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.pdbentry">
+<code class="descname">pdbentry</code><a class="headerlink" href="#prody.proteins.header.Chemical.pdbentry" title="Permalink to this definition">¶</a></dt>
+<dd><p>PDB entry that chemical data is extracted from</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.resname">
+<code class="descname">resname</code><a class="headerlink" href="#prody.proteins.header.Chemical.resname" title="Permalink to this definition">¶</a></dt>
+<dd><p>residue name (or chemical component identifier)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.resnum">
+<code class="descname">resnum</code><a class="headerlink" href="#prody.proteins.header.Chemical.resnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>residue (or sequence) number</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Chemical.synonyms">
+<code class="descname">synonyms</code><a class="headerlink" href="#prody.proteins.header.Chemical.synonyms" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of synonyms</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.proteins.header.Polymer">
+<em class="property">class </em><code class="descname">Polymer</code><span class="sig-paren">(</span><em>chid</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/proteins/header.html#Polymer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.header.Polymer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A data structure for storing information on polymer components
+(protein or nucleic) of PDB structures.</p>
+<p>A <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a> instance has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="9%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Type</th>
+<th class="head">Description (RECORD TYPE)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>chid</td>
+<td>str</td>
+<td>chain identifier</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>str</td>
+<td>name of the polymer (macromolecule) (COMPND)</td>
+</tr>
+<tr class="row-even"><td>fragment</td>
+<td>str</td>
+<td>specifies a domain or region of the molecule (COMPND)</td>
+</tr>
+<tr class="row-odd"><td>synonyms</td>
+<td>list</td>
+<td>synonyms for the polymer (COMPND)</td>
+</tr>
+<tr class="row-even"><td>ec</td>
+<td>list</td>
+<td>associated Enzyme Commission numbers (COMPND)</td>
+</tr>
+<tr class="row-odd"><td>engineered</td>
+<td>bool</td>
+<td>indicates that the polymer was produced using
+recombinant technology or by purely chemical synthesis
+(COMPND)</td>
+</tr>
+<tr class="row-even"><td>mutation</td>
+<td>bool</td>
+<td>indicates presence of a mutation (COMPND)</td>
+</tr>
+<tr class="row-odd"><td>comments</td>
+<td>str</td>
+<td>additional comments</td>
+</tr>
+<tr class="row-even"><td>sequence</td>
+<td>str</td>
+<td>polymer chain sequence (SEQRES)</td>
+</tr>
+<tr class="row-odd"><td>dbrefs</td>
+<td>list</td>
+<td>sequence database records (DBREF[1|2] and SEQADV),
+see <a class="reference internal" href="#prody.proteins.header.DBRef" title="prody.proteins.header.DBRef"><code class="xref py py-class docutils literal"><span class="pre">DBRef</span></code></a></td>
+</tr>
+<tr class="row-even"><td>modified</td>
+<td>list</td>
+<td><div class="first last line-block">
+<div class="line">modified residues (SEQMOD)</div>
+<div class="line">when modified residues are present, each will be
+represented as: <code class="docutils literal"><span class="pre">(resname,</span> <span class="pre">resnum,</span> <span class="pre">icode,</span> <span class="pre">stdname,</span>
+<span class="pre">comment)</span></code></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>pdbentry</td>
+<td>str</td>
+<td>PDB entry that polymer data is extracted from</td>
+</tr>
+</tbody>
+</table>
+<p>Polymer class instances can be obtained as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">polymer</span> <span class="o">=</span> <span class="n">parsePDBHeader</span><span class="p">(</span><span class="s1">&#39;2k39&#39;</span><span class="p">,</span> <span class="s1">&#39;polymers&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="gp">In [2]: </span><span class="n">polymer</span>
+<span class="gh">Out[2]: </span><span class="go">&lt;Polymer: UBIQUITIN (2K39_A)&gt;</span>
+
+<span class="gp">In [3]: </span><span class="n">polymer</span><span class="o">.</span><span class="n">pdbentry</span>
+<span class="gh">Out[3]: </span><span class="go">&#39;2K39&#39;</span>
+
+<span class="gp">In [4]: </span><span class="n">polymer</span><span class="o">.</span><span class="n">chid</span>
+<span class="gh">Out[4]: </span><span class="go">&#39;A&#39;</span>
+
+<span class="gp">In [5]: </span><span class="n">polymer</span><span class="o">.</span><span class="n">name</span>
+<span class="gh">Out[5]: </span><span class="go">&#39;UBIQUITIN&#39;</span>
+
+<span class="gp">In [6]: </span><span class="n">polymer</span><span class="o">.</span><span class="n">sequence</span>
+<span class="gh">Out[6]: </span><span class="go">&#39;MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG&#39;</span>
+
+<span class="gp">In [7]: </span><span class="nb">len</span><span class="p">(</span><span class="n">polymer</span><span class="o">.</span><span class="n">sequence</span><span class="p">)</span>
+<span class="gh">Out[7]: </span><span class="go">76</span>
+
+<span class="gp">In [8]: </span><span class="nb">len</span><span class="p">(</span><span class="n">polymer</span><span class="p">)</span>
+<span class="gh">Out[8]: </span><span class="go">76</span>
+
+<span class="gp">In [9]: </span><span class="n">dbref</span> <span class="o">=</span> <span class="n">polymer</span><span class="o">.</span><span class="n">dbrefs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="gp">In [10]: </span><span class="n">dbref</span><span class="o">.</span><span class="n">database</span>
+<span class="gh">Out[10]: </span><span class="go">&#39;UniProt&#39;</span>
+
+<span class="gp">In [11]: </span><span class="n">dbref</span><span class="o">.</span><span class="n">accession</span>
+<span class="gh">Out[11]: </span><span class="go">&#39;P62972&#39;</span>
+
+<span class="gp">In [12]: </span><span class="n">dbref</span><span class="o">.</span><span class="n">idcode</span>
+<span class="gh">Out[12]: </span><span class="go">&#39;UBIQ_XENLA&#39;</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.chid">
+<code class="descname">chid</code><a class="headerlink" href="#prody.proteins.header.Polymer.chid" title="Permalink to this definition">¶</a></dt>
+<dd><p>chain identifier</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.comments">
+<code class="descname">comments</code><a class="headerlink" href="#prody.proteins.header.Polymer.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>additional comments</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.dbrefs">
+<code class="descname">dbrefs</code><a class="headerlink" href="#prody.proteins.header.Polymer.dbrefs" title="Permalink to this definition">¶</a></dt>
+<dd><p>sequence database reference records</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.ec">
+<code class="descname">ec</code><a class="headerlink" href="#prody.proteins.header.Polymer.ec" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of associated Enzyme Commission numbers</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.engineered">
+<code class="descname">engineered</code><a class="headerlink" href="#prody.proteins.header.Polymer.engineered" title="Permalink to this definition">¶</a></dt>
+<dd><p>indicates that the molecule was produced using recombinant
+technology or by purely chemical synthesis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.fragment">
+<code class="descname">fragment</code><a class="headerlink" href="#prody.proteins.header.Polymer.fragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>specifies a domain or region of the molecule</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.modified">
+<code class="descname">modified</code><a class="headerlink" href="#prody.proteins.header.Polymer.modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>modified residues</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.mutation">
+<code class="descname">mutation</code><a class="headerlink" href="#prody.proteins.header.Polymer.mutation" title="Permalink to this definition">¶</a></dt>
+<dd><p>indicates presence of a mutation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.name">
+<code class="descname">name</code><a class="headerlink" href="#prody.proteins.header.Polymer.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the polymer (macromolecule)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.pdbentry">
+<code class="descname">pdbentry</code><a class="headerlink" href="#prody.proteins.header.Polymer.pdbentry" title="Permalink to this definition">¶</a></dt>
+<dd><p>PDB entry that polymer data is extracted from</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.sequence">
+<code class="descname">sequence</code><a class="headerlink" href="#prody.proteins.header.Polymer.sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>polymer chain sequence</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.Polymer.synonyms">
+<code class="descname">synonyms</code><a class="headerlink" href="#prody.proteins.header.Polymer.synonyms" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of synonyms for the molecule</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.proteins.header.DBRef">
+<em class="property">class </em><code class="descname">DBRef</code><a class="reference internal" href="../../../_modules/prody/proteins/header.html#DBRef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.header.DBRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>A data structure for storing reference to sequence databases for polymer
+components in  PDB structures.  Information if parsed from <strong>DBREF[1|2]</strong>
+and <strong>SEQADV</strong> records in PDB header.</p>
+<dl class="attribute">
+<dt id="prody.proteins.header.DBRef.accession">
+<code class="descname">accession</code><a class="headerlink" href="#prody.proteins.header.DBRef.accession" title="Permalink to this definition">¶</a></dt>
+<dd><p>database accession code</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.DBRef.database">
+<code class="descname">database</code><a class="headerlink" href="#prody.proteins.header.DBRef.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>sequence database, one of UniProt, GenBank, Norine, UNIMES, or PDB</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.DBRef.dbabbr">
+<code class="descname">dbabbr</code><a class="headerlink" href="#prody.proteins.header.DBRef.dbabbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>database abbreviation, one of UNP, GB, NORINE, UNIMES, or PDB</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.DBRef.diff">
+<code class="descname">diff</code><a class="headerlink" href="#prody.proteins.header.DBRef.diff" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of differences between PDB and database sequences,
+<code class="docutils literal"><span class="pre">(resname,</span> <span class="pre">resnum,</span> <span class="pre">icode,</span> <span class="pre">dbResname,</span> <span class="pre">dbResnum,</span> <span class="pre">comment)</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.DBRef.first">
+<code class="descname">first</code><a class="headerlink" href="#prody.proteins.header.DBRef.first" title="Permalink to this definition">¶</a></dt>
+<dd><p>initial residue numbers, <code class="docutils literal"><span class="pre">(resnum,</span> <span class="pre">icode,</span> <span class="pre">dbnum)</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.DBRef.idcode">
+<code class="descname">idcode</code><a class="headerlink" href="#prody.proteins.header.DBRef.idcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>database identification code, i.e. entry name in UniProt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.proteins.header.DBRef.last">
+<code class="descname">last</code><a class="headerlink" href="#prody.proteins.header.DBRef.last" title="Permalink to this definition">¶</a></dt>
+<dd><p>ending residue numbers, <code class="docutils literal"><span class="pre">(resnum,</span> <span class="pre">icode,</span> <span class="pre">dbnum)</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.header.parsePDBHeader">
+<code class="descname">parsePDBHeader</code><span class="sig-paren">(</span><em>pdb</em>, <em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/proteins/header.html#parsePDBHeader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.header.parsePDBHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns header data dictionary for <em>pdb</em>.  This function is equivalent to
+<code class="docutils literal"><span class="pre">parsePDB(pdb,</span> <span class="pre">header=True,</span> <span class="pre">model=0,</span> <span class="pre">meta=False)</span></code>, likewise <em>pdb</em> may be
+an identifier or a filename.</p>
+<p>List of header records that are parsed.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="23%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Record type</th>
+<th class="head">Dictionary key(s)</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HEADER</td>
+<td><div class="first last line-block">
+<div class="line">classification</div>
+<div class="line">deposition_date</div>
+<div class="line">identifier</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">molecule classification</div>
+<div class="line">deposition date</div>
+<div class="line">PDB identifier</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>TITLE</td>
+<td>title</td>
+<td>title for the experiment or analysis</td>
+</tr>
+<tr class="row-even"><td>SPLIT</td>
+<td>split</td>
+<td>list of PDB entries that make up the whole
+structure when combined with this one</td>
+</tr>
+<tr class="row-odd"><td>COMPND</td>
+<td>polymers</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a></td>
+</tr>
+<tr class="row-even"><td>EXPDTA</td>
+<td>experiment</td>
+<td>information about the experiment</td>
+</tr>
+<tr class="row-odd"><td>NUMMDL</td>
+<td>n_models</td>
+<td>number of models</td>
+</tr>
+<tr class="row-even"><td>MDLTYP</td>
+<td>model_type</td>
+<td>additional structural annotation</td>
+</tr>
+<tr class="row-odd"><td>AUTHOR</td>
+<td>authors</td>
+<td>list of contributors</td>
+</tr>
+<tr class="row-even"><td>JRNL</td>
+<td>reference</td>
+<td><dl class="first last docutils">
+<dt>reference information dictionary:</dt>
+<dd><ul class="first last simple">
+<li><em>authors</em>: list of authors</li>
+<li><em>title</em>: title of the article</li>
+<li><em>editors</em>: list of editors</li>
+<li><em>issn</em>:</li>
+<li><em>reference</em>: journal, vol, issue, etc.</li>
+<li><em>publisher</em>: publisher information</li>
+<li><em>pmid</em>: pubmed identifier</li>
+<li><em>doi</em>: digital object identifier</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>DBREF[1|2]</td>
+<td>polymers</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a> and <a class="reference internal" href="#prody.proteins.header.DBRef" title="prody.proteins.header.DBRef"><code class="xref py py-class docutils literal"><span class="pre">DBRef</span></code></a></td>
+</tr>
+<tr class="row-even"><td>SEQADV</td>
+<td>polymers</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>SEQRES</td>
+<td>polymers</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a></td>
+</tr>
+<tr class="row-even"><td>MODRES</td>
+<td>polymers</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>HELIX</td>
+<td>polymers</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a></td>
+</tr>
+<tr class="row-even"><td>SHEET</td>
+<td>polymers</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>HET</td>
+<td>chemicals</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a></td>
+</tr>
+<tr class="row-even"><td>HETNAM</td>
+<td>chemicals</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>HETSYN</td>
+<td>chemicals</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a></td>
+</tr>
+<tr class="row-even"><td>FORMUL</td>
+<td>chemicals</td>
+<td>see <a class="reference internal" href="#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>REMARK 2</td>
+<td>resolution</td>
+<td>resolution of structures, when applicable</td>
+</tr>
+<tr class="row-even"><td>REMARK 4</td>
+<td>version</td>
+<td>PDB file version</td>
+</tr>
+<tr class="row-odd"><td>REMARK 350</td>
+<td>biomoltrans</td>
+<td>biomolecular transformation lines
+(unprocessed)</td>
+</tr>
+</tbody>
+</table>
+<p>Header records that are not parsed are: OBSLTE, CAVEAT, SOURCE, KEYWDS,
+REVDAT, SPRSDE, SSBOND, LINK, CISPEP, CRYST1, ORIGX1, ORIGX2, ORIGX3,
+MTRIX1, MTRIX2, MTRIX3, and REMARK X not mentioned above.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.header.assignSecstr">
+<code class="descname">assignSecstr</code><span class="sig-paren">(</span><em>header</em>, <em>atoms</em>, <em>coil=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/proteins/header.html#assignSecstr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.header.assignSecstr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign secondary structure from <em>header</em> dictionary to <em>atoms</em>.
+<em>header</em> must be a dictionary parsed using the <a class="reference internal" href="pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a>.
+<em>atoms</em> may be an instance of <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>,
+<a class="reference internal" href="../atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> or <a class="reference internal" href="../atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a>.  ProDy can be configured to
+automatically parse and assign secondary structure information using
+<code class="docutils literal"><span class="pre">confProDy(auto_secondary=True)</span></code> command.  See also <a class="reference internal" href="../prody.html#prody.confProDy" title="prody.confProDy"><code class="xref py py-func docutils literal"><span class="pre">confProDy()</span></code></a>
+function.</p>
+<p>The Dictionary of Protein Secondary Structure, in short DSSP, type
+single letter code assignments are used:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>G</strong> = 3-turn helix (310 helix). Min length 3 residues.</li>
+<li><strong>H</strong> = 4-turn helix (alpha helix). Min length 4 residues.</li>
+<li><strong>I</strong> = 5-turn helix (pi helix). Min length 5 residues.</li>
+<li><strong>T</strong> = hydrogen bonded turn (3, 4 or 5 turn)</li>
+<li><strong>E</strong> = extended strand in parallel and/or anti-parallel
+beta-sheet conformation. Min length 2 residues.</li>
+<li><strong>B</strong> = residue in isolated beta-bridge (single pair beta-sheet
+hydrogen bond formation)</li>
+<li><strong>S</strong> = bend (the only non-hydrogen-bond based assignment).</li>
+<li><strong>C</strong> = residues not in one of above conformations.</li>
+</ul>
+</div></blockquote>
+<p>See <a class="reference external" href="http://en.wikipedia.org/wiki/Protein_secondary_structure#The_DSSP_code">http://en.wikipedia.org/wiki/Protein_secondary_structure#The_DSSP_code</a>
+for more details.</p>
+<p>Following PDB helix classes are omitted:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Right-handed omega (2, class number)</li>
+<li>Right-handed gamma (4)</li>
+<li>Left-handed alpha (6)</li>
+<li>Left-handed omega (7)</li>
+<li>Left-handed gamma (8)</li>
+<li>2 - 7 ribbon/helix (9)</li>
+<li>Polyproline (10)</li>
+</ul>
+</div></blockquote>
+<p>Secondary structures are assigned to all atoms in a residue.  Amino acid
+residues without any secondary structure assignments in the header
+section will be assigned coil (C) conformation.  This can be prevented
+by passing <code class="docutils literal"><span class="pre">coil=False</span></code> argument.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.header.buildBiomolecules">
+<code class="descname">buildBiomolecules</code><span class="sig-paren">(</span><em>header</em>, <em>atoms</em>, <em>biomol=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/proteins/header.html#buildBiomolecules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.header.buildBiomolecules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <em>atoms</em> after applying biomolecular transformations from <em>header</em>
+dictionary.  Biomolecular transformations are applied to all coordinate
+sets in the molecule.</p>
+<p>Some PDB files contain transformations for more than 1 biomolecules.  A
+specific set of transformations can be choosen using <em>biomol</em> argument.
+Transformation sets are identified by numbers, e.g. <code class="docutils literal"><span class="pre">&quot;1&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;2&quot;</span></code>, ...</p>
+<p>If multiple biomolecular transformations are provided in the <em>header</em>
+dictionary, biomolecules will be returned as
+<a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances in a <code class="xref py py-func docutils literal"><span class="pre">list()</span></code>.</p>
+<p>If the resulting biomolecule has more than 26 chains, the molecular
+assembly will be split into multiple <a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+instances each containing at most 26 chains.  These
+<a class="reference internal" href="../atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances will be returned in a tuple.</p>
+<p>Note that atoms in biomolecules are ordered according to chain identifiers.</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 04, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>
