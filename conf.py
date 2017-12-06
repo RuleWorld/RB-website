@@ -5,7 +5,10 @@ import sys
 import glob
 import time
 
-exec(open('manual/conf.py').read())
+try:
+    exec(open('BioNetGen/docs/conf.py').read())
+except IOError:
+    exec(open('../../manual/conf.py').read())
 
 sys.path.append(os.path.abspath('manual/sphinxext'))
               #'sphinxcontrib.googleanalytics',
@@ -35,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'contents'
 
 # not needed when building the full website
-# intersphinx_mapping.pop('rbwebsite')
+intersphinx_mapping.pop('prodywebsite')
 
 project = u'RuleBender'
 # copyright = u'2010-2015, University of Pittsburgh'
@@ -52,9 +55,9 @@ html_additional_pages = {
     #'mechstiff/index':'mechstiff.html',
     #'drugui/index': 'drugui.html',
     #'comd/index' : 'comd.html',
-    #'downloads/index': 'downloads.html',
-    #'tutorials/index': 'tutorials.html',
-    #'statistics/index': 'statistics.html',
+    'downloads/index': 'downloads.html',
+    'tutorials/index': 'tutorials.html',
+    'statistics/index': 'statistics.html',
     #'mechstiff/index' : 'mechstiff.html',
     #'analytics/index' : 'analytics.html',
     #'workshop/index' : 'workshop.html',

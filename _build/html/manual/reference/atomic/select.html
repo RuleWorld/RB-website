@@ -181,28 +181,28 @@ Small differences, that is described below, should not affect most practical
 uses of atom selections.  With added flexibility of Python, ProDy selection
 engine can also be used to identify intermolecular contacts.  You may see
 this and other usage examples in <span class="xref std std-ref">contacts</span> and
-<span class="xref std std-ref">selection-operations</span>.</p>
+<a class="reference internal" href="../../../tutorials/prody_tutorial/selection.html#selection-operations"><span>Operations on Selections</span></a>.</p>
 <p>First, we import everything from ProDy and parse a protein-DNA-ligand
 complex structure:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [45]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="gp">In [2]: </span><span class="n">p</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;3mht&#39;</span><span class="p">)</span>
+<span class="gp">In [46]: </span><span class="n">p</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;3mht&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><a class="reference internal" href="../proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> returns <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances, <code class="docutils literal"><span class="pre">p</span></code> in this case,
 that stores all atomic data in the file.  We can count different types of
-atoms using <a class="reference internal" href="flags.html#flags"><span class="std std-ref">Atom Flags</span></a> and <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup.numAtoms" title="prody.atomic.atomgroup.AtomGroup.numAtoms"><code class="xref py py-meth docutils literal"><span class="pre">numAtoms()</span></code></a> method as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
-<span class="gh">Out[3]: </span><span class="go">2606</span>
+atoms using <a class="reference internal" href="flags.html#flags"><span>Atom Flags</span></a> and <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup.numAtoms" title="prody.atomic.atomgroup.AtomGroup.numAtoms"><code class="xref py py-meth docutils literal"><span class="pre">numAtoms()</span></code></a> method as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [47]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+<span class="gh">Out[47]: </span><span class="go">2606</span>
 
-<span class="gp">In [4]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;nucleic&#39;</span><span class="p">)</span>
-<span class="gh">Out[4]: </span><span class="go">509</span>
+<span class="gp">In [48]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;nucleic&#39;</span><span class="p">)</span>
+<span class="gh">Out[48]: </span><span class="go">509</span>
 
-<span class="gp">In [5]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;hetero&#39;</span><span class="p">)</span>
-<span class="gh">Out[5]: </span><span class="go">96</span>
+<span class="gp">In [49]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;hetero&#39;</span><span class="p">)</span>
+<span class="gh">Out[49]: </span><span class="go">96</span>
 
-<span class="gp">In [6]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
-<span class="gh">Out[6]: </span><span class="go">70</span>
+<span class="gp">In [50]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+<span class="gh">Out[50]: </span><span class="go">70</span>
 </pre></div>
 </div>
 <p>Last two counts suggest that ligand has 26 atoms, i.e. number of <a class="reference internal" href="flags.html#term-hetero"><span class="xref std std-term">hetero</span></a>
@@ -210,12 +210,12 @@ atoms less the number of <a class="reference internal" href="flags.html#term-wat
 <div class="section" id="atom-flags">
 <h2>Atom flags<a class="headerlink" href="#atom-flags" title="Permalink to this headline">¶</a></h2>
 <p>We select subset of atoms by using <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup.select" title="prody.atomic.atomgroup.AtomGroup.select"><code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.select()</span></code></a> method.
-All <a class="reference internal" href="flags.html#flags"><span class="std std-ref">Atom Flags</span></a> can be input arguments to this methods as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
-<span class="gh">Out[7]: </span><span class="go">&lt;Selection: &#39;protein&#39; from 3mht (2606 atoms)&gt;</span>
+All <a class="reference internal" href="flags.html#flags"><span>Atom Flags</span></a> can be input arguments to this methods as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [51]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+<span class="gh">Out[51]: </span><span class="go">&lt;Selection: &#39;protein&#39; from 3mht (2606 atoms)&gt;</span>
 
-<span class="gp">In [8]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
-<span class="gh">Out[8]: </span><span class="go">&lt;Selection: &#39;water&#39; from 3mht (70 atoms)&gt;</span>
+<span class="gp">In [52]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+<span class="gh">Out[52]: </span><span class="go">&lt;Selection: &#39;water&#39; from 3mht (70 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>This operation returns <a class="reference internal" href="selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> instances, which can be an input
@@ -224,7 +224,7 @@ to functions that accepts an <em>atoms</em> argument.</p>
 <div class="section" id="logical-operators">
 <h2>Logical operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h2>
 <p>Flags can be combined using <code class="docutils literal"><span class="pre">'and'</span></code> and <code class="docutils literal"><span class="pre">'or'</span></code> operators:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein and water&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [53]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein and water&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">'protein</span> <span class="pre">and</span> <span class="pre">water'</span></code> did not result in selection of <a class="reference internal" href="flags.html#term-protein"><span class="xref std std-term">protein</span></a> and
@@ -239,19 +239,19 @@ given criterion.  To select both water and protein atoms, <code class="docutils 
 operator should be used instead.  A protein or a water atom would satisfy
 <code class="docutils literal"><span class="pre">'protein</span> <span class="pre">or</span> <span class="pre">water'</span></code> criterion.</p>
 </div>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein or water&#39;</span><span class="p">)</span>
-<span class="gh">Out[10]: </span><span class="go">&lt;Selection: &#39;protein or water&#39; from 3mht (2676 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [54]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein or water&#39;</span><span class="p">)</span>
+<span class="gh">Out[54]: </span><span class="go">&lt;Selection: &#39;protein or water&#39; from 3mht (2676 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>We can also use <code class="docutils literal"><span class="pre">'not'</span></code> operator to negate an atom flag.  For example,
 the following selection will only select ligand atoms:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water and hetero&#39;</span><span class="p">)</span>
-<span class="gh">Out[11]: </span><span class="go">&lt;Selection: &#39;not water and hetero&#39; from 3mht (26 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [55]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water and hetero&#39;</span><span class="p">)</span>
+<span class="gh">Out[55]: </span><span class="go">&lt;Selection: &#39;not water and hetero&#39; from 3mht (26 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>If you omit the <code class="docutils literal"><span class="pre">'and'</span></code> operator, you will get the same result:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water hetero&#39;</span><span class="p">)</span>
-<span class="gh">Out[12]: </span><span class="go">&lt;Selection: &#39;not water hetero&#39; from 3mht (26 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [56]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water hetero&#39;</span><span class="p">)</span>
+<span class="gh">Out[56]: </span><span class="go">&lt;Selection: &#39;not water hetero&#39; from 3mht (26 atoms)&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -262,13 +262,13 @@ is equivalent to <code class="docutils literal"><span class="pre">'not</span> <s
 </div>
 <p>We can select Cα atoms of acidic residues by omitting the default logical
 operator as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;acidic calpha&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [57]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;acidic calpha&#39;</span><span class="p">)</span>
 
-<span class="gp">In [14]: </span><span class="n">sel</span>
-<span class="gh">Out[14]: </span><span class="go">&lt;Selection: &#39;acidic calpha&#39; from 3mht (39 atoms)&gt;</span>
+<span class="gp">In [58]: </span><span class="n">sel</span>
+<span class="gh">Out[58]: </span><span class="go">&lt;Selection: &#39;acidic calpha&#39; from 3mht (39 atoms)&gt;</span>
 
-<span class="gp">In [15]: </span><span class="nb">set</span><span class="p">(</span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
-<span class="gh">Out[15]: </span><span class="go">{&#39;ASP&#39;, &#39;GLU&#39;}</span>
+<span class="gp">In [59]: </span><span class="nb">set</span><span class="p">(</span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
+<span class="gh">Out[59]: </span><span class="go">{&#39;ASP&#39;, &#39;GLU&#39;}</span>
 </pre></div>
 </div>
 </div>
@@ -276,8 +276,8 @@ operator as follows:</p>
 <h2>Quick selections<a class="headerlink" href="#quick-selections" title="Permalink to this headline">¶</a></h2>
 <p>For simple selections, such as shown above, following may be preferable over
 the <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup.select" title="prody.atomic.atomgroup.AtomGroup.select"><code class="xref py py-meth docutils literal"><span class="pre">select()</span></code></a> method:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="n">p</span><span class="o">.</span><span class="n">acidic_calpha</span>
-<span class="gh">Out[16]: </span><span class="go">&lt;Selection: &#39;acidic calpha&#39; from 3mht (39 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [60]: </span><span class="n">p</span><span class="o">.</span><span class="n">acidic_calpha</span>
+<span class="gh">Out[60]: </span><span class="go">&lt;Selection: &#39;acidic calpha&#39; from 3mht (39 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>The result is the same as using <code class="docutils literal"><span class="pre">p.select('acidic</span> <span class="pre">calpha')</span></code>.  Underscore,
@@ -286,11 +286,11 @@ special characters cannot be used.</p>
 </div>
 <div class="section" id="atom-data-fields">
 <h2>Atom data fields<a class="headerlink" href="#atom-data-fields" title="Permalink to this headline">¶</a></h2>
-<p>In addition to <a class="reference internal" href="flags.html#flags"><span class="std std-ref">Atom Flags</span></a>, <a class="reference internal" href="fields.html#fields"><span class="std std-ref">Atom Data Fields</span></a> can be used in atom selections
+<p>In addition to <a class="reference internal" href="flags.html#flags"><span>Atom Flags</span></a>, <a class="reference internal" href="fields.html#fields"><span>Atom Data Fields</span></a> can be used in atom selections
 when combined with some values.  For example, we can select Cα and Cβ atoms
 of alanine residues as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [17]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname ALA name CA CB&#39;</span><span class="p">)</span>
-<span class="gh">Out[17]: </span><span class="go">&lt;Selection: &#39;resname ALA name CA CB&#39; from 3mht (32 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [61]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname ALA name CA CB&#39;</span><span class="p">)</span>
+<span class="gh">Out[61]: </span><span class="go">&lt;Selection: &#39;resname ALA name CA CB&#39; from 3mht (32 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Note that we omitted the default <code class="docutils literal"><span class="pre">'and'</span></code> operator.</p>
@@ -301,15 +301,15 @@ Atoms with string data fields empty, such as those with no a chain
 identifiers or alternate location identifiers, can be selected using
 an underscore.</p>
 </div>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [18]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;chain _&#39;</span><span class="p">)</span>  <span class="c1"># chain identifiers of all atoms are specified in 3mht</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [62]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;chain _&#39;</span><span class="p">)</span>  <span class="c1"># chain identifiers of all atoms are specified in 3mht</span>
 
-<span class="gp">In [19]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;altloc _&#39;</span><span class="p">)</span>  <span class="c1"># altloc identifiers for all atoms are empty</span>
-<span class="gh">Out[19]: </span><span class="go">&lt;Selection: &#39;altloc _&#39; from 3mht (3211 atoms)&gt;</span>
+<span class="gp">In [63]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;altloc _&#39;</span><span class="p">)</span>  <span class="c1"># altloc identifiers for all atoms are empty</span>
+<span class="gh">Out[63]: </span><span class="go">&lt;Selection: &#39;altloc _&#39; from 3mht (3211 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Numeric data fields can also be used to make selections:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [20]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1 2 3 4&#39;</span><span class="p">)</span>
-<span class="gh">Out[20]: </span><span class="go">&lt;Selection: &#39;ca resnum 1 2 3 4&#39; from 3mht (4 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [64]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1 2 3 4&#39;</span><span class="p">)</span>
+<span class="gh">Out[64]: </span><span class="go">&lt;Selection: &#39;ca resnum 1 2 3 4&#39; from 3mht (4 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>A special case for residues is having insertion codes.  Residue numbers and
@@ -324,14 +324,14 @@ insertion codes can be specified together as follows:</p>
 <div class="section" id="number-ranges">
 <h3>Number ranges<a class="headerlink" href="#number-ranges" title="Permalink to this headline">¶</a></h3>
 <p>A range of numbers using <code class="docutils literal"><span class="pre">'to'</span></code> or Python style slicing with <code class="docutils literal"><span class="pre">':'</span></code>:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [21]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1to4&#39;</span><span class="p">)</span>
-<span class="gh">Out[21]: </span><span class="go">&lt;Selection: &#39;ca resnum 1to4&#39; from 3mht (4 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [65]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1to4&#39;</span><span class="p">)</span>
+<span class="gh">Out[65]: </span><span class="go">&lt;Selection: &#39;ca resnum 1to4&#39; from 3mht (4 atoms)&gt;</span>
 
-<span class="gp">In [22]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1:4&#39;</span><span class="p">)</span>
-<span class="gh">Out[22]: </span><span class="go">&lt;Selection: &#39;ca resnum 1:4&#39; from 3mht (3 atoms)&gt;</span>
+<span class="gp">In [66]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1:4&#39;</span><span class="p">)</span>
+<span class="gh">Out[66]: </span><span class="go">&lt;Selection: &#39;ca resnum 1:4&#39; from 3mht (3 atoms)&gt;</span>
 
-<span class="gp">In [23]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1:4:2&#39;</span><span class="p">)</span>
-<span class="gh">Out[23]: </span><span class="go">&lt;Selection: &#39;ca resnum 1:4:2&#39; from 3mht (2 atoms)&gt;</span>
+<span class="gp">In [67]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1:4:2&#39;</span><span class="p">)</span>
+<span class="gh">Out[67]: </span><span class="go">&lt;Selection: &#39;ca resnum 1:4:2&#39; from 3mht (2 atoms)&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -351,12 +351,12 @@ e.g. <code class="docutils literal"><span class="pre">'resnum</span> <span class
 </div>
 <div class="section" id="special-characters">
 <h3>Special characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h3>
-<p>Following characters can be specified when using <a class="reference internal" href="fields.html#fields"><span class="std std-ref">Atom Data Fields</span></a> for atom
+<p>Following characters can be specified when using <a class="reference internal" href="fields.html#fields"><span>Atom Data Fields</span></a> for atom
 selections:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">abcdefghijklmnopqrstuvwxyz</span>
-<span class="n">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
-<span class="mi">0123456789</span>
-<span class="o">~@</span><span class="c1">#$.:;_&#39;,</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+~@#$.:;_&#39;,
 </pre></div>
 </div>
 <p>For example, <code class="docutils literal"><span class="pre">&quot;name</span> <span class="pre">C'</span> <span class="pre">N`</span> <span class="pre">O~</span> <span class="pre">C$</span> <span class="pre">C#&quot;</span></code> is a valid selection string.</p>
@@ -371,11 +371,11 @@ escaped using grave accent characters (<code class="docutils literal"><span clas
 <p>Negative numbers and number ranges must also be escaped using grave accent
 characters, since negative sign <code class="docutils literal"><span class="pre">'-'</span></code> is considered a special character
 unless it indicates subtraction operation (see below).</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [24]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x `-25 to 25`&#39;</span><span class="p">)</span>
-<span class="gh">Out[24]: </span><span class="go">&lt;Selection: &#39;x `-25 to 25`&#39; from 3mht (1941 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [68]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x `-25 to 25`&#39;</span><span class="p">)</span>
+<span class="gh">Out[68]: </span><span class="go">&lt;Selection: &#39;x `-25 to 25`&#39; from 3mht (1941 atoms)&gt;</span>
 
-<span class="gp">In [25]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x `-22.542`&#39;</span><span class="p">)</span>
-<span class="gh">Out[25]: </span><span class="go">&lt;Selection: &#39;x `-22.542`&#39; from 3mht (1 atoms)&gt;</span>
+<span class="gp">In [69]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x `-22.542`&#39;</span><span class="p">)</span>
+<span class="gh">Out[69]: </span><span class="go">&lt;Selection: &#39;x `-22.542`&#39; from 3mht (1 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Omitting the grave accent character will cause a <a class="reference internal" href="#prody.atomic.select.SelectionError" title="prody.atomic.select.SelectionError"><code class="xref py py-exc docutils literal"><span class="pre">SelectionError</span></code></a>.</p>
@@ -385,10 +385,10 @@ unless it indicates subtraction operation (see below).</p>
 <p>Finally, you can specify regular expressions to select atoms based on
 data fields with type string.  Following will select residues whose names
 start with capital letter A</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [26]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname &quot;A.*&quot;&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [70]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname &quot;A.*&quot;&#39;</span><span class="p">)</span>
 
-<span class="gp">In [27]: </span><span class="nb">set</span><span class="p">(</span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
-<span class="gh">Out[27]: </span><span class="go">{&#39;ALA&#39;, &#39;ARG&#39;, &#39;ASN&#39;, &#39;ASP&#39;}</span>
+<span class="gp">In [71]: </span><span class="nb">set</span><span class="p">(</span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
+<span class="gh">Out[71]: </span><span class="go">{&#39;ALA&#39;, &#39;ARG&#39;, &#39;ASN&#39;, &#39;ASP&#39;}</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -400,13 +400,13 @@ For more information on regular expressions see <a class="reference external" hr
 </div>
 <div class="section" id="numerical-comparisons">
 <h2>Numerical comparisons<a class="headerlink" href="#numerical-comparisons" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="fields.html#fields"><span class="std std-ref">Atom Data Fields</span></a> with numeric types can be used as operands in numerical
+<p><a class="reference internal" href="fields.html#fields"><span>Atom Data Fields</span></a> with numeric types can be used as operands in numerical
 comparisons:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [28]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x &lt; 0&#39;</span><span class="p">)</span>
-<span class="gh">Out[28]: </span><span class="go">&lt;Selection: &#39;x &lt; 0&#39; from 3mht (3095 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [72]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x &lt; 0&#39;</span><span class="p">)</span>
+<span class="gh">Out[72]: </span><span class="go">&lt;Selection: &#39;x &lt; 0&#39; from 3mht (3095 atoms)&gt;</span>
 
-<span class="gp">In [29]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;occupancy = 1&#39;</span><span class="p">)</span>
-<span class="gh">Out[29]: </span><span class="go">&lt;Selection: &#39;occupancy = 1&#39; from 3mht (3211 atoms)&gt;</span>
+<span class="gp">In [73]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;occupancy = 1&#39;</span><span class="p">)</span>
+<span class="gh">Out[73]: </span><span class="go">&lt;Selection: &#39;occupancy = 1&#39; from 3mht (3211 atoms)&gt;</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -444,13 +444,13 @@ comparisons:</p>
 </tbody>
 </table>
 <p>It is also possible to chain comparison statements as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [30]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x &lt; 0&#39;</span><span class="p">)</span>
-<span class="gh">Out[30]: </span><span class="go">&lt;Selection: &#39;-10 &lt;= x &lt; 0&#39; from 3mht (557 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [74]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x &lt; 0&#39;</span><span class="p">)</span>
+<span class="gh">Out[74]: </span><span class="go">&lt;Selection: &#39;-10 &lt;= x &lt; 0&#39; from 3mht (557 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>This would be the same as the following selection:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [31]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x and x &lt; 0&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x &lt; 0&#39;</span><span class="p">)</span>
-<span class="gh">Out[31]: </span><span class="go">True</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [75]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x and x &lt; 0&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x &lt; 0&#39;</span><span class="p">)</span>
+<span class="gh">Out[75]: </span><span class="go">True</span>
 </pre></div>
 </div>
 <p>Furthermore, numerical comparisons may involve the following operations:</p>
@@ -492,11 +492,11 @@ comparisons:</p>
 </tbody>
 </table>
 <p>These operations must be used with a numerical comparison, e.g.</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [32]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x ** 2 &lt; 10&#39;</span><span class="p">)</span>
-<span class="gh">Out[32]: </span><span class="go">&lt;Selection: &#39;x ** 2 &lt; 10&#39; from 3mht (238 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [76]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x ** 2 &lt; 10&#39;</span><span class="p">)</span>
+<span class="gh">Out[76]: </span><span class="go">&lt;Selection: &#39;x ** 2 &lt; 10&#39; from 3mht (238 atoms)&gt;</span>
 
-<span class="gp">In [33]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x ** 2 ** 2 &lt; 10&#39;</span><span class="p">)</span>
-<span class="gh">Out[33]: </span><span class="go">&lt;Selection: &#39;x ** 2 ** 2 &lt; 10&#39; from 3mht (134 atoms)&gt;</span>
+<span class="gp">In [77]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x ** 2 ** 2 &lt; 10&#39;</span><span class="p">)</span>
+<span class="gh">Out[77]: </span><span class="go">&lt;Selection: &#39;x ** 2 ** 2 &lt; 10&#39; from 3mht (134 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Finally, following functions can be used in numerical comparisons:</p>
@@ -564,8 +564,8 @@ comparisons:</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [34]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;sqrt(sq(x) + sq(y) + sq(z)) &lt; 100&#39;</span><span class="p">)</span>  <span class="c1"># within 100 A of origin</span>
-<span class="gh">Out[34]: </span><span class="go">&lt;Selection: &#39;sqrt(sq(x) + sq(y) + sq(z)) &lt; 100&#39; from 3mht (1975 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [78]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;sqrt(sq(x) + sq(y) + sq(z)) &lt; 100&#39;</span><span class="p">)</span>  <span class="c1"># within 100 A of origin</span>
+<span class="gh">Out[78]: </span><span class="go">&lt;Selection: &#39;sqrt(sq(x) + sq(y) + sq(z)) &lt; 100&#39; from 3mht (1975 atoms)&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -578,8 +578,8 @@ results selecting water atoms as well.</p>
 <p>User can avoid selecting specified atoms using <code class="docutils literal"><span class="pre">exwithin</span> <span class="pre">.</span> <span class="pre">of</span> <span class="pre">..</span></code> setting,
 e.g. <code class="docutils literal"><span class="pre">'exwithin</span> <span class="pre">5</span> <span class="pre">of</span> <span class="pre">water'</span></code> will not select water molecules and is
 equivalent to <code class="docutils literal"><span class="pre">'within</span> <span class="pre">5</span> <span class="pre">of</span> <span class="pre">water</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">water'</span></code></p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [35]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;exwithin 5 of water&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water within 5 of water&#39;</span><span class="p">)</span>
-<span class="gh">Out[35]: </span><span class="go">True</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [79]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;exwithin 5 of water&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water within 5 of water&#39;</span><span class="p">)</span>
+<span class="gh">Out[79]: </span><span class="go">True</span>
 </pre></div>
 </div>
 </div>
@@ -590,14 +590,14 @@ equivalent to <code class="docutils literal"><span class="pre">'within</span> <s
 that the selection does not consider connectivity within a chain.  Regular
 expressions can also be used to make selections: <code class="docutils literal"><span class="pre">'sequence</span> <span class="pre">&quot;MI.*KQ&quot;'</span></code> will
 select <strong>MET-ILE-(XXX)n-ASP-LYS-GLN</strong> pattern, if present.</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [36]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca sequence &quot;MI.*DKQ&quot;&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [80]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca sequence &quot;MI.*DKQ&quot;&#39;</span><span class="p">)</span>
 
-<span class="gp">In [37]: </span><span class="n">sel</span>
-<span class="gh">Out[37]: </span><span class="go">&lt;Selection: &#39;ca sequence &quot;MI.*DKQ&quot;&#39; from 3mht (8 atoms)&gt;</span>
+<span class="gp">In [81]: </span><span class="n">sel</span>
+<span class="gh">Out[81]: </span><span class="go">&lt;Selection: &#39;ca sequence &quot;MI.*DKQ&quot;&#39; from 3mht (8 atoms)&gt;</span>
 
-<span class="gp">In [38]: </span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
-<span class="gh">Out[38]: </span><span class="go"></span>
-<span class="go">array([&#39;MET&#39;, &#39;ILE&#39;, &#39;GLU&#39;, &#39;ILE&#39;, &#39;LYS&#39;, &#39;ASP&#39;, &#39;LYS&#39;, &#39;GLN&#39;],</span>
+<span class="gp">In [82]: </span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
+<span class="gh">Out[82]: </span><span class="go"></span>
+<span class="go">array([&#39;MET&#39;, &#39;ILE&#39;, &#39;GLU&#39;, &#39;ILE&#39;, &#39;LYS&#39;, &#39;ASP&#39;, &#39;LYS&#39;, &#39;GLN&#39;], </span>
 <span class="go">      dtype=&#39;|S6&#39;)</span>
 </pre></div>
 </div>
@@ -608,8 +608,8 @@ select <strong>MET-ILE-(XXX)n-ASP-LYS-GLN</strong> pattern, if present.</p>
 <em>chain</em>, or <em>segment</em> using <code class="docutils literal"><span class="pre">same</span> <span class="pre">..</span> <span class="pre">as</span> <span class="pre">..</span></code> setting, e.g.
 <code class="docutils literal"><span class="pre">'same</span> <span class="pre">residue</span> <span class="pre">as</span> <span class="pre">exwithin</span> <span class="pre">4</span> <span class="pre">of</span> <span class="pre">water'</span></code> will select residues that have
 at least an atom within 4 A of any water molecule.</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [39]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;same residue as exwithin 4 of water&#39;</span><span class="p">)</span>
-<span class="gh">Out[39]: </span><span class="go">&lt;Selection: &#39;same residue as...thin 4 of water&#39; from 3mht (1554 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [83]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;same residue as exwithin 4 of water&#39;</span><span class="p">)</span>
+<span class="gh">Out[83]: </span><span class="go">&lt;Selection: &#39;same residue as...thin 4 of water&#39; from 3mht (1554 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Additionally, a selection may be expanded to the immediately bonded atoms using
@@ -632,20 +632,20 @@ functions are for manipulating selection macros:</p>
 <li><a class="reference internal" href="#prody.atomic.select.isSelectionMacro" title="prody.atomic.select.isSelectionMacro"><code class="xref py py-func docutils literal"><span class="pre">isSelectionMacro()</span></code></a></li>
 </ul>
 </div></blockquote>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [40]: </span><span class="n">defSelectionMacro</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">,</span> <span class="s1">&#39;resname ALA&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [84]: </span><span class="n">defSelectionMacro</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">,</span> <span class="s1">&#39;resname ALA&#39;</span><span class="p">)</span>
 
-<span class="gp">In [41]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname ALA&#39;</span><span class="p">)</span>
-<span class="gh">Out[41]: </span><span class="go">True</span>
+<span class="gp">In [85]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname ALA&#39;</span><span class="p">)</span>
+<span class="gh">Out[85]: </span><span class="go">True</span>
 </pre></div>
 </div>
 <p>You can also use this macro as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [42]: </span><span class="n">p</span><span class="o">.</span><span class="n">alanine</span>
-<span class="gh">Out[42]: </span><span class="go">&lt;Selection: &#39;alanine&#39; from 3mht (80 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [86]: </span><span class="n">p</span><span class="o">.</span><span class="n">alanine</span>
+<span class="gh">Out[86]: </span><span class="go">&lt;Selection: &#39;alanine&#39; from 3mht (80 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Macros are stored in ProDy configuration file permanently.  You can delete
 them if you wish as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [43]: </span><span class="n">delSelectionMacro</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [87]: </span><span class="n">delSelectionMacro</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -654,26 +654,26 @@ them if you wish as follows:</p>
 <p><a class="reference internal" href="#prody.atomic.select.Select.select" title="prody.atomic.select.Select.select"><code class="xref py py-meth docutils literal"><span class="pre">select()</span></code></a> method also accepts keyword arguments that can simplify
 some selections.  Consider the following case where you want to select some
 protein atoms that are close to its center:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [44]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">protein</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [88]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">protein</span>
 
-<span class="gp">In [45]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="gh">Out[45]: </span><span class="go">array([-21.17,  35.86,  79.97])</span>
+<span class="gp">In [89]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gh">Out[89]: </span><span class="go">array([-21.17,  35.86,  79.97])</span>
 
-<span class="gp">In [46]: </span><span class="n">sel1</span> <span class="o">=</span> <span class="n">protein</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;sqrt(sq(x--21.17) + sq(y-35.86) + sq(z-79.97)) &lt; 5&#39;</span><span class="p">)</span>
+<span class="gp">In [90]: </span><span class="n">sel1</span> <span class="o">=</span> <span class="n">protein</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;sqrt(sq(x--21.17) + sq(y-35.86) + sq(z-79.97)) &lt; 5&#39;</span><span class="p">)</span>
 
-<span class="gp">In [47]: </span><span class="n">sel1</span>
-<span class="gh">Out[47]: </span><span class="go">&lt;Selection: &#39;(sqrt(sq(x--21....) and (protein)&#39; from 3mht (20 atoms)&gt;</span>
+<span class="gp">In [91]: </span><span class="n">sel1</span>
+<span class="gh">Out[91]: </span><span class="go">&lt;Selection: &#39;(sqrt(sq(x--21....) and (protein)&#39; from 3mht (20 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Instead, you could pass a keyword argument and use the keyword in the
 selection string:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [48]: </span><span class="n">sel2</span> <span class="o">=</span> <span class="n">protein</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;within 5 of center&#39;</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">))</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [92]: </span><span class="n">sel2</span> <span class="o">=</span> <span class="n">protein</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;within 5 of center&#39;</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">))</span>
 
-<span class="gp">In [49]: </span><span class="n">sel2</span>
-<span class="gh">Out[49]: </span><span class="go">&lt;Selection: &#39;index 1452 to 1...33 2935 to 2944&#39; from 3mht (20 atoms)&gt;</span>
+<span class="gp">In [93]: </span><span class="n">sel2</span>
+<span class="gh">Out[93]: </span><span class="go">&lt;Selection: &#39;index 1452 to 1...33 2935 to 2944&#39; from 3mht (20 atoms)&gt;</span>
 
-<span class="gp">In [50]: </span><span class="n">sel1</span> <span class="o">==</span> <span class="n">sel2</span>
-<span class="gh">Out[50]: </span><span class="go">True</span>
+<span class="gp">In [94]: </span><span class="n">sel1</span> <span class="o">==</span> <span class="n">sel2</span>
+<span class="gh">Out[94]: </span><span class="go">True</span>
 </pre></div>
 </div>
 <p>Note that selection string for <em>sel2</em> lists indices of atoms.  This
@@ -748,7 +748,7 @@ instance.</p>
 <dd><p>Define selection macro <em>selstr</em> with name <em>name</em>.  Both <em>name</em> and
 <em>selstr</em> must be string.  An existing keyword cannot be used as a macro
 name. If a macro with given <em>name</em> exists, it will be overwritten.</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">defSelectionMacro</span><span class="p">(</span><span class="s1">&#39;cbeta&#39;</span><span class="p">,</span> <span class="s1">&#39;name CB and protein&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [95]: </span><span class="n">defSelectionMacro</span><span class="p">(</span><span class="s1">&#39;cbeta&#39;</span><span class="p">,</span> <span class="s1">&#39;name CB and protein&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -757,7 +757,7 @@ name. If a macro with given <em>name</em> exists, it will be overwritten.</p>
 <dt id="prody.atomic.select.delSelectionMacro">
 <code class="descname">delSelectionMacro</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/prody/atomic/select.html#delSelectionMacro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.delSelectionMacro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the macro <em>name</em>.</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">delSelectionMacro</span><span class="p">(</span><span class="s1">&#39;cbeta&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [96]: </span><span class="n">delSelectionMacro</span><span class="p">(</span><span class="s1">&#39;cbeta&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -787,8 +787,8 @@ returns a copy of the selection macros dictionary.</p>
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

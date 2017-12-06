@@ -220,34 +220,34 @@ determinants of structural dynamics beyond native contact topology.
 <p><strong>Example</strong>:</p>
 <p>Let&#8217;s parse coordinates and header data from a PDB file, and then
 assign secondary structure to the atoms.</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [97]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="gp">In [2]: </span><span class="n">ubi</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1aar&#39;</span><span class="p">,</span> <span class="n">chain</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="s1">&#39;calpha&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="gp">In [98]: </span><span class="n">ubi</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1aar&#39;</span><span class="p">,</span> <span class="n">chain</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="s1">&#39;calpha&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="gp">In [3]: </span><span class="n">assignSecstr</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">ubi</span><span class="p">)</span>
-<span class="gh">Out[3]: </span><span class="go">&lt;AtomGroup: 1aar_A_ca (76 atoms)&gt;</span>
+<span class="gp">In [99]: </span><span class="n">assignSecstr</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">ubi</span><span class="p">)</span>
+<span class="gh">Out[99]: </span><span class="go">&lt;AtomGroup: 1aar_A_ca (76 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>In the above we parsed only the atoms needed for this calculation, i.e.
 Cα atoms from chain A.</p>
 <p>We build the Hessian matrix using structure based force constants as
 follows;</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">gamma</span> <span class="o">=</span> <span class="n">GammaStructureBased</span><span class="p">(</span><span class="n">ubi</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [100]: </span><span class="n">gamma</span> <span class="o">=</span> <span class="n">GammaStructureBased</span><span class="p">(</span><span class="n">ubi</span><span class="p">)</span>
 
-<span class="gp">In [5]: </span><span class="n">anm</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="gp">In [101]: </span><span class="n">anm</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
-<span class="gp">In [6]: </span><span class="n">anm</span><span class="o">.</span><span class="n">buildHessian</span><span class="p">(</span><span class="n">ubi</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="n">gamma</span><span class="p">)</span>
+<span class="gp">In [102]: </span><span class="n">anm</span><span class="o">.</span><span class="n">buildHessian</span><span class="p">(</span><span class="n">ubi</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="n">gamma</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We can obtain the force constants assigned to residue pairs from the
 Kirchhoff matrix as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">k</span> <span class="o">=</span> <span class="n">anm</span><span class="o">.</span><span class="n">getKirchhoff</span><span class="p">()</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [103]: </span><span class="n">k</span> <span class="o">=</span> <span class="n">anm</span><span class="o">.</span><span class="n">getKirchhoff</span><span class="p">()</span>
 
-<span class="gp">In [8]: </span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># a pair of connected residues</span>
-<span class="gh">Out[8]: </span><span class="go">-10.0</span>
+<span class="gp">In [104]: </span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># a pair of connected residues</span>
+<span class="gh">Out[104]: </span><span class="go">-10.0</span>
 
-<span class="gp">In [9]: </span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span> <span class="c1"># a pair of residues from a sheet</span>
-<span class="gh">Out[9]: </span><span class="go">-6.0</span>
+<span class="gp">In [105]: </span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span> <span class="c1"># a pair of residues from a sheet</span>
+<span class="gh">Out[105]: </span><span class="go">-6.0</span>
 </pre></div>
 </div>
 <p>Setup the parameters.</p>
@@ -309,12 +309,12 @@ This class enables setting different radii for different node types.</p>
 radius for different residue types. Let&#8217;s say, for protein Cα atoms we
 want to set the radius to 7.5 Å, and for nucleic acid phosphate atoms to
 10 Å. We use the HhaI-DNA complex structure <code class="file docutils literal"><span class="pre">1mht</span></code>.</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">hhai</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1mht&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [106]: </span><span class="n">hhai</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1mht&#39;</span><span class="p">)</span>
 
-<span class="gp">In [2]: </span><span class="n">ca_p</span> <span class="o">=</span> <span class="n">hhai</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;(protein and name CA) or (nucleic and name P)&#39;</span><span class="p">)</span>
+<span class="gp">In [107]: </span><span class="n">ca_p</span> <span class="o">=</span> <span class="n">hhai</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;(protein and name CA) or (nucleic and name P)&#39;</span><span class="p">)</span>
 
-<span class="gp">In [3]: </span><span class="n">ca_p</span><span class="o">.</span><span class="n">getNames</span><span class="p">()</span>
-<span class="gh">Out[3]: </span><span class="go"></span>
+<span class="gp">In [108]: </span><span class="n">ca_p</span><span class="o">.</span><span class="n">getNames</span><span class="p">()</span>
+<span class="gh">Out[108]: </span><span class="go"></span>
 <span class="go">array([&#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;,</span>
 <span class="go">       &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;P&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
 <span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
@@ -346,17 +346,17 @@ want to set the radius to 7.5 Å, and for nucleic acid phosphate atoms to
 <span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
 <span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
 <span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;,</span>
-<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;],</span>
+<span class="go">       &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;, &#39;CA&#39;], </span>
 <span class="go">      dtype=&#39;|S6&#39;)</span>
 </pre></div>
 </div>
 <p>We set the radii of atoms:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">varcutoff</span> <span class="o">=</span> <span class="n">GammaVariableCutoff</span><span class="p">(</span><span class="n">ca_p</span><span class="o">.</span><span class="n">getNames</span><span class="p">(),</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-<span class="gp">   ...: </span>    <span class="n">default_radius</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="gp">   ...: </span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [109]: </span><span class="n">varcutoff</span> <span class="o">=</span> <span class="n">GammaVariableCutoff</span><span class="p">(</span><span class="n">ca_p</span><span class="o">.</span><span class="n">getNames</span><span class="p">(),</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="gp">   .....: </span>    <span class="n">default_radius</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">   .....: </span>
 
-<span class="gp">In [5]: </span><span class="n">varcutoff</span><span class="o">.</span><span class="n">getRadii</span><span class="p">()</span>
-<span class="gh">Out[5]: </span><span class="go"></span>
+<span class="gp">In [110]: </span><span class="n">varcutoff</span><span class="o">.</span><span class="n">getRadii</span><span class="p">()</span>
+<span class="gh">Out[110]: </span><span class="go"></span>
 <span class="go">array([ 10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,</span>
 <span class="go">        10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,  10. ,</span>
 <span class="go">        10. ,  10. ,  10. ,  10. ,   7.5,   7.5,   7.5,   7.5,   7.5,</span>
@@ -403,9 +403,9 @@ we passed the <code class="docutils literal"><span class="pre">P=10</span></code
 is set as the radius (<code class="docutils literal"><span class="pre">default_radius=7.5</span></code>).  You can also try this with
 <code class="docutils literal"><span class="pre">debug=True</span></code> argument to print debugging information on the screen.</p>
 <p>We build <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a> Hessian matrix as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [6]: </span><span class="n">anm</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="s1">&#39;HhaI-DNA&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [111]: </span><span class="n">anm</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="s1">&#39;HhaI-DNA&#39;</span><span class="p">)</span>
 
-<span class="gp">In [7]: </span><span class="n">anm</span><span class="o">.</span><span class="n">buildHessian</span><span class="p">(</span><span class="n">ca_p</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="n">varcutoff</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="gp">In [112]: </span><span class="n">anm</span><span class="o">.</span><span class="n">buildHessian</span><span class="p">(</span><span class="n">ca_p</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="n">varcutoff</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note that we passed <code class="docutils literal"><span class="pre">cutoff=20.0</span></code> to the <a class="reference internal" href="anm.html#prody.dynamics.anm.ANM.buildHessian" title="prody.dynamics.anm.ANM.buildHessian"><code class="xref py py-meth docutils literal"><span class="pre">ANM.buildHessian()</span></code></a>
@@ -463,8 +463,8 @@ Values of keyword arguments must be <a class="reference external" href="http://d
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

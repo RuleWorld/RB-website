@@ -162,24 +162,24 @@ features. See <a href="../../release/index.html">release notes</a> for details.
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody biomol -h</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">prody</span> <span class="n">biomol</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">examples</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">STR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">b</span> <span class="n">INT</span><span class="p">]</span> <span class="n">pdb</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>usage: prody biomol [-h] [--quiet] [--examples] [-p STR] [-b INT] pdb
 
-<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="n">pdb</span>                   <span class="n">PDB</span> <span class="n">identifier</span> <span class="ow">or</span> <span class="n">filename</span>
+positional arguments:
+  pdb                   PDB identifier or filename
 
-<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">--</span><span class="n">quiet</span>               <span class="n">suppress</span> <span class="n">info</span> <span class="n">messages</span> <span class="n">to</span> <span class="n">stderr</span>
-  <span class="o">--</span><span class="n">examples</span>            <span class="n">show</span> <span class="n">usage</span> <span class="n">examples</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">-</span><span class="n">p</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">prefix</span> <span class="n">STR</span>  <span class="n">prefix</span> <span class="k">for</span> <span class="n">output</span> <span class="n">files</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">pdb_biomol_</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">b</span> <span class="n">INT</span><span class="p">,</span> <span class="o">--</span><span class="n">biomol</span> <span class="n">INT</span>  <span class="n">index</span> <span class="n">of</span> <span class="n">the</span> <span class="n">biomolecule</span><span class="p">,</span> <span class="n">by</span> <span class="n">default</span> <span class="nb">all</span> <span class="n">are</span> <span class="n">generated</span>
+optional arguments:
+  -h, --help            show this help message and exit
+  --quiet               suppress info messages to stderr
+  --examples            show usage examples and exit
+  -p STR, --prefix STR  prefix for output files (default: pdb_biomol_)
+  -b INT, --biomol INT  index of the biomolecule, by default all are generated
 </pre></div>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody biomol --examples</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Generate biomolecule coordinates:
+<div class="highlight-python"><div class="highlight"><pre><span></span>Generate biomolecule coordinates:
 
   $ prody biomol 2bfu
 </pre></div>
@@ -196,8 +196,8 @@ features. See <a href="../../release/index.html">release notes</a> for details.
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

@@ -169,19 +169,19 @@ features. See <a href="../../release/index.html">release notes</a> for details.
 supports multiple coordinate sets, e.g. models from an NMR structure or
 snapshots from a molecular dynamics trajectory.</p>
 <p>Instances of the class can be obtained by parsing a PDB file as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [31]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="gp">In [2]: </span><span class="n">ag</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1aar&#39;</span><span class="p">)</span>
+<span class="gp">In [32]: </span><span class="n">ag</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1aar&#39;</span><span class="p">)</span>
 
-<span class="gp">In [3]: </span><span class="n">ag</span>
-<span class="gh">Out[3]: </span><span class="go">&lt;AtomGroup: 1aar (1218 atoms)&gt;</span>
+<span class="gp">In [33]: </span><span class="n">ag</span>
+<span class="gh">Out[33]: </span><span class="go">&lt;AtomGroup: 1aar (1218 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>In addition to <a class="reference internal" href="atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> class, following classes that act as
 pointers provide convenient access subset of data:</p>
 <ul class="simple">
 <li><a class="reference internal" href="selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> - Points to an arbitrary subset of atoms. See
-<a class="reference internal" href="select.html#selections"><span class="std std-ref">Atom Selections</span></a> and <span class="xref std std-ref">selection-operations</span> for usage examples.</li>
+<a class="reference internal" href="select.html#selections"><span>Atom Selections</span></a> and <a class="reference internal" href="../../../tutorials/prody_tutorial/selection.html#selection-operations"><span>Operations on Selections</span></a> for usage examples.</li>
 <li><a class="reference internal" href="segment.html#prody.atomic.segment.Segment" title="prody.atomic.segment.Segment"><code class="xref py py-class docutils literal"><span class="pre">Segment</span></code></a> - Points to atoms that have the same segment name.</li>
 <li><a class="reference internal" href="chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> - Points to atoms in a segment that have the same chain
 identifier.</li>
@@ -196,66 +196,66 @@ in the order provided by the user.</li>
 </div>
 <div class="section" id="atom-data-fields">
 <h2>Atom data fields<a class="headerlink" href="#atom-data-fields" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="fields.html#fields"><span class="std std-ref">Atom Data Fields</span></a> defines an interface for handling data parsed from molecular
+<p><a class="reference internal" href="fields.html#fields"><span>Atom Data Fields</span></a> defines an interface for handling data parsed from molecular
 data files, in particular PDB files.  Aforementioned classes offer <code class="docutils literal"><span class="pre">get</span></code>
 and <code class="docutils literal"><span class="pre">set</span></code> functions for manipulating this data.  For example, the following
 prints residue names:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">ag</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
-<span class="gh">Out[4]: </span><span class="go"></span>
-<span class="go">array([&#39;MET&#39;, &#39;MET&#39;, &#39;MET&#39;, ..., &#39;HOH&#39;, &#39;HOH&#39;, &#39;HOH&#39;],</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [34]: </span><span class="n">ag</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
+<span class="gh">Out[34]: </span><span class="go"></span>
+<span class="go">array([&#39;MET&#39;, &#39;MET&#39;, &#39;MET&#39;, ..., &#39;HOH&#39;, &#39;HOH&#39;, &#39;HOH&#39;], </span>
 <span class="go">      dtype=&#39;|S6&#39;)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="atom-flags">
 <h2>Atom flags<a class="headerlink" href="#atom-flags" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="flags.html#flags"><span class="std std-ref">Atom Flags</span></a> module defines a way to mark atoms with certain properties, such
+<p><a class="reference internal" href="flags.html#flags"><span>Atom Flags</span></a> module defines a way to mark atoms with certain properties, such
 as atoms that are part of a <strong>protein</strong>.  Following example checks whether
 all atoms of <em>ag</em> are protein atoms:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">ag</span><span class="o">.</span><span class="n">isprotein</span>
-<span class="gh">Out[5]: </span><span class="go">False</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [35]: </span><span class="n">ag</span><span class="o">.</span><span class="n">isprotein</span>
+<span class="gh">Out[35]: </span><span class="go">False</span>
 </pre></div>
 </div>
 <p>This indicates that there are some non-protein atoms, probably water atoms.
 We can easily make a count as follows:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [6]: </span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
-<span class="gh">Out[6]: </span><span class="go">1203</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [36]: </span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+<span class="gh">Out[36]: </span><span class="go">1203</span>
 
-<span class="gp">In [7]: </span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;hetero&#39;</span><span class="p">)</span>
-<span class="gh">Out[7]: </span><span class="go">15</span>
+<span class="gp">In [37]: </span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;hetero&#39;</span><span class="p">)</span>
+<span class="gh">Out[37]: </span><span class="go">15</span>
 
-<span class="gp">In [8]: </span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
-<span class="gh">Out[8]: </span><span class="go">15</span>
+<span class="gp">In [38]: </span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+<span class="gh">Out[38]: </span><span class="go">15</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="atom-selections">
 <h2>Atom selections<a class="headerlink" href="#atom-selections" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="select.html#selections"><span class="std std-ref">Atom Selections</span></a> offer a flexible and powerful way to access subsets of
+<p><a class="reference internal" href="select.html#selections"><span>Atom Selections</span></a> offer a flexible and powerful way to access subsets of
 selections and is one of the most important features of ProDy.   The details
-of the selection grammar is described in <a class="reference internal" href="select.html#selections"><span class="std std-ref">Atom Selections</span></a>.  Following examples
+of the selection grammar is described in <a class="reference internal" href="select.html#selections"><span>Atom Selections</span></a>.  Following examples
 show how to make quick selections using the overloaded <code class="docutils literal"><span class="pre">.</span></code> operator:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="n">ag</span><span class="o">.</span><span class="n">chain_A</span>  <span class="c1"># selects chain A</span>
-<span class="gh">Out[9]: </span><span class="go">&lt;Selection: &#39;chain A&#39; from 1aar (608 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [39]: </span><span class="n">ag</span><span class="o">.</span><span class="n">chain_A</span>  <span class="c1"># selects chain A</span>
+<span class="gh">Out[39]: </span><span class="go">&lt;Selection: &#39;chain A&#39; from 1aar (608 atoms)&gt;</span>
 
-<span class="gp">In [10]: </span><span class="n">ag</span><span class="o">.</span><span class="n">calpha</span>  <span class="c1"># selects alpha carbons</span>
-<span class="gh">Out[10]: </span><span class="go">&lt;Selection: &#39;calpha&#39; from 1aar (152 atoms)&gt;</span>
+<span class="gp">In [40]: </span><span class="n">ag</span><span class="o">.</span><span class="n">calpha</span>  <span class="c1"># selects alpha carbons</span>
+<span class="gh">Out[40]: </span><span class="go">&lt;Selection: &#39;calpha&#39; from 1aar (152 atoms)&gt;</span>
 
-<span class="gp">In [11]: </span><span class="n">ag</span><span class="o">.</span><span class="n">resname_ALA</span>  <span class="c1"># selects alanine residues</span>
-<span class="gh">Out[11]: </span><span class="go">&lt;Selection: &#39;resname ALA&#39; from 1aar (20 atoms)&gt;</span>
+<span class="gp">In [41]: </span><span class="n">ag</span><span class="o">.</span><span class="n">resname_ALA</span>  <span class="c1"># selects alanine residues</span>
+<span class="gh">Out[41]: </span><span class="go">&lt;Selection: &#39;resname ALA&#39; from 1aar (20 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>It is also possible to combine selections with <code class="docutils literal"><span class="pre">and</span></code> and <code class="docutils literal"><span class="pre">or</span></code> operators:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="n">ag</span><span class="o">.</span><span class="n">chain_A_and_backbone</span>
-<span class="gh">Out[12]: </span><span class="go">&lt;Selection: &#39;chain A and backbone&#39; from 1aar (304 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [42]: </span><span class="n">ag</span><span class="o">.</span><span class="n">chain_A_and_backbone</span>
+<span class="gh">Out[42]: </span><span class="go">&lt;Selection: &#39;chain A and backbone&#39; from 1aar (304 atoms)&gt;</span>
 
-<span class="gp">In [13]: </span><span class="n">ag</span><span class="o">.</span><span class="n">acidic_or_basic</span>
-<span class="gh">Out[13]: </span><span class="go">&lt;Selection: &#39;acidic or basic&#39; from 1aar (422 atoms)&gt;</span>
+<span class="gp">In [43]: </span><span class="n">ag</span><span class="o">.</span><span class="n">acidic_or_basic</span>
+<span class="gh">Out[43]: </span><span class="go">&lt;Selection: &#39;acidic or basic&#39; from 1aar (422 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>Using dot operator will behave like the logical <code class="docutils literal"><span class="pre">and</span></code> operator:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="n">ag</span><span class="o">.</span><span class="n">chain_A</span><span class="o">.</span><span class="n">backbone</span>
-<span class="gh">Out[14]: </span><span class="go">&lt;Selection: &#39;(backbone) and (chain A)&#39; from 1aar (304 atoms)&gt;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [44]: </span><span class="n">ag</span><span class="o">.</span><span class="n">chain_A</span><span class="o">.</span><span class="n">backbone</span>
+<span class="gh">Out[44]: </span><span class="go">&lt;Selection: &#39;(backbone) and (chain A)&#39; from 1aar (304 atoms)&gt;</span>
 </pre></div>
 </div>
 <p>For this to work, the first word following the dot operator must be a flag
@@ -310,8 +310,8 @@ it is used internally by <a class="reference internal" href="#module-prody.atomi
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

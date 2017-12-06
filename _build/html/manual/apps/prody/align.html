@@ -162,37 +162,37 @@ features. See <a href="../../release/index.html">release notes</a> for details.
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody align -h</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">prody</span> <span class="n">align</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">examples</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">SEL</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">m</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">INT</span><span class="p">]</span>
-                   <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">STR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span> <span class="n">STR</span><span class="p">]</span>
-                   <span class="n">pdb</span> <span class="p">[</span><span class="n">pdb</span> <span class="o">...</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>usage: prody align [-h] [--quiet] [--examples] [-s SEL] [-m INT] [-i INT]
+                   [-o INT] [-p STR] [-x STR]
+                   pdb [pdb ...]
 
-<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="n">pdb</span>                   <span class="n">PDB</span> <span class="n">identifier</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filename</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+positional arguments:
+  pdb                   PDB identifier(s) or filename(s)
 
-<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">--</span><span class="n">quiet</span>               <span class="n">suppress</span> <span class="n">info</span> <span class="n">messages</span> <span class="n">to</span> <span class="n">stderr</span>
-  <span class="o">--</span><span class="n">examples</span>            <span class="n">show</span> <span class="n">usage</span> <span class="n">examples</span> <span class="ow">and</span> <span class="n">exit</span>
+optional arguments:
+  -h, --help            show this help message and exit
+  --quiet               suppress info messages to stderr
+  --examples            show usage examples and exit
 
-<span class="n">atom</span><span class="o">/</span><span class="n">model</span> <span class="n">selection</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">s</span> <span class="n">SEL</span><span class="p">,</span> <span class="o">--</span><span class="n">select</span> <span class="n">SEL</span>  <span class="n">reference</span> <span class="n">structure</span> <span class="n">atom</span> <span class="n">selection</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">calpha</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">m</span> <span class="n">INT</span><span class="p">,</span> <span class="o">--</span><span class="n">model</span> <span class="n">INT</span>   <span class="k">for</span> <span class="n">NMR</span> <span class="n">files</span><span class="p">,</span> <span class="n">reference</span> <span class="n">model</span> <span class="n">index</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+atom/model selection:
+  -s SEL, --select SEL  reference structure atom selection (default: calpha)
+  -m INT, --model INT   for NMR files, reference model index (default: 1)
 
-<span class="n">chain</span> <span class="n">matching</span> <span class="n">options</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">i</span> <span class="n">INT</span><span class="p">,</span> <span class="o">--</span><span class="n">seqid</span> <span class="n">INT</span>   <span class="n">percent</span> <span class="n">sequence</span> <span class="n">identity</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="mi">90</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">o</span> <span class="n">INT</span><span class="p">,</span> <span class="o">--</span><span class="n">overlap</span> <span class="n">INT</span>
-                        <span class="n">percent</span> <span class="n">sequence</span> <span class="n">overlap</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="mi">90</span><span class="p">)</span>
+chain matching options:
+  -i INT, --seqid INT   percent sequence identity (default: 90)
+  -o INT, --overlap INT
+                        percent sequence overlap (default: 90)
 
-<span class="n">output</span> <span class="n">options</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">p</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">prefix</span> <span class="n">STR</span>  <span class="n">output</span> <span class="n">filename</span> <span class="n">prefix</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">PDB</span> <span class="n">filename</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">x</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">suffix</span> <span class="n">STR</span>  <span class="n">output</span> <span class="n">filename</span> <span class="n">suffix</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">_aligned</span><span class="p">)</span>
+output options:
+  -p STR, --prefix STR  output filename prefix (default: PDB filename)
+  -x STR, --suffix STR  output filename suffix (default: _aligned)
 </pre></div>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody align --examples</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Align models in a PDB structure or multiple PDB structures and save
+<div class="highlight-python"><div class="highlight"><pre><span></span>Align models in a PDB structure or multiple PDB structures and save
 aligned coordinate sets.  When multiple structures are aligned, ProDy
 will match chains based on sequence alignment and use best match for
 aligning the structures.
@@ -233,8 +233,8 @@ Align 1fi7 onto 1hrc using heme atoms:
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

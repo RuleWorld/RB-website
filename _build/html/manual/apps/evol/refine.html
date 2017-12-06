@@ -162,44 +162,44 @@ features. See <a href="../../release/index.html">release notes</a> for details.
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">evol refine -h</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">evol</span> <span class="n">refine</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">examples</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">l</span> <span class="n">STR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">FLOAT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span> <span class="n">FLOAT</span><span class="p">]</span>
-                   <span class="p">[</span><span class="o">-</span><span class="n">r</span> <span class="n">FLOAT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">k</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">STR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">STR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">z</span><span class="p">]</span>
-                   <span class="n">msa</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>usage: evol refine [-h] [--quiet] [--examples] [-l STR] [-s FLOAT] [-c FLOAT]
+                   [-r FLOAT] [-k] [-o STR] [-f STR] [-z]
+                   msa
 
-<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="n">msa</span>                   <span class="n">MSA</span> <span class="n">filename</span> <span class="n">to</span> <span class="n">be</span> <span class="n">refined</span>
+positional arguments:
+  msa                   MSA filename to be refined
 
-<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">--</span><span class="n">quiet</span>               <span class="n">suppress</span> <span class="n">info</span> <span class="n">messages</span> <span class="n">to</span> <span class="n">stderr</span>
-  <span class="o">--</span><span class="n">examples</span>            <span class="n">show</span> <span class="n">usage</span> <span class="n">examples</span> <span class="ow">and</span> <span class="n">exit</span>
+optional arguments:
+  -h, --help            show this help message and exit
+  --quiet               suppress info messages to stderr
+  --examples            show usage examples and exit
 
-<span class="n">refinement</span> <span class="n">options</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">l</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">label</span> <span class="n">STR</span>   <span class="n">sequence</span> <span class="n">label</span><span class="p">,</span> <span class="n">UniProt</span> <span class="n">ID</span> <span class="n">code</span><span class="p">,</span> <span class="ow">or</span> <span class="n">PDB</span> <span class="ow">and</span> <span class="n">chain</span>
-                        <span class="n">identifier</span>
-  <span class="o">-</span><span class="n">s</span> <span class="n">FLOAT</span><span class="p">,</span> <span class="o">--</span><span class="n">seqid</span> <span class="n">FLOAT</span>
-                        <span class="n">identity</span> <span class="n">threshold</span> <span class="k">for</span> <span class="n">selecting</span> <span class="n">unique</span> <span class="n">sequences</span>
-  <span class="o">-</span><span class="n">c</span> <span class="n">FLOAT</span><span class="p">,</span> <span class="o">--</span><span class="n">colocc</span> <span class="n">FLOAT</span>
-                        <span class="n">column</span> <span class="p">(</span><span class="n">residue</span> <span class="n">position</span><span class="p">)</span> <span class="n">occupancy</span>
-  <span class="o">-</span><span class="n">r</span> <span class="n">FLOAT</span><span class="p">,</span> <span class="o">--</span><span class="n">rowocc</span> <span class="n">FLOAT</span>
-                        <span class="n">row</span> <span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="n">occupancy</span>
-  <span class="o">-</span><span class="n">k</span><span class="p">,</span> <span class="o">--</span><span class="n">keep</span>            <span class="n">keep</span> <span class="n">columns</span> <span class="n">corresponding</span> <span class="n">to</span> <span class="n">residues</span> <span class="ow">not</span> <span class="n">resolved</span> <span class="ow">in</span>
-                        <span class="n">PDB</span> <span class="n">structure</span><span class="p">,</span> <span class="n">applies</span> <span class="n">label</span> <span class="n">argument</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">PDB</span>
-                        <span class="n">identifier</span>
+refinement options:
+  -l STR, --label STR   sequence label, UniProt ID code, or PDB and chain
+                        identifier
+  -s FLOAT, --seqid FLOAT
+                        identity threshold for selecting unique sequences
+  -c FLOAT, --colocc FLOAT
+                        column (residue position) occupancy
+  -r FLOAT, --rowocc FLOAT
+                        row (sequence) occupancy
+  -k, --keep            keep columns corresponding to residues not resolved in
+                        PDB structure, applies label argument is a PDB
+                        identifier
 
-<span class="n">output</span> <span class="n">options</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">o</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">outname</span> <span class="n">STR</span>
-                        <span class="n">output</span> <span class="n">filename</span><span class="p">,</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">msa</span> <span class="n">filename</span> <span class="k">with</span> <span class="n">_refined</span>
-                        <span class="n">suffix</span>
-  <span class="o">-</span><span class="n">f</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="nb">format</span> <span class="n">STR</span>  <span class="n">output</span> <span class="n">MSA</span> <span class="n">file</span> <span class="nb">format</span><span class="p">,</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">same</span> <span class="k">as</span> <span class="nb">input</span>
-  <span class="o">-</span><span class="n">z</span><span class="p">,</span> <span class="o">--</span><span class="n">compressed</span>      <span class="n">gzip</span> <span class="n">refined</span> <span class="n">MSA</span> <span class="n">output</span>
+output options:
+  -o STR, --outname STR
+                        output filename, default is msa filename with _refined
+                        suffix
+  -f STR, --format STR  output MSA file format, default is same as input
+  -z, --compressed      gzip refined MSA output
 </pre></div>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">evol refine --examples</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Sequence coevolution analysis involves several steps that including
+<div class="highlight-python"><div class="highlight"><pre><span></span>Sequence coevolution analysis involves several steps that including
 retrieving data and refining it for calculations.  These steps are
 illustrated below for RnaseA protein family.
 
@@ -244,8 +244,8 @@ Rank order analysis:
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

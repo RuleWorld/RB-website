@@ -318,9 +318,9 @@ memory efficient mode.</p>
 <dd><p>Returns OMES (Observed Minus Expected Squared) covariance matrix
 calculated for <em>msa</em>, which may be an <a class="reference internal" href="msa.html#prody.sequence.msa.MSA" title="prody.sequence.msa.MSA"><code class="xref py py-class docutils literal"><span class="pre">MSA</span></code></a> instance or a 2D
 NumPy character array. OMES is defined as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>                  <span class="p">(</span><span class="n">N_OBS</span> <span class="o">-</span> <span class="n">N_EX</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>              <span class="p">(</span><span class="n">f_i</span><span class="p">,</span><span class="n">j</span> <span class="o">-</span> <span class="n">f_i</span> <span class="o">*</span> <span class="n">f_j</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
-<span class="n">OMES_</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="o">------------------</span><span class="p">)</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="o">-----------------------</span><span class="p">)</span>
-                       <span class="n">N_EX</span>                           <span class="n">f_i</span> <span class="o">*</span> <span class="n">f_j</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>                  (N_OBS - N_EX)^2              (f_i,j - f_i * f_j)^2
+OMES_(i,j) = sum(------------------) = N * sum(-----------------------)
+                       N_EX                           f_i * f_j
 </pre></div>
 </div>
 <p>Implementation is case insensitive and handles ambiguous amino acids
@@ -447,8 +447,8 @@ are considered as gaps.</p>
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

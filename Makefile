@@ -29,16 +29,16 @@ clean:
  #	cd ProDy; git checkout devel; make build; cd docs; make build
  #	mv -f ProDy/docs/_build/html _build/html/devel
 
- # link:
- #	ln -sf ProDy/docs manual
- #	ln -sf ProDy/docs/_theme _theme
+link:
+	ln -sf BioNetGen/docs manual
+	ln -sf BioNetGen/docs/_theme _theme
 
 workdir:
 	# creates workdir (where IPython directive input and output is saved)
 	mkdir -p $(WORKDIR)
 
 	# copies required files from individual tutorials
- #	cp -rf tutorials/conformational_sampling/$(WORKDIR)/* $(WORKDIR)
+ #	cp -rf tutorials/bionetgen_tutorial_files/$(WORKDIR)/* $(WORKDIR)
  #	cp -rf tutorials/conformational_sampling/conformational_sampling_files/* $(WORKDIR)
 
  #	cp -rf tutorials/enm_analysis/enm_analysis_files/* $(WORKDIR)
@@ -59,7 +59,7 @@ workdir:
 
  #	cp -rf tutorials/saxs_tutorial/saxs_tutorial_files/* $(WORKDIR)
 
-html:  workdir
+html:  link workdir
 	cd $(WORKDIR); $(SPHINXBUILD) -b html -d ../$(BUILDDIR)/doctrees ../ ../$(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

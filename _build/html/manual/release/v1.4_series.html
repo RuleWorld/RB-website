@@ -206,7 +206,7 @@ these three identifiers are shared by multiple residues, indexing
 behavior can be used as follows. Note that in v1.5, this will be the
 default behavior.</li>
 </ul>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pdb_lines</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pdb_lines</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="gp">... </span><span class="s2">ATOM      1  O   WAT A   1       4.694  -3.891  -0.592  1.00  1.00</span>
 <span class="gp">... </span><span class="s2">ATOM      2  H1  WAT A   1       5.096  -3.068  -0.190  1.00  1.00</span>
 <span class="gp">... </span><span class="s2">ATOM      3  H2  WAT A   1       5.420  -4.544  -0.808  1.00  1.00</span>
@@ -219,13 +219,13 @@ default behavior.</li>
 <span class="gp">... </span><span class="s2">ATOM      8  H1  WAT A   1     -77.226 -21.966 -38.717  1.00  1.00</span>
 <span class="gp">... </span><span class="s2">ATOM      9  H2  WAT A   1     -77.023 -20.726 -37.674  1.00  1.00</span>
 <span class="gp">... </span><span class="s2">TER&quot;&quot;&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">StringIO</span> <span class="k">import</span> <span class="n">StringIO</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">StringIO</span> <span class="kn">import</span> <span class="n">StringIO</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">atoms</span> <span class="o">=</span> <span class="n">parsePDBStream</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">pdb_lines</span><span class="p">))</span>
 </pre></div>
 </div>
 <blockquote>
 <div>Current behavior:</div></blockquote>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">atoms</span><span class="o">.</span><span class="n">numResidues</span><span class="p">())</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">atoms</span><span class="o">.</span><span class="n">numResidues</span><span class="p">())</span>
 <span class="go">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">atoms</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="go">&lt;Residue: WAT 1 from Chain A from Unknown (9 atoms)&gt;</span>
@@ -233,8 +233,8 @@ default behavior.</li>
 </div>
 <blockquote>
 <div>To activate the new behavior (which will be the default behavior in v1.5):</div></blockquote>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hv</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getHierView</span><span class="p">(</span><span class="n">ter</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">hv</span><span class="o">.</span><span class="n">numResidues</span><span class="p">())</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hv</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getHierView</span><span class="p">(</span><span class="n">ter</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">hv</span><span class="o">.</span><span class="n">numResidues</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -410,7 +410,7 @@ included in the definition of non-standard amino acids, i.e.
 <div><ul class="simple">
 <li>Atom selection problems related to using <a class="reference internal" href="../reference/atomic/flags.html#term-all"><span class="xref std std-term">all</span></a> and <a class="reference internal" href="../reference/atomic/flags.html#term-none"><span class="xref std std-term">none</span></a> in
 composite selections, e.g. <code class="docutils literal"><span class="pre">'calpha</span> <span class="pre">and</span> <span class="pre">all'</span></code>, is fixed by defining these
-keywords as <a class="reference internal" href="../reference/atomic/flags.html#flags"><span class="std std-ref">Atom Flags</span></a>.</li>
+keywords as <a class="reference internal" href="../reference/atomic/flags.html#flags"><span>Atom Flags</span></a>.</li>
 <li>Fasta files with sequence labels using multiple pipe characters would
 cause C parser (and so <a class="reference internal" href="../reference/sequence/msafile.html#prody.sequence.msafile.parseMSA" title="prody.sequence.msafile.parseMSA"><code class="xref py py-func docutils literal"><span class="pre">parseMSA()</span></code></a>) to fail.  This issue is fixed
 by completely disregarding pipe characters.</li>
@@ -433,23 +433,23 @@ are implemented for comparing sequences in an <a class="reference internal" href
 functions are implemented to support VMD plugin <a class="reference external" href="http://www.ks.uiuc.edu/Research/vmd/plugins/heatmapper/">Heat Mapper</a> file format.</li>
 <li><a class="reference internal" href="../reference/sequence/sequence.html#prody.sequence.sequence.Sequence" title="prody.sequence.sequence.Sequence"><code class="xref py py-class docutils literal"><span class="pre">Sequence</span></code></a> is implemented to handle individual sequence records
 and point to sequences in <a class="reference internal" href="../reference/sequence/msa.html#prody.sequence.msa.MSA" title="prody.sequence.msa.MSA"><code class="xref py py-class docutils literal"><span class="pre">MSA</span></code></a> instances.</li>
-<li><a class="reference internal" href="../apps/evol/occupancy.html#evol-occupancy"><span class="std std-ref">evol occupancy</span></a> application is implemented for refined MSA
+<li><a class="reference internal" href="../apps/evol/occupancy.html#evol-occupancy"><span>evol occupancy</span></a> application is implemented for refined MSA
 quality checking purposes.</li>
-<li><a class="reference internal" href="../reference/sequence/msa.html#prody.sequence.msa.mergeMSA" title="prody.sequence.msa.mergeMSA"><code class="xref py py-func docutils literal"><span class="pre">mergeMSA()</span></code></a> function and <a class="reference internal" href="../apps/evol/merge.html#evol-merge"><span class="std std-ref">evol merge</span></a> application are
+<li><a class="reference internal" href="../reference/sequence/msa.html#prody.sequence.msa.mergeMSA" title="prody.sequence.msa.mergeMSA"><code class="xref py py-func docutils literal"><span class="pre">mergeMSA()</span></code></a> function and <a class="reference internal" href="../apps/evol/merge.html#evol-merge"><span>evol merge</span></a> application are
 implemented for merging Pfam MSA to study multi-domain proteins.</li>
 </ul>
 </div></blockquote>
 <p><strong>Improvements</strong>:</p>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="../reference/sequence/msa.html#prody.sequence.msa.refineMSA" title="prody.sequence.msa.refineMSA"><code class="xref py py-func docutils literal"><span class="pre">refineMSA()</span></code></a> function and <a class="reference internal" href="../apps/evol/refine.html#evol-refine"><span class="std std-ref">evol refine</span></a> application
+<li><a class="reference internal" href="../reference/sequence/msa.html#prody.sequence.msa.refineMSA" title="prody.sequence.msa.refineMSA"><code class="xref py py-func docutils literal"><span class="pre">refineMSA()</span></code></a> function and <a class="reference internal" href="../apps/evol/refine.html#evol-refine"><span>evol refine</span></a> application
 can perform MSA refinements by removing similar sequences.</li>
 <li><a class="reference internal" href="../reference/proteins/pdbfile.html#prody.proteins.pdbfile.writePDB" title="prody.proteins.pdbfile.writePDB"><code class="xref py py-func docutils literal"><span class="pre">writePDB()</span></code></a> function takes <em>beta</em> and <em>occupancy</em> arguments
 to be outputted in corresponding columns.</li>
 <li><a class="reference internal" href="../reference/sequence/msa.html#prody.sequence.msa.MSA" title="prody.sequence.msa.MSA"><code class="xref py py-class docutils literal"><span class="pre">MSA</span></code></a> indexing and slicing are revised and improved.</li>
 <li><a class="reference internal" href="../reference/sequence/msafile.html#prody.sequence.msafile.parseMSA" title="prody.sequence.msafile.parseMSA"><code class="xref py py-func docutils literal"><span class="pre">parseMSA()</span></code></a> is improved to handle indexing of sequences that
 have the same label in an MSA file, e.g. domains repeated in a protein.</li>
-<li><a class="reference internal" href="../apps/prody/anm.html#prody-anm"><span class="std std-ref">prody anm</span></a>, <a class="reference internal" href="../apps/prody/gnm.html#prody-gnm"><span class="std std-ref">prody gnm</span></a>, and <a class="reference internal" href="../apps/prody/pca.html#prody-pca"><span class="std std-ref">prody pca</span></a> applications
+<li><a class="reference internal" href="../apps/prody/anm.html#prody-anm"><span>prody anm</span></a>, <a class="reference internal" href="../apps/prody/gnm.html#prody-gnm"><span>prody gnm</span></a>, and <a class="reference internal" href="../apps/prody/pca.html#prody-pca"><span>prody pca</span></a> applications
 can write heatmap files for visualization using NMWiz and Heatmapper
 plugins.</li>
 <li>Several improvements made to handling sequence labels in Pfam MSA files.
@@ -496,7 +496,7 @@ residue atoms.</li>
 <blockquote>
 <div><ul class="simple">
 <li>ProDy has been refactored to support Python 3.  Windows installers for
-Python 2.6, 2.7, 3.1, and 3.2 are available in <a class="reference internal" href="../getprody.html#getprody"><span class="std std-ref">Installation</span></a>.</li>
+Python 2.6, 2.7, 3.1, and 3.2 are available in <a class="reference internal" href="../getprody.html#getprody"><span>Installation</span></a>.</li>
 <li>Unit tests are compatible with Python 2.7 and 3.2, and running them with
 other versions gives errors due to unavailability of some <a class="reference external" href="http://docs.python.org/library/unittest.html#module-unittest" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">unittest</span></code></a>
 features.</li>
@@ -505,7 +505,7 @@ features.</li>
 <p><em>Sequence Analysis</em></p>
 <blockquote>
 <div><ul class="simple">
-<li>New applications <a class="reference internal" href="../apps/evol/index.html#evol-apps"><span class="std std-ref">Evol Applications</span></a> are available.</li>
+<li>New applications <a class="reference internal" href="../apps/evol/index.html#evol-apps"><span>Evol Applications</span></a> are available.</li>
 <li><a class="reference internal" href="../reference/database/pfam.html#prody.database.pfam.searchPfam" title="prody.database.pfam.searchPfam"><code class="xref py py-func docutils literal"><span class="pre">searchPfam()</span></code></a> and <a class="reference internal" href="../reference/database/pfam.html#prody.database.pfam.fetchPfamMSA" title="prody.database.pfam.fetchPfamMSA"><code class="xref py py-func docutils literal"><span class="pre">fetchPfamMSA()</span></code></a> functions are implemented
 for searching and retrieving Pfam data.  See <span class="xref std std-ref">msafiles</span> for usage
 examples.</li>
@@ -545,8 +545,8 @@ correlated/co-evolving pairs of residues.</li>
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

@@ -247,54 +247,54 @@ and the transformation that minimizes the RMSD.</p>
 change the active coordinate set of the <em>atoms</em>.  Note that only one of
 <em>to</em> or <em>by</em> keyword arguments is expected.</p>
 <p>Move protein so that its centroid is at the origin, <code class="docutils literal"><span class="pre">[0.,</span> <span class="pre">0.,</span> <span class="pre">0.]</span></code>:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [126]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="gp">In [2]: </span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">ones</span><span class="p">,</span> <span class="n">zeros</span>
+<span class="gp">In [127]: </span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">ones</span><span class="p">,</span> <span class="n">zeros</span>
 
-<span class="gp">In [3]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1ubi&#39;</span><span class="p">)</span>
+<span class="gp">In [128]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1ubi&#39;</span><span class="p">)</span>
 
-<span class="gp">In [4]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gh">Out[4]: </span><span class="go">array([ 30.173,  28.658,  15.262])</span>
+<span class="gp">In [129]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[129]: </span><span class="go">array([ 30.173,  28.658,  15.262])</span>
 
-<span class="gp">In [5]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="gp">In [130]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 
-<span class="gp">In [6]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gh">Out[6]: </span><span class="go">array([ 0.,  0., -0.])</span>
+<span class="gp">In [131]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[131]: </span><span class="go">array([ 0.,  0., -0.])</span>
 </pre></div>
 </div>
 <p>Move protein so that its mass center is at the origin:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">protein</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">protein</span><span class="p">)))</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [132]: </span><span class="n">protein</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">protein</span><span class="p">)))</span>
 
-<span class="gp">In [8]: </span><span class="n">protein</span><span class="o">.</span><span class="n">carbon</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="gp">In [133]: </span><span class="n">protein</span><span class="o">.</span><span class="n">carbon</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 
-<span class="gp">In [9]: </span><span class="n">protein</span><span class="o">.</span><span class="n">nitrogen</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+<span class="gp">In [134]: </span><span class="n">protein</span><span class="o">.</span><span class="n">nitrogen</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
 
-<span class="gp">In [10]: </span><span class="n">protein</span><span class="o">.</span><span class="n">oxygen</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="gp">In [135]: </span><span class="n">protein</span><span class="o">.</span><span class="n">oxygen</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
 
-<span class="gp">In [11]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">weights</span><span class="o">=</span><span class="n">protein</span><span class="o">.</span><span class="n">getMasses</span><span class="p">())</span>
+<span class="gp">In [136]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">weights</span><span class="o">=</span><span class="n">protein</span><span class="o">.</span><span class="n">getMasses</span><span class="p">())</span>
 
-<span class="gp">In [12]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">protein</span><span class="o">.</span><span class="n">getMasses</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gh">Out[12]: </span><span class="go">array([-0., -0.,  0.])</span>
+<span class="gp">In [137]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">protein</span><span class="o">.</span><span class="n">getMasses</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[137]: </span><span class="go">array([-0., -0.,  0.])</span>
 </pre></div>
 </div>
 <p>Move protein so that centroid of Cα atoms is at the origin:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">ag</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [138]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">ag</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="gp">In [14]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gh">Out[14]: </span><span class="go">array([-0.268, -0.343, -0.259])</span>
+<span class="gp">In [139]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[139]: </span><span class="go">array([-0.268, -0.343, -0.259])</span>
 
-<span class="gp">In [15]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gh">Out[15]: </span><span class="go">array([ 0., -0., -0.])</span>
+<span class="gp">In [140]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[140]: </span><span class="go">array([ 0., -0., -0.])</span>
 </pre></div>
 </div>
 <p>Move protein by 10 A along each direction:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [141]: </span><span class="n">moveAtoms</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
 
-<span class="gp">In [17]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gh">Out[17]: </span><span class="go">array([ 9.732,  9.657,  9.741])</span>
+<span class="gp">In [142]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[142]: </span><span class="go">array([ 9.732,  9.657,  9.741])</span>
 
-<span class="gp">In [18]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gh">Out[18]: </span><span class="go">array([ 10.,  10.,  10.])</span>
+<span class="gp">In [143]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[143]: </span><span class="go">array([ 10.,  10.,  10.])</span>
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -366,8 +366,8 @@ printed before the RMSD value.  See also <a class="reference internal" href="#pr
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

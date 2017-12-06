@@ -162,29 +162,29 @@ features. See <a href="../../release/index.html">release notes</a> for details.
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody select -h</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">prody</span> <span class="n">select</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">examples</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">STR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">STR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span> <span class="n">STR</span><span class="p">]</span>
-                    <span class="n">select</span> <span class="n">pdb</span> <span class="p">[</span><span class="n">pdb</span> <span class="o">...</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>usage: prody select [-h] [--quiet] [--examples] [-o STR] [-p STR] [-x STR]
+                    select pdb [pdb ...]
 
-<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="n">select</span>                <span class="n">atom</span> <span class="n">selection</span> <span class="n">string</span>
-  <span class="n">pdb</span>                   <span class="n">PDB</span> <span class="n">identifier</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filename</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+positional arguments:
+  select                atom selection string
+  pdb                   PDB identifier(s) or filename(s)
 
-<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">--</span><span class="n">quiet</span>               <span class="n">suppress</span> <span class="n">info</span> <span class="n">messages</span> <span class="n">to</span> <span class="n">stderr</span>
-  <span class="o">--</span><span class="n">examples</span>            <span class="n">show</span> <span class="n">usage</span> <span class="n">examples</span> <span class="ow">and</span> <span class="n">exit</span>
+optional arguments:
+  -h, --help            show this help message and exit
+  --quiet               suppress info messages to stderr
+  --examples            show usage examples and exit
 
-<span class="n">output</span> <span class="n">options</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">o</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">output</span> <span class="n">STR</span>  <span class="n">output</span> <span class="n">PDB</span> <span class="n">filename</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">pdb_selected</span><span class="o">.</span><span class="n">pdb</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">p</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">prefix</span> <span class="n">STR</span>  <span class="n">output</span> <span class="n">filename</span> <span class="n">prefix</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">PDB</span> <span class="n">filename</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">x</span> <span class="n">STR</span><span class="p">,</span> <span class="o">--</span><span class="n">suffix</span> <span class="n">STR</span>  <span class="n">output</span> <span class="n">filename</span> <span class="n">suffix</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">_selected</span><span class="p">)</span>
+output options:
+  -o STR, --output STR  output PDB filename (default: pdb_selected.pdb)
+  -p STR, --prefix STR  output filename prefix (default: PDB filename)
+  -x STR, --suffix STR  output filename suffix (default: _selected)
 </pre></div>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody select --examples</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>This command selects specified atoms and writes them in a PDB file.
+<div class="highlight-python"><div class="highlight"><pre><span></span>This command selects specified atoms and writes them in a PDB file.
 
 Fetch PDB files 1p38 and 1r39 and write backbone atoms in a file:
 
@@ -203,8 +203,8 @@ Fetch PDB files 1p38 and 1r39 and write backbone atoms in a file:
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

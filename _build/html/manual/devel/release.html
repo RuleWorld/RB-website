@@ -151,12 +151,12 @@ features. See <a href="../release/index.html">release notes</a> for details.
 <ol class="arabic">
 <li><p class="first">Make sure ProDy imports and passes all unit tests both Python 2 and
 Python 3, and using nose <strong class="program">nosetests</strong> command:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd ProDy
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd ProDy
 $ nosetests
 $ nosetests3
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="testing.html#testing"><span class="std std-ref">Testing ProDy</span></a> for more on testing.</p>
+<p>See <a class="reference internal" href="testing.html#testing"><span>Testing ProDy</span></a> for more on testing.</p>
 </li>
 <li><p class="first">Update the version number in:</p>
 <ul class="simple">
@@ -183,14 +183,14 @@ for a stable release.</p>
 <p>After checking these files, commit change and push them to <a class="reference external" href="http://github.com/prody/ProDy">GitHub</a>.</p>
 </li>
 <li><p class="first">Generate the source distributions:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd ..
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd ..
 $ python setup.py sdist --formats=gztar,zip
 </pre></div>
 </div>
 </li>
-<li><p class="first">Prepare and test Windows installers (see <a class="reference internal" href="wininst.html#wininst"><span class="std std-ref">Making Windows Installers</span></a>).</p>
+<li><p class="first">Prepare and test Windows installers (see <a class="reference internal" href="wininst.html#wininst"><span>Making Windows Installers</span></a>).</p>
 <p>Installers should be prepared for the following versions of Python:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ C:\Python26\python setup.py bdist_wininst
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ C:\Python26\python setup.py bdist_wininst
 $ C:\Python27\python setup.py bdist_wininst
 $ C:\Python32\python setup.py bdist_wininst
 $ C:\Python33\python setup.py bdist_wininst
@@ -201,14 +201,14 @@ When there is a newer Python major release, it should be added to this
 list. Don&#8217;t forget to pull most recent changes to your Windows machine.</p>
 <p>A good practice is installing ProDy using all newly created installers
 and checking that it works. ProDy script can be used to check that, e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ C:\Python33\Scripts\prody.bat anm 1ubi
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ C:\Python33\Scripts\prody.bat anm 1ubi
 </pre></div>
 </div>
 <p>If this command runs for all supported Python versions, release is good
 to go.</p>
 </li>
 <li><p class="first">Register new release to PyPI:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python setup.py register
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ python setup.py register
 </pre></div>
 </div>
 <p>This will offer a number of options. ProDy on PyPI is owned by user
@@ -217,25 +217,25 @@ to go.</p>
 <li><p class="first">Upload the new release files to the <a class="reference external" href="http://pypi.python.org/pypi/ProDy">PyPI</a>.</p>
 </li>
 <li><p class="first">Commit final changes, if there are any:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd ..
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd ..
 $ git commit -a
 </pre></div>
 </div>
 </li>
 <li><p class="first">Tag the repository with the current version number and push new tag:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ git tag vX.Y
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ git tag vX.Y
 $ git push --tags
 </pre></div>
 </div>
 </li>
 <li><p class="first">Rebase <code class="docutils literal"><span class="pre">devel</span></code> branch to <code class="docutils literal"><span class="pre">master</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ git checkout master
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ git checkout master
 $ git rebase devel
 $ git push
 </pre></div>
 </div>
 </li>
-<li><p class="first">Update the documentation on <a class="reference external" href="http://prody.csb.pitt.edu">ProDy</a> website.  See <a class="reference internal" href="document.html#document"><span class="std std-ref">Documenting ProDy</span></a>.</p>
+<li><p class="first">Update the documentation on <a class="reference external" href="http://prody.csb.pitt.edu">ProDy</a> website.  See <a class="reference internal" href="document.html#document"><span>Documenting ProDy</span></a>.</p>
 </li>
 <li><p class="first">Now that you made a release, you can go back to development.
 You may start with appending <code class="docutils literal"><span class="pre">'-dev'</span></code> to <code class="docutils literal"><span class="pre">__release__</span></code> in
@@ -253,8 +253,8 @@ You may start with appending <code class="docutils literal"><span class="pre">'-
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

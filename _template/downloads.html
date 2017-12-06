@@ -3,95 +3,38 @@
           <div class="row">
             <div class="span12">
               <h2>Downloads</h2>
-              <h3>Release Notes</h3>
-              <p>{%- include "release.html" %}</p>
-              <h3>Installation</h3>
-              <h5><span class="badge badge-warning">0</span> Using a Package Manager</h5>
-              <p>You can install <i>ProDy</i> and <i>Evol</i> using
-                <a href="http://www.pip-installer.org/">pip</a>,
-                <code>pip install -U ProDy</code></a>, or by following these steps:</p>
-            </div>
-            <div class="span6">
-              <h5><span class="badge badge-warning">1</span> Requirements</h5>
-              You need to install the following software before installing <i>ProDy:</i>
-
-              <dl>
-                <dt><a href="http://www.python.org/download/" target="_blank">Python</a></dt>
-                <dd>We recommend that you use 2.7, 3.4 or later.
-                    For Windows, you can choose <strong>32-bit</strong> or <strong>64-bit</strong>  Python installer.
-                </dd>
-                <dt><a href="http://sourceforge.net/projects/numpy/files/NumPy/" target="_blank">NumPy</a></dt>
-                <dd>We recommend that you use the latest version of NumPy, but v1.10 and later are supported.
-                    For Windows, make sure that you choose compatible versions of NumPy and <i>ProDy</i>. 
-                    Make sure that the version is compatible with your <i>ProDy</i> and <i>Python</i> version.
-                </dd>
-              </dl>
-              <h5><span class="badge badge-warning">2</span> Download</h5>
-              You can download appropriate version of ProDy from <a target="_blank" href="https://pypi.python.org/pypi/ProDy/{{ version }}">PyPI website.</a> 
-              <!-- <span class="help-inline">
-                Select a file:
-                <div class="btn-group dropup">
-                  <a class="btn btn-primary" id="download"><i class="icon-download-alt icon-white"></i> Select a ProDy download</a>
-                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-                  <ul class="dropdown-menu" id="downloads">
-                    <li class="nav-header">Source Distributions</li>
-                    <li><a href="http://pypi.python.org/packages/source/P/ProDy/ProDy-{{ version }}.tar.gz">ProDy-{{ version }}.tar.gz</a></li>
-                    <li><a href="http://pypi.python.org/packages/source/P/ProDy/ProDy-{{ version }}.zip">ProDy-{{ version }}.zip</a></li>
-                    <li class="nav-header">Recommended for Windows</li>
-                    <li><a href="http://pypi.python.org/packages/2.7/P/ProDy/ProDy-{{ version }}.win-amd64-py2.7.exe">ProDy-{{ version }}.win-amd64-py2.7.exe</a></li>
-                    <li><a href="http://pypi.python.org/packages/3.4/P/ProDy/ProDy-{{ version }}.win-amd64-py3.4.exe">ProDy-{{ version }}.win-amd64-py3.4.exe</a></li>
-                    <li class="nav-header">Other Options for Windows</li>
-                    <li><a href="http://pypi.python.org/packages/2.7/P/ProDy/ProDy-{{ version }}.win32-py2.7.exe">ProDy-{{ version }}.win32-py2.7.exe</a></li>
-                    <li><a href="http://pypi.python.org/packages/3.4/P/ProDy/ProDy-{{ version }}.win32-py3.4.exe">ProDy-{{ version }}.win32-py3.4.exe</a></li>
-                  </ul>
-                </div>
-              </span>
-              -->
-            </div>
-            <div class="span6">
-              <h5><span class="badge badge-warning">3</span> Installation</h5>
-
-              <ul class="nav nav-tabs" id="myTab">
-                <li class="active"><a href="#linux">Linux & Mac OS</a></li>
-                <li><a href="#windows">Windows</a></li>
+              <p> This page describes three different ways to get BioNetGen running in a few steps from your computer. </p>
+              <h3>RuleBender Stable</h3>
+              <p> Full-featured integrated development environment for BioNetGen and NFsim based on Eclipse RCP. We strongly recommend you try this first. </p>
+              <h4>Download</h4>
+              <p> Obtain the current, stable RuleBender distribution by clicking on the appropriate link for your operating system below: </p>
+              <ul  style="margin-left: 20px;">
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-1-0-for-apple-macintosh">Mac 2.2.1-stable</a><i>&nbspDoes RuleBender crash on startup? Try the following instructions <a href="https://github.com/RuleWorld/rulebender/blob/master/README.md">here</a>.</i></li>
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-1-0-for-linux">Linux 2.2.1-stable</a></li>
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-3-1-for-win64">Win 64 2.2.1-stable</a></li>
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-1-0-for-windows">Win32 2.2.1-stable</a></li>
+            </ul>
+              <h4>Install</h4>
+              <p>Unzip the directory wherever you would like it installed, open the folder and click on the application with the RuleBender (RB) icon. </p>
+              <ul  style="margin-left: 20px;">
+              <li>Some users may need to install or upgrade their Java. Windows users: You currently need to run RuleBender using 32-bit Java - 64 bit DOES NOT work. We are working on a 64 bit version for the next release. </li>
+              <li>Windows users may need to install Perl. The current Windows release requires 32 bit Perl to function correctly. We recommend Strawberry Perl (32 bit version). More information about installing Perl and Java can be found in <a href="https://github.com/RuleWorld/rulebender/blob/master/README.md">here</a>
+              <li>For help on installing and configuring RuleBender distributions please send an email to mailto:help@rulebender.org.
+              </li>
+              <li>We also highly recommend that you install the yEd Graph Editor, which can be used for interactive visualizations generated by the visualize command. 
+              </li>
               </ul>
-
-              <div class="tab-content">
-                <div class="tab-pane active" id="linux">
-                  <p>Extract tarball contents and run setup.py as follows:</p>
-
-                  <pre>$ tar -xzf ProDy-{{ version }}.tar.gz
-$ cd ProDy-{{ version }}
-$ python setup.py build
-$ sudo python setup.py install</pre>
-                If you don’t have root access, see alternate installation schemes in <a href="http://docs.python.org/2/install/">Installing Python Modules</a>.
-
-                </div>
-                <div class="tab-pane" id="windows">
-                  <p>Execute <code>ProDy-{{ version }}.win32-pyX.Y.exe</code> or <code>ProDy-{{ version }}.win-amd64-pyX.Y.exe</code> file and follow installation steps.</p>
-
-                  <p>To be able use ProDy Applications and Evol Applications in command prompt (<code>cmd.exe</code>), append Python and scripts folders
-                    (e.g. <code>C:\Python27</code> and <code>C:\Python27\Scripts</code>) to <code>PATH</code> environment variable.</p>
-                </div>
-              </div>
-
-              <script>
-                $('#myTab a').click(function (e) {
-                  e.preventDefault();
-                  $(this).tab('show');
-                })
-                $(function () {
-                  $('#myTab a:first').tab('show');
-                })
-              </script>
-              <h5><span class="badge badge-warning">4</span> Recommendations</h5>
-
-              We recommend that you also install
-              <a href="http://matplotlib.org/downloads.html" target="_blank">Matplotlib</a> for plotting, and
-              <a href="https://pypi.python.org/pypi/ipython#downloads" target="_blank">IPython</a> for interactive usage.
-              On Windows, you need to install
-              <a href="https://pypi.python.org/pypi/pyreadline/2.0" target="_blank">pyreadline</a>
-              for colorful IPython sessions.
+              <h3>BioNetGen Command-Line Interface</h3>
+              <p> For users who only want the command-line interface. </p>
+              <ol type="1" style="margin-left: 20px;"> 
+                <li>Download the latest source code + binary distribution from appropriate link: </li> 
+                <ul style="margin-left: 20px;">
+                <li><a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=bionetgen-for-apple-macintosh">Mac 2.3.1</a></li>
+                <li><a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=bionetgen-for-linux">Linux 2.3.1</a></li>
+                <li><a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=bionetgen-for-windows">Windows</a></li>
+                </ul>
+              <li> Go to the Installation Guide and follow the instruction for Mac, Linux and Windows. </li>
+              </ol>
 
             </div>
           </div>

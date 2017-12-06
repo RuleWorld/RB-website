@@ -162,37 +162,37 @@ features. See <a href="../../release/index.html">release notes</a> for details.
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody catdcd -h</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">prody</span> <span class="n">catdcd</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">examples</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">SEL</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">FILE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">]</span>
-                    <span class="p">[</span><span class="o">--</span><span class="n">psf</span> <span class="n">PSF</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">pdb</span> <span class="n">PDB</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">first</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">last</span> <span class="n">INT</span><span class="p">]</span>
-                    <span class="p">[</span><span class="o">--</span><span class="n">stride</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">align</span> <span class="n">SEL</span><span class="p">]</span>
-                    <span class="n">dcd</span> <span class="p">[</span><span class="n">dcd</span> <span class="o">...</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>usage: prody catdcd [-h] [--quiet] [--examples] [-s SEL] [-o FILE] [-n]
+                    [--psf PSF] [--pdb PDB] [--first INT] [--last INT]
+                    [--stride INT] [--align SEL]
+                    dcd [dcd ...]
 
-<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="n">dcd</span>                   <span class="n">DCD</span> <span class="n">filename</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">(</span><span class="nb">all</span> <span class="n">must</span> <span class="n">have</span> <span class="n">same</span> <span class="n">number</span> <span class="n">of</span> <span class="n">atoms</span><span class="p">)</span>
+positional arguments:
+  dcd                   DCD filename(s) (all must have same number of atoms)
 
-<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
-  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">--</span><span class="n">quiet</span>               <span class="n">suppress</span> <span class="n">info</span> <span class="n">messages</span> <span class="n">to</span> <span class="n">stderr</span>
-  <span class="o">--</span><span class="n">examples</span>            <span class="n">show</span> <span class="n">usage</span> <span class="n">examples</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">-</span><span class="n">s</span> <span class="n">SEL</span><span class="p">,</span> <span class="o">--</span><span class="n">select</span> <span class="n">SEL</span>  <span class="n">atom</span> <span class="n">selection</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="nb">all</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">o</span> <span class="n">FILE</span><span class="p">,</span> <span class="o">--</span><span class="n">output</span> <span class="n">FILE</span>
-                        <span class="n">output</span> <span class="n">filename</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">trajectory</span><span class="o">.</span><span class="n">dcd</span><span class="p">)</span>
-  <span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="o">--</span><span class="n">num</span>             <span class="nb">print</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">frames</span> <span class="ow">in</span> <span class="n">each</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">exit</span>
-  <span class="o">--</span><span class="n">psf</span> <span class="n">PSF</span>             <span class="n">PSF</span> <span class="n">filename</span> <span class="p">(</span><span class="n">must</span> <span class="n">have</span> <span class="n">same</span> <span class="n">number</span> <span class="n">of</span> <span class="n">atoms</span> <span class="k">as</span> <span class="n">DCDs</span><span class="p">)</span>
-  <span class="o">--</span><span class="n">pdb</span> <span class="n">PDB</span>             <span class="n">PDB</span> <span class="n">filename</span> <span class="p">(</span><span class="n">must</span> <span class="n">have</span> <span class="n">same</span> <span class="n">number</span> <span class="n">of</span> <span class="n">atoms</span> <span class="k">as</span> <span class="n">DCDs</span><span class="p">)</span>
-  <span class="o">--</span><span class="n">first</span> <span class="n">INT</span>           <span class="n">index</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">output</span> <span class="n">frame</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="mi">0</span>
-  <span class="o">--</span><span class="n">last</span> <span class="n">INT</span>            <span class="n">index</span> <span class="n">of</span> <span class="n">the</span> <span class="n">last</span> <span class="n">output</span> <span class="n">frame</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span>
-  <span class="o">--</span><span class="n">stride</span> <span class="n">INT</span>          <span class="n">number</span> <span class="n">of</span> <span class="n">steps</span> <span class="n">between</span> <span class="n">output</span> <span class="n">frames</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="o">--</span><span class="n">align</span> <span class="n">SEL</span>           <span class="n">atom</span> <span class="n">selection</span> <span class="k">for</span> <span class="n">aligning</span> <span class="n">frames</span><span class="p">,</span> <span class="n">a</span> <span class="n">PSF</span> <span class="ow">or</span> <span class="n">PDB</span> <span class="n">file</span>
-                        <span class="n">must</span> <span class="n">be</span> <span class="n">provided</span><span class="p">,</span> <span class="k">if</span> <span class="n">a</span> <span class="n">PDB</span> <span class="ow">is</span> <span class="n">provided</span> <span class="n">frames</span> <span class="n">will</span> <span class="n">be</span>
-                        <span class="n">superposed</span> <span class="n">onto</span> <span class="n">PDB</span> <span class="n">coordinates</span>
+optional arguments:
+  -h, --help            show this help message and exit
+  --quiet               suppress info messages to stderr
+  --examples            show usage examples and exit
+  -s SEL, --select SEL  atom selection (default: all)
+  -o FILE, --output FILE
+                        output filename (default: trajectory.dcd)
+  -n, --num             print the number of frames in each file and exit
+  --psf PSF             PSF filename (must have same number of atoms as DCDs)
+  --pdb PDB             PDB filename (must have same number of atoms as DCDs)
+  --first INT           index of the first output frame, default: 0
+  --last INT            index of the last output frame, default: -1
+  --stride INT          number of steps between output frames, default: 1
+  --align SEL           atom selection for aligning frames, a PSF or PDB file
+                        must be provided, if a PDB is provided frames will be
+                        superposed onto PDB coordinates
 </pre></div>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Running <strong class="command">prody catdcd --examples</strong> displays:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Concatenate two DCD files and output all atmos:
+<div class="highlight-python"><div class="highlight"><pre><span></span>Concatenate two DCD files and output all atmos:
 
   $ prody catdcd mdm2.dcd mdm2sim2.dcd
 
@@ -213,8 +213,8 @@ Concatenate two DCD files and output backbone atoms:
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

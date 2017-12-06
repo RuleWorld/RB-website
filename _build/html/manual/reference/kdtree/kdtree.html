@@ -165,7 +165,7 @@ below, involves making images of the point in cells sharing a wall or an
 edge with the unitcell that contains the system.  The search is performed
 for all images of the <em>center</em> (27 in 3-dimensional space) and unique
 indices with the minimum distance from them to the <em>center</em> are returned.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span> _____________________________
+<div class="highlight-python"><div class="highlight"><pre><span></span> _____________________________
 |        1|        2|        3|
 |       ? |       ? |      ?  |
 |_________|_________|_________|
@@ -185,16 +185,16 @@ unitcell with parts in its immediate periodic images.</p>
 coordinates.  A KDTree is built for the system (<code class="docutils literal"><span class="pre">O</span></code> and <code class="docutils literal"><span class="pre">H</span></code>) and all
 its replicas (<code class="docutils literal"><span class="pre">o</span></code> and <code class="docutils literal"><span class="pre">h</span></code>).  After pair search is performed, unique
 pairs of indices and minimum distance between them are returned.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>  <span class="n">_____________________________</span>
- <span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">1</span><span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">2</span><span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">3</span><span class="o">|</span>
-<span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>   <span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>   <span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>    <span class="o">|</span>
- <span class="o">|</span><span class="n">_________</span><span class="o">|</span><span class="n">_________</span><span class="o">|</span><span class="n">_________</span><span class="o">|</span>
- <span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">4</span><span class="o">|</span><span class="n">O</span>  <span class="n">H</span> <span class="n">H</span>  <span class="mi">5</span><span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">6</span><span class="o">|</span>
-<span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>   <span class="n">H</span><span class="o">|</span> <span class="n">H</span>  <span class="n">O</span>   <span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>    <span class="o">|</span>
- <span class="o">|</span><span class="n">_________</span><span class="o">|</span><span class="n">_________</span><span class="o">|</span><span class="n">_________</span><span class="o">|</span>
- <span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">7</span><span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">8</span><span class="o">|</span><span class="n">o</span>  <span class="n">h</span> <span class="n">h</span>  <span class="mi">9</span><span class="o">|</span>
-<span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>   <span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>   <span class="n">h</span><span class="o">|</span> <span class="n">h</span>  <span class="n">o</span>    <span class="o">|</span>
- <span class="o">|</span><span class="n">_________</span><span class="o">|</span><span class="n">_________</span><span class="o">|</span><span class="n">_________</span><span class="o">|</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>  _____________________________
+ |o  h h  1|o  h h  2|o  h h  3|
+h| h  o   h| h  o   h| h  o    |
+ |_________|_________|_________|
+ |o  h h  4|O  H H  5|o  h h  6|
+h| h  o   H| H  O   h| h  o    |
+ |_________|_________|_________|
+ |o  h h  7|o  h h  8|o  h h  9|
+h| h  o   h| h  o   h| h  o    |
+ |_________|_________|_________|
 </pre></div>
 </div>
 <p>Only requirement for this approach to work is that the system must be
@@ -270,8 +270,8 @@ of <em>center</em>.</p>
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

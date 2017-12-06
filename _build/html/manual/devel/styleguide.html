@@ -192,7 +192,7 @@ the first line, as in this paragraph.</p>
 <p>In cases where an encoding for a <code class="file docutils literal"><span class="pre">.py</span></code> file needs to be specified,
 such as when characters like α, β, or Å are used in docstrings, use UTF-8
 encoding, i.e. start the file with the following line:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 </pre></div>
 </div>
 <p><strong>Imports</strong></p>
@@ -211,18 +211,18 @@ into smaller modules, etc.</li>
 </div></blockquote>
 <p>Here is a series of properly formatted imports following a module documentation
 string:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This module defines a function to calculate something interesting.&quot;&quot;&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This module defines a function to calculate something interesting.&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">os.path</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="k">import</span> <span class="n">AtomGroup</span>
-<span class="kn">from</span> <span class="nn">prody.measure</span> <span class="k">import</span> <span class="n">calcRMSD</span>
-<span class="kn">from</span> <span class="nn">prody.tools</span> <span class="k">import</span> <span class="n">openFile</span>
-<span class="kn">from</span> <span class="nn">prody</span> <span class="k">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.measure</span> <span class="kn">import</span> <span class="n">calcRMSD</span>
+<span class="kn">from</span> <span class="nn">prody.tools</span> <span class="kn">import</span> <span class="n">openFile</span>
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;calcSomething&#39;</span><span class="p">]</span>
 </pre></div>
@@ -272,7 +272,7 @@ should be omitted to limit number of names to 20 characters.  For example,
 <a class="reference internal" href="../reference/dynamics/anm.html#prody.dynamics.anm.ANM.buildHessian" title="prody.dynamics.anm.ANM.buildHessian"><code class="xref py py-meth docutils literal"><span class="pre">buildHessian()</span></code></a> is preferred over <code class="xref py py-meth docutils literal"><span class="pre">buildHessianMatrix()</span></code>.
 Another example is the change from using <code class="xref py py-meth docutils literal"><span class="pre">getResidueNames()</span></code> to
 using <a class="reference internal" href="../reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.getResnames" title="prody.atomic.atomgroup.AtomGroup.getResnames"><code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getResnames()</span></code></a>.  In fact, this was part of a series of
-major <a class="reference internal" href="../release/index.html#changes"><span class="std std-ref">Release Notes</span></a> aimed at refining the library for interactive usage.</p>
+major <a class="reference internal" href="../release/index.html#changes"><span>Release Notes</span></a> aimed at refining the library for interactive usage.</p>
 <p>In addition, the following should be applied to enable grouping of methods and
 functions based on their action and/or return value:</p>
 <blockquote>
@@ -306,8 +306,8 @@ and may contain underscore characters to increase readability.</p>
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>

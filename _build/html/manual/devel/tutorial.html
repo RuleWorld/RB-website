@@ -180,7 +180,7 @@ of online documentation pages, and also as individual downloadable PDF files.</p
 <h2><a class="toc-backref" href="#id1">Tutorial Setup</a><a class="headerlink" href="#tutorial-setup" title="Permalink to this headline">¶</a></h2>
 <p>First go to <code class="file docutils literal"><span class="pre">doc</span></code> folder in ProDy package and generate necessary files
 for your tutorial using <strong class="program">start-tutorial.sh</strong> script:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd doc
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd doc
 $ ./start-tutorial.sh
 Enter tutorial title: ENM Analysis using ProDy
 Enter a short title: ENM Analysis
@@ -190,7 +190,7 @@ Tutorial folders and files are prepared, see tutorials/enm_analysis
 </pre></div>
 </div>
 <p>This will generate following folder and files:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd tutorials/enm_analysis/
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd tutorials/enm_analysis/
 $ ls -lgo
 -rw-r--r-- 1  328 Apr 30 16:48 conf.py
 -rw-r--r-- 1  395 Apr 30 16:48 index.rst
@@ -203,7 +203,7 @@ lrwxrwxrwx 1   13 Apr 30 16:48 _static -&gt; ../../_static
 online documentation pages.</p>
 <p>If tutorial logo/image that you want to use is different from ProDy logo,
 update the following line in <code class="file docutils literal"><span class="pre">conf.py</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tutorial_logo</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;enm.png&#39;</span>     <span class="c1"># default is ProDy logo</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">tutorial_logo</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;enm.png&#39;</span>     <span class="c1"># default is ProDy logo</span>
 <span class="n">tutorial_prody_version</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span>        <span class="c1"># default is latest ProDy version</span>
 </pre></div>
 </div>
@@ -221,7 +221,7 @@ and converted to HTML and PDF pages using <a class="reference external" href="ht
 tutorial.  Table of contents is just a list of <code class="file docutils literal"><span class="pre">.rst</span></code> files that are
 part of the tutorial.  They be listed in the order that they should appear
 in the final PDF file:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>.. _enm-analysis:
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. _enm-analysis:
 
 .. use &quot;enm-analysis&quot; to refer to this file, i.e. :ref:`enm-analysis`
 
@@ -260,11 +260,11 @@ large files in particular those that contain binary data.</p>
 <p>Python code in tutorials should be included using <a class="reference external" href="http://ipython.org/ipython-doc/dev/development/ipython_directive.html">IPython Sphinx directive</a>.
 In the beginning of each <code class="file docutils literal"><span class="pre">.rst</span></code> file, you should make necessary imports
 as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">ipython</span><span class="p">::</span> <span class="n">python</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. ipython:: python
 
-   <span class="kn">from</span> <span class="nn">prody</span> <span class="k">import</span> <span class="o">*</span>
-   <span class="kn">from</span> <span class="nn">matplotlib.pylab</span> <span class="k">import</span> <span class="o">*</span>
-   <span class="n">ion</span><span class="p">()</span>
+   from prody import *
+   from matplotlib.pylab import *
+   ion()
 </pre></div>
 </div>
 <p>This will convert to the following:</p>
@@ -276,9 +276,9 @@ as follows:</p>
 </pre></div>
 </div>
 <p>Then you can add the code for the tutorial:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">ipython</span><span class="p">::</span> <span class="n">python</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. ipython:: python
 
-   <span class="n">pdb</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1p38&#39;</span><span class="p">)</span>
+   pdb = parsePDB(&#39;1p38&#39;)
 </pre></div>
 </div>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">pdb</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1p38&#39;</span><span class="p">)</span>
@@ -288,13 +288,13 @@ as follows:</p>
 <div class="section" id="including-figures">
 <h2><a class="toc-backref" href="#id5">Including Figures</a><a class="headerlink" href="#including-figures" title="Permalink to this headline">¶</a></h2>
 <p>IPython directive should also be used for including figures:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">ipython</span><span class="p">::</span> <span class="n">python</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. ipython:: python
 
-   <span class="nd">@savefig</span> <span class="n">tutorial_name_figure_name</span><span class="o">.</span><span class="n">png</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="ow">in</span>
-   <span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+   @savefig tutorial_name_figure_name.png width=4in
+   plot(range(10))
 
-   <span class="nd">@savefig</span> <span class="n">tutorial_name_figure_two</span><span class="o">.</span><span class="n">png</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="ow">in</span>
-   <span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">));</span> <span class="c1"># used ; to suppress output</span>
+   @savefig tutorial_name_figure_two.png width=4in
+   plot(range(100)); # used ; to suppress output
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">&#64;savefig</span></code> decorator was used to save the figure.</p>
@@ -307,13 +307,13 @@ with the tutorial name.</p>
 semicolon to suppress the output of the function.</p>
 <p>If you want to make modifications to the figure, save it after the last
 modification:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">ipython</span><span class="p">::</span> <span class="n">python</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. ipython:: python
 
-   <span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
-   <span class="n">grid</span><span class="p">();</span>
-   <span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X-axis&#39;</span><span class="p">)</span>
-   <span class="nd">@savefig</span> <span class="n">tutorial_name_figure_three</span><span class="o">.</span><span class="n">png</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="ow">in</span>
-   <span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y-axis&#39;</span><span class="p">)</span>
+   plot(range(10));
+   grid();
+   xlabel(&#39;X-axis&#39;)
+   @savefig tutorial_name_figure_three.png width=4in
+   ylabel(&#39;Y-axis&#39;)
 </pre></div>
 </div>
 </div>
@@ -321,11 +321,11 @@ modification:</p>
 <h2><a class="toc-backref" href="#id6">Testing Code</a><a class="headerlink" href="#testing-code" title="Permalink to this headline">¶</a></h2>
 <p>If there is any particular code output that you want to test, you can use
 <code class="docutils literal"><span class="pre">&#64;doctest</span></code> decorator as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">ipython</span><span class="p">::</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. ipython::
 
-   <span class="nd">@doctest</span>
-   <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
-   <span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">4</span>
+   @doctest
+   In [1]: 2 + 2
+   Out[1]: 4
 </pre></div>
 </div>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
@@ -338,14 +338,14 @@ modification:</p>
 <h2><a class="toc-backref" href="#id7">Publishing Tutorial</a><a class="headerlink" href="#publishing-tutorial" title="Permalink to this headline">¶</a></h2>
 <p>To see how your <code class="file docutils literal"><span class="pre">.rst</span></code> files convert to HTML format, use the following
 command:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ make html
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ make html
 </pre></div>
 </div>
 <p>You will find HTML files in <code class="file docutils literal"><span class="pre">_build/html</span></code> folder.</p>
 <p>Once your tutorial is complete and looks good in HTML (no code execution
 problems), following commands can be used to generate a PDF file and
 tutorial file achieves:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ make pdf
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ make pdf
 $ make files
 </pre></div>
 </div>
@@ -363,8 +363,8 @@ in HTML format.</p>
     <div class="span12">
       <p><small>
       &copy; Copyright 2010-2017, University of Pittsburgh.
-      Last updated on Dec 04, 2017.
-      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.4.1.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
       </small></p>
     </div>
   </div>
