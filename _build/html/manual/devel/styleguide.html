@@ -58,10 +58,6 @@
              accesskey="I">index</a>
           </li>
         <li class="pull-right">
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a>
-          </li>
-        <li class="pull-right">
           <a href="testing.html" title="Testing ProDy"
              accesskey="N">next</a>
           </li>
@@ -101,7 +97,7 @@
         <strong>Toolbox</strong>
       </a>
     </div>
-    <div id="collapseToolbox" class="accordion-body collapse in">
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
       <div class="accordion-inner">
         <div id="showcodebuttons" style="margin-bottom: 10px">
           <p><small>Show code snippets for copying:</small></p>
@@ -111,9 +107,9 @@
             <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
               and output <i class="icon-comment icon-white"></i> </a>
           </div>
-        </div>
+        </div> -->
 
-        <p><small>Search terms or a module, class or function by name:</small></p>
+        <p><small>Search terms or function by name:</small></p>
         <form class="form-search pull-right" action="../../search.html" method="get">
           <div class="input-append">
             <input type="text" class="input-small search-query" name="q" class="span2">
@@ -245,8 +241,8 @@ sessions, i.e. easy to remember and type.</p>
 keep class names short.  Some class name examples are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="../reference/dynamics/anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a> for Anisotropic Network Model</li>
-<li><a class="reference internal" href="../reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> for Hierarchical View</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code> for Anisotropic Network Model</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code> for Hierarchical View</li>
 </ul>
 </div></blockquote>
 <p><strong>Exception names</strong></p>
@@ -255,7 +251,7 @@ one. If you absolutely need to define one, use the class naming convention.
 Use the suffix &#8220;Error&#8221; for exception names, when exception is an error:</p>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="../reference/atomic/select.html#prody.atomic.select.SelectionError" title="prody.atomic.select.SelectionError"><code class="xref py py-exc docutils literal"><span class="pre">SelectionError</span></code></a>, the only exception defined in ProDy package</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">SelectionError</span></code>, the only exception defined in ProDy package</li>
 </ul>
 </div></blockquote>
 <p><strong>Method and function names</strong></p>
@@ -265,26 +261,26 @@ Use the suffix &#8220;Error&#8221; for exception names, when exception is an err
 key strokes by half in many cases in interactive sessions.</p>
 <p>Method and function names should start with a verb, suggestive on the action,
 and followed by one or two names, where the second name may start with a lower
-case letter.  Some examples are <a class="reference internal" href="../reference/measure/transform.html#prody.measure.transform.moveAtoms" title="prody.measure.transform.moveAtoms"><code class="xref py py-func docutils literal"><span class="pre">moveAtoms()</span></code></a>, <a class="reference internal" href="../reference/measure/transform.html#prody.measure.transform.wrapAtoms" title="prody.measure.transform.wrapAtoms"><code class="xref py py-func docutils literal"><span class="pre">wrapAtoms()</span></code></a>,
-<a class="reference internal" href="../reference/proteins/header.html#prody.proteins.header.assignSecstr" title="prody.proteins.header.assignSecstr"><code class="xref py py-func docutils literal"><span class="pre">assignSecstr()</span></code></a>, and <a class="reference internal" href="../reference/dynamics/compare.html#prody.dynamics.compare.calcSubspaceOverlap" title="prody.dynamics.compare.calcSubspaceOverlap"><code class="xref py py-func docutils literal"><span class="pre">calcSubspaceOverlap()</span></code></a>.</p>
+case letter.  Some examples are <code class="xref py py-func docutils literal"><span class="pre">moveAtoms()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">wrapAtoms()</span></code>,
+<code class="xref py py-func docutils literal"><span class="pre">assignSecstr()</span></code>, and <code class="xref py py-func docutils literal"><span class="pre">calcSubspaceOverlap()</span></code>.</p>
 <p>Abbreviations and/or truncated names should be used and obvious words
 should be omitted to limit number of names to 20 characters.  For example,
-<a class="reference internal" href="../reference/dynamics/anm.html#prody.dynamics.anm.ANM.buildHessian" title="prody.dynamics.anm.ANM.buildHessian"><code class="xref py py-meth docutils literal"><span class="pre">buildHessian()</span></code></a> is preferred over <code class="xref py py-meth docutils literal"><span class="pre">buildHessianMatrix()</span></code>.
+<code class="xref py py-meth docutils literal"><span class="pre">buildHessian()</span></code> is preferred over <code class="xref py py-meth docutils literal"><span class="pre">buildHessianMatrix()</span></code>.
 Another example is the change from using <code class="xref py py-meth docutils literal"><span class="pre">getResidueNames()</span></code> to
-using <a class="reference internal" href="../reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.getResnames" title="prody.atomic.atomgroup.AtomGroup.getResnames"><code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getResnames()</span></code></a>.  In fact, this was part of a series of
+using <code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getResnames()</span></code>.  In fact, this was part of a series of
 major <a class="reference internal" href="../release/index.html#changes"><span>Release Notes</span></a> aimed at refining the library for interactive usage.</p>
 <p>In addition, the following should be applied to enable grouping of methods and
 functions based on their action and/or return value:</p>
 <blockquote>
 <div><ul class="simple">
 <li><code class="xref py py-meth docutils literal"><span class="pre">buildSomething()</span></code>: methods and functions that calculate a matrix
-should start with <code class="docutils literal"><span class="pre">build</span></code>, e.g. <a class="reference internal" href="../reference/dynamics/gnm.html#prody.dynamics.gnm.GNM.buildKirchhoff" title="prody.dynamics.gnm.GNM.buildKirchhoff"><code class="xref py py-meth docutils literal"><span class="pre">GNM.buildKirchhoff()</span></code></a> and
-<a class="reference internal" href="../reference/measure/measure.html#prody.measure.measure.buildDistMatrix" title="prody.measure.measure.buildDistMatrix"><code class="xref py py-func docutils literal"><span class="pre">buildDistMatrix()</span></code></a></li>
+should start with <code class="docutils literal"><span class="pre">build</span></code>, e.g. <code class="xref py py-meth docutils literal"><span class="pre">GNM.buildKirchhoff()</span></code> and
+<code class="xref py py-func docutils literal"><span class="pre">buildDistMatrix()</span></code></li>
 <li><code class="xref py py-meth docutils literal"><span class="pre">calcSomething()</span></code>: methods that calculate new data but does not
 necessarily return anything and especially those that take timely actions,
-should start with <code class="docutils literal"><span class="pre">calc</span></code>, e.g. <a class="reference internal" href="../reference/dynamics/pca.html#prody.dynamics.pca.PCA.calcModes" title="prody.dynamics.pca.PCA.calcModes"><code class="xref py py-meth docutils literal"><span class="pre">PCA.calcModes()</span></code></a></li>
+should start with <code class="docutils literal"><span class="pre">calc</span></code>, e.g. <code class="xref py py-meth docutils literal"><span class="pre">PCA.calcModes()</span></code></li>
 <li><code class="xref py py-meth docutils literal"><span class="pre">getSomething()</span></code>: methods, and sometimes functions, that return a copy
-of data should start with <code class="docutils literal"><span class="pre">get</span></code>, such as <a class="reference internal" href="../reference/atomic/functions.html#prody.atomic.functions.listReservedWords" title="prody.atomic.functions.listReservedWords"><code class="xref py py-func docutils literal"><span class="pre">listReservedWords()</span></code></a></li>
+of data should start with <code class="docutils literal"><span class="pre">get</span></code>, such as <code class="xref py py-func docutils literal"><span class="pre">listReservedWords()</span></code></li>
 <li><code class="xref py py-meth docutils literal"><span class="pre">setSomething()</span></code>: methods, and sometimes functions, that alter internal
 data should start with <code class="docutils literal"><span class="pre">set</span></code></li>
 </ul>
