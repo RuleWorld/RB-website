@@ -1,0 +1,263 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>PDB Ligands &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.proteins.pdbligands">
+<span id="pdb-ligands"></span><h1>PDB Ligands<a class="headerlink" href="#module-prody.proteins.pdbligands" title="Permalink to this headline">¶</a></h1>
+<p>This module defines functions for fetching PDB ligand data.</p>
+<dl class="function">
+<dt id="prody.proteins.pdbligands.fetchPDBLigand">
+<code class="descname">fetchPDBLigand</code><span class="sig-paren">(</span><em>cci</em>, <em>filename=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/pdbligands.html#fetchPDBLigand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.pdbligands.fetchPDBLigand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch PDB ligand data from <a class="reference external" href="http://www.pdb.org">PDB</a> for chemical component <em>cci</em>.
+<em>cci</em> may be 3-letter chemical component identifier or a valid XML
+filename.  If <em>filename</em> is given, XML file will be saved with that name.</p>
+<p>If you query ligand data frequently, you may configure ProDy to save XML
+files in your computer.  Set <code class="docutils literal"><span class="pre">ligand_xml_save</span></code> option <strong>True</strong>, i.e.
+<code class="docutils literal"><span class="pre">confProDy(ligand_xml_save=True)</span></code>.  Compressed XML files will be save
+to ProDy package folder, e.g. <code class="file docutils literal"><span class="pre">/home/user/.prody/pdbligands</span></code>.  Each
+file is around 5Kb when compressed.</p>
+<p>This function is compatible with PDBx/PDBML v 4.0.</p>
+<p>Ligand data is returned in a dictionary.  Ligand coordinate atom data with
+<em>model</em> and <em>ideal</em> coordinate sets are also stored in this dictionary.
+Note that this dictionary will contain data that is present in the XML
+file and all Ligand Expo XML files do not contain every possible data
+field.  So, it may be better if you use <a class="reference external" href="http://docs.python.org/library/stdtypes.html#dict.get" title="(in Python v2.7)"><code class="xref py py-meth docutils literal"><span class="pre">dict.get()</span></code></a> instead of
+indexing the dictionary, e.g. to retrieve formula weight (or relative
+molar mass) of the chemical component use <code class="docutils literal"><span class="pre">data.get('formula_weight')</span></code>
+instead of <code class="docutils literal"><span class="pre">data['formula_weight']</span></code> to avoid exceptions when this data
+field is not found in the XML file.  URL and/or path of the XML file are
+returned in the dictionary with keys <code class="docutils literal"><span class="pre">url</span></code> and <code class="docutils literal"><span class="pre">path</span></code>, respectively.</p>
+<p>Following example downloads data for ligand STI (a.k.a. Gleevec and
+Imatinib) and calculates RMSD between model (X-ray structure 1IEP) and
+ideal (energy minimized) coordinate sets:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="n">ligand_data</span> <span class="o">=</span> <span class="n">fetchPDBLigand</span><span class="p">(</span><span class="s1">&#39;STI&#39;</span><span class="p">)</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IOError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-2-191f33957f83&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ligand_data</span> <span class="o">=</span> <span class="n">fetchPDBLigand</span><span class="p">(</span><span class="s1">&#39;STI&#39;</span><span class="p">)</span>
+
+<span class="nn">/home/cihank/anaconda2/lib/python2.7/site-packages/prody/proteins/pdbligands.pyc</span> in <span class="ni">fetchPDBLigand</span><span class="nt">(cci, filename)</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>             <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>                 <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;XML file for ligand {0} is not found online&#39;</span>
+<span class="ne">---&gt; </span><span class="mi">87</span>                               <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cci</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">88</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span>                 <span class="n">xml</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="ne">IOError</span>: XML file for ligand STI is not found online
+
+<span class="gp">In [3]: </span><span class="n">ligand_data</span><span class="p">[</span><span class="s1">&#39;model_coordinates_db_code&#39;</span><span class="p">]</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-3-c63c8b385b19&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ligand_data</span><span class="p">[</span><span class="s1">&#39;model_coordinates_db_code&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;ligand_data&#39; is not defined
+
+<span class="gp">In [4]: </span><span class="n">ligand_model</span> <span class="o">=</span> <span class="n">ligand_data</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-4-25a6c9625415&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ligand_model</span> <span class="o">=</span> <span class="n">ligand_data</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;ligand_data&#39; is not defined
+
+<span class="gp">In [5]: </span><span class="n">ligand_ideal</span> <span class="o">=</span> <span class="n">ligand_data</span><span class="p">[</span><span class="s1">&#39;ideal&#39;</span><span class="p">]</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-5-f02b0c12b3f2&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ligand_ideal</span> <span class="o">=</span> <span class="n">ligand_data</span><span class="p">[</span><span class="s1">&#39;ideal&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;ligand_data&#39; is not defined
+
+<span class="gp">In [6]: </span><span class="n">transformation</span> <span class="o">=</span> <span class="n">superpose</span><span class="p">(</span><span class="n">ligand_ideal</span><span class="o">.</span><span class="n">noh</span><span class="p">,</span> <span class="n">ligand_model</span><span class="o">.</span><span class="n">noh</span><span class="p">)</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-6-6a3db6e49687&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">transformation</span> <span class="o">=</span> <span class="n">superpose</span><span class="p">(</span><span class="n">ligand_ideal</span><span class="o">.</span><span class="n">noh</span><span class="p">,</span> <span class="n">ligand_model</span><span class="o">.</span><span class="n">noh</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;ligand_ideal&#39; is not defined
+
+<span class="gp">In [7]: </span><span class="n">calcRMSD</span><span class="p">(</span><span class="n">ligand_ideal</span><span class="o">.</span><span class="n">noh</span><span class="p">,</span> <span class="n">ligand_model</span><span class="o">.</span><span class="n">noh</span><span class="p">)</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-7-6c5a94597e64&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">calcRMSD</span><span class="p">(</span><span class="n">ligand_ideal</span><span class="o">.</span><span class="n">noh</span><span class="p">,</span> <span class="n">ligand_model</span><span class="o">.</span><span class="n">noh</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;ligand_ideal&#39; is not defined
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

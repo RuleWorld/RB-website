@@ -1,0 +1,397 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.proteins.pdbligands &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.proteins.pdbligands</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for fetching PDB ligand data.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">isdir</span><span class="p">,</span> <span class="n">isfile</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">splitext</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span><span class="p">,</span> <span class="n">getPackagePath</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">openFile</span><span class="p">,</span> <span class="n">makePath</span><span class="p">,</span> <span class="n">openURL</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fetchPDBLigand&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="fetchPDBLigand"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbligands.html#prody.proteins.pdbligands.fetchPDBLigand">[docs]</a><span class="k">def</span> <span class="nf">fetchPDBLigand</span><span class="p">(</span><span class="n">cci</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Fetch PDB ligand data from PDB_ for chemical component *cci*.</span>
+<span class="sd">    *cci* may be 3-letter chemical component identifier or a valid XML</span>
+<span class="sd">    filename.  If *filename* is given, XML file will be saved with that name.</span>
+
+<span class="sd">    If you query ligand data frequently, you may configure ProDy to save XML</span>
+<span class="sd">    files in your computer.  Set ``ligand_xml_save`` option **True**, i.e.</span>
+<span class="sd">    ``confProDy(ligand_xml_save=True)``.  Compressed XML files will be save</span>
+<span class="sd">    to ProDy package folder, e.g. :file:`/home/user/.prody/pdbligands`.  Each</span>
+<span class="sd">    file is around 5Kb when compressed.</span>
+
+<span class="sd">    This function is compatible with PDBx/PDBML v 4.0.</span>
+
+<span class="sd">    Ligand data is returned in a dictionary.  Ligand coordinate atom data with</span>
+<span class="sd">    *model* and *ideal* coordinate sets are also stored in this dictionary.</span>
+<span class="sd">    Note that this dictionary will contain data that is present in the XML</span>
+<span class="sd">    file and all Ligand Expo XML files do not contain every possible data</span>
+<span class="sd">    field.  So, it may be better if you use :meth:`dict.get` instead of</span>
+<span class="sd">    indexing the dictionary, e.g. to retrieve formula weight (or relative</span>
+<span class="sd">    molar mass) of the chemical component use ``data.get(&#39;formula_weight&#39;)``</span>
+<span class="sd">    instead of ``data[&#39;formula_weight&#39;]`` to avoid exceptions when this data</span>
+<span class="sd">    field is not found in the XML file.  URL and/or path of the XML file are</span>
+<span class="sd">    returned in the dictionary with keys ``url`` and ``path``, respectively.</span>
+
+<span class="sd">    Following example downloads data for ligand STI (a.k.a. Gleevec and</span>
+<span class="sd">    Imatinib) and calculates RMSD between model (X-ray structure 1IEP) and</span>
+<span class="sd">    ideal (energy minimized) coordinate sets:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       from prody import *</span>
+<span class="sd">       ligand_data = fetchPDBLigand(&#39;STI&#39;)</span>
+<span class="sd">       ligand_data[&#39;model_coordinates_db_code&#39;]</span>
+<span class="sd">       ligand_model = ligand_data[&#39;model&#39;]</span>
+<span class="sd">       ligand_ideal = ligand_data[&#39;ideal&#39;]</span>
+<span class="sd">       transformation = superpose(ligand_ideal.noh, ligand_model.noh)</span>
+<span class="sd">       calcRMSD(ligand_ideal.noh, ligand_model.noh)&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cci</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;cci must be a string&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">isfile</span><span class="p">(</span><span class="n">cci</span><span class="p">):</span>
+        <span class="n">inp</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">cci</span><span class="p">)</span>
+        <span class="n">xml</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">inp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">cci</span>
+        <span class="n">cci</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">splitext</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">cci</span><span class="p">)[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">cci</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">cci</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;cci must be 3-letters long and alphanumeric or &#39;</span>
+                         <span class="s1">&#39;a valid filename&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xml</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">cci</span> <span class="o">=</span> <span class="n">cci</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ligand_xml_save&#39;</span><span class="p">):</span>
+            <span class="n">folder</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">getPackagePath</span><span class="p">(),</span> <span class="s1">&#39;pdbligands&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">isdir</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
+                <span class="n">makePath</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span>
+            <span class="n">xmlgz</span> <span class="o">=</span> <span class="n">path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">cci</span> <span class="o">+</span> <span class="s1">&#39;.xml.gz&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">isfile</span><span class="p">(</span><span class="n">xmlgz</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">openFile</span><span class="p">(</span><span class="n">xmlgz</span><span class="p">)</span> <span class="k">as</span> <span class="n">inp</span><span class="p">:</span>
+                    <span class="n">xml</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#url = (&#39;http://ligand-expo.rcsb.org/reports/{0[0]}/{0}/{0}&#39;</span>
+        <span class="c1">#       &#39;.xml&#39;.format(cci.upper()))</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.pdb.org/pdb/files/ligand/{0}.xml&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cci</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">xml</span><span class="p">:</span>
+            <span class="c1">#&#39;http://www.pdb.org/pdb/files/ligand/{0}.xml&#39;</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">inp</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;XML file for ligand {0} is not found online&#39;</span>
+                              <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cci</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">xml</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="n">inp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">folder</span><span class="p">)</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ligand_xml_save&#39;</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">openFile</span><span class="p">(</span><span class="n">xmlgz</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out</span><span class="p">:</span>
+                    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+
+    <span class="kn">import</span> <span class="nn">xml.etree.cElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
+
+    <span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">XML</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;{http://www.w3.org/2001/XMLSchema-instance}&#39;</span>
+                 <span class="s1">&#39;schemaLocation&#39;</span><span class="p">)</span> <span class="o">!=</span>
+            <span class="s1">&#39;http://pdbml.pdb.org/schema/pdbx-v40.xsd pdbx-v40.xsd&#39;</span><span class="p">):</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;XML is not in PDBx/PDBML v 4.0 format, resulting &#39;</span>
+                    <span class="s1">&#39;dictionary may not contain all data fields&#39;</span><span class="p">)</span>
+    <span class="n">ns</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">tag</span><span class="p">[:</span><span class="n">root</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;}&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">len_ns</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+    <span class="n">dict_</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="n">path</span><span class="p">}</span>
+
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;chem_compCategory&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">tag</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">tag</span><span class="p">[</span><span class="n">len_ns</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="n">tag</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;pdbx_&#39;</span><span class="p">):</span>
+            <span class="n">tag</span> <span class="o">=</span> <span class="n">tag</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+        <span class="n">dict_</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">dict_</span><span class="p">[</span><span class="s1">&#39;formula_weight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;formula_weight&#39;</span><span class="p">))</span>
+
+    <span class="n">identifiers_and_descriptors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;pdbx_chem_comp_identifierCategory&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">results</span><span class="p">:</span>
+        <span class="n">identifiers_and_descriptors</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;pdbx_chem_comp_descriptorCategory&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">results</span><span class="p">:</span>
+        <span class="n">identifiers_and_descriptors</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">identifiers_and_descriptors</span><span class="p">:</span>
+        <span class="n">program</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;program&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+        <span class="n">type_</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+        <span class="n">dict_</span><span class="p">[</span><span class="n">program</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">type_</span><span class="p">]</span> <span class="o">=</span> <span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+        <span class="n">dict_</span><span class="p">[</span><span class="n">program</span> <span class="o">+</span> <span class="s1">&#39;_version&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;program_version&#39;</span><span class="p">)</span>
+
+    <span class="n">dict_</span><span class="p">[</span><span class="s1">&#39;audits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">audit</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;action_type&#39;</span><span class="p">),</span> <span class="n">audit</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">))</span>
+                       <span class="k">for</span> <span class="n">audit</span> <span class="ow">in</span>
+                       <span class="nb">list</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;pdbx_chem_comp_auditCategory&#39;</span><span class="p">))]</span>
+
+    <span class="n">atoms</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;chem_comp_atomCategory&#39;</span><span class="p">))</span>
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">atoms</span><span class="p">)</span>
+    <span class="n">ideal_coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">model_coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+    <span class="n">atomnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">elements</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;element&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">resnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;resname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">charges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;charge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">resnums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;charge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">alternate_atomnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">leaving_atom_flags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+    <span class="n">aromatic_flags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+    <span class="n">stereo_configs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+    <span class="n">ordinals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+
+    <span class="n">name2index</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">atom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">atoms</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">child</span><span class="o">.</span><span class="n">tag</span><span class="p">[</span><span class="n">len_ns</span><span class="p">:],</span> <span class="n">child</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">atom</span><span class="p">)])</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_component_atom_id&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+        <span class="n">name2index</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">atomnames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type_symbol&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+        <span class="n">resnames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_component_comp_id&#39;</span><span class="p">,</span> <span class="s1">&#39;UNK&#39;</span><span class="p">)</span>
+        <span class="n">charges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;charge&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+        <span class="n">alternate_atomnames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;alt_atom_id&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+        <span class="n">leaving_atom_flags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_leaving_atom_flag&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span>
+        <span class="n">aromatic_flags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_atomatic_flag&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span>
+        <span class="n">stereo_configs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_stereo_config&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span>
+        <span class="n">ordinals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_ordinal&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+        <span class="n">model_coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model_Cartn_x&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">model_coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model_Cartn_y&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">model_coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model_Cartn_z&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">ideal_coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_model_Cartn_x_ideal&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">ideal_coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_model_Cartn_y_ideal&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">ideal_coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbx_model_Cartn_z_ideal&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+    <span class="n">pdbid</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model_coordinates_db_code&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pdbid</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">AtomGroup</span><span class="p">(</span><span class="n">cci</span> <span class="o">+</span> <span class="s1">&#39; model ({0})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">AtomGroup</span><span class="p">(</span><span class="n">cci</span> <span class="o">+</span> <span class="s1">&#39; model&#39;</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setCoords</span><span class="p">(</span><span class="n">model_coords</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setNames</span><span class="p">(</span><span class="n">atomnames</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setResnames</span><span class="p">(</span><span class="n">resnames</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setResnums</span><span class="p">(</span><span class="n">resnums</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setElements</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setCharges</span><span class="p">(</span><span class="n">charges</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="s1">&#39;leaving_atom_flags&#39;</span><span class="p">,</span> <span class="n">leaving_atom_flags</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="s1">&#39;aromatic_flags&#39;</span><span class="p">,</span> <span class="n">aromatic_flags</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="s1">&#39;stereo_configs&#39;</span><span class="p">,</span> <span class="n">stereo_configs</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;ordinals&#39;</span><span class="p">,</span> <span class="n">ordinals</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;alternate_atomnames&#39;</span><span class="p">,</span> <span class="n">alternate_atomnames</span><span class="p">)</span>
+    <span class="n">dict_</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+    <span class="n">ideal</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">ideal</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">cci</span> <span class="o">+</span> <span class="s1">&#39; ideal&#39;</span><span class="p">)</span>
+    <span class="n">ideal</span><span class="o">.</span><span class="n">setCoords</span><span class="p">(</span><span class="n">ideal_coords</span><span class="p">)</span>
+    <span class="n">dict_</span><span class="p">[</span><span class="s1">&#39;ideal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ideal</span>
+
+    <span class="n">bonds</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">warned</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;chem_comp_bondCategory&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">bonds</span><span class="p">):</span>
+        <span class="n">name_1</span> <span class="o">=</span> <span class="n">bond</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;atom_id_1&#39;</span><span class="p">)</span>
+        <span class="n">name_2</span> <span class="o">=</span> <span class="n">bond</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;atom_id_2&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">bonds</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name2index</span><span class="p">[</span><span class="n">name_1</span><span class="p">],</span> <span class="n">name2index</span><span class="p">[</span><span class="n">name_2</span><span class="p">]))</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">name_1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">warned</span> <span class="ow">and</span> <span class="n">name_1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">name2index</span><span class="p">:</span>
+                <span class="n">warned</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name_1</span><span class="p">)</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} specified {1} in bond category is not &#39;</span>
+                            <span class="s1">&#39;a valid atom name.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">name_1</span><span class="p">),</span> <span class="n">cci</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">name_2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">warned</span> <span class="ow">and</span> <span class="n">name_2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">name2index</span><span class="p">:</span>
+                <span class="n">warned</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name_2</span><span class="p">)</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} specified {1} in bond category is not &#39;</span>
+                            <span class="s1">&#39;a valid atom name.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">name_2</span><span class="p">),</span> <span class="n">cci</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">bonds</span><span class="p">:</span>
+        <span class="n">bonds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bonds</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">setBonds</span><span class="p">(</span><span class="n">bonds</span><span class="p">)</span>
+        <span class="n">ideal</span><span class="o">.</span><span class="n">setBonds</span><span class="p">(</span><span class="n">bonds</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dict_</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

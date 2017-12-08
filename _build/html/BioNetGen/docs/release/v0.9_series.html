@@ -1,0 +1,770 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>ProDy 0.9 Series &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">ProDy 0.9 Series</a><ul>
+<li><a class="reference internal" href="#feb-4-2012">0.9.4 (Feb 4, 2012)</a></li>
+<li><a class="reference internal" href="#feb-1-2012">0.9.3 (Feb 1, 2012)</a></li>
+<li><a class="reference internal" href="#jan-11-2012">0.9.2 (Jan 11, 2012)</a></li>
+<li><a class="reference internal" href="#nov-9-2011">0.9.1 (Nov 9, 2011)</a></li>
+<li><a class="reference internal" href="#nov-8-2011">0.9 (Nov 8, 2011)</a><ul>
+<li><a class="reference internal" href="#normal-mode-wizard">Normal Mode Wizard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or a module, class or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="prody-0-9-series">
+<h1>ProDy 0.9 Series<a class="headerlink" href="#prody-0-9-series" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#feb-4-2012" id="id1">0.9.4 (Feb 4, 2012)</a></li>
+<li><a class="reference internal" href="#feb-1-2012" id="id2">0.9.3 (Feb 1, 2012)</a></li>
+<li><a class="reference internal" href="#jan-11-2012" id="id3">0.9.2 (Jan 11, 2012)</a></li>
+<li><a class="reference internal" href="#nov-9-2011" id="id4">0.9.1 (Nov 9, 2011)</a></li>
+<li><a class="reference internal" href="#nov-8-2011" id="id5">0.9 (Nov 8, 2011)</a><ul>
+<li><a class="reference internal" href="#normal-mode-wizard" id="id6">Normal Mode Wizard</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="feb-4-2012">
+<h2><a class="toc-backref" href="#id1">0.9.4 (Feb 4, 2012)</a><a class="headerlink" href="#feb-4-2012" title="Permalink to this headline">¶</a></h2>
+<p><strong>Changes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-meth docutils literal"><span class="pre">setAtomGroup()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">getAtomGroup()</span></code> methods are renamed as
+<a class="reference internal" href="../../../manual/reference/ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble.setAtoms" title="prody.ensemble.ensemble.Ensemble.setAtoms"><code class="xref py py-meth docutils literal"><span class="pre">Ensemble.setAtoms()</span></code></a> and  <a class="reference internal" href="../../../manual/reference/ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble.getAtoms" title="prody.ensemble.ensemble.Ensemble.getAtoms"><code class="xref py py-meth docutils literal"><span class="pre">Ensemble.getAtoms()</span></code></a>.</li>
+<li><a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> class trajectory methods, i.e.
+<code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.setTrajectory()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getTrajectory()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.nextFrame()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.nextFrame()</span></code>, and
+<code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.gotoFrame()</span></code>
+methods are deprecated. Version 1.0 will feature a better integration
+of <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> and <a class="reference internal" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory" title="prody.trajectory.trajectory.Trajectory"><code class="xref py py-class docutils literal"><span class="pre">Trajectory</span></code></a> classes.</li>
+</ul>
+</div></blockquote>
+<p><strong>Bugfixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Bugfixes in <a class="reference internal" href="../../../manual/reference/atomic/bond.html#prody.atomic.bond.Bond.setACSIndex" title="prody.atomic.bond.Bond.setACSIndex"><code class="xref py py-meth docutils literal"><span class="pre">Bond.setACSIndex()</span></code></a>, <a class="reference internal" href="../../../manual/reference/atomic/functions.html#prody.atomic.functions.saveAtoms" title="prody.atomic.functions.saveAtoms"><code class="xref py py-func docutils literal"><span class="pre">saveAtoms()</span></code></a>,
+and <a class="reference internal" href="../../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView.getSegment" title="prody.atomic.hierview.HierView.getSegment"><code class="xref py py-meth docutils literal"><span class="pre">HierView.getSegment()</span></code></a>.</li>
+<li>Bugfixes in <a class="reference internal" href="../../../manual/reference/dynamics/gamma.html#prody.dynamics.gamma.GammaVariableCutoff" title="prody.dynamics.gamma.GammaVariableCutoff"><code class="xref py py-class docutils literal"><span class="pre">GammaVariableCutoff</span></code></a> and <a class="reference internal" href="../../../manual/reference/dynamics/gamma.html#prody.dynamics.gamma.GammaStructureBased" title="prody.dynamics.gamma.GammaStructureBased"><code class="xref py py-class docutils literal"><span class="pre">GammaStructureBased</span></code></a>
+classes.</li>
+<li>Bugfix in <a class="reference internal" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcCrossCorr" title="prody.dynamics.analysis.calcCrossCorr"><code class="xref py py-func docutils literal"><span class="pre">calcCrossCorr()</span></code></a> function.</li>
+<li>Bugfixes in <a class="reference internal" href="../../../manual/reference/ensemble/ensemble.html#prody.ensemble.ensemble.Ensemble.getWeights" title="prody.ensemble.ensemble.Ensemble.getWeights"><code class="xref py py-meth docutils literal"><span class="pre">Ensemble.getWeights()</span></code></a>, <a class="reference internal" href="../../../manual/reference/ensemble/functions.html#prody.ensemble.functions.showOccupancies" title="prody.ensemble.functions.showOccupancies"><code class="xref py py-func docutils literal"><span class="pre">showOccupancies()</span></code></a>,
+<a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.DCDFile.flush" title="prody.trajectory.dcdfile.DCDFile.flush"><code class="xref py py-meth docutils literal"><span class="pre">DCDFile.flush()</span></code></a>.</li>
+<li>Bugfixes in ProDy commands <a class="reference internal" href="../../../manual/apps/prody/blast.html#prody-blast"><span>prody blast</span></a>, <a class="reference internal" href="../../../manual/apps/prody/fetch.html#prody-fetch"><span>prody fetch</span></a>, and
+<a class="reference internal" href="../../../manual/apps/prody/pca.html#prody-pca"><span>prody pca</span></a>.</li>
+<li>Bugfix in <a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcCenter" title="prody.measure.measure.calcCenter"><code class="xref py py-func docutils literal"><span class="pre">calcCenter()</span></code></a> function.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="feb-1-2012">
+<h2><a class="toc-backref" href="#id2">0.9.3 (Feb 1, 2012)</a><a class="headerlink" href="#feb-1-2012" title="Permalink to this headline">¶</a></h2>
+<p><strong>New Features</strong>:</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.DBRef" title="prody.proteins.header.DBRef"><code class="xref py py-class docutils literal"><span class="pre">DBRef</span></code></a> class is implemented for storing references
+to sequence databases parsed from PDB header records.</p>
+</li>
+<li><p class="first">Methods for storing coordinate set labels in <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+instances are implemented: <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.getACSLabel" title="prody.atomic.atomgroup.AtomGroup.getACSLabel"><code class="xref py py-meth docutils literal"><span class="pre">getACSLabel()</span></code></a>, and
+<a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.getACSLabel" title="prody.atomic.atomgroup.AtomGroup.getACSLabel"><code class="xref py py-meth docutils literal"><span class="pre">getACSLabel()</span></code></a>.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcCenter" title="prody.measure.measure.calcCenter"><code class="xref py py-func docutils literal"><span class="pre">calcCenter()</span></code></a> and <a class="reference internal" href="../../../manual/reference/measure/transform.html#prody.measure.transform.moveAtoms" title="prody.measure.transform.moveAtoms"><code class="xref py py-func docutils literal"><span class="pre">moveAtoms()</span></code></a> functions
+are implemented for dealing with coordinate translation.</p>
+</li>
+<li><p class="first">Hierarchical view, <a class="reference internal" href="../../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a>, is completely redesigned.
+PDB files that contain non-empty segment name column (or when such
+information is parsed from a PSF file), new design delicately handles this
+information to identify distinct chains and residues.  This prevents
+merging distinct chains in different segments but with same identifiers
+and residues in those with same numbers.  New design is also using ordered
+dictionaries <a class="reference external" href="http://docs.python.org/library/collections.html#collections.OrderedDict" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">collections.OrderedDict</span></code></a> and lists so that chain and
+residue iterations yield them in the order they are parsed from file.
+These improvements also bring modest improvements in speed.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/atomic/segment.html#prody.atomic.segment.Segment" title="prody.atomic.segment.Segment"><code class="xref py py-class docutils literal"><span class="pre">Segment</span></code></a> class is implemented for handling segments
+of atoms defined in molecular dynamics simulations setup, using
+<strong class="program">psfgen</strong> for example.</p>
+</li>
+<li><p class="first">Context manager methods are added to trajectory classes.  A trajectory
+file can be opened as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">Trajectory</span><span class="p">(</span><span class="s1">&#39;mdm2.dcd&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">traj</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">traj</span><span class="p">:</span>
+        <span class="n">calcGyradius</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> slicing is implemented:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">p38</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1p38&#39;</span><span class="p">)</span>
+<span class="n">chA</span> <span class="o">=</span> <span class="n">p38</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="n">res_4to10</span> <span class="o">=</span> <span class="n">chA</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span>
+<span class="n">res_100toLAST</span> <span class="o">=</span> <span class="n">chA</span><span class="p">[</span><span class="mi">100</span><span class="p">:]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Some support for bonds is implemented to <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> class.
+Bonds can be set using <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.setBonds" title="prody.atomic.atomgroup.AtomGroup.setBonds"><code class="xref py py-meth docutils literal"><span class="pre">setBonds()</span></code></a> method.  All
+bonds must be set at once.  <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.iterBonds" title="prody.atomic.atomgroup.AtomGroup.iterBonds"><code class="xref py py-meth docutils literal"><span class="pre">iterBonds()</span></code></a> or
+<a class="reference internal" href="../../../manual/reference/atomic/atom.html#prody.atomic.atom.Atom.iterBonds" title="prody.atomic.atom.Atom.iterBonds"><code class="xref py py-meth docutils literal"><span class="pre">iterBonds()</span></code></a> methods can be used to iterate over bonds
+in an AtomGroup or an Atom.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/trajectory/psffile.html#prody.trajectory.psffile.parsePSF" title="prody.trajectory.psffile.parsePSF"><code class="xref py py-func docutils literal"><span class="pre">parsePSF()</span></code></a> parses bond information and sets to the
+atom group.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection.update" title="prody.atomic.selection.Selection.update"><code class="xref py py-meth docutils literal"><span class="pre">Selection.update()</span></code></a> method is implemented, which may be useful to
+update a distance based selection after coordinate changes.</p>
+</li>
+<li><p class="first"><code class="xref py py-func docutils literal"><span class="pre">buildKDTree()</span></code> and <a class="reference internal" href="../../../manual/reference/measure/contacts.html#prody.measure.contacts.iterNeighbors" title="prody.measure.contacts.iterNeighbors"><code class="xref py py-func docutils literal"><span class="pre">iterNeighbors()</span></code></a> methods
+are implemented for facilitating identification of pairs of atoms that
+are proximal.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.iterAtoms" title="prody.atomic.atomgroup.AtomGroup.iterAtoms"><code class="xref py py-meth docutils literal"><span class="pre">iterAtoms()</span></code></a> method is implemented to all
+<a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a> classes to provide uniformity for atom iterations.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcAngle" title="prody.measure.measure.calcAngle"><code class="xref py py-func docutils literal"><span class="pre">calcAngle()</span></code></a>, <a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcDihedral" title="prody.measure.measure.calcDihedral"><code class="xref py py-func docutils literal"><span class="pre">calcDihedral()</span></code></a>, <a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcPhi" title="prody.measure.measure.calcPhi"><code class="xref py py-func docutils literal"><span class="pre">calcPhi()</span></code></a>,
+<a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcPsi" title="prody.measure.measure.calcPsi"><code class="xref py py-func docutils literal"><span class="pre">calcPsi()</span></code></a>, and <a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcOmega" title="prody.measure.measure.calcOmega"><code class="xref py py-func docutils literal"><span class="pre">calcOmega()</span></code></a> methods are implemented.</p>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>Improvements</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain.getSelstr" title="prody.atomic.chain.Chain.getSelstr"><code class="xref py py-meth docutils literal"><span class="pre">Chain.getSelstr()</span></code></a> and <a class="reference internal" href="../../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue.getSelstr" title="prody.atomic.residue.Residue.getSelstr"><code class="xref py py-meth docutils literal"><span class="pre">Residue.getSelstr()</span></code></a> methods are
+improved to include the selection string of a <a class="reference internal" href="../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> when
+they are built using one.</li>
+</ul>
+</div></blockquote>
+<p><strong>Changes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> methods <code class="xref py py-meth docutils literal"><span class="pre">getNumber()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">setNumber()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">getName()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">setName()</span></code> methods are deprecated and will be
+removed in v1.0.</li>
+<li><a class="reference internal" href="../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> methods <code class="xref py py-meth docutils literal"><span class="pre">getIdentifier()</span></code> and
+<code class="xref py py-meth docutils literal"><span class="pre">setIdentifier()</span></code> methods are deprecated and will be
+removed in v1.0.</li>
+<li><a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a> attribute <code class="xref py py-attr docutils literal"><span class="pre">identifier</span></code>
+is renamed as <a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Polymer.chid" title="prody.proteins.header.Polymer.chid"><code class="xref py py-attr docutils literal"><span class="pre">chid</span></code></a>.</li>
+<li><a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a> attribute <code class="xref py py-attr docutils literal"><span class="pre">identifier</span></code>
+is renamed as <a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Chemical.resname" title="prody.proteins.header.Chemical.resname"><code class="xref py py-attr docutils literal"><span class="pre">resname</span></code></a>.</li>
+<li><code class="xref py py-meth docutils literal"><span class="pre">getACSI()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">setACSI()</span></code> are renamed as
+<a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.getACSIndex" title="prody.atomic.atomgroup.AtomGroup.getACSIndex"><code class="xref py py-meth docutils literal"><span class="pre">getACSIndex()</span></code></a> and
+<a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.setACSIndex" title="prody.atomic.atomgroup.AtomGroup.setACSIndex"><code class="xref py py-meth docutils literal"><span class="pre">setACSIndex()</span></code></a>, respectively.</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">calcRadiusOfGyration()</span></code> is deprecated and will be removed
+in v1.0.  Use <a class="reference internal" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcGyradius" title="prody.measure.measure.calcGyradius"><code class="xref py py-func docutils literal"><span class="pre">calcGyradius()</span></code></a> instead.</li>
+</ul>
+</div></blockquote>
+<p><strong>Bugfixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Fixed a problem in <a class="reference internal" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> that caused loosing existing
+coordinate sets in an <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> when passed as <em>ag</em>
+argument.</li>
+<li>Fixed a problem with <code class="docutils literal"><span class="pre">&quot;same</span> <span class="pre">...</span> <span class="pre">as</span> <span class="pre">...&quot;</span></code> argument of <a class="reference internal" href="../../../manual/reference/atomic/select.html#prody.atomic.select.Select" title="prody.atomic.select.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a>
+that selected atoms when followed by an incorrect atom selection.</li>
+<li>Fixed another problem with <code class="docutils literal"><span class="pre">&quot;same</span> <span class="pre">...</span> <span class="pre">as</span> <span class="pre">...&quot;</span></code> which result in selecting
+multiple chains when same chain identifier is found in multiple segments
+or multiple residues when same residue number is found in multiple
+segments.</li>
+<li>Improved handling of negative integers in indexing <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+instances.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="jan-11-2012">
+<h2><a class="toc-backref" href="#id3">0.9.2 (Jan 11, 2012)</a><a class="headerlink" href="#jan-11-2012" title="Permalink to this headline">¶</a></h2>
+<p><strong>New Features</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong class="program">prody catdcd</strong> command is implemented for concatenating and/or
+slicing <code class="file docutils literal"><span class="pre">.dcd</span></code> files.  See <a class="reference internal" href="../../../manual/apps/prody/catdcd.html#prody-catdcd"><span>prody catdcd</span></a> for usage examples.</li>
+<li><a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.DCDFile" title="prody.trajectory.dcdfile.DCDFile"><code class="xref py py-class docutils literal"><span class="pre">DCDFile</span></code></a> can be opened in write or append mode, and
+coordinate sets can be added using <a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.DCDFile.write" title="prody.trajectory.dcdfile.DCDFile.write"><code class="xref py py-meth docutils literal"><span class="pre">write()</span></code></a> method.</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">getReservedWords()</span></code> can be used to get a list of words
+that cannot be used to label user data.</li>
+<li><a class="reference internal" href="../../../manual/reference/prody.html#prody.confProDy" title="prody.confProDy"><code class="xref py py-func docutils literal"><span class="pre">confProDy()</span></code></a> function is added for configuring ProDy.</li>
+<li>ProDy can optionally backup existing files with <code class="file docutils literal"><span class="pre">.BAK</span></code> (or another)
+extension instead of overwriting them.  This behavior can be activated
+using <a class="reference internal" href="../../../manual/reference/prody.html#prody.confProDy" title="prody.confProDy"><code class="xref py py-func docutils literal"><span class="pre">confProDy()</span></code></a> function.</li>
+</ul>
+</div></blockquote>
+<p><strong>Improvements</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.writeDCD" title="prody.trajectory.dcdfile.writeDCD"><code class="xref py py-func docutils literal"><span class="pre">writeDCD()</span></code></a> file accepts <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> or other
+<a class="reference internal" href="../../../manual/reference/atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a> instances as <em>trajectory</em> argument.</li>
+<li><strong class="program">prody align</strong> command can be used to align multiple PDB structures.</li>
+<li><strong class="program">prody pca</strong> command allows atom selections for DCD files that are
+accompanied with a PDB or PSF file.</li>
+</ul>
+</div></blockquote>
+<p><strong>Changes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.DCDFile" title="prody.trajectory.dcdfile.DCDFile"><code class="xref py py-class docutils literal"><span class="pre">DCDFile</span></code></a> instances, when closed, raise exception, similar
+to behavior of <code class="xref py py-class docutils literal"><span class="pre">file</span></code> objects in Python.</li>
+<li>Title of <a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances resulting from copying an
+<a class="reference internal" href="../../../manual/reference/atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a> instances does not start with &#8216;Copy of&#8217;.</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">changeVerbosity()</span></code> and <code class="xref py py-func docutils literal"><span class="pre">getVerbosityLevel()</span></code> are renamed as
+<code class="xref py py-func docutils literal"><span class="pre">setVerbosity()</span></code> and <code class="xref py py-func docutils literal"><span class="pre">getVerbosity()</span></code>, respectively.
+Old names will be removed in v1.0.</li>
+<li>ProDy applications (commands) module is rewritten to use new
+<a class="reference external" href="http://docs.python.org/library/argparse.html#module-argparse" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">argparse</span></code></a> module. See <a class="reference internal" href="../../../manual/apps/prody/index.html#prody-apps"><span>ProDy Applications</span></a> for details of changes.</li>
+<li><a class="reference external" href="http://docs.python.org/library/argparse.html#module-argparse" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">argparse</span></code></a> module is added to the package for Python versions 2.6
+and older.</li>
+</ul>
+</div></blockquote>
+<p><strong>Bugfixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Fixed problems in <a class="reference internal" href="../../../manual/reference/atomic/functions.html#prody.atomic.functions.loadAtoms" title="prody.atomic.functions.loadAtoms"><code class="xref py py-func docutils literal"><span class="pre">loadAtoms()</span></code></a> and <a class="reference internal" href="../../../manual/reference/atomic/functions.html#prody.atomic.functions.saveAtoms" title="prody.atomic.functions.saveAtoms"><code class="xref py py-func docutils literal"><span class="pre">saveAtoms()</span></code></a> functions.</li>
+<li>Bugfixes in <a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.parseDCD" title="prody.trajectory.dcdfile.parseDCD"><code class="xref py py-func docutils literal"><span class="pre">parseDCD()</span></code></a> and <a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.writeDCD" title="prody.trajectory.dcdfile.writeDCD"><code class="xref py py-func docutils literal"><span class="pre">writeDCD()</span></code></a> functions for Windows
+compatability.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="nov-9-2011">
+<h2><a class="toc-backref" href="#id4">0.9.1 (Nov 9, 2011)</a><a class="headerlink" href="#nov-9-2011" title="Permalink to this headline">¶</a></h2>
+<p><strong>Bug Fixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Fixed problems with reading and writing configuration files.</li>
+<li>Fixed problem with importing nose for testing.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="nov-8-2011">
+<h2><a class="toc-backref" href="#id5">0.9 (Nov 8, 2011)</a><a class="headerlink" href="#nov-8-2011" title="Permalink to this headline">¶</a></h2>
+<p><strong>New Features</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://pdbml.pdb.org/">PDBML</a> and <a class="reference external" href="http://mmcif.pdb.org/">mmCIF</a> files
+can be retrieved using <a class="reference internal" href="../../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.fetchPDB" title="prody.proteins.localpdb.fetchPDB"><code class="xref py py-func docutils literal"><span class="pre">fetchPDB()</span></code></a> function.</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">getPDBLocalFolder()</span></code> and <code class="xref py py-func docutils literal"><span class="pre">setPDBLocalFolder()</span></code> functions are
+implemented for local PDB folder management.</li>
+<li><a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.parsePDBHeader" title="prody.proteins.header.parsePDBHeader"><code class="xref py py-func docutils literal"><span class="pre">parsePDBHeader()</span></code></a> is implemented for convenient parsing of
+header data from <code class="file docutils literal"><span class="pre">.pdb</span></code> files.</li>
+<li><a class="reference internal" href="../../../manual/reference/proteins/functions.html#prody.proteins.functions.showProtein" title="prody.proteins.functions.showProtein"><code class="xref py py-func docutils literal"><span class="pre">showProtein()</span></code></a> is implemented to allow taking a quick look
+at protein structure.</li>
+<li><a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a> and <a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a> classes are implemented for
+storing chemical and polymer component data parsed from PDB header records.</li>
+</ul>
+</div></blockquote>
+<p><strong>Changes</strong>:</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>This release introduces numerous changes in method and function
+names all aiming to improve the interactive usage experience.  All changes
+are listed below.  Currently these functions and methods are present in
+both old and new names, so code using ProDy must not be affected.  Old
+function names will be removed from version 1.0, which is expected to
+happen late in the first quarter of 2012.</p>
+<p>Old function names are marked as deprecated, but ProDy will not issue any
+warnings until the end of 2011.  In 2012, ProDy will automatically start
+issuing <code class="xref py py-class docutils literal"><span class="pre">DeprecationWarning</span></code> upon calls using old names to remind
+the user of the name change.</p>
+<p class="last">For deprecated methods that are present in multiple classes, only the
+affected modules are listed for brevity.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When modifying code using ProDy to adjust the name changes,
+turning on deprecation warnings may help locating all use cases of the
+deprecated names.  See <code class="xref py py-meth docutils literal"><span class="pre">turnonDepracationWarnings()</span></code> for this
+purpose.</p>
+</div>
+<p><strong>Functions</strong>:</p>
+<p>The following function name changes are mainly to reduce the length of the
+name in order to make them more suitable for interactive sessions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Old name</th>
+<th class="head">New name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">applyBiomolecularTransformations()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.buildBiomolecules" title="prody.proteins.header.buildBiomolecules"><code class="xref py py-func docutils literal"><span class="pre">buildBiomolecules()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">assignSecondaryStructure()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/header.html#prody.proteins.header.assignSecstr" title="prody.proteins.header.assignSecstr"><code class="xref py py-func docutils literal"><span class="pre">assignSecstr()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">scanPerturbationResponse()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcPerturbResponse" title="prody.dynamics.analysis.calcPerturbResponse"><code class="xref py py-func docutils literal"><span class="pre">calcPerturbResponse()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">calcCrossCorrelations()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcCrossCorr" title="prody.dynamics.analysis.calcCrossCorr"><code class="xref py py-func docutils literal"><span class="pre">calcCrossCorr()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">calcCumulativeOverlap()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/compare.html#prody.dynamics.compare.calcCumulOverlap" title="prody.dynamics.compare.calcCumulOverlap"><code class="xref py py-func docutils literal"><span class="pre">calcCumulOverlap()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">calcCovarianceOverlap()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/compare.html#prody.dynamics.compare.calcCovOverlap" title="prody.dynamics.compare.calcCovOverlap"><code class="xref py py-func docutils literal"><span class="pre">calcCovOverlap()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">showFractOfVariances()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/plotting.html#prody.dynamics.plotting.showFractVars" title="prody.dynamics.plotting.showFractVars"><code class="xref py py-func docutils literal"><span class="pre">showFractVars()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">showCumFractOfVariances()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/plotting.html#prody.dynamics.plotting.showCumulFractVars" title="prody.dynamics.plotting.showCumulFractVars"><code class="xref py py-func docutils literal"><span class="pre">showCumulFractVars()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">showCrossCorrelations()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/plotting.html#prody.dynamics.plotting.showCrossCorr" title="prody.dynamics.plotting.showCrossCorr"><code class="xref py py-func docutils literal"><span class="pre">showCrossCorr()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">showCumulativeOverlap()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/plotting.html#prody.dynamics.plotting.showCumulOverlap" title="prody.dynamics.plotting.showCumulOverlap"><code class="xref py py-func docutils literal"><span class="pre">showCumulOverlap()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">deform()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/sampling.html#prody.dynamics.sampling.deformAtoms" title="prody.dynamics.sampling.deformAtoms"><code class="xref py py-func docutils literal"><span class="pre">deformAtoms()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">calcSumOfWeights()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/ensemble/functions.html#prody.ensemble.functions.calcOccupancies" title="prody.ensemble.functions.calcOccupancies"><code class="xref py py-func docutils literal"><span class="pre">calcOccupancies()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">showSumOfWeights()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/ensemble/functions.html#prody.ensemble.functions.showOccupancies" title="prody.ensemble.functions.showOccupancies"><code class="xref py py-func docutils literal"><span class="pre">showOccupancies()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">trimEnsemble()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/ensemble/functions.html#prody.ensemble.functions.trimPDBEnsemble" title="prody.ensemble.functions.trimPDBEnsemble"><code class="xref py py-func docutils literal"><span class="pre">trimPDBEnsemble()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">getKeywordResidueNames()</span></code></td>
+<td><code class="xref py py-func docutils literal"><span class="pre">getKeywordResnames()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">setKeywordResidueNames()</span></code></td>
+<td><code class="xref py py-func docutils literal"><span class="pre">setKeywordResnames()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">getPairwiseAlignmentMethod()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.getAlignmentMethod" title="prody.proteins.compare.getAlignmentMethod"><code class="xref py py-func docutils literal"><span class="pre">getAlignmentMethod()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">setPairwiseAlignmentMethod()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.setAlignmentMethod" title="prody.proteins.compare.setAlignmentMethod"><code class="xref py py-func docutils literal"><span class="pre">setAlignmentMethod()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">getPairwiseMatchScore()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.getMatchScore" title="prody.proteins.compare.getMatchScore"><code class="xref py py-func docutils literal"><span class="pre">getMatchScore()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">setPairwiseMatchScore()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.setMatchScore" title="prody.proteins.compare.setMatchScore"><code class="xref py py-func docutils literal"><span class="pre">setMatchScore()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">getPairwiseMismatchScore()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.getMismatchScore" title="prody.proteins.compare.getMismatchScore"><code class="xref py py-func docutils literal"><span class="pre">getMismatchScore()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">setPairwiseMismatchScore()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.setMismatchScore" title="prody.proteins.compare.setMismatchScore"><code class="xref py py-func docutils literal"><span class="pre">setMismatchScore()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">getPairwiseGapOpeningPenalty()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.getGapPenalty" title="prody.proteins.compare.getGapPenalty"><code class="xref py py-func docutils literal"><span class="pre">getGapPenalty()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">setPairwiseGapOpeningPenalty()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.setGapPenalty" title="prody.proteins.compare.setGapPenalty"><code class="xref py py-func docutils literal"><span class="pre">setGapPenalty()</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-func docutils literal"><span class="pre">getPairwiseGapExtensionPenalty()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.getGapExtPenalty" title="prody.proteins.compare.getGapExtPenalty"><code class="xref py py-func docutils literal"><span class="pre">getGapExtPenalty()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-func docutils literal"><span class="pre">setPairwiseGapExtensionPenalty()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/proteins/compare.html#prody.proteins.compare.setGapExtPenalty" title="prody.proteins.compare.setGapExtPenalty"><code class="xref py py-func docutils literal"><span class="pre">setGapExtPenalty()</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coordinate methods</strong>:</p>
+<p>All <code class="xref py py-meth docutils literal"><span class="pre">getCoordinates()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">setCoordinates()</span></code> methods in
+<a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a> and <a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a> classes are renamed as
+<code class="xref py py-meth docutils literal"><span class="pre">getCoords()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">setCoords()</span></code>, respectively.</p>
+<p><code class="docutils literal"><span class="pre">getNumOf</span></code> <strong>methods</strong>:</p>
+<p>All method names starting with <code class="docutils literal"><span class="pre">getNumOf</span></code> now start with <code class="docutils literal"><span class="pre">num</span></code>.  This
+change brings two advantages: method names (i) are considerably shorter,
+and (ii) do not suggest that there might also be corresponding <code class="docutils literal"><span class="pre">set</span></code>
+methods.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="27%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Old name</th>
+<th class="head">New name</th>
+<th class="head">Affected modules</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfAtoms()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numAtoms()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a>,
+<a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a>,
+<a class="reference internal" href="../../../manual/reference/dynamics/index.html#module-prody.dynamics" title="prody.dynamics"><code class="xref py py-mod docutils literal"><span class="pre">dynamics</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfChains()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numChains()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfConfs()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numConfs()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfCoordsets()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numCoordsets()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a>,
+<a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfDegOfFreedom()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numDOF()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/index.html#module-prody.dynamics" title="prody.dynamics"><code class="xref py py-mod docutils literal"><span class="pre">dynamics</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfFixed()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numFixed()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfFrames()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numFrames()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfResidues()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numResidues()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfMapped()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numMapped()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfModes()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numModes()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/dynamics/index.html#module-prody.dynamics" title="prody.dynamics"><code class="xref py py-mod docutils literal"><span class="pre">dynamics</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfSelected()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numSelected()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getNumOfUnmapped()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">numUnmapped()</span></code></td>
+<td><a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal"><span class="pre">getName</span></code> <strong>method</strong>:</p>
+<p><code class="xref py py-meth docutils literal"><span class="pre">getName()</span></code> methods are renamed as <code class="xref py py-meth docutils literal"><span class="pre">getTitle()</span></code> to avoid confusions
+that might arise from changes in <a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a> method names listed
+below.  All classes in <a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a>, <a class="reference internal" href="../../../manual/reference/ensemble/index.html#module-prody.ensemble" title="prody.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">ensemble</span></code></a>, and
+<a class="reference internal" href="../../../manual/reference/dynamics/index.html#module-prody.dynamics" title="prody.dynamics"><code class="xref py py-mod docutils literal"><span class="pre">dynamics</span></code></a> are affected from this change.</p>
+<p>In line with this change, <a class="reference internal" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> and
+<a class="reference internal" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePQR" title="prody.proteins.pdbfile.parsePQR"><code class="xref py py-func docutils literal"><span class="pre">parsePQR()</span></code></a> <em>name</em> arguments are changed to <em>title</em>, but
+<em>name</em> argument will also work until release 1.0.</p>
+<p>This name change conflicted with <a class="reference internal" href="../../../manual/reference/trajectory/dcdfile.html#prody.trajectory.dcdfile.DCDFile.getTitle" title="prody.trajectory.dcdfile.DCDFile.getTitle"><code class="xref py py-meth docutils literal"><span class="pre">DCDFile.getTitle()</span></code></a> method.
+The conflict is resolved in favor of the general <code class="xref py py-meth docutils literal"><span class="pre">getTitle()</span></code> method.
+An alternative method will be implemented to handle title strings in
+<code class="file docutils literal"><span class="pre">DCD</span></code> files.</p>
+<p><code class="docutils literal"><span class="pre">get/set</span></code> <strong>methods of atomic classes</strong>:</p>
+<p>Names of <code class="docutils literal"><span class="pre">get</span></code> and <code class="docutils literal"><span class="pre">set</span></code> methods allowing access to atomic data are all
+shortened as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="54%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Old name</th>
+<th class="head">New name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getAtomNames()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getNames()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getAtomTypes()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getTypes()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getAltLocIndicators()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getAltlocs()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getAnisoTempFactors()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getAnisos()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getAnisoStdDevs()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getAnistds()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getChainIdentifiers()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getChains()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getElementSymbols()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getElements()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getHeteroFlags()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getHeteros()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getInsertionCodes()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getIcodes()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getResidueNames()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getResnames()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getResidueNumbers()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getResnums()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getSecondaryStrs()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getSecstrs()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getSegmentNames()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getSegnames()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getSerialNumbers()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getSerials()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getTempFactors()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getBetas()</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>This change affects all <a class="reference internal" href="../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a> classes,
+<a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../../../manual/reference/atomic/atom.html#prody.atomic.atom.Atom" title="prody.atomic.atom.Atom"><code class="xref py py-class docutils literal"><span class="pre">Atom</span></code></a>, <a class="reference internal" href="../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>,
+<a class="reference internal" href="../../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a>, <a class="reference internal" href="../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> and
+<a class="reference internal" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a>.</p>
+<p><strong>Other changes in atomic methods</strong>:</p>
+<ul class="simple">
+<li><code class="xref py py-meth docutils literal"><span class="pre">getSelectionString()</span></code> renamed as <code class="xref py py-meth docutils literal"><span class="pre">getSelstr()</span></code></li>
+</ul>
+<p>Methods handling user data (which was previously called attribute) are
+renamed as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Old name</th>
+<th class="head">New name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getAttribute()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getData()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">getAttrNames()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getDataLabels()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">getAttrType()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">getDataType()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">delAttribute()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">delData()</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-meth docutils literal"><span class="pre">isAttribute()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">isData()</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-meth docutils literal"><span class="pre">setAttribute()</span></code></td>
+<td><code class="xref py py-meth docutils literal"><span class="pre">setData()</span></code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>To be removed</strong>:</p>
+<p>Finally, the following methods will be removed, but other suitable methods
+are overloaded to perform their action:</p>
+<ul class="simple">
+<li>removed <code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getBySerialRange()</span></code>, overloaded
+<a class="reference internal" href="../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.getBySerial" title="prody.atomic.atomgroup.AtomGroup.getBySerial"><code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getBySerial()</span></code></a></li>
+<li>removed <code class="xref py py-func docutils literal"><span class="pre">getProteinResidueNames()</span></code>, overloaded
+<code class="xref py py-func docutils literal"><span class="pre">getKeywordResnames()</span></code></li>
+<li>removed <code class="xref py py-func docutils literal"><span class="pre">setProteinResidueNames()</span></code>, overloaded
+<code class="xref py py-func docutils literal"><span class="pre">setKeywordResnames()</span></code></li>
+</ul>
+</div></blockquote>
+<p><strong>Scripts</strong>:</p>
+<blockquote>
+<div>The way ProDy scripts work has changed. See <a class="reference internal" href="../../../manual/apps/prody/index.html#prody-apps"><span>ProDy Applications</span></a> for details.
+Using older scripts will start issuing deprecation warnings in 2012.</div></blockquote>
+<p><strong>Bug Fixes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Bugs in <a class="reference internal" href="../../../manual/reference/proteins/dssp.html#prody.proteins.dssp.execDSSP" title="prody.proteins.dssp.execDSSP"><code class="xref py py-func docutils literal"><span class="pre">execDSSP()</span></code></a> and <a class="reference internal" href="../../../manual/reference/proteins/stride.html#prody.proteins.stride.execSTRIDE" title="prody.proteins.stride.execSTRIDE"><code class="xref py py-func docutils literal"><span class="pre">execSTRIDE()</span></code></a> functions that caused
+exceptions when compressed files were passed is fixed.</li>
+<li>A problem in scripts for PCA of DCD files is fixed.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="normal-mode-wizard">
+<h3><a class="toc-backref" href="#id6">Normal Mode Wizard</a><a class="headerlink" href="#normal-mode-wizard" title="Permalink to this headline">¶</a></h3>
+<p>Development of NMWiz is finalized and it will not be distributed in the ProDy
+installation package anymore.  See <span class="xref std std-ref">nmwiz</span> pages for instructions on
+installing it.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

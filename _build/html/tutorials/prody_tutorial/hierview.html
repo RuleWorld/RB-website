@@ -1,0 +1,523 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Hierarchical Views &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../index.html">
+        <img src="../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">Hierarchical Views</a><ul>
+<li><a class="reference internal" href="#id1">Hierarchical Views</a><ul>
+<li><a class="reference internal" href="#indexing">Indexing</a></li>
+<li><a class="reference internal" href="#iterations">Iterations</a></li>
+<li><a class="reference internal" href="#residues">Residues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#chains">Chains</a><ul>
+<li><a class="reference internal" href="#id2">Indexing</a></li>
+<li><a class="reference internal" href="#id3">Iterations</a></li>
+<li><a class="reference internal" href="#get-data">Get data</a></li>
+<li><a class="reference internal" href="#selections">Selections</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">Residues</a><ul>
+<li><a class="reference internal" href="#id5">Indexing</a></li>
+<li><a class="reference internal" href="#id6">Iterations</a></li>
+<li><a class="reference internal" href="#id7">Get data</a></li>
+<li><a class="reference internal" href="#id8">Selections</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#atoms">Atoms</a></li>
+<li><a class="reference internal" href="#state-changes">State Changes</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="hierarchical-views">
+<span id="hierview"></span><h1>Hierarchical Views<a class="headerlink" href="#hierarchical-views" title="Permalink to this headline">¶</a></h1>
+<p>This part describes how to use hierarchical views.  We start by importing
+everything from the ProDy package:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h2>Hierarchical Views<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Then we parses a structure to get an <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance which has a
+plain view of atoms:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [2]: </span><span class="n">structure</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;3mkb&#39;</span><span class="p">)</span>
+
+<span class="gp">In [3]: </span><span class="n">structure</span>
+<span class="gh">Out[3]: </span><span class="go">&lt;AtomGroup: 3mkb (4776 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>A hierarchical view of the structure can be simply get by calling the
+<a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.getHierView" title="prody.atomic.atomgroup.AtomGroup.getHierView"><code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getHierView()</span></code></a> method:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">hv</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">getHierView</span><span class="p">()</span>
+
+<span class="gp">In [5]: </span><span class="n">hv</span>
+<span class="gh">Out[5]: </span><span class="go">&lt;HierView: AtomGroup 3mkb (4 chains, 946 residues)&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<p>Indexing <a class="reference internal" href="../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> instances return <a class="reference internal" href="../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [6]: </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="gh">Out[6]: </span><span class="go">&lt;Chain: A from 3mkb (254 residues, 1198 atoms)&gt;</span>
+
+<span class="gp">In [7]: </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">]</span>
+<span class="gh">Out[7]: </span><span class="go">&lt;Chain: B from 3mkb (216 residues, 1193 atoms)&gt;</span>
+
+<span class="gp">In [8]: </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]</span> <span class="c1"># This will return None, which means chain Z does not exist</span>
+</pre></div>
+</div>
+<p>The length of the <em>hv</em> variable gives the number of chains in the structure:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="nb">len</span><span class="p">(</span><span class="n">hv</span><span class="p">)</span>
+<span class="gh">Out[9]: </span><span class="go">4</span>
+
+<span class="gp">In [10]: </span><span class="n">hv</span><span class="o">.</span><span class="n">numChains</span><span class="p">()</span>
+<span class="gh">Out[10]: </span><span class="go">4</span>
+</pre></div>
+</div>
+<p>It is also possible to get a <a class="reference internal" href="../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> by
+directly indexing the <a class="reference internal" href="../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> instance:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="gh">Out[11]: </span><span class="go">&lt;Residue: MET 100 from Chain A from 3mkb (8 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Insertion codes can also be passed:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>But this does not return anything, since residue 100B does not exist.</p>
+</div>
+<div class="section" id="iterations">
+<h3>Iterations<a class="headerlink" href="#iterations" title="Permalink to this headline">¶</a></h3>
+<p>One can iterate over <a class="reference internal" href="../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> instances to get chains:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="k">for</span> <span class="n">chain</span> <span class="ow">in</span> <span class="n">hv</span><span class="p">:</span>
+<span class="gp">   ....: </span>    <span class="n">chain</span>
+<span class="gp">   ....: </span>
+</pre></div>
+</div>
+<p>It is also possible to get a <code class="xref py py-func docutils literal"><span class="pre">list()</span></code> of chains simply as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="n">chains</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">hv</span><span class="p">)</span>
+
+<span class="gp">In [15]: </span><span class="n">chains</span>
+<span class="gh">Out[15]: </span><span class="go"></span>
+<span class="go">[&lt;Chain: A from 3mkb (254 residues, 1198 atoms)&gt;,</span>
+<span class="go"> &lt;Chain: B from 3mkb (216 residues, 1193 atoms)&gt;,</span>
+<span class="go"> &lt;Chain: C from 3mkb (245 residues, 1189 atoms)&gt;,</span>
+<span class="go"> &lt;Chain: D from 3mkb (231 residues, 1196 atoms)&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="residues">
+<h3>Residues<a class="headerlink" href="#residues" title="Permalink to this headline">¶</a></h3>
+<p>In addition, one can also iterate over all residues:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">residue</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">hv</span><span class="o">.</span><span class="n">iterResidues</span><span class="p">()):</span>
+<span class="gp">   ....: </span>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span> <span class="k">break</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="n">residue</span><span class="p">)</span>
+<span class="gp">   ....: </span>
+<span class="go">ALA 1</span>
+<span class="go">PHE 2</span>
+<span class="go">THR 3</span>
+<span class="go">GLY 4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="chains">
+<h2>Chains<a class="headerlink" href="#chains" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [17]: </span><span class="n">chA</span> <span class="o">=</span> <span class="n">hv</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+
+<span class="gp">In [18]: </span><span class="n">chA</span>
+<span class="gh">Out[18]: </span><span class="go">&lt;Chain: A from 3mkb (254 residues, 1198 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Length of the chain equals to the number of residues in it:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [19]: </span><span class="nb">len</span><span class="p">(</span><span class="n">chA</span><span class="p">)</span>
+<span class="gh">Out[19]: </span><span class="go">254</span>
+
+<span class="gp">In [20]: </span><span class="n">chA</span><span class="o">.</span><span class="n">numResidues</span><span class="p">()</span>
+<span class="gh">Out[20]: </span><span class="go">254</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h3>Indexing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Indexing a <a class="reference internal" href="../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> instance returns a <a class="reference internal" href="../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> instance.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [21]: </span><span class="n">chA</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gh">Out[21]: </span><span class="go">&lt;Residue: ALA 1 from Chain A from 3mkb (5 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>If a residue does not exist, <code class="docutils literal"><span class="pre">None</span></code> is returned:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [22]: </span><span class="n">chA</span><span class="p">[</span><span class="mi">1000</span><span class="p">]</span>
+
+<span class="gp">In [23]: </span><span class="n">chA</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="c1"># Residue 1 with insertion code A also does not exist</span>
+</pre></div>
+</div>
+<p>If residue with given integer number does not exist, <code class="docutils literal"><span class="pre">None</span></code> is returned.</p>
+</div>
+<div class="section" id="id3">
+<h3>Iterations<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Iterating over a chain yields residues:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [24]: </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">residue</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chA</span><span class="p">):</span>
+<span class="gp">   ....: </span>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span> <span class="k">break</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="n">residue</span><span class="p">)</span>
+<span class="gp">   ....: </span>
+<span class="go">ALA 1</span>
+<span class="go">PHE 2</span>
+<span class="go">THR 3</span>
+<span class="go">GLY 4</span>
+</pre></div>
+</div>
+<p>Note that water atoms, each constituting a residue, are also part of a chain
+if they are labeled with that chain&#8217;s identifier.</p>
+<p>This enables getting a <code class="xref py py-func docutils literal"><span class="pre">list()</span></code> of residues simply as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [25]: </span><span class="n">chA_residues</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">chA</span><span class="p">)</span>
+
+<span class="gp">In [26]: </span><span class="n">chA_residues</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+<span class="gh">Out[26]: </span><span class="go"></span>
+<span class="go">[&lt;Residue: ALA 1 from Chain A from 3mkb (5 atoms)&gt;,</span>
+<span class="go"> &lt;Residue: PHE 2 from Chain A from 3mkb (11 atoms)&gt;,</span>
+<span class="go"> &lt;Residue: THR 3 from Chain A from 3mkb (7 atoms)&gt;,</span>
+<span class="go"> &lt;Residue: GLY 4 from Chain A from 3mkb (4 atoms)&gt;]</span>
+
+<span class="gp">In [27]: </span><span class="n">chA_residues</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+<span class="gh">Out[27]: </span><span class="go"></span>
+<span class="go">[&lt;Residue: HOH 471 from Chain A from 3mkb (1 atoms)&gt;,</span>
+<span class="go"> &lt;Residue: HOH 485 from Chain A from 3mkb (1 atoms)&gt;,</span>
+<span class="go"> &lt;Residue: HOH 490 from Chain A from 3mkb (1 atoms)&gt;,</span>
+<span class="go"> &lt;Residue: HOH 493 from Chain A from 3mkb (1 atoms)&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-data">
+<h3>Get data<a class="headerlink" href="#get-data" title="Permalink to this headline">¶</a></h3>
+<p>All methods defined for <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> class are also defined for
+<a class="reference internal" href="../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> and <a class="reference internal" href="../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> classes:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [28]: </span><span class="n">chA</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+<span class="gh">Out[28]: </span><span class="go"></span>
+<span class="go">array([[ -2.139,  17.026, -13.287],</span>
+<span class="go">       [ -1.769,  15.572, -13.111],</span>
+<span class="go">       [ -0.296,  15.257, -13.467],</span>
+<span class="go">       ..., </span>
+<span class="go">       [ -5.843,  17.181, -16.86 ],</span>
+<span class="go">       [-13.199,  -9.21 , -49.692],</span>
+<span class="go">       [ -0.459,   0.378, -46.156]])</span>
+
+<span class="gp">In [29]: </span><span class="n">chA</span><span class="o">.</span><span class="n">getBetas</span><span class="p">()</span>
+<span class="gh">Out[29]: </span><span class="go">array([ 59.35,  59.14,  58.5 , ...,  57.79,  47.77,  40.77])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="selections">
+<h3>Selections<a class="headerlink" href="#selections" title="Permalink to this headline">¶</a></h3>
+<p>Finally, you can select atoms from a <a class="reference internal" href="../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> instance:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [30]: </span><span class="n">chA_backbone</span> <span class="o">=</span> <span class="n">chA</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;backbone&#39;</span><span class="p">)</span>
+
+<span class="gp">In [31]: </span><span class="n">chA_backbone</span>
+<span class="gh">Out[31]: </span><span class="go">&lt;Selection: &#39;(backbone) and (chain A)&#39; from 3mkb (560 atoms)&gt;</span>
+
+<span class="gp">In [32]: </span><span class="n">chA_backbone</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">()</span>
+<span class="gh">Out[32]: </span><span class="go">&#39;(backbone) and (chain A)&#39;</span>
+</pre></div>
+</div>
+<p>As you see, the selection string passed by the user is augmented with
+&#8220;chain&#8221; keyword and identifier automatically to provide internal
+consistency:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [33]: </span><span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">chA_backbone</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">())</span>
+<span class="gh">Out[33]: </span><span class="go">&lt;Selection: &#39;(backbone) and (chain A)&#39; from 3mkb (560 atoms)&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Residues<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [34]: </span><span class="n">chA_res1</span> <span class="o">=</span> <span class="n">chA</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="gp">In [35]: </span><span class="n">chA_res1</span>
+<span class="gh">Out[35]: </span><span class="go">&lt;Residue: ALA 1 from Chain A from 3mkb (5 atoms)&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="id5">
+<h3>Indexing<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> instances can be indexed to get individual atoms:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [36]: </span><span class="n">chA_res1</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+<span class="gh">Out[36]: </span><span class="go">&lt;Atom: CA from 3mkb (index 1)&gt;</span>
+
+<span class="gp">In [37]: </span><span class="n">chA_res1</span><span class="p">[</span><span class="s1">&#39;CB&#39;</span><span class="p">]</span>
+<span class="gh">Out[37]: </span><span class="go">&lt;Atom: CB from 3mkb (index 4)&gt;</span>
+
+<span class="gp">In [38]: </span><span class="n">chA_res1</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span> <span class="c1"># if atom does not exist, None is returned</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Iterations<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Iterating over a residue instance yields <code class="xref py py-class docutils literal"><span class="pre">Atom</span></code> instances:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [39]: </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">atom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chA_res1</span><span class="p">):</span>
+<span class="gp">   ....: </span>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span> <span class="k">break</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="n">atom</span><span class="p">)</span>
+<span class="gp">   ....: </span>
+<span class="go">Atom N (index 0)</span>
+<span class="go">Atom CA (index 1)</span>
+<span class="go">Atom C (index 2)</span>
+<span class="go">Atom O (index 3)</span>
+</pre></div>
+</div>
+<p>This makes it easy to get a <code class="xref py py-func docutils literal"><span class="pre">list()</span></code> of atoms:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [40]: </span><span class="nb">list</span><span class="p">(</span><span class="n">chA_res1</span><span class="p">)</span>
+<span class="gh">Out[40]: </span><span class="go"></span>
+<span class="go">[&lt;Atom: N from 3mkb (index 0)&gt;,</span>
+<span class="go"> &lt;Atom: CA from 3mkb (index 1)&gt;,</span>
+<span class="go"> &lt;Atom: C from 3mkb (index 2)&gt;,</span>
+<span class="go"> &lt;Atom: O from 3mkb (index 3)&gt;,</span>
+<span class="go"> &lt;Atom: CB from 3mkb (index 4)&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Get data<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>All methods defined for <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> class are also defined for
+<a class="reference internal" href="../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> class:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [41]: </span><span class="n">chA_res1</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+<span class="gh">Out[41]: </span><span class="go"></span>
+<span class="go">array([[ -2.139,  17.026, -13.287],</span>
+<span class="go">       [ -1.769,  15.572, -13.111],</span>
+<span class="go">       [ -0.296,  15.257, -13.467],</span>
+<span class="go">       [  0.199,  14.155, -13.155],</span>
+<span class="go">       [ -2.752,  14.639, -13.898]])</span>
+
+<span class="gp">In [42]: </span><span class="n">chA_res1</span><span class="o">.</span><span class="n">getBetas</span><span class="p">()</span>
+<span class="gh">Out[42]: </span><span class="go">array([ 59.35,  59.14,  58.5 ,  59.13,  59.02])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Selections<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Finally, you can select atoms from a <a class="reference internal" href="../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> instance:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [43]: </span><span class="n">chA_res1_bb</span> <span class="o">=</span> <span class="n">chA_res1</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;backbone&#39;</span><span class="p">)</span>
+
+<span class="gp">In [44]: </span><span class="n">chA_res1_bb</span>
+<span class="gh">Out[44]: </span><span class="go">&lt;Selection: &#39;(backbone) and ... and (chain A))&#39; from 3mkb (4 atoms)&gt;</span>
+
+<span class="gp">In [45]: </span><span class="n">chA_res1_bb</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">()</span>
+<span class="gh">Out[45]: </span><span class="go">&#39;(backbone) and (resnum 1 and (chain A))&#39;</span>
+</pre></div>
+</div>
+<p>Again, the selection string is augmented with the chain identifier and
+residue number (<a class="reference internal" href="../../manual/reference/atomic/fields.html#term-resnum"><span class="xref std std-term">resnum</span></a>).</p>
+</div>
+</div>
+<div class="section" id="atoms">
+<h2>Atoms<a class="headerlink" href="#atoms" title="Permalink to this headline">¶</a></h2>
+<p>The lowest level of the hierarchical view contains <code class="xref py py-class docutils literal"><span class="pre">Atom</span></code> instances.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [46]: </span><span class="n">chA_res1_CA</span> <span class="o">=</span> <span class="n">chA_res1</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+
+<span class="gp">In [47]: </span><span class="n">chA_res1_CA</span>
+<span class="gh">Out[47]: </span><span class="go">&lt;Atom: CA from 3mkb (index 1)&gt;</span>
+</pre></div>
+</div>
+<p><em>Get atomic data</em></p>
+<p>All methods defined for <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> class are also defined for
+<a class="reference internal" href="../../manual/reference/atomic/atom.html#prody.atomic.atom.Atom" title="prody.atomic.atom.Atom"><code class="xref py py-class docutils literal"><span class="pre">Atom</span></code></a> class with the difference that method names are singular
+(except for coordinates):</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [48]: </span><span class="n">chA_res1_CA</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+<span class="gh">Out[48]: </span><span class="go">array([ -1.769,  15.572, -13.111])</span>
+
+<span class="gp">In [49]: </span><span class="n">chA_res1_CA</span><span class="o">.</span><span class="n">getBeta</span><span class="p">()</span>
+<span class="gh">Out[49]: </span><span class="go">59.140000000000001</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="state-changes">
+<h2>State Changes<a class="headerlink" href="#state-changes" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a> instance represents the state of an <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+instance at the time it is built.  When chain identifiers or residue numbers
+change, the state that hierarchical view represents may not match the current
+state of the atom group:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [50]: </span><span class="n">chA</span><span class="o">.</span><span class="n">setChid</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+
+<span class="gp">In [51]: </span><span class="n">chA</span>
+<span class="gh">Out[51]: </span><span class="go">&lt;Chain: X from 3mkb (254 residues, 1198 atoms)&gt;</span>
+
+<span class="gp">In [52]: </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span> <span class="c1"># returns None, since hierarchical view is not updated</span>
+
+<span class="gp">In [53]: </span><span class="n">hv</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># this updates hierarchical view</span>
+
+<span class="gp">In [54]: </span><span class="n">hv</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span>
+<span class="gh">Out[54]: </span><span class="go">&lt;Chain: X from 3mkb (254 residues, 1198 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>When this is the case, <a class="reference internal" href="../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView.update" title="prody.atomic.hierview.HierView.update"><code class="xref py py-meth docutils literal"><span class="pre">HierView.update()</span></code></a> method can be used to update
+hierarchical view.</p>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

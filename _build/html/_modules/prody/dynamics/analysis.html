@@ -1,0 +1,1167 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.dynamics.analysis &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.dynamics.analysis</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for calculating physical properties from normal</span>
+<span class="sd">modes.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span>
+<span class="kn">from</span> <span class="nn">prody.proteins</span> <span class="kn">import</span> <span class="n">parsePDB</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span><span class="p">,</span> <span class="n">Selection</span>
+<span class="kn">from</span> <span class="nn">prody.ensemble</span> <span class="kn">import</span> <span class="n">Ensemble</span><span class="p">,</span> <span class="n">Conformation</span>
+<span class="kn">from</span> <span class="nn">prody.trajectory</span> <span class="kn">import</span> <span class="n">TrajBase</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">importLA</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">arange</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">polyfit</span><span class="p">,</span> <span class="n">array</span>
+
+<span class="kn">from</span> <span class="nn">.nma</span> <span class="kn">import</span> <span class="n">NMA</span>
+<span class="kn">from</span> <span class="nn">.modeset</span> <span class="kn">import</span> <span class="n">ModeSet</span>
+<span class="kn">from</span> <span class="nn">.mode</span> <span class="kn">import</span> <span class="n">VectorBase</span><span class="p">,</span> <span class="n">Mode</span><span class="p">,</span> <span class="n">Vector</span>
+<span class="kn">from</span> <span class="nn">.gnm</span> <span class="kn">import</span> <span class="n">GNMBase</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;calcCollectivity&#39;</span><span class="p">,</span> <span class="s1">&#39;calcCovariance&#39;</span><span class="p">,</span> <span class="s1">&#39;calcCrossCorr&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calcFractVariance&#39;</span><span class="p">,</span> <span class="s1">&#39;calcSqFlucts&#39;</span><span class="p">,</span> <span class="s1">&#39;calcTempFactors&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calcProjection&#39;</span><span class="p">,</span> <span class="s1">&#39;calcCrossProjection&#39;</span><span class="p">,</span> 
+           <span class="s1">&#39;calcPerturbResponse&#39;</span><span class="p">,</span> <span class="s1">&#39;parsePerturbResponseMatrix&#39;</span><span class="p">,</span> 
+           <span class="s1">&#39;calcPerturbResponseProfiles&#39;</span><span class="p">,</span> <span class="s1">&#39;writePerturbResponsePDB&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calcSpecDimension&#39;</span><span class="p">,</span> <span class="s1">&#39;calcPairDeformationDist&#39;</span><span class="p">,]</span>
+
+<span class="k">class</span> <span class="nc">PRSMatrixParseError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<div class="viewcode-block" id="calcCollectivity"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcCollectivity">[docs]</a><span class="k">def</span> <span class="nf">calcCollectivity</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">masses</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns collectivity of the mode.  This function implements collectivity</span>
+<span class="sd">    as defined in equation 5 of [BR95]_.  If *masses* are provided, they will</span>
+<span class="sd">    be incorporated in the calculation.  Otherwise, atoms are assumed to have</span>
+<span class="sd">    uniform masses.</span>
+
+<span class="sd">    .. [BR95] Bruschweiler R. Collective protein dynamics and nuclear</span>
+<span class="sd">       spin relaxation. *J Chem Phys* **1995** 102:3396-3403.</span>
+
+<span class="sd">    :arg mode: mode or vector</span>
+<span class="sd">    :type mode: :class:`.Mode` or :class:`.Vector`</span>
+
+<span class="sd">    :arg masses: atomic masses</span>
+<span class="sd">    :type masses: :class:`numpy.ndarray`&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">Mode</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;mode must be a Mode instance&#39;</span><span class="p">)</span>
+
+    <span class="n">is3d</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">is3d</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">masses</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">masses</span><span class="p">)</span> <span class="o">!=</span> <span class="n">mode</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;length of masses must be equal to number of atoms&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is3d</span><span class="p">:</span>
+            <span class="n">u2in</span> <span class="o">=</span> <span class="p">(</span><span class="n">mode</span><span class="o">.</span><span class="n">getArrayNx3</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">masses</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is3d</span><span class="p">:</span>
+            <span class="n">u2in</span> <span class="o">=</span> <span class="p">(</span><span class="n">mode</span><span class="o">.</span><span class="n">getArrayNx3</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">u2in</span> <span class="o">=</span> <span class="p">(</span><span class="n">mode</span><span class="o">.</span><span class="n">getArrayNx3</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">u2in</span> <span class="o">=</span> <span class="n">u2in</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">u2in</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">coll</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">u2in</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">u2in</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">/</span> <span class="n">mode</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">coll</span></div>
+
+<div class="viewcode-block" id="calcSpecDimension"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcSpecDimension">[docs]</a><span class="k">def</span> <span class="nf">calcSpecDimension</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :arg mode: mode or vector</span>
+<span class="sd">    :type mode: :class:`.Mode` or :class:`.Vector`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># if not isinstance(mode, Mode):</span>
+    <span class="c1">#     raise TypeError(&#39;mode must be a Mode instance&#39;)</span>
+    
+    <span class="n">length</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">length</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ds</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="n">polyfit</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span><span class="o">*</span><span class="mf">0.25</span><span class="p">)])),</span><span class="n">log</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span><span class="o">*</span><span class="mf">0.25</span><span class="p">)]),</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">ds</span></div>
+
+<span class="k">def</span> <span class="nf">calcFracDimension</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :arg mode: mode or vector</span>
+<span class="sd">    :type mode: mode or vector &quot;&quot;&quot;</span>
+
+
+
+
+<div class="viewcode-block" id="calcFractVariance"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcFractVariance">[docs]</a><span class="k">def</span> <span class="nf">calcFractVariance</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns fraction of variance explained by the *mode*.  Fraction of</span>
+<span class="sd">    variance is the ratio of the variance along a mode to the trace of the</span>
+<span class="sd">    covariance matrix of the model.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">Mode</span><span class="p">):</span>
+        <span class="n">var</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">getVariance</span><span class="p">()</span>
+        <span class="n">trace</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span><span class="o">.</span><span class="n">_getTrace</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="p">(</span><span class="n">ModeSet</span><span class="p">,</span> <span class="n">NMA</span><span class="p">)):</span>
+        <span class="n">var</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">getVariances</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">):</span>
+            <span class="n">trace</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span><span class="o">.</span><span class="n">_getTrace</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">trace</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">_getTrace</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;mode must be a Mode instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">trace</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;modes are not calculated&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">var</span> <span class="o">/</span> <span class="n">trace</span></div>
+
+
+<div class="viewcode-block" id="calcProjection"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcProjection">[docs]</a><span class="k">def</span> <span class="nf">calcProjection</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">modes</span><span class="p">,</span> <span class="n">rmsd</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns projection of conformational deviations onto given modes.</span>
+<span class="sd">    *ensemble* coordinates are used to calculate the deviations that are</span>
+<span class="sd">    projected onto *modes*.  For K conformations and M modes, a (K,M)</span>
+<span class="sd">    matrix is returned.</span>
+
+<span class="sd">    :arg ensemble: an ensemble, trajectory or a conformation for which</span>
+<span class="sd">        deviation(s) will be projected, or a deformation vector</span>
+<span class="sd">    :type ensemble: :class:`.Ensemble`, :class:`.Conformation`,</span>
+<span class="sd">        :class:`.Vector`, :class:`.Trajectory`</span>
+<span class="sd">    :arg modes: up to three normal modes</span>
+<span class="sd">    :type modes: :class:`.Mode`, :class:`.ModeSet`, :class:`.NMA`</span>
+
+<span class="sd">    By default root-mean-square deviation (RMSD) along the normal mode is</span>
+<span class="sd">    calculated. To calculate the projection pass ``rmsd=True``.</span>
+<span class="sd">    :class:`.Vector` instances are accepted as *ensemble* argument to allow</span>
+<span class="sd">    for projecting a deformation vector onto normal modes.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="p">(</span><span class="n">Ensemble</span><span class="p">,</span> <span class="n">Conformation</span><span class="p">,</span> <span class="n">Vector</span><span class="p">,</span> <span class="n">TrajBase</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;ensemble must be Ensemble, Conformation, Vector, &#39;</span>
+                        <span class="s1">&#39;or a TrajBase, not {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ensemble</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="p">(</span><span class="n">NMA</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">,</span> <span class="n">VectorBase</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;rows must be NMA, ModeSet, or Mode, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">modes</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">modes</span><span class="o">.</span><span class="n">is3d</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;modes must be 3-dimensional&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">Vector</span><span class="p">):</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">numSelected</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">!=</span> <span class="n">modes</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;number of atoms are not the same&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">Vector</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">is3d</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;ensemble must be a 3d vector instance&#39;</span><span class="p">)</span>
+        <span class="n">deviations</span> <span class="o">=</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="p">(</span><span class="n">Ensemble</span><span class="p">,</span> <span class="n">Conformation</span><span class="p">)):</span>
+        <span class="n">deviations</span> <span class="o">=</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">getDeviations</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nfi</span> <span class="o">=</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">nextIndex</span><span class="p">()</span>
+        <span class="n">ensemble</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">deviations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">frame</span><span class="o">.</span><span class="n">getDeviations</span><span class="p">()</span> <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">ensemble</span><span class="p">])</span>
+        <span class="n">ensemble</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">nfi</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">deviations</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">deviations</span> <span class="o">=</span> <span class="n">deviations</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">deviations</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                         <span class="n">deviations</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">deviations</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">deviations</span> <span class="o">=</span> <span class="n">deviations</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">deviations</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">deviations</span> <span class="o">=</span> <span class="n">deviations</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">deviations</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">projection</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">deviations</span><span class="p">,</span> <span class="n">modes</span><span class="o">.</span><span class="n">_getArray</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">rmsd</span><span class="p">:</span>
+        <span class="n">projection</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_atoms</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">*</span> <span class="n">projection</span>
+    <span class="k">return</span> <span class="n">projection</span></div>
+
+
+<div class="viewcode-block" id="calcCrossProjection"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcCrossProjection">[docs]</a><span class="k">def</span> <span class="nf">calcCrossProjection</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">mode1</span><span class="p">,</span> <span class="n">mode2</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns projection of conformational deviations onto modes from</span>
+<span class="sd">    different models.</span>
+
+<span class="sd">    :arg ensemble: ensemble for which deviations will be projected</span>
+<span class="sd">    :type ensemble: :class:`.Ensemble`</span>
+<span class="sd">    :arg mode1: normal mode to project conformations onto</span>
+<span class="sd">    :type mode1: :class:`.Mode`, :class:`.Vector`</span>
+<span class="sd">    :arg mode2: normal mode to project conformations onto</span>
+<span class="sd">    :type mode2: :class:`.Mode`, :class:`.Vector`</span>
+<span class="sd">    :arg scale: scale width of the projection onto mode1 (``x``) or mode2(``y``),</span>
+<span class="sd">        an optimized scaling factor (scalar) will be calculated by default </span>
+<span class="sd">        or a value of scalar can be passed.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="p">(</span><span class="n">Ensemble</span><span class="p">,</span> <span class="n">Conformation</span><span class="p">,</span> <span class="n">Vector</span><span class="p">,</span> <span class="n">TrajBase</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;ensemble must be Ensemble, Conformation, Vector, &#39;</span>
+                        <span class="s1">&#39;or a Trajectory, not {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ensemble</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode1</span><span class="p">,</span> <span class="n">VectorBase</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;mode1 must be a Mode instance, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">mode1</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">mode1</span><span class="o">.</span><span class="n">is3d</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;mode1 must be 3-dimensional&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode2</span><span class="p">,</span> <span class="n">VectorBase</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;mode2 must be a Mode instance, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">mode2</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">mode2</span><span class="o">.</span><span class="n">is3d</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;mode2 must be 3-dimensional&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">scale</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scale</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="s1">&#39;scale must be a string&#39;</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">scale</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">),</span> <span class="s1">&#39;scale must be x or y&#39;</span>
+
+    <span class="n">xcoords</span> <span class="o">=</span> <span class="n">calcProjection</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">mode1</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;rmsd&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">))</span>
+    <span class="n">ycoords</span> <span class="o">=</span> <span class="n">calcProjection</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">mode2</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;rmsd&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">scale</span><span class="p">:</span>
+        <span class="n">scalar</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;scalar&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">scalar</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scalar</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)),</span> <span class="s1">&#39;scalar must be a number&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scalar</span> <span class="o">=</span> <span class="p">((</span><span class="n">ycoords</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">ycoords</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span>
+                      <span class="p">(</span><span class="n">xcoords</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">xcoords</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+                      <span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">scale</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Projection onto {0} is scaled by {1:.2f}&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mode1</span><span class="p">,</span> <span class="n">scalar</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">scalar</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">scalar</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Projection onto {0} is scaled by {1:.2f}&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mode2</span><span class="p">,</span> <span class="n">scalar</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">scale</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
+            <span class="n">xcoords</span> <span class="o">=</span> <span class="n">xcoords</span> <span class="o">*</span> <span class="n">scalar</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ycoords</span> <span class="o">=</span> <span class="n">ycoords</span> <span class="o">*</span> <span class="n">scalar</span>
+
+    <span class="k">return</span> <span class="n">xcoords</span><span class="p">,</span> <span class="n">ycoords</span></div>
+
+
+<div class="viewcode-block" id="calcSqFlucts"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcSqFlucts">[docs]</a><span class="k">def</span> <span class="nf">calcSqFlucts</span><span class="p">(</span><span class="n">modes</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns sum of square-fluctuations for given set of normal *modes*.</span>
+<span class="sd">    Square fluctuations for a single mode is obtained by multiplying the</span>
+<span class="sd">    square of the mode array with the variance (:meth:`.Mode.getVariance`)</span>
+<span class="sd">    along the mode.  For :class:`.PCA` and :class:`.EDA` models built using</span>
+<span class="sd">    coordinate data in Å, unit of square-fluctuations is |A2|, for</span>
+<span class="sd">    :class:`.ANM` and :class:`.GNM`, on the other hand, it is arbitrary or</span>
+<span class="sd">    relative units.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="p">(</span><span class="n">VectorBase</span><span class="p">,</span> <span class="n">NMA</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;modes must be a Mode, NMA, or ModeSet instance, &#39;</span>
+                        <span class="s1">&#39;not {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">modes</span><span class="p">)))</span>
+    <span class="n">is3d</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">is3d</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">Vector</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">is3d</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">modes</span><span class="o">.</span><span class="n">_getArrayNx3</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">modes</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sq_flucts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">modes</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">())</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">VectorBase</span><span class="p">):</span>
+            <span class="n">modes</span> <span class="o">=</span> <span class="p">[</span><span class="n">modes</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">mode</span> <span class="ow">in</span> <span class="n">modes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">is3d</span><span class="p">:</span>
+                <span class="n">sq_flucts</span> <span class="o">+=</span> <span class="p">((</span><span class="n">mode</span><span class="o">.</span><span class="n">_getArrayNx3</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span>
+                              <span class="n">mode</span><span class="o">.</span><span class="n">getVariance</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sq_flucts</span> <span class="o">+=</span> <span class="p">(</span><span class="n">mode</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">mode</span><span class="o">.</span><span class="n">getVariance</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">sq_flucts</span></div>
+
+
+<div class="viewcode-block" id="calcCrossCorr"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcCrossCorr">[docs]</a><span class="k">def</span> <span class="nf">calcCrossCorr</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">n_cpu</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns cross-correlations matrix.  For a 3-d model, cross-correlations</span>
+<span class="sd">    matrix is an NxN matrix, where N is the number of atoms.  Each element of</span>
+<span class="sd">    this matrix is the trace of the submatrix corresponding to a pair of atoms.</span>
+<span class="sd">    Covariance matrix may be calculated using all modes or a subset of modes</span>
+<span class="sd">    of an NMA instance.  For large systems, calculation of cross-correlations</span>
+<span class="sd">    matrix may be time consuming.  Optionally, multiple processors may be</span>
+<span class="sd">    employed to perform calculations by passing ``n_cpu=2`` or more.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cpu</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cpu must be an integer&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">n_cpu</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cpu must be equal to or greater than 1&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="p">(</span><span class="n">Mode</span><span class="p">,</span> <span class="n">NMA</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;modes must be a Mode, NMA, or ModeSet instance, &#39;</span>
+                        <span class="s1">&#39;not {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">modes</span><span class="p">)))</span>
+
+    <span class="k">if</span> <span class="n">modes</span><span class="o">.</span><span class="n">is3d</span><span class="p">():</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">modes</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="p">(</span><span class="n">Mode</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">)):</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">_model</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="p">(</span><span class="n">Mode</span><span class="p">)):</span>
+                <span class="n">indices</span> <span class="o">=</span> <span class="p">[</span><span class="n">modes</span><span class="o">.</span><span class="n">getIndex</span><span class="p">()]</span>
+                <span class="n">n_modes</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">indices</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">getIndices</span><span class="p">()</span>
+                <span class="n">n_modes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">modes</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">n_modes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">modes</span><span class="p">)</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_modes</span><span class="p">)</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">_array</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">_n_atoms</span>
+        <span class="n">variances</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">_vars</span>
+        <span class="k">if</span> <span class="n">n_cpu</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_modes</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="n">arvar</span> <span class="o">=</span> <span class="p">(</span><span class="n">array</span><span class="p">[:,</span> <span class="n">indices</span><span class="p">]</span><span class="o">*</span><span class="n">variances</span><span class="p">[</span><span class="n">indices</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">array</span> <span class="o">=</span> <span class="n">array</span><span class="p">[:,</span> <span class="n">indices</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">covariance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                                      <span class="n">arvar</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                                      <span class="n">axes</span><span class="o">=</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">multiprocessing</span>
+            <span class="n">n_cpu</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">(),</span> <span class="n">n_cpu</span><span class="p">)</span>
+            <span class="n">queue</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">n_modes</span> <span class="o">/</span> <span class="n">n_cpu</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cpu</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">n_cpu</span> <span class="o">-</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">indices</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">size</span><span class="p">:]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">indices</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">size</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">size</span><span class="p">]</span>
+                <span class="n">process</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span>
+                    <span class="n">target</span><span class="o">=</span><span class="n">_crossCorrelations</span><span class="p">,</span>
+                    <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">variances</span><span class="p">,</span> <span class="n">indices</span><span class="p">))</span>
+                <span class="n">process</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+            <span class="k">while</span> <span class="n">queue</span><span class="o">.</span><span class="n">qsize</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">n_cpu</span><span class="p">:</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+            <span class="n">covariance</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+            <span class="k">while</span> <span class="n">queue</span><span class="o">.</span><span class="n">qsize</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">covariance</span> <span class="o">+=</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">covariance</span> <span class="o">=</span> <span class="n">calcCovariance</span><span class="p">(</span><span class="n">modes</span><span class="p">)</span>
+    <span class="n">diag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">covariance</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(),</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">covariance</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">diag</span><span class="p">,</span> <span class="n">diag</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_crossCorrelations</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">variances</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate covariance-matrix for a subset of modes.&quot;&quot;&quot;</span>
+
+    <span class="n">n_modes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+    <span class="n">arvar</span> <span class="o">=</span> <span class="p">(</span><span class="n">array</span><span class="p">[:,</span> <span class="n">indices</span><span class="p">]</span> <span class="o">*</span> <span class="n">variances</span><span class="p">[</span><span class="n">indices</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_modes</span><span class="p">,</span>
+                                                                <span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">array</span> <span class="o">=</span> <span class="n">array</span><span class="p">[:,</span> <span class="n">indices</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_modes</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">covariance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                              <span class="n">arvar</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                              <span class="n">axes</span><span class="o">=</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+    <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">covariance</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="calcTempFactors"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcTempFactors">[docs]</a><span class="k">def</span> <span class="nf">calcTempFactors</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">atoms</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns temperature (β) factors calculated using *modes* from a</span>
+<span class="sd">    :class:`.ANM` or :class:`.GNM` instance scaled according to the</span>
+<span class="sd">    experimental β-factors from *atoms*.&quot;&quot;&quot;</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">GNMBase</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;modes must come from GNM or ANM&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">!=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;modes and atoms must have same number of nodes&#39;</span><span class="p">)</span>
+    <span class="n">sqf</span> <span class="o">=</span> <span class="n">calcSqFlucts</span><span class="p">(</span><span class="n">modes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sqf</span> <span class="o">/</span> <span class="p">((</span><span class="n">sqf</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">atoms</span><span class="o">.</span><span class="n">getBetas</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">**</span><span class="mf">0.5</span></div>
+
+
+<div class="viewcode-block" id="calcCovariance"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcCovariance">[docs]</a><span class="k">def</span> <span class="nf">calcCovariance</span><span class="p">(</span><span class="n">modes</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns covariance matrix calculated for given *modes*.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">Mode</span><span class="p">):</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">array</span><span class="p">)</span> <span class="o">*</span> <span class="n">modes</span><span class="o">.</span><span class="n">getVariance</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">):</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">modes</span><span class="o">.</span><span class="n">getVariances</span><span class="p">()),</span> <span class="n">array</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">NMA</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">modes</span><span class="o">.</span><span class="n">getCovariance</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;modes must be a Mode, NMA, or ModeSet instance&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="calcPerturbResponse"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcPerturbResponse">[docs]</a><span class="k">def</span> <span class="nf">calcPerturbResponse</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">atoms</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Returns a matrix of profiles from scanning of the response of the</span>
+<span class="sd">    structure to random perturbations at specific atom (or node) positions.</span>
+<span class="sd">    The function implements the perturbation response scanning (PRS) method</span>
+<span class="sd">    described in [CA09]_.  Rows of the matrix are the average magnitude of the</span>
+<span class="sd">    responses obtained by perturbing the atom/node position at that row index,</span>
+<span class="sd">    i.e. ``prs_profile[i,j]`` will give the response of residue/node *j* to</span>
+<span class="sd">    perturbations in residue/node *i*.  PRS is performed using the covariance</span>
+<span class="sd">    matrix from *model*, e.g. :class:`.ANM` instance.  Each residue/node is</span>
+<span class="sd">    perturbed *repeats* times with a random unit force vector.  When *atoms*</span>
+<span class="sd">    instance is given, PRS profile for residues will be added as an attribute</span>
+<span class="sd">    which then can be retrieved as ``atoms.getData(&#39;prs_profile&#39;)``.  *model*</span>
+<span class="sd">    and *atoms* must have the same number of atoms. *atoms* must be an</span>
+<span class="sd">    :class:`.AtomGroup` instance. write_output is a Bool variable to write</span>
+<span class="sd">    normalized asymmetric PRS matrix to a file. </span>
+
+<span class="sd">    .. [CA09] Atilgan C, Atilgan AR, Perturbation-Response Scanning</span>
+<span class="sd">       Reveals Ligand Entry-Exit Mechanisms of Ferric Binding Protein.</span>
+<span class="sd">       *PLoS Comput Biol* **2009** 5(10):e1000544.</span>
+
+<span class="sd">    The PRS matrix can be calculated and saved as follows::</span>
+
+<span class="sd">      prs_matrix = calcPerturbationResponse(p38_anm, saveMatrix=True)</span>
+<span class="sd">      </span>
+<span class="sd">    The PRS matrix can also be save later as follows::</span>
+<span class="sd">    </span>
+<span class="sd">      writeArray(&#39;prs_matrix.txt&#39;, prs_matrix, format=&#39;%8.6f&#39;, delimiter=&#39;\t&#39;)</span>
+
+<span class="sd">    You can also control which operation is used for getting a single matrix</span>
+<span class="sd">    from the repeated force application and whether to normalise the matrix</span>
+<span class="sd">    at the end. If you do choose to normalise the matrix, you can still save</span>
+<span class="sd">    the original matrix before normalisation as well.</span>
+
+<span class="sd">    :arg operation: which operation to perform to get a single response matrix::</span>
+<span class="sd">        the mean, variance, max or min of the set of repeats. Another operation </span>
+<span class="sd">        is to select elements from the matrix showing biggest difference from </span>
+<span class="sd">        the square sum of the covariance matrix. The Default is the mean.</span>
+<span class="sd">        To obtain all response matrices, set operation=None without quotes.</span>
+<span class="sd">        You can also ask for &#39;all&#39; operations or provide a list containing</span>
+<span class="sd">        any set of them.</span>
+<span class="sd">    :type operation: str or list</span>
+
+<span class="sd">    :arg noForce: whether to use the covariance matrix directly rather</span>
+<span class="sd">        than applying forces. This appears to be equivalent when scanning for</span>
+<span class="sd">        response magnitudes and will be much quicker. Default is True.</span>
+<span class="sd">    :type noForce: bool</span>
+
+<span class="sd">    :arg normMatrix: whether to normalise the single response matrix by</span>
+<span class="sd">        dividing each row by its diagonal, Default is False, we recommend true</span>
+<span class="sd">    :type normMatrix: bool</span>
+
+<span class="sd">    :arg saveMatrix: whether to save the last matrix generated to a text file.</span>
+<span class="sd">        Default is False</span>
+<span class="sd">    :type saveMatrix: bool</span>
+
+<span class="sd">    :arg saveOrig: whether to save the original matrix despite normalisation.</span>
+<span class="sd">        This is the same as saveMatrix when not normalizing. Default is False</span>
+<span class="sd">    :type saveOrig: bool</span>
+
+<span class="sd">    :arg baseSaveName: The central part of the file name for saved</span>
+<span class="sd">        matrices, which you can set. This is surrounded by underscores. </span>
+<span class="sd">        The beginning says orig or norm and the end says which operation </span>
+<span class="sd">        was used. Default is &#39;response_matrix&#39;.</span>
+<span class="sd">    :type baseSaveName: str</span>
+
+<span class="sd">    :arg acceptDirection: select reference direction for forces to be accepted.</span>
+<span class="sd">        Can be &#39;in&#39; (towards center of atoms), &#39;out&#39; (away from center),</span>
+<span class="sd">        or &#39;all&#39;. Default is &#39;all&#39;; Using other directions requires atoms.</span>
+<span class="sd">    :type acceptDirection: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">noForce</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;noForce&#39;</span><span class="p">,</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">noForce</span><span class="p">:</span>
+        <span class="n">operation</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;operation&#39;</span><span class="p">,</span><span class="s1">&#39;mea&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">operation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">operation</span> <span class="o">==</span> <span class="s1">&#39;all&#39;</span> <span class="ow">or</span> <span class="n">operation</span> <span class="o">==</span> <span class="s1">&#39;all operations&#39;</span><span class="p">:</span>
+                    <span class="n">operationList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;var&#39;</span><span class="p">,</span><span class="s1">&#39;mea&#39;</span><span class="p">,</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;min&#39;</span><span class="p">,</span><span class="s1">&#39;dif&#39;</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">operationList</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="n">operationList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()[:</span><span class="mi">3</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+                <span class="n">operationList</span> <span class="o">=</span> <span class="n">operation</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">operationList</span><span class="p">)):</span>
+                    <span class="n">operationList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">operationList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()[:</span><span class="mi">3</span><span class="p">]</span>
+
+            <span class="n">operationList</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">operationList</span><span class="p">)</span> 
+            <span class="n">found_valid_operation</span> <span class="o">=</span> <span class="bp">False</span>
+
+            <span class="k">if</span> <span class="s1">&#39;var&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+                <span class="n">found_valid_operation</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="k">if</span> <span class="s1">&#39;max&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+                <span class="n">found_valid_operation</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="k">if</span> <span class="s1">&#39;mea&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+                <span class="n">found_valid_operation</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="k">if</span> <span class="s1">&#39;min&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+                <span class="n">found_valid_operation</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="k">if</span> <span class="s1">&#39;dif&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+                <span class="n">found_valid_operation</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">found_valid_operation</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Operation should be mean, variance, max, min or &#39;</span> \
+                                 <span class="s1">&#39;or difference (from covariance matrix) in quotes &#39;</span> \
+                                 <span class="s1">&#39;or a list containing a set of these or None.&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">NMA</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;model must be an NMA instance&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">is3d</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">noForce</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;model must be a 3-dimensional NMA instance&#39;</span> \
+                        <span class="s1">&#39;for using PRS with force&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;model must have normal modes calculated&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">atoms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">Selection</span><span class="p">):</span>
+            <span class="n">atoms</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be an AtomGroup instance&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">atoms</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">!=</span> <span class="n">model</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;model and atoms must have the same number atoms&#39;</span><span class="p">)</span>
+
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;_prody_prs_all&#39;</span><span class="p">)</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Calculating covariance matrix&#39;</span><span class="p">)</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;_prody_cov&#39;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">repeats</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s1">&#39;repeats must be an integer&#39;</span>
+    <span class="n">cov</span> <span class="o">=</span> <span class="n">calcCovariance</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cov</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;model did not return a covariance matrix&#39;</span><span class="p">)</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Covariance matrix calculated in </span><span class="si">%.1f</span><span class="s1">s.&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;_prody_cov&#39;</span><span class="p">)</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s1">&#39;Calculating perturbation response&#39;</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="s1">&#39;_prody_prs_mat&#39;</span><span class="p">)</span>
+    <span class="n">matrix_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">if</span> <span class="n">noForce</span> <span class="ow">or</span> <span class="s1">&#39;dif&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">is3d</span><span class="p">():</span>
+            <span class="n">n_by_n_cov_squared</span> <span class="o">=</span> <span class="n">cov</span><span class="o">**</span><span class="mi">2</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cov_squared</span> <span class="o">=</span> <span class="n">cov</span><span class="o">**</span><span class="mi">2</span>
+            <span class="n">n_by_3n_cov_squared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n_atoms</span><span class="p">))</span>
+            <span class="n">n_by_n_cov_squared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">))</span>
+            <span class="n">i3</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+            <span class="n">i3p3</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">):</span>
+                <span class="n">i3</span> <span class="o">+=</span> <span class="mi">3</span>
+                <span class="n">i3p3</span> <span class="o">+=</span> <span class="mi">3</span>
+                <span class="n">n_by_3n_cov_squared</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">=</span> <span class="p">(</span><span class="n">cov_squared</span><span class="p">[</span><span class="n">i3</span><span class="p">:</span><span class="n">i3p3</span><span class="p">,:])</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+            <span class="n">j3</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+            <span class="n">j3p3</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">):</span>
+                <span class="n">j3</span> <span class="o">+=</span> <span class="mi">3</span>
+                <span class="n">j3p3</span> <span class="o">+=</span> <span class="mi">3</span>                
+                <span class="n">n_by_n_cov_squared</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_by_3n_cov_squared</span><span class="p">[:,</span><span class="n">j3</span><span class="p">:</span><span class="n">j3p3</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">noForce</span><span class="p">:</span>
+        <span class="n">matrix_dict</span><span class="p">[</span><span class="s1">&#39;noForce&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">n_by_n_cov_squared</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Perturbation response matrix calculated in </span><span class="si">%.1f</span><span class="s1">s.&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;_prody_prs_mat&#39;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="n">acceptDirection</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;acceptDirection&#39;</span><span class="p">,</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">acceptDirection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s1">&#39;all&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">atoms</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">acceptDirection</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;A specific direction for accepting forces was&#39;</span> \
+                            <span class="s1">&#39; provided without an atoms object. This&#39;</span> \
+                            <span class="s1">&#39; direction will be ignored and all forces will&#39;</span> \
+                            <span class="s1">&#39; be accepted.&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+                <span class="n">atoms_center</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]),</span> \
+                                      <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]),</span> \
+                                      <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span><span class="mi">2</span><span class="p">])])</span>
+ 
+        <span class="n">mag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mag&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">response_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">repeats</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">))</span> 
+        <span class="n">i3</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+        <span class="n">i3p3</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">):</span>
+            <span class="n">i3</span> <span class="o">+=</span> <span class="mi">3</span>
+            <span class="n">i3p3</span> <span class="o">+=</span> <span class="mi">3</span>
+            <span class="n">forces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">repeats</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">repeats</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+            <span class="n">forces</span> <span class="o">/=</span> <span class="p">((</span><span class="n">forces</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">repeats</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="n">mag</span>
+            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">repeats</span><span class="p">):</span>
+                <span class="n">force</span> <span class="o">=</span> <span class="n">forces</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">acceptDirection</span> <span class="ow">is</span> <span class="s1">&#39;in&#39;</span> <span class="ow">or</span> <span class="n">acceptDirection</span> <span class="ow">is</span> <span class="s1">&#39;out&#39;</span><span class="p">:</span>
+                    <span class="n">res_coords</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="n">vec_to_center</span> <span class="o">=</span> <span class="n">atoms_center</span> <span class="o">-</span> <span class="n">res_coords</span>
+                    <span class="n">vec_to_center</span> <span class="o">/=</span> <span class="p">(((</span><span class="n">atoms_center</span> <span class="o">-</span> <span class="n">res_coords</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+                    <span class="n">force_overlap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">force</span><span class="p">,</span><span class="n">vec_to_center</span><span class="p">)</span>
+
+                    <span class="k">if</span> <span class="n">acceptDirection</span> <span class="ow">is</span> <span class="s1">&#39;in&#39;</span> <span class="ow">and</span> <span class="n">force_overlap</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">force</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+                    <span class="k">if</span> <span class="n">acceptDirection</span> <span class="ow">is</span> <span class="s1">&#39;out&#39;</span> <span class="ow">and</span> <span class="n">force_overlap</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">force</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+                <span class="n">response_matrix</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">i</span><span class="p">,:]</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">cov</span><span class="p">[:,</span> <span class="n">i3</span><span class="p">:</span><span class="n">i3p3</span><span class="p">],</span> <span class="n">force</span><span class="p">)</span>
+                    <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;_prody_prs_mat&#39;</span><span class="p">)</span>
+
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Perturbation response scanning matrix calculated in </span><span class="si">%.1f</span><span class="s1">s.&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;_prody_prs_mat&#39;</span><span class="p">)</span>
+
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s1">&#39;Performing matrix combination operations&#39;</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> \
+                        <span class="s1">&#39;_prody_prs_ops&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s1">&#39;var&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+            <span class="n">matrix_dict</span><span class="p">[</span><span class="s1">&#39;var&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">response_matrix</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
+
+        <span class="k">if</span> <span class="s1">&#39;max&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+            <span class="n">matrix_dict</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">response_matrix</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s1">&#39;mea&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+            <span class="n">matrix_dict</span><span class="p">[</span><span class="s1">&#39;mea&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">response_matrix</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
+
+        <span class="k">if</span> <span class="s1">&#39;min&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+            <span class="n">matrix_dict</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">response_matrix</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s1">&#39;dif&#39;</span> <span class="ow">in</span> <span class="n">operationList</span><span class="p">:</span>
+            <span class="n">matrix_dict</span><span class="p">[</span><span class="s1">&#39;dif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">response_matrix</span> <span class="o">-</span> <span class="n">n_by_n_cov_squared</span><span class="p">)</span> \
+                                       <span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Perturbation response matrix operations completed in </span><span class="si">%.1f</span><span class="s1">s.&#39;</span><span class="p">,</span>
+                          <span class="s1">&#39;_prody_prs_ops&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">operation</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Operation is None so all {0} repeats are output.&#39;</span> \
+                        <span class="s1">&#39; This is not compatible with saving, normalizing&#39;</span> \
+                        <span class="s1">&#39; or mapping to atoms at present.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">repeats</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">response_matrix</span>
+
+    <span class="k">if</span> <span class="n">atoms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span> 
+        <span class="n">atoms</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;prs_profile&#39;</span><span class="p">,</span> <span class="n">matrix_dict</span><span class="p">[</span><span class="n">matrix_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Only one matrix can be added as data to atoms so&#39;</span> \
+                        <span class="s1">&#39; the first one was chosen. The operation that generated&#39;</span> \
+                        <span class="s1">&#39; it was {0} (1st 3 letters).&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">matrix_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+
+    <span class="n">saveOrig</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;saveOrig&#39;</span><span class="p">,</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">saveMatrix</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;saveMatrix&#39;</span><span class="p">,</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">normMatrix</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;normMatrix&#39;</span><span class="p">,</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">suppressDiag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;suppressDiag&#39;</span><span class="p">,</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">baseSaveName</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;baseSaveName&#39;</span><span class="p">,</span><span class="s1">&#39;response_matrix&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">saveOrig</span> <span class="o">==</span> <span class="bp">True</span> <span class="ow">or</span> <span class="n">saveMatrix</span> <span class="o">==</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">normMatrix</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+       <span class="c1"># save the original PRS matrix for each operation</span>
+       <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">matrix_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+           <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;orig_{0}_{1}.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">baseSaveName</span><span class="p">,</span><span class="n">m</span><span class="p">),</span> \
+                      <span class="n">matrix_dict</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%8.6f</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">normMatrix</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">norm_PRS_mat</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1"># calculate the normalized PRS matrix for each operation</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">matrix_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">self_dp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">matrix_dict</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>  <span class="c1"># using self displacement (diagonal of</span>
+                                              <span class="c1"># the original matrix) as a</span>
+                                              <span class="c1"># normalization factor</span>
+            <span class="n">self_dp</span> <span class="o">=</span> <span class="n">self_dp</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">norm_PRS_mat</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix_dict</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">self_dp</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">suppressDiag</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="c1"># suppress the diagonal (self displacement) to facilitate</span>
+                <span class="c1"># visualizing the response profile</span>
+                <span class="n">norm_PRS_mat</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">norm_PRS_mat</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">norm_PRS_mat</span><span class="p">[</span><span class="n">m</span><span class="p">]))</span>
+
+            <span class="k">if</span> <span class="n">saveMatrix</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;norm_{0}_{1}.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">baseSaveName</span><span class="p">,</span><span class="n">m</span><span class="p">),</span> \
+                           <span class="n">norm_PRS_mat</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%8.6f</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Perturbation response scanning completed in </span><span class="si">%.1f</span><span class="s1">s.&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;_prody_prs_all&#39;</span><span class="p">)</span>
+
+    <span class="n">matrix_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">matrix_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">normMatrix</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">matrix_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">norm_PRS_mat</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">matrix_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">matrix_dict</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+    <span class="n">matrix_array</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">matrix_list</span><span class="p">)</span>
+
+    <span class="n">returnFormat</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;returnFormat&#39;</span><span class="p">,</span><span class="s1">&#39;array&#39;</span><span class="p">)</span>
+    <span class="n">returnFormat</span> <span class="o">=</span> <span class="n">returnFormat</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix_array</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">matrix_array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span><span class="n">n_atoms</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">returnFormat</span> <span class="ow">is</span> <span class="s1">&#39;both&#39;</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;You have requested return in both formats.&#39;</span> \
+                    <span class="s1">&#39; Array comes first.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">matrix_array</span><span class="p">,</span> <span class="n">matrix_dict</span>
+    <span class="k">elif</span> <span class="s1">&#39;dict&#39;</span> <span class="ow">in</span> <span class="n">returnFormat</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Output has been returned as a dictionary of matrices.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">matrix_dict</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Output has been returned as an array of matrices,&#39;</span> \
+                    <span class="s1">&#39; which you can split into individual matrices.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">matrix_array</span></div>
+
+<div class="viewcode-block" id="parsePerturbResponseMatrix"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.parsePerturbResponseMatrix">[docs]</a><span class="k">def</span> <span class="nf">parsePerturbResponseMatrix</span><span class="p">(</span><span class="n">prs_matrix_file</span><span class="o">=</span><span class="s1">&#39;prs_matrix.txt&#39;</span><span class="p">,</span><span class="n">normMatrix</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parses a perturbation response matrix from a file into a numpy ndarray.</span>
+
+<span class="sd">    :arg prs_matrix_file: name of the file containing a PRS matrix, default is</span>
+<span class="sd">        &#39;prs_matrix.txt&#39; as is used in the example under calcPerturbResponse.</span>
+<span class="sd">    :type prs_matrix_file: str</span>
+
+<span class="sd">    :arg normMatrix: whether to normalise the PRS matrix after parsing it.</span>
+<span class="sd">        Default is True. If you have already normalised this before saving,</span>
+<span class="sd">        or you do not want it normalised then set this to False.</span>
+<span class="sd">    :type norm: bool</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fmat</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">prs_matrix_file</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">matlines</span> <span class="o">=</span> <span class="n">fmat</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">fmat</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">prs_matrix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">matlines</span><span class="p">:</span>
+       <span class="n">prs_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">)):</span>
+     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">)):</span>
+        <span class="n">prs_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+
+    <span class="n">prs_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">normMatrix</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+       <span class="c1"># normalize the PRS matrix</span>
+       <span class="n">self_dp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">)</span>  <span class="c1"># using self displacement (diagonal of</span>
+                              <span class="c1"># the original matrix) as a</span>
+                              <span class="c1"># normalization factor</span>
+       <span class="n">self_dp</span> <span class="o">=</span> <span class="n">self_dp</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+       <span class="n">norm_PRS_mat</span> <span class="o">=</span> <span class="n">prs_matrix</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">self_dp</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+       <span class="k">return</span> <span class="n">norm_PRS_mat</span>
+
+    <span class="k">else</span><span class="p">:</span>
+       <span class="k">return</span> <span class="n">prs_matrix</span></div>
+
+<div class="viewcode-block" id="calcPerturbResponseProfiles"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcPerturbResponseProfiles">[docs]</a><span class="k">def</span> <span class="nf">calcPerturbResponseProfiles</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Calculate the effectiveness and sensitivity</span>
+<span class="sd">    profiles, which are the averages over the rows</span>
+<span class="sd">    and columns of the PRS matrix.</span>
+
+<span class="sd">    :arg prs_matrix: a perturbation response matrix</span>
+<span class="sd">    :type prs_matrix: ndarray </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">effectiveness</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">sensitivity</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">)):</span>
+        <span class="n">effectiveness</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="n">sensitivity</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prs_matrix</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+    <span class="k">return</span> <span class="n">effectiveness</span><span class="p">,</span> <span class="n">sensitivity</span></div>
+
+<div class="viewcode-block" id="writePerturbResponsePDB"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.writePerturbResponsePDB">[docs]</a><span class="k">def</span> <span class="nf">writePerturbResponsePDB</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">,</span><span class="n">pdbIn</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Write the average response to perturbation of</span>
+<span class="sd">    a particular residue (a row of a perturbation response matrix)</span>
+<span class="sd">    or the average effect of perturbation of a particular residue</span>
+<span class="sd">    (a column of a normalized perturbation response matrix)</span>
+<span class="sd">    into the b-factor field of a PDB file for visualisation in a</span>
+<span class="sd">    molecular graphics program.</span>
+<span class="sd">    If no chain is given this will be done for that residue in all chains.</span>
+
+<span class="sd">    If no residue number is given then the effectiveness and sensitivity</span>
+<span class="sd">    profiles will be written out instead. These two profiles are also returned</span>
+<span class="sd">    as arrays for further analysis if they aren&#39;t already provided.</span>
+
+<span class="sd">    :arg prs_matrix: a perturbation response matrix</span>
+<span class="sd">    :type prs_matrix: ndarray</span>
+
+<span class="sd">    :arg pdbIn: file name for the input PDB file where you would like the PRS</span>
+<span class="sd">        data mapped</span>
+<span class="sd">    :type pdbIn: str</span>
+
+<span class="sd">    :arg pdbOut: a list of file names (enclosed in square</span>
+<span class="sd">        brackets) for the output PDB file, default is to append</span>
+<span class="sd">        the chain and residue info (name and number) onto the pdbIn stem.</span>
+<span class="sd">        The input for pdbOut can also be used as a stem if you enter a </span>
+<span class="sd">        single string enclosed in quotes.</span>
+<span class="sd">        If no residue number is supplied, chain is ignored and the default </span>
+<span class="sd">        is to append &#39;_effectiveness&#39; and &#39;_sensitivity&#39; onto the stem.</span>
+<span class="sd">    :type pdbOut: list</span>
+
+<span class="sd">    :arg chain: chain identifier for the residue of interest, default is all chains</span>
+<span class="sd">        If you want to analyse residues in a subset of chains, concatentate them</span>
+<span class="sd">        together e.g. &#39;AC&#39;</span>
+<span class="sd">    :type chain: str</span>
+
+<span class="sd">    :arg resnum: residue number for the residue of interest</span>
+<span class="sd">    :type resnum: int</span>
+
+<span class="sd">    :arg direction: the direction you want to use to read data out</span>
+<span class="sd">        of the PRS matrix for plotting: the options are &#39;row&#39; or &#39;column&#39;.</span>
+<span class="sd">        Default is &#39;row&#39;.</span>
+<span class="sd">        A row gives the effect on each residue of peturbing the specified </span>
+<span class="sd">        residue.</span>
+<span class="sd">        A column gives the response of the specified residue to perturbing </span>
+<span class="sd">        each residue.</span>
+<span class="sd">        If no residue number is provided then this option will be ignored</span>
+<span class="sd">    :type direction: str</span>
+
+<span class="sd">    :arg returnData: whether to return effectiveness and sensitivity for analysis</span>
+<span class="sd">        default is False</span>
+<span class="sd">    :type returnProfiles: bool</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">type</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">)</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Please provide a valid PRS matrix in numpy ndarray format.&#39;</span><span class="p">)</span>
+           
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">fi</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">pdbIn</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">fi</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">fi</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">PRSMatrixParseError</span><span class="p">(</span><span class="s1">&#39;Please provide a valid file name for the input PDB.&#39;</span><span class="p">)</span>
+ 
+    <span class="n">chain</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;chain&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">structure</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="n">pdbIn</span><span class="p">)</span><span class="o">.</span><span class="n">calpha</span>
+    <span class="n">hv</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">getHierView</span><span class="p">()</span>
+    <span class="n">chains</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">hv</span><span class="p">))):</span>
+        <span class="n">chainAg</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">hv</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">chains</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chainAg</span><span class="o">.</span><span class="n">getChids</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">chains</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">chains</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">chain</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">chain</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chains</span><span class="p">)</span>
+
+    <span class="n">resnum</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;resnum&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">pdbOut</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdbOut&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pdbOut</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">out_stem</span> <span class="o">=</span> <span class="n">pdbIn</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">pdbOut</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">out_stem</span> <span class="o">=</span> <span class="n">pdbOut</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">pdbOut</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">if</span> <span class="n">resnum</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">effectiveness</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;effectiveness&#39;</span><span class="p">)</span>
+        <span class="n">sensitivity</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sensitivity&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">effectiveness</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">sensitivity</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">effectiveness</span><span class="p">,</span> <span class="n">sensitivity</span> <span class="o">=</span> <span class="n">calcPerturbResponseProfiles</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">)</span>
+
+        <span class="n">file_effs_name</span> <span class="o">=</span> <span class="s1">&#39;{0}_effectiveness.pdb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">out_stem</span><span class="p">)</span>
+        <span class="n">file_sens_name</span> <span class="o">=</span> <span class="s1">&#39;{0}_sensitivity.pdb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">out_stem</span><span class="p">)</span>
+        <span class="n">fileEffs</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_effs_name</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+        <span class="n">fileSens</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_sens_name</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>            
+            <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ATOM&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;HETATM&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ANISOU&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">fileEffs</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>                    
+                <span class="n">fileSens</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ATOM&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">sel_line_res</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resid {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">]))</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">structure</span><span class="o">.</span><span class="n">getResnums</span><span class="p">()</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">]))[</span><span class="mi">0</span><span class="p">]</span> \
+                    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">sel_line_res</span><span class="o">.</span><span class="n">getChids</span><span class="p">()</span> <span class="o">==</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">fileEffs</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span> \
+                               <span class="n">effectiveness</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">effectiveness</span><span class="p">)))))</span> \
+                               <span class="o">+</span> <span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">effectiveness</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> \
+                               <span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">effectiveness</span><span class="p">))</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="mi">66</span><span class="p">:])</span>
+                <span class="n">fileSens</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span>\
+                               <span class="n">sensitivity</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sensitivity</span><span class="p">)))))</span> \
+                               <span class="o">+</span> <span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">sensitivity</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> \
+                               <span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sensitivity</span><span class="p">))</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="mi">66</span><span class="p">:])</span>
+            <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;HETATM&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">fileEffs</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="s1">&#39;0.00&#39;</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="mi">66</span><span class="p">:])</span>
+                <span class="n">fileSens</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="s1">&#39;0.00&#39;</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="mi">66</span><span class="p">:])</span>
+                      
+        <span class="n">fileEffs</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">fileSens</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;The effectiveness and sensitivity profiles were written&#39;</span> \
+                    <span class="s1">&#39; to {0} and {1}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_effs_name</span><span class="p">,</span><span class="n">file_sens_name</span><span class="p">))</span>
+
+        <span class="n">returnData</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;returnData&#39;</span><span class="p">,</span><span class="bp">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">returnData</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">effectiveness</span><span class="p">,</span> <span class="n">sensitivity</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span>
+ 
+    <span class="n">timesNF</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">direction</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;direction&#39;</span><span class="p">,</span><span class="s1">&#39;row&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chain</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">chain</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="ow">in</span> <span class="n">chains</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PRSMatrixParseError</span><span class="p">(</span><span class="s1">&#39;Chain {0} was not found in {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chain</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">pdbIn</span><span class="p">))</span>
+
+        <span class="n">chainNum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">chains</span> <span class="o">==</span> <span class="n">chain</span><span class="p">[</span><span class="n">n</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">chainAg</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">hv</span><span class="p">)[</span><span class="n">chainNum</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">resnum</span> <span class="ow">in</span> <span class="n">chainAg</span><span class="o">.</span><span class="n">getResnums</span><span class="p">():</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;A residue with number {0} was not found&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39; in chain {1}. Continuing to next chain.&#39;</span> \
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resnum</span><span class="p">,</span> <span class="n">chain</span><span class="p">[</span><span class="n">n</span><span class="p">]))</span>
+            <span class="n">timesNF</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">pdbOut</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">pdbOut</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chain</span><span class="p">)):</span>
+            <span class="n">chainNum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">chains</span> <span class="o">==</span> <span class="n">chain</span><span class="p">[</span><span class="n">n</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">structure</span><span class="o">.</span><span class="n">getResnums</span><span class="p">()</span> <span class="o">==</span> <span class="n">resnum</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="n">chainNum</span><span class="o">-</span><span class="n">timesNF</span><span class="p">]</span>
+            <span class="n">pdbOut</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;{0}_{1}_{2}{3}_{4}.pdb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">out_stem</span><span class="p">,</span> <span class="n">chain</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> \
+                           <span class="n">structure</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()[</span><span class="n">i</span><span class="p">],</span> <span class="n">resnum</span><span class="p">,</span> <span class="n">direction</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chain</span><span class="p">)):</span>
+        <span class="n">chainNum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">chains</span> <span class="o">==</span> <span class="n">chain</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">structure</span><span class="o">.</span><span class="n">getResnums</span><span class="p">()</span> <span class="o">==</span> <span class="n">resnum</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="n">chainNum</span><span class="o">-</span><span class="n">timesNF</span><span class="p">]</span>
+        <span class="n">fo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">pdbOut</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ATOM&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;HETATM&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ANISOU&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ATOM&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">sel_line_res</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resid {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">]))</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">structure</span><span class="o">.</span><span class="n">getResnums</span><span class="p">()</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">]))[</span><span class="mi">0</span><span class="p">]</span> \
+                    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">sel_line_res</span><span class="o">.</span><span class="n">getChids</span><span class="p">()</span> <span class="o">==</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
+
+                <span class="k">if</span> <span class="n">direction</span> <span class="ow">is</span> <span class="s1">&#39;row&#39;</span><span class="p">:</span>
+                    <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span> \
+                             <span class="n">prs_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">))))</span> \
+                             <span class="o">+</span> <span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">prs_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> \
+                             <span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">))</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="mi">66</span><span class="p">:])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span> \
+                             <span class="n">prs_matrix</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">))))</span> \
+                             <span class="o">+</span> <span class="s1">&#39;{:3.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">prs_matrix</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> \
+                             <span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prs_matrix</span><span class="p">))</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="mi">66</span><span class="p">:])</span>
+            <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;HETATM&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="s1">&#39;0.00&#39;</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="mi">66</span><span class="p">:])</span>
+
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Perturbation responses for specific residues were written&#39;</span> \
+                    <span class="s1">&#39; to {0}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pdbOut</span><span class="p">)))</span>
+
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="calcPairDeformationDist"><a class="viewcode-back" href="../../../manual/reference/dynamics/analysis.html#prody.dynamics.analysis.calcPairDeformationDist">[docs]</a><span class="k">def</span> <span class="nf">calcPairDeformationDist</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span><span class="p">,</span> <span class="n">kbt</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
+                                                
+    <span class="sd">&quot;&quot;&quot;Returns distribution of the deformations in the distance contributed by each mode </span>
+<span class="sd">    for selected pair of residues *ind1* *ind2* using *model* from a :class:`.ANM`.</span>
+<span class="sd">    Method described in [EB08]_ equation (10) and figure (2).     </span>
+<span class="sd">    </span>
+<span class="sd">    .. [EB08] Eyal E., Bahar I. Toward a Molecular Understanding of </span>
+<span class="sd">        the Anisotropic Response of Proteins to External Forces:</span>
+<span class="sd">        Insights from Elastic Network Models. *Biophys J* **2008** 94:3424-34355. </span>
+<span class="sd">    </span>
+<span class="sd">    :arg model: this is an 3-dimensional NMA instance from a :class:`.ANM</span>
+<span class="sd">    calculations.</span>
+<span class="sd">    :type model: :class:`.ANM`  </span>
+<span class="sd">    :arg coords: a coordinate set or an object with ``getCoords`` method.</span>
+<span class="sd">      Recommended: coords = parsePDB(&#39;pdbfile&#39;).select(&#39;protein and name CA&#39;).</span>
+<span class="sd">    :type coords: :class:`numpy.ndarray`.</span>
+<span class="sd">    :arg ind1: first residue number.</span>
+<span class="sd">    :type ind1: int </span>
+<span class="sd">    :arg ind2: secound residue number.</span>
+<span class="sd">    :type ind2: int </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">resnum_list</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">getResnums</span><span class="p">()</span>
+        <span class="n">resnam_list</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="p">(</span><span class="n">coords</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;_getCoords&#39;</span><span class="p">)</span> <span class="k">else</span>
+                <span class="n">coords</span><span class="o">.</span><span class="n">getCoords</span><span class="p">())</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">checkCoords</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;coords must be a Numpy array or an object &#39;</span>
+                            <span class="s1">&#39;with `getCoords` method&#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">NMA</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;model must be a NMA instance&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">is3d</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;model must be a 3-dimensional NMA instance&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;model must have normal modes calculated&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">model</span><span class="o">.</span><span class="n">getStiffness</span><span class="p">()</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;model must have stiffness matrix calculated&#39;</span><span class="p">)</span>
+    
+    <span class="n">linalg</span> <span class="o">=</span> <span class="n">importLA</span><span class="p">()</span>
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+    <span class="n">n_modes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">numModes</span><span class="p">()</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;_pairdef&#39;</span><span class="p">)</span>
+
+    <span class="n">r_ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span><span class="n">n_atoms</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    <span class="n">r_ij_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span><span class="n">n_atoms</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n_atoms</span><span class="p">):</span>
+            <span class="n">r_ij</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+            <span class="n">r_ij</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">r_ij</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">r_ij_norm</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">r_ij</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r_ij</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">r_ij_norm</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">r_ij_norm</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+
+    <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getEigvecs</span><span class="p">()</span>
+    <span class="n">eigvals</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getEigvals</span><span class="p">()</span>
+    
+    <span class="n">D_pair_k</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">mode_nr</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">ind1</span> <span class="o">=</span> <span class="n">ind1</span> <span class="o">-</span> <span class="n">resnum_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ind2</span> <span class="o">=</span> <span class="n">ind2</span> <span class="o">-</span> <span class="n">resnum_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">n_modes</span><span class="p">):</span>
+        <span class="n">U_ij_k</span> <span class="o">=</span> <span class="p">[(</span><span class="n">eigvecs</span><span class="p">[</span><span class="n">ind1</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> <span class="o">-</span> <span class="n">eigvecs</span><span class="p">[</span><span class="n">ind2</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="n">m</span><span class="p">]),</span> <span class="p">(</span><span class="n">eigvecs</span><span class="p">[</span><span class="n">ind1</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> \
+            <span class="o">-</span> <span class="n">eigvecs</span><span class="p">[</span><span class="n">ind2</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">m</span><span class="p">]),</span> <span class="p">(</span><span class="n">eigvecs</span><span class="p">[</span><span class="n">ind1</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> <span class="o">-</span> <span class="n">eigvecs</span><span class="p">[</span><span class="n">ind2</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">][</span><span class="n">m</span><span class="p">])]</span> 
+        <span class="n">D_ij_k</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">kbt</span><span class="o">/</span><span class="n">eigvals</span><span class="p">[</span><span class="n">m</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">r_ij_norm</span><span class="p">[</span><span class="n">ind1</span><span class="p">][</span><span class="n">ind2</span><span class="p">],</span> <span class="n">U_ij_k</span><span class="p">)))</span>  
+        <span class="n">D_pair_k</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">D_ij_k</span><span class="p">)</span>
+        <span class="n">mode_nr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Deformation was calculated in </span><span class="si">%.2lf</span><span class="s1">s.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;_pairdef&#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">mode_nr</span><span class="p">,</span> <span class="n">D_pair_k</span></div>
+
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

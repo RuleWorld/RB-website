@@ -1,0 +1,504 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Atom Selections &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../index.html">
+        <img src="../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">Atom Selections</a><ul>
+<li><a class="reference internal" href="#id1">Atom Selections</a><ul>
+<li><a class="reference internal" href="#keyword-selections">Keyword selections</a></li>
+<li><a class="reference internal" href="#select-by-name-type">Select by name/type</a></li>
+<li><a class="reference internal" href="#composite-selections">Composite selections</a></li>
+<li><a class="reference internal" href="#selections-simplified">Selections simplified</a></li>
+<li><a class="reference internal" href="#more-examples">More examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations-on-selections">Operations on Selections</a><ul>
+<li><a class="reference internal" href="#union">Union</a></li>
+<li><a class="reference internal" href="#intersection">Intersection</a></li>
+<li><a class="reference internal" href="#inversion">Inversion</a></li>
+<li><a class="reference internal" href="#addition">Addition</a></li>
+<li><a class="reference internal" href="#membership">Membership</a></li>
+<li><a class="reference internal" href="#equality">Equality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="atom-selections">
+<span id="ipython-directive"></span><h1>Atom Selections<a class="headerlink" href="#atom-selections" title="Permalink to this headline">¶</a></h1>
+<p>This part gives more information on properties of <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> objects.
+We start with making necessary imports. Note that every documentation page
+contains them so that the code within the can be executed independently.
+You can skip them if you have already done them in a Python session.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [3]: </span><span class="n">ion</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h2>Atom Selections<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances have a plain view of atoms for efficiency,
+but they are coupled with a powerful atom selection engine.  You can get well
+defined atom subsets by passing simple keywords or make rather sophisticated
+selections using composite statements.  Selection keywords and grammar are very
+much similar to those found in <a class="reference external" href="http://www.ks.uiuc.edu/Research/vmd">VMD</a>. Some examples are shown here:</p>
+<div class="section" id="keyword-selections">
+<h3>Keyword selections<a class="headerlink" href="#keyword-selections" title="Permalink to this headline">¶</a></h3>
+<p>Now, we parse a structure. This could be any structure, one that you know
+well from your research, for example.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">structure</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1p38&#39;</span><span class="p">)</span>
+
+<span class="gp">In [5]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+
+<span class="gp">In [6]: </span><span class="n">protein</span>
+<span class="gh">Out[6]: </span><span class="go">&lt;Selection: &#39;protein&#39; from 1p38 (2833 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Using the <code class="docutils literal"><span class="pre">&quot;protein&quot;</span></code> keyword we selected 2833 atoms out of 2962 atoms.
+<a class="reference internal" href="../../manual/reference/atomic/atomic.html#prody.atomic.atomic.Atomic.select" title="prody.atomic.atomic.Atomic.select"><code class="xref py py-meth docutils literal"><span class="pre">Atomic.select()</span></code></a> method returned a <a class="reference internal" href="../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> instance.
+Note that all <code class="docutils literal"><span class="pre">get</span></code> and <code class="docutils literal"><span class="pre">set</span></code> methods defined for the <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+objects are also defined for <a class="reference internal" href="../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> objects. For example:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">protein</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
+<span class="gh">Out[7]: </span><span class="go"></span>
+<span class="go">array([&#39;GLU&#39;, &#39;GLU&#39;, &#39;GLU&#39;, ..., &#39;ASP&#39;, &#39;ASP&#39;, &#39;ASP&#39;], </span>
+<span class="go">      dtype=&#39;|S6&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="select-by-name-type">
+<h3>Select by name/type<a class="headerlink" href="#select-by-name-type" title="Permalink to this headline">¶</a></h3>
+<p>We can select backbone atoms by passing atom names following <code class="docutils literal"><span class="pre">&quot;name&quot;</span></code> keyword:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [8]: </span><span class="n">backbone</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein and name N CA C O&#39;</span><span class="p">)</span>
+
+<span class="gp">In [9]: </span><span class="n">backbone</span>
+<span class="gh">Out[9]: </span><span class="go">&lt;Selection: &#39;protein and name N CA C O&#39; from 1p38 (1404 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Alternatively, we can use <code class="docutils literal"><span class="pre">&quot;backbone&quot;</span></code> to make the same selection:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="n">backbone</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;backbone&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We select acidic and basic residues by using residue names with
+<code class="docutils literal"><span class="pre">&quot;resname&quot;</span></code> keyword:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">charged</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname ARG LYS HIS ASP GLU&#39;</span><span class="p">)</span>
+
+<span class="gp">In [12]: </span><span class="n">charged</span>
+<span class="gh">Out[12]: </span><span class="go">&lt;Selection: &#39;resname ARG LYS HIS ASP GLU&#39; from 1p38 (906 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Alternatively, we can use predefined keywords &#8220;acidic&#8221; and &#8220;basic&#8221;.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">charged</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;acidic or basic&#39;</span><span class="p">)</span>
+
+<span class="gp">In [14]: </span><span class="n">charged</span>
+<span class="gh">Out[14]: </span><span class="go">&lt;Selection: &#39;acidic or basic&#39; from 1p38 (906 atoms)&gt;</span>
+
+<span class="gp">In [15]: </span><span class="nb">set</span><span class="p">(</span><span class="n">charged</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
+<span class="gh">Out[15]: </span><span class="go">{&#39;ARG&#39;, &#39;ASP&#39;, &#39;GLU&#39;, &#39;HIS&#39;, &#39;LYS&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="composite-selections">
+<h3>Composite selections<a class="headerlink" href="#composite-selections" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s try a more sophisticated selection.  We first calculate the geometric
+center of the protein atoms using <a class="reference internal" href="../../manual/reference/measure/measure.html#prody.measure.measure.calcCenter" title="prody.measure.measure.calcCenter"><code class="xref py py-func docutils literal"><span class="pre">calcCenter()</span></code></a> function.  Then, we
+select the Cα and Cβ atoms of residues that have at least one atom within
+10 A away from the geometric center.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="n">center</span> <span class="o">=</span> <span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="gp">In [17]: </span><span class="n">center</span>
+<span class="gh">Out[17]: </span><span class="go">array([  1.005,  17.533,  40.052])</span>
+
+<span class="gp">In [18]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein and name CA CB and same residue as &#39;</span>
+<span class="gp">   ....: </span>                       <span class="s1">&#39;((x-1)**2 + (y-17.5)**2 + (z-40.0)**2)**0.5 &lt; 10&#39;</span><span class="p">)</span>
+<span class="gp">   ....: </span>
+
+<span class="gp">In [19]: </span><span class="n">sel</span>
+<span class="gh">Out[19]: </span><span class="go">&lt;Selection: &#39;protein and nam...)**2)**0.5 &lt; 10&#39; from 1p38 (66 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Alternatively, this selection could be done as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [20]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein and name CA CB and same residue as &#39;</span>
+<span class="gp">   ....: </span>                       <span class="s1">&#39;within 10 of center&#39;</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">)</span>
+<span class="gp">   ....: </span>
+
+<span class="gp">In [21]: </span><span class="n">sel</span>
+<span class="gh">Out[21]: </span><span class="go">&lt;Selection: &#39;index 576 579 5... 1687 1707 1710&#39; from 1p38 (66 atoms)&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="selections-simplified">
+<h3>Selections simplified<a class="headerlink" href="#selections-simplified" title="Permalink to this headline">¶</a></h3>
+<p>In interactive sessions, an alternative to typing in <code class="docutils literal"><span class="pre">.select('protein')</span></code>
+or <code class="docutils literal"><span class="pre">.select('backbone')</span></code> is using dot operator:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [22]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">protein</span>
+
+<span class="gp">In [23]: </span><span class="n">protein</span>
+<span class="gh">Out[23]: </span><span class="go">&lt;Selection: &#39;protein&#39; from 1p38 (2833 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>You can use dot operator multiple times:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [24]: </span><span class="n">bb</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">protein</span><span class="o">.</span><span class="n">backbone</span>
+
+<span class="gp">In [25]: </span><span class="n">bb</span>
+<span class="gh">Out[25]: </span><span class="go">&lt;Selection: &#39;(backbone) and (protein)&#39; from 1p38 (1404 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>This may go on and on:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [26]: </span><span class="n">ala_ca</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">protein</span><span class="o">.</span><span class="n">backbone</span><span class="o">.</span><span class="n">resname_ALA</span><span class="o">.</span><span class="n">calpha</span>
+
+<span class="gp">In [27]: </span><span class="n">ala_ca</span>
+<span class="gh">Out[27]: </span><span class="go">&lt;Selection: &#39;(calpha) and ((...and (protein)))&#39; from 1p38 (26 atoms)&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="more-examples">
+<h3>More examples<a class="headerlink" href="#more-examples" title="Permalink to this headline">¶</a></h3>
+<p>There is much more to what you can do with this flexible and fast atom
+selection engine, without the need for writing nested loops with comparisons
+or changing the source code.  See the following pages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../manual/reference/atomic/select.html#selections"><span>Atom Selections</span></a> for description of all selection keywords</li>
+<li><span class="xref std std-ref">contacts</span> for selecting interacting atoms</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="operations-on-selections">
+<span id="selection-operations"></span><h2>Operations on Selections<a class="headerlink" href="#operations-on-selections" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> objects can used with bitwise operators:</p>
+<div class="section" id="union">
+<h3>Union<a class="headerlink" href="#union" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s select β-carbon atoms for non-GLY amino acid residues, and
+α-carbons for GLYs in two steps:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [28]: </span><span class="n">betas</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;name CB and protein&#39;</span><span class="p">)</span>
+
+<span class="gp">In [29]: </span><span class="nb">len</span><span class="p">(</span><span class="n">betas</span><span class="p">)</span>
+<span class="gh">Out[29]: </span><span class="go">336</span>
+
+<span class="gp">In [30]: </span><span class="n">gly_alphas</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;name CA and resname GLY&#39;</span><span class="p">)</span>
+
+<span class="gp">In [31]: </span><span class="nb">len</span><span class="p">(</span><span class="n">gly_alphas</span><span class="p">)</span>
+<span class="gh">Out[31]: </span><span class="go">15</span>
+</pre></div>
+</div>
+<p>The above shows that the p38 structure contains 15 GLY residues.</p>
+<p>These two selections can be combined as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [32]: </span><span class="n">betas_gly_alphas</span> <span class="o">=</span> <span class="n">betas</span> <span class="o">|</span> <span class="n">gly_alphas</span>
+
+<span class="gp">In [33]: </span><span class="n">betas_gly_alphas</span>
+<span class="gh">Out[33]: </span><span class="go">&lt;Selection: &#39;(name CB and pr...nd resname GLY)&#39; from 1p38 (351 atoms)&gt;</span>
+
+<span class="gp">In [34]: </span><span class="nb">len</span><span class="p">(</span><span class="n">betas_gly_alphas</span><span class="p">)</span>
+<span class="gh">Out[34]: </span><span class="go">351</span>
+</pre></div>
+</div>
+<p>The selection string for the union of selections becomes:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [35]: </span><span class="n">betas_gly_alphas</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">()</span>
+<span class="gh">Out[35]: </span><span class="go">&#39;(name CB and protein) or (name CA and resname GLY)&#39;</span>
+</pre></div>
+</div>
+<p>Note that it is also possible to yield the same selection using selection
+string <code class="docutils literal"><span class="pre">(name</span> <span class="pre">CB</span> <span class="pre">and</span> <span class="pre">protein)</span> <span class="pre">or</span> <span class="pre">(name</span> <span class="pre">CA</span> <span class="pre">and</span> <span class="pre">resname</span> <span class="pre">GLY)</span></code>.</p>
+</div>
+<div class="section" id="intersection">
+<h3>Intersection<a class="headerlink" href="#intersection" title="Permalink to this headline">¶</a></h3>
+<p>It is as easy to get the intersection of two selections. Let&#8217;s find
+charged and medium size residues in a protein:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [36]: </span><span class="n">charged</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;charged&#39;</span><span class="p">)</span>
+
+<span class="gp">In [37]: </span><span class="n">charged</span>
+<span class="gh">Out[37]: </span><span class="go">&lt;Selection: &#39;charged&#39; from 1p38 (906 atoms)&gt;</span>
+
+<span class="gp">In [38]: </span><span class="n">medium</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;medium&#39;</span><span class="p">)</span>
+
+<span class="gp">In [39]: </span><span class="n">medium</span>
+<span class="gh">Out[39]: </span><span class="go">&lt;Selection: &#39;medium&#39; from 1p38 (751 atoms)&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [40]: </span><span class="n">medium_charged</span> <span class="o">=</span> <span class="n">medium</span> <span class="o">&amp;</span> <span class="n">charged</span>
+
+<span class="gp">In [41]: </span><span class="n">medium_charged</span>
+<span class="gh">Out[41]: </span><span class="go">&lt;Selection: &#39;(medium) and (charged)&#39; from 1p38 (216 atoms)&gt;</span>
+
+<span class="gp">In [42]: </span><span class="n">medium_charged</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">()</span>
+<span class="gh">Out[42]: </span><span class="go">&#39;(medium) and (charged)&#39;</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see which amino acids are considered charged and medium:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [43]: </span><span class="nb">set</span><span class="p">(</span><span class="n">medium_charged</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
+<span class="gh">Out[43]: </span><span class="go">{&#39;ASP&#39;}</span>
+</pre></div>
+</div>
+<p>What about amino acids that are medium or charged:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [44]: </span><span class="nb">set</span><span class="p">((</span><span class="n">medium</span> <span class="o">|</span> <span class="n">charged</span><span class="p">)</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
+<span class="gh">Out[44]: </span><span class="go">{&#39;ARG&#39;, &#39;ASN&#39;, &#39;ASP&#39;, &#39;CYS&#39;, &#39;GLU&#39;, &#39;HIS&#39;, &#39;LYS&#39;, &#39;PRO&#39;, &#39;THR&#39;, &#39;VAL&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inversion">
+<h3>Inversion<a class="headerlink" href="#inversion" title="Permalink to this headline">¶</a></h3>
+<p>It is also possible to invert a selection:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [45]: </span><span class="n">only_protein</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+
+<span class="gp">In [46]: </span><span class="n">only_protein</span>
+<span class="gh">Out[46]: </span><span class="go">&lt;Selection: &#39;protein&#39; from 1p38 (2833 atoms)&gt;</span>
+
+<span class="gp">In [47]: </span><span class="n">only_non_protein</span> <span class="o">=</span> <span class="o">~</span><span class="n">only_protein</span>
+
+<span class="gp">In [48]: </span><span class="n">only_non_protein</span>
+<span class="gh">Out[48]: </span><span class="go">&lt;Selection: &#39;not (protein)&#39; from 1p38 (129 atoms)&gt;</span>
+
+<span class="gp">In [49]: </span><span class="n">water</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+
+<span class="gp">In [50]: </span><span class="n">water</span>
+<span class="gh">Out[50]: </span><span class="go">&lt;Selection: &#39;water&#39; from 1p38 (129 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>The above shows that 1p38 does not contain any non-water
+hetero atoms.</p>
+</div>
+<div class="section" id="addition">
+<h3>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h3>
+<p>Another operation defined on the <a class="reference internal" href="../../manual/reference/atomic/select.html#prody.atomic.select.Select" title="prody.atomic.select.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a> object is addition
+(also on other <a class="reference internal" href="../../manual/reference/atomic/pointer.html#prody.atomic.pointer.AtomPointer" title="prody.atomic.pointer.AtomPointer"><code class="xref py py-class docutils literal"><span class="pre">AtomPointer</span></code></a> derived classes).</p>
+<p>This may be useful if you want to yield atoms in an <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> in a
+specific order.
+Let&#8217;s think of a simple case, where we want to output atoms in 1p38 in a
+specific order:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [51]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+
+<span class="gp">In [52]: </span><span class="n">water</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+
+<span class="gp">In [53]: </span><span class="n">water_protein</span> <span class="o">=</span> <span class="n">water</span> <span class="o">+</span> <span class="n">protein</span>
+
+<span class="gp">In [54]: </span><span class="n">writePDB</span><span class="p">(</span><span class="s1">&#39;1p38_water_protein.pdb&#39;</span><span class="p">,</span> <span class="n">water_protein</span><span class="p">)</span>
+<span class="gh">Out[54]: </span><span class="go">&#39;1p38_water_protein.pdb&#39;</span>
+</pre></div>
+</div>
+<p>In the resulting file, the water atoms will precedes the
+protein atoms.</p>
+</div>
+<div class="section" id="membership">
+<h3>Membership<a class="headerlink" href="#membership" title="Permalink to this headline">¶</a></h3>
+<p>Selections also allows membership test operations:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [55]: </span><span class="n">backbone</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+
+<span class="gp">In [56]: </span><span class="n">calpha</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;calpha&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Is <a class="reference internal" href="../../manual/reference/atomic/flags.html#term-calpha"><span class="xref std std-term">calpha</span></a> a subset of <a class="reference internal" href="../../manual/reference/atomic/flags.html#term-backbone"><span class="xref std std-term">backbone</span></a>?</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [57]: </span><span class="n">calpha</span> <span class="ow">in</span> <span class="n">backbone</span>
+<span class="gh">Out[57]: </span><span class="go">True</span>
+</pre></div>
+</div>
+<p>Or, is water in protein selection?</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [58]: </span><span class="n">water</span> <span class="ow">in</span> <span class="n">protein</span>
+<span class="gh">Out[58]: </span><span class="go">False</span>
+</pre></div>
+</div>
+<p>Other tests include:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [59]: </span><span class="n">protein</span> <span class="ow">in</span> <span class="n">structure</span>
+<span class="gh">Out[59]: </span><span class="go">True</span>
+
+<span class="gp">In [60]: </span><span class="n">backbone</span> <span class="ow">in</span> <span class="n">structure</span>
+<span class="gh">Out[60]: </span><span class="go">True</span>
+
+<span class="gp">In [61]: </span><span class="n">structure</span> <span class="ow">in</span> <span class="n">structure</span>
+<span class="gh">Out[61]: </span><span class="go">True</span>
+
+<span class="gp">In [62]: </span><span class="n">calpha</span> <span class="ow">in</span> <span class="n">calpha</span>
+<span class="gh">Out[62]: </span><span class="go">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="equality">
+<h3>Equality<a class="headerlink" href="#equality" title="Permalink to this headline">¶</a></h3>
+<p>You can also check the equality of selections. Comparison will return
+<code class="docutils literal"><span class="pre">True</span></code> if both selections refer to the same atoms.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [63]: </span><span class="n">calpha</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein and name CA&#39;</span><span class="p">)</span>
+
+<span class="gp">In [64]: </span><span class="n">calpha2</span> <span class="o">=</span> <span class="n">structure</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;calpha&#39;</span><span class="p">)</span>
+
+<span class="gp">In [65]: </span><span class="n">calpha</span> <span class="o">==</span> <span class="n">calpha2</span>
+<span class="gh">Out[65]: </span><span class="go">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

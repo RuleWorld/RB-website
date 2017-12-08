@@ -1,0 +1,383 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Trajectory Base &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.trajectory.trajbase">
+<span id="trajectory-base"></span><h1>Trajectory Base<a class="headerlink" href="#module-prody.trajectory.trajbase" title="Permalink to this headline">¶</a></h1>
+<p>This module defines base class for trajectory handling.</p>
+<dl class="class">
+<dt id="prody.trajectory.trajbase.TrajBase">
+<em class="property">class </em><code class="descname">TrajBase</code><span class="sig-paren">(</span><em>title='Unknown'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for <a class="reference internal" href="../../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory" title="prody.trajectory.trajectory.Trajectory"><code class="xref py py-class docutils literal"><span class="pre">Trajectory</span></code></a> and <a class="reference internal" href="../../../../manual/reference/trajectory/trajfile.html#prody.trajectory.trajfile.TrajFile" title="prody.trajectory.trajfile.TrajFile"><code class="xref py py-class docutils literal"><span class="pre">TrajFile</span></code></a>.  Derived
+classes must implement functions described in this class.</p>
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close trajectory file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.getAtoms">
+<code class="descname">getAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.getAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.getAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns associated/selected atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.getCoords">
+<code class="descname">getCoords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.getCoords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.getCoords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of reference coordinates for (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.getCoordsets">
+<code class="descname">getCoordsets</code><span class="sig-paren">(</span><em>indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.getCoordsets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.getCoordsets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnss coordinate sets at given <em>indices</em>. <em>indices</em> may be an
+integer, a list of ordered integers or <code class="docutils literal"><span class="pre">None</span></code>. <code class="docutils literal"><span class="pre">None</span></code> returns all
+coordinate sets. If a list of indices is given, unique numbers will
+be selected and sorted. That is, this method will always return unique
+coordinate sets in the order they appear in the trajectory file.
+Shape of the coordinate set array is (n_sets, n_atoms, 3).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.getFrame">
+<code class="descname">getFrame</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.getFrame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.getFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns frame at given <em>index</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.getLinked">
+<code class="descname">getLinked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.getLinked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.getLinked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns linked <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance, or <strong>None</strong> if a link
+is not established.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.getTitle">
+<code class="descname">getTitle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.getTitle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.getTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns title of the ensemble.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.getWeights">
+<code class="descname">getWeights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.getWeights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.getWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of weights of (selected) atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.goto">
+<code class="descname">goto</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.goto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.goto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go to the frame at index <em>n</em>. <code class="docutils literal"><span class="pre">n=0</span></code> will rewind the trajectory
+to the beginning, same as calling <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.reset" title="prody.trajectory.trajbase.TrajBase.reset"><code class="xref py py-meth docutils literal"><span class="pre">reset()</span></code></a> method. <code class="docutils literal"><span class="pre">n=-1</span></code>
+will go to the last frame.  Frame <em>n</em> will not be parsed until one
+of <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.next" title="prody.trajectory.trajbase.TrajBase.next"><code class="xref py py-meth docutils literal"><span class="pre">next()</span></code></a> or <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.nextCoordset" title="prody.trajectory.trajbase.TrajBase.nextCoordset"><code class="xref py py-meth docutils literal"><span class="pre">nextCoordset()</span></code></a> methods is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.hasUnitcell">
+<code class="descname">hasUnitcell</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.hasUnitcell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.hasUnitcell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if trajectory has unitcell data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.isLinked">
+<code class="descname">isLinked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.isLinked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.isLinked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if trajectory is linked to an <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.iterCoordsets">
+<code class="descname">iterCoordsets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.iterCoordsets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.iterCoordsets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield coordinate sets for (selected) atoms. Reference coordinates
+are not included. Iteration starts from the next frame in line.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.link">
+<code class="descname">link</code><span class="sig-paren">(</span><em>*ag</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link, return, or unlink an <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance.  When a
+link to <em>ag</em> is established, coordinates of new frames parsed from the
+trajectory file will be set as the coordinates of <em>ag</em> and this will
+update coordinates of all selections and atom subsets pointing to it.
+At link time, if <em>ag</em> does not have any coordinate sets and reference
+coordinates of the trajectory is set, reference coordinates of the
+trajectory will be passed to <em>ag</em>. To break an established link, pass
+<strong>None</strong> argument, or to return the linked atom group instance, call
+with no arguments.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Every time a frame is parsed from the trajectory, all coordinate
+sets present in the linked <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> will be overwritten.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.next">
+<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns next coordinate set in a <a class="reference internal" href="../../../../manual/reference/trajectory/frame.html#prody.trajectory.frame.Frame" title="prody.trajectory.frame.Frame"><code class="xref py py-class docutils literal"><span class="pre">Frame</span></code></a> instance.  Note that
+when atoms are set for the trajectory, this method will return the same
+frame instance after updating its coordinates.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.nextCoordset">
+<code class="descname">nextCoordset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.nextCoordset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.nextCoordset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns next coordinate set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.nextIndex">
+<code class="descname">nextIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.nextIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.nextIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index of the next frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.numAtoms">
+<code class="descname">numAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.numAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.numAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.numCoordsets">
+<code class="descname">numCoordsets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.numCoordsets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of frames.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.numFrames">
+<code class="descname">numFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.numFrames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.numFrames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of frames.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.numSelected">
+<code class="descname">numSelected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.numSelected"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.numSelected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of selected atoms.  A subset of atoms can be selected
+by passing a selection to <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.setAtoms" title="prody.trajectory.trajbase.TrajBase.setAtoms"><code class="xref py py-meth docutils literal"><span class="pre">setAtoms()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go to first frame at index 0.  First frame will not be parsed until
+one of <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.next" title="prody.trajectory.trajbase.TrajBase.next"><code class="xref py py-meth docutils literal"><span class="pre">next()</span></code></a> or <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.nextCoordset" title="prody.trajectory.trajbase.TrajBase.nextCoordset"><code class="xref py py-meth docutils literal"><span class="pre">nextCoordset()</span></code></a> methods is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.setAtoms">
+<code class="descname">setAtoms</code><span class="sig-paren">(</span><em>atoms</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.setAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.setAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set <em>atoms</em> or specify a selection of atoms to be considered in
+calculations and coordinate requests.  When a selection is set,
+corresponding subset of coordinates will be considered in, for
+example, alignments and RMSD calculations.  Setting atoms also
+allows some functions to access atomic data when needed.  For
+example, <a class="reference internal" href="../../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory" title="prody.trajectory.trajectory.Trajectory"><code class="xref py py-class docutils literal"><span class="pre">Trajectory</span></code></a> and <a class="reference internal" href="../../../../manual/reference/trajectory/frame.html#prody.trajectory.frame.Frame" title="prody.trajectory.frame.Frame"><code class="xref py py-class docutils literal"><span class="pre">Frame</span></code></a> instances become
+suitable arguments for <a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.writePDB" title="prody.proteins.pdbfile.writePDB"><code class="xref py py-func docutils literal"><span class="pre">writePDB()</span></code></a>.  Passing <strong>None</strong> as <em>atoms</em>
+argument will deselect atoms.  Note that setting atoms does not change
+the reference coordinates of the trajectory.  To change the reference,
+use <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.setCoords" title="prody.trajectory.trajbase.TrajBase.setCoords"><code class="xref py py-meth docutils literal"><span class="pre">setCoords()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.setCoords">
+<code class="descname">setCoords</code><span class="sig-paren">(</span><em>coords</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.setCoords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.setCoords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set <em>coords</em> as the trajectory reference coordinate set.  <em>coords</em>
+must be an object with <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.getCoords" title="prody.trajectory.trajbase.TrajBase.getCoords"><code class="xref py py-meth docutils literal"><span class="pre">getCoords()</span></code></a> method, or a Numpy array with
+suitable data type, shape, and dimensionality.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.setTitle">
+<code class="descname">setTitle</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.setTitle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.setTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set title of the ensemble.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.setWeights">
+<code class="descname">setWeights</code><span class="sig-paren">(</span><em>weights</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.setWeights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.setWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set atomic weights.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.trajectory.trajbase.TrajBase.skip">
+<code class="descname">skip</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/trajectory/trajbase.html#TrajBase.skip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.trajectory.trajbase.TrajBase.skip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip <em>n</em> frames.  <em>n</em> must be a positive integer.  Skipping some
+frames will only change the next frame index (<a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.nextIndex" title="prody.trajectory.trajbase.TrajBase.nextIndex"><code class="xref py py-meth docutils literal"><span class="pre">nextIndex()</span></code></a>)
+Next frame will not be parsed until one of <a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.next" title="prody.trajectory.trajbase.TrajBase.next"><code class="xref py py-meth docutils literal"><span class="pre">next()</span></code></a> or
+<a class="reference internal" href="../../../../manual/reference/trajectory/trajbase.html#prody.trajectory.trajbase.TrajBase.nextCoordset" title="prody.trajectory.trajbase.TrajBase.nextCoordset"><code class="xref py py-meth docutils literal"><span class="pre">nextCoordset()</span></code></a> methods is called.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

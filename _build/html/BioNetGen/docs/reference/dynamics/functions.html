@@ -1,0 +1,343 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Supporting Functions &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.dynamics.functions">
+<span id="supporting-functions"></span><h1>Supporting Functions<a class="headerlink" href="#module-prody.dynamics.functions" title="Permalink to this headline">¶</a></h1>
+<p>This module defines input and output functions.</p>
+<dl class="function">
+<dt id="prody.dynamics.functions.parseArray">
+<code class="descname">parseArray</code><span class="sig-paren">(</span><em>filename</em>, <em>delimiter=None</em>, <em>skiprows=0</em>, <em>usecols=None</em>, <em>dtype=&lt;type 'float'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#parseArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.parseArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse array data from a file.</p>
+<p>This function is using <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html#numpy.loadtxt" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.loadtxt()</span></code></a> to parse the file.  Each row
+in the text file must have the same number of values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>str or file</em>) &#8211; File or filename to read. If the filename extension is
+<code class="file docutils literal"><span class="pre">.gz</span></code> or <code class="file docutils literal"><span class="pre">.bz2</span></code>, the file is first decompressed.</li>
+<li><strong>delimiter</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; The string used to separate values. By default,
+this is any whitespace.</li>
+<li><strong>skiprows</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; Skip the first <em>skiprows</em> lines, default is <code class="docutils literal"><span class="pre">0</span></code>.</li>
+<li><strong>usecols</strong> (<em>list</em>) &#8211; Which columns to read, with 0 being the first. For example,
+<code class="docutils literal"><span class="pre">usecols</span> <span class="pre">=</span> <span class="pre">(1,4,5)</span></code> will extract the 2nd, 5th and 6th columns.
+The default, <code class="docutils literal"><span class="pre">None</span></code>, results in all columns being read.</li>
+<li><strong>dtype</strong> (<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.dtype</span></code></a>.) &#8211; Data-type of the resulting array, default is <code class="xref py py-func docutils literal"><span class="pre">float()</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.parseModes">
+<code class="descname">parseModes</code><span class="sig-paren">(</span><em>normalmodes</em>, <em>eigenvalues=None</em>, <em>nm_delimiter=None</em>, <em>nm_skiprows=0</em>, <em>nm_usecols=None</em>, <em>ev_delimiter=None</em>, <em>ev_skiprows=0</em>, <em>ev_usecols=None</em>, <em>ev_usevalues=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#parseModes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.parseModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="../../../../manual/reference/dynamics/nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a> instance with normal modes parsed from
+<em>normalmodes</em>.</p>
+<p>In normal mode file <em>normalmodes</em>, columns must correspond to modes
+(eigenvectors).  Optionally, <em>eigenvalues</em> can be parsed from a separate
+file. If eigenvalues are not provided, they will all be set to 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>normalmodes</strong> (<em>str or file</em>) &#8211; File or filename that contains normal modes.
+If the filename extension is <code class="file docutils literal"><span class="pre">.gz</span></code> or <code class="file docutils literal"><span class="pre">.bz2</span></code>, the file is
+first decompressed.</li>
+<li><strong>eigenvalues</strong> (<em>str or file</em>) &#8211; Optional, file or filename that contains eigenvalues.
+If the filename extension is <code class="file docutils literal"><span class="pre">.gz</span></code> or <code class="file docutils literal"><span class="pre">.bz2</span></code>,
+the file is first decompressed.</li>
+<li><strong>nm_delimiter</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; The string used to separate values in <em>normalmodes</em>.
+By default, this is any whitespace.</li>
+<li><strong>nm_skiprows</strong> (<em>0</em>) &#8211; Skip the first <em>skiprows</em> lines in <em>normalmodes</em>.
+Default is <code class="docutils literal"><span class="pre">0</span></code>.</li>
+<li><strong>nm_usecols</strong> (<em>list</em>) &#8211; Which columns to read from <em>normalmodes</em>, with 0 being the
+first. For example, <code class="docutils literal"><span class="pre">usecols</span> <span class="pre">=</span> <span class="pre">(1,4,5)</span></code> will extract the 2nd, 5th and
+6th columns. The default, <code class="docutils literal"><span class="pre">None</span></code>, results in all columns being read.</li>
+<li><strong>ev_delimiter</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; The string used to separate values in <em>eigenvalues</em>.
+By default, this is any whitespace.</li>
+<li><strong>ev_skiprows</strong> (<em>0</em>) &#8211; Skip the first <em>skiprows</em> lines in <em>eigenvalues</em>.
+Default is <code class="docutils literal"><span class="pre">0</span></code>.</li>
+<li><strong>ev_usecols</strong> (<em>list</em>) &#8211; Which columns to read from <em>eigenvalues</em>, with 0 being the
+first. For example, <code class="docutils literal"><span class="pre">usecols</span> <span class="pre">=</span> <span class="pre">(1,4,5)</span></code> will extract the 2nd, 5th and
+6th columns. The default, <code class="docutils literal"><span class="pre">None</span></code>, results in all columns being read.</li>
+<li><strong>ev_usevalues</strong> (<em>list</em>) &#8211; Which columns to use after the eigenvalue column is
+parsed from <em>eigenvalues</em>, with 0 being the first.
+This can be used if <em>eigenvalues</em> contains more values than the
+number of modes in <em>normalmodes</em>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference internal" href="../../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.parseArray" title="prody.dynamics.functions.parseArray"><code class="xref py py-func docutils literal"><span class="pre">parseArray()</span></code></a> for details of parsing arrays from files.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.parseSparseMatrix">
+<code class="descname">parseSparseMatrix</code><span class="sig-paren">(</span><em>filename</em>, <em>symmetric=False</em>, <em>delimiter=None</em>, <em>skiprows=0</em>, <em>irow=0</em>, <em>icol=1</em>, <em>first=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#parseSparseMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.parseSparseMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse sparse matrix data from a file.</p>
+<p>This function is using <a class="reference internal" href="../../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.parseArray" title="prody.dynamics.functions.parseArray"><code class="xref py py-func docutils literal"><span class="pre">parseArray()</span></code></a> to parse the file.
+Input must have the following format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>1       1    9.958948135375977e+00
+1       2   -3.788214445114136e+00
+1       3    6.236155629158020e-01
+1       4   -7.820609807968140e-01
+</pre></div>
+</div>
+<p>Each row in the text file must have the same number of values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>str or file</em>) &#8211; File or filename to read. If the filename extension is
+<code class="file docutils literal"><span class="pre">.gz</span></code> or <code class="file docutils literal"><span class="pre">.bz2</span></code>, the file is first decompressed.</li>
+<li><strong>symmetric</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Set <code class="docutils literal"><span class="pre">True</span></code> if the file contains triangular part of a
+symmetric matrix, default is <code class="docutils literal"><span class="pre">False</span></code>.</li>
+<li><strong>delimiter</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; The string used to separate values. By default,
+this is any whitespace.</li>
+<li><strong>skiprows</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; Skip the first <em>skiprows</em> lines, default is <code class="docutils literal"><span class="pre">0</span></code>.</li>
+<li><strong>irow</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; Index of the column in data file corresponding to row indices,
+default is <code class="docutils literal"><span class="pre">0</span></code>.</li>
+<li><strong>icol</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; Index of the column in data file corresponding to row indices,
+default is <code class="docutils literal"><span class="pre">0</span></code>.</li>
+<li><strong>first</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; First index in the data file (0 or 1), default is <code class="docutils literal"><span class="pre">1</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Data-type of the resulting array, default is <code class="xref py py-func docutils literal"><span class="pre">float()</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.writeArray">
+<code class="descname">writeArray</code><span class="sig-paren">(</span><em>filename</em>, <em>array</em>, <em>format='%d'</em>, <em>delimiter=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#writeArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.writeArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write 1-d or 2-d array data into a delimited text file.</p>
+<p>This function is using <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html#numpy.savetxt" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.savetxt()</span></code></a> to write the file, after
+making some type and value checks.  Default <em>format</em> argument is <code class="docutils literal"><span class="pre">&quot;%d&quot;</span></code>.
+Default <em>delimiter</em> argument is white space, <code class="docutils literal"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>.</p>
+<p><em>filename</em> will be returned upon successful writing.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.writeModes">
+<code class="descname">writeModes</code><span class="sig-paren">(</span><em>filename</em>, <em>modes</em>, <em>format='%.18e'</em>, <em>delimiter=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#writeModes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.writeModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <em>modes</em> (eigenvectors) into a plain text file with name
+<em>filename</em>. See also <a class="reference internal" href="../../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.writeArray" title="prody.dynamics.functions.writeArray"><code class="xref py py-func docutils literal"><span class="pre">writeArray()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.saveModel">
+<code class="descname">saveModel</code><span class="sig-paren">(</span><em>nma</em>, <em>filename=None</em>, <em>matrices=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#saveModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.saveModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save <em>nma</em> model data as <code class="file docutils literal"><span class="pre">filename.nma.npz</span></code>.  By default,
+eigenvalues, eigenvectors, variances, trace of covariance matrix,
+and name of the model will be saved.  If <em>matrices</em> is <code class="docutils literal"><span class="pre">True</span></code>,
+covariance, Hessian or Kirchhoff matrices are saved too, whichever
+are available.  If <em>filename</em> is <code class="docutils literal"><span class="pre">None</span></code>, name of the NMA instance
+will be used as the filename, after <code class="docutils literal"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> (white spaces) in the name
+are replaced with <code class="docutils literal"><span class="pre">&quot;_&quot;</span></code> (underscores).  Extension may differ based
+on the type of the NMA model.  For ANM models, it is <code class="file docutils literal"><span class="pre">.anm.npz</span></code>.
+Upon successful completion of saving, filename is returned. This
+function makes use of <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html#numpy.savez" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.savez()</span></code></a> function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.loadModel">
+<code class="descname">loadModel</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#loadModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.loadModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns NMA instance after loading it from file (<em>filename</em>).
+This function makes use of <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html#numpy.load" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.load()</span></code></a> function.  See
+also <a class="reference internal" href="../../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.saveModel" title="prody.dynamics.functions.saveModel"><code class="xref py py-func docutils literal"><span class="pre">saveModel()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.saveVector">
+<code class="descname">saveVector</code><span class="sig-paren">(</span><em>vector</em>, <em>filename</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#saveVector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.saveVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save <em>vector</em> data as <code class="file docutils literal"><span class="pre">filename.vec.npz</span></code>.  Upon successful
+completion of saving, filename is returned.  This function makes use
+of <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html#numpy.savez" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.savez()</span></code></a> function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.dynamics.functions.loadVector">
+<code class="descname">loadVector</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/functions.html#loadVector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.functions.loadVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="../../../../manual/reference/dynamics/mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a> instance after loading it from <em>filename</em> using
+<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html#numpy.load" title="(in NumPy v1.13)"><code class="xref py py-func docutils literal"><span class="pre">numpy.load()</span></code></a>.  See also <a class="reference internal" href="../../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.saveVector" title="prody.dynamics.functions.saveVector"><code class="xref py py-func docutils literal"><span class="pre">saveVector()</span></code></a>.</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

@@ -1,0 +1,627 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.dynamics.nmdfile &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.dynamics.nmdfile</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module defines input and output functions for NMD format.</span>
+
+<span class="sd">.. _nmd-format:</span>
+
+<span class="sd">NMD Format</span>
+<span class="sd">-------------------------------------------------------------------------------</span>
+
+<span class="sd">Description</span>
+<span class="sd">^^^^^^^^^^^</span>
+
+<span class="sd">NMD files (extension :file:`.nmd`) are plain text files that contain at</span>
+<span class="sd">least normal mode and system coordinate data.</span>
+
+<span class="sd">NMD files can be visualized using :ref:`nmwiz`.  ProDy functions</span>
+<span class="sd">:func:`.writeNMD` and :func:`.parseNMD` can be used to read and write NMD</span>
+<span class="sd">files.</span>
+
+<span class="sd">Data fields</span>
+<span class="sd">^^^^^^^^^^^</span>
+
+<span class="sd">Data fields in bold face are required. All data arrays and lists must be in a</span>
+<span class="sd">single line and items must be separated by one or more space characters.</span>
+
+<span class="sd">**coordinates**: system coordinates as a list of decimal numbers</span>
+<span class="sd">  Coordinate array is the most important line in an NMD file. All mode array</span>
+<span class="sd">  lengths must match the length of the coordinate array. Also, number of atoms</span>
+<span class="sd">  in the system is deduced from the length of the coordinate array.</span>
+
+<span class="sd">::</span>
+
+<span class="sd">  coordinates 27.552 4.354 23.629 24.179 4.807 21.907 ...</span>
+
+<span class="sd">**mode**: normal mode array as a list of decimal numbers</span>
+<span class="sd">  Optionally, mode index and a scaling factor may be provided</span>
+<span class="sd">  in the same line as a mode array. Both of these must precede the mode array.</span>
+<span class="sd">  Providing a scaling factor enables relative scaling of the mode arrows and</span>
+<span class="sd">  the amplitude of the fluctuations in animations. For NMA, scaling factors</span>
+<span class="sd">  may be chosen to be the square-root of the inverse-eigenvalue associated</span>
+<span class="sd">  with the mode. Analogously, for PCA data, scaling factor would be the</span>
+<span class="sd">  square-root of the eigenvalue.</span>
+
+<span class="sd">  If a mode line contains numbers preceding the mode array, they are evaluated</span>
+<span class="sd">  based on their type. If an integer is encountered, it is considered the mode</span>
+<span class="sd">  index. If a decimal number is encountered, it is considered the scaling</span>
+<span class="sd">  factor. Scaling factor may be the square-root of the inverse eigenvalue</span>
+<span class="sd">  if data is from an elastic network model, or the square-root of the</span>
+<span class="sd">  eigenvalue if data is from an essential dynamics (or principal component)</span>
+<span class="sd">  analysis.</span>
+
+<span class="sd">  For example, all of the following lines are valid. The first line contains</span>
+<span class="sd">  mode index and scaling factor. Second and third lines contain mode index or</span>
+<span class="sd">  scaling factor. Last line contains only the mode array.</span>
+
+<span class="sd">::</span>
+
+<span class="sd">  mode 1 2.37    0.039 0.009 0.058 0.038 -0.011 0.052  ...</span>
+<span class="sd">  mode 1    0.039 0.009 0.058 0.038 -0.011 0.052  ...</span>
+<span class="sd">  mode 2.37    0.039 0.009 0.058 0.038 -0.011 0.052  ...</span>
+<span class="sd">  mode 0.039 0.009 0.058 0.038 -0.011 0.052 0.043  ...</span>
+
+<span class="sd">*name*: name of the model</span>
+
+<span class="sd">The length of all following data fields must be equal to the number of atoms in</span>
+<span class="sd">the system. NMWiz uses such data when writing a temporary PDB files for</span>
+<span class="sd">loading coordinate data into VMD.</span>
+
+<span class="sd">*atomnames*: list of atom names</span>
+<span class="sd">  If not provided, all atom names are set to &quot;CA&quot;.</span>
+
+<span class="sd">*resnames*: list of residue names</span>
+<span class="sd">  If not provided, all residue names are set to &quot;GLY&quot;.</span>
+
+<span class="sd">*chainids*: list of chain identifiers</span>
+<span class="sd">  If not provided, all chain identifiers are set to &quot;A&quot;.</span>
+
+<span class="sd">*resids*: list of residue numbers</span>
+<span class="sd">  If not provided, residue numbers are started from 1 and incremented by one</span>
+<span class="sd">  for each atom.</span>
+
+<span class="sd">*bfactors*: list of experimental beta-factors</span>
+<span class="sd">  If not provided, all beta-factors are set to zero.</span>
+<span class="sd">  Beta-factors can be used to color the protein representation.</span>
+
+<span class="sd">NMD files may contain additional lines. Only lines that start with one of the</span>
+<span class="sd">above field names are evaluated by NMWiz.</span>
+
+
+<span class="sd">Autoload Trick</span>
+<span class="sd">^^^^^^^^^^^^^^</span>
+
+<span class="sd">By adding a special line in an NMD file, file content can be automatically</span>
+<span class="sd">loaded into VMD at startup. The first line calls a NMWiz function to load the</span>
+<span class="sd">file itself (:file:`xyzeros.nmd`).</span>
+
+<span class="sd">::</span>
+
+<span class="sd">  nmwiz_load xyzeros.nmd</span>
+<span class="sd">  coordinates 0 0 0 0 0 0  ...</span>
+<span class="sd">  mode 0.039 0.009 0.058 0.038 -0.011 0.052 ...</span>
+<span class="sd">  mode -0.045 -0.096 -0.009 -0.040 -0.076 -0.010 ...</span>
+<span class="sd">  mode 0.007 -0.044 0.080 0.015 -0.037 0.062 ...</span>
+
+
+<span class="sd">In this case, VMD must be started from the command line by typing</span>
+<span class="sd">:program:`vmd -e xyzeros.nmd`.&quot;&quot;&quot;</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;parseNMD&#39;</span><span class="p">,</span> <span class="s1">&#39;writeNMD&#39;</span><span class="p">,</span> <span class="s1">&#39;pathVMD&#39;</span><span class="p">,</span> <span class="s1">&#39;getVMDpath&#39;</span><span class="p">,</span> <span class="s1">&#39;setVMDpath&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;viewNMDinVMD&#39;</span><span class="p">]</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">abspath</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">splitext</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span><span class="p">,</span> <span class="n">PY3K</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">openFile</span><span class="p">,</span> <span class="n">isExecutable</span><span class="p">,</span> <span class="n">which</span><span class="p">,</span> <span class="n">PLATFORM</span><span class="p">,</span> <span class="n">addext</span>
+
+<span class="kn">from</span> <span class="nn">.nma</span> <span class="kn">import</span> <span class="n">NMA</span>
+<span class="kn">from</span> <span class="nn">.anm</span> <span class="kn">import</span> <span class="n">ANM</span>
+<span class="kn">from</span> <span class="nn">.gnm</span> <span class="kn">import</span> <span class="n">GNM</span><span class="p">,</span> <span class="n">ZERO</span>
+<span class="kn">from</span> <span class="nn">.pca</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">.mode</span> <span class="kn">import</span> <span class="n">Vector</span><span class="p">,</span> <span class="n">Mode</span>
+<span class="kn">from</span> <span class="nn">.modeset</span> <span class="kn">import</span> <span class="n">ModeSet</span>
+
+
+<div class="viewcode-block" id="pathVMD"><a class="viewcode-back" href="../../../manual/reference/dynamics/nmdfile.html#prody.dynamics.nmdfile.pathVMD">[docs]</a><span class="k">def</span> <span class="nf">pathVMD</span><span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns VMD path, or set it to be a user specified *path*.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;vmd&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">isExecutable</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">path</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;VMD path is not set by user, looking for it.&#39;</span><span class="p">)</span>
+
+            <span class="n">vmdbin</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="n">vmddir</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="k">if</span> <span class="n">PLATFORM</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">PY3K</span><span class="p">:</span>
+                    <span class="kn">import</span> <span class="nn">winreg</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="kn">import</span> <span class="nn">_winreg</span> <span class="kn">as</span> <span class="nn">winreg</span>  <span class="c1"># PY3K: OK</span>
+                <span class="k">for</span> <span class="n">vmdversion</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;1.8.7&#39;</span><span class="p">,</span> <span class="s1">&#39;1.9&#39;</span><span class="p">,</span> <span class="s1">&#39;1.9.1&#39;</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">key</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">OpenKey</span><span class="p">(</span><span class="n">winreg</span><span class="o">.</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="p">,</span>
+                                <span class="s1">&#39;Software</span><span class="se">\\</span><span class="s1">University of Illinois</span><span class="se">\\</span><span class="s1">VMD</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="o">+</span>
+                                <span class="n">vmdversion</span><span class="p">)</span>
+                        <span class="n">vmddir</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">QueryValueEx</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;VMDDIR&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">vmdbin</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">vmddir</span><span class="p">,</span> <span class="s1">&#39;vmd.exe&#39;</span><span class="p">)</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">pass</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">key</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">OpenKey</span><span class="p">(</span><span class="n">winreg</span><span class="o">.</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="p">,</span>
+                    <span class="s1">&#39;Software</span><span class="se">\\</span><span class="s1">WOW6432node</span><span class="se">\\</span><span class="s1">University of Illinois</span><span class="se">\\</span><span class="s1">VMD</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="o">+</span>
+                    <span class="n">vmdversion</span><span class="p">)</span>
+                        <span class="n">vmddir</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">QueryValueEx</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;VMDDIR&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">vmdbin</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">vmddir</span><span class="p">,</span> <span class="s1">&#39;vmd.exe&#39;</span><span class="p">)</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">vmdbin</span> <span class="o">=</span> <span class="n">which</span><span class="p">(</span><span class="s1">&#39;vmd&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">False</span><span class="p">:</span>
+                    <span class="n">pipe</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;which vmd&#39;</span><span class="p">)</span>
+                    <span class="n">vmdbin</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">next</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="n">vmdfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">vmdbin</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">vmdfile</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;defaultvmddir=&#39;</span><span class="p">):</span>
+                            <span class="n">vmddir</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                            <span class="k">break</span>
+                    <span class="n">vmdfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">isExecutable</span><span class="p">(</span><span class="n">vmdbin</span><span class="p">):</span>
+                <span class="n">setVMDpath</span><span class="p">(</span><span class="n">vmdbin</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">vmdbin</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">isExecutable</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="n">SETTINGS</span><span class="p">[</span><span class="s1">&#39;vmd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span>
+            <span class="n">SETTINGS</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;VMD path is set to &#39;{0}&#39;.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="s1">&#39;{0} is not executable.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;specify a single path string&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="getVMDpath"><a class="viewcode-back" href="../../../manual/reference/dynamics/nmdfile.html#prody.dynamics.nmdfile.getVMDpath">[docs]</a><span class="k">def</span> <span class="nf">getVMDpath</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Deprecated for removal in v1.5, use :func:`pathVMD` instead.&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">pathVMD</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="setVMDpath"><a class="viewcode-back" href="../../../manual/reference/dynamics/nmdfile.html#prody.dynamics.nmdfile.setVMDpath">[docs]</a><span class="k">def</span> <span class="nf">setVMDpath</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Deprecated for removal in v1.5, use :func:`pathVMD` instead.&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">pathVMD</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
+
+
+<span class="n">NMD_LABEL_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;atomnames&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;resnames&#39;</span><span class="p">:</span> <span class="s1">&#39;resname&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;resnums&#39;</span><span class="p">:</span> <span class="s1">&#39;resnum&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;resids&#39;</span><span class="p">:</span> <span class="s1">&#39;resnum&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;chainids&#39;</span><span class="p">:</span> <span class="s1">&#39;chain&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;bfactors&#39;</span><span class="p">:</span> <span class="s1">&#39;beta&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;segnames&#39;</span><span class="p">:</span> <span class="s1">&#39;segment&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;segments&#39;</span><span class="p">:</span> <span class="s1">&#39;segment&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="parseNMD"><a class="viewcode-back" href="../../../manual/reference/dynamics/nmdfile.html#prody.dynamics.nmdfile.parseNMD">[docs]</a><span class="k">def</span> <span class="nf">parseNMD</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns :class:`.NMA` and :class:`.AtomGroup` instances storing data</span>
+<span class="sd">    parsed from *filename* in :file:`.nmd` format.  Type of :class:`.NMA`</span>
+<span class="sd">    instance, e.g. :class:`.PCA`, :class:`.ANM`, or :class:`.GNM` will</span>
+<span class="sd">    be determined based on mode data.&quot;&quot;&quot;</span>
+
+    <span class="k">assert</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">NMA</span><span class="p">),</span> <span class="s1">&#39;type must be NMA, ANM, GNM, or PCA&#39;</span>
+
+    <span class="n">atomic</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">atomic</span><span class="o">.</span><span class="n">update</span><span class="p">([(</span><span class="n">label</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">NMD_LABEL_MAP</span><span class="p">])</span>
+    <span class="n">atomic</span><span class="p">[</span><span class="s1">&#39;coordinates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">atomic</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">modes</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">nmd</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nmd</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">label</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+            <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="s1">&#39;mode&#39;</span><span class="p">:</span>
+                <span class="n">modes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">atomic</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">atomic</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">atomic</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Data label {0} is found more than once in &#39;</span>
+                                <span class="s1">&#39;{1}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">label</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">atomic</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="n">splitext</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ag</span> <span class="o">=</span> <span class="n">AtomGroup</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">dof</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="n">line</span><span class="p">,</span> <span class="n">coords</span> <span class="o">=</span> <span class="n">atomic</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;coordinates&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">coords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="n">dof</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dof</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Coordinate data in {0} at line {1} is corrupt &#39;</span>
+                        <span class="s1">&#39;and will be omitted.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">line</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">dof</span> <span class="o">/</span> <span class="mi">3</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+            <span class="n">ag</span><span class="o">.</span><span class="n">setCoords</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">ATOMIC_FIELDS</span>
+
+    <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">atomic</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">line</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">n_atoms</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">n_atoms</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">dof</span> <span class="o">=</span> <span class="n">n_atoms</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">!=</span> <span class="n">n_atoms</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Data with label {0} in {1} at line {2} is &#39;</span>
+                        <span class="s1">&#39;corrupt, expected {2} values, parsed {3}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="nb">repr</span><span class="p">(</span><span class="n">label</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+            <span class="k">continue</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">NMD_LABEL_MAP</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="n">label</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">modes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">ag</span>
+
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">modes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="n">is3d</span> <span class="o">=</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="n">n_atoms</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">dof</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">dof</span> <span class="o">=</span> <span class="n">length</span> <span class="o">-</span> <span class="p">(</span><span class="n">length</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">is3d</span><span class="p">:</span>  <span class="c1"># GNM</span>
+        <span class="n">dof</span> <span class="o">=</span> <span class="n">n_atoms</span>
+
+    <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dof</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">modes</span><span class="p">)))</span>
+    <span class="n">less</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">eigvals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">modes</span><span class="p">):</span>
+        <span class="n">mode</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span> <span class="o">-</span> <span class="n">dof</span>
+        <span class="k">if</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Mode data in {0} at line {1} is corrupt.&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">line</span><span class="p">))</span>
+            <span class="k">continue</span>
+        <span class="n">array</span><span class="p">[:,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">less</span><span class="p">]</span> <span class="o">=</span> <span class="n">mode</span><span class="p">[</span><span class="n">diff</span><span class="p">:]</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">eigvals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mode</span><span class="p">[:</span><span class="n">diff</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">ag</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">eigvals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">eigvals</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Failed to parse eigenvalues from {0}.&#39;</span>
+                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+
+    <span class="k">if</span> <span class="n">eigvals</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Failed to parse eigenvalues from {0}.&#39;</span>
+                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+        <span class="n">eigvals</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">elif</span> <span class="n">eigvals</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">eigvals</span> <span class="o">%</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Failed to parse eigenvalues from {0}.&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+            <span class="n">eigvals</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">eigvals</span> <span class="o">=</span> <span class="n">eigvals</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">eigvals</span> <span class="o">=</span> <span class="n">eigvals</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="k">if</span> <span class="n">is3d</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">eigvals</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">eigvals</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">eigvals</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+            <span class="n">nma</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nma</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nma</span> <span class="o">=</span> <span class="n">GNM</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">!=</span> <span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">array</span><span class="p">[:,</span> <span class="p">:</span><span class="n">count</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">nma</span><span class="o">.</span><span class="n">setEigens</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">eigvals</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nma</span><span class="p">,</span> <span class="n">ag</span></div>
+
+
+<div class="viewcode-block" id="writeNMD"><a class="viewcode-back" href="../../../manual/reference/dynamics/nmdfile.html#prody.dynamics.nmdfile.writeNMD">[docs]</a><span class="k">def</span> <span class="nf">writeNMD</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">modes</span><span class="p">,</span> <span class="n">atoms</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns *filename* that contains *modes* and *atoms* data in NMD format</span>
+<span class="sd">    described in :ref:`nmd-format`.  :file:`.nmd` extension is appended to</span>
+<span class="sd">    filename, if it does not have an extension.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">       #. This function skips modes with zero eigenvalues.</span>
+<span class="sd">       #. If a :class:`.Vector` instance is given, it will be normalized</span>
+<span class="sd">          before it is written. It&#39;s length before normalization will be</span>
+<span class="sd">          written as the scaling factor of the vector.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="p">(</span><span class="n">NMA</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">,</span> <span class="n">Mode</span><span class="p">,</span> <span class="n">Vector</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;modes must be NMA, ModeSet, Mode, or Vector, &#39;</span>
+                        <span class="s1">&#39;not {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">modes</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">modes</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">!=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;number of atoms do not match&#39;</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">addext</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;.nmd&#39;</span><span class="p">),</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+    <span class="c1">#out.write(&#39;#!{0} -e\n&#39;.format(VMDPATH))</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;nmwiz_load {0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abspath</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">modes</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">atoms</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;name {0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordinates could not be retrieved from atoms&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">coords</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;atom coordinates are not set&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getNames</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;atomnames {0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;resnames {0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getResnums</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;resids &#39;</span><span class="p">)</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">tofile</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getChids</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;chainids {0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getSegnames</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;segnames {0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getBetas</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;bfactors &#39;</span><span class="p">)</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">tofile</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;{0:.3f}&#39;</span><span class="o">.</span><span class="n">format</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;coordinates &#39;</span><span class="p">)</span>
+    <span class="n">coords</span><span class="o">.</span><span class="n">tofile</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">Vector</span><span class="p">):</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;mode 1 {0:.2f} &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">modes</span><span class="p">)))</span>
+        <span class="n">modes</span><span class="o">.</span><span class="n">getNormed</span><span class="p">()</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span><span class="o">.</span><span class="n">tofile</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">Mode</span><span class="p">):</span>
+            <span class="n">modes</span> <span class="o">=</span> <span class="p">[</span><span class="n">modes</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">mode</span> <span class="ow">in</span> <span class="n">modes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">mode</span><span class="o">.</span><span class="n">getEigval</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">ZERO</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;mode {0} {1:.2f} &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                       <span class="n">mode</span><span class="o">.</span><span class="n">getIndex</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">mode</span><span class="o">.</span><span class="n">getVariance</span><span class="p">()</span><span class="o">**</span><span class="mf">0.5</span><span class="p">))</span>
+            <span class="n">arr</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span><span class="o">.</span><span class="n">tofile</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;No normal mode data was written. &#39;</span>
+                       <span class="s1">&#39;Given modes might have 0 eigenvalues.&#39;</span><span class="p">)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">filename</span></div>
+
+
+<div class="viewcode-block" id="viewNMDinVMD"><a class="viewcode-back" href="../../../manual/reference/dynamics/nmdfile.html#prody.dynamics.nmdfile.viewNMDinVMD">[docs]</a><span class="k">def</span> <span class="nf">viewNMDinVMD</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Start VMD in the current Python session and load NMD data.&quot;&quot;&quot;</span>
+
+    <span class="n">vmd</span> <span class="o">=</span> <span class="n">pathVMD</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">vmd</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;{0} -e {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vmd</span><span class="p">,</span> <span class="n">abspath</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

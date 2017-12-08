@@ -1,0 +1,324 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>How to Start &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../index.html">
+        <img src="../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">How to Start</a><ul>
+<li><a class="reference internal" href="#using-prody">Using ProDy</a><ul>
+<li><a class="reference internal" href="#python-for-beginners">Python for beginners</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interactive-usage">Interactive Usage</a><ul>
+<li><a class="reference internal" href="#start-python-shell">Start Python shell</a></li>
+<li><a class="reference internal" href="#import-from-prody">Import from ProDy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-documentation">Using Documentation</a><ul>
+<li><a class="reference internal" href="#searching-documentation">Searching documentation</a></li>
+<li><a class="reference internal" href="#copying-code-snippets">Copying code snippets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="how-to-start">
+<h1>How to Start<a class="headerlink" href="#how-to-start" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-prody">
+<h2>Using ProDy<a class="headerlink" href="#using-prody" title="Permalink to this headline">¶</a></h2>
+<p>ProDy can be used in a number of ways:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>interactively in a Python shell,</li>
+<li>as a command line program via <a class="reference internal" href="../../manual/apps/prody/index.html#prody-apps"><span>ProDy Applications</span></a>,</li>
+<li>from within VMD via <span class="xref std std-ref">nmwiz</span>,</li>
+<li>or as a toolkit for developing new software.</li>
+</ol>
+</div></blockquote>
+<div class="section" id="python-for-beginners">
+<h3>Python for beginners<a class="headerlink" href="#python-for-beginners" title="Permalink to this headline">¶</a></h3>
+<p>Familiarity with Python programming language will help when using <em>ProDy</em>.  If
+you are new to Python, or to programming, you may start with one of the
+following tutorials:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://docs.python.org/tutorial/">The Python Tutorial</a></li>
+<li><a class="reference external" href="http://scipy-lectures.github.com/">Python Scientific Lecture Notes</a></li>
+<li><a class="reference external" href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.0030199">A Primer on Python for Life Science Researchers</a></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="interactive-usage">
+<h2>Interactive Usage<a class="headerlink" href="#interactive-usage" title="Permalink to this headline">¶</a></h2>
+<p>In the rest of this tutorial, we assume that you will be typing commands in a
+Python shell.  <em>ProDy</em> will automatically download PDB files and save them to
+current working directory, so you may want start Python from inside of a
+directory that you make for this tutorial:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ mkdir prody_tutorial
+$ cd prody_tutorial
+</pre></div>
+</div>
+<div class="section" id="start-python-shell">
+<h3>Start Python shell<a class="headerlink" href="#start-python-shell" title="Permalink to this headline">¶</a></h3>
+<p>For best interactive usage experience, we strongly recommend that you use
+<a class="reference external" href="http://ipython.org">IPython</a> instead of the standard Python shell. IPython shell provides many
+user-friendly features, such as dynamic introspection and help, and also
+convenient integration of <a class="reference external" href="http://www.numpy.org">Numpy</a> and <a class="reference external" href="http://matplotlib.org">Matplotlib</a>.</p>
+<p>If you have installed IPython, type in:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ ipython
+</pre></div>
+</div>
+<p>If you also installed Matplotlib, use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ ipython --pylab
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">--pylab</span></code> option will import Matplotlib and Numpy automatically, and is
+equivalent to the following:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="n">ion</span><span class="p">()</span>  <span class="c1"># turn interactive mode on</span>
+</pre></div>
+</div>
+<p>If you don&#8217;t have IPython yet, use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ python
+</pre></div>
+</div>
+<p>On Windows, after you make the directory, make a <code class="kbd docutils literal"><span class="pre">Shift+right</span> <span class="pre">click</span></code> in it
+in Windows Explorer and then select <span class="menuselection">Open command window here</span>
+option.  Then start <code class="docutils literal"><span class="pre">C:\Python27\python.exe</span></code>.  Alternatively, you may
+run <strong class="program">IDLE (Python GUI)</strong> or <strong class="program">Python (command line)</strong> from the
+start menu.</p>
+</div>
+<div class="section" id="import-from-prody">
+<h3>Import from ProDy<a class="headerlink" href="#import-from-prody" title="Permalink to this headline">¶</a></h3>
+<p>We import all <em>ProDy</em> functions and classes into the current namespace as
+follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>There are other ways to import <em>ProDy</em> contents.  You may use <code class="docutils literal"><span class="pre">import</span> <span class="pre">prody</span> <span class="pre">as</span>
+<span class="pre">pd</span></code> and prefix all functions calls with <code class="docutils literal"><span class="pre">pd.</span></code>, if you prefer not to
+overcrowd the target namespace.  Alternatively, if you want to use contents of
+a specific module, such as <code class="xref py py-mod docutils literal"><span class="pre">proteins</span></code>, you can use
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">prody.proteins</span> <span class="pre">import</span> <span class="pre">*</span></code>.  You should, however, avoid using
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">prody.proteins.pdbfile</span> <span class="pre">import</span> <span class="pre">*</span></code>, because location of methods
+in submodules may change without notice.</p>
+</div>
+</div>
+<div class="section" id="using-documentation">
+<h2>Using Documentation<a class="headerlink" href="#using-documentation" title="Permalink to this headline">¶</a></h2>
+<p>ProDy documentation is quite comprehensive and you can access it in a number of
+different ways.  In interactive sessions, API reference can be accessed using
+the built-in Python function <a class="reference external" href="http://docs.python.org/library/functions.html#help" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">help()</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">select</span><span class="p">)</span>   <span class="c1"># help on select module</span>
+<span class="n">help</span><span class="p">(</span><span class="n">fetchPDB</span><span class="p">)</span> <span class="c1"># help on parsePDB function</span>
+</pre></div>
+</div>
+<p>This function prints documentation on screen, and you will need to type <code class="docutils literal"><span class="pre">q</span></code>
+to exit from help view.  If you are using the interactive Python shell
+(IPython), you can also get help using <code class="docutils literal"><span class="pre">?</span></code>:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="o">?</span> fetchPDB
+<span class="go">Signature: fetchPDB(*pdb, **kwargs)</span>
+<span class="go">Docstring:</span>
+<span class="go">Returns path(s) to PDB file(s) for specified *pdb* identifier(s).  Files</span>
+<span class="go">will be sought in user specified *folder* or current working director, and</span>
+<span class="go">then in local PDB folder and mirror, if they are available.  If *copy*</span>
+<span class="go">is set **True**, files will be copied into *folder*.  If *compressed* is</span>
+<span class="go">**False**, all files will be decompressed.  See :func:`pathPDBFolder` and</span>
+<span class="go">:func:`pathPDBMirror` for managing local resources, :func:`.fetchPDBviaFTP`</span>
+<span class="go">and :func:`.fetchPDBviaFTP` for downloading files from PDB servers.</span>
+<span class="go">File:      ~/anaconda2/lib/python2.7/site-packages/prody/proteins/localpdb.py</span>
+<span class="go">Type:      function</span>
+</pre></div>
+</div>
+<div class="section" id="searching-documentation">
+<h3>Searching documentation<a class="headerlink" href="#searching-documentation" title="Permalink to this headline">¶</a></h3>
+<p>You can search entire documentation, including manual and tutorial pages,
+by typing in a keyword, function, or class name.  Try searching for
+<em>selections</em> to get to <a class="reference internal" href="../../manual/reference/atomic/select.html#selections"><span>Atom Selections</span></a>, for example.</p>
+<img alt="Searching ProDy documentation" class="align-center" src="../../_images/toolbox.png" />
+</div>
+<div class="section" id="copying-code-snippets">
+<h3>Copying code snippets<a class="headerlink" href="#copying-code-snippets" title="Permalink to this headline">¶</a></h3>
+<p>When reading online documentation, you can use <span class="guilabel">Show code</span>
+button on the right hand side panel to display only code snippets.
+From this view, you can copy code directly into a file, i.e. click
+<span class="guilabel">Select</span> and then <code class="kbd docutils literal"><span class="pre">Ctrl+C</span></code> to have the text in your clipboard.
+To return to the documentation click the <span class="guilabel">Close</span> button.</p>
+<img alt="Showing code examples" class="align-center" src="../../_images/showcode.png" />
+</div>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Protein Structure &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">Protein Structure</a><ul>
+<li><a class="reference internal" href="#pdb-resources">PDB resources</a></li>
+<li><a class="reference internal" href="#blast-search-pdb">Blast search PDB</a></li>
+<li><a class="reference internal" href="#parse-write-pdb-files">Parse/write PDB files</a></li>
+<li><a class="reference internal" href="#parse-mmcif-files">Parse mmCIF files</a></li>
+<li><a class="reference internal" href="#quick-visualization">Quick visualization</a></li>
+<li><a class="reference internal" href="#edit-structures">Edit structures</a></li>
+<li><a class="reference internal" href="#pdb-header-data">PDB header data</a></li>
+<li><a class="reference internal" href="#ligand-data">Ligand data</a></li>
+<li><a class="reference internal" href="#compare-align-chains">Compare/align chains</a></li>
+<li><a class="reference internal" href="#execute-dssp">Execute DSSP</a></li>
+<li><a class="reference internal" href="#execute-stride">Execute STRIDE</a></li>
+<li><a class="reference internal" href="#execute-emd">Execute EMD</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.proteins">
+<span id="protein-structure"></span><span id="proteins"></span><h1>Protein Structure<a class="headerlink" href="#module-prody.proteins" title="Permalink to this headline">¶</a></h1>
+<p>This module defines classes and functions to fetch, parse, and write
+structural data files, execute structural analysis programs, and to access
+and search structural databases, e.g. <a class="reference external" href="http://wwpdb.org">ProteinDataBank</a>.</p>
+<div class="section" id="pdb-resources">
+<h2>PDB resources<a class="headerlink" href="#pdb-resources" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.fetchPDB" title="prody.proteins.localpdb.fetchPDB"><code class="xref py py-func docutils literal"><span class="pre">fetchPDB()</span></code></a> - retrieve PDB files</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/wwpdb.html#prody.proteins.wwpdb.fetchPDBviaFTP" title="prody.proteins.wwpdb.fetchPDBviaFTP"><code class="xref py py-func docutils literal"><span class="pre">fetchPDBviaFTP()</span></code></a> - download PDB/PDBML/mmCIF files</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/wwpdb.html#prody.proteins.wwpdb.fetchPDBviaHTTP" title="prody.proteins.wwpdb.fetchPDBviaHTTP"><code class="xref py py-func docutils literal"><span class="pre">fetchPDBviaHTTP()</span></code></a> - download PDB files</li>
+</ul>
+</div></blockquote>
+<p>You can use following functions to manage PDB file resources:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.pathPDBFolder" title="prody.proteins.localpdb.pathPDBFolder"><code class="xref py py-func docutils literal"><span class="pre">pathPDBFolder()</span></code></a> - local folder for storing PDB files</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.pathPDBMirror" title="prody.proteins.localpdb.pathPDBMirror"><code class="xref py py-func docutils literal"><span class="pre">pathPDBMirror()</span></code></a> - local PDB mirror path</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/wwpdb.html#prody.proteins.wwpdb.wwPDBServer" title="prody.proteins.wwpdb.wwPDBServer"><code class="xref py py-func docutils literal"><span class="pre">wwPDBServer()</span></code></a> - set wwPDB FTP/HTTP server for downloads</li>
+</ul>
+</div></blockquote>
+<p>Following functions can be used to handle local PDB files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.findPDBFiles" title="prody.proteins.localpdb.findPDBFiles"><code class="xref py py-func docutils literal"><span class="pre">findPDBFiles()</span></code></a> - return a dictionary containing files in a path</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.iterPDBFilenames" title="prody.proteins.localpdb.iterPDBFilenames"><code class="xref py py-func docutils literal"><span class="pre">iterPDBFilenames()</span></code></a> - yield file names in a path or local PDB mirror</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="blast-search-pdb">
+<h2>Blast search PDB<a class="headerlink" href="#blast-search-pdb" title="Permalink to this headline">¶</a></h2>
+<p>The following are for blast searching PDB content.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/blastpdb.html#prody.proteins.blastpdb.blastPDB" title="prody.proteins.blastpdb.blastPDB"><code class="xref py py-func docutils literal"><span class="pre">blastPDB()</span></code></a> - blast search NCBI PDB database</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/blastpdb.html#prody.proteins.blastpdb.PDBBlastRecord" title="prody.proteins.blastpdb.PDBBlastRecord"><code class="xref py py-class docutils literal"><span class="pre">PDBBlastRecord</span></code></a> - store/evaluate NCBI PDB blast search results</li>
+</ul>
+</div></blockquote>
+<p>PDB clusters biopolymer chains using blast weekly.  These clusters can be
+retrieved using the following functions.  Using cluster data is as good
+as blast searching PDB most of the time and incredibly faster always.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbclusters.html#prody.proteins.pdbclusters.listPDBCluster" title="prody.proteins.pdbclusters.listPDBCluster"><code class="xref py py-func docutils literal"><span class="pre">listPDBCluster()</span></code></a> - get list of identifiers in a PDB sequence cluster</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbclusters.html#prody.proteins.pdbclusters.loadPDBClusters" title="prody.proteins.pdbclusters.loadPDBClusters"><code class="xref py py-func docutils literal"><span class="pre">loadPDBClusters()</span></code></a> - load PDB clusters into memory</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbclusters.html#prody.proteins.pdbclusters.fetchPDBClusters" title="prody.proteins.pdbclusters.fetchPDBClusters"><code class="xref py py-func docutils literal"><span class="pre">fetchPDBClusters()</span></code></a> - retrieve PDB sequence cluster data from wwPDB</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="parse-write-pdb-files">
+<h2>Parse/write PDB files<a class="headerlink" href="#parse-write-pdb-files" title="Permalink to this headline">¶</a></h2>
+<p>Following ProDy functions are for parsing and writing <code class="file docutils literal"><span class="pre">.pdb</span></code> files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> - parse <code class="file docutils literal"><span class="pre">.pdb</span></code> formated file</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDBStream" title="prody.proteins.pdbfile.parsePDBStream"><code class="xref py py-func docutils literal"><span class="pre">parsePDBStream()</span></code></a> - parse <code class="file docutils literal"><span class="pre">.pdb</span></code> formated stream</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.writePDB" title="prody.proteins.pdbfile.writePDB"><code class="xref py py-func docutils literal"><span class="pre">writePDB()</span></code></a> - write <code class="file docutils literal"><span class="pre">.pdb</span></code> formatted file</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.writePDBStream" title="prody.proteins.pdbfile.writePDBStream"><code class="xref py py-func docutils literal"><span class="pre">writePDBStream()</span></code></a>  write <code class="file docutils literal"><span class="pre">.pdb</span></code> formated stream</li>
+</ul>
+</div></blockquote>
+<p>Since <code class="file docutils literal"><span class="pre">.pqr</span></code> format is similar to <code class="file docutils literal"><span class="pre">.pdb</span></code> format, following
+functions come as bonus features:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/functions.html#prody.proteins.functions.writePQR" title="prody.proteins.functions.writePQR"><code class="xref py py-func docutils literal"><span class="pre">writePQR()</span></code></a> - write atomic data to a file in <code class="file docutils literal"><span class="pre">.pqr</span></code> format</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePQR" title="prody.proteins.pdbfile.parsePQR"><code class="xref py py-func docutils literal"><span class="pre">parsePQR()</span></code></a> - parse atomic data from files in <code class="file docutils literal"><span class="pre">.pqr</span></code> format</li>
+</ul>
+</div></blockquote>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Atom data (coordinates, atom names, residue names, etc.) parsed from
+PDB/PSF/PQR/mmCIF files are stored in <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances.
+See <a class="reference internal" href="../../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a> module documentation for more details.</p>
+</div>
+</div>
+<div class="section" id="parse-mmcif-files">
+<h2>Parse mmCIF files<a class="headerlink" href="#parse-mmcif-files" title="Permalink to this headline">¶</a></h2>
+<p>Following ProDy functions are for parsing <code class="file docutils literal"><span class="pre">.cif</span></code> files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-func docutils literal"><span class="pre">parseCIF()</span></code> - parse <code class="file docutils literal"><span class="pre">.cif</span></code> formated file</li>
+<li><code class="xref py py-func docutils literal"><span class="pre">parseCIFStream()</span></code> - parse <code class="file docutils literal"><span class="pre">.cif</span></code> formated stream</li>
+</ul>
+</div></blockquote>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Atom data (coordinates, atom names, residue names, etc.) parsed from
+PDB/PSF/PQR/mmCIF files are stored in <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances.
+See <a class="reference internal" href="../../../../manual/reference/atomic/index.html#module-prody.atomic" title="prody.atomic"><code class="xref py py-mod docutils literal"><span class="pre">atomic</span></code></a> module documentation for more details.</p>
+</div>
+</div>
+<div class="section" id="quick-visualization">
+<h2>Quick visualization<a class="headerlink" href="#quick-visualization" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../../../manual/reference/proteins/functions.html#prody.proteins.functions.showProtein" title="prody.proteins.functions.showProtein"><code class="xref py py-func docutils literal"><span class="pre">showProtein()</span></code></a> function can be used to take a quick look at protein
+structures.</p>
+</div>
+<div class="section" id="edit-structures">
+<h2>Edit structures<a class="headerlink" href="#edit-structures" title="Permalink to this headline">¶</a></h2>
+<p>Following functions allow editing structures using structural data from PDB
+header records:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/header.html#prody.proteins.header.assignSecstr" title="prody.proteins.header.assignSecstr"><code class="xref py py-func docutils literal"><span class="pre">assignSecstr()</span></code></a> - add secondary structure data from header to atoms</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/header.html#prody.proteins.header.buildBiomolecules" title="prody.proteins.header.buildBiomolecules"><code class="xref py py-func docutils literal"><span class="pre">buildBiomolecules()</span></code></a> - build biomolecule from header records</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="pdb-header-data">
+<h2>PDB header data<a class="headerlink" href="#pdb-header-data" title="Permalink to this headline">¶</a></h2>
+<p>Use the following to parse and access header data in PDB files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/header.html#prody.proteins.header.parsePDBHeader" title="prody.proteins.header.parsePDBHeader"><code class="xref py py-func docutils literal"><span class="pre">parsePDBHeader()</span></code></a> - parse header data from <code class="file docutils literal"><span class="pre">.pdb</span></code> files</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/header.html#prody.proteins.header.Chemical" title="prody.proteins.header.Chemical"><code class="xref py py-class docutils literal"><span class="pre">Chemical</span></code></a> - store PDB chemical (heterogen) component data</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/header.html#prody.proteins.header.Polymer" title="prody.proteins.header.Polymer"><code class="xref py py-class docutils literal"><span class="pre">Polymer</span></code></a> - store PDB polymer (macromolecule) component data</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/header.html#prody.proteins.header.DBRef" title="prody.proteins.header.DBRef"><code class="xref py py-class docutils literal"><span class="pre">DBRef</span></code></a> - store polymer sequence database reference records</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="ligand-data">
+<h2>Ligand data<a class="headerlink" href="#ligand-data" title="Permalink to this headline">¶</a></h2>
+<p>Following function can be used to fetch meta data on PDB ligands:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/pdbligands.html#prody.proteins.pdbligands.fetchPDBLigand" title="prody.proteins.pdbligands.fetchPDBLigand"><code class="xref py py-func docutils literal"><span class="pre">fetchPDBLigand()</span></code></a> - retrieve ligand from Ligand-Expo</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="compare-align-chains">
+<h2>Compare/align chains<a class="headerlink" href="#compare-align-chains" title="Permalink to this headline">¶</a></h2>
+<p>Following functions can be used to match, align, and map polypeptide chains:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.matchChains" title="prody.proteins.compare.matchChains"><code class="xref py py-func docutils literal"><span class="pre">matchChains()</span></code></a> - finds matching chains in two protein structures</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.matchAlign" title="prody.proteins.compare.matchAlign"><code class="xref py py-func docutils literal"><span class="pre">matchAlign()</span></code></a> - finds best matching chains and aligns structures</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.mapOntoChain" title="prody.proteins.compare.mapOntoChain"><code class="xref py py-func docutils literal"><span class="pre">mapOntoChain()</span></code></a> - maps chains in a structure onto a reference chain</li>
+</ul>
+</div></blockquote>
+<p>Following functions can be used to adjust alignment parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.getAlignmentMethod" title="prody.proteins.compare.getAlignmentMethod"><code class="xref py py-func docutils literal"><span class="pre">getAlignmentMethod()</span></code></a>, <a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.setAlignmentMethod" title="prody.proteins.compare.setAlignmentMethod"><code class="xref py py-func docutils literal"><span class="pre">setAlignmentMethod()</span></code></a></li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.getMatchScore" title="prody.proteins.compare.getMatchScore"><code class="xref py py-func docutils literal"><span class="pre">getMatchScore()</span></code></a>, <a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.setMatchScore" title="prody.proteins.compare.setMatchScore"><code class="xref py py-func docutils literal"><span class="pre">setMatchScore()</span></code></a></li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.getMismatchScore" title="prody.proteins.compare.getMismatchScore"><code class="xref py py-func docutils literal"><span class="pre">getMismatchScore()</span></code></a>, <a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.setMismatchScore" title="prody.proteins.compare.setMismatchScore"><code class="xref py py-func docutils literal"><span class="pre">setMismatchScore()</span></code></a></li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.getGapPenalty" title="prody.proteins.compare.getGapPenalty"><code class="xref py py-func docutils literal"><span class="pre">getGapPenalty()</span></code></a>, <a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.setGapPenalty" title="prody.proteins.compare.setGapPenalty"><code class="xref py py-func docutils literal"><span class="pre">setGapPenalty()</span></code></a></li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.getGapExtPenalty" title="prody.proteins.compare.getGapExtPenalty"><code class="xref py py-func docutils literal"><span class="pre">getGapExtPenalty()</span></code></a>, <a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.setGapExtPenalty" title="prody.proteins.compare.setGapExtPenalty"><code class="xref py py-func docutils literal"><span class="pre">setGapExtPenalty()</span></code></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="execute-dssp">
+<h2>Execute DSSP<a class="headerlink" href="#execute-dssp" title="Permalink to this headline">¶</a></h2>
+<p>Following functions can be used to execute DSSP structural analysis program
+and/or parse results:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/dssp.html#prody.proteins.dssp.execDSSP" title="prody.proteins.dssp.execDSSP"><code class="xref py py-func docutils literal"><span class="pre">execDSSP()</span></code></a> - execute <strong class="program">dssp</strong></li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/dssp.html#prody.proteins.dssp.performDSSP" title="prody.proteins.dssp.performDSSP"><code class="xref py py-func docutils literal"><span class="pre">performDSSP()</span></code></a> - execute <strong class="program">dssp</strong> and parse results</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/dssp.html#prody.proteins.dssp.parseDSSP" title="prody.proteins.dssp.parseDSSP"><code class="xref py py-func docutils literal"><span class="pre">parseDSSP()</span></code></a> - parse structural data from <strong class="program">dssp</strong> output</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="execute-stride">
+<h2>Execute STRIDE<a class="headerlink" href="#execute-stride" title="Permalink to this headline">¶</a></h2>
+<p>Following functions can be used to execute STRIDE structural analysis program
+and/or parse results:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/stride.html#prody.proteins.stride.execSTRIDE" title="prody.proteins.stride.execSTRIDE"><code class="xref py py-func docutils literal"><span class="pre">execSTRIDE()</span></code></a> - execute <strong class="program">stride</strong></li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/stride.html#prody.proteins.stride.performSTRIDE" title="prody.proteins.stride.performSTRIDE"><code class="xref py py-func docutils literal"><span class="pre">performSTRIDE()</span></code></a> - execute <strong class="program">stride</strong> and parse results</li>
+<li><a class="reference internal" href="../../../../manual/reference/proteins/stride.html#prody.proteins.stride.parseSTRIDE" title="prody.proteins.stride.parseSTRIDE"><code class="xref py py-func docutils literal"><span class="pre">parseSTRIDE()</span></code></a> - parse structural data from <strong class="program">stride</strong> output</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="execute-emd">
+<h2>Execute EMD<a class="headerlink" href="#execute-emd" title="Permalink to this headline">¶</a></h2>
+<p>Following functions can be used to execute EMDMAP structural analysis program
+and/or parse results:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/proteins/stride.html#prody.proteins.stride.parseSTRIDE" title="prody.proteins.stride.parseSTRIDE"><code class="xref py py-func docutils literal"><span class="pre">parseSTRIDE()</span></code></a> - parse structural data from <strong class="program">EMDMAP</strong> output</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

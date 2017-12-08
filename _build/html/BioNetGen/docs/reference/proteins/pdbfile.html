@@ -1,0 +1,348 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>PDB File &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.proteins.pdbfile">
+<span id="pdb-file"></span><h1>PDB File<a class="headerlink" href="#module-prody.proteins.pdbfile" title="Permalink to this headline">¶</a></h1>
+<p>This module defines functions for parsing and writing <a class="reference external" href="http://www.wwpdb.org/documentation/format32/v3.2.html">PDB files</a>.</p>
+<dl class="function">
+<dt id="prody.proteins.pdbfile.parsePDBStream">
+<code class="descname">parsePDBStream</code><span class="sig-paren">(</span><em>stream</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/pdbfile.html#parsePDBStream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.pdbfile.parsePDBStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> and/or dictionary containing header data
+parsed from a stream of PDB lines.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream</strong> &#8211; Anything that implements the method <code class="docutils literal"><span class="pre">readlines</span></code>
+(e.g. <code class="xref py py-class docutils literal"><span class="pre">file</span></code>, buffer, stdin)</li>
+<li><strong>title</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; title of the <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance, default is the
+PDB filename or PDB identifier</li>
+<li><strong>ag</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>) &#8211; <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance for storing data parsed from PDB
+file, number of atoms in <em>ag</em> and number of atoms parsed from the PDB
+file must be the same and atoms in <em>ag</em> and those in PDB file must
+be in the same order.  Non-coordinate data stored in <em>ag</em> will be
+overwritten with those parsed from the file.</li>
+<li><strong>chain</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; chain identifiers for parsing specific chains, e.g.
+<code class="docutils literal"><span class="pre">chain='A'</span></code>, <code class="docutils literal"><span class="pre">chain='B'</span></code>, <code class="docutils literal"><span class="pre">chain='DE'</span></code>, by default all
+chains are parsed</li>
+<li><strong>subset</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; a predefined keyword to parse subset of atoms, valid keywords
+are <code class="docutils literal"><span class="pre">'calpha'</span></code> (<code class="docutils literal"><span class="pre">'ca'</span></code>), <code class="docutils literal"><span class="pre">'backbone'</span></code> (<code class="docutils literal"><span class="pre">'bb'</span></code>), or <strong>None</strong>
+(read all atoms), e.g. <code class="docutils literal"><span class="pre">subset='bb'</span></code></li>
+<li><strong>model</strong> (<em>int, list</em>) &#8211; model index or None (read all models), e.g. <code class="docutils literal"><span class="pre">model=10</span></code></li>
+<li><strong>header</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; if <strong>True</strong> PDB header content will be parsed and returned</li>
+<li><strong>altloc</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; if a location indicator is passed, such as <code class="docutils literal"><span class="pre">'A'</span></code> or <code class="docutils literal"><span class="pre">'B'</span></code>,
+only indicated alternate locations will be parsed as the single
+coordinate set of the AtomGroup,  if <em>altloc</em> is set <strong>True</strong> all
+alternate locations will be parsed and each will be appended as a
+distinct coordinate set, default is <code class="docutils literal"><span class="pre">&quot;A&quot;</span></code></li>
+<li><strong>biomol</strong> (<a class="reference external" href="http://docs.python.org/library/constants.html#False" title="(in Python v2.7)"><em>False</em></a>) &#8211; if <strong>True</strong>, biomolecule obtained by transforming the
+coordinates using information from header section will be returned</li>
+<li><strong>secondary</strong> (<a class="reference external" href="http://docs.python.org/library/constants.html#False" title="(in Python v2.7)"><em>False</em></a>) &#8211; if <strong>True</strong>, secondary structure information from header
+section will be assigned atoms</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If <code class="docutils literal"><span class="pre">model=0</span></code> and <code class="docutils literal"><span class="pre">header=True</span></code>, return header dictionary only.</p>
+<p>Note that this function does not evaluate <code class="docutils literal"><span class="pre">CONECT</span></code> records.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.pdbfile.parsePDB">
+<code class="descname">parsePDB</code><span class="sig-paren">(</span><em>pdb</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/pdbfile.html#parsePDB"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.pdbfile.parsePDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> and/or dictionary containing header data
+parsed from a PDB file.</p>
+<p>This function extends <a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDBStream" title="prody.proteins.pdbfile.parsePDBStream"><code class="xref py py-func docutils literal"><span class="pre">parsePDBStream()</span></code></a>.</p>
+<p>See <span class="xref std std-ref">parsepdb</span> for a detailed usage example.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pdb</strong> &#8211; a PDB identifier or a filename
+If needed, PDB files are downloaded using <a class="reference internal" href="../../../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.fetchPDB" title="prody.proteins.localpdb.fetchPDB"><code class="xref py py-func docutils literal"><span class="pre">fetchPDB()</span></code></a> function.
+You can also provide arguments that you would like passed on to fetchPDB().</li>
+<li><strong>title</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; title of the <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance, default is the
+PDB filename or PDB identifier</li>
+<li><strong>ag</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>) &#8211; <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance for storing data parsed from PDB
+file, number of atoms in <em>ag</em> and number of atoms parsed from the PDB
+file must be the same and atoms in <em>ag</em> and those in PDB file must
+be in the same order.  Non-coordinate data stored in <em>ag</em> will be
+overwritten with those parsed from the file.</li>
+<li><strong>chain</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; chain identifiers for parsing specific chains, e.g.
+<code class="docutils literal"><span class="pre">chain='A'</span></code>, <code class="docutils literal"><span class="pre">chain='B'</span></code>, <code class="docutils literal"><span class="pre">chain='DE'</span></code>, by default all
+chains are parsed</li>
+<li><strong>subset</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; a predefined keyword to parse subset of atoms, valid keywords
+are <code class="docutils literal"><span class="pre">'calpha'</span></code> (<code class="docutils literal"><span class="pre">'ca'</span></code>), <code class="docutils literal"><span class="pre">'backbone'</span></code> (<code class="docutils literal"><span class="pre">'bb'</span></code>), or <strong>None</strong>
+(read all atoms), e.g. <code class="docutils literal"><span class="pre">subset='bb'</span></code></li>
+<li><strong>model</strong> (<em>int, list</em>) &#8211; model index or None (read all models), e.g. <code class="docutils literal"><span class="pre">model=10</span></code></li>
+<li><strong>header</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; if <strong>True</strong> PDB header content will be parsed and returned</li>
+<li><strong>altloc</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; if a location indicator is passed, such as <code class="docutils literal"><span class="pre">'A'</span></code> or <code class="docutils literal"><span class="pre">'B'</span></code>,
+only indicated alternate locations will be parsed as the single
+coordinate set of the AtomGroup,  if <em>altloc</em> is set <strong>True</strong> all
+alternate locations will be parsed and each will be appended as a
+distinct coordinate set, default is <code class="docutils literal"><span class="pre">&quot;A&quot;</span></code></li>
+<li><strong>biomol</strong> (<a class="reference external" href="http://docs.python.org/library/constants.html#False" title="(in Python v2.7)"><em>False</em></a>) &#8211; if <strong>True</strong>, biomolecule obtained by transforming the
+coordinates using information from header section will be returned</li>
+<li><strong>secondary</strong> (<a class="reference external" href="http://docs.python.org/library/constants.html#False" title="(in Python v2.7)"><em>False</em></a>) &#8211; if <strong>True</strong>, secondary structure information from header
+section will be assigned atoms</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If <code class="docutils literal"><span class="pre">model=0</span></code> and <code class="docutils literal"><span class="pre">header=True</span></code>, return header dictionary only.</p>
+<p>Note that this function does not evaluate <code class="docutils literal"><span class="pre">CONECT</span></code> records.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.pdbfile.parsePQR">
+<code class="descname">parsePQR</code><span class="sig-paren">(</span><em>filename</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/pdbfile.html#parsePQR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.pdbfile.parsePQR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> containing data parsed from PDB lines.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; a PQR filename</li>
+<li><strong>title</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; title of the <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance, default is the
+PDB filename or PDB identifier</li>
+<li><strong>ag</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>) &#8211; <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instance for storing data parsed from PDB
+file, number of atoms in <em>ag</em> and number of atoms parsed from the PDB
+file must be the same and atoms in <em>ag</em> and those in PDB file must
+be in the same order.  Non-coordinate data stored in <em>ag</em> will be
+overwritten with those parsed from the file.</li>
+<li><strong>chain</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; chain identifiers for parsing specific chains, e.g.
+<code class="docutils literal"><span class="pre">chain='A'</span></code>, <code class="docutils literal"><span class="pre">chain='B'</span></code>, <code class="docutils literal"><span class="pre">chain='DE'</span></code>, by default all
+chains are parsed</li>
+<li><strong>subset</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; a predefined keyword to parse subset of atoms, valid keywords
+are <code class="docutils literal"><span class="pre">'calpha'</span></code> (<code class="docutils literal"><span class="pre">'ca'</span></code>), <code class="docutils literal"><span class="pre">'backbone'</span></code> (<code class="docutils literal"><span class="pre">'bb'</span></code>), or <strong>None</strong>
+(read all atoms), e.g. <code class="docutils literal"><span class="pre">subset='bb'</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.pdbfile.writePDBStream">
+<code class="descname">writePDBStream</code><span class="sig-paren">(</span><em>stream</em>, <em>atoms</em>, <em>csets=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/pdbfile.html#writePDBStream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.pdbfile.writePDBStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <em>atoms</em> in PDB format to a <em>stream</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream</strong> &#8211; anything that implements a <code class="xref py py-meth docutils literal"><span class="pre">write()</span></code> method (e.g. file,
+buffer, stdout)</li>
+<li><strong>atoms</strong> &#8211; an object with atom and coordinate data</li>
+<li><strong>csets</strong> &#8211; coordinate set indices, default is all coordinate sets</li>
+<li><strong>beta</strong> &#8211; a list or array of number to be outputted in beta column</li>
+<li><strong>occupancy</strong> &#8211; a list or array of number to be outputted in occupancy
+column</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.pdbfile.writePDB">
+<code class="descname">writePDB</code><span class="sig-paren">(</span><em>filename</em>, <em>atoms</em>, <em>csets=None</em>, <em>autoext=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/pdbfile.html#writePDB"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.pdbfile.writePDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <em>atoms</em> in PDB format to a file with name <em>filename</em> and return
+<em>filename</em>.  If <em>filename</em> ends with <code class="file docutils literal"><span class="pre">.gz</span></code>, a compressed file will
+be written.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>atoms</strong> &#8211; an object with atom and coordinate data</li>
+<li><strong>csets</strong> &#8211; coordinate set indices, default is all coordinate sets</li>
+<li><strong>beta</strong> &#8211; a list or array of number to be outputted in beta column</li>
+<li><strong>occupancy</strong> &#8211; a list or array of number to be outputted in occupancy
+column</li>
+<li><strong>autoext</strong> &#8211; when not present, append extension <code class="file docutils literal"><span class="pre">.pdb</span></code> to <em>filename</em></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

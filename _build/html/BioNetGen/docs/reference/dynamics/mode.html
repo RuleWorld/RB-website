@@ -1,0 +1,351 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Normal Mode &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.dynamics.mode">
+<span id="normal-mode"></span><h1>Normal Mode<a class="headerlink" href="#module-prody.dynamics.mode" title="Permalink to this headline">¶</a></h1>
+<p>This module defines classes for handling mode data.</p>
+<dl class="class">
+<dt id="prody.dynamics.mode.Mode">
+<em class="property">class </em><code class="descname">Mode</code><span class="sig-paren">(</span><em>model</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to provide access to and operations on mode data.</p>
+<p>Initialize mode object as part of an NMA model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>model</strong> (<a class="reference internal" href="../../../../manual/reference/dynamics/nma.html#prody.dynamics.nma.NMA" title="prody.dynamics.nma.NMA"><code class="xref py py-class docutils literal"><span class="pre">NMA</span></code></a>, <a class="reference internal" href="../../../../manual/reference/dynamics/gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, or <a class="reference internal" href="../../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a>) &#8211; a normal mode analysis instance</li>
+<li><strong>index</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; index of the mode</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getArray">
+<code class="descname">getArray</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.getArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.getArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the normal mode array (eigenvector).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getArrayNx3">
+<code class="descname">getArrayNx3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.mode.Mode.getArrayNx3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of array with shape (N, 3).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getEigval">
+<code class="descname">getEigval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.getEigval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.getEigval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns normal mode eigenvalue.  For <a class="reference internal" href="../../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a> and <a class="reference internal" href="../../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.EDA" title="prody.dynamics.pca.EDA"><code class="xref py py-class docutils literal"><span class="pre">EDA</span></code></a>
+models built using coordinate data in Å, unit of eigenvalues is Å<sup>2</sup>.
+For <a class="reference internal" href="../../../../manual/reference/dynamics/anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a> and <a class="reference internal" href="../../../../manual/reference/dynamics/gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, on the other hand, eigenvalues
+are in arbitrary or relative units but they correlate with stiffness
+of the motion along associated eigenvector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getEigvec">
+<code class="descname">getEigvec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.mode.Mode.getEigvec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the normal mode array (eigenvector).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getHinges">
+<code class="descname">getHinges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.getHinges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.getHinges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns residue index of hinge sites.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getIndex">
+<code class="descname">getIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.getIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.getIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index of the mode.  Note that mode indices are
+zero-based.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getModel">
+<code class="descname">getModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.getModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.getModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model that the mode instance belongs to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getTitle">
+<code class="descname">getTitle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.getTitle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.getTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>A descriptive title for the mode instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.getVariance">
+<code class="descname">getVariance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.getVariance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.getVariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns variance along the mode.  For <a class="reference internal" href="../../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA" title="prody.dynamics.pca.PCA"><code class="xref py py-class docutils literal"><span class="pre">PCA</span></code></a> and <a class="reference internal" href="../../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.EDA" title="prody.dynamics.pca.EDA"><code class="xref py py-class docutils literal"><span class="pre">EDA</span></code></a>
+models built using coordinate data in Å, unit of variance is Å<sup>2</sup>.  For
+<a class="reference internal" href="../../../../manual/reference/dynamics/anm.html#prody.dynamics.anm.ANM" title="prody.dynamics.anm.ANM"><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code></a> and <a class="reference internal" href="../../../../manual/reference/dynamics/gnm.html#prody.dynamics.gnm.GNM" title="prody.dynamics.gnm.GNM"><code class="xref py py-class docutils literal"><span class="pre">GNM</span></code></a>, on the other hand, variance is the
+inverse of the eigenvalue, so it has arbitrary or relative units.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.is3d">
+<code class="descname">is3d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.is3d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.is3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if mode instance is from a 3-dimensional model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.numAtoms">
+<code class="descname">numAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.numAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.numAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.numDOF">
+<code class="descname">numDOF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Mode.numDOF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Mode.numDOF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of degrees of freedom (three times the number of
+atoms).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Mode.numModes">
+<code class="descname">numModes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.mode.Mode.numModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 1.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.dynamics.mode.Vector">
+<em class="property">class </em><code class="descname">Vector</code><span class="sig-paren">(</span><em>array</em>, <em>title='Unknown'</em>, <em>is3d=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to provide operations on a modified mode array.  This class
+holds only mode array (i.e. eigenvector) data, and has no associations
+with an NMA instance.  Scalar multiplication of <a class="reference internal" href="../../../../manual/reference/dynamics/mode.html#prody.dynamics.mode.Mode" title="prody.dynamics.mode.Mode"><code class="xref py py-class docutils literal"><span class="pre">Mode</span></code></a> instance
+or addition of two <a class="reference internal" href="../../../../manual/reference/dynamics/mode.html#prody.dynamics.mode.Mode" title="prody.dynamics.mode.Mode"><code class="xref py py-class docutils literal"><span class="pre">Mode</span></code></a> instances results in a <a class="reference internal" href="../../../../manual/reference/dynamics/mode.html#prody.dynamics.mode.Vector" title="prody.dynamics.mode.Vector"><code class="xref py py-class docutils literal"><span class="pre">Vector</span></code></a>
+instance.</p>
+<p>Instantiate with a name, an array, and a 3d flag.</p>
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.getArray">
+<code class="descname">getArray</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector.getArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector.getArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.getArrayNx3">
+<code class="descname">getArrayNx3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.mode.Vector.getArrayNx3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of array with shape (N, 3).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.getNormed">
+<code class="descname">getNormed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector.getNormed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector.getNormed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mode after normalizing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.getTitle">
+<code class="descname">getTitle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector.getTitle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector.getTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the descriptive title for the vector instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.is3d">
+<code class="descname">is3d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector.is3d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector.is3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if vector instance describes a 3-dimensional
+property, such as a deformation for a set of atoms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.numAtoms">
+<code class="descname">numAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector.numAtoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector.numAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms.  For a 3-dimensional vector, returns length
+of the vector divided by 3.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.numDOF">
+<code class="descname">numDOF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector.numDOF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector.numDOF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of degrees of freedom.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.numModes">
+<code class="descname">numModes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prody.dynamics.mode.Vector.numModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.dynamics.mode.Vector.setTitle">
+<code class="descname">setTitle</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/dynamics/mode.html#Vector.setTitle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.dynamics.mode.Vector.setTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the descriptive title for the vector instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

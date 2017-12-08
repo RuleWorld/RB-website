@@ -1,0 +1,332 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Style Guide for ProDy &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/rbdocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/rbdocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/bionetgen.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/bionetgen_logo.png" alt="BNG logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">Style Guide for ProDy</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#code-layout">Code Layout</a></li>
+<li><a class="reference internal" href="#whitespaces">Whitespaces</a></li>
+<li><a class="reference internal" href="#naming-conventions">Naming Conventions</a></li>
+<li><a class="reference internal" href="#variable-names">Variable Names</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+                      <p>
+                <small>
+                  <strong>BioNetGen</strong> <br>
+                  J. R. Faeder, M. L. Blinov, and W. S. Hlavacek (2009) <a href="http://www.ncbi.nlm.nih.gov/pubmed/19399430/">Rule-based modeling of biochemical systems with BioNetGen</a>, <i>Methods Mol. Biol.</i>, <strong>500</strong>, 113-67. <br> 
+                 </small>
+              </p>  
+              <p>
+                <small>
+                 <strong>RuleBender</strong> <br>
+                  A. M. Smith, W. Xu, Y. Sun, J. R. Faeder and G. E. Marai (2012) <a href="http://bmcbioinformatics.biomedcentral.com:80/articles/10.1186/1471-2105-13-S8-S3">RuleBender: integrated modeling, simulation and visualization for rule-based intracellular biochemistry</a>, <i>BMC Bioinformatics</i>, <strong>13</strong>(suppl. 8), S3 (16 pages). <br>
+                </small>
+              </p>  
+              <p>
+                <small>
+                  <strong>NFsim</strong> <br>
+                  M. W. Sneddon, J. R. Faeder and T. Emonet (2012) <a href="https://www.ncbi.nlm.nih.gov/pubmed/21186362">Efficient modeling, simulation and coarse-graining of biological complexity with NFsim.</a>, <i>Nat. Methods</i>, <strong>8</strong>, 177-183. 
+                </small>
+              </p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="style-guide-for-prody">
+<span id="styleguide"></span><h1>Style Guide for ProDy<a class="headerlink" href="#style-guide-for-prody" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id1">Introduction</a></li>
+<li><a class="reference internal" href="#code-layout" id="id2">Code Layout</a></li>
+<li><a class="reference internal" href="#whitespaces" id="id3">Whitespaces</a></li>
+<li><a class="reference internal" href="#naming-conventions" id="id4">Naming Conventions</a></li>
+<li><a class="reference internal" href="#variable-names" id="id5">Variable Names</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a>, the <em>Style Guide for Python Code</em>, is adopted in the development of
+ProDy package.  Contributions to ProDy shall follow <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> and the
+specifications and additions provided in this addendum.</p>
+</div>
+<div class="section" id="code-layout">
+<h2><a class="toc-backref" href="#id2">Code Layout</a><a class="headerlink" href="#code-layout" title="Permalink to this headline">¶</a></h2>
+<p><strong>Indentation</strong></p>
+<p>Use 4 spaces per indentation level in source code (<code class="file docutils literal"><span class="pre">.py</span></code>) and never use
+tabs as a substitute.</p>
+<p>In documentation files (<code class="file docutils literal"><span class="pre">.rst</span></code>), use 2 spaces per indentation level.</p>
+<p><strong>Maximum line length</strong></p>
+<p>Limit all lines to a maximum of 79 characters in both source code and
+documentation files.  Exceptions may be made when tabulating data in
+documentation files and strings.  The length of lines in a paragraph
+may be much less than 79 characters if the line ends align better with
+the first line, as in this paragraph.</p>
+<p><strong>Encodings</strong></p>
+<p>In cases where an encoding for a <code class="file docutils literal"><span class="pre">.py</span></code> file needs to be specified,
+such as when characters like α, β, or Å are used in docstrings, use UTF-8
+encoding, i.e. start the file with the following line:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+</pre></div>
+</div>
+<p><strong>Imports</strong></p>
+<p>In addition to <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008#imports"><strong>PEP 8#imports</strong></a> recommendations regarding imports, the
+following should be applied:</p>
+<blockquote>
+<div><ul class="simple">
+<li>relative intra-ProDy imports are discouraged, use
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">prody.atomic</span> <span class="pre">import</span> <span class="pre">AtomGroup</span></code> not <code class="docutils literal"><span class="pre">from</span> <span class="pre">atomic</span> <span class="pre">import</span> <span class="pre">AtomGroup</span></code></li>
+<li>always import from second top level module, use
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">prody.atomic</span> <span class="pre">import</span> <span class="pre">AtomGroup</span></code> and not
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">prody.atomic.atomgroup</span> <span class="pre">import</span> <span class="pre">AtomGroup</span></code>,
+because file names may change or files that grow too big may be split
+into smaller modules, etc.</li>
+</ul>
+</div></blockquote>
+<p>Here is a series of properly formatted imports following a module documentation
+string:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This module defines a function to calculate something interesting.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.measure</span> <span class="kn">import</span> <span class="n">calcRMSD</span>
+<span class="kn">from</span> <span class="nn">prody.tools</span> <span class="kn">import</span> <span class="n">openFile</span>
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;calcSomething&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="whitespaces">
+<h2><a class="toc-backref" href="#id3">Whitespaces</a><a class="headerlink" href="#whitespaces" title="Permalink to this headline">¶</a></h2>
+<p>In addition to recommendations regarding whitespace use in Python code
+(<span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008#whitespace-in-expressions-and-statements"><strong>PEP 8#whitespace-in-expressions-and-statements</strong></a>), two whitespace
+characters should follow a period in documentation files and strings
+to help reading documentation in terminal windows and text editors.</p>
+</div>
+<div class="section" id="naming-conventions">
+<h2><a class="toc-backref" href="#id4">Naming Conventions</a><a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h2>
+<p>ProDy naming conventions aim at making the library suitable for interactive
+sessions, i.e. easy to remember and type.</p>
+<p><strong>Class names</strong></p>
+<p>Naming style for classes is <code class="docutils literal"><span class="pre">CapitalizedWords</span></code> (or <code class="docutils literal"><span class="pre">CapWords</span></code>, or
+<code class="docutils literal"><span class="pre">CamelCase</span></code>).  Abbreviations and/or truncated names should be used to
+keep class names short.  Some class name examples are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-class docutils literal"><span class="pre">ANM</span></code> for Anisotropic Network Model</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code> for Hierarchical View</li>
+</ul>
+</div></blockquote>
+<p><strong>Exception names</strong></p>
+<p>Prefer using a suitable standard-library exception over defining a new
+one. If you absolutely need to define one, use the class naming convention.
+Use the suffix &#8220;Error&#8221; for exception names, when exception is an error:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-exc docutils literal"><span class="pre">SelectionError</span></code>, the only exception defined in ProDy package</li>
+</ul>
+</div></blockquote>
+<p><strong>Method and function names</strong></p>
+<p>Naming style for methods and functions is <code class="docutils literal"><span class="pre">mixedCase</span></code>, that differs from
+<code class="docutils literal"><span class="pre">CapWords</span></code> by initial lowercase character.  Starting with a lowercase
+(no shift key) and using no underscore characters decreases the number of
+key strokes by half in many cases in interactive sessions.</p>
+<p>Method and function names should start with a verb, suggestive on the action,
+and followed by one or two names, where the second name may start with a lower
+case letter.  Some examples are <code class="xref py py-func docutils literal"><span class="pre">moveAtoms()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">wrapAtoms()</span></code>,
+<code class="xref py py-func docutils literal"><span class="pre">assignSecstr()</span></code>, and <code class="xref py py-func docutils literal"><span class="pre">calcSubspaceOverlap()</span></code>.</p>
+<p>Abbreviations and/or truncated names should be used and obvious words
+should be omitted to limit number of names to 20 characters.  For example,
+<code class="xref py py-meth docutils literal"><span class="pre">buildHessian()</span></code> is preferred over <code class="xref py py-meth docutils literal"><span class="pre">buildHessianMatrix()</span></code>.
+Another example is the change from using <code class="xref py py-meth docutils literal"><span class="pre">getResidueNames()</span></code> to
+using <code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.getResnames()</span></code>.  In fact, this was part of a series of
+major <a class="reference internal" href="../../../manual/release/index.html#changes"><span>Release Notes</span></a> aimed at refining the library for interactive usage.</p>
+<p>In addition, the following should be applied to enable grouping of methods and
+functions based on their action and/or return value:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="xref py py-meth docutils literal"><span class="pre">buildSomething()</span></code>: methods and functions that calculate a matrix
+should start with <code class="docutils literal"><span class="pre">build</span></code>, e.g. <code class="xref py py-meth docutils literal"><span class="pre">GNM.buildKirchhoff()</span></code> and
+<code class="xref py py-func docutils literal"><span class="pre">buildDistMatrix()</span></code></li>
+<li><code class="xref py py-meth docutils literal"><span class="pre">calcSomething()</span></code>: methods that calculate new data but does not
+necessarily return anything and especially those that take timely actions,
+should start with <code class="docutils literal"><span class="pre">calc</span></code>, e.g. <code class="xref py py-meth docutils literal"><span class="pre">PCA.calcModes()</span></code></li>
+<li><code class="xref py py-meth docutils literal"><span class="pre">getSomething()</span></code>: methods, and sometimes functions, that return a copy
+of data should start with <code class="docutils literal"><span class="pre">get</span></code>, such as <code class="xref py py-func docutils literal"><span class="pre">listReservedWords()</span></code></li>
+<li><code class="xref py py-meth docutils literal"><span class="pre">setSomething()</span></code>: methods, and sometimes functions, that alter internal
+data should start with <code class="docutils literal"><span class="pre">set</span></code></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="variable-names">
+<h2><a class="toc-backref" href="#id5">Variable Names</a><a class="headerlink" href="#variable-names" title="Permalink to this headline">¶</a></h2>
+<p>Variable names in functions and methods should contain only lower case letters,
+and may contain underscore characters to increase readability.</p>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 07, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

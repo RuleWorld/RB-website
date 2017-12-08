@@ -1,0 +1,46 @@
+BioNetGen 2.2 Series
+===============================================================================
+
+.. contents::
+   :local:
+
+
+2.2.0 (Dec 6, 2017)
+-------------------------------------------------------------------------------
+
+**Important Changes**:
+
+
+  * Single word keywords *not* followed by "and" logical operator are not
+    accepted, e.g. "protein within 5 of water" will raise a
+    :class:`.SelectionError`, use "protein and within 5 of water" instead.
+
+  * :func:`findMatchingChains` is renamed to  :func:`.matchChains`.
+
+  * :func:`showOverlapMatrix` is renamed to :func:`.showOverlapTable`.
+
+  * Modules are reorganized.
+
+**New Features**:
+
+  * :class:`.Atomic` for easy type checking.
+
+  * :class:`.Contacts` for faster intermolecular contact identification.
+
+  * :class:`.Select` can identify intermolecular contacts. See :ref:`contacts`
+    for an examples and details.
+
+  * :func:`.sampleModes` implemented for sampling conformations along normal
+    modes.
+
+**Improvements**:
+
+  * :mod:`.proteins.compare` functions are improved. Now they perform sequence
+    alignment if simple residue number/identity based matchin does not work,
+    or if user passes ``pwalign=True`` argument. This impacts the speed
+    of X-ray ensemble analysis.
+
+  * :class:`.Select` can cache data optionally. This results in speeds up from
+    2 to 50 folds depending on number of atoms and selection operations.
+
+  * Implementation of :func:`.showProjection` is completed.

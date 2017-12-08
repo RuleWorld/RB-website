@@ -1,0 +1,333 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.apps.prody_apps.prody_catdcd &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.apps.prody_apps.prody_catdcd</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Concatenate, slice, and/or select DCD files.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..apptools</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;prody_catdcd&#39;</span><span class="p">]</span>
+
+<div class="viewcode-block" id="prody_catdcd"><a class="viewcode-back" href="../../../../manual/reference/apps/prody_catdcd.html#prody.apps.prody_apps.prody_catdcd.prody_catdcd">[docs]</a><span class="k">def</span> <span class="nf">prody_catdcd</span><span class="p">(</span><span class="o">*</span><span class="n">dcd</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Concatenate *dcd* files.</span>
+
+<span class="sd">    :arg select: atom selection</span>
+
+<span class="sd">    :arg align: atom selection for aligning frames</span>
+
+<span class="sd">    :arg pdb: PDB file used in atom selections and as reference for alignment</span>
+
+<span class="sd">    :arg psf: PSF file used in atom selections</span>
+
+<span class="sd">    :arg output: output filename</span>
+
+<span class="sd">    :arg first: index of the first output frame</span>
+
+<span class="sd">    :arg last: index of the last output frame</span>
+
+<span class="sd">    :arg stride: number of steps between output frames&quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">prody</span>
+    <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">LOGGER</span>
+    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;numframes&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdout</span>
+        <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">dcd</span><span class="p">:</span>
+            <span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prody</span><span class="o">.</span><span class="n">DCDFile</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span><span class="o">.</span><span class="n">numFrames</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">splitext</span>
+
+    <span class="n">ag</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">psf</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;psf&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">psf</span><span class="p">:</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">parsePSF</span><span class="p">(</span><span class="n">psf</span><span class="p">)</span>
+
+    <span class="n">pdb</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pdb&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pdb</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ag</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">parsePDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">ag</span><span class="o">=</span><span class="n">ag</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">parsePDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+
+    <span class="n">align</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;align&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">select</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">select</span> <span class="o">==</span> <span class="s1">&#39;all&#39;</span><span class="p">:</span>
+        <span class="n">select</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="n">ag</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="p">(</span><span class="n">align</span> <span class="ow">or</span> <span class="n">select</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;one of PSF or PDB files must be provided for &#39;</span>
+                         <span class="s1">&#39;align and select options to work&#39;</span><span class="p">)</span>
+    <span class="n">dcd</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dcd</span><span class="p">)</span>
+    <span class="n">traj</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">Trajectory</span><span class="p">(</span><span class="n">dcd</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">dcd</span><span class="p">:</span>
+        <span class="n">traj</span><span class="o">.</span><span class="n">addFile</span><span class="p">(</span><span class="n">dcd</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">ag</span><span class="p">:</span>
+        <span class="n">traj</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">ag</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">():</span>
+            <span class="n">traj</span><span class="o">.</span><span class="n">setCoords</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">getCoords</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">select</span><span class="p">:</span>
+            <span class="n">select</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">select</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">select</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} did not match any atoms&#39;</span>
+                                 <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">))))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">select</span> <span class="o">=</span> <span class="n">ag</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;{0} atoms are selected for writing output.&#39;</span>
+                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">select</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">align</span><span class="p">:</span>
+            <span class="n">align</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">align</span><span class="p">)</span>
+            <span class="n">traj</span><span class="o">.</span><span class="n">setAtoms</span><span class="p">(</span><span class="n">align</span><span class="p">)</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;{0} atoms are selected for aligning frames.&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">align</span><span class="p">)))</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;output&#39;</span><span class="p">,</span> <span class="s1">&#39;trajectory.dcd&#39;</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">DCDFile</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">stride</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;stride&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">goto</span> <span class="o">=</span> <span class="n">stride</span> <span class="o">!=</span> <span class="mi">1</span>
+    <span class="n">slc</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;last&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+                <span class="n">stride</span><span class="p">)</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">*</span><span class="n">slc</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">goto</span><span class="p">:</span>
+            <span class="n">traj</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">align</span><span class="p">:</span>
+            <span class="n">frame</span><span class="o">.</span><span class="n">superpose</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">select</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">select</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">frame</span><span class="o">.</span><span class="n">getUnitcell</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">frame</span><span class="o">.</span><span class="n">getUnitcell</span><span class="p">())</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">traj</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;{0} frames are written into {1}.&quot;</span>
+                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">output</span><span class="p">))</span></div>
+
+<span class="k">def</span> <span class="nf">addCommand</span><span class="p">(</span><span class="n">commands</span><span class="p">):</span>
+
+    <span class="n">subparser</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;catdcd&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;concatenate dcd files&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--quiet&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;suppress info messages to stderr&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="n">Quiet</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--examples&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="n">UsageExample</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;show usage examples and exit&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">usage_example</span><span class="o">=</span>
+    <span class="sd">&quot;&quot;&quot;Concatenate two DCD files and output all atmos:</span>
+
+<span class="sd">  $ prody catdcd mdm2.dcd mdm2sim2.dcd</span>
+
+<span class="sd">Concatenate two DCD files and output backbone atoms:</span>
+
+<span class="sd">  $ prody catdcd mdm2.dcd mdm2sim2.dcd --pdb mdm2.pdb -s bb&quot;&quot;&quot;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-s&#39;</span><span class="p">,</span> <span class="s1">&#39;--select&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;SEL&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;atom selection (default: </span><span class="si">%(default)s</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="s1">&#39;--output&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;FILE&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;trajectory.dcd&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;output filename (default: </span><span class="si">%(default)s</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-n&#39;</span><span class="p">,</span> <span class="s1">&#39;--num&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;numframes&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;print the number of frames in each file and exit&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--psf&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;PSF filename (must have same number of atoms as DCDs)&#39;</span><span class="p">)</span>
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--pdb&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;PDB filename (must have same number of atoms as DCDs)&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--first&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;INT&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;index of the first output frame, default: </span><span class="si">%(default)s</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--last&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;INT&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;index of the last output frame, default: </span><span class="si">%(default)s</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--stride&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;INT&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;number of steps between output frames, default: </span><span class="si">%(default)s</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--align&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;SEL&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;atom selection for aligning frames, a PSF or PDB file must be &#39;</span>
+             <span class="s1">&#39;provided, if a PDB is provided frames will be superposed onto &#39;</span>
+             <span class="s1">&#39;PDB coordinates&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;dcd&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;DCD filename(s) (all must have same number of atoms)&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">subparser</span><span class="o">=</span><span class="n">subparser</span><span class="p">)</span>
+    <span class="n">subparser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ns</span><span class="p">:</span> <span class="n">prody_catdcd</span><span class="p">(</span>
+                                    <span class="o">*</span><span class="n">ns</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;dcd&#39;</span><span class="p">),</span> <span class="o">**</span><span class="n">ns</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

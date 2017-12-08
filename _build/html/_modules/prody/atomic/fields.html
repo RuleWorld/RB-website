@@ -1,0 +1,441 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.atomic.fields &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.atomic.fields</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines atomic data fields.  You can read this page in</span>
+<span class="sd">interactive sessions using ``help(fields)``.</span>
+
+<span class="sd">Data parsed from PDB and other supported files for these fields are stored in</span>
+<span class="sd">:class:`.AtomGroup` instances.  Available data fields are listed in the table</span>
+<span class="sd">below.  :class:`Atomic` classes, such as :class:`.Selection`, offer ``get`` and</span>
+<span class="sd">``set`` for handling parsed data:</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
+
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">wrapText</span>
+
+<span class="kn">from</span> <span class="nn">.flags</span> <span class="kn">import</span> <span class="n">FIELDS</span> <span class="k">as</span> <span class="n">FLAG_FIELDS</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span>
+
+<span class="n">READONLY</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="Field"><a class="viewcode-back" href="../../../manual/reference/atomic/fields.html#prody.atomic.atom.Field">[docs]</a><span class="k">class</span> <span class="nc">Field</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Atomic data field.&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;dtype&#39;</span><span class="p">,</span>  <span class="s1">&#39;doc&#39;</span><span class="p">,</span> <span class="s1">&#39;doc_pl&#39;</span><span class="p">,</span> <span class="s1">&#39;meth&#39;</span><span class="p">,</span> <span class="s1">&#39;meth_pl&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;ndim&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;selstr&#39;</span><span class="p">,</span> <span class="s1">&#39;synonym&#39;</span><span class="p">,</span> <span class="s1">&#39;readonly&#39;</span><span class="p">,</span> <span class="s1">&#39;call&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;private&#39;</span><span class="p">,</span> <span class="s1">&#39;depr&#39;</span><span class="p">,</span> <span class="s1">&#39;depr_pl&#39;</span><span class="p">,</span> <span class="s1">&#39;desc&#39;</span><span class="p">,</span> <span class="s1">&#39;flags&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="c1">#: data field name used in atom selections</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="c1">#: data type (primitive Python types)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">dtype</span>
+        <span class="c1">#: internal variable name used as key for :class:`.AtomGroup` ``_data``</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">doc</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;doc&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="c1">#: plural form for documentation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">doc_pl</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;doc_pl&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">doc</span> <span class="o">+</span> <span class="s1">&#39;s&#39;</span><span class="p">)</span>
+        <span class="c1">#: description of data field, used in documentation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">desc</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;desc&#39;</span><span class="p">)</span>
+        <span class="c1">#: expected dimension of the data array</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ndim&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1">#: atomic get/set method name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meth</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;meth&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+        <span class="c1">#: get/set method name in plural form</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meth_pl</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;meth_pl&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">meth</span> <span class="o">+</span> <span class="s1">&#39;s&#39;</span><span class="p">)</span>
+        <span class="c1">#: :class:`.AtomGroup` attributes to be set None, when ``setMethod``</span>
+        <span class="c1">#: is called</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">none</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+        <span class="c1">#: list of selection string examples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selstr</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;selstr&#39;</span><span class="p">)</span>
+        <span class="c1">#: deprecated method name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">depr</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;depr&#39;</span><span class="p">)</span>
+        <span class="c1">#: deprecated method name in plural form</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">depr_pl</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">depr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">depr_pl</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;depr_pl&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">depr</span> <span class="o">+</span> <span class="s1">&#39;s&#39;</span><span class="p">)</span>
+        <span class="c1">#: synonym used in atom selections</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">synonym</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;synonym&#39;</span><span class="p">)</span>
+        <span class="c1">#: read-only attribute without a set method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">readonly</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;readonly&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="c1">#: list of :class:`.AtomGroup` methods to call when ``getMethod`` is</span>
+        <span class="c1">#: called</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">call</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;call&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="c1">#: define only _getMethod for :class:`.AtomGroup` to be used by</span>
+        <span class="c1">#: :class:`.Select` class</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">private</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;private&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="c1">#: **True** when there are flags associated with the data field</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;flags&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">readonly</span><span class="p">:</span>
+            <span class="n">READONLY</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Field.getDocstr"><a class="viewcode-back" href="../../../manual/reference/atomic/fields.html#prody.atomic.atom.Field.getDocstr">[docs]</a>    <span class="k">def</span> <span class="nf">getDocstr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meth</span><span class="p">,</span> <span class="n">plural</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">selex</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns documentation string for the field.&quot;&quot;&quot;</span>
+
+        <span class="k">assert</span> <span class="n">meth</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;set&#39;</span><span class="p">,</span> <span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;_get&#39;</span><span class="p">),</span> <span class="s2">&quot;meth must be &#39;set&#39; or &#39;get&#39;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">plural</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s1">&#39;plural must be a boolean&#39;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s1">&#39;selex must be a boolean&#39;</span>
+
+        <span class="k">if</span> <span class="n">meth</span> <span class="o">==</span> <span class="s1">&#39;get&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">plural</span><span class="p">:</span>
+                <span class="n">docstr</span> <span class="o">=</span> <span class="s1">&#39;Return a copy of {0}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">doc_pl</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">docstr</span> <span class="o">=</span> <span class="s1">&#39;Return {0} of the atom.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">doc</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">meth</span> <span class="o">==</span> <span class="s1">&#39;set&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">plural</span><span class="p">:</span>
+                <span class="n">docstr</span> <span class="o">=</span> <span class="s1">&#39;Set {0}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">doc_pl</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">docstr</span> <span class="o">=</span> <span class="s1">&#39;Set {0} of the atom.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">doc</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">selex</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">if</span> <span class="n">plural</span><span class="p">:</span>
+                <span class="n">docstr</span> <span class="o">=</span> <span class="s1">&#39;Return {0} array.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">doc_pl</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">desc</span><span class="p">:</span>
+            <span class="n">docstr</span> <span class="o">+=</span> <span class="s1">&#39;  &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">desc</span>
+
+        <span class="n">selstr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">selstr</span>
+        <span class="k">if</span> <span class="n">selex</span> <span class="ow">and</span> <span class="n">selstr</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">plural</span><span class="p">:</span>
+                <span class="n">doc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">doc_pl</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">doc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">doc</span>
+            <span class="k">if</span> <span class="s1">&#39;(&#39;</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+                <span class="n">doc</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[:</span><span class="n">doc</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)]</span>
+            <span class="n">selex</span> <span class="o">=</span> <span class="s2">&quot;``, ``&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">repr</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">selstr</span><span class="p">])</span>
+            <span class="n">selex</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;  {0} can be used in atom selections, e.g. &quot;</span>
+                     <span class="s2">&quot;``{1}``.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(),</span> <span class="n">selex</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">synonym</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">selex</span> <span class="o">=</span> <span class="n">selex</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;  Note that *{0}* is a synonym for &#39;</span>
+                                 <span class="s1">&#39;*{1}*.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">synonym</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">wrapText</span><span class="p">(</span><span class="n">docstr</span> <span class="o">+</span> <span class="n">selex</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">wrapText</span><span class="p">(</span><span class="n">docstr</span><span class="p">)</span></div></div>
+
+<span class="n">HVNONE</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_hv&#39;</span><span class="p">,</span> <span class="s1">&#39;segindex&#39;</span><span class="p">,</span> <span class="s1">&#39;chindex&#39;</span><span class="p">,</span> <span class="s1">&#39;resindex&#39;</span><span class="p">]</span>
+
+<span class="n">DTYPE</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">char</span>  <span class="c1"># &#39;S&#39; for PY2K and &#39;U&#39; for PY3K</span>
+
+<span class="n">ATOMIC_FIELDS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span>      <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;name CA CB&#39;</span><span class="p">,)),</span>
+    <span class="s1">&#39;altloc&#39;</span><span class="p">:</span>    <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;altloc&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+                       <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;alternate location indicator&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;altloc A B&#39;</span><span class="p">,</span> <span class="s1">&#39;altloc _&#39;</span><span class="p">),),</span>
+    <span class="s1">&#39;anisou&#39;</span><span class="p">:</span>    <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;anisou&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;anisotropic temperature factor&#39;</span><span class="p">,</span>
+                       <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s1">&#39;chain&#39;</span><span class="p">:</span>     <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;chain&#39;</span><span class="p">,</span> <span class="n">DTYPE</span><span class="p">,</span>  <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;chain identifier&#39;</span><span class="p">,</span>
+                       <span class="n">meth</span><span class="o">=</span><span class="s1">&#39;Chid&#39;</span><span class="p">,</span> <span class="n">none</span><span class="o">=</span><span class="n">HVNONE</span><span class="p">,</span> <span class="n">synonym</span><span class="o">=</span><span class="s1">&#39;chid&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;chain A&#39;</span><span class="p">,</span> <span class="s1">&#39;chid A B C&#39;</span><span class="p">,</span> <span class="s1">&#39;chain _&#39;</span><span class="p">)),</span>
+    <span class="s1">&#39;element&#39;</span><span class="p">:</span>   <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;element&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;element symbol&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;element C O N&#39;</span><span class="p">,)),</span>
+    <span class="s1">&#39;occupancy&#39;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;occupancy&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span>
+                       <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;occupancy value&#39;</span><span class="p">,</span> <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Occupancies&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;occupancy 1&#39;</span><span class="p">,</span> <span class="s1">&#39;occupancy &gt; 0&#39;</span><span class="p">)),</span>
+    <span class="s1">&#39;resname&#39;</span><span class="p">:</span>   <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;resname&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;residue name&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;resname ALA GLY&#39;</span><span class="p">,)),</span>
+    <span class="s1">&#39;resnum&#39;</span><span class="p">:</span>    <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;resnum&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;residue number&#39;</span><span class="p">,</span> <span class="n">none</span><span class="o">=</span><span class="n">HVNONE</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;resnum 1 2 3&#39;</span><span class="p">,</span> <span class="s1">&#39;resnum 120A 120B&#39;</span><span class="p">,</span>
+                               <span class="s1">&#39;resnum 10 to 20&#39;</span><span class="p">,</span> <span class="s1">&#39;resnum 10:20:2&#39;</span><span class="p">,</span>
+                               <span class="s1">&#39;resnum &lt; 10&#39;</span><span class="p">),</span> <span class="n">synonym</span><span class="o">=</span><span class="s1">&#39;resid&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;secondary&#39;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;secondary&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+                       <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;secondary structure assignment&#39;</span><span class="p">,</span>
+                       <span class="n">meth</span><span class="o">=</span><span class="s1">&#39;Secstr&#39;</span><span class="p">,</span> <span class="n">synonym</span><span class="o">=</span><span class="s1">&#39;secstr&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;secondary H E&#39;</span><span class="p">,</span> <span class="s1">&#39;secstr H E&#39;</span><span class="p">),</span>
+                       <span class="p">),</span>
+    <span class="s1">&#39;segment&#39;</span><span class="p">:</span>   <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;segment&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;segment name&#39;</span><span class="p">,</span>
+                       <span class="n">meth</span><span class="o">=</span><span class="s1">&#39;Segname&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;segment PROT&#39;</span><span class="p">,</span> <span class="s1">&#39;segname PROT&#39;</span><span class="p">),</span>
+                       <span class="n">synonym</span><span class="o">=</span><span class="s1">&#39;segname&#39;</span><span class="p">,</span> <span class="n">none</span><span class="o">=</span><span class="n">HVNONE</span><span class="p">),</span>
+    <span class="s1">&#39;siguij&#39;</span><span class="p">:</span>    <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;siguij&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;standard deviations for &#39;</span>
+                       <span class="s1">&#39;anisotropic temperature factor&#39;</span><span class="p">,</span>
+                       <span class="n">meth</span><span class="o">=</span><span class="s1">&#39;Anistd&#39;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s1">&#39;serial&#39;</span><span class="p">:</span>    <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;serial&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;serial number (from file)&#39;</span><span class="p">,</span>
+                       <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;serial numbers (from file)&#39;</span><span class="p">,</span> <span class="n">none</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;_sn2i&#39;</span><span class="p">],</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;serial 1 2 3&#39;</span><span class="p">,</span> <span class="s1">&#39;serial 1 to 10&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;serial 1:10:2&#39;</span><span class="p">,</span> <span class="s1">&#39;serial &lt; 10&#39;</span><span class="p">)),</span>
+    <span class="s1">&#39;beta&#39;</span><span class="p">:</span>      <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;β-value (temperature factor)&#39;</span><span class="p">,</span>
+                       <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;β-values (or temperature factors)&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;beta 555.55&#39;</span><span class="p">,</span> <span class="s1">&#39;beta 0 to 500&#39;</span><span class="p">,</span> <span class="s1">&#39;beta 0:500&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;beta &lt; 500&#39;</span><span class="p">)),</span>
+    <span class="s1">&#39;icode&#39;</span><span class="p">:</span>     <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;icode&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;insertion code&#39;</span><span class="p">,</span> <span class="n">none</span><span class="o">=</span><span class="n">HVNONE</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;icode A&#39;</span><span class="p">,</span> <span class="s1">&#39;icode _&#39;</span><span class="p">)),</span>
+    <span class="s1">&#39;type&#39;</span><span class="p">:</span>      <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">DTYPE</span> <span class="o">+</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;type CT1 CT2 CT3&#39;</span><span class="p">,)),</span>
+    <span class="s1">&#39;charge&#39;</span><span class="p">:</span>    <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;charge&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;partial charge&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;charge 1&#39;</span><span class="p">,</span> <span class="s1">&#39;abs(charge) == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;charge &lt; 0&#39;</span><span class="p">)),</span>
+    <span class="s1">&#39;mass&#39;</span><span class="p">:</span>      <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;masses&#39;</span><span class="p">,</span>
+                       <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Masses&#39;</span><span class="p">,</span> <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;12 &lt;= mass &lt;= 13.5&#39;</span><span class="p">,)),</span>
+    <span class="s1">&#39;radius&#39;</span><span class="p">:</span>    <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;radius&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;radius&#39;</span><span class="p">,</span>
+                       <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;radii&#39;</span><span class="p">,</span> <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Radii&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;radii &lt; 1.5&#39;</span><span class="p">,</span> <span class="s1">&#39;radii ** 2 &lt; 2.3&#39;</span><span class="p">)),</span>
+    <span class="s1">&#39;resindex&#39;</span><span class="p">:</span>  <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;resindex&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;residue index&#39;</span><span class="p">,</span>
+                       <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;residue indices&#39;</span><span class="p">,</span> <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Resindices&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;resindex 0&#39;</span><span class="p">,),</span> <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                       <span class="n">call</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;getHierView&#39;</span><span class="p">],</span>
+                       <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Residue indices are assigned to subsets of atoms &#39;</span>
+                            <span class="s1">&#39;with distinct sequences of residue number, &#39;</span>
+                            <span class="s1">&#39;insertion code, chain identifier, and segment &#39;</span>
+                            <span class="s1">&#39;name.  Residue indices start from zero, are &#39;</span>
+                            <span class="s1">&#39;incremented by one, and are assigned in the &#39;</span>
+                            <span class="s1">&#39;order of appearance in :class:`.AtomGroup` &#39;</span>
+                            <span class="s1">&#39;instance.&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;chindex&#39;</span><span class="p">:</span>   <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;chindex&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;chain index&#39;</span><span class="p">,</span>
+                       <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;chain indices&#39;</span><span class="p">,</span> <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Chindices&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;chindex 0&#39;</span><span class="p">,),</span> <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                       <span class="n">call</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;getHierView&#39;</span><span class="p">],</span>
+                       <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Chain indices are assigned to subsets of atoms &#39;</span>
+                            <span class="s1">&#39;with distinct pairs of chain identifier and &#39;</span>
+                            <span class="s1">&#39; segment name.  Chain indices start from zero, &#39;</span>
+                            <span class="s1">&#39;are incremented by one, and are assigned in the &#39;</span>
+                            <span class="s1">&#39;order of appearance in :class:`.AtomGroup` &#39;</span>
+                            <span class="s1">&#39;instance.&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;segindex&#39;</span><span class="p">:</span>  <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;segindex&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;segment index&#39;</span><span class="p">,</span>
+                       <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;segment indices&#39;</span><span class="p">,</span> <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Segindices&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;segindex 0&#39;</span><span class="p">],</span> <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                       <span class="n">call</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;getHierView&#39;</span><span class="p">],</span>
+                       <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Segment indices are assigned to subsets of atoms &#39;</span>
+                            <span class="s1">&#39;with distinct segment names.  Segment indices &#39;</span>
+                            <span class="s1">&#39;start from zero, are incremented by one, and are &#39;</span>
+                            <span class="s1">&#39;assigned in the order of appearance in &#39;</span>
+                            <span class="s1">&#39;:class:`.AtomGroup` instance.&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;fragindex&#39;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;fragindex&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span>
+                       <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;fragment index&#39;</span><span class="p">,</span> <span class="n">doc_pl</span><span class="o">=</span><span class="s1">&#39;fragment indices&#39;</span><span class="p">,</span>
+                       <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Fragindices&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fragindex 0&#39;</span><span class="p">,</span> <span class="s1">&#39;fragment 1&#39;</span><span class="p">],</span>
+                       <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">call</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;_fragment&#39;</span><span class="p">],</span> <span class="n">synonym</span><span class="o">=</span><span class="s1">&#39;fragment&#39;</span><span class="p">,</span>
+                       <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Fragment indices are assigned to connected &#39;</span>
+                            <span class="s1">&#39;subsets of atoms.  Bonds needs to be set using &#39;</span>
+                            <span class="s1">&#39;:meth:`.AtomGroup.setBonds` method.  Fragment &#39;</span>
+                            <span class="s1">&#39;indices start from zero, are incremented by &#39;</span>
+                            <span class="s1">&#39;one, and are assigned in the order of appearance &#39;</span>
+                            <span class="s1">&#39;in :class:`.AtomGroup` instance.&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;numbonds&#39;</span><span class="p">:</span>  <span class="n">Field</span><span class="p">(</span><span class="s1">&#39;numbonds&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">meth_pl</span><span class="o">=</span><span class="s1">&#39;Numbonds&#39;</span><span class="p">,</span>
+                       <span class="n">doc</span><span class="o">=</span><span class="s1">&#39;number of bonds&#39;</span><span class="p">,</span>
+                       <span class="n">selstr</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;numbonds 0&#39;</span><span class="p">,</span> <span class="s1">&#39;numbonds 1&#39;</span><span class="p">],</span>
+                       <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">private</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+<span class="p">}</span>
+
+
+<span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Many of these data fields can be used to make :ref:`selections`.</span>
+<span class="s2">Following table lists definitions of fields and selection examples.  Note that</span>
+<span class="s2">fields noted as *read only* do not have a ``set`` method.</span>
+
+<span class="s2">.. glossary::</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ATOMIC_FIELDS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">keys</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+
+    <span class="n">field</span> <span class="o">=</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">   &#39;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+    <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">synonym</span><span class="p">:</span>
+        <span class="vm">__doc__</span> <span class="o">+=</span> <span class="s1">&#39;   &#39;</span> <span class="o">+</span> <span class="n">field</span><span class="o">.</span><span class="n">synonym</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">wrapText</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">doc</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39; *(read only)*&#39;</span> <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">readonly</span>
+                                     <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">selstr</span><span class="p">:</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">      ``&#39;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&#39;``,</span><span class="se">\n</span><span class="s2">      ``&#39;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">selstr</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;``&quot;</span>
+        <span class="vm">__doc__</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">      *E.g.:* &#39;</span> <span class="o">+</span> <span class="n">sel</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">FLAG_FIELDS</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">flags</span> <span class="o">=</span> <span class="bp">True</span>
+
+
+<span class="k">def</span> <span class="nf">wrapGetMethod</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getMethod</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">getMethod</span>
+
+
+<span class="k">def</span> <span class="nf">wrapSetMethod</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setMethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">setMethod</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

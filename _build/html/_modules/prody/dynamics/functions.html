@@ -1,0 +1,513 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.dynamics.functions &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.dynamics.functions</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines input and output functions.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">abspath</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">isfile</span><span class="p">,</span> <span class="n">isdir</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">splitext</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span><span class="p">,</span> <span class="n">PY3K</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">openFile</span><span class="p">,</span> <span class="n">isExecutable</span><span class="p">,</span> <span class="n">which</span><span class="p">,</span> <span class="n">PLATFORM</span><span class="p">,</span> <span class="n">addext</span>
+
+<span class="kn">from</span> <span class="nn">.nma</span> <span class="kn">import</span> <span class="n">NMA</span>
+<span class="kn">from</span> <span class="nn">.anm</span> <span class="kn">import</span> <span class="n">ANM</span>
+<span class="kn">from</span> <span class="nn">.gnm</span> <span class="kn">import</span> <span class="n">GNM</span><span class="p">,</span> <span class="n">GNMBase</span><span class="p">,</span> <span class="n">ZERO</span>
+<span class="kn">from</span> <span class="nn">.pca</span> <span class="kn">import</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">EDA</span>
+<span class="kn">from</span> <span class="nn">.mode</span> <span class="kn">import</span> <span class="n">Vector</span><span class="p">,</span> <span class="n">Mode</span>
+<span class="kn">from</span> <span class="nn">.modeset</span> <span class="kn">import</span> <span class="n">ModeSet</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;parseArray&#39;</span><span class="p">,</span> <span class="s1">&#39;parseModes&#39;</span><span class="p">,</span> <span class="s1">&#39;parseSparseMatrix&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;writeArray&#39;</span><span class="p">,</span> <span class="s1">&#39;writeModes&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;saveModel&#39;</span><span class="p">,</span> <span class="s1">&#39;loadModel&#39;</span><span class="p">,</span> <span class="s1">&#39;saveVector&#39;</span><span class="p">,</span> <span class="s1">&#39;loadVector&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="saveModel"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.saveModel">[docs]</a><span class="k">def</span> <span class="nf">saveModel</span><span class="p">(</span><span class="n">nma</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">matrices</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Save *nma* model data as :file:`filename.nma.npz`.  By default,</span>
+<span class="sd">    eigenvalues, eigenvectors, variances, trace of covariance matrix,</span>
+<span class="sd">    and name of the model will be saved.  If *matrices* is ``True``,</span>
+<span class="sd">    covariance, Hessian or Kirchhoff matrices are saved too, whichever</span>
+<span class="sd">    are available.  If *filename* is ``None``, name of the NMA instance</span>
+<span class="sd">    will be used as the filename, after ``&quot; &quot;`` (white spaces) in the name</span>
+<span class="sd">    are replaced with ``&quot;_&quot;`` (underscores).  Extension may differ based</span>
+<span class="sd">    on the type of the NMA model.  For ANM models, it is :file:`.anm.npz`.</span>
+<span class="sd">    Upon successful completion of saving, filename is returned. This</span>
+<span class="sd">    function makes use of :func:`numpy.savez` function.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nma</span><span class="p">,</span> <span class="n">NMA</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;invalid type for nma, {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nma</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nma</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;nma instance does not contain data&#39;</span><span class="p">)</span>
+
+    <span class="n">dict_</span> <span class="o">=</span> <span class="n">nma</span><span class="o">.</span><span class="vm">__dict__</span>
+    <span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_title&#39;</span><span class="p">,</span> <span class="s1">&#39;_trace&#39;</span><span class="p">,</span> <span class="s1">&#39;_array&#39;</span><span class="p">,</span> <span class="s1">&#39;_eigvals&#39;</span><span class="p">,</span> <span class="s1">&#39;_vars&#39;</span><span class="p">,</span> <span class="s1">&#39;_n_atoms&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_dof&#39;</span><span class="p">,</span> <span class="s1">&#39;_n_modes&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">nma</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nma</span><span class="p">,</span> <span class="n">GNMBase</span><span class="p">):</span>
+        <span class="n">attr_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;_cutoff&#39;</span><span class="p">)</span>
+        <span class="n">attr_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;_gamma&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">matrices</span><span class="p">:</span>
+            <span class="n">attr_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;_kirchhoff&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nma</span><span class="p">,</span> <span class="n">ANM</span><span class="p">):</span>
+                <span class="n">attr_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;_hessian&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nma</span><span class="p">,</span> <span class="n">ANM</span><span class="p">):</span>
+            <span class="n">type_</span> <span class="o">=</span> <span class="s1">&#39;ANM&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">type_</span> <span class="o">=</span> <span class="s1">&#39;GNM&#39;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nma</span><span class="p">,</span> <span class="n">EDA</span><span class="p">):</span>
+        <span class="n">type_</span> <span class="o">=</span> <span class="s1">&#39;EDA&#39;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nma</span><span class="p">,</span> <span class="n">PCA</span><span class="p">):</span>
+        <span class="n">type_</span> <span class="o">=</span> <span class="s1">&#39;PCA&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">type_</span> <span class="o">=</span> <span class="s1">&#39;NMA&#39;</span>
+
+    <span class="k">if</span> <span class="n">matrices</span><span class="p">:</span>
+        <span class="n">attr_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;_cov&#39;</span><span class="p">)</span>
+    <span class="n">attr_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">type_</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">attr_list</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">dict_</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">attr_dict</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="n">filename</span> <span class="o">+=</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">type_</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;.npz&#39;</span>
+    <span class="n">ostream</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">savez</span><span class="p">(</span><span class="n">ostream</span><span class="p">,</span> <span class="o">**</span><span class="n">attr_dict</span><span class="p">)</span>
+    <span class="n">ostream</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">filename</span></div>
+
+
+<div class="viewcode-block" id="loadModel"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.loadModel">[docs]</a><span class="k">def</span> <span class="nf">loadModel</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns NMA instance after loading it from file (*filename*).</span>
+<span class="sd">    This function makes use of :func:`numpy.load` function.  See</span>
+<span class="sd">    also :func:`saveModel`.&quot;&quot;&quot;</span>
+
+    <span class="n">attr_dict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">type_</span> <span class="o">=</span> <span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid NMA model file&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;_title&#39;</span><span class="p">])</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;_name&#39;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">type_</span> <span class="o">==</span> <span class="s1">&#39;ANM&#39;</span><span class="p">:</span>
+        <span class="n">nma</span> <span class="o">=</span> <span class="n">ANM</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">type_</span> <span class="o">==</span> <span class="s1">&#39;PCA&#39;</span><span class="p">:</span>
+        <span class="n">nma</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">type_</span> <span class="o">==</span> <span class="s1">&#39;EDA&#39;</span><span class="p">:</span>
+        <span class="n">nma</span> <span class="o">=</span> <span class="n">EDA</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">type_</span> <span class="o">==</span> <span class="s1">&#39;GNM&#39;</span><span class="p">:</span>
+        <span class="n">nma</span> <span class="o">=</span> <span class="n">GNM</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">type_</span> <span class="o">==</span> <span class="s1">&#39;NMA&#39;</span><span class="p">:</span>
+        <span class="n">nma</span> <span class="o">=</span> <span class="n">NMA</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;NMA model type is not recognized&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">type_</span><span class="p">))</span>
+    <span class="n">dict_</span> <span class="o">=</span> <span class="n">nma</span><span class="o">.</span><span class="vm">__dict__</span>
+    <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">attr_dict</span><span class="o">.</span><span class="n">files</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;_name&#39;</span><span class="p">,</span> <span class="s1">&#39;_title&#39;</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="n">attr</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;_trace&#39;</span><span class="p">,</span> <span class="s1">&#39;_cutoff&#39;</span><span class="p">,</span> <span class="s1">&#39;_gamma&#39;</span><span class="p">):</span>
+            <span class="n">dict_</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="n">attr</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">attr</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;_dof&#39;</span><span class="p">,</span> <span class="s1">&#39;_n_atoms&#39;</span><span class="p">,</span> <span class="s1">&#39;_n_modes&#39;</span><span class="p">):</span>
+            <span class="n">dict_</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="n">attr</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dict_</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr_dict</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">nma</span></div>
+
+
+<div class="viewcode-block" id="saveVector"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.saveVector">[docs]</a><span class="k">def</span> <span class="nf">saveVector</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Save *vector* data as :file:`filename.vec.npz`.  Upon successful</span>
+<span class="sd">    completion of saving, filename is returned.  This function makes use</span>
+<span class="sd">    of :func:`numpy.savez` function.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">Vector</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;invalid type for vector, {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">vector</span><span class="p">)))</span>
+    <span class="n">attr_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span>
+    <span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;array&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">_getArray</span><span class="p">()</span>
+    <span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;is3d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">is3d</span><span class="p">()</span>
+    <span class="n">filename</span> <span class="o">+=</span> <span class="s1">&#39;.vec.npz&#39;</span>
+    <span class="n">ostream</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">savez</span><span class="p">(</span><span class="n">ostream</span><span class="p">,</span> <span class="o">**</span><span class="n">attr_dict</span><span class="p">)</span>
+    <span class="n">ostream</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">filename</span></div>
+
+
+<div class="viewcode-block" id="loadVector"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.loadVector">[docs]</a><span class="k">def</span> <span class="nf">loadVector</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns :class:`.Vector` instance after loading it from *filename* using</span>
+<span class="sd">    :func:`numpy.load`.  See also :func:`saveVector`.&quot;&quot;&quot;</span>
+
+    <span class="n">attr_dict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">])</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;array&#39;</span><span class="p">],</span> <span class="n">title</span><span class="p">,</span> <span class="nb">bool</span><span class="p">(</span><span class="n">attr_dict</span><span class="p">[</span><span class="s1">&#39;is3d&#39;</span><span class="p">]))</span></div>
+
+
+<div class="viewcode-block" id="writeModes"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.writeModes">[docs]</a><span class="k">def</span> <span class="nf">writeModes</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">modes</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.18e</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Write *modes* (eigenvectors) into a plain text file with name</span>
+<span class="sd">    *filename*. See also :func:`writeArray`.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="p">(</span><span class="n">NMA</span><span class="p">,</span> <span class="n">ModeSet</span><span class="p">,</span> <span class="n">Mode</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;modes must be NMA, ModeSet, or Mode, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">modes</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">writeArray</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">modes</span><span class="o">.</span><span class="n">_getArray</span><span class="p">(),</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">,</span>
+                      <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parseModes"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.parseModes">[docs]</a><span class="k">def</span> <span class="nf">parseModes</span><span class="p">(</span><span class="n">normalmodes</span><span class="p">,</span> <span class="n">eigenvalues</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">nm_delimiter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+               <span class="n">nm_skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nm_usecols</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">ev_delimiter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+               <span class="n">ev_skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ev_usecols</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">ev_usevalues</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns :class:`.NMA` instance with normal modes parsed from</span>
+<span class="sd">    *normalmodes*.</span>
+
+<span class="sd">    In normal mode file *normalmodes*, columns must correspond to modes</span>
+<span class="sd">    (eigenvectors).  Optionally, *eigenvalues* can be parsed from a separate</span>
+<span class="sd">    file. If eigenvalues are not provided, they will all be set to 1.</span>
+
+<span class="sd">    :arg normalmodes: File or filename that contains normal modes.</span>
+<span class="sd">        If the filename extension is :file:`.gz` or :file:`.bz2`, the file is</span>
+<span class="sd">        first decompressed.</span>
+<span class="sd">    :type normalmodes: str or file</span>
+
+<span class="sd">    :arg eigenvalues: Optional, file or filename that contains eigenvalues.</span>
+<span class="sd">        If the filename extension is :file:`.gz` or :file:`.bz2`,</span>
+<span class="sd">        the file is first decompressed.</span>
+<span class="sd">    :type eigenvalues: str or file</span>
+
+<span class="sd">    :arg nm_delimiter: The string used to separate values in *normalmodes*.</span>
+<span class="sd">        By default, this is any whitespace.</span>
+<span class="sd">    :type nm_delimiter: str</span>
+
+<span class="sd">    :arg nm_skiprows: Skip the first *skiprows* lines in *normalmodes*.</span>
+<span class="sd">        Default is ``0``.</span>
+<span class="sd">    :type nm_skiprows: 0</span>
+
+<span class="sd">    :arg nm_usecols: Which columns to read from *normalmodes*, with 0 being the</span>
+<span class="sd">        first. For example, ``usecols = (1,4,5)`` will extract the 2nd, 5th and</span>
+<span class="sd">        6th columns. The default, ``None``, results in all columns being read.</span>
+<span class="sd">    :type nm_usecols: list</span>
+
+<span class="sd">    :arg ev_delimiter: The string used to separate values in *eigenvalues*.</span>
+<span class="sd">        By default, this is any whitespace.</span>
+<span class="sd">    :type ev_delimiter: str</span>
+
+<span class="sd">    :arg ev_skiprows: Skip the first *skiprows* lines in *eigenvalues*.</span>
+<span class="sd">        Default is ``0``.</span>
+<span class="sd">    :type ev_skiprows: 0</span>
+
+<span class="sd">    :arg ev_usecols: Which columns to read from *eigenvalues*, with 0 being the</span>
+<span class="sd">        first. For example, ``usecols = (1,4,5)`` will extract the 2nd, 5th and</span>
+<span class="sd">        6th columns. The default, ``None``, results in all columns being read.</span>
+<span class="sd">    :type ev_usecols: list</span>
+
+<span class="sd">    :arg ev_usevalues: Which columns to use after the eigenvalue column is</span>
+<span class="sd">        parsed from *eigenvalues*, with 0 being the first.</span>
+<span class="sd">        This can be used if *eigenvalues* contains more values than the</span>
+<span class="sd">        number of modes in *normalmodes*.</span>
+<span class="sd">    :type ev_usevalues: list</span>
+
+<span class="sd">    See :func:`parseArray` for details of parsing arrays from files.&quot;&quot;&quot;</span>
+
+    <span class="n">modes</span> <span class="o">=</span> <span class="n">parseArray</span><span class="p">(</span><span class="n">normalmodes</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">nm_delimiter</span><span class="p">,</span>
+                       <span class="n">skiprows</span><span class="o">=</span><span class="n">nm_skiprows</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">nm_usecols</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">eigenvalues</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">parseArray</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">ev_delimiter</span><span class="p">,</span>
+                            <span class="n">skiprows</span><span class="o">=</span><span class="n">ev_skiprows</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">ev_usecols</span><span class="p">)</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">ev_usevalues</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">ev_usevalues</span><span class="p">]</span>
+    <span class="n">nma</span> <span class="o">=</span> <span class="n">NMA</span><span class="p">(</span><span class="n">splitext</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">normalmodes</span><span class="p">)[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">nma</span><span class="o">.</span><span class="n">setEigens</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nma</span></div>
+
+
+<div class="viewcode-block" id="writeArray"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.writeArray">[docs]</a><span class="k">def</span> <span class="nf">writeArray</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Write 1-d or 2-d array data into a delimited text file.</span>
+
+<span class="sd">    This function is using :func:`numpy.savetxt` to write the file, after</span>
+<span class="sd">    making some type and value checks.  Default *format* argument is ``&quot;%d&quot;``.</span>
+<span class="sd">    Default *delimiter* argument is white space, ``&quot; &quot;``.</span>
+
+<span class="sd">    *filename* will be returned upon successful writing.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;array must be a Numpy ndarray, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">array</span><span class="p">)))</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">array</span><span class="o">.</span><span class="n">ndim</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;array must be a 1 or 2-dimensional Numpy ndarray, &#39;</span>
+                         <span class="s1">&#39;not {0}-d&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">ndim</span><span class="p">)))</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filename</span></div>
+
+<div class="viewcode-block" id="parseArray"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.parseArray">[docs]</a><span class="k">def</span> <span class="nf">parseArray</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+               <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse array data from a file.</span>
+
+<span class="sd">    This function is using :func:`numpy.loadtxt` to parse the file.  Each row</span>
+<span class="sd">    in the text file must have the same number of values.</span>
+
+<span class="sd">    :arg filename: File or filename to read. If the filename extension is</span>
+<span class="sd">        :file:`.gz` or :file:`.bz2`, the file is first decompressed.</span>
+<span class="sd">    :type filename: str or file</span>
+
+<span class="sd">    :arg delimiter: The string used to separate values. By default,</span>
+<span class="sd">        this is any whitespace.</span>
+<span class="sd">    :type delimiter: str</span>
+
+<span class="sd">    :arg skiprows: Skip the first *skiprows* lines, default is ``0``.</span>
+<span class="sd">    :type skiprows: int</span>
+
+<span class="sd">    :arg usecols: Which columns to read, with 0 being the first. For example,</span>
+<span class="sd">        ``usecols = (1,4,5)`` will extract the 2nd, 5th and 6th columns.</span>
+<span class="sd">        The default, ``None``, results in all columns being read.</span>
+<span class="sd">    :type usecols: list</span>
+
+<span class="sd">    :arg dtype: Data-type of the resulting array, default is :func:`float`.</span>
+<span class="sd">    :type dtype: :class:`numpy.dtype`.&quot;&quot;&quot;</span>
+
+    <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">,</span>
+                       <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">array</span></div>
+
+<div class="viewcode-block" id="parseSparseMatrix"><a class="viewcode-back" href="../../../manual/reference/dynamics/functions.html#prody.dynamics.functions.parseSparseMatrix">[docs]</a><span class="k">def</span> <span class="nf">parseSparseMatrix</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                      <span class="n">irow</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">icol</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">first</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse sparse matrix data from a file.</span>
+
+<span class="sd">    This function is using :func:`parseArray` to parse the file.</span>
+<span class="sd">    Input must have the following format::</span>
+
+<span class="sd">       1       1    9.958948135375977e+00</span>
+<span class="sd">       1       2   -3.788214445114136e+00</span>
+<span class="sd">       1       3    6.236155629158020e-01</span>
+<span class="sd">       1       4   -7.820609807968140e-01</span>
+
+<span class="sd">    Each row in the text file must have the same number of values.</span>
+
+<span class="sd">    :arg filename: File or filename to read. If the filename extension is</span>
+<span class="sd">        :file:`.gz` or :file:`.bz2`, the file is first decompressed.</span>
+<span class="sd">    :type filename: str or file</span>
+
+<span class="sd">    :arg symmetric: Set ``True`` if the file contains triangular part of a</span>
+<span class="sd">        symmetric matrix, default is ``False``.</span>
+<span class="sd">    :type symmetric: bool</span>
+
+<span class="sd">    :arg delimiter: The string used to separate values. By default,</span>
+<span class="sd">        this is any whitespace.</span>
+<span class="sd">    :type delimiter: str</span>
+
+<span class="sd">    :arg skiprows: Skip the first *skiprows* lines, default is ``0``.</span>
+<span class="sd">    :type skiprows: int</span>
+
+<span class="sd">    :arg irow: Index of the column in data file corresponding to row indices,</span>
+<span class="sd">        default is ``0``.</span>
+<span class="sd">    :type irow: int</span>
+
+<span class="sd">    :arg icol: Index of the column in data file corresponding to row indices,</span>
+<span class="sd">        default is ``0``.</span>
+<span class="sd">    :type icol: int</span>
+
+<span class="sd">    :arg first: First index in the data file (0 or 1), default is ``1``.</span>
+<span class="sd">    :type first: int</span>
+
+<span class="sd">    Data-type of the resulting array, default is :func:`float`.&quot;&quot;&quot;</span>
+
+    <span class="n">irow</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">irow</span><span class="p">)</span>
+    <span class="n">icol</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">icol</span><span class="p">)</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">irow</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">icol</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;irow/icol may be 0, 1, or 2&#39;</span>
+    <span class="k">assert</span> <span class="n">icol</span> <span class="o">!=</span> <span class="n">irow</span><span class="p">,</span> <span class="s1">&#39;irow and icol must not be equal&#39;</span>
+    <span class="n">idata</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">idata</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idata</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">irow</span><span class="p">))</span>
+    <span class="n">idata</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idata</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">icol</span><span class="p">))</span>
+    <span class="n">idata</span> <span class="o">=</span> <span class="n">idata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sparse</span> <span class="o">=</span> <span class="n">parseArray</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">,</span> <span class="n">skiprows</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">symmetric</span><span class="p">:</span>
+        <span class="n">dim1</span> <span class="o">=</span> <span class="n">dim2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sparse</span><span class="p">[:,</span> <span class="p">[</span><span class="n">irow</span><span class="p">,</span> <span class="n">icol</span><span class="p">]]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dim1</span><span class="p">,</span> <span class="n">dim2</span> <span class="o">=</span> <span class="n">sparse</span><span class="p">[:,</span> <span class="p">[</span><span class="n">irow</span><span class="p">,</span> <span class="n">icol</span><span class="p">]]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dim1</span><span class="p">,</span> <span class="n">dim2</span><span class="p">))</span>
+    <span class="n">irow</span> <span class="o">=</span> <span class="p">(</span><span class="n">sparse</span><span class="p">[:,</span> <span class="n">irow</span><span class="p">]</span> <span class="o">-</span> <span class="n">first</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">icol</span> <span class="o">=</span> <span class="p">(</span><span class="n">sparse</span><span class="p">[:,</span> <span class="n">icol</span><span class="p">]</span> <span class="o">-</span> <span class="n">first</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">matrix</span><span class="p">[</span><span class="n">irow</span><span class="p">,</span> <span class="n">icol</span><span class="p">]</span> <span class="o">=</span> <span class="n">sparse</span><span class="p">[:,</span> <span class="n">idata</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">symmetric</span><span class="p">:</span>
+        <span class="n">matrix</span><span class="p">[</span><span class="n">icol</span><span class="p">,</span> <span class="n">irow</span><span class="p">]</span> <span class="o">=</span> <span class="n">sparse</span><span class="p">[:,</span> <span class="n">idata</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">matrix</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

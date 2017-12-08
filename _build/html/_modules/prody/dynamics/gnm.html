@@ -1,0 +1,608 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.dynamics.gnm &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.dynamics.gnm</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines a class and a function for Gaussian network model</span>
+<span class="sd">(GNM) calculations.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">FunctionType</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">Atomic</span><span class="p">,</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.proteins</span> <span class="kn">import</span> <span class="n">parsePDB</span>
+<span class="kn">from</span> <span class="nn">prody.kdtree</span> <span class="kn">import</span> <span class="n">KDTree</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">importLA</span><span class="p">,</span> <span class="n">checkCoords</span>
+
+<span class="kn">from</span> <span class="nn">.nma</span> <span class="kn">import</span> <span class="n">NMA</span>
+<span class="kn">from</span> <span class="nn">.gamma</span> <span class="kn">import</span> <span class="n">Gamma</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GNM&#39;</span><span class="p">,</span> <span class="s1">&#39;calcGNM&#39;</span><span class="p">]</span>
+
+<span class="n">ZERO</span> <span class="o">=</span> <span class="mf">1e-6</span>
+
+
+<span class="k">class</span> <span class="nc">GNMBase</span><span class="p">(</span><span class="n">NMA</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Class for Gaussian Network Model analysis of proteins.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Unknown&#39;</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">GNMBase</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is3d</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cutoff</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hinges</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;&lt;{0}: {1} ({2} modes; {3} nodes)&gt;&#39;</span>
+                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_title</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__len__</span><span class="p">(),</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_title</span>
+
+    <span class="k">def</span> <span class="nf">_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">NMA</span><span class="o">.</span><span class="n">_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cutoff</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is3d</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">getCutoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns cutoff distance.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cutoff</span>
+
+    <span class="k">def</span> <span class="nf">getGamma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns spring constant (or the gamma function or :class:`Gamma`</span>
+<span class="sd">        instance).&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span>
+
+    <span class="k">def</span> <span class="nf">getKirchhoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a copy of the Kirchhoff matrix.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_getKirchhoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the Kirchhoff matrix.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span>
+
+
+<span class="k">def</span> <span class="nf">checkENMParameters</span><span class="p">(</span><span class="n">cutoff</span><span class="p">,</span> <span class="n">gamma</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check type and values of *cutoff* and *gamma*.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cutoff</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;cutoff must be a float or an integer&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cutoff</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;cutoff must be greater or equal to 4&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">Gamma</span><span class="p">):</span>
+        <span class="n">gamma_func</span> <span class="o">=</span> <span class="n">gamma</span><span class="o">.</span><span class="n">gamma</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">FunctionType</span><span class="p">):</span>
+        <span class="n">gamma_func</span> <span class="o">=</span> <span class="n">gamma</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;gamma must be a float, an integer, derived &#39;</span>
+                            <span class="s1">&#39;from Gamma, or a function&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">gamma</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;gamma must be greater than 0&#39;</span><span class="p">)</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">gamma</span><span class="p">)</span>
+        <span class="n">gamma_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dist2</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="n">gamma</span>
+    <span class="k">return</span> <span class="n">cutoff</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">gamma_func</span>
+
+
+<div class="viewcode-block" id="GNM"><a class="viewcode-back" href="../../../manual/reference/dynamics/gnm.html#prody.dynamics.anm.GNM">[docs]</a><span class="k">class</span> <span class="nc">GNM</span><span class="p">(</span><span class="n">GNMBase</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A class for Gaussian Network Model (GNM) analysis of proteins</span>
+<span class="sd">    ([IB97]_, [TH97]_).</span>
+
+<span class="sd">    See example :ref:`gnm`.</span>
+
+<span class="sd">    .. [IB97] Bahar I, Atilgan AR, Erman B. Direct evaluation of thermal</span>
+<span class="sd">       fluctuations in protein using a single parameter harmonic potential.</span>
+<span class="sd">       *Folding &amp; Design* **1997** 2:173-181.</span>
+
+<span class="sd">    .. [TH97] Haliloglu T, Bahar I, Erman B. Gaussian dynamics of folded</span>
+<span class="sd">       proteins. *Phys. Rev. Lett.* **1997** 79:3090-3093.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="GNM.setKirchhoff"><a class="viewcode-back" href="../../../manual/reference/dynamics/gnm.html#prody.dynamics.anm.GNM.setKirchhoff">[docs]</a>    <span class="k">def</span> <span class="nf">setKirchhoff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kirchhoff</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set Kirchhoff matrix.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">kirchhoff</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;kirchhoff must be a Numpy array&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="ow">not</span> <span class="n">kirchhoff</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span>
+              <span class="n">kirchhoff</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">kirchhoff</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;kirchhoff must be a square matrix&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">kirchhoff</span><span class="o">.</span><span class="n">dtype</span> <span class="o">!=</span> <span class="nb">float</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">kirchhoff</span> <span class="o">=</span> <span class="n">kirchhoff</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;kirchhoff.dtype must be float&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span> <span class="o">=</span> <span class="n">kirchhoff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span> <span class="o">=</span> <span class="n">kirchhoff</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span> <span class="o">=</span> <span class="n">kirchhoff</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="GNM.buildKirchhoff"><a class="viewcode-back" href="../../../manual/reference/dynamics/gnm.html#prody.dynamics.anm.GNM.buildKirchhoff">[docs]</a>    <span class="k">def</span> <span class="nf">buildKirchhoff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Build Kirchhoff matrix for given coordinate set.</span>
+
+<span class="sd">        :arg coords: a coordinate set or an object with ``getCoords`` method</span>
+<span class="sd">        :type coords: :class:`numpy.ndarray` or :class:`.Atomic`</span>
+
+<span class="sd">        :arg cutoff: cutoff distance (Å) for pairwise interactions</span>
+<span class="sd">            default is 10.0 Å, , minimum is 4.0 Å</span>
+<span class="sd">        :type cutoff: float</span>
+
+<span class="sd">        :arg gamma: spring constant, default is 1.0</span>
+<span class="sd">        :type gamma: float</span>
+
+<span class="sd">        :arg sparse: elect to use sparse matrices, default is **False**. If</span>
+<span class="sd">            Scipy is not found, :class:`ImportError` is raised.</span>
+<span class="sd">        :type sparse: bool</span>
+
+<span class="sd">        :arg kdtree: elect to use KDTree for building Kirchhoff matrix faster,</span>
+<span class="sd">            default is **True**</span>
+<span class="sd">        :type kdtree: bool</span>
+
+
+<span class="sd">        Instances of :class:`Gamma` classes and custom functions are</span>
+<span class="sd">        accepted as *gamma* argument.</span>
+
+<span class="sd">        When Scipy is available, user can select to use sparse matrices for</span>
+<span class="sd">        efficient usage of memory at the cost of computation speed.&quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="p">(</span><span class="n">coords</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;_getCoords&#39;</span><span class="p">)</span> <span class="k">else</span>
+                      <span class="n">coords</span><span class="o">.</span><span class="n">getCoords</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">checkCoords</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;coords must be a Numpy array or an object &#39;</span>
+                                <span class="s1">&#39;with `getCoords` method&#39;</span><span class="p">)</span>
+
+        <span class="n">cutoff</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">gamma</span> <span class="o">=</span> <span class="n">checkENMParameters</span><span class="p">(</span><span class="n">cutoff</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cutoff</span> <span class="o">=</span> <span class="n">cutoff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span> <span class="o">=</span> <span class="n">g</span>
+
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sparse&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">sparse</span> <span class="k">as</span> <span class="n">scipy_sparse</span>
+            <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s1">&#39;failed to import scipy.sparse, which  is &#39;</span>
+                                  <span class="s1">&#39;required for sparse matrix calculations&#39;</span><span class="p">)</span>
+            <span class="n">kirchhoff</span> <span class="o">=</span> <span class="n">scipy_sparse</span><span class="o">.</span><span class="n">lil_matrix</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">kirchhoff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">),</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;kdtree&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">):</span>
+            <span class="n">kdtree</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+            <span class="n">kdtree</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">cutoff</span><span class="p">)</span>
+            <span class="n">dist2</span> <span class="o">=</span> <span class="n">kdtree</span><span class="o">.</span><span class="n">getDistances</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">kdtree</span><span class="o">.</span><span class="n">getIndices</span><span class="p">():</span>
+                <span class="n">g</span> <span class="o">=</span> <span class="n">gamma</span><span class="p">(</span><span class="n">dist2</span><span class="p">[</span><span class="n">r</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+                <span class="n">kirchhoff</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">g</span>
+                <span class="n">kirchhoff</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">g</span>
+                <span class="n">kirchhoff</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">kirchhoff</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">g</span>
+                <span class="n">kirchhoff</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">kirchhoff</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">g</span>
+                <span class="n">r</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Using slower method for building the Kirchhoff.&#39;</span><span class="p">)</span>
+            <span class="n">cutoff2</span> <span class="o">=</span> <span class="n">cutoff</span> <span class="o">*</span> <span class="n">cutoff</span>
+            <span class="n">mul</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">):</span>
+                <span class="n">xyz_i</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span>
+                <span class="n">i_p1</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+                <span class="n">i2j</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">i_p1</span><span class="p">:,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">xyz_i</span>
+                <span class="n">mul</span><span class="p">(</span><span class="n">i2j</span><span class="p">,</span> <span class="n">i2j</span><span class="p">,</span> <span class="n">i2j</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">dist2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">i2j</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)):</span>
+                    <span class="k">if</span> <span class="n">dist2</span> <span class="o">&gt;</span> <span class="n">cutoff2</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="n">j</span> <span class="o">+=</span> <span class="n">i_p1</span>
+                    <span class="n">g</span> <span class="o">=</span> <span class="n">gamma</span><span class="p">(</span><span class="n">dist2</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+                    <span class="n">kirchhoff</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">g</span>
+                    <span class="n">kirchhoff</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">g</span>
+                    <span class="n">kirchhoff</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">kirchhoff</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">g</span>
+                    <span class="n">kirchhoff</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">kirchhoff</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">g</span>
+
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Kirchhoff was built in {0:.2f}s.&#39;</span>
+                     <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span> <span class="o">=</span> <span class="n">kirchhoff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span> <span class="o">=</span> <span class="n">n_atoms</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span> <span class="o">=</span> <span class="n">n_atoms</span></div>
+
+<div class="viewcode-block" id="GNM.calcModes"><a class="viewcode-back" href="../../../manual/reference/dynamics/gnm.html#prody.dynamics.anm.GNM.calcModes">[docs]</a>    <span class="k">def</span> <span class="nf">calcModes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_modes</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">zeros</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">turbo</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">hinges</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calculate normal modes.  This method uses :func:`scipy.linalg.eigh`</span>
+<span class="sd">        function to diagonalize the Kirchhoff matrix. When Scipy is not found,</span>
+<span class="sd">        :func:`numpy.linalg.eigh` is used.</span>
+
+<span class="sd">        :arg n_modes: number of non-zero eigenvalues/vectors to calculate.</span>
+<span class="sd">              If ``None`` is given, all modes will be calculated.</span>
+<span class="sd">        :type n_modes: int or None, default is 20</span>
+
+<span class="sd">        :arg zeros: If ``True``, modes with zero eigenvalues will be kept.</span>
+<span class="sd">        :type zeros: bool, default is ``False``</span>
+
+<span class="sd">        :arg turbo: Use a memory intensive, but faster way to calculate modes.</span>
+<span class="sd">        :type turbo: bool, default is ``True``</span>
+
+<span class="sd">        :arg hinges: Identify hinge sites after modes are computed.</span>
+<span class="sd">        :type hinges: bool, default is ``True``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Kirchhoff matrix is not built or set&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">n_modes</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_modes</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n_modes</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> \
+            <span class="s1">&#39;n_modes must be a positive integer&#39;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">zeros</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s1">&#39;zeros must be a boolean&#39;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">turbo</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s1">&#39;turbo must be a boolean&#39;</span>
+        <span class="n">linalg</span> <span class="o">=</span> <span class="n">importLA</span><span class="p">()</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">shift</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">linalg</span><span class="o">.</span><span class="n">__package__</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;scipy&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">n_modes</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">eigvals</span> <span class="o">=</span> <span class="bp">None</span>
+                <span class="n">n_modes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">n_modes</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span><span class="p">:</span>
+                    <span class="n">eigvals</span> <span class="o">=</span> <span class="bp">None</span>
+                    <span class="n">n_modes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">eigvals</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_modes</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">eigvals</span><span class="p">:</span>
+                <span class="n">turbo</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+                <span class="n">values</span><span class="p">,</span> <span class="n">vectors</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span><span class="p">,</span> <span class="n">turbo</span><span class="o">=</span><span class="n">turbo</span><span class="p">,</span>
+                                              <span class="n">eigvals</span><span class="o">=</span><span class="n">eigvals</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">scipy_sparse_la</span>
+                <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s1">&#39;failed to import scipy.sparse.linalg, &#39;</span>
+                                      <span class="s1">&#39;which is required for sparse matrix &#39;</span>
+                                      <span class="s1">&#39;decomposition&#39;</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">values</span><span class="p">,</span> <span class="n">vectors</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="n">scipy_sparse_la</span><span class="o">.</span><span class="n">eigsh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span><span class="p">,</span>
+                                              <span class="n">k</span><span class="o">=</span><span class="n">n_modes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;SA&#39;</span><span class="p">))</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">values</span><span class="p">,</span> <span class="n">vectors</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="n">scipy_sparse_la</span><span class="o">.</span><span class="n">eigen_symmetric</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span><span class="p">,</span>
+                                                        <span class="n">k</span><span class="o">=</span><span class="n">n_modes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                                                        <span class="n">which</span><span class="o">=</span><span class="s1">&#39;SA&#39;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n_modes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Scipy is not found, all modes are calculated.&#39;</span><span class="p">)</span>
+            <span class="n">values</span><span class="p">,</span> <span class="n">vectors</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kirchhoff</span><span class="p">)</span>
+        <span class="n">n_zeros</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span> <span class="o">&lt;</span> <span class="n">ZERO</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n_zeros</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Less than 1 zero eigenvalues are calculated.&#39;</span><span class="p">)</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="n">n_zeros</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">n_zeros</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;More than 1 zero eigenvalues are calculated.&#39;</span><span class="p">)</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="n">n_zeros</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">zeros</span><span class="p">:</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="n">shift</span><span class="p">:]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vars</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vars</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_array</span> <span class="o">=</span> <span class="n">vectors</span><span class="p">[:,</span> <span class="mi">1</span><span class="o">+</span><span class="n">shift</span><span class="p">:]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_modes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">hinges</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">calcHinges</span><span class="p">()</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;{0} modes were calculated in {1:.2f}s.&#39;</span>
+                     <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_modes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="nf">calcHinges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_array</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Modes are not calculated.&#39;</span><span class="p">)</span>
+        <span class="c1"># obtain the eigenvectors</span>
+        <span class="n">V</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_array</span>
+        <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">V</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">hinges</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">V</span><span class="p">[:,</span><span class="n">i</span><span class="p">]</span>
+            <span class="c1"># obtain the signs of eigenvector</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+            <span class="c1"># obtain the relative magnitude of eigenvector</span>
+            <span class="n">mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)))</span>
+            <span class="c1"># obtain the cross-overs</span>
+            <span class="n">torf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">torf</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># find which side is more close to zero</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)):</span>
+                <span class="n">idx</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">mag</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">hinges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hinges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hinges</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hinges</span>
+
+<div class="viewcode-block" id="GNM.getHinges"><a class="viewcode-back" href="../../../manual/reference/dynamics/gnm.html#prody.dynamics.anm.GNM.getHinges">[docs]</a>    <span class="k">def</span> <span class="nf">getHinges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modeIndex</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get residue index of hinge sites given mode indices.</span>
+
+<span class="sd">        :arg modeIndex: indices of modes. This parameter can be a scalar, a list, </span>
+<span class="sd">            or logical indices.</span>
+<span class="sd">        :type modeIndex: int or list, default is ``None``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hinges</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Warning: hinges are not calculated, thus null is returned. &#39;</span>
+                        <span class="s1">&#39;Please call GNM.calcHinges() to calculate the hinge sites first.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="n">modeIndex</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">hinges</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hinges</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hinges</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hinges</span><span class="p">[</span><span class="n">modeIndex</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">hinges</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">):</span>
+            <span class="n">hingelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">hinges</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hingelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">hinges</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">hingelist</span><span class="p">))</span></div>
+    
+    <span class="k">def</span> <span class="nf">numHinges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modeIndex</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getHinges</span><span class="p">(</span><span class="n">modeIndex</span><span class="o">=</span><span class="n">modeIndex</span><span class="p">))</span>
+
+<div class="viewcode-block" id="GNM.getNormDistFluct"><a class="viewcode-back" href="../../../manual/reference/dynamics/gnm.html#prody.dynamics.anm.GNM.getNormDistFluct">[docs]</a>    <span class="k">def</span> <span class="nf">getNormDistFluct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Normalized distance fluctuation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+            
+        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Number of chains: {0}, chains: {1}.&#39;</span>
+                     <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">coords</span><span class="o">.</span><span class="n">getChids</span><span class="p">()))),</span> \
+                                 <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">coords</span><span class="o">.</span><span class="n">getChids</span><span class="p">()))))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1">#coords = coords.select(&#39;protein and name CA&#39;)</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="p">(</span><span class="n">coords</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;_getCoords&#39;</span><span class="p">)</span> <span class="k">else</span>
+                <span class="n">coords</span><span class="o">.</span><span class="n">getCoords</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">checkCoords</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;coords must be a Numpy array or an object &#39;</span>
+                                                <span class="s1">&#39;with `getCoords` method&#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">NMA</span><span class="p">):</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Calculating new model&#39;</span><span class="p">)</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">GNM</span><span class="p">(</span><span class="s1">&#39;prot analysis&#39;</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">buildKirchhoff</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">calcModes</span><span class="p">()</span> 
+            
+        <span class="n">linalg</span> <span class="o">=</span> <span class="n">importLA</span><span class="p">()</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+        <span class="n">n_modes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">numModes</span><span class="p">()</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;_ndf&#39;</span><span class="p">)</span>
+    
+        <span class="kn">from</span> <span class="nn">.analysis</span> <span class="kn">import</span> <span class="n">calcCrossCorr</span>
+        <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">LA</span>
+        <span class="c1"># &lt;dRi, dRi&gt;, &lt;dRj, dRj&gt; = 1</span>
+        <span class="n">crossC</span> <span class="o">=</span> <span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">calcCrossCorr</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+        <span class="n">r_ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span><span class="n">n_atoms</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">):</span>
+           <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n_atoms</span><span class="p">):</span>
+               <span class="n">r_ij</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+               <span class="n">r_ij</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">r_ij</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+               <span class="n">r_ij_n</span> <span class="o">=</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r_ij</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="c1">#with np.errstate(divide=&#39;ignore&#39;):</span>
+        <span class="n">r_ij_n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">diag_indices_from</span><span class="p">(</span><span class="n">r_ij_n</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">1e-5</span>  <span class="c1"># div by 0</span>
+        <span class="n">crossC</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">crossC</span><span class="p">)</span>
+        <span class="n">normdistfluct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">crossC</span><span class="p">),</span><span class="n">r_ij_n</span><span class="p">)</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;NDF calculated in </span><span class="si">%.2lf</span><span class="s1">s.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;_ndf&#39;</span><span class="p">)</span>
+        <span class="n">normdistfluct</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">diag_indices_from</span><span class="p">(</span><span class="n">normdistfluct</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># div by 0</span>
+        <span class="k">return</span> <span class="n">normdistfluct</span></div></div>
+
+
+<div class="viewcode-block" id="calcGNM"><a class="viewcode-back" href="../../../manual/reference/dynamics/gnm.html#prody.dynamics.anm.calcGNM">[docs]</a><span class="k">def</span> <span class="nf">calcGNM</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">selstr</span><span class="o">=</span><span class="s1">&#39;calpha&#39;</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mf">15.</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">n_modes</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+            <span class="n">zeros</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a :class:`GNM` instance and atoms used for the calculations.</span>
+<span class="sd">    By default only alpha carbons are considered, but selection string helps</span>
+<span class="sd">    selecting a subset of it.  *pdb* can be :class:`.Atomic` instance.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">pdb</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;pdb must be an atom container, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">pdb</span><span class="p">)))</span>
+    <span class="n">gnm</span> <span class="o">=</span> <span class="n">GNM</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">sel</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">selstr</span><span class="p">)</span>
+    <span class="n">gnm</span><span class="o">.</span><span class="n">buildKirchhoff</span><span class="p">(</span><span class="n">sel</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span>
+    <span class="n">gnm</span><span class="o">.</span><span class="n">calcModes</span><span class="p">(</span><span class="n">n_modes</span><span class="p">,</span> <span class="n">zeros</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">gnm</span><span class="p">,</span> <span class="n">sel</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

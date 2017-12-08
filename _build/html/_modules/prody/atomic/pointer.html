@@ -1,0 +1,464 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.atomic.pointer &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.atomic.pointer</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines atom pointer base class.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="nb">all</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">ones</span><span class="p">,</span> <span class="n">unique</span>
+
+<span class="kn">from</span> <span class="nn">.atomic</span> <span class="kn">import</span> <span class="n">Atomic</span>
+<span class="kn">from</span> <span class="nn">.bond</span> <span class="kn">import</span> <span class="n">Bond</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AtomPointer&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="AtomPointer"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer">[docs]</a><span class="k">class</span> <span class="nc">AtomPointer</span><span class="p">(</span><span class="n">Atomic</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A base for classes pointing to atoms in :class:`.AtomGroup` instances.</span>
+<span class="sd">    Derived classes are:</span>
+
+<span class="sd">      * :class:`.Atom`</span>
+<span class="sd">      * :class:`.AtomSubset`</span>
+<span class="sd">      * :class:`.AtomMap`&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_ag&#39;</span><span class="p">,</span> <span class="s1">&#39;_acsi&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ag</span><span class="p">,</span> <span class="n">acsi</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;ag must be an AtomGroup instance, not {0}&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ag</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="o">=</span> <span class="n">ag</span>
+        <span class="k">if</span> <span class="n">acsi</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_acsi</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_acsi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">acsi</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="o">==</span> <span class="n">ag</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span>
+                    <span class="nb">set</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">())</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">())))</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="o">==</span> <span class="n">ag</span> <span class="ow">and</span> <span class="n">other</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="ow">and</span>
+                    <span class="nb">all</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">()))</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__invert__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">torf</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="n">torf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="n">Selection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">,</span> <span class="n">torf</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+                         <span class="s1">&#39;not ({0})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">()),</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">(),</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">is</span> <span class="n">other</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;other must be an AtomPointer&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="o">!=</span> <span class="n">ag</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;both selections must be from the same AtomGroup&#39;</span><span class="p">)</span>
+
+        <span class="n">acsi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">acsi</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">():</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Active coordinate set indices do not match, it will &#39;</span>
+                        <span class="s1">&#39;be set to zero.&#39;</span><span class="p">)</span>
+            <span class="n">acsi</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">concatenate</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">(),</span>
+                                      <span class="n">other</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">())))</span>
+        <span class="k">if</span> <span class="n">indices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">atommap</span><span class="o">.</span><span class="n">DUMMY</span><span class="p">:</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">Selection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="s1">&#39;({0}) or ({1})&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">(),</span> <span class="n">other</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">()),</span>
+                         <span class="n">acsi</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__and__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">is</span> <span class="n">other</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;other must be an AtomPointer&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="o">!=</span> <span class="n">ag</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;both selections must be from the same AtomGroup&#39;</span><span class="p">)</span>
+
+        <span class="n">acsi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">acsi</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">():</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;active coordinate set indices do not match, &#39;</span>
+                           <span class="s1">&#39;so it will be set to zero in the union.&#39;</span><span class="p">)</span>
+            <span class="n">acsi</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">acsi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">acsi</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">():</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Active coordinate set indices do not match, it will &#39;</span>
+                        <span class="s1">&#39;be set to zero.&#39;</span><span class="p">)</span>
+            <span class="n">acsi</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">indices</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">())</span>
+
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">indices</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">getIndices</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">indices</span><span class="p">:</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">indices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">atommap</span><span class="o">.</span><span class="n">DUMMY</span><span class="p">:</span>
+                <span class="n">indices</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">Selection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="s1">&#39;({0}) and ({1})&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">(),</span> <span class="n">other</span><span class="o">.</span><span class="n">getSelstr</span><span class="p">()),</span>
+                             <span class="n">acsi</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returnss an :class:`.AtomMap` instance. Order of pointed atoms are</span>
+<span class="sd">        preserved.&quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;unsupported operand type(s) for +: {0} and &#39;</span>
+                            <span class="s1">&#39;{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span>
+                                         <span class="nb">repr</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)))</span>
+
+        <span class="k">if</span> <span class="n">ag</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;AtomPointer instances must point to the same &#39;</span>
+                             <span class="s1">&#39;AtomGroup instance&#39;</span><span class="p">)</span>
+        <span class="n">acsi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">acsi</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">():</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Active coordset indices of atoms are not the same.&#39;</span>
+                           <span class="s1">&#39; Result will have ACSI {0}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">acsi</span><span class="p">))</span>
+
+        <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;({0}) + ({1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">(),</span> <span class="n">other</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">()])</span>
+
+        <span class="n">dummies</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dummies</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">numDummies</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dummies</span> <span class="o">+=</span> <span class="n">other</span><span class="o">.</span><span class="n">numDummies</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">return</span> <span class="n">AtomMap</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">acsi</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">intarrays</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                       <span class="n">dummies</span><span class="o">=</span><span class="n">dummies</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_getTimeStamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getTimeStamp</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_getKDTree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns KDTree for the active coordinate set from the atom group.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getKDTree</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">())</span>
+
+<div class="viewcode-block" id="AtomPointer.getAtomGroup"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.getAtomGroup">[docs]</a>    <span class="k">def</span> <span class="nf">getAtomGroup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns associated atom group.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span></div>
+
+<div class="viewcode-block" id="AtomPointer.numCoordsets"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.numCoordsets">[docs]</a>    <span class="k">def</span> <span class="nf">numCoordsets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns number of coordinate sets.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_n_csets</span></div>
+
+<div class="viewcode-block" id="AtomPointer.getACSIndex"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.getACSIndex">[docs]</a>    <span class="k">def</span> <span class="nf">getACSIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns index of the coordinate set.&quot;&quot;&quot;</span>
+
+        <span class="n">acsi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acsi</span>
+        <span class="k">if</span> <span class="n">acsi</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} has fewer coordsets than assumed by {1}&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">acsi</span></div>
+
+<div class="viewcode-block" id="AtomPointer.setACSIndex"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.setACSIndex">[docs]</a>    <span class="k">def</span> <span class="nf">setACSIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set coordinates at *index* active.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_coords</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;coordinates are not set&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;index must be an integer&#39;</span><span class="p">)</span>
+
+        <span class="n">n_csets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_n_csets</span>
+        <span class="k">if</span> <span class="n">n_csets</span> <span class="o">&lt;=</span> <span class="n">index</span> <span class="ow">or</span> <span class="n">n_csets</span> <span class="o">&lt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;coordinate set index is out of range&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="n">n_csets</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_acsi</span> <span class="o">=</span> <span class="n">index</span></div>
+
+<div class="viewcode-block" id="AtomPointer.getACSLabel"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.getACSLabel">[docs]</a>    <span class="k">def</span> <span class="nf">getACSLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns active coordinate set label.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_cslabels</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()]</span></div>
+
+<div class="viewcode-block" id="AtomPointer.getCSLabels"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.getCSLabels">[docs]</a>    <span class="k">def</span> <span class="nf">getCSLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns coordinate set labels.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">getCSLabels</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="AtomPointer.isDataLabel"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.isDataLabel">[docs]</a>    <span class="k">def</span> <span class="nf">isDataLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns **True** if data associated with *label* is present.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">isDataLabel</span><span class="p">(</span><span class="n">label</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AtomPointer.getDataLabels"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.getDataLabels">[docs]</a>    <span class="k">def</span> <span class="nf">getDataLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns data labels.  For ``which=&#39;user&#39;``, return only labels of</span>
+<span class="sd">        user provided data.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">getDataLabels</span><span class="p">(</span><span class="n">which</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AtomPointer.getDataType"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.getDataType">[docs]</a>    <span class="k">def</span> <span class="nf">getDataType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns type of the data (i.e. ``data.dtype``) associated with</span>
+<span class="sd">        *label*, or **None** label is not used.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">getDataType</span><span class="p">(</span><span class="n">label</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AtomPointer.getFlagLabels"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.getFlagLabels">[docs]</a>    <span class="k">def</span> <span class="nf">getFlagLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns flag labels.  For ``which=&#39;user&#39;``,  return labels of user</span>
+<span class="sd">        or parser (e.g. :term:`hetatm`) provided flags, for ``which=&#39;all&#39;``</span>
+<span class="sd">        return all possible :ref:`flags` labels in addition to those present</span>
+<span class="sd">        in the instance.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">getFlagLabels</span><span class="p">(</span><span class="n">which</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AtomPointer.isFlagLabel"><a class="viewcode-back" href="../../../manual/reference/atomic/pointer.html#prody.atomic.atom.AtomPointer.isFlagLabel">[docs]</a>    <span class="k">def</span> <span class="nf">isFlagLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns **True** if flags associated with *label* are present.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">isFlagLabel</span><span class="p">(</span><span class="n">label</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_getFlags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns atom flags.&quot;&quot;&quot;</span>
+
+        <span class="n">flags</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getFlags</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">flags</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">flags</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">()]</span>
+
+    <span class="k">def</span> <span class="nf">_getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+        <span class="n">subset</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+                            <span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">()))),</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">subset</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">subset</span>
+
+    <span class="k">def</span> <span class="nf">_iterBonds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Yield pairs of indices for bonded atoms that are within the pointer.</span>
+<span class="sd">        Use :meth:`setBonds` for setting bonds.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_bonds</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;bonds are not set, use `AtomGroup.setBonds`&#39;</span><span class="p">)</span>
+
+        <span class="n">indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">()</span>
+        <span class="n">iset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_iterBonds</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">iset</span> <span class="ow">and</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">iset</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">bmap</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_bmap</span><span class="p">[</span><span class="n">indices</span><span class="p">]):</span>
+                <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bmap</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">iset</span><span class="p">:</span>
+                        <span class="k">yield</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+                <span class="n">iset</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">a</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

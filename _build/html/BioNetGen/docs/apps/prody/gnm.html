@@ -1,0 +1,297 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody gnm &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/rbdocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/rbdocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/bionetgen.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/bionetgen_logo.png" alt="BNG logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">prody gnm</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+    <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div>
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+                      <p>
+                <small>
+                  <strong>BioNetGen</strong> <br>
+                  J. R. Faeder, M. L. Blinov, and W. S. Hlavacek (2009) <a href="http://www.ncbi.nlm.nih.gov/pubmed/19399430/">Rule-based modeling of biochemical systems with BioNetGen</a>, <i>Methods Mol. Biol.</i>, <strong>500</strong>, 113-67. <br> 
+                 </small>
+              </p>  
+              <p>
+                <small>
+                 <strong>RuleBender</strong> <br>
+                  A. M. Smith, W. Xu, Y. Sun, J. R. Faeder and G. E. Marai (2012) <a href="http://bmcbioinformatics.biomedcentral.com:80/articles/10.1186/1471-2105-13-S8-S3">RuleBender: integrated modeling, simulation and visualization for rule-based intracellular biochemistry</a>, <i>BMC Bioinformatics</i>, <strong>13</strong>(suppl. 8), S3 (16 pages). <br>
+                </small>
+              </p>  
+              <p>
+                <small>
+                  <strong>NFsim</strong> <br>
+                  M. W. Sneddon, J. R. Faeder and T. Emonet (2012) <a href="https://www.ncbi.nlm.nih.gov/pubmed/21186362">Efficient modeling, simulation and coarse-graining of biological complexity with NFsim.</a>, <i>Nat. Methods</i>, <strong>8</strong>, 177-183. 
+                </small>
+              </p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="prody-gnm">
+<span id="id1"></span><h1>prody gnm<a class="headerlink" href="#prody-gnm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Running <strong class="command">prody gnm -h</strong> displays:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>usage: prody gnm [-h] [--quiet] [--examples] [-n INT] [-s SEL] [-c FLOAT]
+                 [-g FLOAT] [-m INT] [-a] [-o PATH] [-e] [-r] [-u] [-q] [-v]
+                 [-z] [-t STR] [-b] [-k] [-p STR] [-f STR] [-d STR] [-x STR]
+                 [-A] [-R] [-Q] [-B] [-K] [-M STR] [-F STR] [-D INT]
+                 [-W FLOAT] [-H FLOAT]
+                 pdb
+
+positional arguments:
+  pdb                   PDB identifier or filename
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --quiet               suppress info messages to stderr
+  --examples            show usage examples and exit
+
+parameters:
+  -n INT, --number-of-modes INT
+                        number of non-zero eigenvectors (modes) to calculate
+                        (default: 10)
+  -s SEL, --select SEL  atom selection (default: &quot;protein and name CA or
+                        nucleic and name P C4&#39; C2&quot;)
+  -c FLOAT, --cutoff FLOAT
+                        cutoff distance (A) (default: 10.0)
+  -g FLOAT, --gamma FLOAT
+                        spring constant (default: 1.0)
+  -m INT, --model INT   index of model that will be used in the calculations
+
+output:
+  -a, --all-output      write all outputs
+  -o PATH, --output-dir PATH
+                        output directory (default: .)
+  -e, --eigenvs         write eigenvalues/vectors
+  -r, --cross-correlations
+                        write cross-correlations
+  -u, --heatmap         write cross-correlations heatmap file
+  -q, --square-fluctuations
+                        write square-fluctuations
+  -v, --covariance      write covariance matrix
+  -z, --npz             write compressed ProDy data file
+  -t STR, --extend STR  write NMD file for the model extended to &quot;backbone&quot;
+                        (&quot;bb&quot;) or &quot;all&quot; atoms of the residue, model must have
+                        one node per residue
+  -b, --beta-factors    write beta-factors calculated from GNM modes
+  -k, --kirchhoff       write Kirchhoff matrix
+
+output options:
+  -p STR, --file-prefix STR
+                        output file prefix (default: pdb_gnm)
+  -f STR, --number-format STR
+                        number output format (default: %12g)
+  -d STR, --delimiter STR
+                        number delimiter (default: &quot; &quot;)
+  -x STR, --extension STR
+                        numeric file extension (default: .txt)
+
+figures:
+  -A, --all-figures     save all figures
+  -R, --cross-correlations-figure
+                        save cross-correlations figure
+  -Q, --square-fluctuations-figure
+                        save square-fluctuations figure
+  -B, --beta-factors-figure
+                        save beta-factors figure
+  -K, --contact-map     save contact map (Kirchhoff matrix) figure
+  -M STR, --mode-shape-figure STR
+                        save mode shape figures for specified modes, e.g. &quot;1-3
+                        5&quot; for modes 1, 2, 3 and 5
+
+figure options:
+  -F STR, --figure-format STR
+                        pdf (default: pdf)
+  -D INT, --dpi INT     figure resolution (dpi) (default: 300)
+  -W FLOAT, --width FLOAT
+                        figure width (inch) (default: 8.0)
+  -H FLOAT, --height FLOAT
+                        figure height (inch) (default: 6.0)
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Running <strong class="command">prody gnm --examples</strong> displays:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>This command performs GNM calculations for given PDB structure and
+outputs results in NMD format. If an identifier is passed, structure
+file will be downloaded from the PDB FTP server.
+
+Fetch PDB 1p38, run GNM calculations using default parameters, and
+results:
+
+  $ prody gnm 1p38
+
+Fetch PDB 1aar, run GNM calculations with cutoff distance 7 angstrom
+for chain A carbon alpha atoms with residue numbers less than 70, and
+save all of the graphical output files:
+
+  $ prody gnm 1aar -c 7 -s &quot;calpha and chain A and resnum &lt; 70&quot; -A
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 07, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

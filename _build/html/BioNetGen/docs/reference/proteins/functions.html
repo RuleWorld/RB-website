@@ -1,0 +1,238 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Miscellaneous Tools &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.proteins.functions">
+<span id="miscellaneous-tools"></span><h1>Miscellaneous Tools<a class="headerlink" href="#module-prody.proteins.functions" title="Permalink to this headline">¶</a></h1>
+<p>This module defines miscellaneous functions dealing with protein data.</p>
+<dl class="function">
+<dt id="prody.proteins.functions.view3D">
+<code class="descname">view3D</code><span class="sig-paren">(</span><em>*alist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/functions.html#view3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.functions.view3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a py3Dmol view instance for interactive visualization in
+Jupyter notebooks. Available arguments are: width, height (of
+the viewer), backgroundColor, zoomTo (a py3Dmol selection to center
+around), and style, which is a py3Dmol style object that will be
+applied to all atoms in the scene. More complex styling can be achieved
+by manipulating the view object directly.</p>
+<p>The default style is to show the protein in a rainbow cartoon and
+hetero atoms in sticks/spheres.</p>
+<p>GNM/ANM Coloring</p>
+<p>An array of fluctuation values can be provided with the flucts kwarg
+for visualization of GNM/ANM calculations.  The array is assumed to 
+correpond to a calpha selection of the provided protein.
+The default color will be set to a RWB color scheme on a per-residue
+basis.  If the fluctuation vector contains negative values, the
+midpoint (white) will be at zero.  Otherwise the midpoint is the mean.</p>
+<p>An array of displacement vectors can be provided with the vecs kwarg.
+The animation of these motions can be controlled with frames (number
+of frames to animate over), amplitude (scaling factor), and animate
+(3Dmol.js animate options).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.functions.showProtein">
+<code class="descname">showProtein</code><span class="sig-paren">(</span><em>*atoms</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/functions.html#showProtein"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.functions.showProtein" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show protein representation using <code class="xref py py-meth docutils literal"><span class="pre">Axes3D()</span></code>.
+This function is designed for generating a quick view of the contents of a
+<a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> or <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>.</p>
+<p>Protein atoms matching <code class="docutils literal"><span class="pre">&quot;calpha&quot;</span></code> selection are displayed using solid
+lines by picking a random and unique color per chain.  Line with can
+be adjusted using <em>lw</em> argument, e.g. <code class="docutils literal"><span class="pre">lw=12</span></code>. Default width is 4.
+Chain colors can be overwritten using chain identifier as in <code class="docutils literal"><span class="pre">A='green'</span></code>.</p>
+<p>Water molecule oxygen atoms are represented by red colored circles.  Color
+can be changed using <em>water</em> keyword argument, e.g. <code class="docutils literal"><span class="pre">water='aqua'</span></code>.
+Water marker and size can be changed using <em>wmarker</em> and <em>wsize</em> keywords,
+defaults values are <code class="docutils literal"><span class="pre">wmarker='.',</span> <span class="pre">wsize=6</span></code>.</p>
+<p>Hetero atoms matching <code class="docutils literal"><span class="pre">&quot;hetero</span> <span class="pre">and</span> <span class="pre">noh&quot;</span></code> selection are represented by
+circles and unique colors are picked at random on a per residue basis.
+Colors can be customized using residue name as in <code class="docutils literal"><span class="pre">NAH='purple'</span></code>.  Note
+that this will color all distinct residues with the same name in the same
+color.  Hetero atom marker and size can be changed using <em>hmarker</em> and
+<em>hsize</em> keywords, default values are <code class="docutils literal"><span class="pre">hmarker='o',</span> <span class="pre">hsize=6</span></code>.</p>
+<p>ProDy will set the size of axis so the representation is not distorted when
+the shape of figure window is close to a square.  Colors are picked at
+random, except for water oxygens which will always be colored red.</p>
+<p><strong>* Interactive 3D Rendering in Jupyter Notebook *</strong></p>
+<p>If py3Dmol has been imported then it will be used instead to display 
+an interactive viewer.  See <a class="reference internal" href="../../../../manual/reference/proteins/functions.html#prody.proteins.functions.view3D" title="prody.proteins.functions.view3D"><code class="xref py py-func docutils literal"><span class="pre">view3D()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.functions.writePQR">
+<code class="descname">writePQR</code><span class="sig-paren">(</span><em>filename</em>, <em>atoms</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/functions.html#writePQR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.functions.writePQR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <em>atoms</em> in PQR format to a file with name <em>filename</em>.  Only
+current coordinate set is written.  Returns <em>filename</em> upon success.  If
+<em>filename</em> ends with <code class="file docutils literal"><span class="pre">.gz</span></code>, a compressed file will be written.</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

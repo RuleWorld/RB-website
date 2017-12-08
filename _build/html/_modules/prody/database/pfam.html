@@ -1,0 +1,619 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.database.pfam &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.database.pfam</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for interfacing Pfam database.&quot;&quot;&quot;</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Anindita Dutta, Ahmet Bakan, Cihan Kaya&#39;</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span><span class="p">,</span> <span class="n">isfile</span>
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">PY3K</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">makePath</span><span class="p">,</span> <span class="n">openURL</span><span class="p">,</span> <span class="n">gunzip</span><span class="p">,</span> <span class="n">openFile</span><span class="p">,</span> <span class="n">dictElement</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">relpath</span>
+
+<span class="k">if</span> <span class="n">PY3K</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">urllib.parse</span> <span class="kn">as</span> <span class="nn">urllib</span>
+    <span class="kn">import</span> <span class="nn">urllib.request</span> <span class="kn">as</span> <span class="nn">urllib2</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">urllib</span>
+    <span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;searchPfam&#39;</span><span class="p">,</span> <span class="s1">&#39;fetchPfamMSA&#39;</span><span class="p">,</span> <span class="s1">&#39;searchUniprotID&#39;</span><span class="p">]</span>
+
+<span class="n">FASTA</span> <span class="o">=</span> <span class="s1">&#39;fasta&#39;</span>
+<span class="n">SELEX</span> <span class="o">=</span> <span class="s1">&#39;selex&#39;</span>
+<span class="n">STOCKHOLM</span> <span class="o">=</span> <span class="s1">&#39;stockholm&#39;</span>
+
+<span class="n">DOWNLOAD_FORMATS</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;seed&#39;</span><span class="p">,</span> <span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="s1">&#39;ncbi&#39;</span><span class="p">,</span> <span class="s1">&#39;metagenomics&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;rp15&#39;</span><span class="p">,</span> <span class="s1">&#39;rp35&#39;</span><span class="p">,</span> <span class="s1">&#39;rp55&#39;</span><span class="p">,</span> <span class="s1">&#39;rp75&#39;</span><span class="p">,</span> <span class="s1">&#39;uniprot&#39;</span><span class="p">])</span>
+<span class="n">FORMAT_OPTIONS</span> <span class="o">=</span> <span class="p">({</span><span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="n">FASTA</span><span class="p">,</span> <span class="n">SELEX</span><span class="p">,</span> <span class="n">STOCKHOLM</span><span class="p">]),</span>
+                  <span class="s1">&#39;order&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;tree&#39;</span><span class="p">,</span> <span class="s1">&#39;alphabetical&#39;</span><span class="p">]),</span>
+                  <span class="s1">&#39;inserts&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="s1">&#39;upper&#39;</span><span class="p">]),</span>
+                  <span class="s1">&#39;gaps&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;mixed&#39;</span><span class="p">,</span> <span class="s1">&#39;dots&#39;</span><span class="p">,</span> <span class="s1">&#39;dashes&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">])})</span>
+
+<span class="n">MINSEQLEN</span> <span class="o">=</span> <span class="mi">16</span>
+
+
+<div class="viewcode-block" id="searchPfam"><a class="viewcode-back" href="../../../manual/reference/database/pfam.html#prody.database.pfam.searchPfam">[docs]</a><span class="k">def</span> <span class="nf">searchPfam</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns Pfam search results in a dictionary.  Matching Pfam accession</span>
+<span class="sd">    as keys will map to evalue, alignment start and end residue positions.</span>
+
+<span class="sd">    :arg query: UniProt ID, PDB identifier, protein sequence, or a sequence</span>
+<span class="sd">        file, sequence queries must not contain without gaps and must be at</span>
+<span class="sd">        least 16 characters long</span>
+<span class="sd">    :type query: str</span>
+
+<span class="sd">    :arg timeout: timeout for blocking connection attempt in seconds, default</span>
+<span class="sd">        is 60</span>
+<span class="sd">    :type timeout: int</span>
+
+<span class="sd">    *query* can also be a PDB identifier, e.g. ``&#39;1mkp&#39;`` or ``&#39;1mkpA&#39;`` with</span>
+<span class="sd">    chain identifier.  UniProt ID of the specified chain, or the first</span>
+<span class="sd">    protein chain will be used for searching the Pfam database.&quot;&quot;&quot;</span>
+
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39;{http://pfam.xfam.org/}&#39;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">isfile</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">prody.sequence</span> <span class="kn">import</span> <span class="n">MSAFile</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">seq</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">MSAFile</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">openFile</span><span class="p">(</span><span class="n">query</span><span class="p">)</span> <span class="k">as</span> <span class="n">inp</span><span class="p">:</span>
+                <span class="n">seq</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">seq</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;could not parse a sequence without gaps from &#39;</span> <span class="o">+</span>
+                             <span class="n">query</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">seq</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+    <span class="kn">import</span> <span class="nn">xml.etree.cElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;_pfam&#39;</span><span class="p">)</span>
+    <span class="n">timeout</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;timeout&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">MINSEQLEN</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">seq</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; is not a valid sequence&#39;</span><span class="p">)</span>
+        <span class="n">fseq</span> <span class="o">=</span> <span class="s1">&#39;&gt;Seq</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">seq</span>
+        <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;hmmdb&#39;</span> <span class="p">:</span> <span class="s1">&#39;pfam&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="n">fseq</span> <span class="p">}</span>
+        <span class="n">enc_params</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s1">&#39;http://www.ebi.ac.uk/Tools/hmmer/search/hmmscan&#39;</span><span class="p">,</span> <span class="n">enc_params</span><span class="p">)</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="p">(</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">geturl</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;?output=xml&#39;</span><span class="p">)</span> 
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Submitted Pfam search for sequence &quot;{0}...&quot;.&#39;</span>
+                     <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">seq</span><span class="p">[:</span><span class="n">MINSEQLEN</span><span class="p">]))</span>
+
+        <span class="n">xml</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">XML</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;failed to parse results XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+        <span class="n">matches</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">root</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;hits&#39;</span><span class="p">:</span>
+                <span class="n">accession</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;acc&#39;</span><span class="p">)</span>
+                <span class="n">pfam_id</span> <span class="o">=</span> <span class="n">accession</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;accession&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">accession</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;class&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;Domain&#39;</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;ali_end&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;alisqto&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;ali_start&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;alisqfrom&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;bitscore&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;bitscore&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;end&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;alisqto&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;evalue&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;evalue&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;evidence&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;hmmer v3.0&#39;</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;hmm_end&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;alihmmto&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;hmm_start&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;alihmmfrom&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;significant&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;significant&#39;</span><span class="p">)</span>    
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;start&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;alisqfrom&#39;</span><span class="p">)</span>
+                <span class="n">matches</span><span class="p">[</span><span class="n">pfam_id</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;Pfam-A&#39;</span>
+                <span class="k">return</span> <span class="n">matches</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">idcode</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">parsePDBHeader</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">polymers</span> <span class="o">=</span> <span class="n">parsePDBHeader</span><span class="p">(</span><span class="n">seq</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;polymers&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse header for {0} ({1})&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">seq</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">chid</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">polymers</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">chid</span> <span class="ow">and</span> <span class="n">poly</span><span class="o">.</span><span class="n">chid</span> <span class="o">!=</span> <span class="n">chid</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="k">for</span> <span class="n">dbref</span> <span class="ow">in</span> <span class="n">poly</span><span class="o">.</span><span class="n">dbrefs</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">dbref</span><span class="o">.</span><span class="n">database</span> <span class="o">!=</span> <span class="s1">&#39;UniProt&#39;</span><span class="p">:</span>
+                            <span class="k">continue</span>
+                        <span class="n">idcode</span> <span class="o">=</span> <span class="n">dbref</span><span class="o">.</span><span class="n">idcode</span>
+                        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;UniProt ID code {0} for {1} chain &#39;</span>
+                                    <span class="s1">&#39;{2} will be used.&#39;</span>
+                                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idcode</span><span class="p">,</span> <span class="n">seq</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="n">poly</span><span class="o">.</span><span class="n">chid</span><span class="p">))</span>
+                        <span class="k">break</span>
+                    <span class="k">if</span> <span class="n">idcode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="k">break</span>
+            <span class="k">if</span> <span class="n">idcode</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;A UniProt ID code for PDB {0} could not be &#39;</span>
+                            <span class="s1">&#39;parsed.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">seq</span><span class="p">)))</span>
+                <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://pfam.xfam.org/protein/&#39;</span> <span class="o">+</span> <span class="n">seq</span> <span class="o">+</span> <span class="s1">&#39;?output=xml&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">url</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;http://pfam.xfam.org/protein/&#39;</span> <span class="o">+</span>
+                       <span class="n">idcode</span> <span class="o">+</span> <span class="s1">&#39;?output=xml&#39;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://pfam.xfam.org/protein/&#39;</span> <span class="o">+</span> <span class="n">seq</span> <span class="o">+</span> <span class="s1">&#39;?output=xml&#39;</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Retrieving Pfam search results: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+    <span class="n">xml</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">while</span> <span class="n">LOGGER</span><span class="o">.</span><span class="n">timing</span><span class="p">(</span><span class="s1">&#39;_pfam&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">timeout</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">xml</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">xml</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;PEND&#39;</span><span class="p">,</span><span class="s1">&#39;RUN&#39;</span><span class="p">]:</span>
+                <span class="k">break</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">xml</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;Pfam search timed out or failed to parse results &#39;</span>
+                      <span class="s1">&#39;XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Pfam search completed in </span><span class="si">%.2f</span><span class="s1">s.&#39;</span><span class="p">,</span> <span class="s1">&#39;_pfam&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">xml</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;There was a system error on your last request.&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;No Pfam matches found for: &#39;</span> <span class="o">+</span> <span class="n">seq</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">XML</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;failed to parse results XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">MINSEQLEN</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">xml_matches</span> <span class="o">=</span> <span class="n">root</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;failed to parse results XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">dictElement</span><span class="p">(</span><span class="n">root</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">prefix</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">xml_matches</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;matches&#39;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;failed to parse results XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+
+    <span class="n">matches</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">xml_matches</span><span class="p">:</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">accession</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;accession&#39;</span><span class="p">][:</span><span class="mi">7</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;failed to parse results XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^P(F|B)[0-9]{5}$&#39;</span><span class="p">,</span> <span class="n">accession</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not match pfam accession&#39;</span>
+                             <span class="s1">&#39; format&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accession</span><span class="p">))</span>
+
+        <span class="n">match</span> <span class="o">=</span> <span class="n">matches</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">accession</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+        <span class="n">locations</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;locations&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">for</span> <span class="n">loc</span> <span class="ow">in</span> <span class="n">child</span><span class="p">:</span>
+            <span class="n">locations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">loc</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">MINSEQLEN</span><span class="p">:</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;Query &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;Query sequence&#39;</span>
+
+    <span class="k">if</span> <span class="n">matches</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">query</span> <span class="o">+</span> <span class="s1">&#39; matched {0} Pfam families.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">query</span> <span class="o">+</span> <span class="s1">&#39; did not match any Pfam families.&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">matches</span></div>
+
+<div class="viewcode-block" id="searchUniprotID"><a class="viewcode-back" href="../../../manual/reference/database/pfam.html#prody.database.pfam.searchUniprotID">[docs]</a><span class="k">def</span> <span class="nf">searchUniprotID</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">search_b</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">skip_a</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns Pfam search results in a dictionary.  Matching Pfam accession</span>
+<span class="sd">    as keys will map to evalue, alignment start and end residue positions.</span>
+
+<span class="sd">    :arg query: UniProt ID, PDB identifier, protein sequence, or a sequence</span>
+<span class="sd">        file, sequence queries must not contain without gaps and must be at</span>
+<span class="sd">        least 16 characters long</span>
+<span class="sd">    :type query: str</span>
+
+<span class="sd">    :arg search_b: search Pfam-B families when **True**</span>
+<span class="sd">    :type search_b: bool</span>
+
+<span class="sd">    :arg skip_a: do not search Pfam-A families when **True**</span>
+<span class="sd">    :type skip_a: bool</span>
+
+<span class="sd">    :arg ga: use gathering threshold when **True**</span>
+<span class="sd">    :type ga: bool</span>
+
+<span class="sd">    :arg evalue: user specified e-value cutoff, must be smaller than 10.0</span>
+<span class="sd">    :type evalue: float</span>
+
+<span class="sd">    :arg timeout: timeout for blocking connection attempt in seconds, default</span>
+<span class="sd">        is 60</span>
+<span class="sd">    :type timeout: int</span>
+
+<span class="sd">    *query* can also be a PDB identifier, e.g. ``&#39;1mkp&#39;`` or ``&#39;1mkpA&#39;`` with</span>
+<span class="sd">    chain identifier.  UniProt ID of the specified chain, or the first</span>
+<span class="sd">    protein chain will be used for searching the Pfam database.&quot;&quot;&quot;</span>
+
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39;{http://pfam.xfam.org/}&#39;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="n">seq</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+    <span class="kn">import</span> <span class="nn">xml.etree.cElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;_pfam&#39;</span><span class="p">)</span>
+    <span class="n">timeout</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;timeout&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://pfam.xfam.org/protein/&#39;</span> <span class="o">+</span> <span class="n">seq</span> <span class="o">+</span> <span class="s1">&#39;?output=xml&#39;</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Retrieving Pfam search results: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+    <span class="n">xml</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">while</span> <span class="n">LOGGER</span><span class="o">.</span><span class="n">timing</span><span class="p">(</span><span class="s1">&#39;_pfam&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">timeout</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">xml</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">xml</span><span class="p">:</span>
+                <span class="k">break</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">xml</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;Pfam search timed out or failed to parse results &#39;</span>
+                      <span class="s1">&#39;XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Pfam search completed in </span><span class="si">%.2f</span><span class="s1">s.&#39;</span><span class="p">,</span> <span class="s1">&#39;_pfam&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">xml</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;There was a system error on your last request.&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;No Pfam matches found for: &#39;</span> <span class="o">+</span> <span class="n">seq</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">XML</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;failed to parse results XML, check URL: &#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">root</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="fetchPfamMSA"><a class="viewcode-back" href="../../../manual/reference/database/pfam.html#prody.database.pfam.fetchPfamMSA">[docs]</a><span class="k">def</span> <span class="nf">fetchPfamMSA</span><span class="p">(</span><span class="n">acc</span><span class="p">,</span> <span class="n">alignment</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a path to the downloaded Pfam MSA file.</span>
+
+<span class="sd">    :arg acc: Pfam ID or Accession Code</span>
+<span class="sd">    :type acc: str</span>
+
+<span class="sd">    :arg alignment: alignment type, one of ``&#39;full&#39;`` (default), ``&#39;seed&#39;``,</span>
+<span class="sd">         ``&#39;ncbi&#39;``, ``&#39;metagenomics&#39;``, ``&#39;rp15&#39;``, ``&#39;rp35&#39;``, ``&#39;rp55&#39;``,</span>
+<span class="sd">         ``&#39;rp75&#39;`` or ``&#39;uniprot&#39;`` where rp stands for representative </span>
+<span class="sd">         proteomes</span>
+
+<span class="sd">    :arg compressed: gzip the downloaded MSA file, default is **False**</span>
+
+<span class="sd">    *Alignment Options*</span>
+
+<span class="sd">    :arg format: a Pfam supported MSA file format, one of ``&#39;selex&#39;``,</span>
+<span class="sd">        (default), ``&#39;stockholm&#39;`` or ``&#39;fasta&#39;``</span>
+
+<span class="sd">    :arg order: ordering of sequences, ``&#39;tree&#39;`` (default) or</span>
+<span class="sd">        ``&#39;alphabetical&#39;``</span>
+
+<span class="sd">    :arg inserts: letter case for inserts, ``&#39;upper&#39;`` (default) or ``&#39;lower&#39;``</span>
+
+<span class="sd">    :arg gaps: gap character, one of ``&#39;dashes&#39;`` (default), ``&#39;dots&#39;``,</span>
+<span class="sd">        ``&#39;mixed&#39;`` or **None** for unaligned</span>
+
+<span class="sd">    *Other Options*</span>
+
+<span class="sd">    :arg timeout: timeout for blocking connection attempt in seconds, default</span>
+<span class="sd">        is 60</span>
+
+<span class="sd">    :arg outname: out filename, default is input ``&#39;acc_alignment.format&#39;``</span>
+
+<span class="sd">    :arg folder: output folder, default is ``&#39;.&#39;``&quot;&quot;&quot;</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://pfam.xfam.org/family/acc?id=&#39;</span> <span class="o">+</span> <span class="n">acc</span>
+    <span class="n">handle</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">orig_acc</span> <span class="o">=</span> <span class="n">acc</span>
+    <span class="n">acc</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">PY3K</span><span class="p">:</span>
+        <span class="n">acc</span> <span class="o">=</span> <span class="n">acc</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="n">url_flag</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;(?&lt;=PF)[0-9]{5}$&#39;</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid Pfam ID or Accession Code&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">orig_acc</span><span class="p">)))</span>
+
+    <span class="k">if</span> <span class="n">alignment</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">DOWNLOAD_FORMATS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;alignment must be one of full, seed, ncbi or&#39;</span>
+                         <span class="s1">&#39; metagenomics&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">alignment</span> <span class="o">==</span> <span class="s1">&#39;ncbi&#39;</span> <span class="ow">or</span> <span class="n">alignment</span> <span class="o">==</span> <span class="s1">&#39;metagenomics&#39;</span> <span class="ow">or</span> <span class="n">alignment</span> <span class="o">==</span> <span class="s1">&#39;uniprot&#39;</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;http://pfam.xfam.org/family/&#39;</span> <span class="o">+</span> <span class="n">acc</span> <span class="o">+</span> <span class="s1">&#39;/alignment/&#39;</span> <span class="o">+</span>
+               <span class="n">alignment</span> <span class="o">+</span> <span class="s1">&#39;/gzipped&#39;</span><span class="p">)</span>
+        <span class="n">url_flag</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.sth&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;http://pfam.xfam.org/family/&#39;</span> <span class="o">+</span> <span class="n">acc</span> <span class="o">+</span> <span class="s1">&#39;/alignment/&#39;</span> <span class="o">+</span>
+                   <span class="n">alignment</span> <span class="o">+</span> <span class="s1">&#39;/gzipped&#39;</span><span class="p">)</span>
+            <span class="n">url_flag</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.sth&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">align_format</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;format&#39;</span><span class="p">,</span> <span class="s1">&#39;selex&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">align_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">FORMAT_OPTIONS</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;alignment format must be of type selex&#39;</span>
+                                 <span class="s1">&#39; stockholm or fasta. MSF not supported&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">align_format</span> <span class="o">==</span> <span class="n">SELEX</span><span class="p">:</span>
+                <span class="n">align_format</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;pfam&#39;</span><span class="p">,</span> <span class="s1">&#39;.slx&#39;</span>
+            <span class="k">elif</span> <span class="n">align_format</span> <span class="o">==</span> <span class="n">FASTA</span><span class="p">:</span>
+                <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.fasta&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.sth&#39;</span>
+
+            <span class="n">gaps</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gaps&#39;</span><span class="p">,</span> <span class="s1">&#39;dashes&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">gaps</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">FORMAT_OPTIONS</span><span class="p">[</span><span class="s1">&#39;gaps&#39;</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;gaps must be of type mixed, dots, dashes, &#39;</span>
+                                 <span class="s1">&#39;or None&#39;</span><span class="p">)</span>
+
+            <span class="n">inserts</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;inserts&#39;</span><span class="p">,</span> <span class="s1">&#39;upper&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">inserts</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">FORMAT_OPTIONS</span><span class="p">[</span><span class="s1">&#39;inserts&#39;</span><span class="p">]):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;inserts must be of type lower or upper&#39;</span><span class="p">)</span>
+
+            <span class="n">order</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;order&#39;</span><span class="p">,</span> <span class="s1">&#39;tree&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">order</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">FORMAT_OPTIONS</span><span class="p">[</span><span class="s1">&#39;order&#39;</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;order must be of type tree or alphabetical&#39;</span><span class="p">)</span>
+
+            <span class="n">url</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;http://pfam.xfam.org/family/&#39;</span> <span class="o">+</span> <span class="n">acc</span> <span class="o">+</span> <span class="s1">&#39;/alignment/&#39;</span>
+                   <span class="o">+</span> <span class="n">alignment</span> <span class="o">+</span> <span class="s1">&#39;/format?format=&#39;</span> <span class="o">+</span> <span class="n">align_format</span> <span class="o">+</span>
+                   <span class="s1">&#39;&amp;alnType=&#39;</span> <span class="o">+</span> <span class="n">alignment</span> <span class="o">+</span> <span class="s1">&#39;&amp;order=&#39;</span> <span class="o">+</span> <span class="n">order</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span>
+                   <span class="s1">&#39;&amp;case=&#39;</span> <span class="o">+</span> <span class="n">inserts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&amp;gaps=&#39;</span> <span class="o">+</span> <span class="n">gaps</span> <span class="o">+</span> <span class="s1">&#39;&amp;download=1&#39;</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;timeout&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)))</span>
+    <span class="n">outname</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outname&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">outname</span><span class="p">:</span>
+        <span class="n">outname</span> <span class="o">=</span> <span class="n">orig_acc</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;folder&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">))</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">makePath</span><span class="p">(</span><span class="n">folder</span><span class="p">),</span> <span class="n">outname</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">alignment</span> <span class="o">+</span> <span class="n">extension</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">compressed</span><span class="p">:</span>
+        <span class="n">filepath</span> <span class="o">=</span> <span class="n">filepath</span> <span class="o">+</span> <span class="s1">&#39;.gz&#39;</span>
+        <span class="k">if</span> <span class="n">url_flag</span><span class="p">:</span>
+            <span class="n">f_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">f_out</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+        <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="n">f_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">url_flag</span><span class="p">:</span>
+            <span class="n">gunzip</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">filepath</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
+                <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">relpath</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Pfam MSA for {0} is written as {1}.&#39;</span>
+                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">orig_acc</span><span class="p">,</span> <span class="n">filepath</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">filepath</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+    <span class="c1">#filepath = fetchPfamMSA(&#39;PF00497&#39;,alignment=&#39;seed&#39;,compressed=False,</span>
+    <span class="c1">#                         format=&#39;stockholm&#39;,gaps=&#39;dashes&#39;)</span>
+    <span class="c1">#print filepath</span>
+    <span class="c1">#results = list(iterSequences(filepath))</span>
+
+    <span class="c1">#filepath1 = fetchPfamMSA(&#39;PF00007&#39;,alignment=&#39;seed&#39;,compressed=True,</span>
+    <span class="c1">#                         timeout=5)</span>
+    <span class="c1">#filepath2 = fetchPfamMSA(&#39;PF00007&#39;,alignment=&#39;seed&#39;,compressed=True,</span>
+    <span class="c1">#                         format=&#39;selex&#39;)</span>
+    <span class="c1">#filepath3 = fetchPfamMSA(&#39;PF00007&#39;,alignment=&#39;seed&#39;,compressed=False,</span>
+    <span class="c1">#                         format=&#39;fasta&#39;, outname=&#39;mymsa&#39;)</span>
+    <span class="c1">#results_sth = list(MSAFile(filepath1))</span>
+    <span class="c1">#results_slx = list(MSAFile(filepath2))</span>
+    <span class="c1">#results_fasta = list(MSAFile(filepath3))</span>
+    <span class="c1">#from Bio import AlignIO</span>
+    <span class="c1">#alignment = AlignIO.read(filepath3,&#39;fasta&#39;)</span>
+    <span class="c1">#results_obj = list(MSAFile(alignment))</span>
+    <span class="c1">#import numpy</span>
+    <span class="c1">#numpy.testing.assert_equal(results_fasta,results_obj)</span>
+
+    <span class="c1">#matches1 = searchPfam(&#39;P12821&#39;)</span>
+    <span class="c1">#matches1 = searchPfam(&#39;P08581&#39;)</span>
+    <span class="c1">#matches2 = searchPfam(&#39;test.seq&#39;)</span>
+
+    <span class="sd">&quot;&quot;&quot;matches2 = searchPfam(&#39;PMFIVNTNVPRASVPDGFLSELTQQLAQATGKPPQYIAVHVVPDQLMAFGGSSEPCALCSLHSIGKIGGAQNRSYSKLLC\</span>
+<span class="sd">GLLAERLRISPDRVYINYYDMNAANVGWNNSTFA&#39;, evalue=2, skipAs=True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#matches3 = searchPfam(&#39;NSIQIGGLFPRGADQEYSAFRVGMVQFSTSEFRLTPHIDNLEVANSFAVTNAFCSQFSRGVYAIFGFYDKKSVNTITSFC\</span>
+<span class="c1">#GTLHVSFITPSFPTDGTHPFVIQMRPDLKGALLSLIEYYQWDKFAYLYDSDRGLSTLQAVLDSAAEKKWQVTAINVGNINNDKKDETYRSLFQDLELKKERRVILDCERDKVNDIVDQVITIGKHVKGYHYIIANLGFTDGDLLKIQFGGAEVSGFQIVD\</span>
+<span class="c1">#YDDSLVSKFIERWSTLEEKEYPGAHTATIKYTSALTYDAVQVMTEAFRNLRKQRIEISRRGNAGDCLANPAVPWGQGVEI\</span>
+<span class="c1">#ERALKQVQVEGLSGNIKFDQNGKRINYTINIMELKTNGPRKIGYWSEVDKMVLTEDDTSGLEQKTVVVTTILESPYVMMK\</span>
+<span class="c1">#ANHAALAGNERYEGYCVDLAAEIAKHCGFKYKLTIVGDGKYGARDADTKIWNGMVGELVYGKADIAIAPLTITLVREEVI\</span>
+<span class="c1">#DFSKPFMSLGISIMIKKPQKSKPGVFSFLDPLAYEIWMCIVFAYIGVSVVLFLVSRFSPYEWHTEEFEDGRETQSSESTN\</span>
+<span class="c1">#EFGIFNSLWFSLGAFMQQGADISPRSLSGRIVGGVWWFFTLIIISSYTANLAAFLTVERMVSPIESAEDLSKQTEIAYGT\</span>
+<span class="c1">#LDSGSTKEFFRRSKIAVFDKMWTYMRSAEPSVFVRTTAEGVARVRKSKGKYAYLLESTMNEYIEQRKPCDTMKVGGNLDS\</span>
+<span class="c1">#KGYGIATPKGSSLGTPVNLAVLKLSEQGLLDKLKNKWWYDKGECGAKDSGSKEKTSALSLSNVAGVFYILVGGLGLAMLV\</span>
+<span class="c1">#ALIEFCYKSRAEAKRMKGLVPRG&#39;, delay=10, evalue=2, searchBs=True)</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

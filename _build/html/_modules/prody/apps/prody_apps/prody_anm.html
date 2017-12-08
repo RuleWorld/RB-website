@@ -1,0 +1,462 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.apps.prody_apps.prody_anm &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.apps.prody_apps.prody_anm</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Perform ANM calculations and output the results in plain text, NMD, and</span>
+<span class="sd">graphical formats.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..apptools</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.nmaoptions</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">nmaoptions</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;prody_anm&#39;</span><span class="p">]</span>
+
+<span class="n">DEFAULTS</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">HELPTEXT</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="s1">&#39;index of model that will be used in the calculations&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;cutoff&#39;</span><span class="p">,</span> <span class="s1">&#39;cutoff distance (A)&#39;</span><span class="p">,</span> <span class="mf">15.</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span> <span class="s1">&#39;spring constant&#39;</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>
+
+    <span class="p">(</span><span class="s1">&#39;outbeta&#39;</span><span class="p">,</span> <span class="s1">&#39;write beta-factors calculated from GNM modes&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;hessian&#39;</span><span class="p">,</span> <span class="s1">&#39;write Hessian matrix&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;kirchhoff&#39;</span><span class="p">,</span> <span class="s1">&#39;write Kirchhoff matrix&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;figcmap&#39;</span><span class="p">,</span> <span class="s1">&#39;save contact map (Kirchhoff matrix) figure&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;figbeta&#39;</span><span class="p">,</span> <span class="s1">&#39;save beta-factors figure&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;figmode&#39;</span><span class="p">,</span> <span class="s1">&#39;save mode shape figures for specified modes, &#39;</span>
+                <span class="s1">&#39;e.g. &quot;1-3 5&quot; for modes 1, 2, 3 and 5&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]:</span>
+
+    <span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+    <span class="n">HELPTEXT</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">txt</span>
+
+<span class="n">DEFAULTS</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">nmaoptions</span><span class="o">.</span><span class="n">DEFAULTS</span><span class="p">)</span>
+<span class="n">HELPTEXT</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">nmaoptions</span><span class="o">.</span><span class="n">HELPTEXT</span><span class="p">)</span>
+
+<span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;prefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;_anm&#39;</span>
+
+
+<div class="viewcode-block" id="prody_anm"><a class="viewcode-back" href="../../../../manual/reference/apps/prody_anm.html#prody.apps.prody_apps.prody_anm.prody_anm">[docs]</a><span class="k">def</span> <span class="nf">prody_anm</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Perform ANM calculations for *pdb*.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">isdir</span><span class="p">,</span> <span class="n">join</span>
+    <span class="n">outdir</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outdir&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">isdir</span><span class="p">(</span><span class="n">outdir</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid path&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">outdir</span><span class="p">)))</span>
+
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+    <span class="kn">import</span> <span class="nn">prody</span>
+    <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">LOGGER</span>
+
+    <span class="n">selstr</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">)</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;prefix&#39;</span><span class="p">)</span>
+    <span class="n">cutoff</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cutoff&#39;</span><span class="p">)</span>
+    <span class="n">gamma</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gamma&#39;</span><span class="p">)</span>
+    <span class="n">nmodes</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nmodes&#39;</span><span class="p">)</span>
+    <span class="n">selstr</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">)</span>
+
+    <span class="n">pdb</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">parsePDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">prefix</span> <span class="o">==</span> <span class="s1">&#39;_anm&#39;</span><span class="p">:</span>
+        <span class="n">prefix</span> <span class="o">=</span> <span class="n">pdb</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;_anm&#39;</span>
+
+    <span class="n">select</span> <span class="o">=</span> <span class="n">pdb</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">selstr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">select</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Selection {0} did not match any atoms.&#39;</span>
+                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">selstr</span><span class="p">)))</span>
+        <span class="k">return</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;{0} atoms will be used for ANM calculations.&#39;</span>
+                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">select</span><span class="p">)))</span>
+
+    <span class="n">anm</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">ANM</span><span class="p">(</span><span class="n">pdb</span><span class="o">.</span><span class="n">getTitle</span><span class="p">())</span>
+    <span class="n">anm</span><span class="o">.</span><span class="n">buildHessian</span><span class="p">(</span><span class="n">select</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span>
+    <span class="n">anm</span><span class="o">.</span><span class="n">calcModes</span><span class="p">(</span><span class="n">nmodes</span><span class="p">)</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Writing numerical output.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outnpz&#39;</span><span class="p">):</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">saveModel</span><span class="p">(</span><span class="n">anm</span><span class="p">,</span> <span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span><span class="p">))</span>
+    <span class="n">prody</span><span class="o">.</span><span class="n">writeNMD</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;.nmd&#39;</span><span class="p">),</span> <span class="n">anm</span><span class="p">,</span> <span class="n">select</span><span class="p">)</span>
+
+    <span class="n">extend</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;extend&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">extend</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">extend</span> <span class="o">==</span> <span class="s1">&#39;all&#39;</span><span class="p">:</span>
+            <span class="n">extended</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">extendModel</span><span class="p">(</span><span class="n">anm</span><span class="p">,</span> <span class="n">select</span><span class="p">,</span> <span class="n">pdb</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">extended</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">extendModel</span><span class="p">(</span><span class="n">anm</span><span class="p">,</span> <span class="n">select</span><span class="p">,</span> <span class="n">select</span> <span class="o">|</span> <span class="n">pdb</span><span class="o">.</span><span class="n">bb</span><span class="p">)</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">writeNMD</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_extended_&#39;</span> <span class="o">+</span>
+                       <span class="n">extend</span> <span class="o">+</span> <span class="s1">&#39;.nmd&#39;</span><span class="p">),</span> <span class="o">*</span><span class="n">extended</span><span class="p">)</span>
+
+    <span class="n">outall</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outall&#39;</span><span class="p">)</span>
+    <span class="n">delim</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;numdelim&#39;</span><span class="p">)</span>
+    <span class="n">ext</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;numext&#39;</span><span class="p">)</span>
+    <span class="n">format</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;numformat&#39;</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outeig&#39;</span><span class="p">):</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">writeArray</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_evectors&#39;</span><span class="o">+</span><span class="n">ext</span><span class="p">),</span>
+                         <span class="n">anm</span><span class="o">.</span><span class="n">getArray</span><span class="p">(),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delim</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">writeArray</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_evalues&#39;</span><span class="o">+</span><span class="n">ext</span><span class="p">),</span>
+                         <span class="n">anm</span><span class="o">.</span><span class="n">getEigvals</span><span class="p">(),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delim</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outbeta&#39;</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">openFile</span>
+        <span class="n">fout</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_beta.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">outdir</span><span class="p">)</span>
+        <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;{0[0]:1s} {0[1]:4s} {0[2]:4s} {0[3]:5s} {0[4]:5s}</span><span class="se">\n</span><span class="s1">&#39;</span>
+                       <span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;RES&#39;</span><span class="p">,</span> <span class="s1">&#39;####&#39;</span><span class="p">,</span> <span class="s1">&#39;Exp.&#39;</span><span class="p">,</span> <span class="s1">&#39;The.&#39;</span><span class="p">]))</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">select</span><span class="o">.</span><span class="n">getChids</span><span class="p">(),</span> <span class="n">select</span><span class="o">.</span><span class="n">getResnames</span><span class="p">(),</span>
+                        <span class="n">select</span><span class="o">.</span><span class="n">getResnums</span><span class="p">(),</span> <span class="n">select</span><span class="o">.</span><span class="n">getBetas</span><span class="p">(),</span>
+                        <span class="n">prody</span><span class="o">.</span><span class="n">calcTempFactors</span><span class="p">(</span><span class="n">anm</span><span class="p">,</span> <span class="n">select</span><span class="p">)):</span>
+            <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;{0[0]:1s} {0[1]:4s} {0[2]:4d} {0[3]:5.2f} {0[4]:5.2f}</span><span class="se">\n</span><span class="s1">&#39;</span>
+                       <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+        <span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outcov&#39;</span><span class="p">):</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">writeArray</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_covariance&#39;</span> <span class="o">+</span> <span class="n">ext</span><span class="p">),</span>
+                         <span class="n">anm</span><span class="o">.</span><span class="n">getCovariance</span><span class="p">(),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delim</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outcc&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outhm&#39;</span><span class="p">):</span>
+        <span class="n">cc</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">calcCrossCorr</span><span class="p">(</span><span class="n">anm</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outcc&#39;</span><span class="p">):</span>
+            <span class="n">prody</span><span class="o">.</span><span class="n">writeArray</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span>
+                             <span class="s1">&#39;_cross-correlations&#39;</span> <span class="o">+</span> <span class="n">ext</span><span class="p">),</span>
+                             <span class="n">cc</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delim</span><span class="p">,</span>  <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outhm&#39;</span><span class="p">):</span>
+            <span class="n">prody</span><span class="o">.</span><span class="n">writeHeatmap</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_cross-correlations.hm&#39;</span><span class="p">),</span>
+                               <span class="n">cc</span><span class="p">,</span> <span class="n">resnum</span><span class="o">=</span><span class="n">select</span><span class="o">.</span><span class="n">getResnums</span><span class="p">(),</span>
+                               <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Residue&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Residue&#39;</span><span class="p">,</span>
+                               <span class="n">title</span><span class="o">=</span><span class="n">anm</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; cross-correlations&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;hessian&#39;</span><span class="p">):</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">writeArray</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_hessian&#39;</span><span class="o">+</span><span class="n">ext</span><span class="p">),</span>
+                         <span class="n">anm</span><span class="o">.</span><span class="n">getHessian</span><span class="p">(),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delim</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;kirchhoff&#39;</span><span class="p">):</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">writeArray</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_kirchhoff&#39;</span><span class="o">+</span><span class="n">ext</span><span class="p">),</span>
+                         <span class="n">anm</span><span class="o">.</span><span class="n">getKirchhoff</span><span class="p">(),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delim</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">outall</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;outsf&#39;</span><span class="p">):</span>
+        <span class="n">prody</span><span class="o">.</span><span class="n">writeArray</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_sqflucts&#39;</span><span class="o">+</span><span class="n">ext</span><span class="p">),</span>
+                         <span class="n">prody</span><span class="o">.</span><span class="n">calcSqFlucts</span><span class="p">(</span><span class="n">anm</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delim</span><span class="p">,</span>
+                         <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+
+    <span class="n">figall</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figall&#39;</span><span class="p">)</span>
+    <span class="n">cc</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figcc&#39;</span><span class="p">)</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figsf&#39;</span><span class="p">)</span>
+    <span class="n">bf</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figbeta&#39;</span><span class="p">)</span>
+    <span class="n">cm</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figcmap&#39;</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="n">figall</span> <span class="ow">or</span> <span class="n">cc</span> <span class="ow">or</span> <span class="n">sf</span> <span class="ow">or</span> <span class="n">bf</span> <span class="ow">or</span> <span class="n">cm</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+        <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Matplotlib could not be imported. &#39;</span>
+                           <span class="s1">&#39;Figures are not saved.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prody</span><span class="o">.</span><span class="n">SETTINGS</span><span class="p">[</span><span class="s1">&#39;auto_show&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Saving graphical output.&#39;</span><span class="p">)</span>
+            <span class="n">format</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figformat&#39;</span><span class="p">)</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figwidth&#39;</span><span class="p">)</span>
+            <span class="n">height</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figheight&#39;</span><span class="p">)</span>
+            <span class="n">dpi</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;figdpi&#39;</span><span class="p">)</span>
+            <span class="n">format</span> <span class="o">=</span> <span class="n">format</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">figall</span> <span class="ow">or</span> <span class="n">cc</span><span class="p">:</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+                <span class="n">prody</span><span class="o">.</span><span class="n">showCrossCorr</span><span class="p">(</span><span class="n">anm</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_cc.&#39;</span><span class="o">+</span><span class="n">format</span><span class="p">),</span>
+                    <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">figall</span> <span class="ow">or</span> <span class="n">cm</span><span class="p">:</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+                <span class="n">prody</span><span class="o">.</span><span class="n">showContactMap</span><span class="p">(</span><span class="n">anm</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_cm.&#39;</span><span class="o">+</span><span class="n">format</span><span class="p">),</span>
+                    <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">figall</span> <span class="ow">or</span> <span class="n">sf</span><span class="p">:</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+                <span class="n">prody</span><span class="o">.</span><span class="n">showSqFlucts</span><span class="p">(</span><span class="n">anm</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_sf.&#39;</span><span class="o">+</span><span class="n">format</span><span class="p">),</span>
+                    <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">figall</span> <span class="ow">or</span> <span class="n">bf</span><span class="p">:</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+                <span class="n">bexp</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">getBetas</span><span class="p">()</span>
+                <span class="n">bcal</span> <span class="o">=</span> <span class="n">prody</span><span class="o">.</span><span class="n">calcTempFactors</span><span class="p">(</span><span class="n">anm</span><span class="p">,</span> <span class="n">select</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bexp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Experimental&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bcal</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Theoretical (R={0:.2f})&#39;</span>
+                                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">bcal</span><span class="p">,</span> <span class="n">bexp</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])))</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Node index&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Experimental B-factors&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">pdb</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; B-factors&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;_bf.&#39;</span><span class="o">+</span><span class="n">format</span><span class="p">),</span>
+                    <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">format</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span></div>
+
+
+<span class="n">_</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">HELPTEXT</span><span class="p">)</span>
+<span class="n">_</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">_</span><span class="p">:</span>
+
+    <span class="n">prody_anm</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    :arg {0}: {1}, default is ``{2!r}``&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">HELPTEXT</span><span class="p">[</span><span class="n">key</span><span class="p">],</span>
+                                                  <span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">addCommand</span><span class="p">(</span><span class="n">commands</span><span class="p">):</span>
+
+    <span class="n">subparser</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;anm&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;perform anisotropic network model calculations&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--quiet&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;suppress info messages to stderr&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="n">Quiet</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--examples&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="n">UsageExample</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;show usage examples and exit&#39;</span><span class="p">)</span>
+    <span class="n">subparser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">usage_example</span><span class="o">=</span>
+<span class="sd">&quot;&quot;&quot;Perform ANM calculations for given PDB structure and output results in NMD</span>
+<span class="sd">format.  If an identifier is passed, structure file will be downloaded from</span>
+<span class="sd">the PDB FTP server.</span>
+
+<span class="sd">Fetch PDB 1p38, run ANM calculations using default parameters, and write</span>
+<span class="sd">NMD file:</span>
+
+<span class="sd">  $ prody anm 1p38</span>
+
+<span class="sd">Fetch PDB 1aar, run ANM calculations using default parameters for chain A</span>
+<span class="sd">carbon alpha atoms with residue numbers less than 70, and save all of the</span>
+<span class="sd">graphical output files:</span>
+
+<span class="sd">  $ prody anm 1aar -s &quot;calpha and chain A and resnum &lt; 70&quot; -A&quot;&quot;&quot;</span><span class="p">,</span>
+  <span class="n">test_examples</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">group</span> <span class="o">=</span> <span class="n">addNMAParameters</span><span class="p">(</span><span class="n">subparser</span><span class="p">)</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-c&#39;</span><span class="p">,</span> <span class="s1">&#39;--cutoff&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;cutoff&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;cutoff&#39;</span><span class="p">],</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;FLOAT&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;cutoff&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; (default: </span><span class="si">%(default)s</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-g&#39;</span><span class="p">,</span> <span class="s1">&#39;--gamma&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;gamma&#39;</span><span class="p">],</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;FLOAT&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;gamma&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; (default: </span><span class="si">%(default)s</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;--model&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+        <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;INT&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">],</span> <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">])</span>
+
+
+    <span class="n">group</span> <span class="o">=</span> <span class="n">addNMAOutput</span><span class="p">(</span><span class="n">subparser</span><span class="p">)</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-b&#39;</span><span class="p">,</span> <span class="s1">&#39;--beta-factors&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;outbeta&#39;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;outbeta&#39;</span><span class="p">],</span>
+        <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;outbeta&#39;</span><span class="p">])</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-l&#39;</span><span class="p">,</span> <span class="s1">&#39;--hessian&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;hessian&#39;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;hessian&#39;</span><span class="p">],</span> <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;hessian&#39;</span><span class="p">])</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-k&#39;</span><span class="p">,</span> <span class="s1">&#39;--kirchhoff&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;kirchhoff&#39;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;kirchhoff&#39;</span><span class="p">],</span> <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;kirchhoff&#39;</span><span class="p">])</span>
+
+
+    <span class="n">group</span> <span class="o">=</span> <span class="n">addNMAOutputOptions</span><span class="p">(</span><span class="n">subparser</span><span class="p">,</span> <span class="s1">&#39;_anm&#39;</span><span class="p">)</span>
+
+    <span class="n">group</span> <span class="o">=</span> <span class="n">addNMAFigures</span><span class="p">(</span><span class="n">subparser</span><span class="p">)</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-B&#39;</span><span class="p">,</span> <span class="s1">&#39;--beta-factors-figure&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;figbeta&#39;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;figbeta&#39;</span><span class="p">],</span> <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;figbeta&#39;</span><span class="p">])</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-K&#39;</span><span class="p">,</span> <span class="s1">&#39;--contact-map&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;figcmap&#39;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;figcmap&#39;</span><span class="p">],</span> <span class="n">help</span><span class="o">=</span><span class="n">HELPTEXT</span><span class="p">[</span><span class="s1">&#39;figcmap&#39;</span><span class="p">])</span>
+
+    <span class="n">group</span> <span class="o">=</span> <span class="n">addNMAFigureOptions</span><span class="p">(</span><span class="n">subparser</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;pdb&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;PDB identifier or filename&#39;</span><span class="p">)</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ns</span><span class="p">:</span> <span class="n">prody_anm</span><span class="p">(</span><span class="n">ns</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;pdb&#39;</span><span class="p">),</span>
+                                                     <span class="o">**</span><span class="n">ns</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">))</span>
+
+    <span class="n">subparser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">subparser</span><span class="o">=</span><span class="n">subparser</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

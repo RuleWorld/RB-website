@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BioNetGenWiki</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../_static/css/bootswatch-united.min.css" rel="stylesheet">
+    <link href="../_static/css/rbdocs.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../_static/js/jquery-2.0.0.min.js"></script>
+    <!--<script type="text/javascript" src="../_static/js/bootstrap.min.js"></script> -->
+
+<!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../_static/js/rbdocs.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+<!-- Statistics scripts for webpage --> 
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="shortcut icon" href="_static/bionetgen.ico"/>
+
+    <style type="text/css">
+      .slide-title {
+        padding-left: 10px;
+        width: 290px;
+        font-weight: bold;
+        font-size: 90%;
+        text-align: left;
+        float: left;
+      }
+
+      .slide-arrow {
+        cursor: pointer;
+        float: right;
+        position; absolute;
+        top: 0px;
+        vertical-align: top;
+      }
+
+      .slide-content {
+        padding-top: 30px;
+      }
+
+      .slide-content > img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .slide-image {
+        text-align: center;
+      }
+
+      .prody-slide {
+        display: none;
+        visibility: hidden;
+      }
+
+      body {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+
+    </style>
+
+    <!-- Figures
+    ================================================== -->
+
+  </head>
+  <body id="top" data-offset="190">
+
+  <div class="container" id="about">
+
+<!-- Logo & Nav
+================================================== -->
+    <div class="row">
+      <div class="span12">
+        <img src="../_static/bionetgen_logo.png" alt="BNG logo" id="logo" />
+      </div>
+    </div>
+      <div class="subnav" id="homepagenav">
+        <ul class="nav nav-pills">
+          <li title="BioNetGen"><a href="../">BioNetGen</a></li>
+          <!-- <li title="Evol"><a href="../evol">Evol</a></li>
+          <li title="NMWiz" ><a href="../nmwiz">NMWiz</a></li>
+          <li title="membrANM" ><a href="../memanm">membrANM</a></li>
+          <li title="stiffMech" ><a href="../mechstiff">MechStiff</a></li>
+          <li title="DruGUI" ><a href="../drugui">DruGUI</a></li>
+          <li title="coMD" ><a href="../comd">coMD</a></li>
+	  <li title="chromD"><a href="../chromd">chromD</a></li> ->
+      -->     <li title="Downloads"><a href="../downloads">Downloads</a></li>
+          <li title="Tutorials"><a href="../tutorials">Tutorials</a></li>
+          <li title="Statistics"><a href="../statistics">Statistics</a></li>
+          <li class="pull-right">
+            <form class="navbar-search form-search pull-right" action="../search.html" method="get" style="margin-right: 15px">
+              <div class="input-append">
+                <input type="text" name="q" class="search-query input-large" placeholder="Search Manual and Tutorials">
+                <button type="submit" class="btn btn-primary">Go</button>
+              </div>
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+          </li>
+        </ul>
+      </div>
+
+<!-- Body
+================================================== -->
+
+          <div class="row">
+            <div class="span12">
+              <h2>Downloads</h2>
+              <p> This page describes three different ways to get BioNetGen running in a few steps from your computer. </p>
+              <h3>RuleBender Stable</h3>
+              <p> Full-featured integrated development environment for BioNetGen and NFsim based on Eclipse RCP. We strongly recommend you try this first. </p>
+              <h4>Download</h4>
+              <p> Obtain the current, stable RuleBender distribution by clicking on the appropriate link for your operating system below: </p>
+              <ul  style="margin-left: 20px;">
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-1-0-for-apple-macintosh">Mac 2.2.1-stable</a><i>&nbspDoes RuleBender crash on startup? Try the following instructions <a href="https://github.com/RuleWorld/rulebender/blob/master/README.md">here</a>.</i></li>
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-1-0-for-linux">Linux 2.2.1-stable</a></li>
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-3-1-for-win64">Win 64 2.2.1-stable</a></li>
+              <li> <a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=rulebender-2-1-0-for-windows">Win32 2.2.1-stable</a></li>
+            </ul>
+              <h4>Install</h4>
+              <p>Unzip the directory wherever you would like it installed, open the folder and click on the application with the RuleBender (RB) icon. </p>
+              <ul  style="margin-left: 20px;">
+              <li>Some users may need to install or upgrade their Java. Windows users: You currently need to run RuleBender using 32-bit Java - 64 bit DOES NOT work. We are working on a 64 bit version for the next release. </li>
+              <li>Windows users may need to install Perl. The current Windows release requires 32 bit Perl to function correctly. We recommend Strawberry Perl (32 bit version). More information about installing Perl and Java can be found in <a href="https://github.com/RuleWorld/rulebender/blob/master/README.md">here</a>
+              <li>For help on installing and configuring RuleBender distributions please send an email to mailto:help@rulebender.org.
+              </li>
+              <li>We also highly recommend that you install the yEd Graph Editor, which can be used for interactive visualizations generated by the visualize command. 
+              </li>
+              </ul>
+              <h3>BioNetGen Command-Line Interface</h3>
+              <p> For users who only want the command-line interface. </p>
+              <ol type="1" style="margin-left: 20px;"> 
+                <li>Download the latest source code + binary distribution from appropriate link: </li> 
+                <ul style="margin-left: 20px;">
+                <li><a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=bionetgen-for-apple-macintosh">Mac 2.3.1</a></li>
+                <li><a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=bionetgen-for-linux">Linux 2.3.1</a></li>
+                <li><a href="http://www.csb.pitt.edu/Faculty/Faeder/?sdm_downloads=bionetgen-for-windows">Windows</a></li>
+                </ul>
+              <li> Go to the Installation Guide and follow the instruction for Mac, Linux and Windows. </li>
+              </ol>
+
+            </div>
+          </div>
+
+
+<!-- Footer
+================================================== -->
+
+          <div class="row">
+            <div class="span4">
+              <h3>People</h3>
+              <p><i>BioNetGen</i> is developed in <a href="http://www.csb.pitt.edu/Faculty/Faeder/" target="_blank">Faeder Lab</a>
+                at the <a href="http://pitt.edu" target="_blank">University of Pittsburgh</a>.
+                Click <a href="../manual/about/people.html">here</a> to see a list of people contributed to its development.</p>
+            </div>
+<!--             <div class="span3">
+              <h3>Community</h3>
+              <p><i>BioNetgen</i> makes use of great open source software including
+               <!- <a href="http://www.numpy.org/" target="_blank"></a>,
+                <a href="http://pyparsing.wikispaces.com/" target="_blank">Pyparsing</a>,
+                <a href="http://biopython.org/" target="_blank">Biopython</a>,
+                <a href="http://scipy.org/" target="_blank">SciPy</a>,
+                and
+                <a href="http://matplotlib.org/" target="_blank">Matplotlib</a>. ->
+                Click <a href="../manual/about/credits.html">here</a> for details.</p>
+            </div>
+ -->            <div class="span4">
+              <h3>Source Code</h3>
+              <p><i>BioNetGen</i> is open <a href="https://github.com/RuleWorld">source</a>
+                and you can contribute to its development in many ways.
+                See this <a href="../manual/devel/develop.html">guide</a> for getting started.
+            </div>
+            <div class="span4">
+              <h3>Problems?</h3>
+              <p>Let us know any problems you might have by opening an issue at the
+                <a href="https://github.com/RuleWorld/bionetgen/issues">tracker</a>
+                so that we can make <i>BioNetGen</i> better.
+              </p>
+            </div>
+          </div>
+  <footer class="footer">
+    <div class="row">
+      <div class="span4 text-left">
+        <!--
+        <a href="https://pypi.python.org/pypi/ProDy"><img src="https://pypip.in/v/ProDy/badge.png"></a>
+        <a href="https://crate.io/packages/ProDy/"><img src="https://pypip.in/d/ProDy/badge.png"></a>
+      -->
+      </div>
+      <div class="span8">
+        <p><small>
+        &copy; Copyright 2010-2017, University of Pittsburgh. Last updated on Dec 07, 2017.
+        </small></p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+  </body>
+</html>

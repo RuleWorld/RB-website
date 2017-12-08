@@ -1,0 +1,382 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.proteins.dssp &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.proteins.dssp</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for executing DSSP program and parsing</span>
+<span class="sd">its output.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">ATOMIC_FIELDS</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">gunzip</span><span class="p">,</span> <span class="n">which</span><span class="p">,</span> <span class="n">PLATFORM</span>
+
+<span class="kn">from</span> <span class="nn">.pdbfile</span> <span class="kn">import</span> <span class="n">parsePDB</span>
+<span class="kn">from</span> <span class="nn">.localpdb</span> <span class="kn">import</span> <span class="n">fetchPDB</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;execDSSP&#39;</span><span class="p">,</span> <span class="s1">&#39;parseDSSP&#39;</span><span class="p">,</span> <span class="s1">&#39;performDSSP&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="execDSSP"><a class="viewcode-back" href="../../../manual/reference/proteins/dssp.html#prody.proteins.dssp.execDSSP">[docs]</a><span class="k">def</span> <span class="nf">execDSSP</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">outputname</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">outputdir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Execute DSSP for given *pdb*.  *pdb* can be a PDB identifier or a PDB</span>
+<span class="sd">    file path.  If *pdb* is a compressed file, it will be decompressed using</span>
+<span class="sd">    Python :mod:`gzip` library.  When no *outputname* is given, output name</span>
+<span class="sd">    will be :file:`pdb.dssp`.  :file:`.dssp` extension will be appended</span>
+<span class="sd">    automatically to *outputname*.  If :file:`outputdir` is given, DSSP</span>
+<span class="sd">    output and uncompressed PDB file will be written into this folder.</span>
+<span class="sd">    Upon successful execution of :command:`dssp pdb &gt; out` command, output</span>
+<span class="sd">    filename is returned.  On Linux platforms, when *stderr* is false,</span>
+<span class="sd">    standard error messages are suppressed, i.e.</span>
+<span class="sd">    ``dssp pdb &gt; outputname 2&gt; /dev/null``.</span>
+
+<span class="sd">    For more information on DSSP see http://swift.cmbi.ru.nl/gv/dssp/.</span>
+<span class="sd">    If you benefited from DSSP, please consider citing [WK83]_.</span>
+
+<span class="sd">    .. [WK83] Kabsch W, Sander C. Dictionary of protein secondary structure:</span>
+<span class="sd">       pattern recognition of hydrogen-bonded and geometrical features.</span>
+<span class="sd">       *Biopolymers* **1983** 22:2577-2637.&quot;&quot;&quot;</span>
+
+    <span class="n">dssp</span> <span class="o">=</span> <span class="n">which</span><span class="p">(</span><span class="s1">&#39;dssp&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dssp</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">EnvironmentError</span><span class="p">(</span><span class="s1">&#39;command not found: dssp executable is not &#39;</span>
+                               <span class="s1">&#39;found in one of system paths&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">outputname</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputname</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span>\
+        <span class="s1">&#39;outputname must be a string&#39;</span>
+    <span class="k">assert</span> <span class="n">outputdir</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputdir</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span>\
+        <span class="s1">&#39;outputdir must be a string&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">pdb</span><span class="p">):</span>
+        <span class="n">pdb</span> <span class="o">=</span> <span class="n">fetchPDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pdb</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;pdb is not a valid PDB identifier or filename&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">pdb</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;.gz&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">outputdir</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">pdb</span> <span class="o">=</span> <span class="n">gunzip</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">pdb</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pdb</span> <span class="o">=</span> <span class="n">gunzip</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">outputdir</span><span class="p">,</span>
+                         <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">pdb</span><span class="p">)[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="k">if</span> <span class="n">outputdir</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">outputdir</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+    <span class="k">if</span> <span class="n">outputname</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">outputdir</span><span class="p">,</span>
+                           <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pdb</span><span class="p">)[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span>
+                           <span class="s1">&#39;.dssp&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">outputdir</span><span class="p">,</span> <span class="n">outputname</span> <span class="o">+</span> <span class="s1">&#39;.dssp&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">stderr</span> <span class="ow">and</span> <span class="n">PLATFORM</span> <span class="o">!=</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;{0} {1} &gt; {2} 2&gt; /dev/null&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                           <span class="n">dssp</span><span class="p">,</span> <span class="n">pdb</span><span class="p">,</span> <span class="n">out</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;{0} {1} &gt; {2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dssp</span><span class="p">,</span> <span class="n">pdb</span><span class="p">,</span> <span class="n">out</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">out</span></div>
+
+
+<div class="viewcode-block" id="parseDSSP"><a class="viewcode-back" href="../../../manual/reference/proteins/dssp.html#prody.proteins.dssp.parseDSSP">[docs]</a><span class="k">def</span> <span class="nf">parseDSSP</span><span class="p">(</span><span class="n">dssp</span><span class="p">,</span> <span class="n">ag</span><span class="p">,</span> <span class="n">parseall</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse DSSP data from file *dssp* into :class:`~.AtomGroup` instance</span>
+<span class="sd">    *ag*.  DSSP output file must be in the new format used from July 1995</span>
+<span class="sd">    and onwards.  When *dssp* file is parsed, following attributes are added</span>
+<span class="sd">    to *ag*:</span>
+
+<span class="sd">    * *dssp_resnum*: DSSP&#39;s sequential residue number, starting at the first</span>
+<span class="sd">      residue actually in the data set and including chain breaks; this number</span>
+<span class="sd">      is used to refer to residues throughout.</span>
+
+<span class="sd">    * *dssp_acc*: number of water molecules in contact with this residue \*10.</span>
+<span class="sd">      or residue water exposed surface in Angstrom^2.</span>
+
+<span class="sd">    * *dssp_kappa*: virtual bond angle (bend angle) defined by the three Cα</span>
+<span class="sd">      atoms of residues I-2,I,I+2.  Used to define bend (structure code &#39;S&#39;).</span>
+
+<span class="sd">    * *dssp_alpha*: virtual torsion angle (dihedral angle) defined by the four</span>
+<span class="sd">      Cα atoms of residues I-1,I,I+1,I+2.Used to define chirality (structure</span>
+<span class="sd">      code &#39;+&#39; or &#39;-&#39;).</span>
+
+<span class="sd">    * *dssp_phi* and *dssp_psi*: IUPAC peptide backbone torsion angles</span>
+
+<span class="sd">    The following attributes are parsed when ``parseall=True`` is passed:</span>
+
+<span class="sd">    * *dssp_bp1*, *dssp_bp2*, and *dssp_sheet_label*: residue number of first</span>
+<span class="sd">      and second bridge partner followed by one letter sheet label</span>
+
+<span class="sd">    * *dssp_tco*: cosine of angle between C=O of residue I and C=O of residue</span>
+<span class="sd">      I-1.  For α-helices, TCO is near +1, for β-sheets TCO is near -1.  Not</span>
+<span class="sd">      used for structure definition.</span>
+
+<span class="sd">    * *dssp_NH_O_1_index*, *dssp_NH_O_1_energy*, etc.: hydrogen bonds; e.g.</span>
+<span class="sd">      -3,-1.4 means: if this residue is residue i then N-H of I is h-bonded to</span>
+<span class="sd">      C=O of I-3 with an electrostatic H-bond energy of -1.4 kcal/mol.  There</span>
+<span class="sd">      are two columns for each type of H-bond, to allow for bifurcated H-bonds.</span>
+
+<span class="sd">    See http://swift.cmbi.ru.nl/gv/dssp/DSSP_3.html for details.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">dssp</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid file path&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dssp</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;ag argument must be an AtomGroup instance&#39;</span><span class="p">)</span>
+
+    <span class="n">dssp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">dssp</span><span class="p">)</span>
+
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+    <span class="n">NUMBER</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+    <span class="n">SHEETLABEL</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
+    <span class="n">ACC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+    <span class="n">KAPPA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+    <span class="n">ALPHA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+    <span class="n">PHI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+    <span class="n">PSI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">parseall</span><span class="p">:</span>
+        <span class="n">BP1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">BP2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">NH_O_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">NH_O_1_nrg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+        <span class="n">O_HN_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">O_HN_1_nrg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+        <span class="n">NH_O_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">NH_O_2_nrg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+        <span class="n">O_HN_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">O_HN_2_nrg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+        <span class="n">TCO</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+
+    <span class="n">ag</span><span class="o">.</span><span class="n">setSecstrs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;secondary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">dssp</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;  #  RESIDUE&#39;</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">dssp</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;!&#39;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">ag</span><span class="p">[(</span><span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">10</span><span class="p">]),</span> <span class="n">line</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())]</span>
+        <span class="k">if</span> <span class="n">res</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">getIndices</span><span class="p">()</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">setSecstrs</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">NUMBER</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+        <span class="n">SHEETLABEL</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">33</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">ACC</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">35</span><span class="p">:</span><span class="mi">38</span><span class="p">])</span>
+        <span class="n">KAPPA</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">91</span><span class="p">:</span><span class="mi">97</span><span class="p">])</span>
+        <span class="n">ALPHA</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">97</span><span class="p">:</span><span class="mi">103</span><span class="p">])</span>
+        <span class="n">PHI</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">103</span><span class="p">:</span><span class="mi">109</span><span class="p">])</span>
+        <span class="n">PSI</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">109</span><span class="p">:</span><span class="mi">115</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">parseall</span><span class="p">:</span>
+            <span class="n">BP1</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">29</span><span class="p">])</span>
+            <span class="n">BP2</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">33</span><span class="p">])</span>
+            <span class="n">NH_O_1</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">45</span><span class="p">])</span>
+            <span class="n">NH_O_1_nrg</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">46</span><span class="p">:</span><span class="mi">50</span><span class="p">])</span>
+            <span class="n">O_HN_1</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">56</span><span class="p">])</span>
+            <span class="n">O_HN_1_nrg</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">57</span><span class="p">:</span><span class="mi">61</span><span class="p">])</span>
+            <span class="n">NH_O_2</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">61</span><span class="p">:</span><span class="mi">67</span><span class="p">])</span>
+            <span class="n">NH_O_2_nrg</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">68</span><span class="p">:</span><span class="mi">72</span><span class="p">])</span>
+            <span class="n">O_HN_2</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">72</span><span class="p">:</span><span class="mi">78</span><span class="p">])</span>
+            <span class="n">O_HN_2_nrg</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">79</span><span class="p">:</span><span class="mi">83</span><span class="p">])</span>
+            <span class="n">TCO</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">85</span><span class="p">:</span><span class="mi">91</span><span class="p">])</span>
+
+    <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_resnum&#39;</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_sheet_label&#39;</span><span class="p">,</span> <span class="n">SHEETLABEL</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_acc&#39;</span><span class="p">,</span> <span class="n">ACC</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_kappa&#39;</span><span class="p">,</span> <span class="n">KAPPA</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_alpha&#39;</span><span class="p">,</span> <span class="n">ALPHA</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_phi&#39;</span><span class="p">,</span> <span class="n">PHI</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_psi&#39;</span><span class="p">,</span> <span class="n">PSI</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">parseall</span><span class="p">:</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_bp1&#39;</span><span class="p">,</span> <span class="n">BP1</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_bp2&#39;</span><span class="p">,</span> <span class="n">BP2</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_NH_O_1_index&#39;</span><span class="p">,</span> <span class="n">NH_O_1</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_NH_O_1_energy&#39;</span><span class="p">,</span> <span class="n">NH_O_1_nrg</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_O_NH_1_index&#39;</span><span class="p">,</span> <span class="n">O_HN_1</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_O_NH_1_energy&#39;</span><span class="p">,</span> <span class="n">O_HN_1_nrg</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_NH_O_2_index&#39;</span><span class="p">,</span> <span class="n">NH_O_2</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_NH_O_2_energy&#39;</span><span class="p">,</span> <span class="n">NH_O_2_nrg</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_O_NH_2_index&#39;</span><span class="p">,</span> <span class="n">O_HN_2</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_O_NH_2_energy&#39;</span><span class="p">,</span> <span class="n">O_HN_2_nrg</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="s1">&#39;dssp_tco&#39;</span><span class="p">,</span> <span class="n">TCO</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ag</span></div>
+
+
+<div class="viewcode-block" id="performDSSP"><a class="viewcode-back" href="../../../manual/reference/proteins/dssp.html#prody.proteins.dssp.performDSSP">[docs]</a><span class="k">def</span> <span class="nf">performDSSP</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">parseall</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Perform DSSP calculations and parse results.  DSSP data is returned</span>
+<span class="sd">    in an :class:`~.AtomGroup` instance.  See also :func:`execDSSP`</span>
+<span class="sd">    and :func:`parseDSSP`.&quot;&quot;&quot;</span>
+
+    <span class="n">pdb</span> <span class="o">=</span> <span class="n">fetchPDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parseDSSP</span><span class="p">(</span><span class="n">execDSSP</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">stderr</span><span class="p">),</span> <span class="n">parsePDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">),</span> <span class="n">parseall</span><span class="p">)</span></div>
+
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

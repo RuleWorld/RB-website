@@ -1,0 +1,968 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.measure.measure &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.measure.measure</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines a class and methods and for comparing coordinate data</span>
+<span class="sd">and measuring quantities.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">ndarray</span><span class="p">,</span> <span class="n">power</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">zeros</span><span class="p">,</span> <span class="n">arccos</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sign</span><span class="p">,</span> <span class="n">tile</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">cross</span><span class="p">,</span> <span class="n">subtract</span><span class="p">,</span> <span class="nb">round</span><span class="p">,</span> <span class="n">var</span>
+
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">Atomic</span><span class="p">,</span> <span class="n">Residue</span><span class="p">,</span> <span class="n">Atom</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">importLA</span><span class="p">,</span> <span class="n">checkCoords</span>
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">PY2K</span>
+
+<span class="k">if</span> <span class="n">PY2K</span><span class="p">:</span>
+    <span class="nb">range</span> <span class="o">=</span> <span class="nb">xrange</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;buildDistMatrix&#39;</span><span class="p">,</span> <span class="s1">&#39;calcDistance&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calcCenter&#39;</span><span class="p">,</span> <span class="s1">&#39;calcGyradius&#39;</span><span class="p">,</span> <span class="s1">&#39;calcAngle&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calcDihedral&#39;</span><span class="p">,</span> <span class="s1">&#39;calcOmega&#39;</span><span class="p">,</span> <span class="s1">&#39;calcPhi&#39;</span><span class="p">,</span> <span class="s1">&#39;calcPsi&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calcMSF&#39;</span><span class="p">,</span> <span class="s1">&#39;calcRMSF&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calcDeformVector&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;buildADPMatrix&#39;</span><span class="p">,</span> <span class="s1">&#39;calcADPAxes&#39;</span><span class="p">,</span> <span class="s1">&#39;calcADPs&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;pickCentral&#39;</span><span class="p">,</span> <span class="s1">&#39;pickCentralAtom&#39;</span><span class="p">,</span> <span class="s1">&#39;pickCentralConf&#39;</span><span class="p">,</span> <span class="s1">&#39;getWeights&#39;</span><span class="p">]</span>
+
+<span class="n">RAD2DEG</span> <span class="o">=</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">pi</span>
+
+<span class="n">DISTMAT_FORMATS</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;mat&#39;</span><span class="p">,</span> <span class="s1">&#39;rcd&#39;</span><span class="p">,</span> <span class="s1">&#39;arr&#39;</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="buildDistMatrix"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.buildDistMatrix">[docs]</a><span class="k">def</span> <span class="nf">buildDistMatrix</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">atoms2</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">unitcell</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;mat&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns distance matrix.  When *atoms2* is given, a distance matrix</span>
+<span class="sd">    with shape ``(len(atoms1), len(atoms2))`` is built.  When *atoms2* is</span>
+<span class="sd">    **None**, a symmetric matrix with shape ``(len(atoms1), len(atoms1))``</span>
+<span class="sd">    is built.  If *unitcell* array is provided, periodic boundary conditions</span>
+<span class="sd">    will be taken into account.</span>
+
+<span class="sd">    :arg atoms1: atom or coordinate data</span>
+<span class="sd">    :type atoms1: :class:`.Atomic`, :class:`numpy.ndarray`</span>
+
+<span class="sd">    :arg atoms2: atom or coordinate data</span>
+<span class="sd">    :type atoms2: :class:`.Atomic`, :class:`numpy.ndarray`</span>
+
+<span class="sd">    :arg unitcell: orthorhombic unitcell dimension array with shape ``(3,)``</span>
+<span class="sd">    :type unitcell: :class:`numpy.ndarray`</span>
+
+<span class="sd">    :arg format: format of the resulting array, one of ``&#39;mat&#39;`` (matrix,</span>
+<span class="sd">        default), ``&#39;rcd&#39;`` (arrays of row indices, column indices, and</span>
+<span class="sd">        distances), or ``&#39;arr&#39;`` (only array of distances)</span>
+<span class="sd">    :type format: bool&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">atoms1</span> <span class="o">=</span> <span class="n">atoms1</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms1 must be Atomic instance or an array&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">atoms2</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">symmetric</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">atoms2</span> <span class="o">=</span> <span class="n">atoms1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">symmetric</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms2</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">atoms2</span> <span class="o">=</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms2 must be Atomic instance or an array&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">atoms1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;one and two must have shape ([M,]N,3)&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">unitcell</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">unitcell</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;unitcell must be an array&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">unitcell</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;unitcell.shape must be (3,)&#39;</span><span class="p">)</span>
+
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">atoms1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">atoms2</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">symmetric</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">DISTMAT_FORMATS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;format must be one of mat, rcd, or arr&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">format</span> <span class="o">==</span> <span class="s1">&#39;mat&#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">xyz</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">atoms1</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">getDistance</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">atoms2</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:],</span>
+                                                            <span class="n">unitcell</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">([</span><span class="n">getDistance</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">atoms2</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:],</span> <span class="n">unitcell</span><span class="p">)</span>
+                                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">xyz</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">atoms1</span><span class="p">)])</span>
+            <span class="k">if</span> <span class="n">format</span> <span class="o">==</span> <span class="s1">&#39;rcd&#39;</span><span class="p">:</span>
+                <span class="n">n_atoms</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">atoms1</span><span class="p">)</span>
+                <span class="n">rc</span> <span class="o">=</span> <span class="n">array</span><span class="p">([(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">)])</span>
+                <span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">T</span>
+                <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">dist</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">xyz</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">atoms1</span><span class="p">):</span>
+            <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">getDistance</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">atoms2</span><span class="p">,</span> <span class="n">unitcell</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dist</span></div>
+
+
+<div class="viewcode-block" id="calcDistance"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcDistance">[docs]</a><span class="k">def</span> <span class="nf">calcDistance</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">atoms2</span><span class="p">,</span> <span class="n">unitcell</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the Euclidean distance between *atoms1* and *atoms2*.  Arguments</span>
+<span class="sd">    may be :class:`~.Atomic` instances or NumPy arrays.  Shape of numpy arrays</span>
+<span class="sd">    must be ``([M,]N,3)``, where *M* is number of coordinate sets and *N* is</span>
+<span class="sd">    the number of atoms.  If *unitcell* array is provided, periodic boundary</span>
+<span class="sd">    conditions will be taken into account.</span>
+
+<span class="sd">    :arg atoms1: atom or coordinate data</span>
+<span class="sd">    :type atoms1: :class:`.Atomic`, :class:`numpy.ndarray`</span>
+
+<span class="sd">    :arg atoms2: atom or coordinate data</span>
+<span class="sd">    :type atoms2: :class:`.Atomic`, :class:`numpy.ndarray`</span>
+
+<span class="sd">    :arg unitcell: orthorhombic unitcell dimension array with shape ``(3,)``</span>
+<span class="sd">    :type unitcell: :class:`numpy.ndarray`&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">atoms1</span> <span class="o">=</span> <span class="n">atoms1</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms1 must be Atomic instance or an array&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms2</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">atoms2</span> <span class="o">=</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms2 must be Atomic instance or an array&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">atoms1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;one and two must have shape ([M,]N,3)&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">unitcell</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">unitcell</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;unitcell must be an array&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">unitcell</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;unitcell.shape must be (3,)&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">getDistance</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">atoms2</span><span class="p">,</span> <span class="n">unitcell</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">getDistance</span><span class="p">(</span><span class="n">coords1</span><span class="p">,</span> <span class="n">coords2</span><span class="p">,</span> <span class="n">unitcell</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">coords1</span> <span class="o">-</span> <span class="n">coords2</span>
+    <span class="k">if</span> <span class="n">unitcell</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">subtract</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">diff</span><span class="o">/</span><span class="n">unitcell</span><span class="p">)</span><span class="o">*</span><span class="n">unitcell</span><span class="p">,</span> <span class="n">diff</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">power</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">diff</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="calcAngle"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcAngle">[docs]</a><span class="k">def</span> <span class="nf">calcAngle</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">atoms2</span><span class="p">,</span> <span class="n">atoms3</span><span class="p">,</span> <span class="n">radian</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the angle between atoms in degrees.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms1 must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms2</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms2 must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms3</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms3 must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">atoms1</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">==</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">==</span> <span class="n">atoms3</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;all arguments must have same number of atoms&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">getAngle</span><span class="p">(</span><span class="n">atoms1</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span>
+                    <span class="n">atoms3</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">radian</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">getAngle</span><span class="p">(</span><span class="n">coords1</span><span class="p">,</span> <span class="n">coords2</span><span class="p">,</span> <span class="n">coords3</span><span class="p">,</span> <span class="n">radian</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns bond angle in degrees.&quot;&quot;&quot;</span>
+
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">coords1</span> <span class="o">-</span> <span class="n">coords2</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">coords3</span> <span class="o">-</span> <span class="n">coords2</span>
+
+    <span class="n">rad</span> <span class="o">=</span> <span class="n">arccos</span><span class="p">((</span><span class="n">v1</span><span class="o">*</span><span class="n">v2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">radian</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rad</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rad</span> <span class="o">*</span> <span class="n">RAD2DEG</span>
+
+
+<div class="viewcode-block" id="calcDihedral"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcDihedral">[docs]</a><span class="k">def</span> <span class="nf">calcDihedral</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">atoms2</span><span class="p">,</span> <span class="n">atoms3</span><span class="p">,</span> <span class="n">atoms4</span><span class="p">,</span> <span class="n">radian</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the dihedral angle between atoms in degrees.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms1</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms1 must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms2</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms2 must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms3</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms3 must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms4</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms4 must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">atoms1</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">==</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">==</span>
+            <span class="n">atoms3</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">==</span> <span class="n">atoms4</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;all arguments must have same number of atoms&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">getDihedral</span><span class="p">(</span><span class="n">atoms1</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">atoms2</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span>
+                       <span class="n">atoms3</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">atoms4</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">radian</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">getDihedral</span><span class="p">(</span><span class="n">coords1</span><span class="p">,</span> <span class="n">coords2</span><span class="p">,</span> <span class="n">coords3</span><span class="p">,</span> <span class="n">coords4</span><span class="p">,</span> <span class="n">radian</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the dihedral angle in degrees.&quot;&quot;&quot;</span>
+
+    <span class="n">a1</span> <span class="o">=</span> <span class="n">coords2</span> <span class="o">-</span> <span class="n">coords1</span>
+    <span class="n">a2</span> <span class="o">=</span> <span class="n">coords3</span> <span class="o">-</span> <span class="n">coords2</span>
+    <span class="n">a3</span> <span class="o">=</span> <span class="n">coords4</span> <span class="o">-</span> <span class="n">coords3</span>
+
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">cross</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">)</span>
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">v1</span> <span class="o">/</span> <span class="p">(</span><span class="n">v1</span> <span class="o">*</span> <span class="n">v1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">cross</span><span class="p">(</span><span class="n">a2</span><span class="p">,</span> <span class="n">a3</span><span class="p">)</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">v2</span> <span class="o">/</span> <span class="p">(</span><span class="n">v2</span> <span class="o">*</span> <span class="n">v2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">porm</span> <span class="o">=</span> <span class="n">sign</span><span class="p">((</span><span class="n">v1</span> <span class="o">*</span> <span class="n">a3</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">rad</span> <span class="o">=</span> <span class="n">arccos</span><span class="p">((</span><span class="n">v1</span><span class="o">*</span><span class="n">v2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">porm</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">rad</span> <span class="o">=</span> <span class="n">rad</span> <span class="o">*</span> <span class="n">porm</span>
+    <span class="k">if</span> <span class="n">radian</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rad</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rad</span> <span class="o">*</span> <span class="n">RAD2DEG</span>
+
+
+<div class="viewcode-block" id="calcOmega"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcOmega">[docs]</a><span class="k">def</span> <span class="nf">calcOmega</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">radian</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mf">4.1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns ω (omega) angle of *residue* in degrees.  This function checks</span>
+<span class="sd">    the distance between Cα atoms of two residues and raises an exception if</span>
+<span class="sd">    the residues are disconnected.  Set *dist* to **None**, to avoid this.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">Residue</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;{0} must be a Residue instance&#39;</span><span class="p">)</span>
+
+    <span class="nb">next</span> <span class="o">=</span> <span class="n">residue</span><span class="o">.</span><span class="n">getNext</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">next</span><span class="p">,</span> <span class="n">Residue</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is a terminal residue&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+
+    <span class="n">CA</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">CA</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have CA atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">C</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have C atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">_N</span> <span class="o">=</span> <span class="nb">next</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">_N</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have N atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">_CA</span> <span class="o">=</span> <span class="nb">next</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">_CA</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have CA atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">)))</span>
+
+    <span class="k">if</span> <span class="n">dist</span> <span class="ow">and</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">calcDistance</span><span class="p">(</span><span class="n">CA</span><span class="p">,</span> <span class="n">_CA</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} and {1} does not seem to be connected&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">getDihedral</span><span class="p">(</span><span class="n">CA</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">C</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">_N</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span>
+                       <span class="n">_CA</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">radian</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="calcPhi"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcPhi">[docs]</a><span class="k">def</span> <span class="nf">calcPhi</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">radian</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mf">4.1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns φ (phi) angle of *residue* in degrees.  This function checks</span>
+<span class="sd">    the distance between Cα atoms of two residues and raises an exception if</span>
+<span class="sd">    the residues are disconnected.  Set *dist* to **None**, to avoid this.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">Residue</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;{0} must be a Residue instance&#39;</span><span class="p">)</span>
+
+    <span class="n">C_</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">CA</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">getPhiAtoms</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">dist</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">getDihedral</span><span class="p">(</span><span class="n">C_</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">N</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">CA</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span>
+                       <span class="n">C</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">radian</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">getPhiAtoms</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mf">4.1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the four atoms that form the φ (phi) angle of *residue*.&quot;&quot;&quot;</span>
+
+    <span class="n">prev</span> <span class="o">=</span> <span class="n">residue</span><span class="o">.</span><span class="n">getPrev</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">isaa</span> <span class="o">=</span> <span class="n">prev</span><span class="o">.</span><span class="n">isaminoacid</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is a terminal residue&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">isaa</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not an amino acid&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prev</span><span class="p">)))</span>
+
+    <span class="n">C_</span> <span class="o">=</span> <span class="n">prev</span><span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">C_</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have C atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prev</span><span class="p">)))</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have N atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">CA</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">CA</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have CA atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">C</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have C atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">CA_</span> <span class="o">=</span> <span class="n">prev</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">CA_</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have CA atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prev</span><span class="p">)))</span>
+
+    <span class="k">if</span> <span class="n">dist</span> <span class="ow">and</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">calcDistance</span><span class="p">(</span><span class="n">CA</span><span class="p">,</span> <span class="n">CA_</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} and {1} does not seem to be connected&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">prev</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">C_</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">CA</span><span class="p">,</span> <span class="n">C</span>
+
+
+<div class="viewcode-block" id="calcPsi"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcPsi">[docs]</a><span class="k">def</span> <span class="nf">calcPsi</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">radian</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mf">4.1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns ψ (psi) angle of *residue* in degrees.  This function checks</span>
+<span class="sd">    the distance between Cα atoms of two residues and raises an exception if</span>
+<span class="sd">    the residues are disconnected.  Set *dist* to **None**, to avoid this.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">Residue</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;{0} must be a Residue instance&#39;</span><span class="p">)</span>
+
+    <span class="n">N</span><span class="p">,</span> <span class="n">CA</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">_N</span> <span class="o">=</span> <span class="n">getPsiAtoms</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">dist</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">getDihedral</span><span class="p">(</span><span class="n">N</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">CA</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">C</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span>
+                       <span class="n">_N</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">radian</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">getPsiAtoms</span><span class="p">(</span><span class="n">residue</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mf">4.1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the four atoms that form the φ (phi) angle of *residue*.&quot;&quot;&quot;</span>
+
+    <span class="nb">next</span> <span class="o">=</span> <span class="n">residue</span><span class="o">.</span><span class="n">getNext</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">isaa</span> <span class="o">=</span> <span class="nb">next</span><span class="o">.</span><span class="n">isaminoacid</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is a terminal residue&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">isaa</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not an amino acid&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">)))</span>
+
+    <span class="n">N</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have N atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">CA</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">CA</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have CA atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">residue</span><span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">C</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have C atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">)))</span>
+    <span class="n">_N</span> <span class="o">=</span> <span class="nb">next</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">_N</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have N atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">)))</span>
+    <span class="n">_CA</span> <span class="o">=</span> <span class="nb">next</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">_CA</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} does not have CA atom&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="ow">and</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">calcDistance</span><span class="p">(</span><span class="n">CA</span><span class="p">,</span> <span class="n">_CA</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} and {1} does not seem to be connected&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">residue</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">N</span><span class="p">,</span> <span class="n">CA</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">_N</span>
+
+
+<div class="viewcode-block" id="calcCenter"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcCenter">[docs]</a><span class="k">def</span> <span class="nf">calcCenter</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns geometric center of *atoms*.  If *weights* is given it must</span>
+<span class="sd">    be a flat array with length equal to number of atoms.  Mass center of</span>
+<span class="sd">    atoms can be calculated by setting weights equal to atom masses, i.e.</span>
+<span class="sd">    ``weights=atoms.getMasses()``.&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">checkCoords</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">csets</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;atoms&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be an Atomic instance&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ndim</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">weights</span><span class="o">.</span><span class="n">shape</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;weights must be a numpy array&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;weights.shape[0] must be equal to number of &#39;</span>
+                                 <span class="s1">&#39;atoms&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ndim</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;weights.shape must be a (n_atoms, 1)&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">getCenter</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">getCenter</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">coords</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">coords</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">weights</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">getWeights</span><span class="p">(</span><span class="n">pdb</span><span class="p">):</span>
+
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pdb</span><span class="p">)):</span>
+        <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">pdb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">getMassess</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">weights</span>
+
+
+<div class="viewcode-block" id="pickCentral"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.pickCentral">[docs]</a><span class="k">def</span> <span class="nf">pickCentral</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns :class:`.Atom` or :class:`.Conformation` that is closest to the</span>
+<span class="sd">    center of *obj*, which may be an :class:`.Atomic` or :class:`.Ensemble`</span>
+<span class="sd">    instance.  See also :func:`pickCentralAtom`, and :func:`pickCentralConf`</span>
+<span class="sd">    functions.&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">obj</span><span class="o">.</span><span class="n">numConfs</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;obj must be an Atomic or Ensemble instance&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pickCentralConf</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pickCentralAtom</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="pickCentralAtom"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.pickCentralAtom">[docs]</a><span class="k">def</span> <span class="nf">pickCentralAtom</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns :class:`.Atom` that is closest to the center, which is calculated</span>
+<span class="sd">    using :func:`calcCenter`.&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">acsi</span><span class="p">,</span> <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">(),</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">coords</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordinates are not set&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">atoms</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getIndices</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Atom</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">indices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">acsi</span><span class="p">)</span>
+
+    <span class="n">index</span> <span class="o">=</span> <span class="n">getCentral</span><span class="p">(</span><span class="n">atoms</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">(),</span> <span class="n">weights</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">indices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">Atom</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">acsi</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">getCentral</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns index of coordinates closest to the center.&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="p">((</span><span class="n">coords</span> <span class="o">-</span> <span class="n">getCenter</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">weights</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="pickCentralConf"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.pickCentralConf">[docs]</a><span class="k">def</span> <span class="nf">pickCentralConf</span><span class="p">(</span><span class="n">ens</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns :class:`.Conformation` that is closest to the center of *ens*.</span>
+<span class="sd">    In addition to :class:`.Ensemble` instances, :class:`.Atomic` instances</span>
+<span class="sd">    are accepted as *ens* argument. In this case a :class:`.Selection` with</span>
+<span class="sd">    central coordinate set as active will be returned.&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">csets</span> <span class="o">=</span> <span class="n">ens</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;ens must be an object with multiple &#39;</span>
+                        <span class="s1">&#39;coordinate sets&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">csets</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordinates are not set&#39;</span><span class="p">)</span>
+
+    <span class="n">shape</span> <span class="o">=</span> <span class="n">csets</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">if</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">csets</span> <span class="o">=</span> <span class="n">csets</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+        <span class="n">mean</span> <span class="o">=</span> <span class="n">csets</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="p">((</span><span class="n">csets</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ens</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ens</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">atoms</span> <span class="o">=</span> <span class="n">ens</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+        <span class="n">atoms</span><span class="o">.</span><span class="n">setACSIndex</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">atoms</span></div>
+
+
+<div class="viewcode-block" id="calcGyradius"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcGyradius">[docs]</a><span class="k">def</span> <span class="nf">calcGyradius</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate radius of gyration of *atoms*.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must have atomic coordinate data&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">atoms</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">coords</span><span class="o">.</span><span class="n">ndim</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coords may be a 2 or 3 dimentional array&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coords must have shape ([n_csets,]n_atoms,3)&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="o">!=</span> <span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;length of weights must match number of atoms&#39;</span><span class="p">)</span>
+        <span class="n">wsum</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">wsum</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">coords</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">com</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">d2sum</span> <span class="o">=</span> <span class="p">((</span><span class="n">coords</span> <span class="o">-</span> <span class="n">com</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">com</span> <span class="o">=</span> <span class="p">(</span><span class="n">coords</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">wsum</span>
+            <span class="n">d2sum</span> <span class="o">=</span> <span class="p">(((</span><span class="n">coords</span> <span class="o">-</span> <span class="n">com</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rgyr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">coords</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">com</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">d2sum</span> <span class="o">=</span> <span class="p">((</span><span class="n">coords</span> <span class="o">-</span> <span class="n">com</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+                <span class="n">rgyr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d2sum</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+
+                <span class="n">com</span> <span class="o">=</span> <span class="p">(</span><span class="n">coords</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">wsum</span>
+                <span class="n">d2sum</span> <span class="o">=</span> <span class="p">(((</span><span class="n">coords</span> <span class="o">-</span> <span class="n">com</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+                <span class="n">rgyr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d2sum</span><span class="p">)</span>
+        <span class="n">d2sum</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">rgyr</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">d2sum</span> <span class="o">/</span> <span class="n">wsum</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span></div>
+
+<span class="n">_MSF_DOCSTRING</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;  *coordsets* may be an</span>
+<span class="s2">    instance of :class:`.Ensemble`, :class:`.TrajBase`, or :class:`.Atomic`.</span>
+<span class="s2">    For trajectory objects, e.g. :class:`.DCDFile`, frames will be considered</span>
+<span class="s2">    after they are superposed. For other ProDy objects, coordinate sets should</span>
+<span class="s2">    be aligned prior to MSF calculation.</span>
+
+<span class="s2">    Note that using trajectory files that store 32-bit coordinate will result</span>
+<span class="s2">    in lower precision in calculations.  Over 10,000 frames this may result</span>
+<span class="s2">    in up to 5</span><span class="si">% d</span><span class="s2">ifference from the values calculated using 64-bit arrays.</span>
+<span class="s2">    To ensure higher-precision calculations for :class:`.DCDFile` instances,</span>
+<span class="s2">    you may use *astype* argument, i.e. ``astype=float``, to auto recast</span>
+<span class="s2">    coordinate data to double-precision (64-bit) floating-point format.&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="calcMSF"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcMSF">[docs]</a><span class="k">def</span> <span class="nf">calcMSF</span><span class="p">(</span><span class="n">coordsets</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate mean square fluctuation(s) (MSF).&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ncsets</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">numFrames</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">coordsets</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">getCoordsets</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ndim</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">shape</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;coordsets must be a Numpy array or a ProDy &#39;</span>
+                            <span class="s1">&#39;object with `getCoordsets` method&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ndim</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordsets must contain multiple sets&#39;</span><span class="p">)</span>
+        <span class="n">msf</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nfi</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">nextIndex</span><span class="p">()</span>
+        <span class="n">natoms</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">numSelected</span><span class="p">()</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">natoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">sqsum</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">natoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s1">&#39;Evaluating {0} frames from {1}:&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ncsets</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">coordsets</span><span class="p">)),</span> <span class="n">ncsets</span><span class="p">,</span>
+                        <span class="s1">&#39;_prody_calcMSF&#39;</span><span class="p">)</span>
+        <span class="n">ncsets</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">coordsets</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">coordsets</span><span class="p">:</span>
+            <span class="n">frame</span><span class="o">.</span><span class="n">superpose</span><span class="p">()</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">coords</span>
+            <span class="n">sqsum</span> <span class="o">+=</span> <span class="n">coords</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="n">ncsets</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ncsets</span><span class="p">,</span> <span class="s1">&#39;_prody_calcMSF&#39;</span><span class="p">)</span>
+        <span class="n">msf</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqsum</span><span class="o">/</span><span class="n">ncsets</span> <span class="o">-</span> <span class="p">(</span><span class="n">total</span><span class="o">/</span><span class="n">ncsets</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">coordsets</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">nfi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">msf</span></div>
+
+<span class="n">calcMSF</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_MSF_DOCSTRING</span>
+
+
+<div class="viewcode-block" id="calcRMSF"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcRMSF">[docs]</a><span class="k">def</span> <span class="nf">calcRMSF</span><span class="p">(</span><span class="n">coordsets</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns root mean square fluctuation(s) (RMSF).&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">calcMSF</span><span class="p">(</span><span class="n">coordsets</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span></div>
+
+<span class="n">calcRMSF</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_MSF_DOCSTRING</span>
+
+
+<div class="viewcode-block" id="calcDeformVector"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcDeformVector">[docs]</a><span class="k">def</span> <span class="nf">calcDeformVector</span><span class="p">(</span><span class="n">from_atoms</span><span class="p">,</span> <span class="n">to_atoms</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns deformation from *from_atoms* to *atoms_to* as a :class:`.Vector`</span>
+<span class="sd">    instance.&quot;&quot;&quot;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;{0} =&gt; {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">from_atoms</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">to_atoms</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Deformation&#39;</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="p">(</span><span class="n">to_atoms</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span> <span class="o">-</span> <span class="n">from_atoms</span><span class="o">.</span><span class="n">getCoords</span><span class="p">())</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="kn">from</span> <span class="nn">prody.dynamics</span> <span class="kn">import</span> <span class="n">Vector</span>
+    <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="calcADPAxes"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcADPAxes">[docs]</a><span class="k">def</span> <span class="nf">calcADPAxes</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a 3Nx3 array containing principal axes defining anisotropic</span>
+<span class="sd">    displacement parameter (ADP, or anisotropic temperature factor) ellipsoids.</span>
+
+<span class="sd">    :arg atoms: a ProDy object for handling atomic data</span>
+<span class="sd">    :type atoms: :class:`~.Atomic`</span>
+
+<span class="sd">    :kwarg fract: For an atom, if the fraction of anisotropic displacement</span>
+<span class="sd">        explained by its largest axis/eigenvector is less than given value,</span>
+<span class="sd">        all axes for that atom will be set to zero. Values</span>
+<span class="sd">        larger than 0.33 and smaller than 1.0 are accepted.</span>
+<span class="sd">    :type fract: float</span>
+
+<span class="sd">    :kwarg ratio2: For an atom, if the ratio of the second-largest eigenvalue</span>
+<span class="sd">        to the largest eigenvalue axis less than or equal to the given value,</span>
+<span class="sd">        all principal axes for that atom will be returned.</span>
+<span class="sd">        Values less than 1 and greater than 0 are accepted.</span>
+<span class="sd">    :type ratio2: float</span>
+
+<span class="sd">    :kwarg ratio3: For an atom, if the ratio of the smallest eigenvalue</span>
+<span class="sd">        to the largest eigenvalue is less than or equal to the given value,</span>
+<span class="sd">        all principal axes for that atom will be returned.</span>
+<span class="sd">        Values less than 1 and greater than 0 are accepted.</span>
+<span class="sd">    :type ratio3: float</span>
+
+<span class="sd">    :kwarg ratio: Same as *ratio3*.</span>
+<span class="sd">    :type ratio: float</span>
+
+
+<span class="sd">    Keyword arguments *fract*, *ratio3*, or *ratio3* can be used to set</span>
+<span class="sd">    principal axes to 0 for atoms showing relatively lower degree of</span>
+<span class="sd">    anisotropy.</span>
+
+<span class="sd">    3Nx3 axis contains N times 3x3 matrices, one for each given atom. Columns</span>
+<span class="sd">    of these 3x3 matrices are the principal axes which are weighted by</span>
+<span class="sd">    square root of their eigenvalues. The first columns correspond to largest</span>
+<span class="sd">    principal axes.</span>
+
+<span class="sd">    The direction of the principal axes for an atom is determined based on the</span>
+<span class="sd">    correlation of the axes vector with the principal axes vector of the</span>
+<span class="sd">    previous atom.</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       from prody import *</span>
+<span class="sd">       protein = parsePDB(&#39;1ejg&#39;)</span>
+<span class="sd">       calphas = protein.select(&#39;calpha&#39;)</span>
+<span class="sd">       adp_axes = calcADPAxes( calphas )</span>
+<span class="sd">       adp_axes.shape</span>
+
+<span class="sd">    These can be written in NMD format as follows:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       nma = NMA(&#39;ADPs&#39;)</span>
+<span class="sd">       nma.setEigens(adp_axes)</span>
+<span class="sd">       nma</span>
+<span class="sd">       writeNMD(&#39;adp_axes.nmd&#39;, nma, calphas)&quot;&quot;&quot;</span>
+
+    <span class="n">linalg</span> <span class="o">=</span> <span class="n">importLA</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be of type Atomic, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">atoms</span><span class="p">)))</span>
+    <span class="n">anisous</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getAnisous</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">anisous</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;anisotropic temperature factors are not set&#39;</span><span class="p">)</span>
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">variances</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">stddevs</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">anisou</span> <span class="o">=</span> <span class="n">anisous</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">element</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">vals</span><span class="p">,</span> <span class="n">vecs</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="c1"># If negative eigenvalues are found (when ADP matrix is not positive</span>
+    <span class="c1"># definite) set them to 0</span>
+    <span class="n">vals</span><span class="p">[</span><span class="n">vals</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">variances</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="n">vals</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">stddevs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">vals</span> <span class="o">*</span> <span class="n">vecs</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">):</span>
+        <span class="n">anisou</span> <span class="o">=</span> <span class="n">anisous</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">vals</span><span class="p">,</span> <span class="n">vecs</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="c1"># If negative eigenvalues are found (when ADP matrix is not positive</span>
+        <span class="c1"># definite) set them to 0</span>
+        <span class="n">vals</span><span class="p">[</span><span class="n">vals</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">variances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="n">vals</span><span class="o">**</span><span class="mf">0.5</span>
+        <span class="n">stddevs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span>
+        <span class="c1"># Make sure the direction that correlates with the previous atom</span>
+        <span class="c1"># is selected</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="n">vals</span> <span class="o">*</span> <span class="n">sign</span><span class="p">((</span><span class="n">vecs</span> <span class="o">*</span> <span class="n">axes</span><span class="p">[(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">:(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="p">:])</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">vals</span> <span class="o">*</span> <span class="n">vecs</span>
+    <span class="c1"># Resort the columns before returning array</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+    <span class="n">torf</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="s1">&#39;fract&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">fract</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;fract&#39;</span><span class="p">])</span>
+        <span class="k">assert</span> <span class="mf">0.33</span> <span class="o">&lt;</span> <span class="n">fract</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;fract must be &gt; 0.33 and &lt; 1.0&#39;</span>
+        <span class="n">variances</span> <span class="o">=</span> <span class="n">variances</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+        <span class="n">torf</span> <span class="o">=</span> <span class="n">variances</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">variances</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">fract</span>
+    <span class="k">elif</span> <span class="s1">&#39;ratio&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">or</span> <span class="s1">&#39;ratio3&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">or</span> <span class="s1">&#39;ratio2&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;ratio2&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;ratio2&#39;</span><span class="p">])</span>
+            <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">ratio</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;ratio2 must be &gt; 0 and &lt; 1.0&#39;</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ratio&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ratio3&#39;</span><span class="p">)))</span>
+            <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">ratio</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;ratio or ratio3 must be &gt; 0 and &lt; 1.0&#39;</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">variances</span> <span class="o">=</span> <span class="n">variances</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+        <span class="n">torf</span> <span class="o">=</span> <span class="n">variances</span><span class="p">[:,</span> <span class="n">dim</span><span class="p">]</span> <span class="o">/</span> <span class="n">variances</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">ratio</span>
+    <span class="k">if</span> <span class="n">torf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">torf</span> <span class="o">=</span> <span class="n">tile</span><span class="p">(</span><span class="n">torf</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_atoms</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span> <span class="o">*</span> <span class="n">torf</span>
+    <span class="k">return</span> <span class="n">axes</span></div>
+
+
+<div class="viewcode-block" id="calcADPs"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.calcADPs">[docs]</a><span class="k">def</span> <span class="nf">calcADPs</span><span class="p">(</span><span class="n">atom</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate anisotropic displacement parameters (ADPs) from</span>
+<span class="sd">    anisotropic temperature factors (ATFs).</span>
+
+<span class="sd">    *atom* must have ATF values set for ADP calculation. ADPs are returned</span>
+<span class="sd">    as a tuple, i.e. (eigenvalues, eigenvectors).&quot;&quot;&quot;</span>
+
+    <span class="n">linalg</span> <span class="o">=</span> <span class="n">importLA</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="n">Atom</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atom must be of type Atom, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">atom</span><span class="p">)))</span>
+    <span class="n">anisou</span> <span class="o">=</span> <span class="n">atom</span><span class="o">.</span><span class="n">getAnisou</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">anisou</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;atom does not have anisotropic temperature &#39;</span>
+                         <span class="s1">&#39;factors&#39;</span><span class="p">)</span>
+    <span class="n">element</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">vals</span><span class="p">,</span> <span class="n">vecs</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">vals</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> <span class="n">vecs</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span></div>
+
+
+<div class="viewcode-block" id="buildADPMatrix"><a class="viewcode-back" href="../../../manual/reference/measure/measure.html#prody.measure.measure.buildADPMatrix">[docs]</a><span class="k">def</span> <span class="nf">buildADPMatrix</span><span class="p">(</span><span class="n">atoms</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a 3Nx3N symmetric matrix containing anisotropic displacement</span>
+<span class="sd">    parameters (ADPs) along the diagonal as 3x3 super elements.</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       from prody import *</span>
+<span class="sd">       protein = parsePDB(&#39;1ejg&#39;)</span>
+<span class="sd">       calphas = protein.select(&#39;calpha&#39;)</span>
+<span class="sd">       adp_matrix = buildADPMatrix(calphas)&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be of type Atomic, not {0}&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">atoms</span><span class="p">)))</span>
+    <span class="n">anisous</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getAnisous</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">anisous</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;anisotropic temperature factors are not set&#39;</span><span class="p">)</span>
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+    <span class="n">n_dof</span> <span class="o">=</span> <span class="n">n_atoms</span> <span class="o">*</span> <span class="mi">3</span>
+    <span class="n">adp</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_dof</span><span class="p">,</span> <span class="n">n_dof</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">):</span>
+        <span class="n">anisou</span> <span class="o">=</span> <span class="n">anisous</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">element</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">anisou</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">adp</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span>
+    <span class="k">return</span> <span class="n">adp</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

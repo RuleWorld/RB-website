@@ -1,0 +1,533 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.proteins.wwpdb &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.proteins.wwpdb</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for accessing wwPDB servers.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getcwd</span>
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">sep</span> <span class="k">as</span> <span class="n">pathsep</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">isdir</span><span class="p">,</span> <span class="n">isfile</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">splitext</span><span class="p">,</span> <span class="n">normpath</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">makePath</span><span class="p">,</span> <span class="n">gunzip</span><span class="p">,</span> <span class="n">relpath</span><span class="p">,</span> <span class="n">copyFile</span><span class="p">,</span> <span class="n">openURL</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">sympath</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;wwPDBServer&#39;</span><span class="p">,</span> <span class="s1">&#39;fetchPDBviaFTP&#39;</span><span class="p">,</span> <span class="s1">&#39;fetchPDBviaHTTP&#39;</span><span class="p">]</span>
+
+
+<span class="n">_WWPDB_RCSB</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;RCSB PDB (USA)&#39;</span><span class="p">,</span> <span class="s1">&#39;ftp.wwpdb.org&#39;</span><span class="p">,</span> <span class="s1">&#39;/pub/pdb/&#39;</span><span class="p">)</span>
+<span class="n">_WWPDB_PDBe</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;PDBe (Europe)&#39;</span><span class="p">,</span> <span class="s1">&#39;ftp.ebi.ac.uk&#39;</span><span class="p">,</span> <span class="s1">&#39;/pub/databases/rcsb/pdb/&#39;</span><span class="p">)</span>
+<span class="n">_WWPDB_PDBj</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;PDBj (Japan)&#39;</span><span class="p">,</span> <span class="s1">&#39;pdb.protein.osaka-u.ac.jp&#39;</span><span class="p">,</span> <span class="s1">&#39;/pub/pdb/&#39;</span><span class="p">)</span>
+
+<span class="n">WWPDB_FTP_SERVERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;rcsb&#39;</span>   <span class="p">:</span> <span class="n">_WWPDB_RCSB</span><span class="p">,</span>
+    <span class="s1">&#39;usa&#39;</span>    <span class="p">:</span> <span class="n">_WWPDB_RCSB</span><span class="p">,</span>
+    <span class="s1">&#39;us&#39;</span>     <span class="p">:</span> <span class="n">_WWPDB_RCSB</span><span class="p">,</span>
+    <span class="s1">&#39;pdbe&#39;</span>   <span class="p">:</span> <span class="n">_WWPDB_PDBe</span><span class="p">,</span>
+    <span class="s1">&#39;euro&#39;</span>   <span class="p">:</span> <span class="n">_WWPDB_PDBe</span><span class="p">,</span>
+    <span class="s1">&#39;europe&#39;</span> <span class="p">:</span> <span class="n">_WWPDB_PDBe</span><span class="p">,</span>
+    <span class="s1">&#39;eu&#39;</span>     <span class="p">:</span> <span class="n">_WWPDB_PDBe</span><span class="p">,</span>
+    <span class="s1">&#39;pdbj&#39;</span>   <span class="p">:</span> <span class="n">_WWPDB_PDBj</span><span class="p">,</span>
+    <span class="s1">&#39;japan&#39;</span>  <span class="p">:</span> <span class="n">_WWPDB_PDBj</span><span class="p">,</span>
+    <span class="s1">&#39;jp&#39;</span>     <span class="p">:</span> <span class="n">_WWPDB_PDBj</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">_URL_US</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;http://www.rcsb.org/pdb/files/</span><span class="si">%s</span><span class="s1">.pdb.gz&#39;</span> <span class="o">%</span>
+                       <span class="n">pdb</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="n">_URL_EU</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;http://www.ebi.ac.uk/pdbe-srv/view/files/</span><span class="si">%s</span><span class="s1">.ent.gz&#39;</span> <span class="o">%</span>
+                       <span class="n">pdb</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">_URL_JP</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;http://www.pdbj.org/pdb_all/pdb</span><span class="si">%s</span><span class="s1">.ent.gz&#39;</span> <span class="o">%</span>
+                       <span class="n">pdb</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">WWPDB_HTTP_URL</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;rcsb&#39;</span>   <span class="p">:</span> <span class="n">_URL_US</span><span class="p">,</span>
+    <span class="s1">&#39;usa&#39;</span>    <span class="p">:</span> <span class="n">_URL_US</span><span class="p">,</span>
+    <span class="s1">&#39;us&#39;</span>     <span class="p">:</span> <span class="n">_URL_US</span><span class="p">,</span>
+    <span class="s1">&#39;pdbe&#39;</span>   <span class="p">:</span> <span class="n">_URL_EU</span><span class="p">,</span>
+    <span class="s1">&#39;euro&#39;</span>   <span class="p">:</span> <span class="n">_URL_EU</span><span class="p">,</span>
+    <span class="s1">&#39;europe&#39;</span> <span class="p">:</span> <span class="n">_URL_EU</span><span class="p">,</span>
+    <span class="s1">&#39;eu&#39;</span>     <span class="p">:</span> <span class="n">_URL_EU</span><span class="p">,</span>
+    <span class="s1">&#39;pdbj&#39;</span>   <span class="p">:</span> <span class="n">_URL_JP</span><span class="p">,</span>
+    <span class="s1">&#39;japan&#39;</span>  <span class="p">:</span> <span class="n">_URL_JP</span><span class="p">,</span>
+    <span class="s1">&#39;jp&#39;</span>     <span class="p">:</span> <span class="n">_URL_JP</span><span class="p">,</span>
+<span class="p">}</span>
+
+<div class="viewcode-block" id="wwPDBServer"><a class="viewcode-back" href="../../../manual/reference/proteins/wwpdb.html#prody.proteins.wwpdb.wwPDBServer">[docs]</a><span class="k">def</span> <span class="nf">wwPDBServer</span><span class="p">(</span><span class="o">*</span><span class="n">key</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set/get `wwPDB`_ FTP/HTTP server location used for downloading PDB</span>
+<span class="sd">    structures.  Use one of the following keywords for setting a server:</span>
+
+<span class="sd">    +---------------------------+-----------------------------+</span>
+<span class="sd">    | wwPDB FTP server          | *Key* (case insensitive)    |</span>
+<span class="sd">    +===========================+=============================+</span>
+<span class="sd">    | RCSB PDB (USA) (default)  | RCSB, USA, US               |</span>
+<span class="sd">    +---------------------------+-----------------------------+</span>
+<span class="sd">    | PDBe (Europe)             | PDBe, Europe, Euro, EU      |</span>
+<span class="sd">    +---------------------------+-----------------------------+</span>
+<span class="sd">    | PDBj (Japan)              | PDBj, Japan, Jp             |</span>
+<span class="sd">    +---------------------------+-----------------------------+</span>
+
+<span class="sd">    .. _wwPDB: http://www.wwpdb.org/&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">key</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;wwpdb&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;key must be a string&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">WWPDB_FTP_SERVERS</span><span class="p">:</span>
+            <span class="n">SETTINGS</span><span class="p">[</span><span class="s1">&#39;wwpdb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+            <span class="n">SETTINGS</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;wwPDB server is set to {}.&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">WWPDB_FTP_SERVERS</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid wwPDB server identifier&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;one wwPDB server identifier is expected, {0} given&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)))</span></div>
+
+
+<span class="k">def</span> <span class="nf">checkIdentifiers</span><span class="p">(</span><span class="o">*</span><span class="n">pdb</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check whether *pdb* identifiers are valid, and replace invalid ones</span>
+<span class="sd">    with **None** in place.&quot;&quot;&quot;</span>
+
+    <span class="n">identifiers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">append</span> <span class="o">=</span> <span class="n">identifiers</span><span class="o">.</span><span class="n">append</span>
+    <span class="k">for</span> <span class="n">pid</span> <span class="ow">in</span> <span class="n">pdb</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">pid</span> <span class="o">=</span> <span class="n">pid</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid identifier.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">pid</span><span class="p">)))</span>
+            <span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">pid</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()):</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid identifier.&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">pid</span><span class="p">)))</span>
+                <span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">append</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">identifiers</span>
+
+
+<div class="viewcode-block" id="fetchPDBviaFTP"><a class="viewcode-back" href="../../../manual/reference/proteins/wwpdb.html#prody.proteins.wwpdb.fetchPDBviaFTP">[docs]</a><span class="k">def</span> <span class="nf">fetchPDBviaFTP</span><span class="p">(</span><span class="o">*</span><span class="n">pdb</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Retrieve PDB (default), PDBML, or mmCIF file(s) for specified *pdb*</span>
+<span class="sd">    identifier(s) and return path(s).  Downloaded files will be stored in</span>
+<span class="sd">    local PDB folder, if one is set using :meth:`.pathPDBFolder`, and copied</span>
+<span class="sd">    into *folder*, if specified by the user.  If no destination folder is</span>
+<span class="sd">    specified, files will be saved in the current working directory.  If</span>
+<span class="sd">    *compressed* is **False**, decompressed files will be copied into</span>
+<span class="sd">    *folder*.  *format* keyword argument can be used to retrieve</span>
+<span class="sd">    `PDBML &lt;http://pdbml.pdb.org/&gt;`_ and `mmCIF &lt;http://mmcif.pdb.org/&gt;`_</span>
+<span class="sd">    files: ``format=&#39;cif&#39;`` will fetch an mmCIF file, and ``format=&#39;xml&#39;``</span>
+<span class="sd">    will fetch a PDBML file.  If PDBML header file is desired, ``noatom=True``</span>
+<span class="sd">    argument will do the job.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;check&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">):</span>
+        <span class="n">identifiers</span> <span class="o">=</span> <span class="n">checkIdentifiers</span><span class="p">(</span><span class="o">*</span><span class="n">pdb</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">identifiers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+
+    <span class="n">output_folder</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;folder&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">compressed</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;compressed&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">))</span>
+    <span class="n">format</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;format&#39;</span><span class="p">,</span> <span class="s1">&#39;pdb&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">noatom</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;noatom&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">format</span> <span class="o">==</span> <span class="s1">&#39;pdb&#39;</span><span class="p">:</span>
+        <span class="n">ftp_divided</span> <span class="o">=</span> <span class="s1">&#39;data/structures/divided/pdb&#39;</span>
+        <span class="n">ftp_pdbext</span> <span class="o">=</span> <span class="s1">&#39;.ent.gz&#39;</span>
+        <span class="n">ftp_prefix</span> <span class="o">=</span> <span class="s1">&#39;pdb&#39;</span>
+        <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.pdb&#39;</span>
+    <span class="k">elif</span> <span class="n">format</span> <span class="o">==</span> <span class="s1">&#39;xml&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">noatom</span><span class="p">:</span>
+            <span class="n">ftp_divided</span> <span class="o">=</span> <span class="s1">&#39;data/structures/divided/XML-noatom&#39;</span>
+            <span class="n">ftp_pdbext</span> <span class="o">=</span> <span class="s1">&#39;-noatom.xml.gz&#39;</span>
+            <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;-noatom.xml&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ftp_divided</span> <span class="o">=</span> <span class="s1">&#39;data/structures/divided/XML&#39;</span>
+            <span class="n">ftp_pdbext</span> <span class="o">=</span> <span class="s1">&#39;.xml.gz&#39;</span>
+            <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.xml&#39;</span>
+        <span class="n">ftp_prefix</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">elif</span> <span class="n">format</span> <span class="o">==</span> <span class="s1">&#39;cif&#39;</span><span class="p">:</span>
+        <span class="n">ftp_divided</span> <span class="o">=</span> <span class="s1">&#39;data/structures/divided/mmCIF&#39;</span>
+        <span class="n">ftp_pdbext</span> <span class="o">=</span> <span class="s1">&#39;.cif.gz&#39;</span>
+        <span class="n">ftp_prefix</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.cif&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">format</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; is not valid format&#39;</span><span class="p">)</span>
+
+    <span class="n">local_folder</span> <span class="o">=</span> <span class="n">pathPDBFolder</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">format</span> <span class="o">==</span> <span class="s1">&#39;pdb&#39;</span> <span class="ow">and</span> <span class="n">local_folder</span><span class="p">:</span>
+        <span class="n">local_folder</span><span class="p">,</span> <span class="n">is_divided</span> <span class="o">=</span> <span class="n">local_folder</span>
+        <span class="k">if</span> <span class="n">is_divided</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">makePath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">local_folder</span><span class="p">,</span> <span class="n">pdb</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])),</span>
+                                       <span class="s1">&#39;pdb&#39;</span> <span class="o">+</span> <span class="n">pdb</span> <span class="o">+</span> <span class="s1">&#39;.pdb.gz&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">local_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="s1">&#39;.pdb.gz&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">output_folder</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">filename</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">compressed</span><span class="p">:</span>
+                <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="p">(</span><span class="n">copyFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span>
+                            <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span> <span class="o">+</span> <span class="s1">&#39;.gz&#39;</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">gunzip</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span>
+                            <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span><span class="p">))</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">output_folder</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">output_folder</span> <span class="o">=</span> <span class="n">getcwd</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">compressed</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span> <span class="o">+</span> <span class="s1">&#39;.gz&#39;</span><span class="p">)</span>
+            <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">filename</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span><span class="p">)</span>
+            <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">gunzip</span><span class="p">(</span><span class="n">getPath</span><span class="p">(</span><span class="n">pdb</span><span class="p">),</span> <span class="n">getPath</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+
+
+    <span class="n">ftp_name</span><span class="p">,</span> <span class="n">ftp_host</span><span class="p">,</span> <span class="n">ftp_path</span> <span class="o">=</span> <span class="n">WWPDB_FTP_SERVERS</span><span class="p">[</span><span class="n">wwPDBServer</span><span class="p">()</span> <span class="ow">or</span> <span class="s1">&#39;us&#39;</span><span class="p">]</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Connecting wwPDB FTP server {0}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ftp_name</span><span class="p">))</span>
+
+    <span class="kn">from</span> <span class="nn">ftplib</span> <span class="kn">import</span> <span class="n">FTP</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ftp</span> <span class="o">=</span> <span class="n">FTP</span><span class="p">(</span><span class="n">ftp_host</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nb">type</span><span class="p">(</span><span class="n">error</span><span class="p">)(</span><span class="s1">&#39;FTP connection problem, potential reason: &#39;</span>
+                          <span class="s1">&#39;no internet connectivity&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">success</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">failure</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">filenames</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">pdb</span> <span class="ow">in</span> <span class="n">identifiers</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pdb</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">ftp_fn</span> <span class="o">=</span> <span class="n">ftp_prefix</span> <span class="o">+</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">ftp_pdbext</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="n">ftp_path</span><span class="p">)</span>
+                <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="n">ftp_divided</span><span class="p">)</span>
+                <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="n">pdb</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+                <span class="n">ftp</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="s1">&#39;RETR &#39;</span> <span class="o">+</span> <span class="n">ftp_fn</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">ftp_fn</span> <span class="ow">in</span> <span class="n">ftp</span><span class="o">.</span><span class="n">nlst</span><span class="p">():</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} download failed ({1}). It is &#39;</span>
+                                <span class="s1">&#39;possible that you do not have rights to &#39;</span>
+                                <span class="s1">&#39;download .gz files in the current network.&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">error</span><span class="p">)))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} download failed. {1} does not exist &#39;</span>
+                                <span class="s1">&#39;on {2}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ftp_fn</span><span class="p">,</span> <span class="n">pdb</span><span class="p">,</span> <span class="n">ftp_host</span><span class="p">))</span>
+                <span class="n">failure</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+                    <span class="n">filename</span> <span class="o">=</span> <span class="n">getPath</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+
+                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w+b&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">pdbfile</span><span class="p">:</span>
+                        <span class="n">write</span> <span class="o">=</span> <span class="n">pdbfile</span><span class="o">.</span><span class="n">write</span>
+                        <span class="p">[</span><span class="n">write</span><span class="p">(</span><span class="n">block</span><span class="p">)</span> <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+
+                    <span class="n">filename</span> <span class="o">=</span> <span class="n">normpath</span><span class="p">(</span><span class="n">relpath</span><span class="p">(</span><span class="n">second</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">)))</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;{0} downloaded ({1})&#39;</span>
+                                 <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">sympath</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+                    <span class="n">success</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} download failed, reason unknown.&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+                    <span class="n">failure</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+
+        <span class="n">ftp</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;report&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">):</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;PDB download via FTP completed ({0} downloaded, &#39;</span>
+                     <span class="s1">&#39;{1} failed).&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">failure</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">identifiers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">filenames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">filenames</span></div>
+
+
+<div class="viewcode-block" id="fetchPDBviaHTTP"><a class="viewcode-back" href="../../../manual/reference/proteins/wwpdb.html#prody.proteins.wwpdb.fetchPDBviaHTTP">[docs]</a><span class="k">def</span> <span class="nf">fetchPDBviaHTTP</span><span class="p">(</span><span class="o">*</span><span class="n">pdb</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Retrieve PDB file(s) for specified *pdb* identifier(s) and return</span>
+<span class="sd">    path(s).  Downloaded files will be stored in local PDB folder, if one</span>
+<span class="sd">    is set using :meth:`.pathPDBFolder`, and copied into *folder*, if</span>
+<span class="sd">    specified by the user.  If no destination folder is specified, files</span>
+<span class="sd">    will be saved in the current working directory.  If *compressed* is</span>
+<span class="sd">    **False**, decompressed files will be copied into *folder*.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;check&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">):</span>
+        <span class="n">identifiers</span> <span class="o">=</span> <span class="n">checkIdentifiers</span><span class="p">(</span><span class="o">*</span><span class="n">pdb</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">identifiers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+
+    <span class="n">output_folder</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;folder&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">compressed</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;compressed&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">))</span>
+
+    <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;.pdb&#39;</span>
+    <span class="n">local_folder</span> <span class="o">=</span> <span class="n">pathPDBFolder</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">local_folder</span><span class="p">:</span>
+        <span class="n">local_folder</span><span class="p">,</span> <span class="n">is_divided</span> <span class="o">=</span> <span class="n">local_folder</span>
+        <span class="k">if</span> <span class="n">is_divided</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">makePath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">local_folder</span><span class="p">,</span> <span class="n">pdb</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])),</span>
+                                       <span class="s1">&#39;pdb&#39;</span> <span class="o">+</span> <span class="n">pdb</span> <span class="o">+</span> <span class="s1">&#39;.pdb.gz&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">local_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="s1">&#39;.pdb.gz&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">output_folder</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">filename</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">compressed</span><span class="p">:</span>
+                <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="p">(</span><span class="n">copyFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span>
+                            <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span> <span class="o">+</span> <span class="s1">&#39;.gz&#39;</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">gunzip</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span>
+                            <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span><span class="p">))</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">output_folder</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">output_folder</span> <span class="o">=</span> <span class="n">getcwd</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">compressed</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span> <span class="o">+</span> <span class="s1">&#39;.gz&#39;</span><span class="p">)</span>
+            <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">filename</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">getPath</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">pdb</span> <span class="o">+</span> <span class="n">extension</span><span class="p">)</span>
+            <span class="n">second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">:</span> <span class="n">gunzip</span><span class="p">(</span><span class="n">getPath</span><span class="p">(</span><span class="n">pdb</span><span class="p">),</span> <span class="n">getPath</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+
+
+    <span class="n">getURL</span> <span class="o">=</span> <span class="n">WWPDB_HTTP_URL</span><span class="p">[</span><span class="n">wwPDBServer</span><span class="p">()</span> <span class="ow">or</span> <span class="s1">&#39;us&#39;</span><span class="p">]</span>
+
+    <span class="n">success</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">failure</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">filenames</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">pdb</span> <span class="ow">in</span> <span class="n">identifiers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">pdb</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">handle</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">getURL</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} download failed ({1}).&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">)))</span>
+            <span class="n">failure</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">getPath</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w+b&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">pdbfile</span><span class="p">:</span>
+                    <span class="n">pdbfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">normpath</span><span class="p">(</span><span class="n">relpath</span><span class="p">(</span><span class="n">second</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">pdb</span><span class="p">)))</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;{0} downloaded ({1})&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">sympath</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+                <span class="n">success</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;{0} download failed, reason unknown.&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+                <span class="n">failure</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;report&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">):</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;PDB download via HTTP completed ({0} downloaded, &#39;</span>
+                     <span class="s1">&#39;{1} failed).&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">failure</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">identifiers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">filenames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">filenames</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="n">pdbids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1mkp&#39;</span><span class="p">,</span> <span class="s1">&#39;1zz2&#39;</span><span class="p">,</span> <span class="s1">&#39;nano&#39;</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">gzip</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+        <span class="n">fetchPDBviaFTP</span><span class="p">(</span><span class="o">*</span><span class="n">pdbids</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="n">gzip</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+        <span class="n">fetchPDBviaFTP</span><span class="p">(</span><span class="o">*</span><span class="n">pdbids</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="n">gzip</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;cif&#39;</span><span class="p">)</span>
+        <span class="n">fetchPDBviaFTP</span><span class="p">(</span><span class="o">*</span><span class="n">pdbids</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="n">gzip</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;xml&#39;</span><span class="p">)</span>
+        <span class="n">fetchPDBviaFTP</span><span class="p">(</span><span class="o">*</span><span class="n">pdbids</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="n">gzip</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;xml&#39;</span><span class="p">,</span>
+                       <span class="n">noatom</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">fetchPDBviaHTTP</span><span class="p">(</span><span class="o">*</span><span class="n">pdbids</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="n">gzip</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+    <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">remove</span>
+    <span class="k">for</span> <span class="n">pdb</span> <span class="ow">in</span> <span class="n">pdbids</span><span class="p">:</span>
+        <span class="n">fns</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">pdb</span> <span class="o">+</span> <span class="s1">&#39;.*&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">((</span><span class="n">pdb</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fns</span><span class="p">)))</span>
+        <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">fns</span><span class="p">:</span>
+            <span class="n">remove</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

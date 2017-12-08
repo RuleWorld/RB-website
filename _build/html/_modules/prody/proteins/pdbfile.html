@@ -1,0 +1,1121 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.proteins.pdbfile &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.proteins.pdbfile</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for parsing and writing `PDB files`_.</span>
+
+<span class="sd">.. _PDB files: http://www.wwpdb.org/documentation/format32/v3.2.html&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">flags</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">ATOMIC_FIELDS</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">openFile</span>
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span>
+
+<span class="kn">from</span> <span class="nn">.header</span> <span class="kn">import</span> <span class="n">getHeaderDict</span><span class="p">,</span> <span class="n">buildBiomolecules</span><span class="p">,</span> <span class="n">assignSecstr</span>
+<span class="kn">from</span> <span class="nn">.localpdb</span> <span class="kn">import</span> <span class="n">fetchPDB</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;parsePDBStream&#39;</span><span class="p">,</span> <span class="s1">&#39;parsePDB&#39;</span><span class="p">,</span> <span class="s1">&#39;parsePQR&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;writePDBStream&#39;</span><span class="p">,</span> <span class="s1">&#39;writePDB&#39;</span><span class="p">,]</span>
+
+<span class="k">class</span> <span class="nc">PDBParseError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">_parsePQRdoc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    :arg title: title of the :class:`.AtomGroup` instance, default is the</span>
+<span class="s2">        PDB filename or PDB identifier</span>
+<span class="s2">    :type title: str</span>
+
+<span class="s2">    :arg ag: :class:`.AtomGroup` instance for storing data parsed from PDB</span>
+<span class="s2">        file, number of atoms in *ag* and number of atoms parsed from the PDB</span>
+<span class="s2">        file must be the same and atoms in *ag* and those in PDB file must</span>
+<span class="s2">        be in the same order.  Non-coordinate data stored in *ag* will be</span>
+<span class="s2">        overwritten with those parsed from the file.</span>
+<span class="s2">    :type ag: :class:`.AtomGroup`</span>
+
+<span class="s2">    :arg chain: chain identifiers for parsing specific chains, e.g.</span>
+<span class="s2">        ``chain=&#39;A&#39;``, ``chain=&#39;B&#39;``, ``chain=&#39;DE&#39;``, by default all</span>
+<span class="s2">        chains are parsed</span>
+<span class="s2">    :type chain: str</span>
+
+<span class="s2">    :arg subset: a predefined keyword to parse subset of atoms, valid keywords</span>
+<span class="s2">        are ``&#39;calpha&#39;`` (``&#39;ca&#39;``), ``&#39;backbone&#39;`` (``&#39;bb&#39;``), or **None**</span>
+<span class="s2">        (read all atoms), e.g. ``subset=&#39;bb&#39;``</span>
+<span class="s2">    :type subset: str</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">_parsePDBdoc</span> <span class="o">=</span> <span class="n">_parsePQRdoc</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    :arg model: model index or None (read all models), e.g. ``model=10``</span>
+<span class="s2">    :type model: int, list</span>
+
+<span class="s2">    :arg header: if **True** PDB header content will be parsed and returned</span>
+<span class="s2">    :type header: bool</span>
+
+<span class="s2">    :arg altloc: if a location indicator is passed, such as ``&#39;A&#39;`` or ``&#39;B&#39;``,</span>
+<span class="s2">         only indicated alternate locations will be parsed as the single</span>
+<span class="s2">         coordinate set of the AtomGroup,  if *altloc* is set **True** all</span>
+<span class="s2">         alternate locations will be parsed and each will be appended as a</span>
+<span class="s2">         distinct coordinate set, default is ``&quot;A&quot;``</span>
+<span class="s2">    :type altloc: str</span>
+
+<span class="s2">    :arg biomol: if **True**, biomolecule obtained by transforming the</span>
+<span class="s2">        coordinates using information from header section will be returned</span>
+<span class="s2">    :type biomol: False</span>
+
+<span class="s2">    :arg secondary: if **True**, secondary structure information from header</span>
+<span class="s2">        section will be assigned atoms</span>
+<span class="s2">    :type secondary: False</span>
+
+<span class="s2">    If ``model=0`` and ``header=True``, return header dictionary only.</span>
+
+<span class="s2">    Note that this function does not evaluate ``CONECT`` records.</span>
+
+<span class="s2">    &quot;&quot;&quot;</span>
+
+<span class="n">_PDBSubsets</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ca&#39;</span><span class="p">:</span> <span class="s1">&#39;ca&#39;</span><span class="p">,</span> <span class="s1">&#39;calpha&#39;</span><span class="p">:</span> <span class="s1">&#39;ca&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">:</span> <span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;backbone&#39;</span><span class="p">:</span> <span class="s1">&#39;bb&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="parsePDB"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB">[docs]</a><span class="k">def</span> <span class="nf">parsePDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns an :class:`.AtomGroup` and/or dictionary containing header data</span>
+<span class="sd">    parsed from a PDB file.</span>
+
+<span class="sd">    This function extends :func:`.parsePDBStream`.</span>
+
+<span class="sd">    See :ref:`parsepdb` for a detailed usage example.</span>
+
+<span class="sd">    :arg pdb: a PDB identifier or a filename</span>
+<span class="sd">        If needed, PDB files are downloaded using :func:`.fetchPDB()` function.</span>
+<span class="sd">        You can also provide arguments that you would like passed on to fetchPDB().</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">pdb</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">pdb</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">pdb</span>
+                <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">title</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">fetchPDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">report</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;PDB file for {0} could not be downloaded.&#39;</span>
+                              <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+            <span class="n">pdb</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid filename or a valid PDB &#39;</span>
+                          <span class="s1">&#39;identifier.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">title</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pdb</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="s1">&#39;.gz&#39;</span><span class="p">:</span>
+            <span class="n">title</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span> <span class="ow">and</span> <span class="n">title</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;pdb&#39;</span><span class="p">):</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">title</span>
+    <span class="n">pdb</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">parsePDBStream</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">pdb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+<span class="n">parsePDB</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_parsePDBdoc</span>
+
+<div class="viewcode-block" id="parsePDBStream"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDBStream">[docs]</a><span class="k">def</span> <span class="nf">parsePDBStream</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns an :class:`.AtomGroup` and/or dictionary containing header data</span>
+<span class="sd">    parsed from a stream of PDB lines.</span>
+
+<span class="sd">    :arg stream: Anything that implements the method ``readlines``</span>
+<span class="sd">        (e.g. :class:`file`, buffer, stdin)&quot;&quot;&quot;</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">)</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;header&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s1">&#39;header must be a boolean&#39;</span>
+    <span class="n">chain</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;chain&#39;</span><span class="p">)</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subset&#39;</span><span class="p">)</span>
+    <span class="n">altloc</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;altloc&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">model</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;model must be greater than 0&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;model must be an integer, {0} is invalid&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">model</span><span class="p">)))</span>
+    <span class="n">title_suffix</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">subset</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">subset</span> <span class="o">=</span> <span class="n">_PDBSubsets</span><span class="p">[</span><span class="n">subset</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;subset must be a string&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid subset&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">subset</span><span class="p">)))</span>
+        <span class="n">title_suffix</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">subset</span>
+    <span class="k">if</span> <span class="n">chain</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">chain</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;chain must be a string&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;chain must not be an empty string&#39;</span><span class="p">)</span>
+        <span class="n">title_suffix</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">chain</span> <span class="o">+</span> <span class="n">title_suffix</span>
+    <span class="n">ag</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="s1">&#39;ag&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;ag&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;ag must be an AtomGroup instance&#39;</span><span class="p">)</span>
+        <span class="n">n_csets</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">model</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">AtomGroup</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">title_suffix</span><span class="p">)</span>
+        <span class="n">n_csets</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">biomol</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;biomol&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="n">auto_secondary</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">secondary</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;secondary&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">secondary</span><span class="p">:</span>
+        <span class="n">auto_secondary</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;auto_secondary&#39;</span><span class="p">)</span>
+        <span class="n">secondary</span> <span class="o">=</span> <span class="n">auto_secondary</span>
+    <span class="n">split</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">hd</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">lines</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">err</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;empty PDB file or stream&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">header</span> <span class="ow">or</span> <span class="n">biomol</span> <span class="ow">or</span> <span class="n">secondary</span><span class="p">:</span>
+            <span class="n">hd</span><span class="p">,</span> <span class="n">split</span> <span class="o">=</span> <span class="n">getHeaderDict</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+        <span class="n">_parsePDBLines</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">chain</span><span class="p">,</span> <span class="n">subset</span><span class="p">,</span> <span class="n">altloc</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;{0} atoms and {1} coordinate set(s) were &#39;</span>
+                          <span class="s1">&#39;parsed in </span><span class="si">%.2f</span><span class="s1">s.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span>
+                           <span class="n">ag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()</span> <span class="o">-</span> <span class="n">n_csets</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Atomic data could not be parsed, please &#39;</span>
+                        <span class="s1">&#39;check the input file.&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">header</span><span class="p">:</span>
+        <span class="n">hd</span><span class="p">,</span> <span class="n">split</span> <span class="o">=</span> <span class="n">getHeaderDict</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hd</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">secondary</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">auto_secondary</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">ag</span> <span class="o">=</span> <span class="n">assignSecstr</span><span class="p">(</span><span class="n">hd</span><span class="p">,</span> <span class="n">ag</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ag</span> <span class="o">=</span> <span class="n">assignSecstr</span><span class="p">(</span><span class="n">hd</span><span class="p">,</span> <span class="n">ag</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">biomol</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">buildBiomolecules</span><span class="p">(</span><span class="n">hd</span><span class="p">,</span> <span class="n">ag</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Biomolecular transformations were applied, {0} &#39;</span>
+                            <span class="s1">&#39;biomolecule(s) are returned.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ag</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Biomolecular transformations were applied to the &#39;</span>
+                            <span class="s1">&#39;coordinate data.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">header</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ag</span><span class="p">,</span> <span class="n">hd</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ag</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">hd</span></div>
+
+<span class="n">parsePDBStream</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_parsePDBdoc</span>
+
+
+<div class="viewcode-block" id="parsePQR"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePQR">[docs]</a><span class="k">def</span> <span class="nf">parsePQR</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns an :class:`.AtomGroup` containing data parsed from PDB lines.</span>
+
+<span class="sd">    :arg filename: a PQR filename</span>
+<span class="sd">    :type filename: str&quot;&quot;&quot;</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">))</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">chain</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;chain&#39;</span><span class="p">)</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subset&#39;</span><span class="p">)</span>
+    <span class="n">altloc</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;altloc&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;No such file: {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">fn</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="s1">&#39;.gz&#39;</span><span class="p">:</span>
+            <span class="n">fn</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">title_suffix</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">subset</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">subset</span> <span class="o">=</span> <span class="n">_PDBSubsets</span><span class="p">[</span><span class="n">subset</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;subset must be a string&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid subset&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">subset</span><span class="p">)))</span>
+        <span class="n">title_suffix</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">subset</span>
+    <span class="k">if</span> <span class="n">chain</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">chain</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;chain must be a string&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;chain must not be an empty string&#39;</span><span class="p">)</span>
+        <span class="n">title_suffix</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">chain</span> <span class="o">+</span> <span class="n">title_suffix</span>
+    <span class="k">if</span> <span class="s1">&#39;ag&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;ag&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;ag must be an AtomGroup instance&#39;</span><span class="p">)</span>
+        <span class="n">n_csets</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">AtomGroup</span><span class="p">(</span><span class="n">title</span> <span class="o">+</span> <span class="n">title_suffix</span><span class="p">)</span>
+        <span class="n">n_csets</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">pqr</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">pqr</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">pqr</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">()</span>
+    <span class="n">ag</span> <span class="o">=</span> <span class="n">_parsePDBLines</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">chain</span><span class="o">=</span><span class="n">chain</span><span class="p">,</span>
+                        <span class="n">subset</span><span class="o">=</span><span class="n">subset</span><span class="p">,</span> <span class="n">altloc_torf</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;pqr&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;{0} atoms and {1} coordinate sets were &#39;</span>
+                      <span class="s1">&#39;parsed in </span><span class="si">%.2f</span><span class="s1">s.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span>
+                         <span class="n">ag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()</span> <span class="o">-</span> <span class="n">n_csets</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">ag</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span></div>
+
+<span class="n">parsePQR</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_parsePQRdoc</span>
+
+<span class="k">def</span> <span class="nf">_parsePDBLines</span><span class="p">(</span><span class="n">atomgroup</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">chain</span><span class="p">,</span> <span class="n">subset</span><span class="p">,</span>
+                   <span class="n">altloc_torf</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;PDB&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns an AtomGroup. See also :func:`.parsePDBStream()`.</span>
+
+<span class="sd">    :arg lines: PDB/PQR lines</span>
+<span class="sd">    :arg split: starting index for coordinate data lines&quot;&quot;&quot;</span>
+
+    <span class="n">format</span> <span class="o">=</span> <span class="n">format</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">format</span> <span class="o">==</span> <span class="s1">&#39;PDB&#39;</span><span class="p">:</span>
+        <span class="n">isPDB</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">isPDB</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">if</span> <span class="n">subset</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">subset</span> <span class="o">==</span> <span class="s1">&#39;ca&#39;</span><span class="p">:</span>
+            <span class="n">subset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">((</span><span class="s1">&#39;CA&#39;</span><span class="p">,))</span>
+        <span class="k">elif</span> <span class="n">subset</span> <span class="ow">in</span> <span class="s1">&#39;bb&#39;</span><span class="p">:</span>
+            <span class="n">subset</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">BACKBONE</span>
+        <span class="n">only_subset</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">protein_resnames</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">AMINOACIDS</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">only_subset</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="n">chain</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">only_chains</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">only_chains</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">onlycoords</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">atomgroup</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">asize</span> <span class="o">=</span> <span class="n">n_atoms</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># most PDB files contain less than 99999 atoms</span>
+        <span class="n">asize</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span> <span class="o">-</span> <span class="n">split</span><span class="p">,</span> <span class="mi">99999</span><span class="p">)</span>
+    <span class="n">addcoords</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="n">atomgroup</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">addcoords</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">alength</span> <span class="o">=</span> <span class="n">asize</span>
+    <span class="n">coordinates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">asize</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">atomnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">resnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;resname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">resnums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;resnum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">chainids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;chain&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">hetero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="n">termini</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="n">altlocs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;altloc&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">icodes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;icode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">serials</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;serial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">isPDB</span><span class="p">:</span>
+        <span class="n">segnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;segment&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;element&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="n">bfactors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;beta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="n">occupancies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;occupancy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="n">anisou</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">siguij</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">charges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;charge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="n">radii</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;radius&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">asize</span> <span class="o">=</span> <span class="mi">2000</span> <span class="c1"># increase array length by this much when needed</span>
+
+    <span class="n">start</span> <span class="o">=</span> <span class="n">split</span>
+    <span class="n">stop</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="n">nmodel</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># if a specific model is requested, skip lines until that one</span>
+    <span class="k">if</span> <span class="n">isPDB</span> <span class="ow">and</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">model</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">split</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">][:</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;MODEL&#39;</span><span class="p">:</span>
+                <span class="n">nmodel</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="n">nmodel</span><span class="p">:</span>
+                    <span class="n">start</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+                    <span class="n">stop</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+                    <span class="k">break</span>
+        <span class="k">if</span> <span class="n">nmodel</span> <span class="o">!=</span> <span class="n">model</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PDBParseError</span><span class="p">(</span><span class="s1">&#39;model {0} is not found&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">altloc_torf</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">altloc_torf</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Parsing alternate locations {0}.&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">altloc_torf</span><span class="p">))</span>
+            <span class="n">which_altlocs</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">altloc_torf</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">which_altlocs</span> <span class="o">=</span> <span class="s1">&#39; A&#39;</span>
+        <span class="n">altloc_torf</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">which_altlocs</span> <span class="o">=</span> <span class="s1">&#39; A&#39;</span>
+        <span class="n">altloc_torf</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="n">acount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">altloc</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">start</span>
+    <span class="n">END</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">stop</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">startswith</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">startswith</span> <span class="o">==</span> <span class="s1">&#39;ATOM  &#39;</span> <span class="ow">or</span> <span class="n">startswith</span> <span class="o">==</span> <span class="s1">&#39;HETATM&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">only_subset</span><span class="p">:</span>
+                <span class="n">atomname</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">resname</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">atomname</span> <span class="ow">in</span> <span class="n">subset</span> <span class="ow">and</span> <span class="n">resname</span> <span class="ow">in</span> <span class="n">protein_resnames</span><span class="p">):</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">atomname</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span>
+                <span class="n">resname</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span>
+
+            <span class="n">chid</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">only_chains</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">chid</span> <span class="ow">in</span> <span class="n">chain</span><span class="p">:</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">continue</span>
+            <span class="n">alt</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">alt</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">which_altlocs</span><span class="p">:</span>
+                <span class="n">altloc</span><span class="p">[</span><span class="n">alt</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">line</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">continue</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">coordinates</span><span class="p">[</span><span class="n">acount</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">30</span><span class="p">:</span><span class="mi">38</span><span class="p">]</span>
+                <span class="n">coordinates</span><span class="p">[</span><span class="n">acount</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">46</span><span class="p">]</span>
+                <span class="n">coordinates</span><span class="p">[</span><span class="n">acount</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">46</span><span class="p">:</span><span class="mi">54</span><span class="p">]</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">acount</span> <span class="o">&gt;=</span> <span class="n">n_atoms</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">nmodel</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">format</span> <span class="o">+</span> <span class="s1">&#39;file and AtomGroup ag must &#39;</span>
+                                         <span class="s1">&#39;have same number of atoms&#39;</span><span class="p">)</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Discarding model {0}, which contains more &#39;</span>
+                            <span class="s1">&#39;atoms than first model does.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nmodel</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+                    <span class="n">acount</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="n">nmodel</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">coordinates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+                    <span class="k">while</span> <span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">][:</span><span class="mi">6</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;ENDMDL&#39;</span><span class="p">:</span>
+                        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">PDBParseError</span><span class="p">(</span><span class="s1">&#39;invalid or missing coordinate(s) at &#39;</span>
+                                         <span class="s1">&#39;line {0}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">onlycoords</span><span class="p">:</span>
+                <span class="n">acount</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">continue</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">serials</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">serials</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">11</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Failed to parse serial number in line {0}.&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+                    <span class="n">serials</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">serials</span><span class="p">[</span><span class="n">acount</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">altlocs</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">alt</span>
+            <span class="n">atomnames</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">atomname</span>
+            <span class="n">resnames</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">resname</span>
+            <span class="n">chainids</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">chid</span>
+            <span class="n">resnums</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">]</span><span class="c1">#.split()[0])</span>
+            <span class="n">icodes</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">isPDB</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">occupancies</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">54</span><span class="p">:</span><span class="mi">60</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse occupancy at line {0}&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">bfactors</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">60</span><span class="p">:</span><span class="mi">66</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse beta-factor at line {0}&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+                <span class="n">hetero</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">startswith</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;H&#39;</span>
+                <span class="n">segnames</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">72</span><span class="p">:</span><span class="mi">76</span><span class="p">]</span>
+                <span class="n">elements</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">76</span><span class="p">:</span><span class="mi">78</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">charges</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">54</span><span class="p">:</span><span class="mi">62</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse charge at line {0}&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">radii</span><span class="p">[</span><span class="n">acount</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">62</span><span class="p">:</span><span class="mi">69</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse radius at line {0}&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+            <span class="n">acount</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">acount</span> <span class="o">&gt;=</span> <span class="n">alength</span><span class="p">:</span>
+                <span class="c1"># if arrays are short extend them with zeros</span>
+                <span class="n">alength</span> <span class="o">+=</span> <span class="n">asize</span>
+                <span class="n">coordinates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">asize</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="nb">float</span><span class="p">)))</span>
+                <span class="n">atomnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">atomnames</span><span class="p">,</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="n">resnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">resnames</span><span class="p">,</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;resname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="n">resnums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">resnums</span><span class="p">,</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;resnum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="n">chainids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">chainids</span><span class="p">,</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;chain&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="n">hetero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">hetero</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)))</span>
+                <span class="n">termini</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">termini</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)))</span>
+                <span class="n">altlocs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">altlocs</span><span class="p">,</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;altloc&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="n">icodes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">icodes</span><span class="p">,</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;icode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="n">serials</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">serials</span><span class="p">,</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;serial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="k">if</span> <span class="n">isPDB</span><span class="p">:</span>
+                    <span class="n">bfactors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">bfactors</span><span class="p">,</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;beta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                    <span class="n">occupancies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">occupancies</span><span class="p">,</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;occupancy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                    <span class="n">segnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">segnames</span><span class="p">,</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;segment&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                    <span class="n">elements</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">elements</span><span class="p">,</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;element&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                    <span class="k">if</span> <span class="n">anisou</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="n">anisou</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">anisou</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">asize</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                            <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;anisou&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                    <span class="k">if</span> <span class="n">siguij</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="n">siguij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">siguij</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">asize</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                            <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;siguij&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">charges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">charges</span><span class="p">,</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;charge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+                    <span class="n">radii</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">radii</span><span class="p">,</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">asize</span><span class="p">,</span> <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;radius&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+        <span class="c1">#elif startswith == &#39;END   &#39; or startswith == &#39;CONECT&#39;:</span>
+        <span class="c1">#    i += 1</span>
+        <span class="c1">#    break</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">onlycoords</span> <span class="ow">and</span> <span class="p">(</span><span class="n">startswith</span> <span class="o">==</span> <span class="s1">&#39;TER   &#39;</span> <span class="ow">or</span>
+            <span class="n">startswith</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;TER&#39;</span><span class="p">):</span>
+            <span class="n">termini</span><span class="p">[</span><span class="n">acount</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">startswith</span> <span class="o">==</span> <span class="s1">&#39;ENDMDL&#39;</span> <span class="ow">or</span> <span class="n">startswith</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;END&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">acount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># If there is no atom record between ENDMDL &amp; END skip to next</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">break</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="n">stop</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="n">acount</span><span class="p">:</span>
+                <span class="n">END</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">if</span> <span class="n">onlycoords</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">acount</span> <span class="o">&lt;</span> <span class="n">n_atoms</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Discarding model {0}, which contains &#39;</span>
+                                <span class="s1">&#39;{1} fewer atoms than the first model &#39;</span>
+                                <span class="s1">&#39;does.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nmodel</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_atoms</span><span class="o">-</span><span class="n">acount</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">coordsets</span><span class="p">[</span><span class="n">nmodel</span><span class="p">]</span> <span class="o">=</span> <span class="n">coordinates</span>
+                    <span class="n">nmodel</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">acount</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">END</span><span class="p">:</span>
+                    <span class="n">coordinates</span> <span class="o">=</span> <span class="n">coordsets</span><span class="p">[</span><span class="n">nmodel</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">acount</span> <span class="o">!=</span> <span class="n">n_atoms</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;PDB file and AtomGroup ag must have &#39;</span>
+                                    <span class="s1">&#39;same number of atoms&#39;</span><span class="p">)</span>
+                <span class="c1"># this is where to decide if more coordsets should be expected</span>
+                <span class="k">if</span> <span class="n">END</span><span class="p">:</span>
+                    <span class="n">coordinates</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">acount</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">addcoords</span><span class="p">:</span>
+                        <span class="n">atomgroup</span><span class="o">.</span><span class="n">addCoordset</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">atomgroup</span><span class="o">.</span><span class="n">_setCoords</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">coordsets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">diff</span><span class="o">//</span><span class="n">acount</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">acount</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+                    <span class="n">coordsets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">coordinates</span><span class="p">[:</span><span class="n">acount</span><span class="p">]</span>
+                    <span class="n">onlycoords</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="n">atomnames</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">resnames</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">resnums</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">chainids</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">hetero</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">termini</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">altlocs</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">icodes</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">serials</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">only_subset</span><span class="p">:</span>
+                    <span class="n">atomnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">atomnames</span><span class="p">)</span>
+                    <span class="n">resnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">resnames</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setNames</span><span class="p">(</span><span class="n">atomnames</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setResnames</span><span class="p">(</span><span class="n">resnames</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setResnums</span><span class="p">(</span><span class="n">resnums</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setChids</span><span class="p">(</span><span class="n">chainids</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="s1">&#39;hetatm&#39;</span><span class="p">,</span> <span class="n">hetero</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="s1">&#39;pdbter&#39;</span><span class="p">,</span> <span class="n">termini</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setAltlocs</span><span class="p">(</span><span class="n">altlocs</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setIcodes</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">icodes</span><span class="p">))</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setSerials</span><span class="p">(</span><span class="n">serials</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">isPDB</span><span class="p">:</span>
+                    <span class="n">bfactors</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                    <span class="n">occupancies</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                    <span class="n">segnames</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                    <span class="n">elements</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                    <span class="n">atomgroup</span><span class="o">.</span><span class="n">setBetas</span><span class="p">(</span><span class="n">bfactors</span><span class="p">)</span>
+                    <span class="n">atomgroup</span><span class="o">.</span><span class="n">setOccupancies</span><span class="p">(</span><span class="n">occupancies</span><span class="p">)</span>
+                    <span class="n">atomgroup</span><span class="o">.</span><span class="n">setSegnames</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">segnames</span><span class="p">))</span>
+                    <span class="n">atomgroup</span><span class="o">.</span><span class="n">setElements</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">elements</span><span class="p">))</span>
+                    <span class="kn">from</span> <span class="nn">prody.utilities.misctools</span> <span class="kn">import</span> <span class="n">getMasses</span>
+                    <span class="n">atomgroup</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="n">getMasses</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">elements</span><span class="p">)))</span>
+                    <span class="k">if</span> <span class="n">anisou</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="n">anisou</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">acount</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setAnisous</span><span class="p">(</span><span class="n">anisou</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">siguij</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="n">siguij</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">acount</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setAnistds</span><span class="p">(</span><span class="n">siguij</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">charges</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                    <span class="n">radii</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                    <span class="n">atomgroup</span><span class="o">.</span><span class="n">setCharges</span><span class="p">(</span><span class="n">charges</span><span class="p">)</span>
+                    <span class="n">atomgroup</span><span class="o">.</span><span class="n">setRadii</span><span class="p">(</span><span class="n">radii</span><span class="p">)</span>
+
+                <span class="n">nmodel</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">acount</span>
+                <span class="n">acount</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">coordinates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">altloc</span> <span class="ow">and</span> <span class="n">altloc_torf</span><span class="p">:</span>
+                    <span class="n">_evalAltlocs</span><span class="p">(</span><span class="n">atomgroup</span><span class="p">,</span> <span class="n">altloc</span><span class="p">,</span> <span class="n">chainids</span><span class="p">,</span> <span class="n">resnums</span><span class="p">,</span>
+                                 <span class="n">resnames</span><span class="p">,</span> <span class="n">atomnames</span><span class="p">)</span>
+                    <span class="n">altloc</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">END</span><span class="p">:</span>
+                    <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">isPDB</span> <span class="ow">and</span> <span class="n">startswith</span> <span class="o">==</span> <span class="s1">&#39;ANISOU&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">anisou</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">anisou</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="n">anisou</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">alength</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                    <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;anisou&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">index</span> <span class="o">=</span> <span class="n">acount</span> <span class="o">-</span> <span class="mi">1</span>
+                <span class="n">anisou</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">28</span><span class="p">:</span><span class="mi">35</span><span class="p">]</span>
+                <span class="n">anisou</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">35</span><span class="p">:</span><span class="mi">42</span><span class="p">]</span>
+                <span class="n">anisou</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">43</span><span class="p">:</span><span class="mi">49</span><span class="p">]</span>
+                <span class="n">anisou</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">49</span><span class="p">:</span><span class="mi">56</span><span class="p">]</span>
+                <span class="n">anisou</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">56</span><span class="p">:</span><span class="mi">63</span><span class="p">]</span>
+                <span class="n">anisou</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">63</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse anisotropic temperature &#39;</span>
+                    <span class="s1">&#39;factors at line {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">isPDB</span> <span class="ow">and</span> <span class="n">startswith</span> <span class="o">==</span><span class="s1">&#39;SIGUIJ&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">siguij</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">siguij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">alength</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                    <span class="n">dtype</span><span class="o">=</span><span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;siguij&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">index</span> <span class="o">=</span> <span class="n">acount</span> <span class="o">-</span> <span class="mi">1</span>
+                <span class="n">siguij</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">28</span><span class="p">:</span><span class="mi">35</span><span class="p">]</span>
+                <span class="n">siguij</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">35</span><span class="p">:</span><span class="mi">42</span><span class="p">]</span>
+                <span class="n">siguij</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">43</span><span class="p">:</span><span class="mi">49</span><span class="p">]</span>
+                <span class="n">siguij</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">49</span><span class="p">:</span><span class="mi">56</span><span class="p">]</span>
+                <span class="n">siguij</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">56</span><span class="p">:</span><span class="mi">63</span><span class="p">]</span>
+                <span class="n">siguij</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">63</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse standard deviations of &#39;</span>
+                    <span class="s1">&#39;anisotropic temperature factors at line {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">startswith</span> <span class="o">==</span><span class="s1">&#39;SIGATM&#39;</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">onlycoords</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">acount</span> <span class="o">==</span> <span class="n">atomgroup</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+            <span class="n">coordsets</span><span class="p">[</span><span class="n">nmodel</span><span class="p">]</span> <span class="o">=</span> <span class="n">coordinates</span>
+            <span class="n">nmodel</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">del</span> <span class="n">coordinates</span>
+        <span class="n">coordsets</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">nmodel</span><span class="p">,</span> <span class="n">atomgroup</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="mi">3</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">addcoords</span><span class="p">:</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">addCoordset</span><span class="p">(</span><span class="n">coordsets</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">_setCoords</span><span class="p">(</span><span class="n">coordsets</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">END</span><span class="p">:</span>
+        <span class="c1"># this means last line was an ATOM line, so atomgroup is not decorated</span>
+        <span class="n">coordinates</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">acount</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">addcoords</span><span class="p">:</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">addCoordset</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">_setCoords</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+        <span class="n">atomnames</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">resnames</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">resnums</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">chainids</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">hetero</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">termini</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">altlocs</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">icodes</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">serials</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">only_subset</span><span class="p">:</span>
+            <span class="n">atomnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">atomnames</span><span class="p">)</span>
+            <span class="n">resnames</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">resnames</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setNames</span><span class="p">(</span><span class="n">atomnames</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setResnames</span><span class="p">(</span><span class="n">resnames</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setResnums</span><span class="p">(</span><span class="n">resnums</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setChids</span><span class="p">(</span><span class="n">chainids</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="s1">&#39;hetatm&#39;</span><span class="p">,</span> <span class="n">hetero</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="s1">&#39;pdbter&#39;</span><span class="p">,</span> <span class="n">termini</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setAltlocs</span><span class="p">(</span><span class="n">altlocs</span><span class="p">)</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setIcodes</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">icodes</span><span class="p">))</span>
+        <span class="n">atomgroup</span><span class="o">.</span><span class="n">setSerials</span><span class="p">(</span><span class="n">serials</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">isPDB</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">anisou</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">anisou</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">acount</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setAnisous</span><span class="p">(</span><span class="n">anisou</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">siguij</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">siguij</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">acount</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                <span class="n">atomgroup</span><span class="o">.</span><span class="n">setAnistds</span><span class="p">(</span><span class="n">siguij</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">)</span>
+            <span class="n">bfactors</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">occupancies</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">segnames</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">elements</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">setSegnames</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">segnames</span><span class="p">))</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">setElements</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">elements</span><span class="p">))</span>
+            <span class="kn">from</span> <span class="nn">prody.utilities.misctools</span> <span class="kn">import</span> <span class="n">getMasses</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">setMasses</span><span class="p">(</span><span class="n">getMasses</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">elements</span><span class="p">)))</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">setBetas</span><span class="p">(</span><span class="n">bfactors</span><span class="p">)</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">setOccupancies</span><span class="p">(</span><span class="n">occupancies</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">charges</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">radii</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">acount</span><span class="p">,</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">setCharges</span><span class="p">(</span><span class="n">charges</span><span class="p">)</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">setRadii</span><span class="p">(</span><span class="n">radii</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">altloc</span> <span class="ow">and</span> <span class="n">altloc_torf</span><span class="p">:</span>
+        <span class="n">_evalAltlocs</span><span class="p">(</span><span class="n">atomgroup</span><span class="p">,</span> <span class="n">altloc</span><span class="p">,</span> <span class="n">chainids</span><span class="p">,</span> <span class="n">resnums</span><span class="p">,</span> <span class="n">resnames</span><span class="p">,</span> <span class="n">atomnames</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">atomgroup</span>
+
+<span class="k">def</span> <span class="nf">_evalAltlocs</span><span class="p">(</span><span class="n">atomgroup</span><span class="p">,</span> <span class="n">altloc</span><span class="p">,</span> <span class="n">chainids</span><span class="p">,</span> <span class="n">resnums</span><span class="p">,</span> <span class="n">resnames</span><span class="p">,</span> <span class="n">atomnames</span><span class="p">):</span>
+    <span class="n">altloc_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">altloc</span><span class="p">)</span>
+    <span class="n">altloc_keys</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">altloc_keys</span><span class="p">:</span>
+        <span class="n">xyz</span> <span class="o">=</span> <span class="n">atomgroup</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+        <span class="n">success</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">altloc</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">line</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="n">aan</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">arn</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">ach</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span>
+            <span class="n">ari</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">rn</span><span class="p">,</span> <span class="n">ids</span><span class="p">,</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">indices</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">ach</span><span class="p">,</span> <span class="n">ari</span><span class="p">),</span> <span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">ids</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">ids</span> <span class="o">=</span> <span class="n">indices</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ach</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">ids</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">ids</span> <span class="o">=</span> <span class="p">(</span><span class="n">chainids</span> <span class="o">==</span> <span class="n">ach</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">indices</span><span class="p">[</span><span class="n">ach</span><span class="p">]</span> <span class="o">=</span> <span class="n">ids</span>
+                <span class="n">ids</span> <span class="o">=</span> <span class="n">ids</span><span class="p">[</span><span class="n">resnums</span><span class="p">[</span><span class="n">ids</span><span class="p">]</span> <span class="o">==</span> <span class="n">ari</span><span class="p">]</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;failed to parse altloc {0} at line {1}, &quot;</span>
+                                <span class="s2">&quot;residue not present for altloc &#39;A&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                <span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+                    <span class="k">continue</span>
+                <span class="n">rn</span> <span class="o">=</span> <span class="n">resnames</span><span class="p">[</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">ans</span> <span class="o">=</span> <span class="n">atomnames</span><span class="p">[</span><span class="n">ids</span><span class="p">]</span>
+                <span class="n">indices</span><span class="p">[(</span><span class="n">ach</span><span class="p">,</span> <span class="n">ari</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="n">rn</span><span class="p">,</span> <span class="n">ids</span><span class="p">,</span> <span class="n">ans</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rn</span> <span class="o">!=</span> <span class="n">arn</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;failed to parse altloc {0} at line {1}, &quot;</span>
+                            <span class="s2">&quot;residue name mismatch (expected {2}, &quot;</span>
+                            <span class="s2">&quot;parsed {3})&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">rn</span><span class="p">),</span>
+                                                   <span class="nb">repr</span><span class="p">(</span><span class="n">arn</span><span class="p">)))</span>
+                <span class="k">continue</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">ids</span><span class="p">[(</span><span class="n">ans</span> <span class="o">==</span> <span class="n">aan</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;failed to parse altloc {0} at line {1}, atom&quot;</span>
+                            <span class="s2">&quot; {2} not found in the residue&quot;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">aan</span><span class="p">)))</span>
+                <span class="k">continue</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">xyz</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">30</span><span class="p">:</span><span class="mi">38</span><span class="p">])</span>
+                <span class="n">xyz</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">46</span><span class="p">])</span>
+                <span class="n">xyz</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">46</span><span class="p">:</span><span class="mi">54</span><span class="p">])</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;failed to parse altloc {0} at line {1}, could&#39;</span>
+                            <span class="s1">&#39; not read coordinates&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+                <span class="k">continue</span>
+            <span class="n">success</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;{0} out of {1} altloc {2} lines were parsed.&#39;</span>
+                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">success</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Altloc {0} is appended as a coordinate set to the &#39;</span>
+                        <span class="s1">&#39;atom group.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">atomgroup</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()))</span>
+            <span class="n">atomgroup</span><span class="o">.</span><span class="n">addCoordset</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;altloc &#39;</span> <span class="o">+</span> <span class="n">key</span><span class="p">)</span>
+
+<span class="n">PDBLINE</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;{0:6s}{1:5d} {2:4s}{3:1s}&#39;</span>
+           <span class="s1">&#39;{4:4s}{5:1s}{6:4d}{7:1s}   &#39;</span>
+           <span class="s1">&#39;{8:8.3f}{9:8.3f}{10:8.3f}&#39;</span>
+           <span class="s1">&#39;{11:6.2f}{12:6.2f}      &#39;</span>
+           <span class="s1">&#39;{13:4s}{14:2s}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">PDBLINE_LT100K</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%-6s%5d</span><span class="s1"> </span><span class="si">%-4s%1s%-4s%1s%4d%1s</span><span class="s1">   &#39;</span>
+                  <span class="s1">&#39;</span><span class="si">%8.3f%8.3f%8.3f%6.2f%6.2f</span><span class="s1">      &#39;</span>
+                  <span class="s1">&#39;</span><span class="si">%4s%2s</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">PDBLINE_GE100K</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%-6s%5x</span><span class="s1"> </span><span class="si">%-4s%1s%-4s%1s%4d%1s</span><span class="s1">   &#39;</span>
+                  <span class="s1">&#39;</span><span class="si">%8.3f%8.3f%8.3f%6.2f%6.2f</span><span class="s1">      &#39;</span>
+                  <span class="s1">&#39;</span><span class="si">%4s%2s</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="n">_writePDBdoc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">    :arg atoms: an object with atom and coordinate data</span>
+
+<span class="s2">    :arg csets: coordinate set indices, default is all coordinate sets</span>
+
+<span class="s2">    :arg beta: a list or array of number to be outputted in beta column</span>
+
+<span class="s2">    :arg occupancy: a list or array of number to be outputted in occupancy</span>
+<span class="s2">        column</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="writePDBStream"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.writePDBStream">[docs]</a><span class="k">def</span> <span class="nf">writePDBStream</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">csets</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Write *atoms* in PDB format to a *stream*.</span>
+
+<span class="sd">    :arg stream: anything that implements a :meth:`write` method (e.g. file,</span>
+<span class="sd">        buffer, stdout)&quot;&quot;&quot;</span>
+
+    <span class="n">remark</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">atoms</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">coordsets</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">(</span><span class="n">csets</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">coordsets</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be an object with coordinate sets&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">coordsets</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">coordsets</span> <span class="o">=</span> <span class="p">[</span><span class="n">coordsets</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">coordsets</span> <span class="o">=</span> <span class="p">[</span><span class="n">coordsets</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">coordsets</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;atoms does not have any coordinate sets&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">acsi</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">atoms</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getAtoms</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be an Atomic instance or an object &#39;</span>
+                            <span class="s1">&#39;with `getAtoms` method&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">atoms</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;atoms is not associated with an Atomic &#39;</span>
+                                 <span class="s1">&#39;instance&#39;</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">acsi</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms does not have a valid type&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">atoms</span><span class="o">.</span><span class="n">getIndex</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">atoms</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+    <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+
+    <span class="n">occupancy</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;occupancy&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">occupancy</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">occupancies</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getOccupancies</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">occupancies</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">occupancies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">occupancies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">occupancy</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">occupancies</span><span class="p">)</span> <span class="o">!=</span> <span class="n">n_atoms</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;len(occupancy) must be equal to number of atoms&#39;</span><span class="p">)</span>
+
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;beta&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">beta</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">bfactors</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getBetas</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">bfactors</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">bfactors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">bfactors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bfactors</span><span class="p">)</span> <span class="o">!=</span> <span class="n">n_atoms</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;len(beta) must be equal to number of atoms&#39;</span><span class="p">)</span>
+
+    <span class="n">atomnames</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getNames</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">atomnames</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;atom names are not set&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">an</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">atomnames</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">an</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">atomnames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">an</span>
+
+    <span class="n">s_or_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">char</span>
+
+    <span class="n">altlocs</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getAltlocs</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">altlocs</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">altlocs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">s_or_u</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
+
+    <span class="n">resnames</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getResnames</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">resnames</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">resnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;UNK&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_atoms</span>
+
+    <span class="n">chainids</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getChids</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">chainids</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">chainids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">s_or_u</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
+
+    <span class="n">resnums</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getResnums</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">resnums</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">resnums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+
+
+    <span class="n">icodes</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getIcodes</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">icodes</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">icodes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">s_or_u</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
+
+    <span class="n">hetero</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ATOM&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_atoms</span>
+    <span class="n">heteroflags</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getFlags</span><span class="p">(</span><span class="s1">&#39;hetatm&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">heteroflags</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">heteroflags</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getFlags</span><span class="p">(</span><span class="s1">&#39;hetero&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">heteroflags</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">hetero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hetero</span><span class="p">,</span> <span class="n">s_or_u</span> <span class="o">+</span> <span class="s1">&#39;6&#39;</span><span class="p">)</span>
+        <span class="n">hetero</span><span class="p">[</span><span class="n">heteroflags</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;HETATM&#39;</span>
+
+    <span class="n">elements</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getElements</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">elements</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">s_or_u</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">segments</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">_getSegnames</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">segments</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">segments</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">s_or_u</span> <span class="o">+</span> <span class="s1">&#39;6&#39;</span><span class="p">)</span>
+
+    <span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;REMARK {0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">remark</span><span class="p">))</span>
+
+    <span class="n">multi</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">coordsets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span>
+    <span class="n">write</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">write</span>
+    <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">coords</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">coordsets</span><span class="p">):</span>
+        <span class="n">pdbline</span> <span class="o">=</span> <span class="n">PDBLINE_LT100K</span>
+        <span class="k">if</span> <span class="n">multi</span><span class="p">:</span>
+            <span class="n">write</span><span class="p">(</span><span class="s1">&#39;MODEL{0:9d}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">xyz</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">coords</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">99999</span><span class="p">:</span>
+                <span class="n">pdbline</span> <span class="o">=</span> <span class="n">PDBLINE_GE100K</span>
+            <span class="n">write</span><span class="p">(</span><span class="n">pdbline</span> <span class="o">%</span> <span class="p">(</span><span class="n">hetero</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+                         <span class="n">atomnames</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">altlocs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                         <span class="n">resnames</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">chainids</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">resnums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                         <span class="n">icodes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                         <span class="n">xyz</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xyz</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">xyz</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                         <span class="n">occupancies</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">bfactors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                         <span class="n">segments</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">elements</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">multi</span><span class="p">:</span>
+            <span class="n">write</span><span class="p">(</span><span class="s1">&#39;ENDMDL</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">altlocs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">,</span> <span class="n">s_or_u</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span></div>
+
+<span class="n">writePDBStream</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_writePDBdoc</span>
+
+<div class="viewcode-block" id="writePDB"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.writePDB">[docs]</a><span class="k">def</span> <span class="nf">writePDB</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">csets</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">autoext</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Write *atoms* in PDB format to a file with name *filename* and return</span>
+<span class="sd">    *filename*.  If *filename* ends with :file:`.gz`, a compressed file will</span>
+<span class="sd">    be written.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="s1">&#39;.pdb&#39;</span> <span class="ow">in</span> <span class="n">filename</span> <span class="ow">or</span> <span class="s1">&#39;.pdb.gz&#39;</span> <span class="ow">in</span> <span class="n">filename</span> <span class="ow">or</span>
+             <span class="s1">&#39;.ent&#39;</span> <span class="ow">in</span> <span class="n">filename</span> <span class="ow">or</span> <span class="s1">&#39;.ent.gz&#39;</span> <span class="ow">in</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="n">filename</span> <span class="o">+=</span> <span class="s1">&#39;.pdb&#39;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wt&#39;</span><span class="p">)</span>
+    <span class="n">writePDBStream</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">csets</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">filename</span></div>
+
+<span class="n">writePDB</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_writePDBdoc</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    :arg autoext: when not present, append extension :file:`.pdb` to *filename*</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.proteins.header &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.proteins.header</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for parsing header data from PDB files.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">ATOMIC_FIELDS</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">Atomic</span><span class="p">,</span> <span class="n">AtomGroup</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">getSequence</span>
+<span class="kn">from</span> <span class="nn">prody.measure</span> <span class="kn">import</span> <span class="n">Transformation</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">openFile</span>
+
+<span class="kn">from</span> <span class="nn">.localpdb</span> <span class="kn">import</span> <span class="n">fetchPDB</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Chemical&#39;</span><span class="p">,</span> <span class="s1">&#39;Polymer&#39;</span><span class="p">,</span> <span class="s1">&#39;DBRef&#39;</span><span class="p">,</span> <span class="s1">&#39;parsePDBHeader&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;assignSecstr&#39;</span><span class="p">,</span> <span class="s1">&#39;buildBiomolecules&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="Chemical"><a class="viewcode-back" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Chemical">[docs]</a><span class="k">class</span> <span class="nc">Chemical</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A data structure for storing information on chemical components</span>
+<span class="sd">    (or heterogens) in PDB structures.</span>
+
+<span class="sd">    A :class:`Chemical` instance has the following attributes:</span>
+
+<span class="sd">    ===========  =====  =======================================================</span>
+<span class="sd">    Attribute    Type   Description (RECORD TYPE)</span>
+<span class="sd">    ===========  =====  =======================================================</span>
+<span class="sd">    resname      str    residue name (or chemical component identifier) (HET)</span>
+<span class="sd">    name         str    chemical name (HETNAM)</span>
+<span class="sd">    chain        str    chain identifier (HET)</span>
+<span class="sd">    resnum       int    residue (or sequence) number (HET)</span>
+<span class="sd">    icode        str    insertion code (HET)</span>
+<span class="sd">    natoms       int    number of atoms present in the structure (HET)</span>
+<span class="sd">    description  str    description of the chemical component (HET)</span>
+<span class="sd">    synonyms     list   synonyms (HETSYN)</span>
+<span class="sd">    formula      str    chemical formula (FORMUL)</span>
+<span class="sd">    pdbentry     str    PDB entry that chemical data is extracted from</span>
+<span class="sd">    ===========  =====  =======================================================</span>
+
+<span class="sd">    Chemical class instances can be obtained as follows:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       from prody import *</span>
+<span class="sd">       chemical = parsePDBHeader(&#39;1zz2&#39;, &#39;chemicals&#39;)[0]</span>
+<span class="sd">       chemical</span>
+<span class="sd">       chemical.name</span>
+<span class="sd">       chemical.natoms</span>
+<span class="sd">       len(chemical)&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;resname&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;chain&#39;</span><span class="p">,</span> <span class="s1">&#39;resnum&#39;</span><span class="p">,</span> <span class="s1">&#39;icode&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;natoms&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;synonyms&#39;</span><span class="p">,</span> <span class="s1">&#39;formula&#39;</span><span class="p">,</span> <span class="s1">&#39;pdbentry&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resname</span><span class="p">):</span>
+
+        <span class="c1">#: residue name (or chemical component identifier)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resname</span> <span class="o">=</span> <span class="n">resname</span>
+        <span class="c1">#: chemical name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: chain identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chain</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: residue (or sequence) number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resnum</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: insertion code</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">icode</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: number of atoms present in the structure</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">natoms</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: description of the chemical component</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: list of synonyms</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">synonyms</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: chemical formula</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">formula</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: PDB entry that chemical data is extracted from</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pdbentry</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resname</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;Chemical: {0} ({1}_{2}_{3})&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">resname</span><span class="p">,</span>
+                                                      <span class="bp">self</span><span class="o">.</span><span class="n">pdbentry</span><span class="p">,</span>
+                                                      <span class="bp">self</span><span class="o">.</span><span class="n">chain</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resnum</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">natoms</span></div>
+
+
+<div class="viewcode-block" id="Polymer"><a class="viewcode-back" href="../../../manual/reference/proteins/header.html#prody.proteins.header.Polymer">[docs]</a><span class="k">class</span> <span class="nc">Polymer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A data structure for storing information on polymer components</span>
+<span class="sd">    (protein or nucleic) of PDB structures.</span>
+
+<span class="sd">    A :class:`Polymer` instance has the following attributes:</span>
+
+<span class="sd">    ==========  ======  ======================================================</span>
+<span class="sd">    Attribute   Type    Description (RECORD TYPE)</span>
+<span class="sd">    ==========  ======  ======================================================</span>
+<span class="sd">    chid        str     chain identifier</span>
+<span class="sd">    name        str     name of the polymer (macromolecule) (COMPND)</span>
+<span class="sd">    fragment    str     specifies a domain or region of the molecule (COMPND)</span>
+<span class="sd">    synonyms    list    synonyms for the polymer (COMPND)</span>
+<span class="sd">    ec          list    associated Enzyme Commission numbers (COMPND)</span>
+<span class="sd">    engineered  bool    indicates that the polymer was produced using</span>
+<span class="sd">                        recombinant technology or by purely chemical synthesis</span>
+<span class="sd">                        (COMPND)</span>
+<span class="sd">    mutation    bool    indicates presence of a mutation (COMPND)</span>
+<span class="sd">    comments    str     additional comments</span>
+<span class="sd">    sequence    str     polymer chain sequence (SEQRES)</span>
+<span class="sd">    dbrefs      list    sequence database records (DBREF[1|2] and SEQADV),</span>
+<span class="sd">                        see :class:`DBRef`</span>
+<span class="sd">    modified    list    | modified residues (SEQMOD)</span>
+<span class="sd">                        | when modified residues are present, each will be</span>
+<span class="sd">                          represented as: ``(resname, resnum, icode, stdname,</span>
+<span class="sd">                          comment)``</span>
+<span class="sd">    pdbentry    str     PDB entry that polymer data is extracted from</span>
+<span class="sd">    ==========  ======  ======================================================</span>
+
+<span class="sd">    Polymer class instances can be obtained as follows:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       polymer = parsePDBHeader(&#39;2k39&#39;, &#39;polymers&#39;)[0]</span>
+<span class="sd">       polymer</span>
+<span class="sd">       polymer.pdbentry</span>
+<span class="sd">       polymer.chid</span>
+<span class="sd">       polymer.name</span>
+<span class="sd">       polymer.sequence</span>
+<span class="sd">       len(polymer.sequence)</span>
+<span class="sd">       len(polymer)</span>
+<span class="sd">       dbref = polymer.dbrefs[0]</span>
+<span class="sd">       dbref.database</span>
+<span class="sd">       dbref.accession</span>
+<span class="sd">       dbref.idcode&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chid&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;fragment&#39;</span><span class="p">,</span> <span class="s1">&#39;synonyms&#39;</span><span class="p">,</span> <span class="s1">&#39;ec&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;engineered&#39;</span><span class="p">,</span> <span class="s1">&#39;mutation&#39;</span><span class="p">,</span> <span class="s1">&#39;comments&#39;</span><span class="p">,</span> <span class="s1">&#39;sequence&#39;</span><span class="p">,</span> <span class="s1">&#39;pdbentry&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;dbrefs&#39;</span><span class="p">,</span> <span class="s1">&#39;modified&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chid</span><span class="p">):</span>
+
+        <span class="c1">#: chain identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chid</span> <span class="o">=</span> <span class="n">chid</span>
+        <span class="c1">#: name of the polymer (macromolecule)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="c1">#: specifies a domain or region of the molecule</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fragment</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: list of synonyms for the molecule</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">synonyms</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: list of associated Enzyme Commission numbers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ec</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">engineered</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="sd">&quot;&quot;&quot;indicates that the molecule was produced using recombinant</span>
+<span class="sd">        technology or by purely chemical synthesis&quot;&quot;&quot;</span>
+        <span class="c1">#: sequence database reference records</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dbrefs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1">#: indicates presence of a mutation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutation</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: additional comments</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: polymer chain sequence</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sequence</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="c1">#: modified residues</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modified</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: PDB entry that polymer data is extracted from</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pdbentry</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;Polymer: {0} ({1}_{2})&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">pdbentry</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">chid</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sequence</span><span class="p">)</span></div>
+
+<span class="n">_PDB_DBREF</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;GB&#39;</span><span class="p">:</span> <span class="s1">&#39;GenBank&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;PDB&#39;</span><span class="p">:</span> <span class="s1">&#39;PDB&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;UNP&#39;</span><span class="p">:</span> <span class="s1">&#39;UniProt&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NORINE&#39;</span><span class="p">:</span> <span class="s1">&#39;Norine&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;UNIMES&#39;</span><span class="p">:</span> <span class="s1">&#39;UNIMES&#39;</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="DBRef"><a class="viewcode-back" href="../../../manual/reference/proteins/header.html#prody.proteins.header.DBRef">[docs]</a><span class="k">class</span> <span class="nc">DBRef</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A data structure for storing reference to sequence databases for polymer</span>
+<span class="sd">    components in  PDB structures.  Information if parsed from **DBREF[1|2]**</span>
+<span class="sd">    and **SEQADV** records in PDB header.&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">,</span> <span class="s1">&#39;dbabbr&#39;</span><span class="p">,</span> <span class="s1">&#39;idcode&#39;</span><span class="p">,</span> <span class="s1">&#39;accession&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;last&#39;</span><span class="p">,</span> <span class="s1">&#39;diff&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1">#: sequence database, one of UniProt, GenBank, Norine, UNIMES, or PDB</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: database abbreviation, one of UNP, GB, NORINE, UNIMES, or PDB</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dbabbr</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: database identification code, i.e. entry name in UniProt</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idcode</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: database accession code</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accession</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: initial residue numbers, ``(resnum, icode, dbnum)``</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1">#: ending residue numbers, ``(resnum, icode, dbnum)``</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">diff</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="sd">&quot;&quot;&quot;list of differences between PDB and database sequences,</span>
+<span class="sd">        ``(resname, resnum, icode, dbResname, dbResnum, comment)``&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">accession</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;DBRef: {0} ({1})&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">accession</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">)</span></div>
+
+<span class="n">_START_COORDINATE_SECTION</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ATOM  &#39;</span><span class="p">,</span> <span class="s1">&#39;MODEL &#39;</span><span class="p">,</span> <span class="s1">&#39;HETATM&#39;</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">cleanString</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">nows</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;*nows* is no white space.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">nows</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="parsePDBHeader"><a class="viewcode-back" href="../../../manual/reference/proteins/header.html#prody.proteins.header.parsePDBHeader">[docs]</a><span class="k">def</span> <span class="nf">parsePDBHeader</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="o">*</span><span class="n">keys</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns header data dictionary for *pdb*.  This function is equivalent to</span>
+<span class="sd">    ``parsePDB(pdb, header=True, model=0, meta=False)``, likewise *pdb* may be</span>
+<span class="sd">    an identifier or a filename.</span>
+
+<span class="sd">    List of header records that are parsed.</span>
+
+<span class="sd">    ============ ================= ============================================</span>
+<span class="sd">    Record type  Dictionary key(s)  Description</span>
+<span class="sd">    ============ ================= ============================================</span>
+<span class="sd">    HEADER       | classification  | molecule classification</span>
+<span class="sd">                 | deposition_date | deposition date</span>
+<span class="sd">                 | identifier      | PDB identifier</span>
+<span class="sd">    TITLE        title             title for the experiment or analysis</span>
+<span class="sd">    SPLIT        split             list of PDB entries that make up the whole</span>
+<span class="sd">                                   structure when combined with this one</span>
+<span class="sd">    COMPND       polymers          see :class:`Polymer`</span>
+<span class="sd">    EXPDTA       experiment        information about the experiment</span>
+<span class="sd">    NUMMDL       n_models          number of models</span>
+<span class="sd">    MDLTYP       model_type        additional structural annotation</span>
+<span class="sd">    AUTHOR       authors           list of contributors</span>
+<span class="sd">    JRNL         reference         reference information dictionary:</span>
+<span class="sd">                                     * *authors*: list of authors</span>
+<span class="sd">                                     * *title*: title of the article</span>
+<span class="sd">                                     * *editors*: list of editors</span>
+<span class="sd">                                     * *issn*:</span>
+<span class="sd">                                     * *reference*: journal, vol, issue, etc.</span>
+<span class="sd">                                     * *publisher*: publisher information</span>
+<span class="sd">                                     * *pmid*: pubmed identifier</span>
+<span class="sd">                                     * *doi*: digital object identifier</span>
+<span class="sd">    DBREF[1|2]   polymers          see :class:`Polymer` and :class:`DBRef`</span>
+<span class="sd">    SEQADV       polymers          see :class:`Polymer`</span>
+<span class="sd">    SEQRES       polymers          see :class:`Polymer`</span>
+<span class="sd">    MODRES       polymers          see :class:`Polymer`</span>
+<span class="sd">    HELIX        polymers          see :class:`Polymer`</span>
+<span class="sd">    SHEET        polymers          see :class:`Polymer`</span>
+<span class="sd">    HET          chemicals         see :class:`Chemical`</span>
+<span class="sd">    HETNAM       chemicals         see :class:`Chemical`</span>
+<span class="sd">    HETSYN       chemicals         see :class:`Chemical`</span>
+<span class="sd">    FORMUL       chemicals         see :class:`Chemical`</span>
+<span class="sd">    REMARK 2     resolution        resolution of structures, when applicable</span>
+<span class="sd">    REMARK 4     version           PDB file version</span>
+<span class="sd">    REMARK 350   biomoltrans       biomolecular transformation lines</span>
+<span class="sd">                                   (unprocessed)</span>
+<span class="sd">    ============ ================= ============================================</span>
+
+<span class="sd">    Header records that are not parsed are: OBSLTE, CAVEAT, SOURCE, KEYWDS,</span>
+<span class="sd">    REVDAT, SPRSDE, SSBOND, LINK, CISPEP, CRYST1, ORIGX1, ORIGX2, ORIGX3,</span>
+<span class="sd">    MTRIX1, MTRIX2, MTRIX3, and REMARK X not mentioned above.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">pdb</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">pdb</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">fetchPDB</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;PDB file for {0} could not be downloaded.&#39;</span>
+                              <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+            <span class="n">pdb</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid filename or a valid PDB &#39;</span>
+                          <span class="s1">&#39;identifier.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdb</span><span class="p">))</span>
+    <span class="n">pdb</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span>
+    <span class="n">header</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getHeaderDict</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="o">*</span><span class="n">keys</span><span class="p">)</span>
+    <span class="n">pdb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">header</span></div>
+
+
+<span class="k">def</span> <span class="nf">getHeaderDict</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="o">*</span><span class="n">keys</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns header data in a dictionary.  *stream* may be a list of PDB lines</span>
+<span class="sd">    or a stream.&quot;&quot;&quot;</span>
+
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">loc</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">loc</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">stream</span><span class="p">):</span>
+        <span class="n">startswith</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">startswith</span> <span class="ow">in</span> <span class="n">_START_COORDINATE_SECTION</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">lines</span><span class="p">[</span><span class="n">startswith</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">loc</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">loc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;empty PDB file or stream&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;REMARK&#39;</span><span class="p">]:</span>
+        <span class="n">lines</span><span class="p">[</span><span class="n">line</span><span class="p">[:</span><span class="mi">10</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span>
+
+    <span class="n">pdbid</span> <span class="o">=</span> <span class="n">_PDB_HEADER_MAP</span><span class="p">[</span><span class="s1">&#39;identifier&#39;</span><span class="p">](</span><span class="n">lines</span><span class="p">)</span>
+    <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;pdbid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pdbid</span>
+    <span class="k">if</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">keys</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">_PDB_HEADER_MAP</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">_PDB_HEADER_MAP</span><span class="p">[</span><span class="n">key</span><span class="p">](</span><span class="n">lines</span><span class="p">)</span>
+                <span class="n">keys</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid header data identifier&#39;</span>
+                               <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">)))</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;chemicals&#39;</span><span class="p">,</span> <span class="s1">&#39;polymers&#39;</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+                    <span class="n">component</span><span class="o">.</span><span class="n">pdbentry</span> <span class="o">=</span> <span class="n">pdbid</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">loc</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keys</span><span class="p">),</span> <span class="n">loc</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">_PDB_HEADER_MAP</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">header</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">for</span> <span class="n">chem</span> <span class="ow">in</span> <span class="n">header</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;chemicals&#39;</span><span class="p">,</span> <span class="p">[]):</span>
+            <span class="n">chem</span><span class="o">.</span><span class="n">pdbentry</span> <span class="o">=</span> <span class="n">pdbid</span>
+            <span class="n">header</span><span class="p">[</span><span class="n">chem</span><span class="o">.</span><span class="n">resname</span><span class="p">]</span> <span class="o">=</span> <span class="n">chem</span>
+        <span class="k">for</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">header</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;polymers&#39;</span><span class="p">,</span> <span class="p">[]):</span>
+            <span class="n">poly</span><span class="o">.</span><span class="n">pdbentry</span> <span class="o">=</span> <span class="n">pdbid</span>
+            <span class="n">header</span><span class="p">[</span><span class="n">poly</span><span class="o">.</span><span class="n">chid</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+        <span class="k">return</span> <span class="n">header</span><span class="p">,</span> <span class="n">loc</span>
+
+
+<span class="k">def</span> <span class="nf">_getBiomoltrans</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="n">applyToChains</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="n">biomolecule</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">currentBiomolecule</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;REMARK 350&#39;</span><span class="p">]:</span>
+
+        <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">13</span><span class="p">:</span><span class="mi">18</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;BIOMT&#39;</span><span class="p">:</span>
+            <span class="n">biomt</span> <span class="o">=</span> <span class="n">biomolecule</span><span class="p">[</span><span class="n">currentBiomolecule</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">biomt</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">biomt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">applyToChains</span><span class="p">)</span>
+            <span class="n">biomt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">23</span><span class="p">:])</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">41</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;APPLY THE FOLLOWING TO CHAINS:&#39;</span><span class="p">:</span>
+            <span class="n">applyToChains</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">41</span><span class="p">:]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="p">[</span><span class="mi">30</span><span class="p">:</span><span class="mi">41</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AND CHAINS:&#39;</span><span class="p">:</span>
+            <span class="n">applyToChains</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">41</span><span class="p">:]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                                 <span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">23</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;BIOMOLECULE:&#39;</span><span class="p">:</span>
+            <span class="n">currentBiomolecule</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">biomolecule</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_getResolution</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;REMARK   2&#39;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="s1">&#39;RESOLUTION&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">30</span><span class="p">])</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span>
+
+
+<span class="k">def</span> <span class="nf">_getSpaceGroup</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;REMARK 290&#39;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="s1">&#39;SYMMETRY OPERATORS FOR SPACE GROUP:&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;GROUP:&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span>
+
+
+<span class="k">def</span> <span class="nf">_getHelix</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="n">alphas</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+    <span class="n">helix</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HELIX &#39;</span><span class="p">]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">chid</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span>
+            <span class="c1">#        helix class,      serial number,   identifier</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">40</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">]),</span> <span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">initICode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">]</span>
+        <span class="n">initResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">:</span><span class="mi">25</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">initICode</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">icode</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">[</span><span class="n">alphas</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">initICode</span><span class="p">):]:</span>
+                <span class="n">helix</span><span class="p">[(</span><span class="n">chid</span><span class="p">,</span> <span class="n">initResnum</span><span class="p">,</span> <span class="n">icode</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">initResnum</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">endICode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span>
+        <span class="n">endResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">33</span><span class="p">:</span><span class="mi">37</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">endICode</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">icode</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">[:</span><span class="n">alphas</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">endICode</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">helix</span><span class="p">[(</span><span class="n">chid</span><span class="p">,</span> <span class="n">endResnum</span><span class="p">,</span> <span class="n">icode</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">endResnum</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">resnum</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">initResnum</span><span class="p">,</span> <span class="n">endResnum</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">helix</span><span class="p">[(</span><span class="n">chid</span><span class="p">,</span> <span class="n">resnum</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">helix</span>
+
+
+<span class="k">def</span> <span class="nf">_getHelixRange</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="n">alphas</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+    <span class="n">helix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HELIX &#39;</span><span class="p">]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">chid</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span>
+            <span class="n">Hclass</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">40</span><span class="p">])</span>
+            <span class="n">Hnr</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">initResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">:</span><span class="mi">25</span><span class="p">])</span>
+        <span class="n">endICode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span>
+        <span class="n">endResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">33</span><span class="p">:</span><span class="mi">37</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">endICode</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="n">endResnum</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">helix</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">chid</span><span class="p">,</span> <span class="n">Hclass</span><span class="p">,</span> <span class="n">Hnr</span><span class="p">,</span> <span class="n">initResnum</span><span class="p">,</span> <span class="n">endResnum</span><span class="p">])</span> 
+     
+    <span class="k">return</span> <span class="n">helix</span>
+
+
+<span class="k">def</span> <span class="nf">_getSheet</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="n">alphas</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+    <span class="n">sheet</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;SHEET &#39;</span><span class="p">]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">chid</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">40</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">]),</span>
+                     <span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">initICode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span>
+        <span class="n">initResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">initICode</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">icode</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">[</span><span class="n">alphas</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">initICode</span><span class="p">):]:</span>
+                <span class="n">sheet</span><span class="p">[(</span><span class="n">chid</span><span class="p">,</span> <span class="n">initResnum</span><span class="p">,</span> <span class="n">icode</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">initResnum</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">endICode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span>
+        <span class="n">endResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">33</span><span class="p">:</span><span class="mi">37</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">endICode</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">icode</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">[:</span><span class="n">alphas</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">endICode</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">sheet</span><span class="p">[(</span><span class="n">chid</span><span class="p">,</span> <span class="n">endResnum</span><span class="p">,</span> <span class="n">icode</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">endResnum</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">resnum</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">initResnum</span><span class="p">,</span> <span class="n">endResnum</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">sheet</span><span class="p">[(</span><span class="n">chid</span><span class="p">,</span> <span class="n">resnum</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">sheet</span>
+
+
+<span class="k">def</span> <span class="nf">_getSheetRange</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="n">alphas</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+    <span class="n">sheet</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;SHEET &#39;</span><span class="p">]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">chid</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span>
+            <span class="nb">dir</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">40</span><span class="p">])</span>
+            <span class="n">Snr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">initICode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span>
+        <span class="n">initResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">initICode</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="n">initResnum</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">endICode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span>
+        <span class="n">endResnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">33</span><span class="p">:</span><span class="mi">37</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">endICode</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="n">endResnum</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">sheet</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="n">chid</span><span class="p">,</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">Snr</span><span class="p">,</span> <span class="n">initResnum</span><span class="p">,</span> <span class="n">endResnum</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">sheet</span>
+
+
+<span class="k">def</span> <span class="nf">_getReference</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a reference of the PDB entry.&quot;&quot;&quot;</span>
+
+    <span class="n">ref</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">authors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">editors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">reference</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">publisher</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;JRNL  &#39;</span><span class="p">]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">what</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;AUTH&#39;</span><span class="p">:</span>
+            <span class="n">authors</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;TITL&#39;</span><span class="p">:</span>
+            <span class="n">title</span> <span class="o">+=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span>
+        <span class="k">elif</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;EDIT&#39;</span><span class="p">:</span>
+            <span class="n">editors</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;REF&#39;</span><span class="p">:</span>
+            <span class="n">reference</span> <span class="o">+=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span>
+        <span class="k">elif</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;PUBL&#39;</span><span class="p">:</span>
+            <span class="n">publisher</span> <span class="o">+=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span>
+        <span class="k">elif</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;REFN&#39;</span><span class="p">:</span>
+            <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;issn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;PMID&#39;</span><span class="p">:</span>
+            <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;pmid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;DOI&#39;</span><span class="p">:</span>
+            <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;doi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;authors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">authors</span>
+    <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cleanString</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;editors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">editors</span>
+    <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;reference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cleanString</span><span class="p">(</span><span class="n">reference</span><span class="p">)</span>
+    <span class="n">ref</span><span class="p">[</span><span class="s1">&#39;publisher&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cleanString</span><span class="p">(</span><span class="n">publisher</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ref</span>
+
+
+<span class="k">def</span> <span class="nf">_getPolymers</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns list of polymers (macromolecules).&quot;&quot;&quot;</span>
+
+    <span class="n">pdbid</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;pdbid&#39;</span><span class="p">]</span>
+    <span class="n">polymers</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;SEQRES&#39;</span><span class="p">]:</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>
+        <span class="n">poly</span> <span class="o">=</span> <span class="n">polymers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">Polymer</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+        <span class="n">polymers</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+        <span class="n">poly</span><span class="o">.</span><span class="n">sequence</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">getSequence</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">19</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;DBREF &#39;</span><span class="p">]:</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">polymers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF chain identifier is not specified &#39;</span>
+                            <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ch</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">polymers</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">dbabbr</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">26</span><span class="p">:</span><span class="mi">32</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">dbref</span> <span class="o">=</span> <span class="n">DBRef</span><span class="p">()</span>
+        <span class="n">dbref</span><span class="o">.</span><span class="n">dbabbr</span> <span class="o">=</span> <span class="n">dbabbr</span>
+        <span class="n">dbref</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="n">_PDB_DBREF</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">dbabbr</span><span class="p">,</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
+        <span class="n">dbref</span><span class="o">.</span><span class="n">accession</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">33</span><span class="p">:</span><span class="mi">41</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">dbref</span><span class="o">.</span><span class="n">idcode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">42</span><span class="p">:</span><span class="mi">54</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">first</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">18</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;initial sequence number of the PDB sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">24</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;ending sequence number of the PDB sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dbref</span><span class="o">.</span><span class="n">first</span> <span class="o">=</span> <span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">56</span><span class="p">:</span><span class="mi">60</span><span class="p">]))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;initial sequence number of the database sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dbref</span><span class="o">.</span><span class="n">last</span> <span class="o">=</span> <span class="p">(</span><span class="n">last</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">24</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">62</span><span class="p">:</span><span class="mi">67</span><span class="p">]))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;ending sequence number of the database sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+
+        <span class="n">poly</span> <span class="o">=</span> <span class="n">polymers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">Polymer</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+        <span class="n">polymers</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+        <span class="n">poly</span><span class="o">.</span><span class="n">dbrefs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dbref</span><span class="p">)</span>
+
+    <span class="n">dbref1</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;DBREF1&#39;</span><span class="p">]</span>
+    <span class="n">dbref2</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;DBREF2&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dbref1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dbref2</span><span class="p">):</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF1 and DBREF1 records are not complete&#39;</span><span class="p">)</span>
+        <span class="n">dbref12</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dbref12</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dbref1</span><span class="p">,</span> <span class="n">dbref2</span><span class="p">)</span>  <span class="c1"># PY3K: OK</span>
+
+    <span class="k">for</span> <span class="n">dbref1</span><span class="p">,</span> <span class="n">dbref2</span> <span class="ow">in</span> <span class="n">dbref12</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="o">=</span> <span class="n">dbref1</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>
+
+        <span class="n">dbabbr</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">26</span><span class="p">:</span><span class="mi">32</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">dbref</span> <span class="o">=</span> <span class="n">DBRef</span><span class="p">()</span>
+        <span class="n">dbref</span><span class="o">.</span><span class="n">dbabbr</span> <span class="o">=</span> <span class="n">dbabbr</span>
+        <span class="n">dbref</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="n">_PDB_DBREF</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">dbabbr</span><span class="p">,</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
+        <span class="n">dbref</span><span class="o">.</span><span class="n">idcode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">47</span><span class="p">:</span><span class="mi">67</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">first</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">18</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF1 for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;initial sequence number of the PDB sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">24</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF1 for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;ending sequence number of the PDB sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="o">=</span> <span class="n">dbref2</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF2 chain identifier is not specified &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">!=</span> <span class="n">ch</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF1 and DBREF2 chain id mismatch&#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+
+        <span class="n">dbref</span><span class="o">.</span><span class="n">accession</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">18</span><span class="p">:</span><span class="mi">40</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dbref</span><span class="o">.</span><span class="n">first</span> <span class="o">=</span> <span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">45</span><span class="p">:</span><span class="mi">55</span><span class="p">]))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF2 for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;initial sequence number of the database sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dbref</span><span class="o">.</span><span class="n">last</span> <span class="o">=</span> <span class="p">(</span><span class="n">last</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">24</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">57</span><span class="p">:</span><span class="mi">67</span><span class="p">]))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF2 for chain {2}: failed to parse &#39;</span>
+                        <span class="s1">&#39;ending sequence number of the database sequence &#39;</span>
+                        <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+
+        <span class="n">poly</span> <span class="o">=</span> <span class="n">polymers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">Polymer</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+        <span class="n">polymers</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+        <span class="n">poly</span><span class="o">.</span><span class="n">dbrefs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dbref</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">polymers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="n">resnum</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">dbref</span> <span class="ow">in</span> <span class="n">poly</span><span class="o">.</span><span class="n">dbrefs</span><span class="p">:</span>
+            <span class="n">dbabbr</span> <span class="o">=</span> <span class="n">dbref</span><span class="o">.</span><span class="n">dbabbr</span>
+            <span class="k">if</span> <span class="n">dbabbr</span> <span class="o">==</span> <span class="s1">&#39;PDB&#39;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">pdbid</span> <span class="o">==</span> <span class="n">dbref</span><span class="o">.</span><span class="n">accession</span> <span class="o">==</span> <span class="n">dbref</span><span class="o">.</span><span class="n">idcode</span><span class="p">):</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF for chain {2} refers to PDB &#39;</span>
+                                <span class="s1">&#39;entry {3} ({0}:{1})&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="n">dbref</span><span class="o">.</span><span class="n">accession</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">pdbid</span> <span class="o">==</span> <span class="n">dbref</span><span class="o">.</span><span class="n">accession</span> <span class="ow">or</span> <span class="n">pdbid</span> <span class="o">==</span> <span class="n">dbref</span><span class="o">.</span><span class="n">idcode</span><span class="p">:</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF for chain {2} is {3}, &#39;</span>
+                                <span class="s1">&#39;expected PDB ({0}:{1})&#39;</span>
+                                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="n">dbabbr</span><span class="p">))</span>
+                    <span class="n">dbref</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;PDB&#39;</span>
+            <span class="n">resnum</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">dbref</span><span class="o">.</span><span class="n">first</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dbref</span><span class="o">.</span><span class="n">last</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="n">resnum</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">last</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10000</span>
+        <span class="k">for</span> <span class="n">first</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">resnum</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">first</span> <span class="o">&lt;=</span> <span class="n">last</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;DBREF records overlap for chain {0} ({1})&#39;</span>
+                            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">poly</span><span class="o">.</span><span class="n">chid</span><span class="p">,</span> <span class="n">pdbid</span><span class="p">))</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="n">temp</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;MODRES&#39;</span><span class="p">]:</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">polymers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;MODRES chain identifier is not specified &#39;</span>
+                            <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ch</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">polymers</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">poly</span> <span class="o">=</span> <span class="n">polymers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">Polymer</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+        <span class="n">polymers</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+        <span class="k">if</span> <span class="n">poly</span><span class="o">.</span><span class="n">modified</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">poly</span><span class="o">.</span><span class="n">modified</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">poly</span><span class="o">.</span><span class="n">modified</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">line</span><span class="p">[</span><span class="mi">18</span><span class="p">:</span><span class="mi">22</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">+</span>
+                              <span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">line</span><span class="p">[</span><span class="mi">24</span><span class="p">:</span><span class="mi">27</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                              <span class="n">line</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;SEQADV&#39;</span><span class="p">]:</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">polymers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;MODRES chain identifier is not specified &#39;</span>
+                            <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ch</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">polymers</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">poly</span> <span class="o">=</span> <span class="n">polymers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">Polymer</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+        <span class="n">polymers</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+        <span class="n">dbabbr</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">24</span><span class="p">:</span><span class="mi">28</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">resname</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">resnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">18</span><span class="p">:</span><span class="mi">22</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;SEQADV for chain {2}: failed to parse PDB sequence &#39;</span>
+                        <span class="s1">&#39;number ({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+        <span class="n">icode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dbnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">43</span><span class="p">:</span><span class="mi">48</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;SEQADV for chain {2}: failed to parse database &#39;</span>
+                        <span class="s1">&#39;sequence number ({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+
+        <span class="n">comment</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">49</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">for</span> <span class="n">dbref</span> <span class="ow">in</span> <span class="n">poly</span><span class="o">.</span><span class="n">dbrefs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">dbref</span><span class="o">.</span><span class="n">first</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">resnum</span> <span class="o">&lt;=</span> <span class="n">dbref</span><span class="o">.</span><span class="n">last</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="k">continue</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">if</span> <span class="n">dbref</span><span class="o">.</span><span class="n">dbabbr</span> <span class="o">!=</span> <span class="n">dbabbr</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;SEQADV for chain {2}: reference database &#39;</span>
+                            <span class="s1">&#39;mismatch, expected {3} parsed {4} &#39;</span>
+                            <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span>
+                            <span class="nb">repr</span><span class="p">(</span><span class="n">dbref</span><span class="o">.</span><span class="n">dbabbr</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">dbabbr</span><span class="p">)))</span>
+                <span class="k">continue</span>
+            <span class="n">dbacc</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">38</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">dbref</span><span class="o">.</span><span class="n">accession</span> <span class="o">!=</span> <span class="n">dbacc</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;SEQADV for chain {2}: accession code &#39;</span>
+                            <span class="s1">&#39;mismatch, expected {3} parsed {4} &#39;</span>
+                            <span class="s1">&#39;({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span>
+                            <span class="nb">repr</span><span class="p">(</span><span class="n">dbref</span><span class="o">.</span><span class="n">accession</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">dbacc</span><span class="p">)))</span>
+                <span class="k">continue</span>
+            <span class="n">dbref</span><span class="o">.</span><span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">resname</span><span class="p">,</span> <span class="n">resnum</span><span class="p">,</span> <span class="n">icode</span><span class="p">,</span> <span class="n">dbnum</span><span class="p">,</span> <span class="n">dbnum</span><span class="p">,</span> <span class="n">comment</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+            <span class="k">continue</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;SEQADV for chain {2}: database sequence reference &#39;</span>
+                        <span class="s1">&#39;not found ({0}:{1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pdbid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span><span class="p">))</span>
+
+    <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">line</span><span class="p">[</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;COMPND&#39;</span><span class="p">]])</span>
+    <span class="k">if</span> <span class="n">string</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;MOL_ID&#39;</span><span class="p">):</span>
+        <span class="n">dict_</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">string</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;MOL_ID&#39;</span><span class="p">):</span>
+            <span class="n">dict_</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
+                <span class="n">token</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">token</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">items</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">items</span>
+                    <span class="n">dict_</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+            <span class="n">chains</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;CHAIN&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">chains</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">chains</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">):</span>
+                <span class="n">ch</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">poly</span> <span class="o">=</span> <span class="n">polymers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">Polymer</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+                <span class="n">polymers</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+                <span class="n">poly</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;MOLECULE&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+                <span class="n">poly</span><span class="o">.</span><span class="n">fragment</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;FRAGMENT&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+                <span class="n">poly</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;OTHER_DETAILS&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+                <span class="n">val</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SYNONYM&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                <span class="n">poly</span><span class="o">.</span><span class="n">synonyms</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">val</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+                                 <span class="p">]</span> <span class="k">if</span> <span class="n">val</span> <span class="k">else</span> <span class="p">[]</span>
+
+                <span class="n">val</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;EC&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                <span class="n">poly</span><span class="o">.</span><span class="n">ec</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">val</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)]</span> <span class="k">if</span> <span class="n">val</span> <span class="k">else</span> <span class="p">[]</span>
+
+                <span class="n">poly</span><span class="o">.</span><span class="n">engineered</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ENGINEERED&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;YES&#39;</span>
+                <span class="n">poly</span><span class="o">.</span><span class="n">mutation</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;MUTATION&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;YES&#39;</span>
+
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">polymers</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+
+<span class="k">def</span> <span class="nf">_getChemicals</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns list of chemical components (heterogens).&quot;&quot;&quot;</span>
+
+    <span class="n">chemicals</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">chem_names</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">chem_synonyms</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">chem_formulas</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HET   &#39;</span><span class="p">]:</span>
+        <span class="n">chem</span> <span class="o">=</span> <span class="n">Chemical</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">chem</span><span class="o">.</span><span class="n">chain</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">chem</span><span class="o">.</span><span class="n">resnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">13</span><span class="p">:</span><span class="mi">17</span><span class="p">])</span>
+        <span class="n">chem</span><span class="o">.</span><span class="n">icode</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">chem</span><span class="o">.</span><span class="n">natoms</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">25</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+        <span class="n">chem</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">30</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">chemicals</span><span class="p">[</span><span class="n">chem</span><span class="o">.</span><span class="n">resname</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chem</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HETNAM&#39;</span><span class="p">]:</span>
+        <span class="n">chem</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">chem_names</span><span class="p">[</span><span class="n">chem</span><span class="p">]</span> <span class="o">+=</span> <span class="n">line</span><span class="p">[</span><span class="mi">15</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HETSYN&#39;</span><span class="p">]:</span>
+        <span class="n">chem</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">chem_synonyms</span><span class="p">[</span><span class="n">chem</span><span class="p">]</span> <span class="o">+=</span> <span class="n">line</span><span class="p">[</span><span class="mi">15</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;FORMUL&#39;</span><span class="p">]:</span>
+        <span class="n">chem</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">chem_formulas</span><span class="p">[</span><span class="n">chem</span><span class="p">]</span> <span class="o">+=</span> <span class="n">line</span><span class="p">[</span><span class="mi">18</span><span class="p">:</span><span class="mi">70</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">chem</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">chem_names</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">cleanString</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">chem</span> <span class="ow">in</span> <span class="n">chemicals</span><span class="p">[</span><span class="n">chem</span><span class="p">]:</span>
+            <span class="n">chem</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">for</span> <span class="n">chem</span><span class="p">,</span> <span class="n">formula</span> <span class="ow">in</span> <span class="n">chem_formulas</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="n">formula</span> <span class="o">=</span> <span class="n">cleanString</span><span class="p">(</span><span class="n">formula</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">chem</span> <span class="ow">in</span> <span class="n">chemicals</span><span class="p">[</span><span class="n">chem</span><span class="p">]:</span>
+            <span class="n">chem</span><span class="o">.</span><span class="n">formula</span> <span class="o">=</span> <span class="n">formula</span>
+    <span class="k">for</span> <span class="n">chem</span><span class="p">,</span> <span class="n">synonyms</span> <span class="ow">in</span> <span class="n">chem_synonyms</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="n">synonyms</span> <span class="o">=</span> <span class="n">cleanString</span><span class="p">(</span><span class="n">synonyms</span><span class="p">)</span>
+        <span class="n">synonyms</span> <span class="o">=</span> <span class="n">synonyms</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">chem</span> <span class="ow">in</span> <span class="n">chemicals</span><span class="p">[</span><span class="n">chem</span><span class="p">]:</span>
+            <span class="n">chem</span><span class="o">.</span><span class="n">synonyms</span> <span class="o">=</span> <span class="n">synonyms</span>
+
+    <span class="n">alist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">chem</span> <span class="ow">in</span> <span class="n">chemicals</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="k">for</span> <span class="n">chem</span> <span class="ow">in</span> <span class="n">chem</span><span class="p">:</span>
+            <span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chem</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">alist</span>
+
+
+<span class="k">def</span> <span class="nf">_getVersion</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;REMARK   4&#39;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="s1">&#39;COMPLIES&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Return a string, because floating makes 3.20, 3.2 or</span>
+                <span class="c1"># may arise problems if wwPDB uses a version number like 3.30.1</span>
+                <span class="k">return</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;V.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span>
+
+
+<span class="k">def</span> <span class="nf">_getNumModels</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+
+    <span class="c1"># &quot;NUMMDL&quot;, Integer, 11 - 14: Number of models.</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;NUMMDL&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">line</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">14</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+<span class="c1"># Make sure that lambda functions defined below won&#39;t raise exceptions</span>
+<span class="n">_PDB_HEADER_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;helix&#39;</span><span class="p">:</span> <span class="n">_getHelix</span><span class="p">,</span>
+    <span class="s1">&#39;helix_range&#39;</span><span class="p">:</span> <span class="n">_getHelixRange</span><span class="p">,</span>
+    <span class="s1">&#39;sheet&#39;</span><span class="p">:</span> <span class="n">_getSheet</span><span class="p">,</span>
+    <span class="s1">&#39;sheet_range&#39;</span><span class="p">:</span> <span class="n">_getSheetRange</span><span class="p">,</span>
+    <span class="s1">&#39;chemicals&#39;</span><span class="p">:</span> <span class="n">_getChemicals</span><span class="p">,</span>
+    <span class="s1">&#39;polymers&#39;</span><span class="p">:</span> <span class="n">_getPolymers</span><span class="p">,</span>
+    <span class="s1">&#39;reference&#39;</span><span class="p">:</span> <span class="n">_getReference</span><span class="p">,</span>
+    <span class="s1">&#39;resolution&#39;</span><span class="p">:</span> <span class="n">_getResolution</span><span class="p">,</span>
+    <span class="s1">&#39;biomoltrans&#39;</span><span class="p">:</span> <span class="n">_getBiomoltrans</span><span class="p">,</span>
+    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="n">_getVersion</span><span class="p">,</span>
+    <span class="s1">&#39;deposition_date&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">50</span><span class="p">:</span><span class="mi">59</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                                       <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;classification&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">10</span><span class="p">:</span><span class="mi">50</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                                        <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">62</span><span class="p">:</span><span class="mi">66</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                                    <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="n">cleanString</span><span class="p">(</span>
+                <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;TITLE &#39;</span><span class="p">]])</span>
+                <span class="p">)</span> <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;TITLE &#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;experiment&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="n">cleanString</span><span class="p">(</span>
+                <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;EXPDTA&#39;</span><span class="p">]])</span>
+                <span class="p">)</span> <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;EXPDTA&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;authors&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="n">cleanString</span><span class="p">(</span>
+                <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;AUTHOR&#39;</span><span class="p">]]),</span>
+                <span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;AUTHOR&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;split&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">11</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+                                      <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;SPLIT &#39;</span><span class="p">]]))</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+                             <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;SPLIT &#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;model_type&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">lines</span><span class="p">:</span> <span class="n">cleanString</span><span class="p">(</span>
+                   <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;MDLTYP&#39;</span><span class="p">]])</span>
+                   <span class="p">)</span> <span class="k">if</span> <span class="n">lines</span><span class="p">[</span><span class="s1">&#39;MDLTYP&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s1">&#39;n_models&#39;</span><span class="p">:</span> <span class="n">_getNumModels</span><span class="p">,</span>
+    <span class="s1">&#39;space_group&#39;</span><span class="p">:</span> <span class="n">_getSpaceGroup</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">mapHelix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span>  <span class="c1"># 4-turn helix (alpha helix)</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>  <span class="c1"># other helix, Right-handed omega</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span>  <span class="c1"># 5-turn helix (pi helix)</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>  <span class="c1"># other helix, Right-handed gamma</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>  <span class="c1"># 3-turn helix (3-10 helix)</span>
+    <span class="mi">6</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>  <span class="c1"># Left-handed alpha</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>  <span class="c1"># Left-handed omega</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>  <span class="c1"># Left-handed gamma</span>
+    <span class="mi">9</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>  <span class="c1"># 2 - 7 ribbon/helix</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>  <span class="c1"># Polyproline</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="assignSecstr"><a class="viewcode-back" href="../../../manual/reference/proteins/header.html#prody.proteins.header.assignSecstr">[docs]</a><span class="k">def</span> <span class="nf">assignSecstr</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">coil</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Assign secondary structure from *header* dictionary to *atoms*.</span>
+<span class="sd">    *header* must be a dictionary parsed using the :func:`.parsePDB`.</span>
+<span class="sd">    *atoms* may be an instance of :class:`.AtomGroup`, :class:`.Selection`,</span>
+<span class="sd">    :class:`.Chain` or :class:`.Residue`.  ProDy can be configured to</span>
+<span class="sd">    automatically parse and assign secondary structure information using</span>
+<span class="sd">    ``confProDy(auto_secondary=True)`` command.  See also :func:`.confProDy`</span>
+<span class="sd">    function.</span>
+
+<span class="sd">    The Dictionary of Protein Secondary Structure, in short DSSP, type</span>
+<span class="sd">    single letter code assignments are used:</span>
+
+<span class="sd">      * **G** = 3-turn helix (310 helix). Min length 3 residues.</span>
+<span class="sd">      * **H** = 4-turn helix (alpha helix). Min length 4 residues.</span>
+<span class="sd">      * **I** = 5-turn helix (pi helix). Min length 5 residues.</span>
+<span class="sd">      * **T** = hydrogen bonded turn (3, 4 or 5 turn)</span>
+<span class="sd">      * **E** = extended strand in parallel and/or anti-parallel</span>
+<span class="sd">        beta-sheet conformation. Min length 2 residues.</span>
+<span class="sd">      * **B** = residue in isolated beta-bridge (single pair beta-sheet</span>
+<span class="sd">        hydrogen bond formation)</span>
+<span class="sd">      * **S** = bend (the only non-hydrogen-bond based assignment).</span>
+<span class="sd">      * **C** = residues not in one of above conformations.</span>
+
+
+<span class="sd">    See http://en.wikipedia.org/wiki/Protein_secondary_structure#The_DSSP_code</span>
+<span class="sd">    for more details.</span>
+
+<span class="sd">    Following PDB helix classes are omitted:</span>
+
+<span class="sd">      * Right-handed omega (2, class number)</span>
+<span class="sd">      * Right-handed gamma (4)</span>
+<span class="sd">      * Left-handed alpha (6)</span>
+<span class="sd">      * Left-handed omega (7)</span>
+<span class="sd">      * Left-handed gamma (8)</span>
+<span class="sd">      * 2 - 7 ribbon/helix (9)</span>
+<span class="sd">      * Polyproline (10)</span>
+
+<span class="sd">    Secondary structures are assigned to all atoms in a residue.  Amino acid</span>
+<span class="sd">    residues without any secondary structure assignments in the header</span>
+<span class="sd">    section will be assigned coil (C) conformation.  This can be prevented</span>
+<span class="sd">    by passing ``coil=False`` argument.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;header must be a dictionary&#39;</span><span class="p">)</span>
+    <span class="n">helix</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;helix&#39;</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="n">sheet</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sheet&#39;</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">helix</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">sheet</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;header does not contain secondary structure data&#39;</span><span class="p">)</span>
+
+    <span class="n">ssa</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getSecstrs</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">ssa</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">atoms</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ag</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getAtomGroup</span><span class="p">()</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">setSecstrs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span>
+                      <span class="n">ATOMIC_FIELDS</span><span class="p">[</span><span class="s1">&#39;secondary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+    <span class="n">atoms</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setSecstrs</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+    <span class="n">hierview</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">getHierView</span><span class="p">()</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">getResidue</span> <span class="o">=</span> <span class="n">hierview</span><span class="o">.</span><span class="n">getResidue</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">helix</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">getResidue</span><span class="p">(</span><span class="o">*</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">res</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">setSecstrs</span><span class="p">(</span><span class="n">mapHelix</span><span class="p">[</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">sheet</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># PY3K: OK</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">getResidue</span><span class="p">(</span><span class="o">*</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">res</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">setSecstrs</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Secondary structures were assigned to {0} residues.&#39;</span>
+                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">atoms</span></div>
+
+
+<div class="viewcode-block" id="buildBiomolecules"><a class="viewcode-back" href="../../../manual/reference/proteins/header.html#prody.proteins.header.buildBiomolecules">[docs]</a><span class="k">def</span> <span class="nf">buildBiomolecules</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">biomol</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns *atoms* after applying biomolecular transformations from *header*</span>
+<span class="sd">    dictionary.  Biomolecular transformations are applied to all coordinate</span>
+<span class="sd">    sets in the molecule.</span>
+
+<span class="sd">    Some PDB files contain transformations for more than 1 biomolecules.  A</span>
+<span class="sd">    specific set of transformations can be choosen using *biomol* argument.</span>
+<span class="sd">    Transformation sets are identified by numbers, e.g. ``&quot;1&quot;``, ``&quot;2&quot;``, ...</span>
+
+<span class="sd">    If multiple biomolecular transformations are provided in the *header*</span>
+<span class="sd">    dictionary, biomolecules will be returned as</span>
+<span class="sd">    :class:`.AtomGroup` instances in a :func:`list`.</span>
+
+<span class="sd">    If the resulting biomolecule has more than 26 chains, the molecular</span>
+<span class="sd">    assembly will be split into multiple :class:`.AtomGroup`</span>
+<span class="sd">    instances each containing at most 26 chains.  These</span>
+<span class="sd">    :class:`.AtomGroup` instances will be returned in a tuple.</span>
+
+<span class="sd">    Note that atoms in biomolecules are ordered according to chain identifiers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;header must be a dictionary&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;atoms must be an Atomic instance&#39;</span><span class="p">)</span>
+    <span class="n">biomt</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;biomoltrans&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">biomt</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">biomt</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;header doesn&#39;t contain biomolecular transformations&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">AtomGroup</span><span class="p">):</span>
+        <span class="n">atoms</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">biomols</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">biomol</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">biomt</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">biomol</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">biomol</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">biomol</span> <span class="ow">in</span> <span class="n">biomt</span><span class="p">:</span>
+            <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">biomol</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Transformations for biomolecule {0} was not &#39;</span>
+                        <span class="s1">&#39;found in the header dictionary.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">biomol</span><span class="p">))</span>
+            <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">keys</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="n">segnm</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">ags</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">mt</span> <span class="o">=</span> <span class="n">biomt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="c1"># mt is a list, first item is list of chain identifiers</span>
+        <span class="c1"># following items are lines corresponding to transformation</span>
+        <span class="c1"># mt must have 3n + 1 lines</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mt</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Biomolecular transformations {0} were not &#39;</span>
+                        <span class="s1">&#39;applied&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+            <span class="k">continue</span>
+
+        <span class="k">for</span> <span class="n">times</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">mt</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)):</span>
+            <span class="n">rotation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+            <span class="n">translation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">mt</span><span class="p">[</span><span class="n">times</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="n">rotation</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">translation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">mt</span><span class="p">[</span><span class="n">times</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="n">rotation</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">translation</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">mt</span><span class="p">[</span><span class="n">times</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">3</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="n">rotation</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">translation</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">t</span> <span class="o">=</span> <span class="n">Transformation</span><span class="p">(</span><span class="n">rotation</span><span class="p">,</span> <span class="n">translation</span><span class="p">)</span>
+
+            <span class="n">newag</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;chain &#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mt</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">newag</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">newag</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">setSegnames</span><span class="p">(</span><span class="n">segnm</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">acsi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">newag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()):</span>
+                <span class="n">newag</span><span class="o">.</span><span class="n">setACSIndex</span><span class="p">(</span><span class="n">acsi</span><span class="p">)</span>
+                <span class="n">newag</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">newag</span><span class="p">)</span>
+            <span class="n">newag</span><span class="o">.</span><span class="n">setACSIndex</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">ags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newag</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ags</span><span class="p">:</span>
+            <span class="n">newag</span> <span class="o">=</span> <span class="n">ags</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">while</span> <span class="n">ags</span><span class="p">:</span>
+                <span class="n">newag</span> <span class="o">+=</span> <span class="n">ags</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">newag</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s1">&#39;{0} biomolecule {1}&#39;</span>
+                           <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">atoms</span><span class="o">.</span><span class="n">getTitle</span><span class="p">(),</span> <span class="n">i</span><span class="p">))</span>
+            <span class="n">biomols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newag</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">biomols</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">biomols</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">biomols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">biomols</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

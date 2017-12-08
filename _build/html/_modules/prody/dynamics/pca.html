@@ -1,0 +1,477 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.dynamics.pca &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.dynamics.pca</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines classes for principal component analysis (PCA) and</span>
+<span class="sd">essential dynamics analysis (EDA) calculations.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">PY2K</span>
+<span class="kn">from</span> <span class="nn">prody.atomic</span> <span class="kn">import</span> <span class="n">Atomic</span>
+<span class="kn">from</span> <span class="nn">prody.ensemble</span> <span class="kn">import</span> <span class="n">Ensemble</span><span class="p">,</span> <span class="n">PDBEnsemble</span>
+<span class="kn">from</span> <span class="nn">prody.trajectory</span> <span class="kn">import</span> <span class="n">TrajBase</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">importLA</span>
+
+<span class="kn">from</span> <span class="nn">.nma</span> <span class="kn">import</span> <span class="n">NMA</span>
+
+<span class="k">if</span> <span class="n">PY2K</span><span class="p">:</span>
+    <span class="nb">range</span> <span class="o">=</span> <span class="nb">xrange</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;PCA&#39;</span><span class="p">,</span> <span class="s1">&#39;EDA&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="PCA"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA">[docs]</a><span class="k">class</span> <span class="nc">PCA</span><span class="p">(</span><span class="n">NMA</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A class for Principal Component Analysis (PCA) of conformational</span>
+<span class="sd">    ensembles. See examples in :ref:`pca`.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Unknown&#39;</span><span class="p">):</span>
+
+        <span class="n">NMA</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PCA.setCovariance"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA.setCovariance">[docs]</a>    <span class="k">def</span> <span class="nf">setCovariance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">covariance</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set covariance matrix.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;covariance must be an ndarray&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="p">(</span><span class="n">covariance</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span>
+                  <span class="n">covariance</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">covariance</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;covariance must be square matrix&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span> <span class="o">=</span> <span class="n">covariance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span> <span class="o">=</span> <span class="n">covariance</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span> <span class="o">/</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PCA.buildCovariance"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA.buildCovariance">[docs]</a>    <span class="k">def</span> <span class="nf">buildCovariance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordsets</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Build a covariance matrix for *coordsets* using mean coordinates</span>
+<span class="sd">        as the reference.  *coordsets* argument may be one of the following:</span>
+
+<span class="sd">        * :class:`.Atomic`</span>
+<span class="sd">        * :class:`.Ensemble`</span>
+<span class="sd">        * :class:`.TrajBase`</span>
+<span class="sd">        * :class:`numpy.ndarray` with shape ``(n_csets, n_atoms, 3)``</span>
+
+<span class="sd">        For ensemble and trajectory objects, ``update_coords=True`` argument</span>
+<span class="sd">        can be used to set the mean coordinates as the coordinates of the</span>
+<span class="sd">        object.</span>
+
+<span class="sd">        When *coordsets* is a trajectory object, such as :class:`.DCDFile`,</span>
+<span class="sd">        covariance will be built by superposing frames onto the reference</span>
+<span class="sd">        coordinate set (see :meth:`.Frame.superpose`).  If frames are already</span>
+<span class="sd">        aligned, use ``aligned=True`` argument to skip this step.</span>
+
+
+<span class="sd">        .. note::</span>
+<span class="sd">           If *coordsets* is a :class:`.PDBEnsemble` instance, coordinates are</span>
+<span class="sd">           treated specially.  Let&#39;s say **C**\_ij is the element of the</span>
+<span class="sd">           covariance matrix that corresponds to atoms *i* and *j*.  This</span>
+<span class="sd">           super element is divided by number of coordinate sets (PDB models or</span>
+<span class="sd">           structures) in which both of these atoms are observed together.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="p">(</span><span class="n">Ensemble</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">,</span> <span class="n">TrajBase</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;coordsets must be an Ensemble, Atomic, Numpy &#39;</span>
+                            <span class="s1">&#39;array instance&#39;</span><span class="p">)</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;_prody_pca&#39;</span><span class="p">)</span>
+        <span class="n">mean</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">ensemble</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">coordsets</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span>
+                    <span class="n">coordsets</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordsets is not a valid coordinate array&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+            <span class="n">coordsets</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">Ensemble</span><span class="p">):</span>
+            <span class="n">ensemble</span> <span class="o">=</span> <span class="n">coordsets</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">PDBEnsemble</span><span class="p">):</span>
+                <span class="n">weights</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">getWeights</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span>
+            <span class="n">coordsets</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span>
+
+        <span class="n">update_coords</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;update_coords&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">TrajBase</span><span class="p">):</span>
+            <span class="n">nfi</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">nextIndex</span><span class="p">()</span>
+            <span class="n">coordsets</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+            <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">numSelected</span><span class="p">()</span>
+            <span class="n">dof</span> <span class="o">=</span> <span class="n">n_atoms</span> <span class="o">*</span> <span class="mi">3</span>
+            <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dof</span><span class="p">,</span> <span class="n">dof</span><span class="p">))</span>
+            <span class="c1">#mean = coordsets._getCoords().flatten()</span>
+            <span class="n">n_confs</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">n_frames</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">coordsets</span><span class="p">)</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Covariance will be calculated using {0} frames.&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_frames</span><span class="p">))</span>
+            <span class="n">coordsum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">dof</span><span class="p">)</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s1">&#39;Building covariance&#39;</span><span class="p">,</span> <span class="n">n_frames</span><span class="p">,</span> <span class="s1">&#39;_prody_pca&#39;</span><span class="p">)</span>
+            <span class="n">align</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;aligned&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">coordsets</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">align</span><span class="p">:</span>
+                    <span class="n">frame</span><span class="o">.</span><span class="n">superpose</span><span class="p">()</span>
+                <span class="n">coords</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">()</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+                <span class="n">coordsum</span> <span class="o">+=</span> <span class="n">coords</span>
+                <span class="n">cov</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">coords</span><span class="p">)</span>
+                <span class="n">n_confs</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">n_confs</span><span class="p">,</span> <span class="s1">&#39;_prody_pca&#39;</span><span class="p">)</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="n">cov</span> <span class="o">/=</span> <span class="n">n_confs</span>
+            <span class="n">coordsum</span> <span class="o">/=</span> <span class="n">n_confs</span>
+            <span class="n">mean</span> <span class="o">=</span> <span class="n">coordsum</span>
+            <span class="n">cov</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">coordsum</span><span class="p">,</span> <span class="n">coordsum</span><span class="p">)</span>
+            <span class="n">coordsets</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">nfi</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span> <span class="o">=</span> <span class="n">cov</span>
+            <span class="k">if</span> <span class="n">update_coords</span><span class="p">:</span>
+                <span class="n">coordsets</span><span class="o">.</span><span class="n">setCoords</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">n_confs</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">n_confs</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordsets must have more than 3 coordinate &#39;</span>
+                                 <span class="s1">&#39;sets&#39;</span><span class="p">)</span>
+            <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordsets must have more than 3 atoms&#39;</span><span class="p">)</span>
+            <span class="n">dof</span> <span class="o">=</span> <span class="n">n_atoms</span> <span class="o">*</span> <span class="mi">3</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Covariance is calculated using {0} coordinate sets.&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coordsets</span><span class="p">)))</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_confs</span><span class="p">,</span> <span class="n">dof</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">coordsets</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_confs</span><span class="p">,</span> <span class="n">dof</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+                                       <span class="n">bias</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dof</span><span class="p">,</span> <span class="n">dof</span><span class="p">))</span>
+                    <span class="n">coordsets</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_confs</span><span class="p">,</span> <span class="n">dof</span><span class="p">))</span>
+                    <span class="n">mean</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s1">&#39;Building covariance&#39;</span><span class="p">,</span> <span class="n">n_confs</span><span class="p">,</span>
+                                    <span class="s1">&#39;_prody_pca&#39;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">coords</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">coordsets</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+                        <span class="n">deviations</span> <span class="o">=</span> <span class="n">coords</span> <span class="o">-</span> <span class="n">mean</span>
+                        <span class="n">cov</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">deviations</span><span class="p">,</span> <span class="n">deviations</span><span class="p">)</span>
+                        <span class="n">LOGGER</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">n_confs</span><span class="p">,</span> <span class="s1">&#39;_prody_pca&#39;</span><span class="p">)</span>
+                    <span class="n">LOGGER</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+                    <span class="n">cov</span> <span class="o">/=</span> <span class="n">n_confs</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span> <span class="o">=</span> <span class="n">cov</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># PDB ensemble case</span>
+                <span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">coords</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">coordsets</span><span class="p">):</span>
+                    <span class="n">mean</span> <span class="o">+=</span> <span class="n">coords</span> <span class="o">*</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">mean</span> <span class="o">/=</span> <span class="n">weights</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">d_xyz</span> <span class="o">=</span> <span class="p">((</span><span class="n">coordsets</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                <span class="n">divide_by</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">d_xyz</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">d_xyz</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">divide_by</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+                                                            <span class="n">divide_by</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">update_coords</span> <span class="ow">and</span> <span class="n">ensemble</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">mean</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">mean</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">ensemble</span><span class="o">.</span><span class="n">setCoords</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span> <span class="o">=</span> <span class="n">dof</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span> <span class="o">=</span> <span class="n">n_atoms</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Covariance matrix calculated in </span><span class="si">%2f</span><span class="s1">s.&#39;</span><span class="p">,</span> <span class="s1">&#39;_prody_pca&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PCA.calcModes"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA.calcModes">[docs]</a>    <span class="k">def</span> <span class="nf">calcModes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_modes</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">turbo</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calculate principal (or essential) modes.  This method uses</span>
+<span class="sd">        :func:`scipy.linalg.eigh`, or :func:`numpy.linalg.eigh`, function</span>
+<span class="sd">        to diagonalize the covariance matrix.</span>
+
+<span class="sd">        :arg n_modes: number of non-zero eigenvalues/vectors to calculate,</span>
+<span class="sd">            default is 20, for **None** all modes will be calculated</span>
+<span class="sd">        :type n_modes: int</span>
+
+<span class="sd">        :arg turbo: when available, use a memory intensive but faster way to</span>
+<span class="sd">            calculate modes, default is **True**</span>
+<span class="sd">        :type turbo: bool&quot;&quot;&quot;</span>
+
+        <span class="n">linalg</span> <span class="o">=</span> <span class="n">importLA</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cov</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;covariance matrix is not built or set&#39;</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">dof</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span>
+        <span class="k">if</span> <span class="n">linalg</span><span class="o">.</span><span class="n">__package__</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;scipy&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">n_modes</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">eigvals</span> <span class="o">=</span> <span class="bp">None</span>
+                <span class="n">n_modes</span> <span class="o">=</span> <span class="n">dof</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">n_modes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n_modes</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">n_modes</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span><span class="p">:</span>
+                    <span class="n">eigvals</span> <span class="o">=</span> <span class="bp">None</span>
+                    <span class="n">n_modes</span> <span class="o">=</span> <span class="n">dof</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">eigvals</span> <span class="o">=</span> <span class="p">(</span><span class="n">dof</span> <span class="o">-</span> <span class="n">n_modes</span><span class="p">,</span> <span class="n">dof</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">values</span><span class="p">,</span> <span class="n">vectors</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cov</span><span class="p">,</span> <span class="n">turbo</span><span class="o">=</span><span class="n">turbo</span><span class="p">,</span>
+                                          <span class="n">eigvals</span><span class="o">=</span><span class="n">eigvals</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n_modes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Scipy is not found, all modes are calculated.&#39;</span><span class="p">)</span>
+            <span class="n">values</span><span class="p">,</span> <span class="n">vectors</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cov</span><span class="p">)</span>
+        <span class="c1"># Order by descending SV</span>
+        <span class="n">revert</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">revert</span><span class="p">]</span>
+        <span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span><span class="p">[:,</span> <span class="n">revert</span><span class="p">]</span>
+        <span class="n">which</span> <span class="o">=</span> <span class="n">values</span> <span class="o">&gt;</span> <span class="mf">1e-8</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">which</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_array</span> <span class="o">=</span> <span class="n">vectors</span><span class="p">[:,</span> <span class="n">which</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_modes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span><span class="p">)</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;{0} modes were calculated in {1:.2f}s.&#39;</span>
+                     <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_modes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PCA.performSVD"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA.performSVD">[docs]</a>    <span class="k">def</span> <span class="nf">performSVD</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordsets</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calculate principal modes using singular value decomposition (SVD).</span>
+<span class="sd">        *coordsets* argument may be a :class:`.Atomic`, :class:`.Ensemble`,</span>
+<span class="sd">        or :class:`numpy.ndarray` instance.  If *coordsets* is a numpy array,</span>
+<span class="sd">        its shape must be ``(n_csets, n_atoms, 3)``.  Note that coordinate</span>
+<span class="sd">        sets must be aligned prior to SVD calculations.</span>
+
+<span class="sd">        This is a considerably faster way of performing PCA calculations</span>
+<span class="sd">        compared to eigenvalue decomposition of covariance matrix, but is</span>
+<span class="sd">        an approximate method when heterogeneous datasets are analyzed.</span>
+<span class="sd">        Covariance method should be preferred over this one for analysis of</span>
+<span class="sd">        ensembles with missing atomic data.  See :ref:`pca-xray-calculations`</span>
+<span class="sd">        example for comparison of results from SVD and covariance methods.&quot;&quot;&quot;</span>
+
+        <span class="n">linalg</span> <span class="o">=</span> <span class="n">importLA</span><span class="p">()</span>
+
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="p">(</span><span class="n">Ensemble</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;coordsets must be an Ensemble, Atomic, Numpy &#39;</span>
+                            <span class="s1">&#39;array instance&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">coordsets</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span>
+                    <span class="n">coordsets</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordsets is not a valid coordinate array&#39;</span><span class="p">)</span>
+            <span class="n">deviations</span> <span class="o">=</span> <span class="n">coordsets</span> <span class="o">-</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">Ensemble</span><span class="p">):</span>
+                <span class="n">deviations</span> <span class="o">=</span> <span class="n">coordsets</span><span class="o">.</span><span class="n">getDeviations</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coordsets</span><span class="p">,</span> <span class="n">Atomic</span><span class="p">):</span>
+                <span class="n">deviations</span> <span class="o">=</span> <span class="p">(</span><span class="n">coordsets</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span> <span class="o">-</span>
+                              <span class="n">coordsets</span><span class="o">.</span><span class="n">_getCoords</span><span class="p">())</span>
+
+        <span class="n">n_confs</span> <span class="o">=</span> <span class="n">deviations</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">n_confs</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordsets must have more than 3 coordinate sets&#39;</span><span class="p">)</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">deviations</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;coordsets must have more than 3 atoms&#39;</span><span class="p">)</span>
+
+        <span class="n">dof</span> <span class="o">=</span> <span class="n">n_atoms</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="n">deviations</span> <span class="o">=</span> <span class="n">deviations</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_confs</span><span class="p">,</span> <span class="n">dof</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+        <span class="n">vectors</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_temp</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">deviations</span><span class="p">,</span>
+                                                 <span class="n">full_matrices</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">values</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_confs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dof</span> <span class="o">=</span> <span class="n">dof</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span> <span class="o">=</span> <span class="n">n_atoms</span>
+        <span class="n">which</span> <span class="o">=</span> <span class="n">values</span> <span class="o">&gt;</span> <span class="mf">1e-18</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">which</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_array</span> <span class="o">=</span> <span class="n">vectors</span><span class="p">[:,</span> <span class="n">which</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vars</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_modes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span><span class="p">)</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;{0} modes were calculated in {1:.2f}s.&#39;</span>
+                     <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_modes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PCA.addEigenpair"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA.addEigenpair">[docs]</a>    <span class="k">def</span> <span class="nf">addEigenpair</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eigenvector</span><span class="p">,</span> <span class="n">eigenvalue</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add eigen *vector* and eigen *value* pair(s) to the instance.</span>
+<span class="sd">        If eigen *value* is omitted, it will be set to 1.  Eigenvalues</span>
+<span class="sd">        are set as variances.&quot;&quot;&quot;</span>
+
+        <span class="n">NMA</span><span class="o">.</span><span class="n">addEigenpair</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eigenvector</span><span class="p">,</span> <span class="n">eigenvalue</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span></div>
+
+<div class="viewcode-block" id="PCA.setEigens"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.PCA.setEigens">[docs]</a>    <span class="k">def</span> <span class="nf">setEigens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set eigen *vectors* and eigen *values*.  If eigen *values* are</span>
+<span class="sd">        omitted, they will be set to 1.  Eigenvalues are set as variances.&quot;&quot;&quot;</span>
+
+        <span class="n">NMA</span><span class="o">.</span><span class="n">setEigens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_eigvals</span></div></div>
+
+
+<div class="viewcode-block" id="EDA"><a class="viewcode-back" href="../../../manual/reference/dynamics/pca.html#prody.dynamics.pca.EDA">[docs]</a><span class="k">class</span> <span class="nc">EDA</span><span class="p">(</span><span class="n">PCA</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A class for Essential Dynamics Analysis (EDA) [AA93]_.</span>
+<span class="sd">    See examples in :ref:`eda`.</span>
+
+<span class="sd">    .. [AA93] Amadei A, Linssen AB, Berendsen HJ. Essential dynamics of</span>
+<span class="sd">       proteins. *Proteins* **1993** 17(4):412-25.&quot;&quot;&quot;</span>
+
+    <span class="k">pass</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

@@ -1,0 +1,369 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Structure Comparison &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.proteins.compare">
+<span id="structure-comparison"></span><h1>Structure Comparison<a class="headerlink" href="#module-prody.proteins.compare" title="Permalink to this headline">¶</a></h1>
+<p>This module defines functions for comparing and mapping polypeptide chains.</p>
+<dl class="function">
+<dt id="prody.proteins.compare.matchChains">
+<code class="descname">matchChains</code><span class="sig-paren">(</span><em>atoms1</em>, <em>atoms2</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#matchChains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.matchChains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns pairs of chains matched based on sequence similarity.  Makes an
+all-to-all comparison of chains in <em>atoms1</em> and <em>atoms2</em>.  Chains are
+obtained from hierarchical views (<a class="reference internal" href="../../../../manual/reference/atomic/hierview.html#prody.atomic.hierview.HierView" title="prody.atomic.hierview.HierView"><code class="xref py py-class docutils literal"><span class="pre">HierView</span></code></a>) of atom groups.
+This function returns a list of matching chains in a tuples that contain
+4 items:</p>
+<blockquote>
+<div><ul class="simple">
+<li>matching chain from <em>atoms1</em> as a <a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a>
+instance,</li>
+<li>matching chain from <em>atoms2</em> as a <a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a>
+instance,</li>
+<li>percent sequence identity of the match,</li>
+<li>percent sequence overlap of the match.</li>
+</ul>
+</div></blockquote>
+<p>List of matches are sorted in decreasing percent sequence identity order.
+<a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> instances can be used to calculate RMSD values and
+superpose atom groups.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>atoms1</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>) &#8211; atoms that contain a chain</li>
+<li><strong>atoms2</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>) &#8211; atoms that contain a chain</li>
+<li><strong>subset</strong> (<a class="reference external" href="http://docs.python.org/library/string.html#module-string" title="(in Python v2.7)"><em>string</em></a>) &#8211; one of the following well-defined subsets of atoms:
+<code class="docutils literal"><span class="pre">&quot;calpha&quot;</span></code> (or <code class="docutils literal"><span class="pre">&quot;ca&quot;</span></code>), <code class="docutils literal"><span class="pre">&quot;backbone&quot;</span></code> (or <code class="docutils literal"><span class="pre">&quot;bb&quot;</span></code>),
+<code class="docutils literal"><span class="pre">&quot;heavy&quot;</span></code> (or <code class="docutils literal"><span class="pre">&quot;noh&quot;</span></code>), or <code class="docutils literal"><span class="pre">&quot;all&quot;</span></code>, default is <code class="docutils literal"><span class="pre">&quot;calpha&quot;</span></code></li>
+<li><strong>seqid</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; percent sequence identity, default is 90</li>
+<li><strong>overlap</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; percent overlap, default is 90</li>
+<li><strong>pwalign</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; perform pairwise sequence alignment</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If <em>subset</em> is set to <em>calpha</em> or <em>backbone</em>, only alpha carbon
+atoms or backbone atoms will be paired. If set to <em>all</em>, all atoms
+common to matched residues will be returned.</p>
+<p>This function tries to match chains based on residue numbers and names.
+All chains in <em>atoms1</em> is compared to all chains in <em>atoms2</em>.  This works
+well for different structures of the same protein.  When it fails,
+<code class="xref py py-mod docutils literal"><span class="pre">Bio.pairwise2</span></code> is used for pairwise sequence alignment, and matching
+is performed based on the sequence alignment.  User can control, whether
+sequence alignment is performed or not with <em>pwalign</em> keyword.  If
+<code class="docutils literal"><span class="pre">pwalign=True</span></code> is passed, pairwise alignment is enforced.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.matchAlign">
+<code class="descname">matchAlign</code><span class="sig-paren">(</span><em>mobile</em>, <em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#matchAlign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.matchAlign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Superpose <em>mobile</em> onto <em>target</em> based on best matching pair of chains.
+This function uses <a class="reference internal" href="../../../../manual/reference/proteins/compare.html#prody.proteins.compare.matchChains" title="prody.proteins.compare.matchChains"><code class="xref py py-func docutils literal"><span class="pre">matchChains()</span></code></a> for matching chains and returns a
+tuple that contains the following items:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>mobile</em> after it is superposed,</li>
+<li>matching chain from <em>mobile</em> as a <a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> instance,</li>
+<li>matching chain from <em>target</em> as a <a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> instance,</li>
+<li>percent sequence identity of the match,</li>
+<li>percent sequence overlap of the match.</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mobile</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>) &#8211; atoms that contain a protein chain</li>
+<li><strong>target</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>) &#8211; atoms that contain a protein chain</li>
+<li><strong>tarsel</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; <em>target</em> atoms that will be used for alignment,
+default is <code class="docutils literal"><span class="pre">'calpha'</span></code></li>
+<li><strong>allcsets</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; align all coordinate sets of <em>mobile</em>, default is <strong>True</strong></li>
+<li><strong>seqid</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; percent sequence identity, default is 90</li>
+<li><strong>overlap</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; percent overlap, default is 90</li>
+<li><strong>pwalign</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; perform pairwise sequence alignment</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.mapOntoChain">
+<code class="descname">mapOntoChain</code><span class="sig-paren">(</span><em>atoms</em>, <em>chain</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#mapOntoChain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.mapOntoChain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map <em>atoms</em> onto <em>chain</em>.  This function returns a list of mappings.
+Each mapping is a tuple that contains 4 items:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Mapped chain as an <a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> instance,</li>
+<li><em>chain</em> as an <a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> instance,</li>
+<li>Percent sequence identitity,</li>
+<li>Percent sequence overlap</li>
+</ul>
+</div></blockquote>
+<p>Mappings are returned in decreasing percent sequence identity order.
+<a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> that keeps mapped atom indices contains dummy atoms
+in place of unmapped atoms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>atoms</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>, <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>) &#8211; atoms that will be mapped to the target <em>chain</em></li>
+<li><strong>chain</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a>) &#8211; chain to which atoms will be mapped</li>
+<li><strong>subset</strong> (<a class="reference external" href="http://docs.python.org/library/string.html#module-string" title="(in Python v2.7)"><em>string</em></a>) &#8211; one of the following well-defined subsets of atoms:
+<code class="docutils literal"><span class="pre">&quot;calpha&quot;</span></code> (or <code class="docutils literal"><span class="pre">&quot;ca&quot;</span></code>), <code class="docutils literal"><span class="pre">&quot;backbone&quot;</span></code> (or <code class="docutils literal"><span class="pre">&quot;bb&quot;</span></code>),
+<code class="docutils literal"><span class="pre">&quot;heavy&quot;</span></code> (or <code class="docutils literal"><span class="pre">&quot;noh&quot;</span></code>), or <code class="docutils literal"><span class="pre">&quot;all&quot;</span></code>, default is <code class="docutils literal"><span class="pre">&quot;calpha&quot;</span></code></li>
+<li><strong>seqid</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; percent sequence identity, default is 90</li>
+<li><strong>overlap</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; percent overlap, default is 90</li>
+<li><strong>pwalign</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; perform pairwise sequence alignment</li>
+<li><strong>fast</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; get rid of verbosity and just returns sequence identity.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This function tries to map <em>atoms</em> to <em>chain</em> based on residue
+numbers and types. Each individual chain in <em>atoms</em> is compared to
+target <em>chain</em>. This works well for different structures of the same
+protein. When it fails, <code class="xref py py-mod docutils literal"><span class="pre">Bio.pairwise2</span></code> is used for sequence
+alignment, and mapping is performed based on the sequence alignment.
+User can control, whether sequence alignment is performed or not with
+<em>pwalign</em> keyword. If <code class="docutils literal"><span class="pre">pwalign=True</span></code> is passed, pairwise alignment is
+enforced.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.getMatchScore">
+<code class="descname">getMatchScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#getMatchScore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.getMatchScore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns match score used to align sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.setMatchScore">
+<code class="descname">setMatchScore</code><span class="sig-paren">(</span><em>match_score</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#setMatchScore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.setMatchScore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set match score used to align sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.getMismatchScore">
+<code class="descname">getMismatchScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#getMismatchScore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.getMismatchScore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mismatch score used to align sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.setMismatchScore">
+<code class="descname">setMismatchScore</code><span class="sig-paren">(</span><em>mismatch_score</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#setMismatchScore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.setMismatchScore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set mismatch score used to align sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.getGapPenalty">
+<code class="descname">getGapPenalty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#getGapPenalty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.getGapPenalty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns gap opening penalty used for pairwise alignment.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.setGapPenalty">
+<code class="descname">setGapPenalty</code><span class="sig-paren">(</span><em>gap_penalty</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#setGapPenalty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.setGapPenalty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set gap opening penalty used for pairwise alignment.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.getGapExtPenalty">
+<code class="descname">getGapExtPenalty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#getGapExtPenalty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.getGapExtPenalty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns gap extension penalty used for pairwise alignment.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.setGapExtPenalty">
+<code class="descname">setGapExtPenalty</code><span class="sig-paren">(</span><em>gap_ext_penalty</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#setGapExtPenalty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.setGapExtPenalty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set gap extension penalty used for pairwise alignment.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.getAlignmentMethod">
+<code class="descname">getAlignmentMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#getAlignmentMethod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.getAlignmentMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns pairwise alignment method.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.proteins.compare.setAlignmentMethod">
+<code class="descname">setAlignmentMethod</code><span class="sig-paren">(</span><em>method</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/proteins/compare.html#setAlignmentMethod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.proteins.compare.setAlignmentMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set pairwise alignment method (global or local).</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

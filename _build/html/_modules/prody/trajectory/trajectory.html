@@ -1,0 +1,489 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.trajectory.trajectory &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.trajectory.trajectory</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines a class for handling multiple trajectories.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">.trajbase</span> <span class="kn">import</span> <span class="n">TrajBase</span>
+<span class="kn">from</span> <span class="nn">.frame</span> <span class="kn">import</span> <span class="n">Frame</span>
+
+<span class="kn">from</span> <span class="nn">prody.trajectory</span> <span class="kn">import</span> <span class="n">openTrajFile</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Trajectory&#39;</span><span class="p">]</span>
+
+<div class="viewcode-block" id="Trajectory"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory">[docs]</a><span class="k">class</span> <span class="nc">Trajectory</span><span class="p">(</span><span class="n">TrajBase</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A class for handling trajectories in multiple files.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Trajectory can be instantiated with a *name* or a filename. When</span>
+<span class="sd">        name is a valid path to a trajectory file it will be opened for</span>
+<span class="sd">        reading.&quot;&quot;&quot;</span>
+
+        <span class="n">TrajBase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filenames</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cfi</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># current file index</span>
+        <span class="k">assert</span> <span class="s1">&#39;mode&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">,</span> <span class="s1">&#39;mode is an invalid keyword argument&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">addFile</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;&lt;Trajectory: {0} (closed)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_title</span><span class="p">)</span>
+
+        <span class="n">link</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="s1">&#39;linked to &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;; &#39;</span>
+
+        <span class="n">files</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">files</span> <span class="o">=</span> <span class="s1">&#39;{0} files; &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span><span class="p">)</span>
+
+        <span class="nb">next</span> <span class="o">=</span> <span class="s1">&#39;next {0} of {1} frames; &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">atoms</span> <span class="o">=</span> <span class="s1">&#39;{0} atoms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">atoms</span> <span class="o">=</span> <span class="s1">&#39;selected {0} of {1} atoms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">numSelected</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="s1">&#39;&lt;Trajectory: {0} ({1}{2}{3}{4})&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">_title</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="nb">next</span><span class="p">,</span> <span class="n">atoms</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_nextFile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cfi</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cfi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_cfi</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span><span class="o">.</span><span class="n">nextIndex</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_gotoFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cfi</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span><span class="o">.</span><span class="n">nextIndex</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Trajectory.setAtoms"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.setAtoms">[docs]</a>    <span class="k">def</span> <span class="nf">setAtoms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atoms</span><span class="p">):</span>
+
+        <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">:</span>
+            <span class="n">traj</span><span class="o">.</span><span class="n">setAtoms</span><span class="p">(</span><span class="n">atoms</span><span class="p">)</span>
+        <span class="n">TrajBase</span><span class="o">.</span><span class="n">setAtoms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atoms</span><span class="p">)</span></div>
+
+    <span class="n">setAtoms</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">setAtoms</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.link"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.link">[docs]</a>    <span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">ag</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">ag</span><span class="p">:</span>
+            <span class="n">TrajBase</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">ag</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">:</span>
+                <span class="n">traj</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="o">*</span><span class="n">ag</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span></div>
+
+    <span class="n">link</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.addFile"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.addFile">[docs]</a>    <span class="k">def</span> <span class="nf">addFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a file to the trajectory instance. Currently only DCD files</span>
+<span class="sd">        are supported.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;filename must be a string&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filenames</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;{0} is already added to the trajectory&#39;</span>
+                          <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="s1">&#39;mode&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">,</span> <span class="s1">&#39;mode is an invalid keyword argument&#39;</span>
+        <span class="n">traj</span> <span class="o">=</span> <span class="n">openTrajFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="p">(</span><span class="n">kwargs</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="p">))</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span>
+        <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n_atoms</span> <span class="o">!=</span> <span class="n">traj</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;{0} must have same number of atoms as &#39;</span>
+                            <span class="s1">&#39;previously loaded files&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">traj</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span> <span class="o">=</span> <span class="n">traj</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_n_atoms</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_coords</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">_coords</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span> <span class="o">+=</span> <span class="n">traj</span><span class="o">.</span><span class="n">numFrames</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">traj</span><span class="o">.</span><span class="n">setAtoms</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Trajectory.numFiles"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.numFiles">[docs]</a>    <span class="k">def</span> <span class="nf">numFiles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns number of open trajectory files.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_files</span></div>
+
+<div class="viewcode-block" id="Trajectory.getFilenames"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.getFilenames">[docs]</a>    <span class="k">def</span> <span class="nf">getFilenames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">absolute</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns list of filenames opened for reading.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">traj</span><span class="o">.</span><span class="n">getFilename</span><span class="p">(</span><span class="n">absolute</span><span class="p">)</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">]</span></div>
+
+    <span class="k">def</span> <span class="nf">getFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;I/O operation on closed file&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Trajectory.getCoordsets"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.getCoordsets">[docs]</a>    <span class="k">def</span> <span class="nf">getCoordsets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;I/O operation on closed file&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">indices</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">indices</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">*</span><span class="n">indices</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">))</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;indices must be an integer or a list of &#39;</span>
+                            <span class="s1">&#39;integers&#39;</span><span class="p">)</span>
+
+        <span class="n">nfi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">numSelected</span><span class="p">(),</span> <span class="mi">3</span><span class="p">),</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_dtype</span><span class="p">)</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="nb">next</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nextCoordset</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">indices</span><span class="p">):</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="n">index</span> <span class="o">-</span> <span class="n">prev</span>
+            <span class="k">if</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="n">diff</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">next</span><span class="p">()</span>
+            <span class="n">prev</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">nfi</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">coords</span></div>
+
+    <span class="n">getCoordsets</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">getCoordsets</span><span class="o">.</span><span class="vm">__doc__</span>
+
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;I/O operation on closed file&#39;</span><span class="p">)</span>
+        <span class="n">nfi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span>
+        <span class="k">if</span> <span class="n">nfi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">:</span>
+            <span class="n">traj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span>
+            <span class="k">while</span> <span class="n">traj</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">==</span> <span class="n">traj</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_nextFile</span><span class="p">()</span>
+                <span class="n">traj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span>
+            <span class="n">unitcell</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">_nextUnitcell</span><span class="p">()</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">_nextCoordset</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nfi</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">unitcell</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame</span>
+                <span class="n">Frame</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">nfi</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">unitcell</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">setACSLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">+</span> <span class="s1">&#39; frame &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">frame</span>
+
+    <span class="n">__next__</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">__next__</span><span class="o">.</span><span class="vm">__doc__</span>
+    <span class="nb">next</span> <span class="o">=</span> <span class="n">__next__</span>
+
+<div class="viewcode-block" id="Trajectory.nextCoordset"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.nextCoordset">[docs]</a>    <span class="k">def</span> <span class="nf">nextCoordset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;I/O operation on closed file&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">:</span>
+            <span class="n">traj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span>
+            <span class="k">while</span> <span class="n">traj</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">==</span> <span class="n">traj</span><span class="o">.</span><span class="n">_n_csets</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_nextFile</span><span class="p">()</span>
+                <span class="n">traj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">setACSLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">+</span> <span class="s1">&#39; frame &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span><span class="p">))</span>
+                <span class="n">traj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="c1">#if self._indices is None:</span>
+            <span class="k">return</span> <span class="n">traj</span><span class="o">.</span><span class="n">nextCoordset</span><span class="p">()</span></div>
+            <span class="c1">#else:</span>
+            <span class="c1">#    return traj.nextCoordset()[self._indices]</span>
+
+    <span class="n">nextCoordset</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">nextCoordset</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.goto"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.goto">[docs]</a>    <span class="k">def</span> <span class="nf">goto</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;I/O operation on closed file&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n must be an integer&#39;</span><span class="p">)</span>
+        <span class="n">n_csets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="n">n_csets</span> <span class="o">+</span> <span class="n">n</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">elif</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">n_csets</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="n">n_csets</span>
+            <span class="n">nfi</span> <span class="o">=</span> <span class="n">n</span>
+            <span class="k">for</span> <span class="n">which</span><span class="p">,</span> <span class="n">traj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">traj</span><span class="o">.</span><span class="n">_n_csets</span> <span class="o">&gt;=</span> <span class="n">nfi</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">nfi</span> <span class="o">-=</span> <span class="n">traj</span><span class="o">.</span><span class="n">_n_csets</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_gotoFile</span><span class="p">(</span><span class="n">which</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">nfi</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">=</span> <span class="n">n</span></div>
+
+    <span class="n">goto</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">goto</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.skip"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.skip">[docs]</a>    <span class="k">def</span> <span class="nf">skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;I/O operation on closed file&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n must be an integer&#39;</span><span class="p">)</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">left</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">left</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_csets</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">traj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span>
+            <span class="n">skip</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">traj</span><span class="o">.</span><span class="n">numFrames</span><span class="p">()</span> <span class="o">-</span> <span class="n">traj</span><span class="o">.</span><span class="n">nextIndex</span><span class="p">())</span>
+            <span class="n">traj</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="n">skip</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">skip</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_nextFile</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">+=</span> <span class="n">skip</span>
+            <span class="n">n</span> <span class="o">-=</span> <span class="n">skip</span></div>
+
+    <span class="n">skip</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">skip</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.reset"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;I/O operation on closed file&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">:</span>
+                <span class="n">traj</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_trajectory</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cfi</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_nfi</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+    <span class="n">reset</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">reset</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.close"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">:</span>
+            <span class="n">traj</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span> <span class="o">=</span> <span class="bp">True</span></div>
+
+    <span class="n">close</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">close</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.hasUnitcell"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.hasUnitcell">[docs]</a>    <span class="k">def</span> <span class="nf">hasUnitcell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">([</span><span class="n">traj</span><span class="o">.</span><span class="n">hasUnitcell</span><span class="p">()</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">])</span></div>
+
+    <span class="n">hasUnitcell</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">TrajBase</span><span class="o">.</span><span class="n">hasUnitcell</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<div class="viewcode-block" id="Trajectory.getTimestep"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.getTimestep">[docs]</a>    <span class="k">def</span> <span class="nf">getTimestep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns list of timestep sizes, one number from each file.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">traj</span><span class="o">.</span><span class="n">getTimestep</span><span class="p">()</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Trajectory.getFirstTimestep"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.getFirstTimestep">[docs]</a>    <span class="k">def</span> <span class="nf">getFirstTimestep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns list of first timestep values, one number from each file.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">traj</span><span class="o">.</span><span class="n">getFirstTimestep</span><span class="p">()</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Trajectory.getFrameFreq"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.getFrameFreq">[docs]</a>    <span class="k">def</span> <span class="nf">getFrameFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns list of timesteps between frames, one number from each file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">traj</span><span class="o">.</span><span class="n">getFrameFreq</span><span class="p">()</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Trajectory.numFixed"><a class="viewcode-back" href="../../../manual/reference/trajectory/trajectory.html#prody.trajectory.trajectory.Trajectory.numFixed">[docs]</a>    <span class="k">def</span> <span class="nf">numFixed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of fixed atom numbers, one from each file.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">traj</span><span class="o">.</span><span class="n">numFixed</span><span class="p">()</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trajectories</span><span class="p">]</span></div></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

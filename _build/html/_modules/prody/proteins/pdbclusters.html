@@ -1,0 +1,313 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.proteins.pdbclusters &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.proteins.pdbclusters</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines functions for handling PDB sequence clusters.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="nb">abs</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">SETTINGS</span><span class="p">,</span> <span class="n">getPackagePath</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">openFile</span><span class="p">,</span> <span class="n">openURL</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fetchPDBClusters&#39;</span><span class="p">,</span> <span class="s1">&#39;loadPDBClusters&#39;</span><span class="p">,</span> <span class="s1">&#39;listPDBCluster&#39;</span><span class="p">]</span>
+
+<span class="n">PDB_CLUSTERS</span> <span class="o">=</span> <span class="p">{</span><span class="mi">30</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">40</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">50</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">70</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+                <span class="mi">90</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">95</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">100</span><span class="p">:</span> <span class="bp">None</span><span class="p">}</span>
+<span class="n">PDB_CLUSTERS_UPDATE_WARNING</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">PDB_CLUSTERS_SQIDS</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">PDB_CLUSTERS</span><span class="p">))</span>
+<span class="n">PDB_CLUSTERS_SQIDS</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">PDB_CLUSTERS_SQID_STR</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">PDB_CLUSTERS_SQIDS</span><span class="p">])</span>
+
+<div class="viewcode-block" id="loadPDBClusters"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbclusters.html#prody.proteins.pdbclusters.loadPDBClusters">[docs]</a><span class="k">def</span> <span class="nf">loadPDBClusters</span><span class="p">(</span><span class="n">sqid</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Load previously fetched PDB sequence clusters from disk to memory.&quot;&quot;&quot;</span>
+
+    <span class="n">PDB_CLUSTERS_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">getPackagePath</span><span class="p">(),</span> <span class="s1">&#39;pdbclusters&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">sqid</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">sqid_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">PDB_CLUSTERS</span><span class="p">)</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Loading all PDB sequence clusters.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sqid</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s1">&#39;sqid must be an integer&#39;</span>
+        <span class="k">if</span> <span class="n">sqid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">PDB_CLUSTERS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;PDB cluster data is not available for sequence &#39;</span>
+                             <span class="s1">&#39;identity {0}%, try one of {1}&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sqid</span><span class="p">,</span> <span class="n">PDB_CLUSTERS_SQID_STR</span><span class="p">))</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Loading PDB sequence clusters for sequence identity &#39;</span>
+                    <span class="s1">&#39;{0}.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sqid</span><span class="p">))</span>
+        <span class="n">sqid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">sqid</span><span class="p">]</span>
+    <span class="k">global</span> <span class="n">PDB_CLUSTERS_UPDATE_WARNING</span>
+    <span class="k">for</span> <span class="n">sqid</span> <span class="ow">in</span> <span class="n">sqid_list</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PDB_CLUSTERS_PATH</span><span class="p">,</span>
+                                <span class="s1">&#39;bc-{0}.out.gz&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sqid</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+            <span class="n">fetchPDBClusters</span><span class="p">(</span><span class="n">sqid</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">PDB_CLUSTERS_UPDATE_WARNING</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">time</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getmtime</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span> <span class="o">/</span> <span class="mf">604800.</span>
+            <span class="k">if</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="mf">1.</span><span class="p">:</span>
+                <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;PDB sequence clusters are {0:.1f} week(s) old,&#39;</span>
+                               <span class="s1">&#39; call `fetchPDBClusters` to receive updates.&#39;</span>
+                               <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span>
+                <span class="n">PDB_CLUSTERS_UPDATE_WARNING</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">inp</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">PDB_CLUSTERS</span><span class="p">[</span><span class="n">sqid</span><span class="p">]</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">inp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="listPDBCluster"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbclusters.html#prody.proteins.pdbclusters.listPDBCluster">[docs]</a><span class="k">def</span> <span class="nf">listPDBCluster</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="n">sqid</span><span class="o">=</span><span class="mi">95</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the PDB sequence cluster that contains chain *ch* in structure</span>
+<span class="sd">    *pdb* for sequence identity level *sqid*.  PDB sequence cluster will be</span>
+<span class="sd">    returned in as a list of tuples, e.g. ``[(&#39;1XXX&#39;, &#39;A&#39;), ]``.  Note that</span>
+<span class="sd">    PDB clusters individual chains, so the same PDB identifier may appear</span>
+<span class="sd">    twice in the same cluster if the corresponding chain is present in the</span>
+<span class="sd">    structure twice.</span>
+
+<span class="sd">    Before this function is used, :func:`fetchPDBClusters` needs to be called.</span>
+<span class="sd">    This function will load the PDB sequence clusters for *sqid* automatically</span>
+<span class="sd">    using :func:`loadPDBClusters`.&quot;&quot;&quot;</span>
+
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pdb</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pdb</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> \
+        <span class="s1">&#39;pdb must be 4 char long string&#39;</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> \
+        <span class="s1">&#39;ch must be a one char long string&#39;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">sqid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sqid</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;sqid must be an integer&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">30</span> <span class="o">&lt;=</span> <span class="n">sqid</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;sqid must be between 30 and 100&#39;</span><span class="p">)</span>
+    <span class="n">sqid</span> <span class="o">=</span> <span class="n">PDB_CLUSTERS_SQIDS</span><span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">PDB_CLUSTERS_SQIDS</span><span class="o">-</span><span class="n">sqid</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()]</span>
+    <span class="n">PDB_CLUSTERS_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">getPackagePath</span><span class="p">(),</span> <span class="s1">&#39;pdbclusters&#39;</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">PDB_CLUSTERS</span><span class="p">[</span><span class="n">sqid</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">clusters</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">loadPDBClusters</span><span class="p">(</span><span class="n">sqid</span><span class="p">)</span>
+        <span class="n">clusters</span> <span class="o">=</span> <span class="n">PDB_CLUSTERS</span><span class="p">[</span><span class="n">sqid</span><span class="p">]</span>
+    <span class="n">pdb_ch</span> <span class="o">=</span> <span class="n">pdb</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">ch</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">clusters</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">pdb_ch</span><span class="p">)</span>
+    <span class="n">maxlen</span> <span class="o">=</span> <span class="n">clusters</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">clusters</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">clusters</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">-</span><span class="n">maxlen</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="n">clusters</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cluster</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span></div>
+
+<div class="viewcode-block" id="fetchPDBClusters"><a class="viewcode-back" href="../../../manual/reference/proteins/pdbclusters.html#prody.proteins.pdbclusters.fetchPDBClusters">[docs]</a><span class="k">def</span> <span class="nf">fetchPDBClusters</span><span class="p">(</span><span class="n">sqid</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Retrieve PDB sequence clusters.  PDB sequence clusters are results of</span>
+<span class="sd">    the weekly clustering of protein chains in the PDB generated by blastclust.</span>
+<span class="sd">    They are available at FTP site: ftp://resources.rcsb.org/sequence/clusters/</span>
+
+<span class="sd">    This function will download about 10 Mb of data and save it after</span>
+<span class="sd">    compressing in your home directory in :file:`.prody/pdbclusters`.</span>
+<span class="sd">    Compressed files will be less than 4 Mb in size.  Cluster data can</span>
+<span class="sd">    be loaded using :func:`loadPDBClusters` function and be accessed</span>
+<span class="sd">    using :func:`listPDBCluster`.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">sqid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">sqid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">PDB_CLUSTERS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;sqid must be one of &#39;</span> <span class="o">+</span> <span class="n">PDB_CLUSTERS_SQID_STR</span><span class="p">)</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">sqid</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">PDB_CLUSTERS</span><span class="p">)</span>
+
+    <span class="n">PDB_CLUSTERS_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">getPackagePath</span><span class="p">(),</span> <span class="s1">&#39;pdbclusters&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">PDB_CLUSTERS_PATH</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">PDB_CLUSTERS_PATH</span><span class="p">)</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s1">&#39;Downloading sequence clusters&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">PDB_CLUSTERS</span><span class="p">),</span>
+                    <span class="s1">&#39;_prody_fetchPDBClusters&#39;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">keys</span><span class="p">):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;bc-{0}.out&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;ftp://resources.rcsb.org/sequence/clusters/&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">inp</span> <span class="o">=</span> <span class="n">openURL</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Clusters at {0}</span><span class="si">% s</span><span class="s1">equence identity level could &#39;</span>
+                           <span class="s1">&#39;not be downloaded.&#39;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="n">openFile</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s1">&#39;.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">PDB_CLUSTERS_PATH</span><span class="p">)</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+            <span class="n">inp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;_prody_fetchPDBClusters&#39;</span><span class="p">)</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">PDB_CLUSTERS</span><span class="p">)</span> <span class="o">==</span> <span class="n">count</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;All PDB clusters were downloaded successfully.&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;PDB clusters could not be downloaded.&#39;</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

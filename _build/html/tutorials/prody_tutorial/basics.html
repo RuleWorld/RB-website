@@ -1,0 +1,448 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>ProDy Basics &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../index.html">
+        <img src="../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">ProDy Basics</a><ul>
+<li><a class="reference internal" href="#file-parsers">File Parsers</a></li>
+<li><a class="reference internal" href="#analysis-functions">Analysis Functions</a></li>
+<li><a class="reference internal" href="#plotting-functions">Plotting Functions</a></li>
+<li><a class="reference internal" href="#protein-structures">Protein Structures</a><ul>
+<li><a class="reference internal" href="#fetching-pdb-files">Fetching PDB files</a></li>
+<li><a class="reference internal" href="#pdb-file-resources">PDB file resources</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#atom-groups">Atom Groups</a><ul>
+<li><a class="reference internal" href="#indexing">Indexing</a></li>
+<li><a class="reference internal" href="#slicing">Slicing</a></li>
+<li><a class="reference internal" href="#hierarchical-view">Hierarchical view</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prody-verbosity">ProDy Verbosity</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="prody-basics">
+<span id="id1"></span><h1>ProDy Basics<a class="headerlink" href="#prody-basics" title="Permalink to this headline">¶</a></h1>
+<p>We start with importing everything from ProDy package:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [3]: </span><span class="n">ion</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Functions and classes are named such that they should not create a conflict
+with any other package.  In this part we will familiarize with different
+categories of functions and methods.</p>
+<div class="section" id="file-parsers">
+<h2>File Parsers<a class="headerlink" href="#file-parsers" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s start with parsing a protein structure and then keep working on that
+in this part.  File parser function names are prefixed with <code class="docutils literal"><span class="pre">parse</span></code>.
+You can get a list of parser functions by pressing <code class="kbd docutils literal"><span class="pre">TAB</span></code> after typing
+in <code class="docutils literal"><span class="pre">parse</span></code>:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">parse</span><span class="o">&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+<span class="go">parseArray         parseHeatmap       parseNMD           parsePDBStream</span>
+<span class="go">parseSTRIDE        parseDCD           parseMSA           parsePDB</span>
+<span class="go">parsePQR           parseSparseMatrix  parseDSSP          parseModes</span>
+<span class="go">parsePDBHeader     parsePSF</span>
+</pre></div>
+</div>
+<p>When using <a class="reference internal" href="../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a>, usually an identifier will be sufficient,
+If corresponding file is found in the current working directory, it will be
+used, otherwise it will be downloaded from PDB servers.</p>
+<p>Let&#8217;s parse structure <a class="reference external" href="http://www.pdb.org/pdb/explore/explore.do?structureId=1p38">1p38</a> of p38 MAP kinase (MAPK):</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">p38</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;1p38&#39;</span><span class="p">)</span>  <span class="c1"># returns an AtomGroup object</span>
+
+<span class="gp">In [6]: </span><span class="n">p38</span> <span class="c1"># typing in variable name will give some information</span>
+<span class="gh">Out[6]: </span><span class="go">&lt;AtomGroup: 1p38 (2962 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>We see that this structure contains 2962 atoms.</p>
+<p>Now, similar to listing parser function names, we can use tab completion to
+introspect <code class="docutils literal"><span class="pre">p38</span></code> object:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">p38</span><span class="o">.</span><span class="n">num</span><span class="o">&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+<span class="go">p38.numAtoms      p38.numChains     p38.numFragments  p38.numSegments</span>
+<span class="go">p38.numBonds      p38.numCoordsets  p38.numResidues</span>
+</pre></div>
+</div>
+<p>This action printed a list of methods with <cite>num</cite> prefix. Let&#8217;s use some of
+them to get information on the structure:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [8]: </span><span class="n">p38</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">()</span>
+<span class="gh">Out[8]: </span><span class="go">2962</span>
+
+<span class="gp">In [9]: </span><span class="n">p38</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()</span>  <span class="c1"># returns number of models</span>
+<span class="gh">Out[9]: </span><span class="go">1</span>
+
+<span class="gp">In [10]: </span><span class="n">p38</span><span class="o">.</span><span class="n">numResidues</span><span class="p">()</span>  <span class="c1"># water molecules also count as residues</span>
+<span class="gh">Out[10]: </span><span class="go">480</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="analysis-functions">
+<h2>Analysis Functions<a class="headerlink" href="#analysis-functions" title="Permalink to this headline">¶</a></h2>
+<p>Similar to parsers, analysis function names start with <code class="docutils literal"><span class="pre">calc</span></code>:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">calc</span><span class="o">&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+<span class="go">calcADPAxes          calcCrossProjection  calcMSF              calcRMSF</span>
+<span class="go">calcADPs             calcCumulOverlap     calcOccupancies      calcRankorder</span>
+<span class="go">calcANM              calcDeformVector     calcOmega            calcShannonEntropy</span>
+<span class="go">calcAngle            calcDihedral         calcOverlap          calcSqFlucts</span>
+<span class="go">calcCenter           calcDistance         calcPerturbResponse  calcSubspaceOverlap</span>
+<span class="go">calcCollectivity     calcFractVariance    calcPhi              calcTempFactors</span>
+<span class="go">calcCovOverlap       calcGNM              calcProjection       calcTransformation</span>
+<span class="go">calcCovariance       calcGyradius         calcPsi</span>
+<span class="go">calcCrossCorr        calcMSAOccupancy     calcRMSD</span>
+</pre></div>
+</div>
+<p>Let&#8217;s read documentation of <a class="reference internal" href="../../manual/reference/measure/measure.html#prody.measure.measure.calcGyradius" title="prody.measure.measure.calcGyradius"><code class="xref py py-func docutils literal"><span class="pre">calcGyradius()</span></code></a> function and use it to
+calculate the radius of gyration of p38 MAPK structure:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="o">?</span> calcGyradius
+<span class="go">Signature: calcGyradius(atoms, weights=None)</span>
+<span class="go">Docstring: Calculate radius of gyration of *atoms*.</span>
+<span class="go">File:      ~/anaconda2/lib/python2.7/site-packages/prody/measure/measure.py</span>
+<span class="go">Type:      function</span>
+
+<span class="gp">In [13]: </span><span class="n">calcGyradius</span><span class="p">(</span><span class="n">p38</span><span class="p">)</span>
+<span class="gh">Out[13]: </span><span class="go">22.057752024921772</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotting-functions">
+<h2>Plotting Functions<a class="headerlink" href="#plotting-functions" title="Permalink to this headline">¶</a></h2>
+<p>Likewise, plotting function names have <code class="docutils literal"><span class="pre">plot</span></code> prefix and here is a list
+of them:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="n">show</span><span class="o">&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+<span class="go">showContactMap       showEllipsoid        showNormedSqFlucts   showScaledSqFlucts</span>
+<span class="go">showCrossCorr        showFractVars        showOccupancies      showShannonEntropy</span>
+<span class="go">showCrossProjection  showHeatmap          showOverlap          showSqFlucts</span>
+<span class="go">showCumulFractVars   showMSAOccupancy     showOverlapTable</span>
+<span class="go">showCumulOverlap     showMode             showProjection</span>
+<span class="go">showDiffMatrix       showMutinfoMatrix    showProtein</span>
+</pre></div>
+</div>
+<p>We can use <a class="reference internal" href="../../manual/reference/proteins/functions.html#prody.proteins.functions.showProtein" title="prody.proteins.functions.showProtein"><code class="xref py py-func docutils literal"><span class="pre">showProtein()</span></code></a> function to make a quick plot of p38 structure:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [15]: </span><span class="n">showProtein</span><span class="p">(</span><span class="n">p38</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/prody_tutorial_basics_protein.png"><img alt="../../_images/prody_tutorial_basics_protein.png" src="../../_images/prody_tutorial_basics_protein.png" style="width: 4in;" /></a>
+<p>This of course does not compare to any visualization software that you
+might be familiar with, but it comes handy to see what you are dealing with.</p>
+</div>
+<div class="section" id="protein-structures">
+<h2>Protein Structures<a class="headerlink" href="#protein-structures" title="Permalink to this headline">¶</a></h2>
+<p>Protein structures (<code class="file docutils literal"><span class="pre">.pdb</span></code> files) will be the standard input for most
+<em>ProDy</em> calculations, so it is good to familiarize with ways to access and
+manage PDB file resources.</p>
+<div class="section" id="fetching-pdb-files">
+<h3>Fetching PDB files<a class="headerlink" href="#fetching-pdb-files" title="Permalink to this headline">¶</a></h3>
+<p>First of all, <em>ProDy</em> downloads compressed PDB files when needed.  If you
+prefer saving decompressed files, you can use <a class="reference internal" href="../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.fetchPDB" title="prody.proteins.localpdb.fetchPDB"><code class="xref py py-func docutils literal"><span class="pre">fetchPDB()</span></code></a> function as
+follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="n">fetchPDB</span><span class="p">(</span><span class="s1">&#39;1p38&#39;</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="gh">Out[16]: </span><span class="go">&#39;1p38.pdb&#39;</span>
+</pre></div>
+</div>
+<p>Note that ProDy functions that fetch files or output files return filename
+upon successful completion of the task.  You can use this behavior to
+shorten the code you need to write, e.g.:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [17]: </span><span class="n">parsePDB</span><span class="p">(</span><span class="n">fetchPDB</span><span class="p">(</span><span class="s1">&#39;1p38&#39;</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span> <span class="c1"># same as p38 parsed above</span>
+<span class="gh">Out[17]: </span><span class="go">&lt;AtomGroup: 1p38 (2962 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>We downloaded and save an uncompressed PDB file, and parsed it immediately.</p>
+</div>
+<div class="section" id="pdb-file-resources">
+<h3>PDB file resources<a class="headerlink" href="#pdb-file-resources" title="Permalink to this headline">¶</a></h3>
+<p>Secondly, ProDy can manage local mirror of PDB server or a local PDB folders,
+as well as using a server close to your physical location for downloads:</p>
+<blockquote>
+<div><ul class="simple">
+<li>One of the <a class="reference external" href="http://www.wwpdb.org/">wwPDB</a> FTP servers in US, Europe or Japan can be picked for
+downloads using <a class="reference internal" href="../../manual/reference/proteins/wwpdb.html#prody.proteins.wwpdb.wwPDBServer" title="prody.proteins.wwpdb.wwPDBServer"><code class="xref py py-func docutils literal"><span class="pre">wwPDBServer()</span></code></a>.</li>
+<li>A local PDB mirror can be set for faster access to files using
+<a class="reference internal" href="../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.pathPDBMirror" title="prody.proteins.localpdb.pathPDBMirror"><code class="xref py py-func docutils literal"><span class="pre">pathPDBMirror()</span></code></a>.</li>
+<li>A local folder can be set for storing downloaded files for future access
+using <a class="reference internal" href="../../manual/reference/proteins/localpdb.html#prody.proteins.localpdb.pathPDBFolder" title="prody.proteins.localpdb.pathPDBFolder"><code class="xref py py-func docutils literal"><span class="pre">pathPDBFolder()</span></code></a>.</li>
+</ul>
+</div></blockquote>
+<p>If you are in the Americas now, you can choose the PDB server in the US
+as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [18]: </span><span class="n">wwPDBServer</span><span class="p">(</span><span class="s1">&#39;us&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you would like to have a central folder, such as <code class="file docutils literal"><span class="pre">~Downloads/pdb</span></code>,
+for storing downloaded PDB files (you will need to make it), do as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [19]: </span><span class="n">mkdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">abakan</span><span class="o">/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">pdb</span><span class="p">;</span>
+
+<span class="gp">In [20]: </span><span class="n">pathPDBFolder</span><span class="p">(</span><span class="s1">&#39;/home/abakan/Downloads/pdb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that when these functions are used, ProDy will save your settings
+in <code class="file docutils literal"><span class="pre">.prodyrc</span></code> file stored in your home folder.</p>
+</div>
+</div>
+<div class="section" id="atom-groups">
+<h2>Atom Groups<a class="headerlink" href="#atom-groups" title="Permalink to this headline">¶</a></h2>
+<p>As you might have noticed, <a class="reference internal" href="../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> function returns structure data
+as an <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> object.  Let&#8217;s see for <code class="docutils literal"><span class="pre">p38</span></code> variable from above:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [21]: </span><span class="n">p38</span>
+<span class="gh">Out[21]: </span><span class="go">&lt;AtomGroup: 1p38 (2962 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Data from this object can be retrieved using <code class="docutils literal"><span class="pre">get</span></code> methods.  For example:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [22]: </span><span class="n">p38</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
+<span class="gh">Out[22]: </span><span class="go"></span>
+<span class="go">array([&#39;GLU&#39;, &#39;GLU&#39;, &#39;GLU&#39;, ..., &#39;HOH&#39;, &#39;HOH&#39;, &#39;HOH&#39;], </span>
+<span class="go">      dtype=&#39;|S6&#39;)</span>
+
+<span class="gp">In [23]: </span><span class="n">p38</span><span class="o">.</span><span class="n">getCoords</span><span class="p">()</span>
+<span class="gh">Out[23]: </span><span class="go"></span>
+<span class="go">array([[ 28.492,   3.212,  23.465],</span>
+<span class="go">       [ 27.552,   4.354,  23.629],</span>
+<span class="go">       [ 26.545,   4.432,  22.489],</span>
+<span class="go">       ..., </span>
+<span class="go">       [ 18.872,   8.33 ,  36.716],</span>
+<span class="go">       [-22.062,  21.632,  42.029],</span>
+<span class="go">       [  1.323,  30.027,  65.103]])</span>
+</pre></div>
+</div>
+<p>To get a list of all methods use tab completion, i.e. <code class="docutils literal"><span class="pre">p38.&lt;TAB&gt;</span></code>.
+We will learn more about atom groups in the following chapters.</p>
+<div class="section" id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<p>An individual <a class="reference internal" href="../../manual/reference/atomic/atom.html#prody.atomic.atom.Atom" title="prody.atomic.atom.Atom"><code class="xref py py-class docutils literal"><span class="pre">Atom</span></code></a> can be accessed by indexing <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+objects:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [24]: </span><span class="n">atom</span> <span class="o">=</span> <span class="n">p38</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="gp">In [25]: </span><span class="n">atom</span>
+<span class="gh">Out[25]: </span><span class="go">&lt;Atom: N from 1p38 (index 0)&gt;</span>
+</pre></div>
+</div>
+<p>Note that all <code class="docutils literal"><span class="pre">get/set</span></code> functions defined for <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+instances are also defined for <a class="reference internal" href="../../manual/reference/atomic/atom.html#prody.atomic.atom.Atom" title="prody.atomic.atom.Atom"><code class="xref py py-class docutils literal"><span class="pre">Atom</span></code></a> instances, using singular
+form of the function name.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [26]: </span><span class="n">atom</span><span class="o">.</span><span class="n">getResname</span><span class="p">()</span>
+<span class="gh">Out[26]: </span><span class="go">&#39;GLU&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slicing">
+<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h3>
+<p>It is also possible to get a slice of an <a class="reference internal" href="../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>. For example,
+we can get every other atom as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [27]: </span><span class="n">p38</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="gh">Out[27]: </span><span class="go">&lt;Selection: &#39;index 0:2962:2&#39; from 1p38 (1481 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Or, we can get the first 10 atoms, as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [28]: </span><span class="n">p38</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="gh">Out[28]: </span><span class="go">&lt;Selection: &#39;index 0:10:1&#39; from 1p38 (10 atoms)&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hierarchical-view">
+<h3>Hierarchical view<a class="headerlink" href="#hierarchical-view" title="Permalink to this headline">¶</a></h3>
+<p>You can also access specific chains or residues in an atom group.  Indexing
+by a single letter identifier will return a <a class="reference internal" href="../../manual/reference/atomic/chain.html#prody.atomic.chain.Chain" title="prody.atomic.chain.Chain"><code class="xref py py-class docutils literal"><span class="pre">Chain</span></code></a> instance:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [29]: </span><span class="n">p38</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="gh">Out[29]: </span><span class="go">&lt;Chain: A from 1p38 (480 residues, 2962 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Indexing atom group with a chain identifier and a residue number will return
+<a class="reference internal" href="../../manual/reference/atomic/residue.html#prody.atomic.residue.Residue" title="prody.atomic.residue.Residue"><code class="xref py py-class docutils literal"><span class="pre">Residue</span></code></a> instance:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [30]: </span><span class="n">p38</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="gh">Out[30]: </span><span class="go">&lt;Residue: ASN 100 from Chain A from 1p38 (8 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="../../manual/reference/atomic/index.html#atomic"><span>Atomic classes</span></a> for details of indexing atom groups and <a class="reference internal" href="hierview.html#hierview"><span>Hierarchical Views</span></a>
+for more on hierarchical views.</p>
+</div>
+</div>
+<div class="section" id="prody-verbosity">
+<h2>ProDy Verbosity<a class="headerlink" href="#prody-verbosity" title="Permalink to this headline">¶</a></h2>
+<p>Finally, you might have noticed that ProDy prints some information to the
+console after parsing a file or doing some calculations. For example, PDB
+parser will print what was parsed and how long it took to the screen:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>@&gt; 1p38 (./1p38.pdb.gz) is found in the target directory.
+@&gt; 2962 atoms and 1 coordinate sets were parsed in 0.08s.
+</pre></div>
+</div>
+<p>This behavior is useful in interactive sessions, but may be problematic for
+automated tasks as the messages are printed to stderr.  The level of verbosity
+can be controlled using <a class="reference internal" href="../../manual/reference/prody.html#prody.confProDy" title="prody.confProDy"><code class="xref py py-func docutils literal"><span class="pre">confProDy()</span></code></a> function, and calling it as
+<code class="docutils literal"><span class="pre">confProDy(verbosity='none')</span></code> will stop all information messages permanently.</p>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

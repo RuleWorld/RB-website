@@ -1,0 +1,586 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.atomic.atommap &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.atomic.atommap</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines :class:`AtomMap` class that allows for pointing atoms in</span>
+<span class="sd">arbitrary order.</span>
+
+<span class="sd">.. _atommaps:</span>
+
+<span class="sd">How AtomMap&#39;s work</span>
+<span class="sd">===============================================================================</span>
+
+<span class="sd">:class:`AtomMap` class adds great flexibility to manipulating atomic data.</span>
+
+<span class="sd">First let&#39;s see how an instance of :class:`.Selection` (:class:`.Chain`, or</span>
+<span class="sd">:class:`.Residue`) works.  Below table shows indices for a selection of atoms</span>
+<span class="sd">in an :class:`~.AtomGroup` and values returned when</span>
+<span class="sd">:meth:`~.Selection.getNames`, :meth:`~.Selection.getResnames` and</span>
+<span class="sd">:meth:`~.Selection.getResnums` methods are called.</span>
+
+<span class="sd">.. csv-table:: **Atom Subset**</span>
+<span class="sd">   :header: &quot;Indices&quot;, &quot;Names&quot;, &quot;Resnames&quot;, &quot;Resnums&quot;</span>
+
+<span class="sd">   0, N, PHE, 1</span>
+<span class="sd">   1, CA, PHE, 1</span>
+<span class="sd">   2, C, PHE, 1</span>
+<span class="sd">   3, O, PHE, 1</span>
+<span class="sd">   4, CB, PHE, 1</span>
+<span class="sd">   5, CG, PHE, 1</span>
+<span class="sd">   6, CD1, PHE, 1</span>
+<span class="sd">   7, CD2, PHE, 1</span>
+<span class="sd">   8, CE1, PHE, 1</span>
+<span class="sd">   9, CE2, PHE, 1</span>
+<span class="sd">   10, CZ, PHE, 1</span>
+
+<span class="sd">:class:`~.Selection` instances keep indices ordered and do not allow duplicate</span>
+<span class="sd">values, hence their use is limited. In an :class:`AtomMap`, indices do not need</span>
+<span class="sd">to be sorted, duplicate indices may exist, even &quot;DUMMY&quot; atoms are allowed.</span>
+
+<span class="sd">Let&#39;s say we instantiate the following AtomMap::</span>
+
+<span class="sd">    amap = AtomMap(atomgroup, indices=[0, 1, 3, 8, 8, 9, 10],</span>
+<span class="sd">                   mapping=[5, 6, 7, 0, 1, 2, 3])</span>
+
+
+<span class="sd">The size of the :class:`AtomMap` based on this mapping is 8, since the larger</span>
+<span class="sd">mapping is 7.</span>
+
+<span class="sd">Calling the same functions for this AtomMap instance would result in the</span>
+<span class="sd">following:</span>
+
+<span class="sd">.. csv-table:: **Atom Map**</span>
+<span class="sd">   :header: &quot;Mapping&quot;, &quot;Indices&quot;, &quot;Names&quot;, &quot;Resnames&quot;, &quot;Resnums&quot;, \</span>
+<span class="sd">            &quot;MappedFlags&quot;, &quot;DummyFlags&quot;</span>
+
+<span class="sd">   0, 8, CE1, PHE, 1, 1, 0</span>
+<span class="sd">   1, 8, CE1, PHE, 1, 1, 0</span>
+<span class="sd">   2, 9, CE2, PHE, 1, 1, 0</span>
+<span class="sd">   3, 10, CZ, PHE, 1, 1, 0</span>
+<span class="sd">   4, , , , 0, 0, 1</span>
+<span class="sd">   5, 0, N, PHE, 1, 1, 0</span>
+<span class="sd">   6, 1, CA, PHE, 1, 1, 0</span>
+<span class="sd">   7, 3, O, PHE, 1, 1, 0</span>
+
+<span class="sd">For unmapped atoms, numeric attributes are set to 0, others to empty string,</span>
+<span class="sd">i.e. ``&quot;&quot;``.</span>
+
+<span class="sd">.. seealso::</span>
+<span class="sd">   :class:`AtomMap` are used by :mod:`.proteins` module functions that</span>
+<span class="sd">   match or map protein chains.  :ref:`pca-xray` and :ref:`pca-dimer`</span>
+<span class="sd">   examples that make use of these functions and :class:`AtomMap` class.</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">maxint</span> <span class="k">as</span> <span class="n">DUMMY</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">maxsize</span> <span class="k">as</span> <span class="n">DUMMY</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">arange</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">ones</span><span class="p">,</span> <span class="n">zeros</span><span class="p">,</span> <span class="n">dtype</span>
+
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">rangeString</span>
+
+<span class="kn">from</span> <span class="nn">.atom</span> <span class="kn">import</span> <span class="n">Atom</span>
+<span class="kn">from</span> <span class="nn">.fields</span> <span class="kn">import</span> <span class="n">ATOMIC_FIELDS</span>
+<span class="kn">from</span> <span class="nn">.fields</span> <span class="kn">import</span> <span class="n">wrapGetMethod</span>
+<span class="kn">from</span> <span class="nn">.pointer</span> <span class="kn">import</span> <span class="n">AtomPointer</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AtomMap&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="AtomMap"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap">[docs]</a><span class="k">class</span> <span class="nc">AtomMap</span><span class="p">(</span><span class="n">AtomPointer</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A class for mapping atomic data.&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_ag&#39;</span><span class="p">,</span> <span class="s1">&#39;_indices&#39;</span><span class="p">,</span> <span class="s1">&#39;_acsi&#39;</span><span class="p">,</span> <span class="s1">&#39;_mapping&#39;</span><span class="p">,</span> <span class="s1">&#39;_dummies&#39;</span><span class="p">,</span> <span class="s1">&#39;_title&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_len&#39;</span><span class="p">,</span> <span class="s1">&#39;_idarray&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ag</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">acsi</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Instantiate an atom map.</span>
+
+<span class="sd">        :arg ag: AtomGroup instance from which atoms are mapped</span>
+<span class="sd">        :arg indices: indices of mapped atoms</span>
+<span class="sd">        :arg acsi: active coordinate set index, defaults is that of *ag*</span>
+<span class="sd">        :arg mapping: mapping of atom *indices*</span>
+<span class="sd">        :arg dummies: dummy atom indices</span>
+<span class="sd">        :arg title: title of the instance, default is &#39;Unknown&#39;</span>
+
+<span class="sd">        *mapping* and *dummies* arrays must be provided together.  Length of</span>
+<span class="sd">        *mapping* must be equal to length of *indices*.  Elements of *mapping*</span>
+<span class="sd">        must be an ordered in ascending order.  When dummy atoms are present,</span>
+<span class="sd">        number of atoms is the sum of lengths of *mapping* and *dummies*.</span>
+
+<span class="sd">        Following built-in functions are customized for this class:</span>
+
+<span class="sd">        * :func:`len` returns the number of atoms in the instance.</span>
+<span class="sd">        * :func:`iter` yields :class:`.Atom` instances.</span>
+<span class="sd">        * Indexing returns an :class:`.Atom` or an :class:`.AtomMap` instance</span>
+<span class="sd">          depending on the type and value of the index.&quot;&quot;&quot;</span>
+
+        <span class="n">AtomPointer</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ag</span><span class="p">,</span> <span class="n">acsi</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">mapping</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mapping&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">dummies</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dummies&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">dummies</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="n">dummy_array</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dummy_array</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="k">if</span> <span class="n">mapping</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;intarrays&#39;</span><span class="p">):</span>
+                <span class="n">indices</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">dummy_array</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;mapping and dummies must be provided &#39;</span>
+                                <span class="s1">&#39;together&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">dummies</span><span class="p">:</span>
+                <span class="n">dummies</span> <span class="o">=</span> <span class="p">(</span><span class="n">indices</span> <span class="o">==</span> <span class="n">DUMMY</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dummies</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span> <span class="o">=</span> <span class="n">dummies</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="o">=</span> <span class="p">(</span><span class="n">indices</span> <span class="o">&lt;</span> <span class="n">DUMMY</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span> <span class="o">=</span> <span class="n">indices</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span> <span class="o">=</span> <span class="n">indices</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span> <span class="o">=</span> <span class="n">indices</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dummies</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;mapping and dummies must be provided &#39;</span>
+                                <span class="s1">&#39;together&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;indices and mapping arrays must have the &#39;</span>
+                                 <span class="s1">&#39;same length&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;intarrays&#39;</span><span class="p">):</span>
+                <span class="n">indices</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+                <span class="n">mapping</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">mapping</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">dummy_array</span><span class="p">:</span>
+                    <span class="n">dummies</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">dummies</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">mapping</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">mapping</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;mapping must be an ordered array&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">dummy_array</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span> <span class="o">=</span> <span class="n">indices</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="o">=</span> <span class="n">mapping</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span> <span class="o">=</span> <span class="n">dummies</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_len</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dummies</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span> <span class="o">=</span> <span class="n">idarray</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+                <span class="n">idarray</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span>
+                <span class="n">idarray</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span><span class="p">]</span> <span class="o">=</span> <span class="n">DUMMY</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">mapping</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">rep</span> <span class="o">=</span> <span class="s1">&#39;&lt;AtomMap: {0} from {1} ({2} atoms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_title</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">getTitle</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">numDummies</span><span class="p">():</span>
+            <span class="n">rep</span> <span class="o">+=</span> <span class="s1">&#39;, {0} mapped, {1} dummy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numMapped</span><span class="p">(),</span>
+                                                        <span class="bp">self</span><span class="o">.</span><span class="n">numDummies</span><span class="p">())</span>
+
+        <span class="n">n_csets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">n_csets</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">rep</span> <span class="o">+=</span> <span class="s1">&#39;; active #{0} of {1} coordsets)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">(),</span> <span class="n">n_csets</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">n_csets</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">rep</span> <span class="o">+=</span> <span class="s1">&#39;; no coordinates&#39;</span>
+        <span class="k">return</span> <span class="n">rep</span> <span class="o">+</span> <span class="s1">&#39;)&gt;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="s1">&#39;AtomMap {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_title</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_len</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+
+        <span class="n">indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">indices</span> <span class="o">!=</span> <span class="n">DUMMY</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">AtomMap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acsi</span><span class="p">,</span>
+                       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;({0})[{1}]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_title</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">index</span><span class="p">)),</span>
+                       <span class="n">intarrays</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">dummies</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">numDummies</span><span class="p">())</span>
+
+<div class="viewcode-block" id="AtomMap.getTitle"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getTitle">[docs]</a>    <span class="k">def</span> <span class="nf">getTitle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns title of the instance.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_title</span></div>
+
+<div class="viewcode-block" id="AtomMap.setTitle"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.setTitle">[docs]</a>    <span class="k">def</span> <span class="nf">setTitle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set title of the instance.&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">title</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AtomMap.numAtoms"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.numAtoms">[docs]</a>    <span class="k">def</span> <span class="nf">numAtoms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns number of atoms.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="n">flag</span><span class="p">))</span> <span class="k">if</span> <span class="n">flag</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_len</span></div>
+
+<div class="viewcode-block" id="AtomMap.iterAtoms"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.iterAtoms">[docs]</a>    <span class="k">def</span> <span class="nf">iterAtoms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Yield atoms, and ``None`` for dummies.&quot;&quot;&quot;</span>
+
+        <span class="n">ag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span>
+        <span class="n">acsi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getIndices</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="n">Atom</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">acsi</span><span class="p">)</span> <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">DUMMY</span> <span class="k">else</span> <span class="bp">None</span></div>
+
+    <span class="fm">__iter__</span> <span class="o">=</span> <span class="n">iterAtoms</span>
+
+<div class="viewcode-block" id="AtomMap.getCoords"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getCoords">[docs]</a>    <span class="k">def</span> <span class="nf">getCoords</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a copy of coordinates from the active coordinate set.&quot;&quot;&quot;</span>
+
+        <span class="n">coords</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">coords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">xyz</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">xyz</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="nb">float</span><span class="p">)</span>
+                <span class="n">xyz</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">xyz</span></div>
+
+    <span class="n">_getCoords</span> <span class="o">=</span> <span class="n">getCoords</span>
+
+<div class="viewcode-block" id="AtomMap.setCoords"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.setCoords">[docs]</a>    <span class="k">def</span> <span class="nf">setCoords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set coordinates of atoms in the active coordinate set.&quot;&quot;&quot;</span>
+
+        <span class="n">coordsets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">coordsets</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">coordsets</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">coordsets</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">getACSIndex</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span></div>
+
+
+<div class="viewcode-block" id="AtomMap.getCoordsets"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getCoordsets">[docs]</a>    <span class="k">def</span> <span class="nf">getCoordsets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns coordinate set(s) at given *indices*, which may be an integer</span>
+<span class="sd">        or a list/array of integers.&quot;&quot;&quot;</span>
+
+        <span class="n">coords</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">coords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">indices</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                    <span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">indices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">indices</span><span class="p">][:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">coords</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">csets</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+                <span class="n">csets</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span>
+                <span class="k">return</span> <span class="n">csets</span></div>
+
+    <span class="n">_getCoordsets</span> <span class="o">=</span> <span class="n">getCoordsets</span>
+
+<div class="viewcode-block" id="AtomMap.iterCoordsets"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.iterCoordsets">[docs]</a>    <span class="k">def</span> <span class="nf">iterCoordsets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Yield copies of coordinate sets.&quot;&quot;&quot;</span>
+
+        <span class="n">coords</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getCoordsets</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">coords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span>
+            <span class="n">n_atoms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_len</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indices</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">numCoordsets</span><span class="p">()):</span>
+                <span class="n">xyz</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="nb">float</span><span class="p">)</span>
+                <span class="n">xyz</span><span class="p">[</span><span class="n">mapping</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">indices</span><span class="p">]</span>
+                <span class="k">yield</span> <span class="n">xyz</span></div>
+
+    <span class="n">_iterCoordsets</span> <span class="o">=</span> <span class="n">iterCoordsets</span>
+
+<div class="viewcode-block" id="AtomMap.getData"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getData">[docs]</a>    <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a copy of data associated with *label*, if it is present.&quot;&quot;&quot;</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getData</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,)</span> <span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+            <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">result</span></div>
+
+    <span class="n">_getData</span> <span class="o">=</span> <span class="n">getData</span>
+
+<div class="viewcode-block" id="AtomMap.getFlags"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getFlags">[docs]</a>    <span class="k">def</span> <span class="nf">getFlags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a copy of atom flags for given *label*, or **None** when</span>
+<span class="sd">        flags for *label* is not set.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="s1">&#39;dummy&#39;</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">flags</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">label</span> <span class="o">==</span> <span class="s1">&#39;mapped&#39;</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">flags</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="n">agflags</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="o">.</span><span class="n">_getFlags</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">agflags</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+                <span class="n">flags</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">]</span> <span class="o">=</span> <span class="n">agflags</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">flags</span></div>
+
+    <span class="n">_getFlags</span> <span class="o">=</span> <span class="n">getFlags</span>
+
+    <span class="k">def</span> <span class="nf">_getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_getFlags</span><span class="p">(</span><span class="n">label</span><span class="p">)]</span>
+
+<div class="viewcode-block" id="AtomMap.getIndices"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getIndices">[docs]</a>    <span class="k">def</span> <span class="nf">getIndices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a copy of indices of atoms, with maximum integer value</span>
+<span class="sd">        dummies.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_getIndices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns indices of atoms, with maximum integer value dummies.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idarray</span>
+
+<div class="viewcode-block" id="AtomMap.getMapping"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getMapping">[docs]</a>    <span class="k">def</span> <span class="nf">getMapping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a copy of mapping of indices.&quot;&quot;&quot;</span>
+
+        <span class="n">mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span>
+        <span class="k">return</span> <span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">)</span> <span class="k">if</span> <span class="n">mapping</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">mapping</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_getMapping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns mapping of indices.&quot;&quot;&quot;</span>
+
+        <span class="n">mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span>
+        <span class="k">return</span> <span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">)</span> <span class="k">if</span> <span class="n">mapping</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">mapping</span>
+
+<div class="viewcode-block" id="AtomMap.numMapped"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.numMapped">[docs]</a>    <span class="k">def</span> <span class="nf">numMapped</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns number of mapped atoms.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AtomMap.numDummies"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.numDummies">[docs]</a>    <span class="k">def</span> <span class="nf">numDummies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns number of dummy atoms.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dummies</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AtomMap.getSelstr"><a class="viewcode-back" href="../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap.getSelstr">[docs]</a>    <span class="k">def</span> <span class="nf">getSelstr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns selection string that selects mapped atoms.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="s1">&#39;index &#39;</span> <span class="o">+</span> <span class="n">rangeString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">)</span></div></div>
+
+
+<span class="k">for</span> <span class="n">fname</span><span class="p">,</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">ATOMIC_FIELDS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">private</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="n">meth</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">meth_pl</span>
+    <span class="n">getMeth</span> <span class="o">=</span> <span class="s1">&#39;get&#39;</span> <span class="o">+</span> <span class="n">meth</span>
+
+    <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meth</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">meth_pl</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">dtype</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ag</span><span class="p">,</span> <span class="s1">&#39;_get&#39;</span> <span class="o">+</span> <span class="n">meth</span><span class="p">)()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_len</span><span class="p">,)</span> <span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">dtype</span><span class="p">)</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_indices</span><span class="p">]</span>
+                <span class="k">return</span> <span class="n">result</span>
+
+    <span class="n">getData</span> <span class="o">=</span> <span class="n">wrapGetMethod</span><span class="p">(</span><span class="n">getData</span><span class="p">)</span>
+    <span class="n">getData</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">getMeth</span>
+    <span class="n">getData</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">getDocstr</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="n">selex</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span> <span class="o">+</span>
+                       <span class="s1">&#39; Entries for dummy atoms will be ``{0}``.&#39;</span>
+                       <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">dtype</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span><span class="o">.</span><span class="n">type</span><span class="p">())))</span>
+    <span class="nb">setattr</span><span class="p">(</span><span class="n">AtomMap</span><span class="p">,</span> <span class="n">getMeth</span><span class="p">,</span> <span class="n">getData</span><span class="p">)</span>
+    <span class="nb">setattr</span><span class="p">(</span><span class="n">AtomMap</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">getMeth</span><span class="p">,</span> <span class="n">getData</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">getData</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

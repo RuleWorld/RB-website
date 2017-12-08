@@ -1,0 +1,308 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>MSA File &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.sequence.msafile">
+<span id="msa-file"></span><h1>MSA File<a class="headerlink" href="#module-prody.sequence.msafile" title="Permalink to this headline">¶</a></h1>
+<p>This module defines functions and classes for parsing, manipulating, and
+analyzing multiple sequence alignments.</p>
+<dl class="class">
+<dt id="prody.sequence.msafile.MSAFile">
+<em class="property">class </em><code class="descname">MSAFile</code><span class="sig-paren">(</span><em>msa</em>, <em>mode='r'</em>, <em>format=None</em>, <em>aligned=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle MSA files in FASTA, SELEX and Stockholm formats.</p>
+<p><em>msa</em> may be a filename or a stream.  Multiple sequence alignments
+can be read from or written in FASTA (<code class="file docutils literal"><span class="pre">.fasta</span></code>), Stockholm
+(<code class="file docutils literal"><span class="pre">.sth</span></code>), or SELEX (<code class="file docutils literal"><span class="pre">.slx</span></code>) <em>format</em>.  For spesified
+extensions, <em>format</em> argument is not needed.  If <em>aligned</em> is
+<strong>True</strong>, unaligned sequences in the file or stream will cause an
+<code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code> exception.  <em>filter</em>, a function that returns a
+boolean, can be used for filtering sequences, see <a class="reference internal" href="../../../../manual/reference/sequence/msafile.html#prody.sequence.msafile.MSAFile.setFilter" title="prody.sequence.msafile.MSAFile.setFilter"><code class="xref py py-meth docutils literal"><span class="pre">setFilter()</span></code></a>
+for details.  <em>slice</em> can be used to slice sequences, and is applied
+after filtering, see <a class="reference internal" href="../../../../manual/reference/sequence/msafile.html#prody.sequence.msafile.MSAFile.setSlice" title="prody.sequence.msafile.MSAFile.setSlice"><code class="xref py py-meth docutils literal"><span class="pre">setSlice()</span></code></a> for details.</p>
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the file.  This method will not affect a stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.getFilename">
+<code class="descname">getFilename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.getFilename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.getFilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns filename, or <strong>None</strong> if instance is handling a stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.getFilter">
+<code class="descname">getFilter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.getFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.getFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns function used for filtering sequences.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.getFormat">
+<code class="descname">getFormat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.getFormat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.getFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns file format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.getSlice">
+<code class="descname">getSlice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.getSlice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.getSlice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns object used to slice sequences.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.getTitle">
+<code class="descname">getTitle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.getTitle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.getTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns title of the instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.isAligned">
+<code class="descname">isAligned</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.isAligned"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.isAligned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if MSA is aligned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns to the beginning of the file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.setFilter">
+<code class="descname">setFilter</code><span class="sig-paren">(</span><em>filter</em>, <em>filter_full=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.setFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.setFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set function used for filtering sequences.  <em>filter</em> will be applied
+to split sequence label, by default.  If <em>filter_full</em> is <strong>True</strong>,
+filter will be applied to the full label.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.setSlice">
+<code class="descname">setSlice</code><span class="sig-paren">(</span><em>slice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.setSlice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.setSlice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set object used to <em>slice</em> sequences, which may be a <code class="xref py py-func docutils literal"><span class="pre">slice()</span></code>
+or a <code class="xref py py-func docutils literal"><span class="pre">list()</span></code> of numbers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.setTitle">
+<code class="descname">setTitle</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.setTitle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.setTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set title of the instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.sequence.msafile.MSAFile.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>seq</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#MSAFile.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.MSAFile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <em>seq</em>, an <a class="reference internal" href="../../../../manual/reference/sequence/sequence.html#prody.sequence.sequence.Sequence" title="prody.sequence.sequence.Sequence"><code class="xref py py-class docutils literal"><span class="pre">Sequence</span></code></a> instance, into the MSA file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.sequence.msafile.MSAFile.closed">
+<code class="descname">closed</code><a class="headerlink" href="#prody.sequence.msafile.MSAFile.closed" title="Permalink to this definition">¶</a></dt>
+<dd><p>True for closed file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="prody.sequence.msafile.MSAFile.format">
+<code class="descname">format</code><a class="headerlink" href="#prody.sequence.msafile.MSAFile.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format of the MSA file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.sequence.msafile.splitSeqLabel">
+<code class="descname">splitSeqLabel</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/sequence.html#splitSeqLabel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.splitSeqLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns label, starting residue number, and ending residue number parsed
+from sequence label.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.sequence.msafile.parseMSA">
+<code class="descname">parseMSA</code><span class="sig-paren">(</span><em>filename</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#parseMSA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.parseMSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an <a class="reference internal" href="../../../../manual/reference/sequence/msa.html#prody.sequence.msa.MSA" title="prody.sequence.msa.MSA"><code class="xref py py-class docutils literal"><span class="pre">MSA</span></code></a> instance that stores multiple sequence alignment
+and sequence labels parsed from Stockholm, SELEX, or FASTA format
+<em>filename</em> file, which may be a compressed file. Uncompressed MSA files
+are parsed using C code at a fraction of the time it would take to parse
+compressed files in Python.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.sequence.msafile.writeMSA">
+<code class="descname">writeMSA</code><span class="sig-paren">(</span><em>filename</em>, <em>msa</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/sequence/msafile.html#writeMSA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.sequence.msafile.writeMSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <em>filename</em> containing <em>msa</em>, a <a class="reference internal" href="../../../../manual/reference/sequence/msa.html#prody.sequence.msa.MSA" title="prody.sequence.msa.MSA"><code class="xref py py-class docutils literal"><span class="pre">MSA</span></code></a> or <a class="reference internal" href="../../../../manual/reference/sequence/msafile.html#prody.sequence.msafile.MSAFile" title="prody.sequence.msafile.MSAFile"><code class="xref py py-class docutils literal"><span class="pre">MSAFile</span></code></a>
+instance, in the specified <em>format</em>, which can be <em>SELEX</em>, <em>Stockholm</em>, or
+<em>FASTA</em>.  If <em>compressed</em> is <strong>True</strong> or <em>filename</em> ends with <code class="file docutils literal"><span class="pre">.gz</span></code>,
+a compressed file will be written.  <a class="reference internal" href="../../../../manual/reference/sequence/msa.html#prody.sequence.msa.MSA" title="prody.sequence.msa.MSA"><code class="xref py py-class docutils literal"><span class="pre">MSA</span></code></a> instances will be written
+using C function into uncompressed files.</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

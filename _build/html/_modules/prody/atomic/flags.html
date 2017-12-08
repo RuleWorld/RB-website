@@ -1,0 +1,1336 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>prody.atomic.flags &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../index.html">
+        <img src="../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../index.html">Home  &raquo;</a></li>
+          <li><a href="../../index.html" >Module code &raquo;</a></li>
+          <li><a href="../../prody.html" accesskey="U">prody &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <h1>Source code for prody.atomic.flags</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;This module defines atom flags that are used in :ref:`selections`.</span>
+<span class="sd">You can read this page in interactive sessions using ``help(flags)``.</span>
+
+<span class="sd">Flag labels can be used in atom selections:</span>
+
+<span class="sd">.. ipython:: python</span>
+
+<span class="sd">   from prody import *</span>
+<span class="sd">   p = parsePDB(&#39;1ubi&#39;)</span>
+<span class="sd">   p.select(&#39;protein&#39;)</span>
+
+<span class="sd">Flag labels can be combined with dot operator as follows to make selections:</span>
+
+<span class="sd">.. ipython:: python</span>
+
+<span class="sd">   p.protein</span>
+<span class="sd">   p.protein.acidic  # selects acidic residues</span>
+
+<span class="sd">Flag labels can be prefixed with ``&#39;is&#39;`` to check whether all atoms in</span>
+<span class="sd">an :class:`.Atomic` instance are flagged the same way:</span>
+
+<span class="sd">.. ipython:: python</span>
+
+<span class="sd">   p.protein.ishetero</span>
+<span class="sd">   p.water.ishetero</span>
+
+<span class="sd">Flag labels can also be used to make quick atom counts:</span>
+
+<span class="sd">.. ipython:: python</span>
+
+<span class="sd">   p.numAtoms()</span>
+<span class="sd">   p.numAtoms(&#39;protein&#39;)</span>
+<span class="sd">   p.numAtoms(&#39;water&#39;)&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="nb">compile</span> <span class="k">as</span> <span class="n">recompile</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">ones</span><span class="p">,</span> <span class="n">zeros</span>
+
+<span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">SETTINGS</span><span class="p">,</span> <span class="n">LOGGER</span>
+<span class="kn">from</span> <span class="nn">prody.utilities</span> <span class="kn">import</span> <span class="n">joinLinks</span><span class="p">,</span> <span class="n">joinTerms</span><span class="p">,</span> <span class="n">wrapText</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;flagDefinition&#39;</span><span class="p">,</span> <span class="s1">&#39;listNonstdAAProps&#39;</span><span class="p">,</span> <span class="s1">&#39;getNonstdProperties&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;addNonstdAminoacid&#39;</span><span class="p">,</span> <span class="s1">&#39;delNonstdAminoacid&#39;</span><span class="p">]</span>
+
+
+<span class="n">TIMESTAMP_KEY</span> <span class="o">=</span> <span class="s1">&#39;flags_timestamp&#39;</span>
+<span class="n">DEFINITIONS_KEY</span> <span class="o">=</span> <span class="s1">&#39;flags_definitions&#39;</span>
+<span class="n">NONSTANDARD_KEY</span> <span class="o">=</span> <span class="s1">&#39;flags_nonstandard&#39;</span>
+
+<span class="n">ALIASES</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">PLANTERS</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">EDITORS</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">FIELDS</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>  <span class="c1"># flags that fill be nulled when a field changes</span>
+<span class="n">FIELDSDEFAULT</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;resname&#39;</span><span class="p">,</span> <span class="s1">&#39;resnum&#39;</span><span class="p">]</span>
+<span class="n">TIMESTAMP</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">PDBLIGSUM</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;.. _{0}: &#39;</span>
+             <span class="s1">&#39;http://www.pdb.org/pdb/ligand/ligandsummary.do?hetId={0}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">STANDARDAA</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;ASN&#39;</span><span class="p">,</span> <span class="s1">&#39;ASP&#39;</span><span class="p">,</span> <span class="s1">&#39;CYS&#39;</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">,</span> <span class="s1">&#39;HIS&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;LYS&#39;</span><span class="p">,</span> <span class="s1">&#39;MET&#39;</span><span class="p">,</span> <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">,</span> <span class="s1">&#39;THR&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;TYR&#39;</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">]</span>
+
+<span class="n">NONSTANDARD</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ASX&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;GLX&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;CSO&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;CYX&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;buried&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;HIP&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;HID&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;HIE&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;HSD&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;HSE&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;HSP&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;acidic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;MSE&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;buried&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SEC&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;buried&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SEP&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;acidic&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;TPO&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;acidic&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;PTR&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;aromatic&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;acidic&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;XLE&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;aliphatic&#39;</span><span class="p">,</span> <span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;buried&#39;</span><span class="p">,</span> <span class="s1">&#39;hydrophobic&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;XAA&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">(),</span>
+<span class="p">}</span>
+
+<span class="n">DEFAULTS</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="s1">&#39;stdaa&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;ASN&#39;</span><span class="p">,</span> <span class="s1">&#39;ASP&#39;</span><span class="p">,</span> <span class="s1">&#39;CYS&#39;</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;HIS&#39;</span><span class="p">,</span> <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;LYS&#39;</span><span class="p">,</span> <span class="s1">&#39;MET&#39;</span><span class="p">,</span> <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;THR&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;nonstdaa&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">(</span><span class="n">NONSTANDARD</span><span class="p">),</span>
+
+    <span class="c1"># GLY is excluded from this list</span>
+    <span class="s1">&#39;aliphatic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;aromatic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;HIS&#39;</span><span class="p">,</span> <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;acidic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ASP&#39;</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;basic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;LYS&#39;</span><span class="p">,</span> <span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;HIS&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;neutral&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;ASN&#39;</span><span class="p">,</span> <span class="s1">&#39;CYS&#39;</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">,</span> <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;MET&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">,</span> <span class="s1">&#39;THR&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;buried&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;CYS&#39;</span><span class="p">,</span> <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;MET&#39;</span><span class="p">,</span> <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;surface&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;ASN&#39;</span><span class="p">,</span> <span class="s1">&#39;ASP&#39;</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">,</span> <span class="s1">&#39;HIS&#39;</span><span class="p">,</span> <span class="s1">&#39;LYS&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">,</span> <span class="s1">&#39;THR&#39;</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;cyclic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;HIS&#39;</span><span class="p">,</span> <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;acyclic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;ASN&#39;</span><span class="p">,</span> <span class="s1">&#39;ASP&#39;</span><span class="p">,</span> <span class="s1">&#39;CYS&#39;</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;LYS&#39;</span><span class="p">,</span> <span class="s1">&#39;MET&#39;</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">,</span> <span class="s1">&#39;THR&#39;</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;hydrophobic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;MET&#39;</span><span class="p">,</span> <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;VAL&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;polar&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;ASN&#39;</span><span class="p">,</span> <span class="s1">&#39;ASP&#39;</span><span class="p">,</span> <span class="s1">&#39;CYS&#39;</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">,</span> <span class="s1">&#39;HIS&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;LYS&#39;</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">,</span> <span class="s1">&#39;THR&#39;</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;small&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ALA&#39;</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;medium&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ASN&#39;</span><span class="p">,</span> <span class="s1">&#39;ASP&#39;</span><span class="p">,</span> <span class="s1">&#39;CYS&#39;</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">,</span> <span class="s1">&#39;THR&#39;</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;large&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">,</span> <span class="s1">&#39;HIS&#39;</span><span class="p">,</span> <span class="s1">&#39;ILE&#39;</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">,</span> <span class="s1">&#39;LYS&#39;</span><span class="p">,</span> <span class="s1">&#39;MET&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;PHE&#39;</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">]),</span>
+
+
+    <span class="s1">&#39;hydrogen&#39;</span><span class="p">:</span> <span class="s1">&#39;[0-9]?H.*&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;carbon&#39;</span><span class="p">:</span> <span class="s1">&#39;C.*&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;nitrogen&#39;</span><span class="p">:</span> <span class="s1">&#39;N.*&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;oxygen&#39;</span><span class="p">:</span> <span class="s1">&#39;O.*&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sulfur&#39;</span><span class="p">:</span> <span class="s1">&#39;S.*&#39;</span><span class="p">,</span>
+
+    <span class="s1">&#39;nucleobase&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;GUN&#39;</span><span class="p">,</span> <span class="s1">&#39;ADE&#39;</span><span class="p">,</span> <span class="s1">&#39;CYT&#39;</span><span class="p">,</span> <span class="s1">&#39;THY&#39;</span><span class="p">,</span> <span class="s1">&#39;URA&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;nucleotide&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;DA&#39;</span><span class="p">,</span> <span class="s1">&#39;DC&#39;</span><span class="p">,</span> <span class="s1">&#39;DG&#39;</span><span class="p">,</span> <span class="s1">&#39;DT&#39;</span><span class="p">,</span> <span class="s1">&#39;DU&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;nucleoside&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;AMP&#39;</span><span class="p">,</span> <span class="s1">&#39;ADP&#39;</span><span class="p">,</span> <span class="s1">&#39;ATP&#39;</span><span class="p">,</span> <span class="s1">&#39;CDP&#39;</span><span class="p">,</span> <span class="s1">&#39;CTP&#39;</span><span class="p">,</span> <span class="s1">&#39;GMP&#39;</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">,</span> <span class="s1">&#39;GTP&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;TMP&#39;</span><span class="p">,</span> <span class="s1">&#39;TTP&#39;</span><span class="p">,</span> <span class="s1">&#39;UMP&#39;</span><span class="p">,</span> <span class="s1">&#39;UDP&#39;</span><span class="p">,</span> <span class="s1">&#39;UTP&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;at&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ADE&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;THY&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;cg&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;CYT&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;GUN&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;purine&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;ADE&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;GUN&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;pyrimidine&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;CYT&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;THY&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;URA&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;water&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;HOH&#39;</span><span class="p">,</span> <span class="s1">&#39;DOD&#39;</span><span class="p">,</span> <span class="s1">&#39;WAT&#39;</span><span class="p">,</span> <span class="s1">&#39;TIP3&#39;</span><span class="p">,</span> <span class="s1">&#39;H2O&#39;</span><span class="p">,</span> <span class="s1">&#39;OH2&#39;</span><span class="p">,</span> <span class="s1">&#39;TIP&#39;</span><span class="p">,</span> <span class="s1">&#39;TIP2&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;TIP4&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;ion&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;AL&#39;</span><span class="p">,</span> <span class="s1">&#39;BA&#39;</span><span class="p">,</span> <span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">,</span> <span class="s1">&#39;CL&#39;</span><span class="p">,</span> <span class="s1">&#39;CO&#39;</span><span class="p">,</span> <span class="s1">&#39;CS&#39;</span><span class="p">,</span> <span class="s1">&#39;CU&#39;</span><span class="p">,</span> <span class="s1">&#39;CU1&#39;</span><span class="p">,</span> <span class="s1">&#39;CUA&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;HG&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;IOD&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;MG&#39;</span><span class="p">,</span> <span class="s1">&#39;MN3&#39;</span><span class="p">,</span> <span class="s1">&#39;NA&#39;</span><span class="p">,</span> <span class="s1">&#39;PB&#39;</span><span class="p">,</span> <span class="s1">&#39;PT&#39;</span><span class="p">,</span> <span class="s1">&#39;RB&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;TB&#39;</span><span class="p">,</span> <span class="s1">&#39;TL&#39;</span><span class="p">,</span> <span class="s1">&#39;WO4&#39;</span><span class="p">,</span> <span class="s1">&#39;YB&#39;</span><span class="p">,</span> <span class="s1">&#39;ZN&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;ion_other&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;CAL&#39;</span><span class="p">,</span> <span class="s1">&#39;CES&#39;</span><span class="p">,</span> <span class="s1">&#39;CLA&#39;</span><span class="p">,</span> <span class="s1">&#39;POT&#39;</span><span class="p">,</span> <span class="s1">&#39;SOD&#39;</span><span class="p">,</span> <span class="s1">&#39;ZN2&#39;</span><span class="p">]),</span>
+
+
+    <span class="s1">&#39;lipid&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;GPE&#39;</span><span class="p">,</span> <span class="s1">&#39;LPP&#39;</span><span class="p">,</span> <span class="s1">&#39;OLA&#39;</span><span class="p">,</span> <span class="s1">&#39;SDS&#39;</span><span class="p">,</span> <span class="s1">&#39;STE&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;lipid_other&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;DLPE&#39;</span><span class="p">,</span> <span class="s1">&#39;DMPC&#39;</span><span class="p">,</span> <span class="s1">&#39;LPPC&#39;</span><span class="p">,</span> <span class="s1">&#39;OLEO&#39;</span><span class="p">,</span> <span class="s1">&#39;PALM&#39;</span><span class="p">,</span> <span class="s1">&#39;PCGL&#39;</span><span class="p">,</span> <span class="s1">&#39;POPC&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;POPE&#39;</span><span class="p">,</span> <span class="s1">&#39;STEA&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;sugar&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;GLC&#39;</span><span class="p">,</span> <span class="s1">&#39;GLO&#39;</span><span class="p">,</span> <span class="s1">&#39;BGC&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;sugar_other&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;AGLC&#39;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;heme&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;1FH&#39;</span><span class="p">,</span> <span class="s1">&#39;2FH&#39;</span><span class="p">,</span> <span class="s1">&#39;DDH&#39;</span><span class="p">,</span> <span class="s1">&#39;DHE&#39;</span><span class="p">,</span> <span class="s1">&#39;HAS&#39;</span><span class="p">,</span> <span class="s1">&#39;HDD&#39;</span><span class="p">,</span> <span class="s1">&#39;HDE&#39;</span><span class="p">,</span> <span class="s1">&#39;HDM&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;HEA&#39;</span><span class="p">,</span> <span class="s1">&#39;HEB&#39;</span><span class="p">,</span> <span class="s1">&#39;HEC&#39;</span><span class="p">,</span> <span class="s1">&#39;HEM&#39;</span><span class="p">,</span> <span class="s1">&#39;HEO&#39;</span><span class="p">,</span> <span class="s1">&#39;HES&#39;</span><span class="p">,</span> <span class="s1">&#39;HEV&#39;</span><span class="p">,</span> <span class="s1">&#39;NTE&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;SRM&#39;</span><span class="p">,</span> <span class="s1">&#39;VER&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;heme_other&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;HEMO&#39;</span><span class="p">,</span> <span class="s1">&#39;HEMR&#39;</span><span class="p">])</span>
+
+<span class="p">}</span>
+
+<span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;backbone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;bb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">])</span>
+<span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;backbonefull&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;bbfull&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span>
+                                                     <span class="s1">&#39;H1&#39;</span><span class="p">,</span> <span class="s1">&#39;H2&#39;</span><span class="p">,</span> <span class="s1">&#39;H3&#39;</span><span class="p">,</span> <span class="s1">&#39;OXT&#39;</span><span class="p">])</span>
+
+<span class="n">CATEGORIES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;aromaticity&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;aromatic&#39;</span><span class="p">,</span> <span class="s1">&#39;aliphatic&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;cyclic&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acyclic&#39;</span><span class="p">,</span> <span class="s1">&#39;cyclic&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;charge&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;acidic&#39;</span><span class="p">,</span> <span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;buried&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;hydrophobicity&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;hydrophobic&#39;</span><span class="p">,</span> <span class="s1">&#39;polar&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;small&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">]),</span>
+<span class="p">}</span>
+
+<span class="n">CATEGORIZED</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">catgroup</span> <span class="ow">in</span> <span class="n">CATEGORIES</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="n">catgroup</span><span class="p">:</span>
+        <span class="n">CATEGORIZED</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="n">category</span><span class="p">])</span>
+<span class="n">INDEPENDENT</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">CATEGORIZED</span><span class="p">)</span>
+<span class="n">CATEGORIZED</span><span class="p">[</span><span class="s1">&#39;charged&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">CATEGORIZED</span><span class="p">[</span><span class="s1">&#39;acidic&#39;</span><span class="p">])</span>
+<span class="n">CATEGORIZED</span><span class="p">[</span><span class="s1">&#39;charged&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">CATEGORIZED</span><span class="p">[</span><span class="s1">&#39;basic&#39;</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">resi</span><span class="p">,</span> <span class="n">cats</span> <span class="ow">in</span> <span class="n">NONSTANDARD</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">:</span>
+        <span class="n">CATEGORIZED</span><span class="p">[</span><span class="n">cat</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">addPlanter</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">labels</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+    <span class="n">aliases</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;aliases&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">editor</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;editor&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">:</span>
+        <span class="n">PLANTERS</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
+        <span class="k">if</span> <span class="n">aliases</span><span class="p">:</span>
+            <span class="n">ALIASES</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">labels</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ALIASES</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">label</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">editor</span><span class="p">:</span>
+            <span class="n">EDITORS</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">editor</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fields&#39;</span><span class="p">,</span> <span class="n">FIELDSDEFAULT</span><span class="p">):</span>
+        <span class="n">FIELDS</span><span class="p">[</span><span class="n">field</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">updateNonstandard</span><span class="p">(</span><span class="n">nonstd</span><span class="p">):</span>
+
+    <span class="n">SETTINGS</span><span class="p">[</span><span class="n">NONSTANDARD_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="n">nonstd</span>
+    <span class="n">SETTINGS</span><span class="p">[</span><span class="n">TIMESTAMP_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">())</span>
+    <span class="n">SETTINGS</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+    <span class="n">updateDefinitions</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">changeDefinitions</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+    <span class="n">defs</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">DEFINITIONS_KEY</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="n">defs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">SETTINGS</span><span class="p">[</span><span class="n">DEFINITIONS_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="n">defs</span>
+    <span class="n">SETTINGS</span><span class="p">[</span><span class="n">TIMESTAMP_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">())</span>
+    <span class="n">SETTINGS</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+    <span class="n">updateDefinitions</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">resetDefinitions</span><span class="p">(</span><span class="n">flag</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span> <span class="s1">&#39;all&#39;</span><span class="p">:</span>
+        <span class="n">SETTINGS</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">DEFINITIONS_KEY</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">SETTINGS</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">NONSTANDARD_KEY</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">SETTINGS</span><span class="p">[</span><span class="n">TIMESTAMP_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">())</span>
+        <span class="n">SETTINGS</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">updateDefinitions</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">flag</span> <span class="o">==</span> <span class="s1">&#39;nonstdaa&#39;</span><span class="p">:</span>
+        <span class="n">SETTINGS</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">NONSTANDARD_KEY</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">SETTINGS</span><span class="p">[</span><span class="n">TIMESTAMP_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">())</span>
+        <span class="n">SETTINGS</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">updateDefinitions</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">SETTINGS</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">DEFINITIONS_KEY</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">SETTINGS</span><span class="p">[</span><span class="n">TIMESTAMP_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">())</span>
+            <span class="n">SETTINGS</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">updateDefinitions</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">changeResnames</span><span class="p">(</span><span class="n">flag</span><span class="p">,</span> <span class="n">resnames</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Change the list of residue names associated with a flag.  *flag* must</span>
+<span class="sd">    be a string, and *resnames* may be a list, tuple, or set of strings.  The</span>
+<span class="sd">    existing list of residue names will be overwritten with the given residue</span>
+<span class="sd">    names.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">flag</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">EDITORS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not an editable flag&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">flag</span><span class="p">)))</span>
+
+    <span class="n">resnames</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">rn</span><span class="p">)</span> <span class="k">for</span> <span class="n">rn</span> <span class="ow">in</span> <span class="n">resnames</span><span class="p">]</span>
+    <span class="n">changeDefinitions</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="n">flag</span><span class="p">:</span> <span class="n">resnames</span><span class="p">})</span>
+
+
+<span class="k">def</span> <span class="nf">changeNameRegex</span><span class="p">(</span><span class="n">flag</span><span class="p">,</span> <span class="n">regex</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set regular expression used for flagging elements based on atom names.</span>
+<span class="sd">    See :ref:`element-flags` for the default list of flags.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">flag</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">EDITORS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not an editable flag&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">flag</span><span class="p">)))</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">recompile</span><span class="p">(</span><span class="n">regex</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid regular expression, {1}&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">regex</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">changeDefinitions</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="n">flag</span><span class="p">:</span> <span class="n">regex</span><span class="p">})</span>
+
+
+<span class="k">def</span> <span class="nf">changeBackbone</span><span class="p">(</span><span class="n">flag</span><span class="p">,</span> <span class="n">names</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set protein :term:`backbone` or :term:`backbonefull` atom names.</span>
+<span class="sd">    *names* must be a list of atom names.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">flag</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">EDITORS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not an editable flag&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">flag</span><span class="p">)))</span>
+
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span> <span class="k">for</span> <span class="n">nm</span> <span class="ow">in</span> <span class="n">names</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">flag</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;full&#39;</span><span class="p">):</span>
+        <span class="n">changeDefinitions</span><span class="p">(</span><span class="n">bbfull</span><span class="o">=</span><span class="n">names</span><span class="p">,</span> <span class="n">backbonefull</span><span class="o">=</span><span class="n">names</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">changeDefinitions</span><span class="p">(</span><span class="n">bb</span><span class="o">=</span><span class="n">names</span><span class="p">,</span> <span class="n">backbone</span><span class="o">=</span><span class="n">names</span><span class="p">)</span>
+
+
+<span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Protein</span>
+<span class="s2">-------------------------------------------------------------------------------</span>
+
+<span class="s2">.. glossary::</span>
+
+<span class="s2">   protein</span>
+<span class="s2">   aminoacid</span>
+<span class="s2">      indicates the twenty standard amino acids (:term:`stdaa`) and some</span>
+<span class="s2">      non-standard amino acids (:term:`nonstdaa`) described below.  Residue</span>
+<span class="s2">      must also have an atom named ``&#39;CA&#39;`` in addition to having a qualifying</span>
+<span class="s2">      residue name.</span>
+
+
+<span class="s2">   stdaa</span>
+<span class="s2">      {stdaa}</span>
+
+
+<span class="s2">   nonstdaa</span>
+<span class="s2">      indicates one of the following residues:</span>
+
+<span class="s2">      ==========  ===================================================</span>
+<span class="s2">      `ASX`_ (B)  asparagine or aspartic acid</span>
+<span class="s2">      `GLX`_ (Z)  glutamine or glutamic acid</span>
+<span class="s2">      `CSO`_ (C)  S-hydroxycysteine</span>
+<span class="s2">      `HIP`_ (H)  ND1-phosphohistidine</span>
+<span class="s2">       HSD   (H)  prototropic tautomer of histidine, H on ND1 (CHARMM)</span>
+<span class="s2">       HSE   (H)  prototropic tautomer of histidine, H on NE2 (CHARMM)</span>
+<span class="s2">       HSP   (H)  protonated histidine</span>
+<span class="s2">      `MSE`_      selenomethionine</span>
+<span class="s2">      `SEC`_ (U)  selenocysteine</span>
+<span class="s2">      `SEP`_ (S)  phosphoserine</span>
+<span class="s2">      `TPO`_ (T)  phosphothreonine</span>
+<span class="s2">      `PTR`_ (Y)  O-phosphotyrosine</span>
+<span class="s2">       XLE   (J)  leucine or isoleucine</span>
+<span class="s2">       XAA   (X)  unspecified or unknown</span>
+<span class="s2">      ==========  ===================================================</span>
+
+<span class="s2">      You can modify the list of non-standard amino acids using</span>
+<span class="s2">      :func:`addNonstdAminoacid`, :func:`delNonstdAminoacid`, and</span>
+<span class="s2">      :func:`listNonstdAAProps`.</span>
+
+
+<span class="s2">   calpha</span>
+<span class="s2">   ca</span>
+<span class="s2">      Cα atoms of :term:`protein` residues, same as selection</span>
+<span class="s2">      ``&#39;name CA and protein&#39;``</span>
+
+
+<span class="s2">   backbone</span>
+<span class="s2">   bb</span>
+<span class="s2">      non-hydrogen backbone atoms of :term:`protein` residues, same as</span>
+<span class="s2">      selection ``&#39;name CA C O N and protein&#39;``</span>
+
+
+<span class="s2">   backbonefull</span>
+<span class="s2">   bbfull</span>
+<span class="s2">      backbone atoms of :term:`protein` residues, same as selection</span>
+<span class="s2">      ``&#39;name CA C O N H H1 H2 H3 OXT and protein&#39;``</span>
+
+
+<span class="s2">   sidechain</span>
+<span class="s2">   sc</span>
+<span class="s2">      side-chain atoms of :term:`protein` residues, same as selection</span>
+<span class="s2">      ``&#39;protein and not backbonefull&#39;``</span>
+
+
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+
+<span class="n">stdaa</span> <span class="o">=</span> <span class="n">wrapText</span><span class="p">(</span><span class="s1">&#39;indicates the standard amino acid residues: &#39;</span> <span class="o">+</span>
+                 <span class="n">joinLinks</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;stdaa&#39;</span><span class="p">],</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;, and &#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+                 <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">6</span><span class="p">))</span>
+
+
+<span class="n">cats</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">CATEGORIZED</span><span class="p">)</span>
+<span class="n">cats</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">CATEGORIZED</span><span class="p">[</span><span class="n">cat</span><span class="p">]</span>
+    <span class="n">res</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">   {cat}</span>
+<span class="s2">       {res}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cat</span><span class="o">=</span><span class="n">cat</span><span class="p">,</span> <span class="n">res</span><span class="o">=</span><span class="n">wrapText</span><span class="p">(</span><span class="s1">&#39;residues &#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">res</span><span class="p">),</span>
+                                 <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;stdaa&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;nonstdaa&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+
+<span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Nucleic</span>
+<span class="s2">-------------------------------------------------------------------------------</span>
+
+<span class="s2">.. glossary::</span>
+
+<span class="s2">   nucleic</span>
+<span class="s2">      indicates :term:`nucleobase`, :term:`nucleotide`, and some</span>
+<span class="s2">      :term:`nucleoside` derivatives that are described below, so it is same</span>
+<span class="s2">      as ``&#39;nucleobase or nucleotide or nucleoside&#39;``.</span>
+
+<span class="s2">   nucleobase</span>
+<span class="s2">      indicates `ADE`_ (adenine), `GUN`_ (guanine), `CYT`_</span>
+<span class="s2">      (cytosine), `THY`_ (thymine), and `URA`_ (uracil).</span>
+
+<span class="s2">   nucleotide</span>
+<span class="s2">      indicates residues with the following names:</span>
+
+<span class="s2">      =======  ==================================</span>
+<span class="s2">      `DA`_    2&#39;-deoxyadenosine-5&#39;-monophosphate</span>
+<span class="s2">      `DC`_    2&#39;-deoxycytidine-5&#39;-monophosphate</span>
+<span class="s2">      `DG`_    2&#39;-deoxyguanosine-5&#39;-monophosphate</span>
+<span class="s2">      `DT`_    2&#39;-deoxythymidine-5&#39;-monophosphate</span>
+<span class="s2">      `DU`_    2&#39;-deoxyuridine-5&#39;-monophosphate</span>
+<span class="s2">      `A`_     adenosine-5&#39;-monophosphate</span>
+<span class="s2">      `C`_     cytidine-5&#39;-monophosphate</span>
+<span class="s2">      `G`_     guanosine-5&#39;-monophosphate</span>
+<span class="s2">      `T`_     2&#39;-deoxythymidine-5&#39;-monophosphate</span>
+<span class="s2">      `U`_     uridine-5&#39;-monophosphate</span>
+<span class="s2">      =======  ==================================</span>
+
+<span class="s2">   nucleoside</span>
+<span class="s2">      indicates following nucleoside derivatives that are recognized by *PDB*:</span>
+
+<span class="s2">      =======  ================================</span>
+<span class="s2">      `AMP`_   adenosine monophosphate</span>
+<span class="s2">      `ADP`_   adenosine-5&#39;-diphosphate</span>
+<span class="s2">      `ATP`_   adenosine-5&#39;-triphosphate</span>
+<span class="s2">      `CDP`_   cytidine-5&#39;-diphosphate</span>
+<span class="s2">      `CTP`_   cytidine-5&#39;-triphosphate</span>
+<span class="s2">      `GMP`_   guanosine</span>
+<span class="s2">      `GDP`_   guanosine-5&#39;-diphosphate</span>
+<span class="s2">      `GTP`_   guanosine-5&#39;-triphosphate</span>
+<span class="s2">      `TMP`_   thymidine-5&#39;-phosphate</span>
+<span class="s2">      `TTP`_   thymidine-5&#39;-triphosphate</span>
+<span class="s2">      `UMP`_   2&#39;-deoxyuridine 5&#39;-monophosphate</span>
+<span class="s2">      `UDP`_   uridine 5&#39;-diphosphate</span>
+<span class="s2">      `UTP`_   uridine 5&#39;-triphosphate</span>
+<span class="s2">      =======  ================================</span>
+
+
+<span class="s2">   at</span>
+<span class="s2">      same as selection ``&#39;resname ADE A THY T&#39;``</span>
+
+<span class="s2">   cg</span>
+<span class="s2">      same as selection ``&#39;resname CYT C GUN G&#39;``</span>
+
+<span class="s2">   purine</span>
+<span class="s2">      same as selection ``&#39;resname ADE A GUN G&#39;``</span>
+
+<span class="s2">   pyrimidine</span>
+<span class="s2">      same as selection ``&#39;resname CYT C THY T URA U&#39;``</span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;nucleobase&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;nucleotide&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;nucleoside&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+<span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Heteros</span>
+<span class="s2">-------------------------------------------------------------------------------</span>
+
+<span class="s2">.. glossary::</span>
+
+<span class="s2">   hetero</span>
+<span class="s2">      indicates anything other than a :term:`protein` or a</span>
+<span class="s2">      :term:`nucleic` residue, i.e. ``&#39;not (protein or nucleic)&#39;``.</span>
+
+
+<span class="s2">   hetatm</span>
+<span class="s2">      is available when atomic data is parsed from a PDB or similar</span>
+<span class="s2">      format file and indicates atoms that are marked ``&#39;HETATM&#39;`` in the file.</span>
+
+
+<span class="s2">   water</span>
+<span class="s2">      indices `HOH`_ and `DOD`_ recognized by *PDB* and also WAT, TIP3, H2O,</span>
+<span class="s2">      OH2, TIP, TIP2, and TIP4 recognized by molecular dynamics (MD) force</span>
+<span class="s2">      fields.</span>
+
+<span class="s2">      .. _HOH: http://www.pdb.org/pdb/ligand/ligandsummary.do?hetId=HOH</span>
+
+<span class="s2">      .. _DOD: http://www.pdb.org/pdb/ligand/ligandsummary.do?hetId=DOD</span>
+
+<span class="s2">      Previously used water types HH0, OHH, and SOL conflict with other</span>
+<span class="s2">      compounds in the *PDB*, so are removed from the definition of this flag.</span>
+
+
+<span class="s2">   ion</span>
+<span class="s2">      indicates the following ions most of which are recognized by the *PDB*</span>
+<span class="s2">      and others by MD force fields.</span>
+
+<span class="s2">      =======  ==================  =====  ========  ==========</span>
+<span class="s2">      \                            *PDB*  *Source*  *Conflict*</span>
+<span class="s2">      `AL`_    aluminum            Yes</span>
+<span class="s2">      `BA`_    barium              Yes</span>
+<span class="s2">      `CA`_    calcium             Yes</span>
+<span class="s2">      `CD`_    cadmium             Yes</span>
+<span class="s2">      `CL`_    chloride            Yes</span>
+<span class="s2">      `CO`_    cobalt (ii)         Yes</span>
+<span class="s2">      `CS`_    cesium              Yes</span>
+<span class="s2">      `CU`_    copper (ii)         Yes</span>
+<span class="s2">      `CU1`_   copper (i)          Yes</span>
+<span class="s2">      `CUA`_   dinuclear copper    Yes</span>
+<span class="s2">      `HG`_    mercury (ii)        Yes</span>
+<span class="s2">      `IN`_    indium (iii)        Yes</span>
+<span class="s2">      `IOD`_   iodide              Yes</span>
+<span class="s2">      `K`_     potassium           Yes</span>
+<span class="s2">      `MG`_    magnesium           Yes</span>
+<span class="s2">      `MN3`_   manganese (iii)     Yes</span>
+<span class="s2">      `NA`_    sodium              Yes</span>
+<span class="s2">      `PB`_    lead (ii)           Yes</span>
+<span class="s2">      `PT`_    platinum (ii)       Yes</span>
+<span class="s2">      `RB`_    rubidium            Yes</span>
+<span class="s2">      `TB`_    terbium (iii)       Yes</span>
+<span class="s2">      `TL`_    thallium (i)        Yes</span>
+<span class="s2">      `WO4`_   thungstate (vi)     Yes</span>
+<span class="s2">      `YB`_    ytterbium (iii)     Yes</span>
+<span class="s2">      `ZN`_    zinc                Yes</span>
+<span class="s2">      CAL      calcium             No     CHARMM    Yes</span>
+<span class="s2">      CES      cesium              No     CHARMM    Yes</span>
+<span class="s2">      CLA      chloride            No     CHARMM    Yes</span>
+<span class="s2">      POT      potassium           No     CHARMM    Yes</span>
+<span class="s2">      SOD      sodium              No     CHARMM    Yes</span>
+<span class="s2">      ZN2      zinc                No     CHARMM    No</span>
+<span class="s2">      =======  ==================  =====  ========  ==========</span>
+
+<span class="s2">      Ion identifiers that are obsoleted by *PDB* (MO3, MO4, MO5, MO6, NAW,</span>
+<span class="s2">      OC7, and ZN1) are removed from this definition.</span>
+
+
+<span class="s2">   lipid</span>
+<span class="s2">      {lipid}</span>
+
+
+<span class="s2">   sugar</span>
+<span class="s2">      {sugar}</span>
+
+
+<span class="s2">   heme</span>
+<span class="s2">      {heme}</span>
+
+<span class="s2">   pdbter</span>
+<span class="s2">      is available when atomic data is parsed from a PDB format file and</span>
+<span class="s2">      indicates atoms that were followed by ``&#39;TER&#39;`` record.</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+
+<span class="n">lipid</span> <span class="o">=</span> <span class="n">wrapText</span><span class="p">(</span><span class="s1">&#39;indicates &#39;</span> <span class="o">+</span>
+                 <span class="n">joinLinks</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;lipid&#39;</span><span class="p">],</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;, and &#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">+</span>
+                 <span class="s1">&#39; from *PDB*, and also &#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;lipid_other&#39;</span><span class="p">])</span> <span class="o">+</span>
+                 <span class="s1">&#39; from *CHARMM* force field.&#39;</span><span class="p">,</span> <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">6</span><span class="p">),</span>
+
+<span class="n">sugar</span> <span class="o">=</span> <span class="n">wrapText</span><span class="p">(</span><span class="s1">&#39;indicates &#39;</span> <span class="o">+</span>
+                 <span class="n">joinLinks</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;sugar&#39;</span><span class="p">],</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;, and &#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">+</span>
+                 <span class="s1">&#39; from *PDB*, and also AGLC from *CHARMM*.&#39;</span><span class="p">,</span>
+                 <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">6</span><span class="p">),</span>
+
+<span class="n">heme</span> <span class="o">=</span> <span class="n">wrapText</span><span class="p">(</span><span class="s1">&#39;indicates &#39;</span> <span class="o">+</span>
+                <span class="n">joinLinks</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;heme&#39;</span><span class="p">],</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;, and &#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">+</span>
+                <span class="s1">&#39; from *PDB*, and also HEMO and HEMR from CHARMM.&#39;</span><span class="p">,</span>
+                <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;ion&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;lipid&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;sugar&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">resi</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;heme&#39;</span><span class="p">]:</span>
+    <span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">PDBLIGSUM</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+
+<span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Elements</span>
+<span class="s2">-------------------------------------------------------------------------------</span>
+
+<span class="s2">Following elements found in proteins are recognized by applying regular</span>
+<span class="s2">expressions to atom names:</span>
+
+<span class="s2">.. glossary::</span>
+
+<span class="s2">   carbon</span>
+<span class="s2">      carbon atoms, same as ``&#39;name &quot;C.*&quot; and not ion&#39;``</span>
+
+<span class="s2">   nitrogen</span>
+<span class="s2">      nitrogen atoms, same as ``&#39;name &quot;N.*&quot; and not ion&#39;``</span>
+
+<span class="s2">   oxygen</span>
+<span class="s2">      oxygen atoms, same as ``&#39;name &quot;O.*&quot; and not ion&#39;``</span>
+
+<span class="s2">   sulfur</span>
+<span class="s2">      sulfur atoms, same as ``&#39;name &quot;S.*&quot; and not ion&#39;``</span>
+
+<span class="s2">   hydrogen</span>
+<span class="s2">      hydrogen atoms, same as ``&#39;name &quot;[1-9]?H.*&quot; and not ion&#39;``</span>
+
+<span class="s2">   noh</span>
+<span class="s2">   heavy</span>
+<span class="s2">      non hydrogen atoms, same as ``&#39;not hydrogen``</span>
+
+
+<span class="s2">``&#39;not ion&#39;`` is appended to above definitions to avoid conflicts with</span>
+<span class="s2">:term:`ion` atoms.</span>
+
+<span class="s2">Structure</span>
+<span class="s2">-------------------------------------------------------------------------------</span>
+
+<span class="s2">Following secondary structure flags are defined but before they can be used,</span>
+<span class="s2">secondary structure assignments must be made.</span>
+
+<span class="s2">.. glossary::</span>
+
+<span class="s2">   extended</span>
+<span class="s2">      extended conformation, same as ``&#39;secondary E&#39;``</span>
+
+<span class="s2">   helix</span>
+<span class="s2">      α-helix conformation, same as ``&#39;secondary H&#39;``</span>
+
+<span class="s2">   helix310</span>
+<span class="s2">      3_10-helix conformation, same as ``&#39;secondary G&#39;``</span>
+
+<span class="s2">   helixpi</span>
+<span class="s2">      π-helix conformation, same as ``&#39;secondary I&#39;``</span>
+
+<span class="s2">   turn</span>
+<span class="s2">      hydrogen bonded turn conformation, same as ``&#39;secondary T&#39;``</span>
+
+<span class="s2">   bridge</span>
+<span class="s2">      isolated beta-bridge conformation, same as ``&#39;secondary B&#39;``</span>
+
+<span class="s2">   bend</span>
+<span class="s2">      bend conformation, same as ``&#39;secondary S&#39;``</span>
+
+<span class="s2">   coil</span>
+<span class="s2">      not in one of above conformations, same as ``&#39;secondary C&#39;``</span>
+
+<span class="s2">Others</span>
+<span class="s2">-------------------------------------------------------------------------------</span>
+
+<span class="s2">.. glossary::</span>
+
+<span class="s2">   all</span>
+<span class="s2">      indicates all atoms, returns a new view of the instance</span>
+
+<span class="s2">   none</span>
+<span class="s2">      indicates no atoms, returns **None**</span>
+
+<span class="s2">   dummy</span>
+<span class="s2">      indicates dummy atoms in an :class:`.AtomMap`</span>
+
+<span class="s2">   mapped</span>
+<span class="s2">      indicates mapped atoms in an :class:`.AtomMap`</span>
+
+<span class="s2">Functions</span>
+<span class="s2">===============================================================================</span>
+
+<span class="s2">Following functions can be used to customize flag definitions:</span>
+
+<span class="s2">    * :func:`.flagDefinition`</span>
+<span class="s2">    * :func:`.addNonstdAminoacid`</span>
+<span class="s2">    * :func:`.delNonstdAminoacid`</span>
+<span class="s2">    * :func:`.listNonstdAAProps`</span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># join split lists</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ion&#39;</span><span class="p">,</span> <span class="s1">&#39;lipid&#39;</span><span class="p">,</span> <span class="s1">&#39;sugar&#39;</span><span class="p">,</span> <span class="s1">&#39;heme&#39;</span><span class="p">]:</span>
+    <span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;_other&#39;</span><span class="p">))</span>
+
+<span class="n">DEFINITIONS</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">AMINOACIDS</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">BACKBONE</span> <span class="o">=</span> <span class="bp">None</span>
+
+
+<span class="k">def</span> <span class="nf">updateDefinitions</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Update definitions and set some global variables.  This function must be</span>
+<span class="sd">    called at the end of the module.&quot;&quot;&quot;</span>
+
+    <span class="k">global</span> <span class="n">DEFINITIONS</span><span class="p">,</span> <span class="n">AMINOACIDS</span><span class="p">,</span> <span class="n">BACKBONE</span><span class="p">,</span> <span class="n">TIMESTAMP</span>
+    <span class="n">DEFINITIONS</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;flag_definitions&#39;</span><span class="p">,</span> <span class="p">{})</span>
+
+    <span class="c1"># nucleics</span>
+    <span class="n">nucleic</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;nucleobase&#39;</span><span class="p">,</span> <span class="s1">&#39;nucleoside&#39;</span><span class="p">,</span> <span class="s1">&#39;nucleotide&#39;</span><span class="p">]:</span>
+        <span class="n">aset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+        <span class="n">nucleic</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">aset</span><span class="p">)</span>
+        <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">aset</span>
+    <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;nucleic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nucleic</span>
+
+    <span class="c1"># heteros</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="s1">&#39;lipid&#39;</span><span class="p">,</span> <span class="s1">&#39;ion&#39;</span><span class="p">,</span> <span class="s1">&#39;sugar&#39;</span><span class="p">,</span> <span class="s1">&#39;heme&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;at&#39;</span><span class="p">,</span> <span class="s1">&#39;cg&#39;</span><span class="p">,</span> <span class="s1">&#39;purine&#39;</span><span class="p">,</span> <span class="s1">&#39;pyrimidine&#39;</span><span class="p">]:</span>
+        <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+
+    <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;backbone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;bb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span>
+                                                      <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;bb&#39;</span><span class="p">]))</span>
+    <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;backbonefull&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;bbfull&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span>
+                                                           <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;bbfull&#39;</span><span class="p">]))</span>
+
+    <span class="c1"># element regex</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;hydrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;carbon&#39;</span><span class="p">,</span> <span class="s1">&#39;nitrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;sulfur&#39;</span><span class="p">]:</span>
+        <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">recompile</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">nonstd</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="p">[</span><span class="n">NONSTANDARD_KEY</span><span class="p">]</span>
+
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">nonstd</span> <span class="o">=</span> <span class="n">NONSTANDARD</span>
+        <span class="n">DEFINITIONS</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">CATEGORIZED</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">CATEGORIES</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">CATEGORIES</span><span class="p">[</span><span class="n">cat</span><span class="p">]:</span>
+                <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">DEFAULTS</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+        <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;charged&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;acidic&#39;</span><span class="p">])</span>
+        <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;charged&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;basic&#39;</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">resi</span><span class="p">,</span> <span class="n">props</span> <span class="ow">in</span> <span class="n">nonstd</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">props</span><span class="p">:</span>
+                <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">resi</span><span class="p">)</span>
+
+    <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;stdaa&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULTS</span><span class="p">[</span><span class="s1">&#39;stdaa&#39;</span><span class="p">]</span>
+    <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;nonstdaa&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">nonstd</span><span class="p">)</span>
+    <span class="n">AMINOACIDS</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;stdaa&#39;</span><span class="p">])</span>
+    <span class="n">AMINOACIDS</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;nonstdaa&#39;</span><span class="p">])</span>
+    <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;protein&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;aminoacid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">AMINOACIDS</span>
+
+    <span class="n">BACKBONE</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="s1">&#39;bb&#39;</span><span class="p">]</span>
+
+    <span class="k">global</span> <span class="n">TIMESTAMP</span>
+    <span class="n">TIMESTAMP</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TIMESTAMP_KEY</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+<span class="c1">#==============================================================================</span>
+<span class="c1"># PLANTERS</span>
+<span class="c1">#==============================================================================</span>
+
+<span class="c1"># flag planters are functions that take an AtomGroup instance</span>
+<span class="c1"># and set flags for a given label using the atomic data stored in the AtomGroup</span>
+<span class="c1"># a planter can also set the indices of subset atoms for calculated flag</span>
+<span class="c1"># planters return the flags after calculation is over</span>
+
+<span class="c1"># protein</span>
+<span class="c1">#==============================================================================</span>
+
+<span class="k">def</span> <span class="nf">setCalpha</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getNames</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;CA&#39;</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">):</span>
+        <span class="n">torf</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">rn</span> <span class="ow">in</span> <span class="n">AMINOACIDS</span> <span class="k">for</span> <span class="n">rn</span> <span class="ow">in</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getResnames</span><span class="p">()[</span><span class="n">indices</span><span class="p">]])</span>
+        <span class="n">flags</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="n">torf</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">_setSubset</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">indices</span><span class="p">[</span><span class="n">torf</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">_setSubset</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">array</span><span class="p">([]))</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setCalpha</span><span class="p">,</span> <span class="s1">&#39;ca&#39;</span><span class="p">,</span> <span class="s1">&#39;calpha&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setProtein</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">calpha</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;calpha&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">calpha</span><span class="p">):</span>
+        <span class="n">torf</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numResidues</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="n">resindices</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getResindices</span><span class="p">()</span>
+        <span class="n">torf</span><span class="p">[</span><span class="n">resindices</span><span class="p">[</span><span class="n">calpha</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">torf</span><span class="p">[</span><span class="n">resindices</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setProtein</span><span class="p">,</span> <span class="s1">&#39;protein&#39;</span><span class="p">,</span> <span class="s1">&#39;aminoacid&#39;</span><span class="p">)</span>
+
+<span class="c1"># subsets</span>
+<span class="c1">#==============================================================================</span>
+
+
+<span class="k">def</span> <span class="nf">setBackbone</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">protein</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">protein</span><span class="p">):</span>
+        <span class="n">bb</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getNames</span><span class="p">()[</span><span class="n">protein</span><span class="p">]</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="n">flags</span><span class="p">[</span><span class="n">protein</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">nm</span> <span class="ow">in</span> <span class="n">bb</span> <span class="k">for</span> <span class="n">nm</span> <span class="ow">in</span> <span class="n">names</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setBackbone</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;backbone&#39;</span><span class="p">,</span> <span class="n">editor</span><span class="o">=</span><span class="n">changeBackbone</span><span class="p">)</span>
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setBackbone</span><span class="p">,</span> <span class="s1">&#39;bbfull&#39;</span><span class="p">,</span> <span class="s1">&#39;backbonefull&#39;</span><span class="p">,</span> <span class="n">editor</span><span class="o">=</span><span class="n">changeBackbone</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setSidechain</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">protein</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">protein</span><span class="p">):</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="n">flags</span><span class="p">[</span><span class="n">protein</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">flags</span><span class="p">[</span><span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;bbfull&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setSidechain</span><span class="p">,</span> <span class="s1">&#39;sc&#39;</span><span class="p">,</span> <span class="s1">&#39;sidechain&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setCategories</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">calpha</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;ca&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">calpha</span><span class="p">):</span>
+        <span class="n">resnames</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+        <span class="n">residx</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getResindices</span><span class="p">()</span>
+        <span class="n">torf</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numResidues</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="n">torf</span><span class="p">[</span><span class="n">residx</span><span class="p">[</span><span class="n">calpha</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="n">rn</span> <span class="ow">in</span> <span class="n">resnames</span>
+                                <span class="k">for</span> <span class="n">rn</span> <span class="ow">in</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getResnames</span><span class="p">()[</span><span class="n">calpha</span><span class="p">]]</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">torf</span><span class="p">[</span><span class="n">residx</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setCategories</span><span class="p">,</span> <span class="s1">&#39;stdaa&#39;</span><span class="p">,</span> <span class="s1">&#39;nonstdaa&#39;</span><span class="p">,</span> <span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="n">CATEGORIZED</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+           <span class="n">aliases</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setAll</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setAll</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setNone</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setNone</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+<span class="c1"># hetero, nucleic, water, etc.</span>
+<span class="c1">#==============================================================================</span>
+
+
+<span class="k">def</span> <span class="nf">setResiflag</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">resnames</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">rn</span> <span class="ow">in</span> <span class="n">resnames</span> <span class="k">for</span> <span class="n">rn</span> <span class="ow">in</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getResnames</span><span class="p">()],</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setResiflag</span><span class="p">,</span> <span class="s1">&#39;nucleobase&#39;</span><span class="p">,</span> <span class="s1">&#39;nucleoside&#39;</span><span class="p">,</span> <span class="s1">&#39;nucleotide&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="s1">&#39;ion&#39;</span><span class="p">,</span> <span class="s1">&#39;lipid&#39;</span><span class="p">,</span> <span class="s1">&#39;sugar&#39;</span><span class="p">,</span> <span class="s1">&#39;heme&#39;</span><span class="p">,</span> <span class="s1">&#39;at&#39;</span><span class="p">,</span> <span class="s1">&#39;cg&#39;</span><span class="p">,</span> <span class="s1">&#39;purine&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;pyrimidine&#39;</span><span class="p">,</span> <span class="n">aliases</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">editor</span><span class="o">=</span><span class="n">changeResnames</span><span class="p">)</span>
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setResiflag</span><span class="p">,</span> <span class="s1">&#39;nucleic&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setHetero</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">flags</span><span class="p">[</span><span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">flags</span><span class="p">[</span><span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;nucleic&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="s1">&#39;hetero&#39;</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setHetero</span><span class="p">,</span> <span class="s1">&#39;hetero&#39;</span><span class="p">,)</span>
+
+
+<span class="c1"># element</span>
+<span class="c1">#==============================================================================</span>
+
+<span class="k">def</span> <span class="nf">setElement</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">match</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">label</span><span class="p">]</span><span class="o">.</span><span class="n">match</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">match</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="k">for</span> <span class="n">nm</span> <span class="ow">in</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getNames</span><span class="p">()])</span>
+    <span class="n">flags</span><span class="p">[</span><span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;ion&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setElement</span><span class="p">,</span> <span class="s1">&#39;hydrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;carbon&#39;</span><span class="p">,</span> <span class="s1">&#39;nitrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;sulfur&#39;</span><span class="p">,</span>
+           <span class="n">aliases</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">editor</span><span class="o">=</span><span class="n">changeNameRegex</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setNoh</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="n">ag</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">flags</span><span class="p">[</span><span class="n">ag</span><span class="o">.</span><span class="n">_getSubset</span><span class="p">(</span><span class="s1">&#39;hydrogen&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setNoh</span><span class="p">,</span> <span class="s1">&#39;noh&#39;</span><span class="p">,</span> <span class="s1">&#39;heavy&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># secondary</span>
+<span class="c1">#==============================================================================</span>
+
+<span class="n">SECONDARY</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extended&#39;</span><span class="p">:</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;helix&#39;</span><span class="p">:</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;helix310&#39;</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;helixpi&#39;</span><span class="p">:</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;turn&#39;</span><span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;bridge&#39;</span><span class="p">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;bend&#39;</span><span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;coil&#39;</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">setSecondary</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="n">secstrs</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">_getSecstrs</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">secstrs</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;no secondary structure assignments&#39;</span><span class="p">)</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">secstrs</span> <span class="o">==</span> <span class="n">SECONDARY</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setSecondary</span><span class="p">,</span> <span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="n">SECONDARY</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">aliases</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+           <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;secondary&#39;</span><span class="p">])</span>
+
+
+<span class="c1"># secondary</span>
+<span class="c1">#==============================================================================</span>
+
+<span class="k">def</span> <span class="nf">setDummy</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="s1">&#39;dummy&#39;</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ag</span><span class="p">),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ag</span><span class="p">),</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">ag</span><span class="o">.</span><span class="n">_setFlags</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flags</span>
+
+<span class="n">addPlanter</span><span class="p">(</span><span class="n">setDummy</span><span class="p">,</span> <span class="s1">&#39;dummy&#39;</span><span class="p">,</span> <span class="s1">&#39;mapped&#39;</span><span class="p">,</span> <span class="n">aliases</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="p">[])</span>
+
+
+<span class="c1">#==============================================================================</span>
+<span class="c1"># User functions</span>
+<span class="c1">#==============================================================================</span>
+
+<div class="viewcode-block" id="flagDefinition"><a class="viewcode-back" href="../../../manual/reference/atomic/flags.html#prody.atomic.flags.flagDefinition">[docs]</a><span class="k">def</span> <span class="nf">flagDefinition</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwarg</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Learn, change, or reset :ref:`flags` definitions.</span>
+
+<span class="sd">    **Learn a definition**</span>
+
+<span class="sd">    Calling this function with no arguments will return list of flag names</span>
+<span class="sd">    whose definitions you can learn:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition()</span>
+
+<span class="sd">    Passing a flag name will return its definition:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition(&#39;backbone&#39;)</span>
+<span class="sd">       flagDefinition(&#39;hydrogen&#39;)</span>
+
+<span class="sd">    **Change a definition**</span>
+
+<span class="sd">    Calling the function with ``editable=True`` argument will return flag</span>
+<span class="sd">    names those definitions that can be edited:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition(editable=True)</span>
+
+<span class="sd">    Pass an editable flag name with its new definition:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition(nitrogen=&#39;N.*&#39;)</span>
+<span class="sd">       flagDefinition(backbone=[&#39;CA&#39;, &#39;C&#39;, &#39;O&#39;, &#39;N&#39;])</span>
+<span class="sd">       flagDefinition(nucleobase=[&#39;ADE&#39;, &#39;CYT&#39;, &#39;GUN&#39;, &#39;THY&#39;, &#39;URA&#39;])</span>
+
+<span class="sd">    Note that the type of the new definition must be the same as the type</span>
+<span class="sd">    of the old definition.  Flags with editable definitions are:</span>
+<span class="sd">    {editable}</span>
+
+<span class="sd">    **Reset definitions**</span>
+
+<span class="sd">    Pass *reset* keyword as follows to restore all default definitions of</span>
+<span class="sd">    editable flags and also non-standard amino acids.</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition(reset=&#39;all&#39;)</span>
+
+<span class="sd">    Or, pass a specific editable flag label to restore its definition:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition(reset=&#39;nitrogen&#39;)&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">arg</span> <span class="ow">and</span> <span class="n">kwarg</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;only a single argument or a single keyword &#39;</span>
+                         <span class="s1">&#39;argument is accepted at a time&#39;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">arg</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;specify only one flag label&#39;</span><span class="p">)</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="n">arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">definition</span> <span class="o">=</span> <span class="n">DEFINITIONS</span><span class="p">[</span><span class="n">arg</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a valid flag label&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">arg</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">definition</span><span class="o">.</span><span class="n">pattern</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="n">definition</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">definition</span><span class="p">)</span>
+                <span class="n">definition</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">definition</span>
+
+    <span class="k">elif</span> <span class="n">kwarg</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwarg</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;specify only one keyword argument&#39;</span><span class="p">)</span>
+        <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">kwarg</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;editable&#39;</span> <span class="ow">and</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">alist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">EDITORS</span><span class="p">)</span>
+            <span class="n">alist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">alist</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;reset&#39;</span> <span class="ow">and</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">resetDefinitions</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">editor</span> <span class="o">=</span> <span class="n">EDITORS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not an editable flag or a valid &#39;</span>
+                             <span class="s1">&#39;keyword&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">type_</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">flagDefinition</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">!=</span> <span class="n">type_</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;expected {0} as type of new definition, &#39;</span>
+                                <span class="s1">&#39;found {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">type_</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span>
+                                <span class="nb">repr</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)))</span>
+            <span class="n">editor</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">alist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">DEFINITIONS</span><span class="p">)</span>
+        <span class="n">alist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">alist</span></div>
+
+<span class="n">flagDefinition</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">flagDefinition</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">editable</span><span class="o">=</span><span class="n">wrapText</span><span class="p">(</span><span class="n">joinTerms</span><span class="p">(</span><span class="n">flagDefinition</span><span class="p">(</span><span class="n">editable</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;, and &#39;</span><span class="p">),</span>
+                      <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">4</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="addNonstdAminoacid"><a class="viewcode-back" href="../../../manual/reference/atomic/flags.html#prody.atomic.flags.addNonstdAminoacid">[docs]</a><span class="k">def</span> <span class="nf">addNonstdAminoacid</span><span class="p">(</span><span class="n">resname</span><span class="p">,</span> <span class="o">*</span><span class="n">properties</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add non-standard amino acid *resname* with *properties* selected from:</span>
+
+<span class="sd">      * {props}</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       addNonstdAminoacid(&#39;PTR&#39;, &#39;acidic&#39;, &#39;aromatic&#39;, &#39;cyclic&#39;, &#39;large&#39;,</span>
+<span class="sd">       &#39;polar&#39;, &#39;surface&#39;)</span>
+
+<span class="sd">    Default set of non-standard amino acids can be restored as follows:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition(reset=&#39;nonstdaa&#39;)&quot;&quot;&quot;</span>
+
+    <span class="n">resname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">resname</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">resname</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Residue name {0} is unusually long.&#39;</span>
+                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">resname</span><span class="p">)))</span>
+    <span class="n">propset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">cat</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">CATEGORIES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">intersection</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">propset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">intersection</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">intersection</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;amino acid properties {0} cannot be &#39;</span>
+                                 <span class="s1">&#39;present together&#39;</span>
+                                 <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">repr</span><span class="p">(</span><span class="n">prp</span><span class="p">)</span>
+                                                    <span class="k">for</span> <span class="n">prp</span> <span class="ow">in</span> <span class="n">intersection</span><span class="p">])))</span>
+            <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">intersection</span><span class="p">:</span>
+                <span class="n">propset</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">propset</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;amino acid property {0} is not valid&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">propset</span><span class="o">.</span><span class="n">pop</span><span class="p">())))</span>
+
+    <span class="n">nonstd</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">NONSTANDARD_KEY</span><span class="p">,</span> <span class="n">NONSTANDARD</span><span class="p">)</span>
+    <span class="n">nonstd</span><span class="p">[</span><span class="n">resname</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span>
+    <span class="n">updateNonstandard</span><span class="p">(</span><span class="n">nonstd</span><span class="p">)</span></div>
+
+<span class="n">INDEPENDENT</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">addNonstdAminoacid</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">addNonstdAminoacid</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">props</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">      * &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+        <span class="s1">&#39;*{0}*: {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="n">joinTerms</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;, or &#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">cat</span><span class="p">,</span> <span class="n">terms</span> <span class="ow">in</span> <span class="n">CATEGORIES</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">])</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="delNonstdAminoacid"><a class="viewcode-back" href="../../../manual/reference/atomic/flags.html#prody.atomic.flags.delNonstdAminoacid">[docs]</a><span class="k">def</span> <span class="nf">delNonstdAminoacid</span><span class="p">(</span><span class="n">resname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Delete non-standard amino acid *resname*.</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       delNonstdAminoacid(&#39;PTR&#39;)</span>
+<span class="sd">       flagDefinition(&#39;nonstdaa&#39;)</span>
+
+<span class="sd">    Default set of non-standard amino acids can be restored as follows:</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       flagDefinition(reset=&#39;nonstdaa&#39;)&quot;&quot;&quot;</span>
+
+    <span class="n">nonstd</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">NONSTANDARD_KEY</span><span class="p">,</span> <span class="n">NONSTANDARD</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">nonstd</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">resname</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a non-standard residue name&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">resname</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">updateNonstandard</span><span class="p">(</span><span class="n">nonstd</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="getNonstdProperties"><a class="viewcode-back" href="../../../manual/reference/atomic/flags.html#prody.atomic.flags.getNonstdProperties">[docs]</a><span class="k">def</span> <span class="nf">getNonstdProperties</span><span class="p">(</span><span class="n">resname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Deprecated for removal in v1.4, use :func:`listNonstdAAProps` instead.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="n">deprecate</span>
+    <span class="n">deprecate</span><span class="p">(</span><span class="s1">&#39;getNonstdProperties&#39;</span><span class="p">,</span> <span class="s1">&#39;listNonstdAAProps&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">listNonstdAAProps</span><span class="p">(</span><span class="n">resname</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="listNonstdAAProps"><a class="viewcode-back" href="../../../manual/reference/atomic/flags.html#prody.atomic.flags.listNonstdAAProps">[docs]</a><span class="k">def</span> <span class="nf">listNonstdAAProps</span><span class="p">(</span><span class="n">resname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns properties of non-standard amino acid *resname*.</span>
+
+<span class="sd">    .. ipython:: python</span>
+
+<span class="sd">       listNonstdAAProps(&#39;PTR&#39;)&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">alist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">SETTINGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">NONSTANDARD_KEY</span><span class="p">,</span> <span class="n">NONSTANDARD</span><span class="p">)[</span><span class="n">resname</span><span class="p">])</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;{0} is not a non-standard residue name&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">resname</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">alist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">alist</span></div>
+
+
+<span class="n">updateDefinitions</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>

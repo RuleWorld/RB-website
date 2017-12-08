@@ -1,0 +1,804 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19801227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <title>Atom Selections &mdash; RuleBender</title>
+    <link rel="stylesheet" href="../../../../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bootswatch-united.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/prodydocs.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/zeroclipboard.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/prodydocs.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+
+  </head>
+  <body data-spy="scroll" data-target="#localtoc" data-offset="190">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <a href="../../../../index.html">
+        <img src="../../../../_static/logo.png" alt="ProDy logo" id="logo" />
+      </a>
+    </div>
+    <div class="span12">
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li class="pull-right">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+          </li>
+        <li class="pull-right">
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a>
+          </li>
+        <li><a href="../../../../index.html">Home  &raquo;</a></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="span3">
+      <div id="sidebar" style="width: 220px">
+  <div id="localtoc" style="margin-bottom: 20px">
+    <ul>
+<li><a class="reference internal" href="#">Atom Selections</a><ul>
+<li><a class="reference internal" href="#atom-flags">Atom flags</a></li>
+<li><a class="reference internal" href="#logical-operators">Logical operators</a></li>
+<li><a class="reference internal" href="#quick-selections">Quick selections</a></li>
+<li><a class="reference internal" href="#atom-data-fields">Atom data fields</a><ul>
+<li><a class="reference internal" href="#number-ranges">Number ranges</a></li>
+<li><a class="reference internal" href="#special-characters">Special characters</a></li>
+<li><a class="reference internal" href="#negative-numbers">Negative numbers</a></li>
+<li><a class="reference internal" href="#regular-expressions">Regular expressions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-comparisons">Numerical comparisons</a></li>
+<li><a class="reference internal" href="#distance-based-selections">Distance based selections</a></li>
+<li><a class="reference internal" href="#sequence-selections">Sequence selections</a></li>
+<li><a class="reference internal" href="#expanding-selections">Expanding selections</a></li>
+<li><a class="reference internal" href="#selection-macros">Selection macros</a></li>
+<li><a class="reference internal" href="#keyword-arguments">Keyword arguments</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        <div class="accordion" id="accordion2">
+  <div id="searchbox" class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseToolbox">
+        <strong>Toolbox</strong>
+      </a>
+    </div>
+<!--     <div id="collapseToolbox" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <div id="showcodebuttons" style="margin-bottom: 10px">
+          <p><small>Show code snippets for copying:</small></p>
+          <div class="btn-group">
+            <a href="#codemodal" role="button" data-toggle="modal" id="showcode" class="btn btn-primary btn-small">
+              <i class="icon-fullscreen icon-white"></i> Show code</a>
+            <a href="#codemodal" role="button" data-toggle="modal" id="withcomments" class="btn btn-primary btn-small">
+              and output <i class="icon-comment icon-white"></i> </a>
+          </div>
+        </div> -->
+
+        <p><small>Search terms or function by name:</small></p>
+        <form class="form-search pull-right" action="../../../../search.html" method="get">
+          <div class="input-append">
+            <input type="text" class="input-small search-query" name="q" class="span2">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseReleaseNotes">
+        <strong>Release Notes</strong>
+      </a>
+    </div>
+    <div id="collapseReleaseNotes" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small><strong>v1</strong> series come with new and improved sequence, structure, and dynamics analysis
+features. See <a href="../../../../manual/release/index.html">release notes</a> for details.
+        </small></p>
+      </div>
+    </div>
+  </div>  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseHowToCite">
+        <strong>How to Cite</strong>
+      </a>
+    </div>
+    <div id="collapseHowToCite" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <p><small>
+          Bakan A, Meireles LM, Bahar I
+          <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/27/11/1575" target="_blank">
+          <i>ProDy</i>: Protein Dynamics Inferred from Theory and Experiments</a> <br/>
+          <em>Bioinformatics</em> <strong>2011</strong> 27(11):1575-1577.
+        </small></p>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="span9 body">
+    
+  <div class="section" id="module-prody.atomic.select">
+<span id="atom-selections"></span><span id="selections"></span><h1>Atom Selections<a class="headerlink" href="#module-prody.atomic.select" title="Permalink to this headline">¶</a></h1>
+<p>This module defines a class for selecting subsets of atoms.  You can read
+this page in interactive sessions using <code class="docutils literal"><span class="pre">help(select)</span></code>.</p>
+<p>ProDy offers a fast and powerful atom selection class, <a class="reference internal" href="../../../../manual/reference/atomic/select.html#prody.atomic.select.Select" title="prody.atomic.select.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a>.
+Selection features, grammar, and keywords are similar to those of VMD.
+Small differences, that is described below, should not affect most practical
+uses of atom selections.  With added flexibility of Python, ProDy selection
+engine can also be used to identify intermolecular contacts.  You may see
+this and other usage examples in <span class="xref std std-ref">contacts</span> and
+<a class="reference internal" href="../../../../tutorials/prody_tutorial/selection.html#selection-operations"><span>Operations on Selections</span></a>.</p>
+<p>First, we import everything from ProDy and parse a protein-DNA-ligand
+complex structure:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">prody</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="gp">In [2]: </span><span class="n">p</span> <span class="o">=</span> <span class="n">parsePDB</span><span class="p">(</span><span class="s1">&#39;3mht&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../../../manual/reference/proteins/pdbfile.html#prody.proteins.pdbfile.parsePDB" title="prody.proteins.pdbfile.parsePDB"><code class="xref py py-func docutils literal"><span class="pre">parsePDB()</span></code></a> returns <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a> instances, <code class="docutils literal"><span class="pre">p</span></code> in this case,
+that stores all atomic data in the file.  We can count different types of
+atoms using <a class="reference internal" href="../../../../manual/reference/atomic/flags.html#flags"><span>Atom Flags</span></a> and <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.numAtoms" title="prody.atomic.atomgroup.AtomGroup.numAtoms"><code class="xref py py-meth docutils literal"><span class="pre">numAtoms()</span></code></a> method as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+<span class="gh">Out[3]: </span><span class="go">2606</span>
+
+<span class="gp">In [4]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;nucleic&#39;</span><span class="p">)</span>
+<span class="gh">Out[4]: </span><span class="go">509</span>
+
+<span class="gp">In [5]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;hetero&#39;</span><span class="p">)</span>
+<span class="gh">Out[5]: </span><span class="go">96</span>
+
+<span class="gp">In [6]: </span><span class="n">p</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+<span class="gh">Out[6]: </span><span class="go">70</span>
+</pre></div>
+</div>
+<p>Last two counts suggest that ligand has 26 atoms, i.e. number of <a class="reference internal" href="../../../../manual/reference/atomic/flags.html#term-hetero"><span class="xref std std-term">hetero</span></a>
+atoms less the number of <a class="reference internal" href="../../../../manual/reference/atomic/flags.html#term-water"><span class="xref std std-term">water</span></a> atoms.</p>
+<div class="section" id="atom-flags">
+<h2>Atom flags<a class="headerlink" href="#atom-flags" title="Permalink to this headline">¶</a></h2>
+<p>We select subset of atoms by using <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.select" title="prody.atomic.atomgroup.AtomGroup.select"><code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.select()</span></code></a> method.
+All <a class="reference internal" href="../../../../manual/reference/atomic/flags.html#flags"><span>Atom Flags</span></a> can be input arguments to this methods as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein&#39;</span><span class="p">)</span>
+<span class="gh">Out[7]: </span><span class="go">&lt;Selection: &#39;protein&#39; from 3mht (2606 atoms)&gt;</span>
+
+<span class="gp">In [8]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+<span class="gh">Out[8]: </span><span class="go">&lt;Selection: &#39;water&#39; from 3mht (70 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>This operation returns <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> instances, which can be an input
+to functions that accepts an <em>atoms</em> argument.</p>
+</div>
+<div class="section" id="logical-operators">
+<h2>Logical operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h2>
+<p>Flags can be combined using <code class="docutils literal"><span class="pre">'and'</span></code> and <code class="docutils literal"><span class="pre">'or'</span></code> operators:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein and water&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">'protein</span> <span class="pre">and</span> <span class="pre">water'</span></code> did not result in selection of <a class="reference internal" href="../../../../manual/reference/atomic/flags.html#term-protein"><span class="xref std std-term">protein</span></a> and
+<a class="reference internal" href="../../../../manual/reference/atomic/flags.html#term-water"><span class="xref std std-term">water</span></a> atoms.  This is because, no atom is flagged as a protein and a
+water atom at the same time.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Interpreting selection strings</strong></p>
+<p class="last">You may think as if a selection string, such as <code class="docutils literal"><span class="pre">'protein</span> <span class="pre">and</span> <span class="pre">water'</span></code>, is
+evaluated on a per atom basis and an atom is selected if it satisfies the
+given criterion.  To select both water and protein atoms, <code class="docutils literal"><span class="pre">'or'</span></code> logical
+operator should be used instead.  A protein or a water atom would satisfy
+<code class="docutils literal"><span class="pre">'protein</span> <span class="pre">or</span> <span class="pre">water'</span></code> criterion.</p>
+</div>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;protein or water&#39;</span><span class="p">)</span>
+<span class="gh">Out[10]: </span><span class="go">&lt;Selection: &#39;protein or water&#39; from 3mht (2676 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>We can also use <code class="docutils literal"><span class="pre">'not'</span></code> operator to negate an atom flag.  For example,
+the following selection will only select ligand atoms:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water and hetero&#39;</span><span class="p">)</span>
+<span class="gh">Out[11]: </span><span class="go">&lt;Selection: &#39;not water and hetero&#39; from 3mht (26 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>If you omit the <code class="docutils literal"><span class="pre">'and'</span></code> operator, you will get the same result:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water hetero&#39;</span><span class="p">)</span>
+<span class="gh">Out[12]: </span><span class="go">&lt;Selection: &#39;not water hetero&#39; from 3mht (26 atoms)&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Default operator</strong> between two flags, or other selection tokens that will
+be discussed later, is <code class="docutils literal"><span class="pre">'and'</span></code>.  For example, <code class="docutils literal"><span class="pre">'not</span> <span class="pre">water</span> <span class="pre">hetero'</span></code>
+is equivalent to <code class="docutils literal"><span class="pre">'not</span> <span class="pre">water</span> <span class="pre">and</span> <span class="pre">hetero'</span></code>.</p>
+</div>
+<p>We can select Cα atoms of acidic residues by omitting the default logical
+operator as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;acidic calpha&#39;</span><span class="p">)</span>
+
+<span class="gp">In [14]: </span><span class="n">sel</span>
+<span class="gh">Out[14]: </span><span class="go">&lt;Selection: &#39;acidic calpha&#39; from 3mht (39 atoms)&gt;</span>
+
+<span class="gp">In [15]: </span><span class="nb">set</span><span class="p">(</span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
+<span class="gh">Out[15]: </span><span class="go">{&#39;ASP&#39;, &#39;GLU&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quick-selections">
+<h2>Quick selections<a class="headerlink" href="#quick-selections" title="Permalink to this headline">¶</a></h2>
+<p>For simple selections, such as shown above, following may be preferable over
+the <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.select" title="prody.atomic.atomgroup.AtomGroup.select"><code class="xref py py-meth docutils literal"><span class="pre">select()</span></code></a> method:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="n">p</span><span class="o">.</span><span class="n">acidic_calpha</span>
+<span class="gh">Out[16]: </span><span class="go">&lt;Selection: &#39;acidic calpha&#39; from 3mht (39 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>The result is the same as using <code class="docutils literal"><span class="pre">p.select('acidic</span> <span class="pre">calpha')</span></code>.  Underscore,
+<code class="docutils literal"><span class="pre">_</span></code>, is considered as a whitespace.  The limitation of this approach is that
+special characters cannot be used.</p>
+</div>
+<div class="section" id="atom-data-fields">
+<h2>Atom data fields<a class="headerlink" href="#atom-data-fields" title="Permalink to this headline">¶</a></h2>
+<p>In addition to <a class="reference internal" href="../../../../manual/reference/atomic/flags.html#flags"><span>Atom Flags</span></a>, <a class="reference internal" href="../../../../manual/reference/atomic/fields.html#fields"><span>Atom Data Fields</span></a> can be used in atom selections
+when combined with some values.  For example, we can select Cα and Cβ atoms
+of alanine residues as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [17]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname ALA name CA CB&#39;</span><span class="p">)</span>
+<span class="gh">Out[17]: </span><span class="go">&lt;Selection: &#39;resname ALA name CA CB&#39; from 3mht (32 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Note that we omitted the default <code class="docutils literal"><span class="pre">'and'</span></code> operator.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Whitespace</strong> or <strong>empty string</strong> can be specified using an <code class="docutils literal"><span class="pre">'_'</span></code>.
+Atoms with string data fields empty, such as those with no a chain
+identifiers or alternate location identifiers, can be selected using
+an underscore.</p>
+</div>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [18]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;chain _&#39;</span><span class="p">)</span>  <span class="c1"># chain identifiers of all atoms are specified in 3mht</span>
+
+<span class="gp">In [19]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;altloc _&#39;</span><span class="p">)</span>  <span class="c1"># altloc identifiers for all atoms are empty</span>
+<span class="gh">Out[19]: </span><span class="go">&lt;Selection: &#39;altloc _&#39; from 3mht (3211 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Numeric data fields can also be used to make selections:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [20]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1 2 3 4&#39;</span><span class="p">)</span>
+<span class="gh">Out[20]: </span><span class="go">&lt;Selection: &#39;ca resnum 1 2 3 4&#39; from 3mht (4 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>A special case for residues is having insertion codes.  Residue numbers and
+insertion codes can be specified together as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">5'</span></code> selects residue 5 (all insertion codes)</li>
+<li><code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">5A'</span></code> selects residue 5 with insertion code A</li>
+<li><code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">5_'</span></code> selects residue 5 with no insertion code</li>
+</ul>
+</div></blockquote>
+<div class="section" id="number-ranges">
+<h3>Number ranges<a class="headerlink" href="#number-ranges" title="Permalink to this headline">¶</a></h3>
+<p>A range of numbers using <code class="docutils literal"><span class="pre">'to'</span></code> or Python style slicing with <code class="docutils literal"><span class="pre">':'</span></code>:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [21]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1to4&#39;</span><span class="p">)</span>
+<span class="gh">Out[21]: </span><span class="go">&lt;Selection: &#39;ca resnum 1to4&#39; from 3mht (4 atoms)&gt;</span>
+
+<span class="gp">In [22]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1:4&#39;</span><span class="p">)</span>
+<span class="gh">Out[22]: </span><span class="go">&lt;Selection: &#39;ca resnum 1:4&#39; from 3mht (3 atoms)&gt;</span>
+
+<span class="gp">In [23]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca resnum 1:4:2&#39;</span><span class="p">)</span>
+<span class="gh">Out[23]: </span><span class="go">&lt;Selection: &#39;ca resnum 1:4:2&#39; from 3mht (2 atoms)&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Number ranges</strong> specify continuous intervals:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">'to'</span></code> is all inclusive, e.g. <code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">4'</span></code> means
+<code class="docutils literal"><span class="pre">'1</span> <span class="pre">&lt;=</span> <span class="pre">resnum</span> <span class="pre">&lt;=</span> <span class="pre">4'</span></code></li>
+<li><code class="docutils literal"><span class="pre">':'</span></code> is left inclusive, e.g. <code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">1:4'</span></code> means
+<code class="docutils literal"><span class="pre">'1</span> <span class="pre">&lt;=</span> <span class="pre">resnum</span> <span class="pre">&lt;</span> <span class="pre">4'</span></code></li>
+</ul>
+</div></blockquote>
+<p class="last">Consecutive use of <code class="docutils literal"><span class="pre">':'</span></code>, however, specifies a discrete range of numbers,
+e.g. <code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">1:4:2'</span></code> means <code class="docutils literal"><span class="pre">'resnum</span> <span class="pre">1</span> <span class="pre">3'</span></code></p>
+</div>
+</div>
+<div class="section" id="special-characters">
+<h3>Special characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h3>
+<p>Following characters can be specified when using <a class="reference internal" href="../../../../manual/reference/atomic/fields.html#fields"><span>Atom Data Fields</span></a> for atom
+selections:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+~@#$.:;_&#39;,
+</pre></div>
+</div>
+<p>For example, <code class="docutils literal"><span class="pre">&quot;name</span> <span class="pre">C'</span> <span class="pre">N`</span> <span class="pre">O~</span> <span class="pre">C$</span> <span class="pre">C#&quot;</span></code> is a valid selection string.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Special characters</strong> (<code class="docutils literal"><span class="pre">~!&#64;#$%^&amp;*()-_=+[{}]\|;:,&lt;&gt;./?()'&quot;</span></code>) must be
+escaped using grave accent characters (<code class="docutils literal"><span class="pre">``</span></code>).</p>
+</div>
+</div>
+<div class="section" id="negative-numbers">
+<h3>Negative numbers<a class="headerlink" href="#negative-numbers" title="Permalink to this headline">¶</a></h3>
+<p>Negative numbers and number ranges must also be escaped using grave accent
+characters, since negative sign <code class="docutils literal"><span class="pre">'-'</span></code> is considered a special character
+unless it indicates subtraction operation (see below).</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [24]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x `-25 to 25`&#39;</span><span class="p">)</span>
+<span class="gh">Out[24]: </span><span class="go">&lt;Selection: &#39;x `-25 to 25`&#39; from 3mht (1941 atoms)&gt;</span>
+
+<span class="gp">In [25]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x `-22.542`&#39;</span><span class="p">)</span>
+<span class="gh">Out[25]: </span><span class="go">&lt;Selection: &#39;x `-22.542`&#39; from 3mht (1 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Omitting the grave accent character will cause a <a class="reference internal" href="../../../../manual/reference/atomic/select.html#prody.atomic.select.SelectionError" title="prody.atomic.select.SelectionError"><code class="xref py py-exc docutils literal"><span class="pre">SelectionError</span></code></a>.</p>
+</div>
+<div class="section" id="regular-expressions">
+<h3>Regular expressions<a class="headerlink" href="#regular-expressions" title="Permalink to this headline">¶</a></h3>
+<p>Finally, you can specify regular expressions to select atoms based on
+data fields with type string.  Following will select residues whose names
+start with capital letter A</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [26]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname &quot;A.*&quot;&#39;</span><span class="p">)</span>
+
+<span class="gp">In [27]: </span><span class="nb">set</span><span class="p">(</span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">())</span>
+<span class="gh">Out[27]: </span><span class="go">{&#39;ALA&#39;, &#39;ARG&#39;, &#39;ASN&#39;, &#39;ASP&#39;}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Regular expressions</strong> can be specified using double quotes, <code class="docutils literal"><span class="pre">&quot;...&quot;</span></code>.
+For more information on regular expressions see <a class="reference external" href="http://docs.python.org/library/re.html#module-re" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">re</span></code></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="numerical-comparisons">
+<h2>Numerical comparisons<a class="headerlink" href="#numerical-comparisons" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../../../manual/reference/atomic/fields.html#fields"><span>Atom Data Fields</span></a> with numeric types can be used as operands in numerical
+comparisons:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [28]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x &lt; 0&#39;</span><span class="p">)</span>
+<span class="gh">Out[28]: </span><span class="go">&lt;Selection: &#39;x &lt; 0&#39; from 3mht (3095 atoms)&gt;</span>
+
+<span class="gp">In [29]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;occupancy = 1&#39;</span><span class="p">)</span>
+<span class="gh">Out[29]: </span><span class="go">&lt;Selection: &#39;occupancy = 1&#39; from 3mht (3211 atoms)&gt;</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Comparison</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr class="row-odd"><td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr class="row-even"><td>&lt;=</td>
+<td>less than or equal</td>
+</tr>
+<tr class="row-odd"><td>&gt;=</td>
+<td>greater than or equal</td>
+</tr>
+<tr class="row-even"><td>==</td>
+<td>equal</td>
+</tr>
+<tr class="row-odd"><td>=</td>
+<td>equal</td>
+</tr>
+<tr class="row-even"><td>!=</td>
+<td>not equal</td>
+</tr>
+</tbody>
+</table>
+<p>It is also possible to chain comparison statements as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [30]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x &lt; 0&#39;</span><span class="p">)</span>
+<span class="gh">Out[30]: </span><span class="go">&lt;Selection: &#39;-10 &lt;= x &lt; 0&#39; from 3mht (557 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>This would be the same as the following selection:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [31]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x and x &lt; 0&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;-10 &lt;= x &lt; 0&#39;</span><span class="p">)</span>
+<span class="gh">Out[31]: </span><span class="go">True</span>
+</pre></div>
+</div>
+<p>Furthermore, numerical comparisons may involve the following operations:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operation</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>x ** y</td>
+<td>x to the power y</td>
+</tr>
+<tr class="row-odd"><td>x ^ y</td>
+<td>x to the power y</td>
+</tr>
+<tr class="row-even"><td>x * y</td>
+<td>x times y</td>
+</tr>
+<tr class="row-odd"><td>x / y</td>
+<td>x divided by y</td>
+</tr>
+<tr class="row-even"><td>x // y</td>
+<td>x divided by y (floor division)</td>
+</tr>
+<tr class="row-odd"><td>x % y</td>
+<td>x modulo y</td>
+</tr>
+<tr class="row-even"><td>x + y</td>
+<td>x plus y</td>
+</tr>
+<tr class="row-odd"><td>x - y</td>
+<td>x minus y</td>
+</tr>
+</tbody>
+</table>
+<p>These operations must be used with a numerical comparison, e.g.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [32]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x ** 2 &lt; 10&#39;</span><span class="p">)</span>
+<span class="gh">Out[32]: </span><span class="go">&lt;Selection: &#39;x ** 2 &lt; 10&#39; from 3mht (238 atoms)&gt;</span>
+
+<span class="gp">In [33]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x ** 2 ** 2 &lt; 10&#39;</span><span class="p">)</span>
+<span class="gh">Out[33]: </span><span class="go">&lt;Selection: &#39;x ** 2 ** 2 &lt; 10&#39; from 3mht (134 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Finally, following functions can be used in numerical comparisons:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>abs(x)</td>
+<td>absolute value of x</td>
+</tr>
+<tr class="row-odd"><td>acos(x)</td>
+<td>arccos of x</td>
+</tr>
+<tr class="row-even"><td>asin(x)</td>
+<td>arcsin of x</td>
+</tr>
+<tr class="row-odd"><td>atan(x)</td>
+<td>arctan of x</td>
+</tr>
+<tr class="row-even"><td>ceil(x)</td>
+<td>smallest integer not less than x</td>
+</tr>
+<tr class="row-odd"><td>cos(x)</td>
+<td>cosine of x</td>
+</tr>
+<tr class="row-even"><td>cosh(x)</td>
+<td>hyperbolic cosine of x</td>
+</tr>
+<tr class="row-odd"><td>floor(x)</td>
+<td>largest integer not greater than x</td>
+</tr>
+<tr class="row-even"><td>exp(x)</td>
+<td>e to the power x</td>
+</tr>
+<tr class="row-odd"><td>log(x)</td>
+<td>natural logarithm of x</td>
+</tr>
+<tr class="row-even"><td>log10(x)</td>
+<td>base 10 logarithm of x</td>
+</tr>
+<tr class="row-odd"><td>sin(x)</td>
+<td>sine of x</td>
+</tr>
+<tr class="row-even"><td>sinh(x)</td>
+<td>hyperbolic sine of x</td>
+</tr>
+<tr class="row-odd"><td>sq(x)</td>
+<td>square of x</td>
+</tr>
+<tr class="row-even"><td>sqrt(x)</td>
+<td>square-root of x</td>
+</tr>
+<tr class="row-odd"><td>tan(x)</td>
+<td>tangent of x</td>
+</tr>
+<tr class="row-even"><td>tanh(x)</td>
+<td>hyperbolic tangent of x</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [34]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;sqrt(sq(x) + sq(y) + sq(z)) &lt; 100&#39;</span><span class="p">)</span>  <span class="c1"># within 100 A of origin</span>
+<span class="gh">Out[34]: </span><span class="go">&lt;Selection: &#39;sqrt(sq(x) + sq(y) + sq(z)) &lt; 100&#39; from 3mht (1975 atoms)&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="distance-based-selections">
+<h2>Distance based selections<a class="headerlink" href="#distance-based-selections" title="Permalink to this headline">¶</a></h2>
+<p>Atoms within a user specified distance (A) from a set of user specified atoms
+can be selected using <code class="docutils literal"><span class="pre">'within</span> <span class="pre">.</span> <span class="pre">of</span> <span class="pre">.'</span></code> keyword, e.g. <code class="docutils literal"><span class="pre">'within</span> <span class="pre">5</span> <span class="pre">of</span> <span class="pre">water'</span></code>
+selects atoms that are within 5 A of water molecules. This setting will
+results selecting water atoms as well.</p>
+<p>User can avoid selecting specified atoms using <code class="docutils literal"><span class="pre">exwithin</span> <span class="pre">.</span> <span class="pre">of</span> <span class="pre">..</span></code> setting,
+e.g. <code class="docutils literal"><span class="pre">'exwithin</span> <span class="pre">5</span> <span class="pre">of</span> <span class="pre">water'</span></code> will not select water molecules and is
+equivalent to <code class="docutils literal"><span class="pre">'within</span> <span class="pre">5</span> <span class="pre">of</span> <span class="pre">water</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">water'</span></code></p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [35]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;exwithin 5 of water&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;not water within 5 of water&#39;</span><span class="p">)</span>
+<span class="gh">Out[35]: </span><span class="go">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sequence-selections">
+<h2>Sequence selections<a class="headerlink" href="#sequence-selections" title="Permalink to this headline">¶</a></h2>
+<p>One-letter amino acid sequences can be used to make atom selections.
+<code class="docutils literal"><span class="pre">'sequence</span> <span class="pre">SAR'</span></code> will select <strong>SER-ALA-ARG</strong> residues in a chain.  Note
+that the selection does not consider connectivity within a chain.  Regular
+expressions can also be used to make selections: <code class="docutils literal"><span class="pre">'sequence</span> <span class="pre">&quot;MI.*KQ&quot;'</span></code> will
+select <strong>MET-ILE-(XXX)n-ASP-LYS-GLN</strong> pattern, if present.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [36]: </span><span class="n">sel</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;ca sequence &quot;MI.*DKQ&quot;&#39;</span><span class="p">)</span>
+
+<span class="gp">In [37]: </span><span class="n">sel</span>
+<span class="gh">Out[37]: </span><span class="go">&lt;Selection: &#39;ca sequence &quot;MI.*DKQ&quot;&#39; from 3mht (8 atoms)&gt;</span>
+
+<span class="gp">In [38]: </span><span class="n">sel</span><span class="o">.</span><span class="n">getResnames</span><span class="p">()</span>
+<span class="gh">Out[38]: </span><span class="go"></span>
+<span class="go">array([&#39;MET&#39;, &#39;ILE&#39;, &#39;GLU&#39;, &#39;ILE&#39;, &#39;LYS&#39;, &#39;ASP&#39;, &#39;LYS&#39;, &#39;GLN&#39;], </span>
+<span class="go">      dtype=&#39;|S6&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="expanding-selections">
+<h2>Expanding selections<a class="headerlink" href="#expanding-selections" title="Permalink to this headline">¶</a></h2>
+<p>A selection can be expanded to include the atoms in the same <em>residue</em>,
+<em>chain</em>, or <em>segment</em> using <code class="docutils literal"><span class="pre">same</span> <span class="pre">..</span> <span class="pre">as</span> <span class="pre">..</span></code> setting, e.g.
+<code class="docutils literal"><span class="pre">'same</span> <span class="pre">residue</span> <span class="pre">as</span> <span class="pre">exwithin</span> <span class="pre">4</span> <span class="pre">of</span> <span class="pre">water'</span></code> will select residues that have
+at least an atom within 4 A of any water molecule.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [39]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;same residue as exwithin 4 of water&#39;</span><span class="p">)</span>
+<span class="gh">Out[39]: </span><span class="go">&lt;Selection: &#39;same residue as...thin 4 of water&#39; from 3mht (1554 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Additionally, a selection may be expanded to the immediately bonded atoms using
+<code class="docutils literal"><span class="pre">bonded</span> <span class="pre">[n]</span> <span class="pre">to</span> <span class="pre">...</span></code> setting, e.f. <code class="docutils literal"><span class="pre">bonded</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">calpha</span></code> will select atoms
+bonded to Cα atoms.  For this setting to work, bonds must be set by the user
+using the <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup.setBonds" title="prody.atomic.atomgroup.AtomGroup.setBonds"><code class="xref py py-meth docutils literal"><span class="pre">AtomGroup.setBonds()</span></code></a> method.  It is also possible to select
+bonded atoms by excluding the originating atoms using <code class="docutils literal"><span class="pre">exbonded</span> <span class="pre">[n]</span> <span class="pre">to</span> <span class="pre">...</span></code>
+setting.  Number <code class="docutils literal"><span class="pre">'[n]'</span></code> indicates number of bonds to consider from the
+originating selection and defaults to 1.</p>
+</div>
+<div class="section" id="selection-macros">
+<h2>Selection macros<a class="headerlink" href="#selection-macros" title="Permalink to this headline">¶</a></h2>
+<p>ProDy allows you to define a macro for any valid selection string.  Below
+functions are for manipulating selection macros:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../../../manual/reference/atomic/select.html#prody.atomic.select.defSelectionMacro" title="prody.atomic.select.defSelectionMacro"><code class="xref py py-func docutils literal"><span class="pre">defSelectionMacro()</span></code></a></li>
+<li><a class="reference internal" href="../../../../manual/reference/atomic/select.html#prody.atomic.select.delSelectionMacro" title="prody.atomic.select.delSelectionMacro"><code class="xref py py-func docutils literal"><span class="pre">delSelectionMacro()</span></code></a></li>
+<li><a class="reference internal" href="../../../../manual/reference/atomic/select.html#prody.atomic.select.getSelectionMacro" title="prody.atomic.select.getSelectionMacro"><code class="xref py py-func docutils literal"><span class="pre">getSelectionMacro()</span></code></a></li>
+<li><a class="reference internal" href="../../../../manual/reference/atomic/select.html#prody.atomic.select.isSelectionMacro" title="prody.atomic.select.isSelectionMacro"><code class="xref py py-func docutils literal"><span class="pre">isSelectionMacro()</span></code></a></li>
+</ul>
+</div></blockquote>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [40]: </span><span class="n">defSelectionMacro</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">,</span> <span class="s1">&#39;resname ALA&#39;</span><span class="p">)</span>
+
+<span class="gp">In [41]: </span><span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;resname ALA&#39;</span><span class="p">)</span>
+<span class="gh">Out[41]: </span><span class="go">True</span>
+</pre></div>
+</div>
+<p>You can also use this macro as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [42]: </span><span class="n">p</span><span class="o">.</span><span class="n">alanine</span>
+<span class="gh">Out[42]: </span><span class="go">&lt;Selection: &#39;alanine&#39; from 3mht (80 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Macros are stored in ProDy configuration file permanently.  You can delete
+them if you wish as follows:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [43]: </span><span class="n">delSelectionMacro</span><span class="p">(</span><span class="s1">&#39;alanine&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="keyword-arguments">
+<h2>Keyword arguments<a class="headerlink" href="#keyword-arguments" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../../../manual/reference/atomic/select.html#prody.atomic.select.Select.select" title="prody.atomic.select.Select.select"><code class="xref py py-meth docutils literal"><span class="pre">select()</span></code></a> method also accepts keyword arguments that can simplify
+some selections.  Consider the following case where you want to select some
+protein atoms that are close to its center:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [44]: </span><span class="n">protein</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">protein</span>
+
+<span class="gp">In [45]: </span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gh">Out[45]: </span><span class="go">array([-21.17,  35.86,  79.97])</span>
+
+<span class="gp">In [46]: </span><span class="n">sel1</span> <span class="o">=</span> <span class="n">protein</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;sqrt(sq(x--21.17) + sq(y-35.86) + sq(z-79.97)) &lt; 5&#39;</span><span class="p">)</span>
+
+<span class="gp">In [47]: </span><span class="n">sel1</span>
+<span class="gh">Out[47]: </span><span class="go">&lt;Selection: &#39;(sqrt(sq(x--21....) and (protein)&#39; from 3mht (20 atoms)&gt;</span>
+</pre></div>
+</div>
+<p>Instead, you could pass a keyword argument and use the keyword in the
+selection string:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [48]: </span><span class="n">sel2</span> <span class="o">=</span> <span class="n">protein</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;within 5 of center&#39;</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">calcCenter</span><span class="p">(</span><span class="n">protein</span><span class="p">))</span>
+
+<span class="gp">In [49]: </span><span class="n">sel2</span>
+<span class="gh">Out[49]: </span><span class="go">&lt;Selection: &#39;index 1452 to 1...33 2935 to 2944&#39; from 3mht (20 atoms)&gt;</span>
+
+<span class="gp">In [50]: </span><span class="n">sel1</span> <span class="o">==</span> <span class="n">sel2</span>
+<span class="gh">Out[50]: </span><span class="go">True</span>
+</pre></div>
+</div>
+<p>Note that selection string for <em>sel2</em> lists indices of atoms.  This
+substitution is performed automatically to ensure reproducibility of the
+selection without the keyword <em>center</em>.</p>
+<p>Keywords cannot be reserved words (see <a class="reference internal" href="../../../../manual/reference/atomic/functions.html#prody.atomic.functions.listReservedWords" title="prody.atomic.functions.listReservedWords"><code class="xref py py-func docutils literal"><span class="pre">listReservedWords()</span></code></a>) and must be
+all alphanumeric characters.</p>
+<dl class="exception">
+<dt id="prody.atomic.select.SelectionError">
+<em class="property">exception </em><code class="descname">SelectionError</code><span class="sig-paren">(</span><em>sel</em>, <em>loc=0</em>, <em>msg=''</em>, <em>tkns=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#SelectionError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.SelectionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception raised when there are errors in the selection string.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="prody.atomic.select.SelectionWarning">
+<em class="property">exception </em><code class="descname">SelectionWarning</code><span class="sig-paren">(</span><em>sel=''</em>, <em>loc=0</em>, <em>msg=''</em>, <em>tkns=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#SelectionWarning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.SelectionWarning" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class used for issuing warning messages when potential typos are
+detected in a selection string.  Warnings are issued to <code class="docutils literal"><span class="pre">sys.stderr</span></code>
+via ProDy package logger.  Use <a class="reference internal" href="../../../../manual/reference/prody.html#prody.confProDy" title="prody.confProDy"><code class="xref py py-func docutils literal"><span class="pre">confProDy()</span></code></a> to selection warnings
+<em>on</em> or <em>off</em>, e.g. <code class="docutils literal"><span class="pre">confProDy(selection_warning=False)</span></code>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="prody.atomic.select.Select">
+<em class="property">class </em><code class="descname">Select</code><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#Select"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.Select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select subsets of atoms based on a selection string.
+See <a class="reference internal" href="../../../../manual/reference/atomic/select.html#module-prody.atomic.select" title="prody.atomic.select"><code class="xref py py-mod docutils literal"><span class="pre">select</span></code></a> module documentation for selection grammar
+and examples.  This class makes use of <a class="reference external" href="http://pyparsing.wikispaces.com">pyparsing</a> module.</p>
+<dl class="method">
+<dt id="prody.atomic.select.Select.getBoolArray">
+<code class="descname">getBoolArray</code><span class="sig-paren">(</span><em>atoms</em>, <em>selstr</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#Select.getBoolArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.Select.getBoolArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a boolean array with <strong>True</strong> values for <em>atoms</em> matching
+<em>selstr</em>.  The length of the boolean <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-class docutils literal"><span class="pre">numpy.ndarray</span></code></a> will be
+equal to the length of <em>atoms</em> argument.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.select.Select.getIndices">
+<code class="descname">getIndices</code><span class="sig-paren">(</span><em>atoms</em>, <em>selstr</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#Select.getIndices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.Select.getIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns indices of atoms matching <em>selstr</em>.  Indices correspond to
+the order in <em>atoms</em> argument.  If <em>atoms</em> is a subset of atoms, they
+should not be used for indexing the corresponding <a class="reference internal" href="../../../../manual/reference/atomic/atomgroup.html#prody.atomic.atomgroup.AtomGroup" title="prody.atomic.atomgroup.AtomGroup"><code class="xref py py-class docutils literal"><span class="pre">AtomGroup</span></code></a>
+instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="prody.atomic.select.Select.select">
+<code class="descname">select</code><span class="sig-paren">(</span><em>atoms</em>, <em>selstr</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#Select.select"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.Select.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a> of atoms matching <em>selstr</em>, or
+<strong>None</strong>, if selection string does not match any atoms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>atoms</strong> (<a class="reference internal" href="../../../../manual/reference/atomic/atomic.html#prody.atomic.atomic.Atomic" title="prody.atomic.atomic.Atomic"><code class="xref py py-class docutils literal"><span class="pre">Atomic</span></code></a>) &#8211; atoms to be evaluated</li>
+<li><strong>selstr</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; selection string</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that, if <em>atoms</em> is an <a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> instance, an
+<a class="reference internal" href="../../../../manual/reference/atomic/atommap.html#prody.atomic.atommap.AtomMap" title="prody.atomic.atommap.AtomMap"><code class="xref py py-class docutils literal"><span class="pre">AtomMap</span></code></a> is returned, instead of a a <a class="reference internal" href="../../../../manual/reference/atomic/selection.html#prody.atomic.selection.Selection" title="prody.atomic.selection.Selection"><code class="xref py py-class docutils literal"><span class="pre">Selection</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.atomic.select.defSelectionMacro">
+<code class="descname">defSelectionMacro</code><span class="sig-paren">(</span><em>name</em>, <em>selstr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#defSelectionMacro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.defSelectionMacro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define selection macro <em>selstr</em> with name <em>name</em>.  Both <em>name</em> and
+<em>selstr</em> must be string.  An existing keyword cannot be used as a macro
+name. If a macro with given <em>name</em> exists, it will be overwritten.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">defSelectionMacro</span><span class="p">(</span><span class="s1">&#39;cbeta&#39;</span><span class="p">,</span> <span class="s1">&#39;name CB and protein&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.atomic.select.delSelectionMacro">
+<code class="descname">delSelectionMacro</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#delSelectionMacro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.delSelectionMacro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the macro <em>name</em>.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">delSelectionMacro</span><span class="p">(</span><span class="s1">&#39;cbeta&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.atomic.select.getSelectionMacro">
+<code class="descname">getSelectionMacro</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#getSelectionMacro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.getSelectionMacro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the definition of the macro <em>name</em>.  If <em>name</em> is not given,
+returns a copy of the selection macros dictionary.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="prody.atomic.select.isSelectionMacro">
+<code class="descname">isSelectionMacro</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/prody/atomic/select.html#isSelectionMacro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prody.atomic.select.isSelectionMacro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if <em>word</em> is a user defined selection macro.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="row">
+    <div class="span12">
+      <p><small>
+      &copy; Copyright 2010-2017, University of Pittsburgh.
+      Last updated on Dec 06, 2017.
+      Created using <a href="http://sphinx-doc.org">Sphinx</a> 1.3.5.
+      </small></p>
+    </div>
+  </div>
+  </div>
+</footer>
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Code Snippets</h3>
+  </div>
+  <div class="modal-body">
+    <textarea id="codesnippets"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-info" id="selectcode">Select Code</button>
+    <!--
+    <button class="btn btn-success" id="copycode" data-clipboard-target="codesnippets">Copy Code</button>
+    -->
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+  <input type="hidden" id="zeroclipboardpath" value="../../../../_static/js/zeroclipboard.swf">
+</div>
+  </body>
+</html>
