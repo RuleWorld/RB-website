@@ -41,7 +41,7 @@ master_doc = 'contents'
 intersphinx_mapping.pop('prodywebsite')
 
 project = u'RuleBender'
-# copyright = u'2010-2015, University of Pittsburgh'
+copyright = u'2007-2018, University of Pittsburgh'
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -49,19 +49,9 @@ html_favicon = 'manual/_static/favicon.ico'
 
 html_additional_pages = {
     'index': 'rulebender.html',
-    #'nmwiz/index': 'nmwiz.html',
-    #'evol/index': 'evol.html',
-    #'memanm/index': 'memanm.html',
-    #'mechstiff/index':'mechstiff.html',
-    #'drugui/index': 'drugui.html',
-    #'comd/index' : 'comd.html',
     'downloads/index': 'downloads.html',
     'tutorials/index': 'tutorials.html',
     'statistics/index': 'statistics.html',
-    #'mechstiff/index' : 'mechstiff.html',
-    #'analytics/index' : 'analytics.html',
-    #'workshop/index' : 'workshop.html',
-    #'chromd/index' : 'chromd.html',
 }
 
 html_sidebars = {
